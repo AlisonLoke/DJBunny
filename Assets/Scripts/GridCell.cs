@@ -3,9 +3,9 @@ using UnityEngine.UI;
 
 public class GridCell : MonoBehaviour
 {
-  
-    private int x;
-    private int y;
+
+    public int x;
+    public int y;
     public bool isOccupied;// public for dev purposes
 
     [SerializeField] private Color Blue;

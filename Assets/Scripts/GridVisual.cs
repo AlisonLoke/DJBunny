@@ -9,8 +9,9 @@ public class GridVisual : MonoBehaviour
     [SerializeField] private GridData gridData;
     [SerializeField] private GameObject gridCellPrefab;
     [SerializeField] private RectTransform gridParent;
-  
- 
+    public GridCell[] cells;
+
+
 
 
 

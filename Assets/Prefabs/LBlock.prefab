@@ -51,6 +51,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7e3acb9519b32d4d80d5a94170637d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gridParent: {fileID: 0}
+  blockParentRect: {fileID: 8837972349800196655}
+  blockRectransforms: []
+  blockData: {fileID: 11400000, guid: 4feeec9ac4dcdca449376f8664e6d5a4, type: 2}
+  delayBetweenRotations: 0.2
 --- !u!1 &4006427949102497278
 GameObject:
   m_ObjectHideFlags: 0

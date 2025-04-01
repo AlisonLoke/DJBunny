@@ -1,16 +1,294 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
-public class BlockSystem : MonoBehaviour
+public class BlockSystem : MonoBehaviour, IPointerUpHandler,IDragHandler,IPointerDownHandler
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private static BlockSystem selectedBlock = null;
+    private Vector3 blockOriginPos;
+    private GridCell gridCell;
+    private GridVisual gridVisual;
+    private float timeSinceLastRotation = Mathf.Infinity;
+    private bool isSnappedToGrid = false;
+    private bool isDragging;
+
+    [SerializeField] private RectTransform gridParent;
+    [SerializeField] private RectTransform blockParentRect;
+    [SerializeField] private RectTransform[] blockRectransforms;
+    [SerializeField] private BlockData blockData;
+    [SerializeField] private float delayBetweenRotations = 1f;
+
+
+    private void Start()
     {
-        
+        gridVisual = gridParent.GetComponent<GridVisual>();
+  
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
+
+        if (timeSinceLastRotation < delayBetweenRotations)
+        {
+            timeSinceLastRotation += Time.deltaTime;
+            return;
+        }
+
+
+        if (Mouse.current.rightButton.wasPressedThisFrame && selectedBlock == this)
+        {
+            RotateBlock();
+            timeSinceLastRotation = 0f;
+        }
+    }
+ 
+    public void OnPointerDown(PointerEventData eventData)//OnBeginDrag
+    {
+        if (eventData.button != PointerEventData.InputButton.Left) { return; }
+
+        if (isDragging) { return; }
+
+        selectedBlock = this;
+        isDragging = true;
+        if (!isSnappedToGrid)
+        {
+            blockOriginPos = blockParentRect.position;
+            return;
+        }
+
+        isSnappedToGrid = false;
+        // If snapped to grid, free up occupied cells
+     
+        UnMarkBlockCellAsOccupied();
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        if (eventData.button != PointerEventData.InputButton.Left) { return; }
         
+        Vector2 pointerPosition = Mouse.current.position.ReadValue();// new input system way of writing Input.mousePosition
+        blockParentRect.position = pointerPosition;
+        HighlightCells();
+    }
+
+
+    public void OnPointerUp(PointerEventData eventData)//OnEndDrag
+    {
+        if (eventData.button != PointerEventData.InputButton.Left) { return; }
+
+        if (!isDragging) { return; }
+
+        if (Mouse.current.leftButton.isPressed) { return; }
+
+        isDragging = false;
+        selectedBlock = null;
+
+        foreach (RectTransform thisBlock in blockRectransforms)
+        {
+
+            if (IsBlockOutsideGrid(thisBlock))
+            {
+                Debug.Log("Block is outside of grid");
+
+                blockParentRect.position = blockOriginPos;
+                blockParentRect.rotation = Quaternion.identity;
+                UnhighlightAllCells();
+                return;
+            }
+        }
+
+
+        GridCell snapClosestGridCell = SnapClosestGridCell(blockParentRect.position);
+        BlockPlacement(snapClosestGridCell);
+    }
+
+    private void UnhighlightAllCells()
+    {
+        for (int i = 0; i < gridVisual.cells.Length; i++)
+        {
+            gridVisual.cells[i].UnHighlight();
+        }
+    }
+
+    private void BlockPlacement(GridCell snapClosestGridCell)
+    {
+
+
+
+        if (snapClosestGridCell != null)// if we found grid cell that is close
+        {
+            Debug.Log(snapClosestGridCell.x + "," + snapClosestGridCell.y);
+            gridCell = snapClosestGridCell.GetComponent<GridCell>();
+        
+            bool allBlocksCanPlace = AllBlockCellsCanPlace();
+
+            if (gridCell != null && allBlocksCanPlace)
+            {
+                blockParentRect.position = snapClosestGridCell.GetComponent<RectTransform>().position;
+               
+                MarkBlockCellsAsOccupied();
+                isSnappedToGrid = true;
+            }
+            else
+            {
+
+                blockParentRect.position = blockOriginPos;// no grid cell occupied so return to origin pos
+            }
+
+        }
+
+        if (gridCell == null)
+        {
+
+            blockParentRect.position = blockOriginPos;// no grid cell found so return origin pos
+        }
+
+        if (IsBlockOutsideGrid(blockParentRect))
+        {
+            blockParentRect.position = blockOriginPos;
+            blockParentRect.rotation = Quaternion.identity; // rotate UI of block
+            UnMarkBlockCellAsOccupied();
+        }
+
+    }
+
+
+
+    private bool AllBlockCellsCanPlace()
+    {
+        foreach (RectTransform thisBlock in blockRectransforms)
+        {
+            //GridCell currentCell = gridVisual.FindGridCellAtPosition(thisBlock.position);
+            GridCell currentCell = SnapClosestGridCell(thisBlock.position);
+            if (currentCell != null && !currentCell.CanPlaceBlock()) // if current cell has a block and cant place a block
+            {
+                return false;// cant place block here
+            }
+        }
+
+        return true; // all spots are empty, you can place block here.
+    }
+
+   
+    
+    private void MarkBlockCellsAsOccupied()
+    {
+        Debug.Log("Blocks are occupied");
+        foreach (RectTransform thisBlock in blockRectransforms)
+        {
+            //GridCell occupiedCell = gridVisual.FindGridCellAtPosition(thisBlock.position);
+            GridCell occupiedCell = SnapClosestGridCell(thisBlock.position);
+
+            if (occupiedCell != null)
+            {
+                Debug.Log($"Marking cell {occupiedCell.x}, {occupiedCell.y} as occupied");
+                occupiedCell.GridCellOccupied();
+            }
+        }
+
+    }
+    private void UnMarkBlockCellAsOccupied()
+    {
+        foreach (RectTransform thisBlock in blockRectransforms)
+        {
+            //GridCell occupiedCell = gridVisual.FindGridCellAtPosition(thisBlock.position);
+            GridCell occupiedCell = SnapClosestGridCell(thisBlock.position);
+
+
+            if (occupiedCell != null)
+            {
+                Debug.Log($"Marking cell {occupiedCell.x}, {occupiedCell.y} as occupied");
+                occupiedCell.GridCellFree();
+            }
+        }
+    }
+
+
+    public void RotateBlock()
+    {
+        //bool isBlockOverlapping = IsBlockOverlapping();
+        bool allBlockCellCanPlace = AllBlockCellsCanPlace();
+        transform.Rotate(Vector3.forward, -90); // rotate UI of block
+
+        //Adjust coordinates for new rotation orientation
+        if (blockData != null)
+        {
+            blockData.RotationCoordinates();
+        }
+        else
+        {
+            Debug.LogError("BlockData reference is missing!");
+            return;
+        }
+
+    }
+
+
+
+    public GridCell SnapClosestGridCell(Vector3 thisPosition)
+    {
+        float minDistance = Mathf.Infinity;
+        GridCell closestCell = null;
+
+        foreach (Transform gridCell in gridParent)
+        {
+            float distance = Vector2.Distance(thisPosition, gridCell.position);
+
+            if (distance < minDistance)
+            {
+                minDistance = distance;
+                closestCell = gridCell.GetComponent<GridCell>();
+            }
+        }
+        return closestCell;
+    }
+
+    private bool IsBlockOutsideGrid(RectTransform thisTransform)
+    {
+        Vector4 gridBoundaries = gridVisual.GetGridBoundaries();
+
+        //Debug.Log($"Grid Boundaries: Left({gridBoundaries.x}) Right({gridBoundaries.y}) Bottom({gridBoundaries.z}) Top({gridBoundaries.w})");
+        // Convert block position to local space
+        Vector2 blockPosition = thisTransform.position;
+        //Debug.Log($"Block Position: ({blockPosition.x}, {blockPosition.y})");
+
+        return blockPosition.x < gridBoundaries.x ||
+               blockPosition.x > gridBoundaries.y ||
+               blockPosition.y < gridBoundaries.z ||
+               blockPosition.y > gridBoundaries.w;
+    }
+
+
+    private void HighlightCells()
+    {
+        List<GridCell> highlightedCells = new List<GridCell>();
+
+        if (AllBlockCellsCanPlace())
+        {
+            foreach (RectTransform thisBlock in blockRectransforms)
+            {
+                GridCell currentCell = SnapClosestGridCell(thisBlock.position);
+
+                if (currentCell != null)
+                {
+                    highlightedCells.Add(currentCell);
+                }
+            }
+        }
+
+        for (int i = 0; i < gridVisual.cells.Length; i++)
+        {
+            if (highlightedCells.Contains(gridVisual.cells[i]))
+            {
+                gridVisual.cells[i].Highlight();
+            }
+            else
+            {
+                gridVisual.cells[i].UnHighlight();
+            }
+        }
     }
 }

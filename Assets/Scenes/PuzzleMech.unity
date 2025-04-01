@@ -211,6 +211,16 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &273729231 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6167459128897280882, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
+  m_PrefabInstance: {fileID: 527188195}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &420355644 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1539544542790670266, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
+  m_PrefabInstance: {fileID: 527188195}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &453717163
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,6 +317,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: TwoBlock
       objectReference: {fileID: 0}
+    - target: {fileID: 6116093346985028512, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
+      propertyPath: gridParent
+      value: 
+      objectReference: {fileID: 1541026340}
+    - target: {fileID: 6116093346985028512, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
+      propertyPath: blockRectransforms.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116093346985028512, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
+      propertyPath: 'blockRectransforms.Array.data[0]'
+      value: 
+      objectReference: {fileID: 420355644}
+    - target: {fileID: 6116093346985028512, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
+      propertyPath: 'blockRectransforms.Array.data[1]'
+      value: 
+      objectReference: {fileID: 273729231}
     - target: {fileID: 6742391777000452425, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -422,16 +448,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584478114}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 589623176}
+  m_Father: {fileID: 1997260035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -135}
+  m_AnchoredPosition: {x: 0, y: -119.96601}
   m_SizeDelta: {x: 460, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &584478116
@@ -503,13 +529,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1541026340}
-  - {fileID: 584478115}
   m_Father: {fileID: 1997260035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 89}
+  m_SizeDelta: {x: -542.9576, y: -189.0594}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &589623177
 MonoBehaviour:
@@ -557,6 +582,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1997260035}
     m_Modifications:
+    - target: {fileID: 315326269192149421, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
+      propertyPath: gridParent
+      value: 
+      objectReference: {fileID: 1541026340}
+    - target: {fileID: 315326269192149421, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
+      propertyPath: blockRectransforms.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 315326269192149421, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
+      propertyPath: 'blockRectransforms.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1796174875}
+    - target: {fileID: 315326269192149421, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
+      propertyPath: 'blockRectransforms.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1773935987}
+    - target: {fileID: 315326269192149421, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
+      propertyPath: 'blockRectransforms.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1143388234}
     - target: {fileID: 1385824898608407974, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
       propertyPath: m_Name
       value: LBlock
@@ -649,6 +694,11 @@ PrefabInstance:
 --- !u!224 &672554324 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8837972349800196655, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
+  m_PrefabInstance: {fileID: 672554323}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1143388234 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3689849784608768072, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
   m_PrefabInstance: {fileID: 672554323}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1296476175
@@ -766,7 +816,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 81.8}
+  m_AnchoredPosition: {x: 0, y: -0.0000076293945}
   m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1541026341
@@ -846,6 +896,17 @@ MonoBehaviour:
   gridData: {fileID: 11400000, guid: d4e097efa58a53e4cb6f229fa6335af8, type: 2}
   gridCellPrefab: {fileID: 1169355012900605702, guid: 95eab1339b15c054ea94d0ccd9a3e7e7, type: 3}
   gridParent: {fileID: 1541026340}
+  cells: []
+--- !u!224 &1773935987 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4694508793944224858, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
+  m_PrefabInstance: {fileID: 672554323}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1796174875 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3809127391788960617, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
+  m_PrefabInstance: {fileID: 672554323}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1997260031
 GameObject:
   m_ObjectHideFlags: 0
@@ -940,6 +1001,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 584478115}
   - {fileID: 589623176}
   - {fileID: 527188196}
   - {fileID: 672554324}
