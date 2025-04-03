@@ -1,11 +1,9 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
-public class BlockSystem : MonoBehaviour, IPointerUpHandler,IDragHandler,IPointerDownHandler
+public class BlockSystem : MonoBehaviour, IPointerUpHandler, IDragHandler, IPointerDownHandler
 {
     private static BlockSystem selectedBlock = null;
     private Vector3 blockOriginPos;
@@ -15,17 +13,21 @@ public class BlockSystem : MonoBehaviour, IPointerUpHandler,IDragHandler,IPointe
     private bool isSnappedToGrid = false;
     private bool isDragging;
 
-    [SerializeField] private RectTransform gridParent;
+    public RectTransform gridParent;
     [SerializeField] private RectTransform blockParentRect;
     [SerializeField] private RectTransform[] blockRectransforms;
     [SerializeField] private BlockData blockData;
     [SerializeField] private float delayBetweenRotations = 1f;
+    //public List<RectTransform> placedBlocks;
+    public EndCell[] endCells;
 
 
     private void Start()
     {
         gridVisual = gridParent.GetComponent<GridVisual>();
-  
+        endCells = GetComponentsInChildren<EndCell>();
+
+
     }
 
     private void Update()
@@ -44,7 +46,7 @@ public class BlockSystem : MonoBehaviour, IPointerUpHandler,IDragHandler,IPointe
             timeSinceLastRotation = 0f;
         }
     }
- 
+
     public void OnPointerDown(PointerEventData eventData)//OnBeginDrag
     {
         if (eventData.button != PointerEventData.InputButton.Left) { return; }
@@ -61,14 +63,21 @@ public class BlockSystem : MonoBehaviour, IPointerUpHandler,IDragHandler,IPointe
 
         isSnappedToGrid = false;
         // If snapped to grid, free up occupied cells
-     
+
         UnMarkBlockCellAsOccupied();
+        RemovePlaceBlockFromList(blockParentRect);
+        ConnectionSystem.instance.CheckConnectionsForAllEndCells();
+
+        foreach(EndCell cell in endCells)
+        {
+            cell.ClearConnections();
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         if (eventData.button != PointerEventData.InputButton.Left) { return; }
-        
+
         Vector2 pointerPosition = Mouse.current.position.ReadValue();// new input system way of writing Input.mousePosition
         blockParentRect.position = pointerPosition;
         HighlightCells();
@@ -105,13 +114,6 @@ public class BlockSystem : MonoBehaviour, IPointerUpHandler,IDragHandler,IPointe
         BlockPlacement(snapClosestGridCell);
     }
 
-    private void UnhighlightAllCells()
-    {
-        for (int i = 0; i < gridVisual.cells.Length; i++)
-        {
-            gridVisual.cells[i].UnHighlight();
-        }
-    }
 
     private void BlockPlacement(GridCell snapClosestGridCell)
     {
@@ -122,15 +124,19 @@ public class BlockSystem : MonoBehaviour, IPointerUpHandler,IDragHandler,IPointe
         {
             Debug.Log(snapClosestGridCell.x + "," + snapClosestGridCell.y);
             gridCell = snapClosestGridCell.GetComponent<GridCell>();
-        
+
             bool allBlocksCanPlace = AllBlockCellsCanPlace();
 
             if (gridCell != null && allBlocksCanPlace)
             {
                 blockParentRect.position = snapClosestGridCell.GetComponent<RectTransform>().position;
-               
+
                 MarkBlockCellsAsOccupied();
                 isSnappedToGrid = true;
+                AddPlaceBlockToList(blockParentRect);
+                ConnectionSystem.instance.endCells.AddRange(endCells);
+
+                ConnectionSystem.instance.CheckConnectionsForAllEndCells();
             }
             else
             {
@@ -172,8 +178,8 @@ public class BlockSystem : MonoBehaviour, IPointerUpHandler,IDragHandler,IPointe
         return true; // all spots are empty, you can place block here.
     }
 
-   
-    
+
+
     private void MarkBlockCellsAsOccupied()
     {
         Debug.Log("Blocks are occupied");
@@ -205,6 +211,7 @@ public class BlockSystem : MonoBehaviour, IPointerUpHandler,IDragHandler,IPointe
             }
         }
     }
+
 
 
     public void RotateBlock()
@@ -261,7 +268,50 @@ public class BlockSystem : MonoBehaviour, IPointerUpHandler,IDragHandler,IPointe
                blockPosition.y > gridBoundaries.w;
     }
 
+    public void AddPlaceBlockToList(RectTransform thisBlock)
+    {
+        ConnectionSystem.instance.placedBlocks.Add(thisBlock);
 
+    }
+
+    public void RemovePlaceBlockFromList(RectTransform thisBlock)
+    {
+        if (!ConnectionSystem.instance.placedBlocks.Contains(thisBlock))
+        {
+            return;
+        }
+        ConnectionSystem.instance.placedBlocks.Remove(thisBlock);
+
+        foreach(EndCell cell in endCells)
+        {
+            ConnectionSystem.instance.endCells.Remove(cell);
+        }
+    }
+
+
+    public List<RectTransform> GetListOfAllEndCells()
+    {
+
+        List<RectTransform> allEndCells = new List<RectTransform>();
+        EndCell[] endCellsList = GetComponentsInChildren<EndCell>();
+        foreach (EndCell cell in endCellsList)
+        {
+            allEndCells.Add(cell.GetComponent<RectTransform>());
+
+        }
+
+        return allEndCells;
+    }
+
+
+
+    private void UnhighlightAllCells()
+    {
+        for (int i = 0; i < gridVisual.cells.Length; i++)
+        {
+            gridVisual.cells[i].UnHighlight();
+        }
+    }
     private void HighlightCells()
     {
         List<GridCell> highlightedCells = new List<GridCell>();

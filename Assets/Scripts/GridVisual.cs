@@ -62,6 +62,15 @@ public class GridVisual : MonoBehaviour
         if (gridCell != null)// if the gridcell component exists on gridcell prefab
         {
             gridCell.SetCoordinates(xAxis, yAxis); // assign coordinate values on the grid.
+            if(xAxis == gridData.startCellCoordinates.x && yAxis == gridData.startCellCoordinates.y)
+            {
+                gridCell.ConnectCellVisual();//specify start and end here
+            }
+
+            if(xAxis == gridData.endCellCoordinates.x && yAxis == gridData.endCellCoordinates.y )
+            {
+                gridCell.ConnectCellVisual();
+            }
         }
     }
 
