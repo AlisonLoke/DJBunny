@@ -10,7 +10,7 @@ public class GridData : ScriptableObject
     [SerializeField] private GridCell startCell;
     [SerializeField] private GridCell endCell;
     public Vector2Int startCellCoordinates = Vector2Int.zero;
-    public Vector2Int endCellCoordinates = Vector2Int.zero;
+    public Vector2Int finishCellCoordinates = Vector2Int.zero;
 
 
     public Vector2Int GetStartCellCoordinates()
@@ -20,6 +20,6 @@ public class GridData : ScriptableObject
 
     public Vector2Int GetEndCellCoordinates()
     {
-        return endCellCoordinates;
+        return finishCellCoordinates;
     }
 }

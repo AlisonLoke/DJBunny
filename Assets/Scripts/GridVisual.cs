@@ -10,6 +10,7 @@ public class GridVisual : MonoBehaviour
     [SerializeField] private GameObject gridCellPrefab;
     [SerializeField] private RectTransform gridParent;
     public GridCell[] cells;
+    public event System.Action OnGridGenerated;
     //public ConnectCellType currentConnectType = ConnectCellType.None;   
     //public enum ConnectCellType
     //{
@@ -46,7 +47,7 @@ public class GridVisual : MonoBehaviour
         }
 
 
-
+        List <GridCell> tempCell = new List <GridCell>();
 
         for (int currentGridBox = 0; currentGridBox < gridData.x * gridData.y; currentGridBox++)
         {
@@ -57,12 +58,21 @@ public class GridVisual : MonoBehaviour
             newGridCell.name = $"GridCell: ({xAxis}, {yAxis})";  // Assign name based on coordinates
 
             AssignCoordinatesToGridCell(xAxis, yAxis, newGridCell);
+
+            GridCell gridCell = newGridCell.GetComponent<GridCell>();
+            if(gridCell != null)
+            {
+                tempCell.Add(gridCell); 
+            }
         }
 
-      
+        cells = tempCell.ToArray(); //list -> array
+
+        OnGridGenerated?.Invoke();
     }
 
-    private void AssignCoordinatesToGridCell(int xAxis, int yAxis, GameObject newGridCell)
+
+    public void AssignCoordinatesToGridCell(int xAxis, int yAxis, GameObject newGridCell)
     {
         GridCell gridCell = newGridCell.GetComponent<GridCell>();
         if (gridCell != null)// if the gridcell component exists on gridcell prefab
@@ -72,15 +82,18 @@ public class GridVisual : MonoBehaviour
             {
                 gridCell.ConnectCellVisual();//specify start and end here
                 //currentConnectType = ConnectCellType.Start;
+     
             }
 
-            if(xAxis == gridData.endCellCoordinates.x && yAxis == gridData.endCellCoordinates.y )
+            if(xAxis == gridData.finishCellCoordinates.x && yAxis == gridData.finishCellCoordinates.y )
             {
                 gridCell.ConnectCellVisual();
+                 
                 //currentConnectType = ConnectCellType.Finish;
             }
         }
     }
+
 
     public void MouseClick()
     {
