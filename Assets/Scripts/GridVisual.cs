@@ -10,7 +10,13 @@ public class GridVisual : MonoBehaviour
     [SerializeField] private GameObject gridCellPrefab;
     [SerializeField] private RectTransform gridParent;
     public GridCell[] cells;
-
+    //public ConnectCellType currentConnectType = ConnectCellType.None;   
+    //public enum ConnectCellType
+    //{
+    //    None,
+    //    Start,
+    //    Finish
+    //}
 
 
 
@@ -65,11 +71,13 @@ public class GridVisual : MonoBehaviour
             if(xAxis == gridData.startCellCoordinates.x && yAxis == gridData.startCellCoordinates.y)
             {
                 gridCell.ConnectCellVisual();//specify start and end here
+                //currentConnectType = ConnectCellType.Start;
             }
 
             if(xAxis == gridData.endCellCoordinates.x && yAxis == gridData.endCellCoordinates.y )
             {
                 gridCell.ConnectCellVisual();
+                //currentConnectType = ConnectCellType.Finish;
             }
         }
     }

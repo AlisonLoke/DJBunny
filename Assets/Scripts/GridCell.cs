@@ -61,7 +61,7 @@ public class GridCell : MonoBehaviour
 
     public void ConnectCellVisual()
     {
-        //specify if its a start or finish cell
+        
         connectCellImage.SetActive(true);
     }
 }
