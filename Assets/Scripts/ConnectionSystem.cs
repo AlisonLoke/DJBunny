@@ -12,6 +12,7 @@ public class ConnectionSystem : MonoBehaviour
     private EndCell finishConnectedEndCell;
 
     [SerializeField] private UILineRenderer lineRenderer;
+    [SerializeField] private RectTransform canvas;
     [SerializeField] private PathFinder pathFinder;
     //stores a single path.
     private List<EndCell> currentPath = new List<EndCell>();
@@ -41,13 +42,13 @@ public class ConnectionSystem : MonoBehaviour
 
     }
 
-    private void Update()
-    {
-        UpdateConnectionLine();
-    }
+    //private void Update()
+    //{
+    //    UpdateConnectionLine();
+    //}
     public void CheckConnectionsForAllEndCells()
     {
-   
+
 
         Debug.Log($"Checking connections for {endCells.Count} end cells");
 
@@ -124,6 +125,8 @@ public class ConnectionSystem : MonoBehaviour
         {
             Debug.Log($"Path point: {cell.name} at position {cell.transform.position}");
         }
+
+        UpdateConnectionLine();
     }
 
     private void FindAllPaths(EndCell currentCell, EndCell targetCell, List<EndCell> path)
@@ -137,23 +140,32 @@ public class ConnectionSystem : MonoBehaviour
             // Add a copy of this path to our list of paths
             allPaths.Add(new List<EndCell>(path));
         }
+        //if we have a sister end cell which is not already in the path
+        else if (!path.Contains(currentCell.sisterEndCell))
+        {
+            //add this to the path
+            FindAllPaths(currentCell.sisterEndCell, targetCell, path);
+        }
+        //If we have a connected cell
         else
         {
-            // Try all connected end cells that haven't been visited yet
             if (currentCell.connectedEndCell != null)
             {
                 foreach (EndCell connectedCell in currentCell.connectedEndCell)
                 {
+                    //Create a new path for each possible connection
+                    List<EndCell> newPath = new List<EndCell>(path);
+                    FindAllPaths(connectedCell, targetCell, newPath);
                     // Skip cells we've already visited in this path to avoid loops
-                    if (!path.Contains(connectedCell))
-                    {
-                        FindAllPaths(connectedCell, targetCell, path);
-                    }
+                    //if (!path.Contains(connectedCell))
+                    //{
+                    //    FindAllPaths(connectedCell, targetCell, path);
+                    //}
                 }
             }
         }
         // Backtrack: remove the current cell from path
-        path.RemoveAt(path.Count - 1);
+        //path.RemoveAt(path.Count - 1);
     }
 
     private void UpdateConnectionLine()
@@ -195,7 +207,8 @@ public class ConnectionSystem : MonoBehaviour
             RectTransform rectTransform = thisCell.GetComponent<RectTransform>();
             if (rectTransform != null)
             {
-                Vector2 anchoredPos = rectTransform.anchoredPosition;
+                Vector2 anchoredPos = rectTransform.position - (canvas.position/ (canvas.localScale.x / 2f));
+                //Vector2 anchoredPos = rectTransform.position;
                 Debug.Log($"  - Cell at {anchoredPos}");
                 linePoints.Add(anchoredPos);
             }

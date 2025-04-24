@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor.Profiling.Memory.Experimental;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -82,14 +83,14 @@ public class GridVisual : MonoBehaviour
             gridCell.SetCoordinates(xAxis, yAxis); // assign coordinate values on the grid.
             if(xAxis == gridData.startCellCoordinates.x && yAxis == gridData.startCellCoordinates.y)
             {
-                gridCell.ConnectCellVisual();//specify start and end here
+                gridCell.ConnectCellVisual(true, false);//specify start and end here
                 //currentConnectType = ConnectCellType.Start;
      
             }
 
             if(xAxis == gridData.finishCellCoordinates.x && yAxis == gridData.finishCellCoordinates.y )
             {
-                gridCell.ConnectCellVisual();
+                gridCell.ConnectCellVisual(false, true);
                  
                 //currentConnectType = ConnectCellType.Finish;
             }

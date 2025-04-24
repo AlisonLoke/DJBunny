@@ -15,6 +15,9 @@ public class GridCell : MonoBehaviour
     [SerializeField] private Color Red;
     [SerializeField] private Image image;
     [SerializeField] private GameObject connectCellImage;
+    public bool startCell = false;
+    public bool finishCell = false;
+
 
 
 
@@ -59,8 +62,10 @@ public class GridCell : MonoBehaviour
         image.color = Green;
     }
 
-    public void ConnectCellVisual()
+    public void ConnectCellVisual(bool isStartCell, bool isFinishCell)
     {
+        startCell = isStartCell;    
+        finishCell = isFinishCell;
         
         connectCellImage.SetActive(true);
     }

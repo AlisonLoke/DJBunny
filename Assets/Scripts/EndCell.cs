@@ -5,16 +5,25 @@ using UnityEngine.UI;
 public class EndCell : MonoBehaviour
 {
     public List<EndCell> connectedEndCell = new List<EndCell>();
+    public EndCell sisterEndCell = null;
     public GridCell currentGridCell;
     [HideInInspector] public BlockSystem blockSystem;
     private RectTransform blockParent;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-    private void Start()
+    public void Initialise()
     {
         blockSystem = GetComponentInParent<BlockSystem>();
         currentGridCell = blockSystem.SnapClosestGridCell(transform.position);   
+
+        foreach( EndCell endCell in blockSystem.endCells)
+        {
+            if( endCell != this )
+            {
+                sisterEndCell = endCell;    
+            }
+        }
     }
     public void CheckForEndCells()
     {
@@ -83,8 +92,15 @@ public class EndCell : MonoBehaviour
             if (endCellGridCell != null && endCellGridCell.x == x && endCellGridCell.y == y)
             {
                 // Found a match - establish connection
-                endCell.connectedEndCell.Add(this);
-                this.connectedEndCell.Add(endCell);
+                if (!endCell.connectedEndCell.Contains(this))
+                {
+                    endCell.connectedEndCell.Add(this);
+                }
+
+                if(!connectedEndCell.Contains(endCell))
+                {
+                    this.connectedEndCell.Add(endCell);
+                }
                 return endCellGridCell;
             }
         }
@@ -132,25 +148,25 @@ public class EndCell : MonoBehaviour
 
         GetComponent<Image>().color = Color.blue;
         // Find the EndCell associated with this GridCell and connect to it
-        foreach (EndCell endCell in ConnectionSystem.instance.endCells)
-        {
-            if (endCell == this) continue;
+        //foreach (EndCell endCell in ConnectionSystem.instance.endCells)
+        //{
+        //    if (endCell == this) continue;
 
-            GridCell endCellGrid = blockSystem.SnapClosestGridCell(endCell.transform.position);
-            if (endCellGrid == cell)
-            {
-                Debug.Log($"Connected {name} to {endCell.name}");
-                if (!connectedEndCell.Contains(endCell))
-                {
-                    connectedEndCell.Add(endCell);
-                }
-                if (!endCell.connectedEndCell.Contains(this))
-                {
-                    endCell.connectedEndCell.Add(this);
-                }
-            }
+        //    GridCell endCellGrid = blockSystem.SnapClosestGridCell(endCell.transform.position);
+        //    if (endCellGrid == cell)
+        //    {
+        //        Debug.Log($"Connected {name} to {endCell.name}");
+        //        if (!connectedEndCell.Contains(endCell))
+        //        {
+        //            connectedEndCell.Add(endCell);
+        //        }
+        //        if (!endCell.connectedEndCell.Contains(this))
+        //        {
+        //            endCell.connectedEndCell.Add(this);
+        //        }
+        //    }
 
 
-        }
+        //}
     }
 }

@@ -27,7 +27,10 @@ public class BlockSystem : MonoBehaviour, IPointerUpHandler, IDragHandler, IPoin
         gridVisual = gridParent.GetComponent<GridVisual>();
         endCells = GetComponentsInChildren<EndCell>();
 
-
+        foreach(EndCell cell in endCells)
+        {
+            cell.Initialise();
+        }
     }
 
     private void Update()
