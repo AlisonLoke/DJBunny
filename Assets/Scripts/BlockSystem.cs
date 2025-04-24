@@ -134,13 +134,27 @@ public class BlockSystem : MonoBehaviour, IPointerUpHandler, IDragHandler, IPoin
                 MarkBlockCellsAsOccupied();
                 isSnappedToGrid = true;
                 AddPlaceBlockToList(blockParentRect);
-                ConnectionSystem.instance.endCells.AddRange(endCells);
 
+                if (!ConnectionSystem.instance.endCells.Contains(endCells[0]))
+                {
+                    Debug.Log($"Adding {endCells.Length} EndCells to connection system");
+                    ConnectionSystem.instance.endCells.AddRange(endCells);
+                }
+
+
+
+                // Establish connections for each end cell
+                foreach (EndCell cell in endCells)
+                {
+                    cell.UpdateGridPosition();
+                    cell.CheckForEndCells();
+                }
+                Debug.Log(">> Triggering path check after placing block");
                 ConnectionSystem.instance.CheckConnectionsForAllEndCells();
             }
             else
             {
-
+                Debug.Log("Block placement failed - grid cell occupied or invalid");
                 blockParentRect.position = blockOriginPos;// no grid cell occupied so return to origin pos
             }
 

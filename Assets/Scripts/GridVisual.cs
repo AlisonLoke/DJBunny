@@ -19,6 +19,8 @@ public class GridVisual : MonoBehaviour
     //    Finish
     //}
 
+    //public delegate void OnGridGeneratedHandler();
+    //public event OnGridGeneratedHandler OnGridGenerated;
 
 
 

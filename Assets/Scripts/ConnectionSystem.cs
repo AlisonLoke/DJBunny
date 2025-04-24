@@ -8,23 +8,221 @@ public class ConnectionSystem : MonoBehaviour
     public List<RectTransform> placedBlocks;
     public List<EndCell> endCells;
 
+    private EndCell startConnectedEndCell;
+    private EndCell finishConnectedEndCell;
+
+    [SerializeField] private UILineRenderer lineRenderer;
+    [SerializeField] private PathFinder pathFinder;
+    //stores a single path.
+    private List<EndCell> currentPath = new List<EndCell>();
+    //Contains multiple list of endCell object paths. A collection of paths
+    private List<List<EndCell>> allPaths = new List<List<EndCell>>();
+
     private void Awake()
     {
         instance = this;
+        Debug.Log("ConnectionSystem Awake called");
+    }
+    private void Start()
+    {
+        // Make sure line renderer is properly initialized
+        if (lineRenderer == null)
+        {
+            lineRenderer = GetComponent<UILineRenderer>();
+            if (lineRenderer == null)
+            {
+                Debug.LogError("Line renderer not assigned to ConnectionSystem!");
+            }
+        }
+
+        lineRenderer.color = Color.yellow;
+        lineRenderer.thickness = 5f;
+        lineRenderer.raycastTarget = false;
+
     }
 
+    private void Update()
+    {
+        UpdateConnectionLine();
+    }
     public void CheckConnectionsForAllEndCells()
     {
-        //List<EndCell> endCells = new List<EndCell>();
+   
 
-        //foreach(RectTransform block in placedBlocks)
-        //{
-        //    endCells.AddRange(block.GetComponent<BlockSystem>().endCells);
-        //}
+        Debug.Log($"Checking connections for {endCells.Count} end cells");
 
-        foreach(EndCell endCell in endCells)
+        // Check each end cell's position and connections
+        foreach (EndCell endCell in endCells)
         {
+            // Make sure we have current grid cell info - THIS IS CRITICAL
+            endCell.currentGridCell = endCell.blockSystem.SnapClosestGridCell(endCell.transform.position);
+
+            if (endCell.currentGridCell == null)
+            {
+                Debug.Log($"EndCell {endCell.name} has no grid cell");
+                continue;
+            }
+
+            Debug.Log($"EndCell at grid position: {endCell.currentGridCell.x}, {endCell.currentGridCell.y}");
+
+            // Check for connections to other EndCells
             endCell.CheckForEndCells();
+
+            // Check if this EndCell is on a start or finish cell
+            if (pathFinder != null && pathFinder.IsStartCell(endCell.currentGridCell))
+            {
+                startConnectedEndCell = endCell;
+                Debug.Log($"Found start EndCell {endCell.name} at: ({endCell.currentGridCell.x}, {endCell.currentGridCell.y})");
+            }
+
+            if (pathFinder != null && pathFinder.IsFinishCell(endCell.currentGridCell))
+            {
+                finishConnectedEndCell = endCell;
+                Debug.Log($"Found finish EndCell {endCell.name} at: ({endCell.currentGridCell.x}, {endCell.currentGridCell.y})");
+            }
+        }
+
+        // Find path if we have both start and finish cells
+        Debug.Log($"After checking all cells - Start cell found: {startConnectedEndCell != null}, Finish cell found: {finishConnectedEndCell != null}");
+        if (startConnectedEndCell != null && finishConnectedEndCell != null)
+        {
+            Debug.Log("Both start and finish cells found, finding path...");
+            FindLongestPath();
+        }
+        else
+        {
+            Debug.Log("Missing either start or finish cell, clearing path");
+            currentPath.Clear();
+            ClearConnectedLine();
         }
     }
+
+    private void FindLongestPath()
+    {
+        // Clear any previous paths
+        allPaths.Clear();
+        currentPath.Clear();
+        Debug.Log($"Finding path from {startConnectedEndCell.name} to {finishConnectedEndCell.name}");
+
+        // Create a new path to work with
+        List<EndCell> workingPath = new List<EndCell>();
+
+        // Start recursive search
+        FindAllPaths(startConnectedEndCell, finishConnectedEndCell, workingPath);
+        Debug.Log($"Found {allPaths.Count} possible paths");
+
+        // Find the longest path
+        foreach (List<EndCell> path in allPaths)
+        {
+            if (path.Count > currentPath.Count)
+            {
+                currentPath = new List<EndCell>(path);
+            }
+        }
+        Debug.Log($"Selected longest path with {currentPath.Count} cells");
+        foreach (EndCell cell in currentPath)
+        {
+            Debug.Log($"Path point: {cell.name} at position {cell.transform.position}");
+        }
+    }
+
+    private void FindAllPaths(EndCell currentCell, EndCell targetCell, List<EndCell> path)
+    {
+        // Add current cell to path
+        path.Add(currentCell);
+
+        // If we reached the target, we found a complete path
+        if (currentCell == targetCell)
+        {
+            // Add a copy of this path to our list of paths
+            allPaths.Add(new List<EndCell>(path));
+        }
+        else
+        {
+            // Try all connected end cells that haven't been visited yet
+            if (currentCell.connectedEndCell != null)
+            {
+                foreach (EndCell connectedCell in currentCell.connectedEndCell)
+                {
+                    // Skip cells we've already visited in this path to avoid loops
+                    if (!path.Contains(connectedCell))
+                    {
+                        FindAllPaths(connectedCell, targetCell, path);
+                    }
+                }
+            }
+        }
+        // Backtrack: remove the current cell from path
+        path.RemoveAt(path.Count - 1);
+    }
+
+    private void UpdateConnectionLine()
+    {
+        // If we don't have a path, don't draw anything
+        if (currentPath.Count < 2)
+        {
+            ClearConnectedLine();
+            return;
+        }
+
+        // Draw line connecting all cells in the path
+        DrawPathLine();
+    }
+
+
+
+    private void DrawPathLine()
+    {
+        Debug.Log($"DrawPathLine called with {currentPath.Count} points");
+        if (currentPath.Count < 2)
+        {
+            Debug.LogWarning("Not enough points to draw a line");
+            ClearConnectedLine();
+            return;
+        }
+
+        List<Vector2> linePoints = new List<Vector2>();
+        Debug.Log("Current path cells:");
+        foreach (EndCell thisCell in currentPath)
+        {
+            if (thisCell == null)
+            {
+                Debug.LogError("Null EndCell in path!");
+                continue;
+            }
+
+            // Get the RectTransform and its position in UI space
+            RectTransform rectTransform = thisCell.GetComponent<RectTransform>();
+            if (rectTransform != null)
+            {
+                Vector2 anchoredPos = rectTransform.anchoredPosition;
+                Debug.Log($"  - Cell at {anchoredPos}");
+                linePoints.Add(anchoredPos);
+            }
+            else
+            {
+                Debug.LogError($"EndCell {thisCell.name} has no RectTransform!");
+            }
+        }
+
+        Debug.Log($"Setting {linePoints.Count} points to line renderer");
+        if (linePoints.Count >= 2)
+        {
+            lineRenderer.points = linePoints.ToArray();
+            lineRenderer.SetAllDirty(); // Force redraw
+            Debug.Log($"Line renderer updated with {linePoints.Count} points");
+        }
+        else
+        {
+            Debug.LogWarning("Not enough valid points to draw line");
+            ClearConnectedLine();
+        }
+    }
+
+    private void ClearConnectedLine()
+    {
+        lineRenderer.points = new Vector2[0];
+        lineRenderer.SetAllDirty();
+    }
+
 }

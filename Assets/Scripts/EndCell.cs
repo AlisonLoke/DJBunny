@@ -4,7 +4,8 @@ using UnityEngine.UI;
 
 public class EndCell : MonoBehaviour
 {
-    public List<EndCell> connectedEndCell = null;
+    public List<EndCell> connectedEndCell = new List<EndCell>();
+    public GridCell currentGridCell;
     [HideInInspector] public BlockSystem blockSystem;
     private RectTransform blockParent;
 
@@ -13,6 +14,7 @@ public class EndCell : MonoBehaviour
     private void Start()
     {
         blockSystem = GetComponentInParent<BlockSystem>();
+        currentGridCell = blockSystem.SnapClosestGridCell(transform.position);   
     }
     public void CheckForEndCells()
     {
@@ -29,19 +31,19 @@ public class EndCell : MonoBehaviour
 
         if (down != null)
         {
-            MakeCellGreen(down);
+            MakeCellBlue(down);
         }
         else if (up != null)
         {
-            MakeCellGreen(up);
+            MakeCellBlue(up);
         }
         else if (right != null)
         {
-            MakeCellGreen(right);
+            MakeCellBlue(right);
         }
         else if (left != null)
         {
-            MakeCellGreen(left);
+            MakeCellBlue(left);
         }
         else
         {
@@ -51,13 +53,7 @@ public class EndCell : MonoBehaviour
 
     private GridCell FindAdjacentEndCell(int x, int y)
     {
-        // get a list of all placed blocks
-        // from each block, get the list of EndCells
-        // add these EndCells to a list of all EndCells
-        // iterate through all EndCells
-        // if EndCell is THIS EndCell, ignore it
-        // if EndCell is on same Block as THIS EndCell, ignore it
-        // for each EndCell, check if coordinates are orthogonal to THIS EndCell
+       
         List<RectTransform> placedBlocks = ConnectionSystem.instance.placedBlocks;
 
         List<EndCell> allEndCells = new List<EndCell>();
@@ -88,13 +84,36 @@ public class EndCell : MonoBehaviour
             {
                 // Found a match - establish connection
                 endCell.connectedEndCell.Add(this);
+                this.connectedEndCell.Add(endCell);
                 return endCellGridCell;
             }
         }
 
         return null;
     }
+    public void UpdateGridPosition()//debug function
+    {
+        if (blockSystem == null)
+        {
+            blockSystem = GetComponentInParent<BlockSystem>();
+            if (blockSystem == null)
+            {
+                Debug.LogError($"EndCell {name} cannot find BlockSystem!");
+                return;
+            }
+        }
 
+        currentGridCell = blockSystem.SnapClosestGridCell(transform.position);
+
+        if (currentGridCell != null)
+        {
+            Debug.Log($"EndCell {name} updated to grid position: ({currentGridCell.x}, {currentGridCell.y})");
+        }
+        else
+        {
+            Debug.LogWarning($"EndCell {name} could not find a grid cell!");
+        }
+    }
     public void ClearConnections()
     {
         MakeCellRed();
@@ -108,11 +127,30 @@ public class EndCell : MonoBehaviour
 
         connectedEndCell.Clear();
     }
-    public void MakeCellGreen(GridCell cell)
+    public void MakeCellBlue(GridCell cell)
     {
-       
-        GetComponent<Image>().color = Color.green;
-       
-      
+
+        GetComponent<Image>().color = Color.blue;
+        // Find the EndCell associated with this GridCell and connect to it
+        foreach (EndCell endCell in ConnectionSystem.instance.endCells)
+        {
+            if (endCell == this) continue;
+
+            GridCell endCellGrid = blockSystem.SnapClosestGridCell(endCell.transform.position);
+            if (endCellGrid == cell)
+            {
+                Debug.Log($"Connected {name} to {endCell.name}");
+                if (!connectedEndCell.Contains(endCell))
+                {
+                    connectedEndCell.Add(endCell);
+                }
+                if (!endCell.connectedEndCell.Contains(this))
+                {
+                    endCell.connectedEndCell.Add(this);
+                }
+            }
+
+
+        }
     }
 }
