@@ -7,6 +7,7 @@ public class EndCell : MonoBehaviour
     public List<EndCell> connectedEndCell = new List<EndCell>();
     public EndCell sisterEndCell = null;
     public GridCell currentGridCell;
+    public bool onlyConnectToStartFinish = false;
     [HideInInspector] public BlockSystem blockSystem;
     private RectTransform blockParent;
 
@@ -84,6 +85,11 @@ public class EndCell : MonoBehaviour
             // Skip if this is the current EndCell or if it's already connected
             if (endCell == this /*|| endCell.connectedEndCell != null */)
                 continue;
+            // If endcell is on start/finish = true, skip endcell connection
+            if (endCell.onlyConnectToStartFinish)
+            {
+                continue;
+            }
 
             // Get the grid cell for this end cell
             GridCell endCellGridCell = blockSystem.SnapClosestGridCell(endCell.transform.position);
@@ -147,26 +153,15 @@ public class EndCell : MonoBehaviour
     {
 
         GetComponent<Image>().color = Color.blue;
-        // Find the EndCell associated with this GridCell and connect to it
-        //foreach (EndCell endCell in ConnectionSystem.instance.endCells)
-        //{
-        //    if (endCell == this) continue;
+   
+    }
 
-        //    GridCell endCellGrid = blockSystem.SnapClosestGridCell(endCell.transform.position);
-        //    if (endCellGrid == cell)
-        //    {
-        //        Debug.Log($"Connected {name} to {endCell.name}");
-        //        if (!connectedEndCell.Contains(endCell))
-        //        {
-        //            connectedEndCell.Add(endCell);
-        //        }
-        //        if (!endCell.connectedEndCell.Contains(this))
-        //        {
-        //            endCell.connectedEndCell.Add(this);
-        //        }
-        //    }
+    public void MakeCellYellow(GridCell cell)
+    {
 
+        GetComponent<Image>().color = Color.yellow;
+        onlyConnectToStartFinish = true;
+        connectedEndCell.Clear();
 
-        //}
     }
 }

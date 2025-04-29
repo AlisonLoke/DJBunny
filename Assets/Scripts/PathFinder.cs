@@ -16,9 +16,9 @@ public class PathFinder : MonoBehaviour
         instance = this;
 
         // Find the start and end cells based on the GridData coordinates
-        Debug.Log("PathFinder Start was called!");
+        //Debug.Log("PathFinder Start was called!");
         gridVisual.OnGridGenerated += FindStartAndFinishCell;
-        gridVisual.OnGridGenerated += LogStartFinishCellStstus;
+        //gridVisual.OnGridGenerated += LogStartFinishCellStstus;
     }
 
     //private void Start()
@@ -29,12 +29,12 @@ public class PathFinder : MonoBehaviour
     //    gridVisual.OnGridGenerated += LogStartFinishCellStstus;
     //}
 
-    public void LogStartFinishCellStstus()
-    {
-        Debug.Log($"PathFinder - Start cell: {(startCell != null ? $"({startCell.x}, {startCell.y})" : "null")}");
-        Debug.Log($"PathFinder - Finish cell: {(finishCell != null ? $"({finishCell.x}, {finishCell.y})" : "null")}");
-        Debug.Log($"GridData coordinates - Start: {gridData.startCellCoordinates}, Finish: {gridData.finishCellCoordinates}");
-    }
+    //public void LogStartFinishCellStstus()
+    //{
+    //    Debug.Log($"PathFinder - Start cell: {(startCell != null ? $"({startCell.x}, {startCell.y})" : "null")}");
+    //    Debug.Log($"PathFinder - Finish cell: {(finishCell != null ? $"({finishCell.x}, {finishCell.y})" : "null")}");
+    //    Debug.Log($"GridData coordinates - Start: {gridData.startCellCoordinates}, Finish: {gridData.finishCellCoordinates}");
+    //}
     private void FindStartAndFinishCell()
     {
         // Instead of searching through all cells, let's get the references directly from GridVisual

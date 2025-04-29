@@ -124,7 +124,7 @@ public class GridVisual : MonoBehaviour
                 //OBJECTHIT[0] GETS TOPMOST UI OBJ UNDER CURSOR AND EXTRACTS ACTUAL GAMEOBJECT WITH .GAMEOBJECT
                 GameObject clickedObject = objectHit[0].gameObject;
 
-                Debug.Log($"Clicked on: {clickedObject.name}");
+                //Debug.Log($"Clicked on: {clickedObject.name}");
             }
         }
 

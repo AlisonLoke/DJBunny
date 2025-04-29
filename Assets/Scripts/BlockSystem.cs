@@ -103,7 +103,7 @@ public class BlockSystem : MonoBehaviour, IPointerUpHandler, IDragHandler, IPoin
 
             if (IsBlockOutsideGrid(thisBlock))
             {
-                Debug.Log("Block is outside of grid");
+                //Debug.Log("Block is outside of grid");
 
                 blockParentRect.position = blockOriginPos;
                 blockParentRect.rotation = Quaternion.identity;
@@ -152,12 +152,12 @@ public class BlockSystem : MonoBehaviour, IPointerUpHandler, IDragHandler, IPoin
                     cell.UpdateGridPosition();
                     cell.CheckForEndCells();
                 }
-                Debug.Log(">> Triggering path check after placing block");
+                //Debug.Log(">> Triggering path check after placing block");
                 ConnectionSystem.instance.CheckConnectionsForAllEndCells();
             }
             else
             {
-                Debug.Log("Block placement failed - grid cell occupied or invalid");
+                //Debug.Log("Block placement failed - grid cell occupied or invalid");
                 blockParentRect.position = blockOriginPos;// no grid cell occupied so return to origin pos
             }
 
@@ -199,7 +199,7 @@ public class BlockSystem : MonoBehaviour, IPointerUpHandler, IDragHandler, IPoin
 
     private void MarkBlockCellsAsOccupied()
     {
-        Debug.Log("Blocks are occupied");
+        //Debug.Log("Blocks are occupied");
         foreach (RectTransform thisBlock in blockRectransforms)
         {
             //GridCell occupiedCell = gridVisual.FindGridCellAtPosition(thisBlock.position);
@@ -207,7 +207,7 @@ public class BlockSystem : MonoBehaviour, IPointerUpHandler, IDragHandler, IPoin
 
             if (occupiedCell != null)
             {
-                Debug.Log($"Marking cell {occupiedCell.x}, {occupiedCell.y} as occupied");
+                //Debug.Log($"Marking cell {occupiedCell.x}, {occupiedCell.y} as occupied");
                 occupiedCell.GridCellOccupied();
             }
         }
@@ -223,7 +223,7 @@ public class BlockSystem : MonoBehaviour, IPointerUpHandler, IDragHandler, IPoin
 
             if (occupiedCell != null)
             {
-                Debug.Log($"Marking cell {occupiedCell.x}, {occupiedCell.y} as occupied");
+                //Debug.Log($"Marking cell {occupiedCell.x}, {occupiedCell.y} as occupied");
                 occupiedCell.GridCellFree();
             }
         }
