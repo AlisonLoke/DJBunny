@@ -90,6 +90,12 @@ public class EndCell : MonoBehaviour
             {
                 continue;
             }
+            //if this cell or its sister has a connection, dont't make more, skip
+            //if(connectedEndCell.Count>0 || (sisterEndCell != null && sisterEndCell.connectedEndCell.Count > 0)) { continue; }
+
+            ////if other end cell or it's sister is already connected, skip
+            //if (endCell.connectedEndCell.Count > 0 || (endCell.sisterEndCell != null && endCell.sisterEndCell.connectedEndCell.Count > 0)) { continue; } 
+
 
             // Get the grid cell for this end cell
             GridCell endCellGridCell = blockSystem.SnapClosestGridCell(endCell.transform.position);
@@ -97,6 +103,9 @@ public class EndCell : MonoBehaviour
             // Check if the coordinates match the adjacent position we're looking for
             if (endCellGridCell != null && endCellGridCell.x == x && endCellGridCell.y == y)
             {
+                
+
+
                 // Found a match - establish connection
                 if (!endCell.connectedEndCell.Contains(this))
                 {
@@ -107,6 +116,7 @@ public class EndCell : MonoBehaviour
                 {
                     this.connectedEndCell.Add(endCell);
                 }
+
                 return endCellGridCell;
             }
         }

@@ -76,7 +76,7 @@ public class ConnectionSystem : MonoBehaviour
                 endCell.MakeCellYellow(endCell.currentGridCell);
 
 
-                //Make the end cell on start not connect to other end cells
+               
                 Debug.Log($"Found EndCell on start cell {endCell.name} at: ({endCell.currentGridCell.x}, {endCell.currentGridCell.y})");
             }
 
