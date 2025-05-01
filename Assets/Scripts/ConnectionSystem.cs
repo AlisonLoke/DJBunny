@@ -152,7 +152,13 @@ public class ConnectionSystem : MonoBehaviour
         // Check the sister (if it exists and isn't already visited)
         if (currentCell.sisterEndCell != null)
         {
-            FindAllPaths(currentCell.sisterEndCell, targetCell, new List<EndCell>(path));
+            if (!path.Contains(currentCell.sisterEndCell)) 
+            {
+                FindAllPaths(currentCell.sisterEndCell, targetCell, new List<EndCell>(path));
+                //Returning means that a sister end cell must be checked before further connections are checked
+                //This prevents a scenario where just part of a block in used in a path
+                return;
+            }
         }
 
         //  Try all connected cells (if any)
