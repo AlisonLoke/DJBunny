@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ConnectionSystem : MonoBehaviour
 {
@@ -133,6 +134,9 @@ public class ConnectionSystem : MonoBehaviour
         }
         Debug.Log("PATH COMPLETE");
         UpdateConnectionLine();
+        //load win scene
+
+        //SceneManager.LoadScene("WinCutScene");
     }
 
     private void FindAllPaths(EndCell currentCell, EndCell targetCell, List<EndCell> path)

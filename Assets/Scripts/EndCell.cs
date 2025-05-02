@@ -154,7 +154,7 @@ public class EndCell : MonoBehaviour
 
     public void MakeCellRed()
     {
-    
+
         GetComponent<Image>().color = Color.red;
 
         connectedEndCell.Clear();
