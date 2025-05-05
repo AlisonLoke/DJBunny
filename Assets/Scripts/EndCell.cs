@@ -163,7 +163,7 @@ public class EndCell : MonoBehaviour
     {
 
         GetComponent<Image>().color = Color.blue;
-   
+
     }
 
     public void MakeCellYellow(GridCell cell)

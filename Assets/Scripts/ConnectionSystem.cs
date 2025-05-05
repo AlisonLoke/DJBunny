@@ -1,4 +1,6 @@
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +10,7 @@ public class ConnectionSystem : MonoBehaviour
 
     public List<RectTransform> placedBlocks;
     public List<EndCell> endCells;
+    public static int currentLevelIndex = 1;
 
     private EndCell startConnectedEndCell;
     private EndCell finishConnectedEndCell;
@@ -118,6 +121,21 @@ public class ConnectionSystem : MonoBehaviour
         FindAllPaths(startConnectedEndCell, finishConnectedEndCell, workingPath);
         Debug.Log($"Found {allPaths.Count} possible paths");
 
+        //Filter out Paths that use only one side of a sister pair
+        int beforeFilter = allPaths.Count;
+        allPaths = allPaths.Where(IsPathValid).ToList();
+        int removed = beforeFilter - allPaths.Count;
+
+        Debug.Log($"Removed {removed} invalid partial-block paths. Remaining: {allPaths.Count}");
+
+        if(allPaths.Count == 0)
+        {
+            allPaths.Clear();
+            currentPath.Clear();
+            Debug.Log("No valid path found. Don't trigger win scene");
+            return;
+        }
+
         // Find the longest path
         foreach (List<EndCell> path in allPaths)
         {
@@ -135,9 +153,11 @@ public class ConnectionSystem : MonoBehaviour
         Debug.Log("PATH COMPLETE");
         UpdateConnectionLine();
         //load win scene
-
         //SceneManager.LoadScene("WinCutScene");
+
     }
+
+
 
     private void FindAllPaths(EndCell currentCell, EndCell targetCell, List<EndCell> path)
     {
@@ -156,6 +176,7 @@ public class ConnectionSystem : MonoBehaviour
         // Check the sister (if it exists and isn't already visited)
         if (currentCell.sisterEndCell != null)
         {
+           
             if (!path.Contains(currentCell.sisterEndCell)) 
             {
                 FindAllPaths(currentCell.sisterEndCell, targetCell, new List<EndCell>(path));
@@ -174,7 +195,20 @@ public class ConnectionSystem : MonoBehaviour
             }
         }
     }
-
+    private bool IsPathValid (List<EndCell> path)
+    {
+        if (path.Count < 3) return false; // Must go through at least one middle cell
+        foreach (EndCell cell in path)
+        {
+            if(cell.sisterEndCell != null && !path.Contains(cell.sisterEndCell))
+            {
+                //sister exists but is not in the path so it is invalid
+                return false;
+               
+            }
+        }
+        return true;
+    }
     private void UpdateConnectionLine()
     {
         // If we don't have a path, don't draw anything
