@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
-public class BlockSystem : MonoBehaviour, IPointerUpHandler, IDragHandler, IPointerDownHandler
+public class BlockSystem : MonoBehaviour, IPointerClickHandler
 {
     private static BlockSystem selectedBlock = null;
     private Vector3 blockOriginPos;
@@ -11,7 +11,7 @@ public class BlockSystem : MonoBehaviour, IPointerUpHandler, IDragHandler, IPoin
     private GridVisual gridVisual;
     private float timeSinceLastRotation = Mathf.Infinity;
     private bool isSnappedToGrid = false;
-    private bool isDragging;
+    private bool isFollowingMouse = false;
 
     public RectTransform gridParent;
     [SerializeField] private RectTransform blockParentRect;
@@ -27,7 +27,7 @@ public class BlockSystem : MonoBehaviour, IPointerUpHandler, IDragHandler, IPoin
         gridVisual = gridParent.GetComponent<GridVisual>();
         endCells = GetComponentsInChildren<EndCell>();
 
-        foreach(EndCell cell in endCells)
+        foreach (EndCell cell in endCells)
         {
             cell.Initialise();
         }
@@ -42,80 +42,132 @@ public class BlockSystem : MonoBehaviour, IPointerUpHandler, IDragHandler, IPoin
             return;
         }
 
-
-        if (Mouse.current.rightButton.wasPressedThisFrame && selectedBlock == this)
+        // Follow mouse if selected
+        if (isFollowingMouse)
         {
+            Vector2 pointerPosition = Mouse.current.position.ReadValue();
+            blockParentRect.position = pointerPosition;
+            HighlightCells();
+        }
+    }
+
+    private void ClearEndCells()
+    {
+        foreach (EndCell cell in endCells)
+            cell.ClearConnections();
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        HandleLeftClickOnBlock(eventData);
+        HandleRightClickOnBlock(eventData);
+    }
+
+    private void HandleLeftClickOnBlock(PointerEventData eventData)
+    {
+        if (eventData.button != PointerEventData.InputButton.Left)
+        {
+            return;
+        }
+
+        if (!isFollowingMouse)
+        {
+            BeginPickUp();
+
+        }
+        else
+        {
+            DropBlock();
+        }
+    }
+
+    private void HandleRightClickOnBlock(PointerEventData eventData)
+    {
+        if (eventData.button != PointerEventData.InputButton.Right)
+        {
+            return;
+        }
+
+        if (isSnappedToGrid)
+        {
+            RemoveFromGrid();
+            ResetBlockToOrigin();
+            return;
+        }
+
+        if (isFollowingMouse)
+        {
+            if (timeSinceLastRotation < delayBetweenRotations)
+            {
+                return;
+            }
+
             RotateBlock();
             timeSinceLastRotation = 0f;
         }
     }
 
-    public void OnPointerDown(PointerEventData eventData)//OnBeginDrag
+    private void DropBlock()
     {
-        if (eventData.button != PointerEventData.InputButton.Left) { return; }
+        isFollowingMouse = false;
+        selectedBlock = null;
 
-        if (isDragging) { return; }
+        if (IsAnyBlockOutsideGrid())
+        {
+            ResetBlockToOrigin();
+            UnhighlightAllCells();
+            return;
+        }
 
+        GridCell snapClosestGridCell = SnapClosestGridCell(blockParentRect.position);
+        BlockPlacement(snapClosestGridCell);
+    }
+
+
+    private void BeginPickUp()
+    {
         selectedBlock = this;
-        isDragging = true;
+        isFollowingMouse = true;
+
         if (!isSnappedToGrid)
         {
             blockOriginPos = blockParentRect.position;
             return;
         }
 
-        isSnappedToGrid = false;
-        // If snapped to grid, free up occupied cells
+        RemoveFromGrid();
+    }
 
+    private void RemoveFromGrid()
+    {
+        isSnappedToGrid = false;
         UnMarkBlockCellAsOccupied();
         RemovePlaceBlockFromList(blockParentRect);
         ConnectionSystem.instance.CheckConnectionsForAllEndCells();
 
-        foreach(EndCell cell in endCells)
-        {
-            cell.ClearConnections();
-        }
+        ClearEndCells();
     }
 
-    public void OnDrag(PointerEventData eventData)
+    private void ResetBlockToOrigin()
     {
-        if (eventData.button != PointerEventData.InputButton.Left) { return; }
 
-        Vector2 pointerPosition = Mouse.current.position.ReadValue();// new input system way of writing Input.mousePosition
-        blockParentRect.position = pointerPosition;
-        HighlightCells();
+        blockParentRect.position = blockOriginPos;
+        blockParentRect.rotation = Quaternion.identity;
+
+
+
     }
 
-
-    public void OnPointerUp(PointerEventData eventData)//OnEndDrag
+    private bool IsAnyBlockOutsideGrid()
     {
-        if (eventData.button != PointerEventData.InputButton.Left) { return; }
-
-        if (!isDragging) { return; }
-
-        if (Mouse.current.leftButton.isPressed) { return; }
-
-        isDragging = false;
-        selectedBlock = null;
-
         foreach (RectTransform thisBlock in blockRectransforms)
         {
-
             if (IsBlockOutsideGrid(thisBlock))
-            {
-                //Debug.Log("Block is outside of grid");
-
-                blockParentRect.position = blockOriginPos;
-                blockParentRect.rotation = Quaternion.identity;
-                UnhighlightAllCells();
-                return;
-            }
+                return true;
         }
-
-
-        GridCell snapClosestGridCell = SnapClosestGridCell(blockParentRect.position);
-        BlockPlacement(snapClosestGridCell);
+        return false;
     }
+
 
 
     private void BlockPlacement(GridCell snapClosestGridCell)
@@ -299,7 +351,7 @@ public class BlockSystem : MonoBehaviour, IPointerUpHandler, IDragHandler, IPoin
         }
         ConnectionSystem.instance.placedBlocks.Remove(thisBlock);
 
-        foreach(EndCell cell in endCells)
+        foreach (EndCell cell in endCells)
         {
             ConnectionSystem.instance.endCells.Remove(cell);
         }
