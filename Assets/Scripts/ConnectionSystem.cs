@@ -151,9 +151,9 @@ public class ConnectionSystem : MonoBehaviour
             Debug.Log($"Path point: {cell.name} at position {cell.transform.position}");
         }
         Debug.Log("PATH COMPLETE");
-        UpdateConnectionLine();
+        //UpdateConnectionLine();
         //load win scene
-        //SceneManager.LoadScene("WinCutScene");
+        SceneManager.LoadScene("WinCutScene");
 
     }
 
