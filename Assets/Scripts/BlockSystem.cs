@@ -12,6 +12,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
     private float timeSinceLastRotation = Mathf.Infinity;
     private bool isSnappedToGrid = false;
     private bool isFollowingMouse = false;
+    private GameObject audioObject;
 
     public RectTransform gridParent;
     [SerializeField] private RectTransform blockParentRect;
@@ -94,7 +95,10 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         {
             RemoveFromGrid();
             ResetBlockToOrigin();
-            AudioManager.instance.StopMusic();
+            if (audioObject != null)
+            {
+                Destroy(audioObject);
+            }
             return;
         }
 
@@ -126,7 +130,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         BlockPlacement(snapClosestGridCell);
         Debug.Log("PLAYING MUSIC");
 
-        AudioManager.instance.PlayMusic(blockData.AudioClip);
+        audioObject = AudioManager.instance.PlayMusic(blockData.AudioClip);
     }
 
 
@@ -152,7 +156,10 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         ConnectionSystem.instance.CheckConnectionsForAllEndCells();
 
         ClearEndCells();
-        AudioManager.instance.StopMusic();
+        if (audioObject != null)
+        {
+            Destroy(audioObject);
+        }
     }
 
     private void ResetBlockToOrigin()

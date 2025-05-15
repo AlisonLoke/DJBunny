@@ -1,57 +1,66 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
-    private AudioSource audioSource;
-    public AudioClip testClip;
+    private List <AudioSource> audioSources = new List<AudioSource>();
+ 
 
 
     private void Awake()
     {
    
-
-        instance = this;
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+       
   
 
-        audioSource = gameObject.GetComponent<AudioSource>();
-    }
-    private void Start()
-    {
-        TestPlayAudio();
+     
     }
 
-    public void TestPlayAudio()
+
+
+    public GameObject PlayMusic(AudioClip clip)
     {
-        if (testClip != null)
+        if(clip == null)
         {
-            audioSource.clip = testClip;
-            audioSource.Play();
-            Debug.Log($"Test sound playing: {testClip.name}, Is Playing: {audioSource.isPlaying}");
+            Debug.LogWarning("clip is null in PlayMusic");
+            return null; 
         }
-        else
-        {
-            Debug.LogError("Test clip not assigned!");
-        }
-    }
-    public void PlayMusic(AudioClip clip)
-    {
-        Debug.Log("Trying to play sound: " + (clip != null ? clip.name : "null"));
-        Debug.Log("AudioSource is playing? " + audioSource.isPlaying);
-        if (clip != null)
-        {
-            audioSource.clip = clip;
-            audioSource.Play();
-            Debug.Log("Playing sound: " + clip.name);
-        }
-        else
-        {
-            Debug.LogWarning("Clip is null in PlaySound()");
-        }
+
+        GameObject newAudioObj = new GameObject("Audio_" + clip.name);
+        newAudioObj.transform.SetParent(this.transform);
+
+
+        AudioSource newSource = newAudioObj.AddComponent<AudioSource>();
+        newSource.clip = clip;
+        newSource.loop = true; 
+        newSource.Play();
+
+        audioSources.Add(newSource);
+
+        Debug.Log("Playing layered sound: " + clip.name);
+        return newAudioObj;
     }
 
     public void StopMusic()
     {
-        audioSource.Stop();
+        foreach (AudioSource source in audioSources)
+        {
+            if (source != null)
+            {
+                source.Stop();
+                Destroy(source.gameObject);
+            }
+        }
+
+        audioSources.Clear();
     }
 }
