@@ -293,7 +293,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectedEndCell: []
+  sisterEndCell: {fileID: 0}
   currentGridCell: {fileID: 0}
+  onlyConnectToStartFinish: 0
   blockSystem: {fileID: 0}
 --- !u!1 &8296443315847429673
 GameObject:
@@ -384,5 +386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectedEndCell: []
+  sisterEndCell: {fileID: 0}
   currentGridCell: {fileID: 0}
+  onlyConnectToStartFinish: 0
   blockSystem: {fileID: 0}

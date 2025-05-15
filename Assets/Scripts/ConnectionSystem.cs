@@ -52,7 +52,8 @@ public class ConnectionSystem : MonoBehaviour
     //}
     public void CheckConnectionsForAllEndCells()
     {
-
+        currentPath.Clear();
+        ClearConnectedLine();
 
         Debug.Log($"Checking connections for {endCells.Count} end cells");
 

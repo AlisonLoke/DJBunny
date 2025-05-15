@@ -54,7 +54,9 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
     private void ClearEndCells()
     {
         foreach (EndCell cell in endCells)
+        {
             cell.ClearConnections();
+        }
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -92,6 +94,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         {
             RemoveFromGrid();
             ResetBlockToOrigin();
+            AudioManager.instance.StopMusic();
             return;
         }
 
@@ -121,6 +124,9 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
         GridCell snapClosestGridCell = SnapClosestGridCell(blockParentRect.position);
         BlockPlacement(snapClosestGridCell);
+        Debug.Log("PLAYING MUSIC");
+
+        AudioManager.instance.PlayMusic(blockData.AudioClip);
     }
 
 
@@ -146,6 +152,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         ConnectionSystem.instance.CheckConnectionsForAllEndCells();
 
         ClearEndCells();
+        AudioManager.instance.StopMusic();
     }
 
     private void ResetBlockToOrigin()

@@ -28,6 +28,8 @@ public class EndCell : MonoBehaviour
     }
     public void CheckForEndCells()
     {
+        connectedEndCell.Clear();
+
         GridCell currentCell = blockSystem.SnapClosestGridCell(transform.position);
         if (currentCell == null) { return; }
 

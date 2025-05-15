@@ -4,10 +4,18 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "BlockData", menuName = "Scriptable Objects/BlockData")]
 public class BlockData : ScriptableObject
 {
+    [Header("Block Type")]
     [SerializeField] private string BlockName;
     [SerializeField] private GameObject BlockPrefab;
     [SerializeField] private List<Vector2Int> BlockCoordinatesList;
 
+    [Header("Music")]
+    [SerializeField] private AudioClip audioClip;
+    public AudioClip AudioClip => audioClip;
+ 
+
+    [Header("Genre")]
+    [SerializeField] private string genre;
 
     public void RotationCoordinates()
     {
@@ -22,4 +30,6 @@ public class BlockData : ScriptableObject
 
         BlockCoordinatesList = rotatedCoordinates;
     }
+
+ 
 }
