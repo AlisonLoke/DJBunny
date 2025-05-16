@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e7e63b03d3ea3a4dac14a8664b09b92, type: 3}
-  m_Name: LBlock
+  m_Name: TwoBlockDrum
   m_EditorClassIdentifier: 
-  BlockName: LBlock
-  BlockPrefab: {fileID: 1385824898608407974, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
+  BlockName: TwoBlockDrum
+  BlockPrefab: {fileID: 3804025796979829729, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
   BlockCoordinatesList:
   - {x: 0, y: 0}
-  - {x: 0, y: 1}
-  - {x: 1, y: 1}
-  audioClip: {fileID: 8300000, guid: 74e84cfa1346d2849b44fb14aa3be180, type: 3}
+  - {x: -1, y: 0}
+  audioClip: {fileID: 8300000, guid: 2faac551f5c3e2d4baf500a52f055be7, type: 3}
   genre: 
