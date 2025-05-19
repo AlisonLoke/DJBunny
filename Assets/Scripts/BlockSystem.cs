@@ -130,7 +130,9 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         BlockPlacement(snapClosestGridCell);
         Debug.Log("PLAYING MUSIC");
 
-        audioObject = AudioManager.instance.PlayMusic(blockData.AudioClip);
+        //audioObject = AudioManager.instance.PlayMusic(blockData.AudioClip);
+        //AudioManager.instance.drumSoundTest.Post(gameObject);
+        audioObject = AudioManager.instance.PlayMusic(AudioManager.instance.drumSoundTest);
     }
 
 

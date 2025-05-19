@@ -4,8 +4,8 @@ using System.Collections.Generic;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
-    private List <AudioSource> audioSources = new List<AudioSource>();
- 
+    private List <AK.Wwise.Event> instruments = new List<AK.Wwise.Event>();
+    public AK.Wwise.Event drumSoundTest = null;
 
 
     private void Awake()
@@ -28,40 +28,40 @@ public class AudioManager : MonoBehaviour
 
 
 
-    public GameObject PlayMusic(AudioClip clip)
+    public GameObject PlayMusic(AK.Wwise.Event instrument)
     {
-        if(clip == null)
+        if(instrument == null)
         {
             Debug.LogWarning("clip is null in PlayMusic");
             return null; 
         }
 
-        GameObject newAudioObj = new GameObject("Audio_" + clip.name);
+        GameObject newAudioObj = new GameObject("Audio_" + instrument);
         newAudioObj.transform.SetParent(this.transform);
 
 
-        AudioSource newSource = newAudioObj.AddComponent<AudioSource>();
-        newSource.clip = clip;
-        newSource.loop = true; 
-        newSource.Play();
+        //AudioSource newSource = newAudioObj.AddComponent<AudioSource>();
+        //newSource.clip = clip;
+        //newSource.loop = true; 
+        instrument.Post(newAudioObj);
 
-        audioSources.Add(newSource);
+        instruments.Add(instrument);
 
-        Debug.Log("Playing layered sound: " + clip.name);
+        Debug.Log("Playing layered sound: " + instrument);
         return newAudioObj;
     }
 
-    public void StopMusic()
-    {
-        foreach (AudioSource source in audioSources)
-        {
-            if (source != null)
-            {
-                source.Stop();
-                Destroy(source.gameObject);
-            }
-        }
+    //public void StopMusic()
+    //{
+    //    foreach (AudioSource source in audioSources)
+    //    {
+    //        if (source != null)
+    //        {
+    //            source.Stop();
+    //            Destroy(source.gameObject);
+    //        }
+    //    }
 
-        audioSources.Clear();
-    }
+    //    audioSources.Clear();
+    //}
 }
