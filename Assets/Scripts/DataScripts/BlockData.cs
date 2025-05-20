@@ -4,19 +4,26 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "BlockData", menuName = "Scriptable Objects/BlockData")]
 public class BlockData : ScriptableObject
 {
+    //public enum BlockGenre
+    //{
+    //    Drums,
+    //    Bass,
+    //    Piano
+    //}
+
     [Header("Block Type")]
     [SerializeField] private string BlockName;
     [SerializeField] private GameObject BlockPrefab;
     [SerializeField] private List<Vector2Int> BlockCoordinatesList;
 
     [Header("Music")]
-    //[SerializeField] private AudioClip audioClip;
-    //public AudioClip AudioClip => audioClip;
-    public AK.Wwise.Event Instruments = null; 
- 
+    public AK.Wwise.Event Instruments = null;
+
 
     [Header("Genre")]
-    [SerializeField] private string genre;
+    [Tooltip("Select the genre of music this block represents")]
+    [SerializeField] private BlockGenre genre;
+    public BlockGenre GetGenre => genre;
 
     public void RotationCoordinates()
     {
@@ -32,5 +39,5 @@ public class BlockData : ScriptableObject
         BlockCoordinatesList = rotatedCoordinates;
     }
 
- 
+  
 }
