@@ -4,8 +4,9 @@ using System.Collections.Generic;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
-    private List <AK.Wwise.Event> instruments = new List<AK.Wwise.Event>();
-    public AK.Wwise.Event drumSoundTest = null;
+    //private List <AK.Wwise.Event> instruments = new List<AK.Wwise.Event>();
+    private List<GameObject> instruments = new List<GameObject>();
+
 
 
     private void Awake()
@@ -43,25 +44,26 @@ public class AudioManager : MonoBehaviour
         //AudioSource newSource = newAudioObj.AddComponent<AudioSource>();
         //newSource.clip = clip;
         //newSource.loop = true; 
-        instrument.Post(newAudioObj);
+        instrument.Post(newAudioObj); // post music to this game object
 
-        instruments.Add(instrument);
+        instruments.Add(newAudioObj);
 
         Debug.Log("Playing layered sound: " + instrument);
         return newAudioObj;
     }
 
-    //public void StopMusic()
-    //{
-    //    foreach (AudioSource source in audioSources)
-    //    {
-    //        if (source != null)
-    //        {
-    //            source.Stop();
-    //            Destroy(source.gameObject);
-    //        }
-    //    }
+    public void StopMusic()
+    {
+        foreach (GameObject instrument in instruments)
+        {
+            if (instrument != null)
+            {
+                AkUnitySoundEngine.StopAll(instrument);
+                Destroy(instrument);
+                
+            }
+        }
 
-    //    audioSources.Clear();
-    //}
+        instruments.Clear();
+    }
 }

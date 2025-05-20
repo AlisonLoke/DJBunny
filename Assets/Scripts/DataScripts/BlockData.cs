@@ -10,8 +10,9 @@ public class BlockData : ScriptableObject
     [SerializeField] private List<Vector2Int> BlockCoordinatesList;
 
     [Header("Music")]
-    [SerializeField] private AudioClip audioClip;
-    public AudioClip AudioClip => audioClip;
+    //[SerializeField] private AudioClip audioClip;
+    //public AudioClip AudioClip => audioClip;
+    public AK.Wwise.Event Instruments = null; 
  
 
     [Header("Genre")]

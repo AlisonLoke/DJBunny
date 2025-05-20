@@ -95,9 +95,13 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         {
             RemoveFromGrid();
             ResetBlockToOrigin();
+            Debug.Log("MUSIC STOPPED");
+            
             if (audioObject != null)
             {
-                Destroy(audioObject);
+                blockData.Instruments.Stop(audioObject); // stop this instrument on the block
+                Destroy(audioObject); // destroy it ro clean up
+                audioObject = null;
             }
             return;
         }
@@ -132,7 +136,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
         //audioObject = AudioManager.instance.PlayMusic(blockData.AudioClip);
         //AudioManager.instance.drumSoundTest.Post(gameObject);
-        audioObject = AudioManager.instance.PlayMusic(AudioManager.instance.drumSoundTest);
+        audioObject = AudioManager.instance.PlayMusic(blockData.Instruments);
     }
 
 
@@ -160,7 +164,9 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         ClearEndCells();
         if (audioObject != null)
         {
-            Destroy(audioObject);
+            blockData.Instruments.Stop(audioObject); // stop this instrument on the block
+            Destroy(audioObject); // destroy it ro clean up
+            audioObject = null;
         }
     }
 
