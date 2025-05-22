@@ -4,6 +4,6 @@ using UnityEngine.UI;
 
 public class BlockCellPulse 
 {
-    public Tween PulseAnimation;
+    public Tween pulseAnimation;
     public Image BlockCellToPulse;
 }

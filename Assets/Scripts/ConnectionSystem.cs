@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using DG.Tweening;
 
 public class ConnectionSystem : MonoBehaviour
 {
@@ -46,10 +48,7 @@ public class ConnectionSystem : MonoBehaviour
 
     }
 
-    //private void Update()
-    //{
-    //    UpdateConnectionLine();
-    //}
+   
     public void CheckConnectionsForAllEndCells()
     {
         currentPath.Clear();
@@ -112,6 +111,7 @@ public class ConnectionSystem : MonoBehaviour
     private void FindLongestPath()
     {
         // Clear any previous paths
+        StopPathAnimations();
         allPaths.Clear();
         currentPath.Clear();
         Debug.Log($"Finding path from {startConnectedEndCell.name} to {finishConnectedEndCell.name}");
@@ -156,10 +156,71 @@ public class ConnectionSystem : MonoBehaviour
         UpdateConnectionLine();
         //load win scene
         //SceneManager.LoadScene("WinCutScene");
-
+        StartCoroutine(PlayPathPulseSequence());
     }
 
+    private IEnumerator PlayPathPulseSequence()
+    {
+        float delayBetweenCells = 0.3f; // Tune this value for pulse spacing
+        string pulseHex = "#00FF00";    // Green pulse
+        float pulseDuration = 0.2f;
 
+        BlockUI blockUI = null;
+
+        for (int endCells = 0; endCells < currentPath.Count; endCells++)
+        {
+            EndCell cell = currentPath[endCells];
+            if (cell == null) continue;
+
+            if (blockUI == null)
+            {
+                blockUI = cell.GetComponentInParent<BlockUI>();
+                if (blockUI == null) yield break;
+            }
+
+            Image cellImage = cell.GetComponent<Image>();
+            if (cellImage == null) continue;
+
+            // Brief one-time flash using DoTween (non-looping)
+            cellImage.DOColor(Color.white, pulseDuration)
+                .OnComplete(() =>
+                {
+                    ColorUtility.TryParseHtmlString(pulseHex, out Color pulseColor);
+                    cellImage.DOColor(pulseColor, pulseDuration);
+                });
+
+            yield return new WaitForSeconds(delayBetweenCells);
+        }
+
+        // After animation, loop-pulse the final cell
+        EndCell finalCell = currentPath[currentPath.Count - 1];
+        if (finalCell != null)
+        {
+            Image finalImage = finalCell.GetComponent<Image>();
+            if (finalImage != null && blockUI != null)
+            {
+                blockUI.BlockColourPulse(finalImage, "#00FF00", 0.5f); // Green loop pulse
+            }
+        }
+    }
+
+    public void StopPathAnimations()
+    {
+        foreach (EndCell cell in currentPath)
+        {
+            Image image = cell.GetComponent<Image>();
+            if (image != null)
+            {
+                // Stop all DOTween tweens on this image
+                image.DOKill();
+
+                if (ColorUtility.TryParseHtmlString("#FF0000", out Color red))
+                {
+                    image.color = red;
+                }
+            }
+        }
+    }
 
     private void FindAllPaths(EndCell currentCell, EndCell targetCell, List<EndCell> path)
     {

@@ -11,13 +11,13 @@ public class BlockUI : MonoBehaviour
 
     public void BlockColourPulse(Image pulsingBlockCell, string hexColour, float duration = 0.5f)
     {
-
+      
 
         //We check if a block cell to pulse already exists for this image
-        foreach (BlockCellPulse thisBlockCell in blockCellToPulseList)
+        foreach(BlockCellPulse thisBlockCell in blockCellToPulseList)
         {
             //if block cell is already pulsing
-            if (thisBlockCell.BlockCellToPulse == pulsingBlockCell)
+            if(thisBlockCell.BlockCellToPulse == pulsingBlockCell)
             {
                 //If does, return so we don't start the pulse
                 return;
@@ -31,19 +31,17 @@ public class BlockUI : MonoBehaviour
             return;
         }
 
-        CreateLoopPulse(pulsingBlockCell, duration, targetColour);
-    }
+    
 
-    private void CreateLoopPulse(Image pulsingBlockCell, float duration, Color targetColour)
-    {
+        
         Tween loopPulseAnim = pulsingBlockCell.DOColor(targetColour, duration).SetLoops(-1, LoopType.Yoyo);
 
         BlockCellPulse newBlockCellPulse = new BlockCellPulse();
-
-        newBlockCellPulse.PulseAnimation = loopPulseAnim;
-
+    
+        newBlockCellPulse.pulseAnimation = loopPulseAnim;
+    
         newBlockCellPulse.BlockCellToPulse = pulsingBlockCell;
-
+    
         blockCellToPulseList.Add(newBlockCellPulse);
     }
 
@@ -56,9 +54,9 @@ public class BlockUI : MonoBehaviour
             if (thisBlockCell.BlockCellToPulse == pulsingBlock)
             {
                 //Kill the tween
-                if (thisBlockCell.PulseAnimation.IsActive())
+                if (thisBlockCell.pulseAnimation.IsActive())
                 {
-                    thisBlockCell.PulseAnimation.Kill();
+                    thisBlockCell.pulseAnimation.Kill();
                 }
 
                 if (ColorUtility.TryParseHtmlString("#FF0000", out Color redColor))
