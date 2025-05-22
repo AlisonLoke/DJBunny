@@ -162,6 +162,11 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         ConnectionSystem.instance.CheckConnectionsForAllEndCells();
 
         ClearEndCells();
+        foreach(EndCell thisCell in endCells)
+        {
+            thisCell.StopPulseColour();
+        }
+       
         if (audioObject != null)
         {
             blockData.Instruments.Stop(audioObject); // stop this instrument on the block
@@ -199,7 +204,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
         if (snapClosestGridCell != null)// if we found grid cell that is close
         {
-            Debug.Log(snapClosestGridCell.x + "," + snapClosestGridCell.y);
+            //Debug.Log(snapClosestGridCell.x + "," + snapClosestGridCell.y);
             gridCell = snapClosestGridCell.GetComponent<GridCell>();
 
             bool allBlocksCanPlace = AllBlockCellsCanPlace();
@@ -224,7 +229,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
                 foreach (EndCell cell in endCells)
                 {
                     cell.UpdateGridPosition();
-                    cell.CheckForEndCells();
+                    
                 }
                 //Debug.Log(">> Triggering path check after placing block");
                 ConnectionSystem.instance.CheckConnectionsForAllEndCells();

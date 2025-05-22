@@ -81,7 +81,8 @@ public class ConnectionSystem : MonoBehaviour
                 endCell.MakeCellYellow(endCell.currentGridCell);
 
 
-               
+
+
                 Debug.Log($"Found EndCell on start cell {endCell.name} at: ({endCell.currentGridCell.x}, {endCell.currentGridCell.y})");
             }
 

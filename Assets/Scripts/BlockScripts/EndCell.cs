@@ -10,19 +10,23 @@ public class EndCell : MonoBehaviour
     public bool onlyConnectToStartFinish = false;
     [HideInInspector] public BlockSystem blockSystem;
     private RectTransform blockParent;
+    private BlockUI blockUI;
+    private Image cellImage;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     public void Initialise()
     {
         blockSystem = GetComponentInParent<BlockSystem>();
-        currentGridCell = blockSystem.SnapClosestGridCell(transform.position);   
+        blockUI = GetComponentInParent<BlockUI>();
+        currentGridCell = blockSystem.SnapClosestGridCell(transform.position);
+        cellImage = GetComponent<Image>();
 
-        foreach( EndCell endCell in blockSystem.endCells)
+        foreach (EndCell endCell in blockSystem.endCells)
         {
-            if( endCell != this )
+            if (endCell != this)
             {
-                sisterEndCell = endCell;    
+                sisterEndCell = endCell;
             }
         }
     }
@@ -40,32 +44,41 @@ public class EndCell : MonoBehaviour
         GridCell right = FindAdjacentEndCell(currentCell.x, currentCell.y + 1);
         GridCell left = FindAdjacentEndCell(currentCell.x, currentCell.y - 1);
 
-
+        //for debug purpose
         if (down != null)
         {
-            MakeCellBlue(down);
+            //MakeCellBlue(down);
         }
         else if (up != null)
         {
-            MakeCellBlue(up);
+            //MakeCellBlue(up);
         }
         else if (right != null)
         {
-            MakeCellBlue(right);
+            //MakeCellBlue(right);
         }
         else if (left != null)
         {
-            MakeCellBlue(left);
+            //MakeCellBlue(left);
         }
         else
         {
             MakeCellRed();
         }
+
+        if(connectedEndCell.Count == 0)
+        {
+            PulseColour();
+        }
+        else
+        {
+            StopPulseColour();
+        }
     }
 
     private GridCell FindAdjacentEndCell(int x, int y)
     {
-       
+
         List<RectTransform> placedBlocks = ConnectionSystem.instance.placedBlocks;
 
         List<EndCell> allEndCells = new List<EndCell>();
@@ -92,11 +105,7 @@ public class EndCell : MonoBehaviour
             {
                 continue;
             }
-            //if this cell or its sister has a connection, dont't make more, skip
-            //if(connectedEndCell.Count>0 || (sisterEndCell != null && sisterEndCell.connectedEndCell.Count > 0)) { continue; }
 
-            ////if other end cell or it's sister is already connected, skip
-            //if (endCell.connectedEndCell.Count > 0 || (endCell.sisterEndCell != null && endCell.sisterEndCell.connectedEndCell.Count > 0)) { continue; } 
 
 
             // Get the grid cell for this end cell
@@ -105,7 +114,7 @@ public class EndCell : MonoBehaviour
             // Check if the coordinates match the adjacent position we're looking for
             if (endCellGridCell != null && endCellGridCell.x == x && endCellGridCell.y == y)
             {
-                
+
 
 
                 // Found a match - establish connection
@@ -114,7 +123,7 @@ public class EndCell : MonoBehaviour
                     endCell.connectedEndCell.Add(this);
                 }
 
-                if(!connectedEndCell.Contains(endCell))
+                if (!connectedEndCell.Contains(endCell))
                 {
                     this.connectedEndCell.Add(endCell);
                 }
@@ -157,23 +166,55 @@ public class EndCell : MonoBehaviour
     public void MakeCellRed()
     {
 
-        GetComponent<Image>().color = Color.red;
+        //GetComponent<Image>().color = Color.red;
 
         connectedEndCell.Clear();
     }
     public void MakeCellBlue(GridCell cell)
     {
 
-        GetComponent<Image>().color = Color.blue;
+        //GetComponent<Image>().color = Color.blue;
 
     }
 
     public void MakeCellYellow(GridCell cell)
     {
 
-        GetComponent<Image>().color = Color.yellow;
+        //GetComponent<Image>().color = Color.yellow;
         onlyConnectToStartFinish = true;
         connectedEndCell.Clear();
+        StopPulseColour();
 
+    }
+
+    public void PulseColour()
+    {
+        //if (connectedEndCell.Count == 0 /*&& sisterEndCell != null && sisterEndCell.connectedEndCell.Count == 0*/)
+        //{
+        //    if (blockUI != null)
+        //    {
+        //        blockUI.BlockColourPulse("#FF8A8A", 0.5f);
+        //    }
+        //}
+        //else
+        //{
+        //    if (blockUI != null && connectedEndCell.Count > 0 /*&& sisterEndCell != null && sisterEndCell.connectedEndCell.Count > 0*/)
+        //    {
+        //        blockUI.StopColourPulse();
+        //    }
+        //}
+
+        if (blockUI != null)
+        {
+            blockUI.BlockColourPulse(cellImage, "#FF8A8A", 0.5f);
+        }
+    }
+
+    public void StopPulseColour()
+    {
+        if (blockUI != null)
+        {
+            blockUI.StopColourPulse(cellImage);
+        }
     }
 }
