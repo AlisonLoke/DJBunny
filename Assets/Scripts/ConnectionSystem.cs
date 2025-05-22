@@ -14,14 +14,14 @@ public class ConnectionSystem : MonoBehaviour
 
     private EndCell startConnectedEndCell;
     private EndCell finishConnectedEndCell;
-
-    [SerializeField] private UILineRenderer lineRenderer;
-    [SerializeField] private RectTransform canvas;
-    [SerializeField] private PathFinder pathFinder;
     //stores a single path.
     private List<EndCell> currentPath = new List<EndCell>();
     //Contains multiple list of endCell object paths. A collection of paths
     private List<List<EndCell>> allPaths = new List<List<EndCell>>();
+
+    [SerializeField] private UILineRenderer lineRenderer;
+    [SerializeField] private RectTransform canvas;
+    [SerializeField] private PathFinder pathFinder;
 
     private void Awake()
     {
@@ -197,6 +197,7 @@ public class ConnectionSystem : MonoBehaviour
             }
         }
     }
+   
     private bool IsPathValid (List<EndCell> path)
     {
         if (path.Count < 3) return false; // Must go through at least one middle cell
@@ -211,6 +212,7 @@ public class ConnectionSystem : MonoBehaviour
         }
         return true;
     }
+   
     private void UpdateConnectionLine()
     {
         // If we don't have a path, don't draw anything

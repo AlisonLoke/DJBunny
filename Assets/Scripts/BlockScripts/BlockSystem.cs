@@ -14,12 +14,12 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
     private bool isFollowingMouse = false;
     private GameObject audioObject;
 
-    public RectTransform gridParent;
     [SerializeField] private RectTransform blockParentRect;
     [SerializeField] private RectTransform[] blockRectransforms;
     [SerializeField] private BlockData blockData;
     [SerializeField] private float delayBetweenRotations = 1f;
-    //public List<RectTransform> placedBlocks;
+  
+    public RectTransform gridParent;
     public EndCell[] endCells;
 
 
@@ -96,7 +96,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             RemoveFromGrid();
             ResetBlockToOrigin();
             Debug.Log("MUSIC STOPPED");
-            
+
             if (audioObject != null)
             {
                 blockData.Instruments.Stop(audioObject); // stop this instrument on the block
@@ -131,7 +131,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         }
 
         GridCell snapClosestGridCell = SnapClosestGridCell(blockParentRect.position);
-        BlockPlacement(snapClosestGridCell);
+        FinalBlockPlacement(snapClosestGridCell);
         Debug.Log("PLAYING MUSIC");
 
         //audioObject = AudioManager.instance.PlayMusic(blockData.AudioClip);
@@ -162,11 +162,11 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         ConnectionSystem.instance.CheckConnectionsForAllEndCells();
 
         ClearEndCells();
-        foreach(EndCell thisCell in endCells)
+        foreach (EndCell thisCell in endCells)
         {
             thisCell.StopPulseColour();
         }
-       
+
         if (audioObject != null)
         {
             blockData.Instruments.Stop(audioObject); // stop this instrument on the block
@@ -195,69 +195,94 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         return false;
     }
 
-
-
-    private void BlockPlacement(GridCell snapClosestGridCell)
+    //------------------------- BlockPlacement-------------------------------------------
+    private void FinalBlockPlacement(GridCell snapClosestGridCell)
     {
-
-
 
         if (snapClosestGridCell != null)// if we found grid cell that is close
         {
             //Debug.Log(snapClosestGridCell.x + "," + snapClosestGridCell.y);
-            gridCell = snapClosestGridCell.GetComponent<GridCell>();
-
-            bool allBlocksCanPlace = AllBlockCellsCanPlace();
-
-            if (gridCell != null && allBlocksCanPlace)
-            {
-                blockParentRect.position = snapClosestGridCell.GetComponent<RectTransform>().position;
-
-                MarkBlockCellsAsOccupied();
-                isSnappedToGrid = true;
-                AddPlaceBlockToList(blockParentRect);
-
-                if (!ConnectionSystem.instance.endCells.Contains(endCells[0]))
-                {
-                    Debug.Log($"Adding {endCells.Length} EndCells to connection system");
-                    ConnectionSystem.instance.endCells.AddRange(endCells);
-                }
-
-
-
-                // Establish connections for each end cell
-                foreach (EndCell cell in endCells)
-                {
-                    cell.UpdateGridPosition();
-                    
-                }
-                //Debug.Log(">> Triggering path check after placing block");
-                ConnectionSystem.instance.CheckConnectionsForAllEndCells();
-            }
-            else
-            {
-                //Debug.Log("Block placement failed - grid cell occupied or invalid");
-                blockParentRect.position = blockOriginPos;// no grid cell occupied so return to origin pos
-            }
+            MoveBlockToGrid(snapClosestGridCell);
 
         }
 
+        DidNotFindAnyGridCell();
+        BlockIsDraggedOutOfBounds();
+
+    }
+
+
+    private void MoveBlockToGrid(GridCell snapClosestGridCell)
+    {
+        gridCell = snapClosestGridCell.GetComponent<GridCell>();
+
+        bool allBlocksCanPlace = AllBlockCellsCanPlace();
+
+        FoundValidGridCell(snapClosestGridCell, allBlocksCanPlace);
+    }
+
+
+    private void FoundValidGridCell(GridCell snapClosestGridCell, bool allBlocksCanPlace)
+    {
+        if (gridCell != null && allBlocksCanPlace)
+        {
+            blockParentRect.position = snapClosestGridCell.GetComponent<RectTransform>().position;
+
+            MarkBlockCellsAsOccupied();
+            isSnappedToGrid = true;
+            AddPlaceBlockToList(blockParentRect);
+
+            CheckForFirstEndCell();
+
+            // Establish connections for each end cell
+            UpdateEndCellGridPositions();
+
+            //Debug.Log(">> Triggering path check after placing block");
+            //Check for any new connections if they are valid or complete
+            ConnectionSystem.instance.CheckConnectionsForAllEndCells();
+        }
+        else
+        {
+            //Debug.Log("Block placement failed - grid cell occupied or invalid");
+            blockParentRect.position = blockOriginPos;// no grid cell occupied so return to origin pos
+        }
+
+    }
+
+    private void CheckForFirstEndCell()
+    {
+        if (!ConnectionSystem.instance.endCells.Contains(endCells[0]))
+        {
+            //Debug.Log($"Adding {endCells.Length} EndCells to connection system");
+            ConnectionSystem.instance.endCells.AddRange(endCells);
+        }
+    }
+    private void UpdateEndCellGridPositions()
+    {
+        foreach (EndCell cell in endCells)
+        {
+            cell.UpdateGridPosition();
+
+        }
+    }
+
+    private void DidNotFindAnyGridCell()
+    {
         if (gridCell == null)
         {
 
             blockParentRect.position = blockOriginPos;// no grid cell found so return origin pos
         }
-
+    }
+    private void BlockIsDraggedOutOfBounds()
+    {
         if (IsBlockOutsideGrid(blockParentRect))
         {
             blockParentRect.position = blockOriginPos;
             blockParentRect.rotation = Quaternion.identity; // rotate UI of block
             UnMarkBlockCellAsOccupied();
         }
-
     }
-
-
 
     private bool AllBlockCellsCanPlace()
     {
@@ -273,8 +298,6 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
         return true; // all spots are empty, you can place block here.
     }
-
-
 
     private void MarkBlockCellsAsOccupied()
     {
@@ -328,7 +351,6 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         }
 
     }
-
 
 
     public GridCell SnapClosestGridCell(Vector3 thisPosition)
