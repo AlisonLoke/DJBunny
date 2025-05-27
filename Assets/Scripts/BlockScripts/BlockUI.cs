@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
@@ -6,9 +7,46 @@ using UnityEngine.UI;
 public class BlockUI : MonoBehaviour
 {
     private List<BlockCellPulse> blockCellToPulseList = new();
+    [SerializeField] private List<Image> blockImages = new();
+    public List<Image> GetBlockCellImages()
+    {
+        List<Image> validImages = new List<Image>();
+        foreach (Image blockImage in blockImages)
+        {
+            Image img = blockImage.GetComponent<Image>();
+            if (img != null)
+            {
+                validImages.Add(img);
+            }
+        }
+        return validImages;
+    }
+    //public IEnumerator PulseBlockCellsSequentially(string hexColour, float pulseDuration = 0.5f, float delayBetweenCells = 0.3f)
+    //{
+    //    List<Image> allCellImages = GetBlockCellImages();
 
-   
+    //    if (!ColorUtility.TryParseHtmlString(hexColour, out Color targetColor))
+    //    {
+    //        Debug.LogWarning("Invalid hex color string: " + hexColour);
+    //        yield break;
+    //    }
 
+    //    foreach (Image img in allCellImages)
+    //    {
+    //        if (img == null) continue;
+
+    //        Color originalColor = img.color;
+
+    //        // Pulse to target color
+    //        yield return img.DOColor(targetColor, pulseDuration).WaitForCompletion();
+
+    //        // Return to original color
+    //        yield return img.DOColor(originalColor, pulseDuration).WaitForCompletion();
+
+    //        // Wait before next cell pulse
+    //        yield return new WaitForSeconds(delayBetweenCells);
+    //    }
+    //}
     public void BlockColourPulse(Image pulsingBlockCell, string hexColour, float duration = 0.5f)
     {
       

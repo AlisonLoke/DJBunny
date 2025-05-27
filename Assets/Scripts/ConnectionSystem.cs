@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class ConnectionSystem : MonoBehaviour
 {
@@ -20,6 +20,9 @@ public class ConnectionSystem : MonoBehaviour
     private List<EndCell> currentPath = new List<EndCell>();
     //Contains multiple list of endCell object paths. A collection of paths
     private List<List<EndCell>> allPaths = new List<List<EndCell>>();
+    public List<BlockUI> allBlockUIs = new List<BlockUI>();
+    private List<BlockUI> previouslyPulsedBlocks = new List<BlockUI>();
+    private BlockUI blockUI;
 
     [SerializeField] private UILineRenderer lineRenderer;
     [SerializeField] private RectTransform canvas;
@@ -29,6 +32,10 @@ public class ConnectionSystem : MonoBehaviour
     {
         instance = this;
         //Debug.Log("ConnectionSystem Awake called");
+        if (blockUI == null)
+        {
+            blockUI = GetComponentInParent<BlockUI>();
+        }
     }
     private void Start()
     {
@@ -41,14 +48,13 @@ public class ConnectionSystem : MonoBehaviour
                 Debug.LogError("Line renderer not assigned to ConnectionSystem!");
             }
         }
-
         lineRenderer.color = Color.yellow;
         lineRenderer.thickness = 5f;
         lineRenderer.raycastTarget = false;
 
     }
 
-   
+
     public void CheckConnectionsForAllEndCells()
     {
         currentPath.Clear();
@@ -111,7 +117,7 @@ public class ConnectionSystem : MonoBehaviour
     private void FindLongestPath()
     {
         // Clear any previous paths
-        StopPathAnimations();
+        ClearBlockPulses();
         allPaths.Clear();
         currentPath.Clear();
         Debug.Log($"Finding path from {startConnectedEndCell.name} to {finishConnectedEndCell.name}");
@@ -130,7 +136,7 @@ public class ConnectionSystem : MonoBehaviour
 
         Debug.Log($"Removed {removed} invalid partial-block paths. Remaining: {allPaths.Count}");
 
-        if(allPaths.Count == 0)
+        if (allPaths.Count == 0)
         {
             allPaths.Clear();
             currentPath.Clear();
@@ -156,70 +162,93 @@ public class ConnectionSystem : MonoBehaviour
         UpdateConnectionLine();
         //load win scene
         //SceneManager.LoadScene("WinCutScene");
-        StartCoroutine(PlayPathPulseSequence());
+        blockUI = startConnectedEndCell?.GetComponentInParent<BlockUI>();
+
+        BlockUIListFoundInPath();
     }
 
-    private IEnumerator PlayPathPulseSequence()
+    private void BlockUIListFoundInPath()
     {
-        float delayBetweenCells = 0.3f; // Tune this value for pulse spacing
-        string pulseHex = "#00FF00";    // Green pulse
-        float pulseDuration = 0.2f;
-
-        BlockUI blockUI = null;
-
-        for (int endCells = 0; endCells < currentPath.Count; endCells++)
+        List<BlockUI> pathBlockUIs = new List<BlockUI>();
+        foreach (EndCell cell in currentPath)
         {
-            EndCell cell = currentPath[endCells];
-            if (cell == null) continue;
+            // Try to get the BlockUI component from the cell's parent
+            BlockUI blockUI = cell.GetComponentInParent<BlockUI>();
 
-            if (blockUI == null)
+            // If we found one and it's not already in the list, add it
+            if (blockUI != null && !pathBlockUIs.Contains(blockUI))
             {
-                blockUI = cell.GetComponentInParent<BlockUI>();
-                if (blockUI == null) yield break;
+                pathBlockUIs.Add(blockUI);
             }
+        }
+            PulseAllBlocks(pathBlockUIs);
+    }
 
-            Image cellImage = cell.GetComponent<Image>();
-            if (cellImage == null) continue;
+    public void PulseAllBlocks(List<BlockUI> pathBlockUIs)
+    {
+        ClearBlockPulses();
 
-            // Brief one-time flash using DoTween (non-looping)
-            cellImage.DOColor(Color.white, pulseDuration)
-                .OnComplete(() =>
-                {
-                    ColorUtility.TryParseHtmlString(pulseHex, out Color pulseColor);
-                    cellImage.DOColor(pulseColor, pulseDuration);
-                });
+        StartCoroutine(PulseAllBlocksSequentially(pathBlockUIs));
+    }
+
+    private IEnumerator PulseAllBlocksSequentially(List<BlockUI> pathBlockUIs)
+    {
+        float delayBetweenBlocks = 0.5f;
+ 
+       
+        for (int i = 0; i < pathBlockUIs.Count; i++)
+        {
+            BlockUI blockUI = pathBlockUIs[i];
+            if (blockUI== null) continue;
+
+            Debug.Log("Pulsing block: " + blockUI.gameObject.name);
+            StartCoroutine(PulseBlockCellsSeq(blockUI, Color.green));
+            previouslyPulsedBlocks.Add(blockUI);
+
+            yield return new WaitForSeconds(delayBetweenBlocks);
+        }
+    }
+
+    private IEnumerator PulseBlockCellsSeq(BlockUI blockUI, Color targetColor)
+    {
+       
+
+        List<Image> cellImages = blockUI.GetBlockCellImages();
+        float delayBetweenCells = 0.3f;
+
+        foreach (Image img in cellImages)
+        {
+            if (img == null) continue;
+
+            img.DOColor(targetColor, 0.5f)
+               .OnComplete(() => img.DOColor(img.color, 0.5f));
+
+
 
             yield return new WaitForSeconds(delayBetweenCells);
         }
-
-        // After animation, loop-pulse the final cell
-        EndCell finalCell = currentPath[currentPath.Count - 1];
-        if (finalCell != null)
-        {
-            Image finalImage = finalCell.GetComponent<Image>();
-            if (finalImage != null && blockUI != null)
-            {
-                blockUI.BlockColourPulse(finalImage, "#00FF00", 0.5f); // Green loop pulse
-            }
-        }
     }
 
-    public void StopPathAnimations()
-    {
-        foreach (EndCell cell in currentPath)
-        {
-            Image image = cell.GetComponent<Image>();
-            if (image != null)
-            {
-                // Stop all DOTween tweens on this image
-                image.DOKill();
 
-                if (ColorUtility.TryParseHtmlString("#FF0000", out Color red))
-                {
-                    image.color = red;
-                }
+
+
+
+
+
+public void ClearBlockPulses()
+    {
+        foreach (BlockUI blockUI in previouslyPulsedBlocks)
+        {
+           if(blockUI == null) continue;
+
+            List<Image> cellImages = blockUI.GetBlockCellImages();
+            foreach (Image img in cellImages)
+            {
+                if (img == null) continue;
+                img.color = Color.red;
             }
         }
+        previouslyPulsedBlocks.Clear();
     }
 
     private void FindAllPaths(EndCell currentCell, EndCell targetCell, List<EndCell> path)
@@ -239,8 +268,8 @@ public class ConnectionSystem : MonoBehaviour
         // Check the sister (if it exists and isn't already visited)
         if (currentCell.sisterEndCell != null)
         {
-           
-            if (!path.Contains(currentCell.sisterEndCell)) 
+
+            if (!path.Contains(currentCell.sisterEndCell))
             {
                 FindAllPaths(currentCell.sisterEndCell, targetCell, new List<EndCell>(path));
                 //Returning means that a sister end cell must be checked before further connections are checked
@@ -258,22 +287,22 @@ public class ConnectionSystem : MonoBehaviour
             }
         }
     }
-   
-    private bool IsPathValid (List<EndCell> path)
+
+    private bool IsPathValid(List<EndCell> path)
     {
         if (path.Count < 3) return false; // Must go through at least one middle cell
         foreach (EndCell cell in path)
         {
-            if(cell.sisterEndCell != null && !path.Contains(cell.sisterEndCell))
+            if (cell.sisterEndCell != null && !path.Contains(cell.sisterEndCell))
             {
                 //sister exists but is not in the path so it is invalid
                 return false;
-               
+
             }
         }
         return true;
     }
-   
+
     private void UpdateConnectionLine()
     {
         // If we don't have a path, don't draw anything

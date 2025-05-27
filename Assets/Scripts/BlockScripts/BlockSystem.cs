@@ -14,11 +14,12 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
     private bool isFollowingMouse = false;
     private GameObject audioObject;
 
+
     [SerializeField] private RectTransform blockParentRect;
     [SerializeField] private RectTransform[] blockRectransforms;
     [SerializeField] private BlockData blockData;
     [SerializeField] private float delayBetweenRotations = 1f;
-  
+
     public RectTransform gridParent;
     public EndCell[] endCells;
 
@@ -159,6 +160,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         isSnappedToGrid = false;
         UnMarkBlockCellAsOccupied();
         RemovePlaceBlockFromList(blockParentRect);
+        RemoveBlockUIFromList();
         ConnectionSystem.instance.CheckConnectionsForAllEndCells();
 
         ClearEndCells();
@@ -231,7 +233,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             MarkBlockCellsAsOccupied();
             isSnappedToGrid = true;
             AddPlaceBlockToList(blockParentRect);
-
+            AddBlockUIToList();
             CheckForFirstEndCell();
 
             // Establish connections for each end cell
@@ -392,6 +394,23 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
     }
 
+    public void AddBlockUIToList()
+    {
+        BlockUI newBlockUI = GetComponent<BlockUI>();
+        if (newBlockUI != null)
+        {
+
+            ConnectionSystem.instance.allBlockUIs.Add(newBlockUI);
+        }
+    }
+    public void RemoveBlockUIFromList()
+    {
+        BlockUI thisBlockUI = GetComponent<BlockUI>();
+        if (thisBlockUI != null && ConnectionSystem.instance.allBlockUIs.Contains(thisBlockUI))
+        {
+            ConnectionSystem.instance.allBlockUIs.Remove(thisBlockUI);
+        }
+    }
     public void RemovePlaceBlockFromList(RectTransform thisBlock)
     {
         if (!ConnectionSystem.instance.placedBlocks.Contains(thisBlock))
