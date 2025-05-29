@@ -58,6 +58,8 @@ public class ConnectionSystem : MonoBehaviour
     public void CheckConnectionsForAllEndCells()
     {
         currentPath.Clear();
+        startConnectedEndCell = null;
+        finishConnectedEndCell = null;
         ClearConnectedLine();
 
         Debug.Log($"Checking connections for {endCells.Count} end cells");
@@ -84,10 +86,6 @@ public class ConnectionSystem : MonoBehaviour
             {
                 startConnectedEndCell = endCell;
                 endCell.MakeCellYellow(endCell.currentGridCell);
-
-
-
-
                 Debug.Log($"Found EndCell on start cell {endCell.name} at: ({endCell.currentGridCell.x}, {endCell.currentGridCell.y})");
             }
 
