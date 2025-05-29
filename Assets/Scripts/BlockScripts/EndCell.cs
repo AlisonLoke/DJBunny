@@ -123,6 +123,7 @@ public class EndCell : MonoBehaviour
             if (!endCell.connectedEndCell.Contains(this))
             {
                 endCell.connectedEndCell.Add(this);
+                endCell.StopPulseColour();
             }
 
             if (!connectedEndCell.Contains(endCell))
