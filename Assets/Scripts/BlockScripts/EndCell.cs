@@ -106,30 +106,31 @@ public class EndCell : MonoBehaviour
                 continue;
             }
 
-
-
             // Get the grid cell for this end cell
             GridCell endCellGridCell = blockSystem.SnapClosestGridCell(endCell.transform.position);
-
             // Check if the coordinates match the adjacent position we're looking for
-            if (endCellGridCell != null && endCellGridCell.x == x && endCellGridCell.y == y)
+            if (endCellGridCell == null || endCellGridCell.x != x || endCellGridCell.y != y)
             {
-
-
-
-                // Found a match - establish connection
-                if (!endCell.connectedEndCell.Contains(this))
-                {
-                    endCell.connectedEndCell.Add(this);
-                }
-
-                if (!connectedEndCell.Contains(endCell))
-                {
-                    this.connectedEndCell.Add(endCell);
-                }
-
-                return endCellGridCell;
+                continue;
             }
+
+            if (!endCell.sisterEndCell.onlyConnectToStartFinish && endCell.sisterEndCell.connectedEndCell.Count == 0)
+            {
+                continue;
+            }
+
+            // Found a match - establish connection
+            if (!endCell.connectedEndCell.Contains(this))
+            {
+                endCell.connectedEndCell.Add(this);
+            }
+
+            if (!connectedEndCell.Contains(endCell))
+            {
+                this.connectedEndCell.Add(endCell);
+            }
+
+            return endCellGridCell;
         }
 
         return null;
