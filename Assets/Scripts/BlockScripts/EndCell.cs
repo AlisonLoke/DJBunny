@@ -114,10 +114,12 @@ public class EndCell : MonoBehaviour
                 continue;
             }
 
-            if (!endCell.sisterEndCell.onlyConnectToStartFinish && endCell.sisterEndCell.connectedEndCell.Count == 0)
-            {
-                continue;
-            }
+            // FIX: if removing block from middle of path then replacing it, end cell at end of placed block is still blinking and remaining block does not get reconnected
+            // TODO: ConnectionSystem knows what a path is - EndCells do not. Refactor so that ConnectionSystem drives blinking behaviour instead of EndCells
+            //if (!endCell.sisterEndCell.onlyConnectToStartFinish && endCell.sisterEndCell.connectedEndCell.Count == 0)
+            //{
+            //    continue;
+            //}
 
             // Found a match - establish connection
             if (!endCell.connectedEndCell.Contains(this))
