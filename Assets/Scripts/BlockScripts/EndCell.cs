@@ -29,6 +29,7 @@ public class EndCell : MonoBehaviour
                 sisterEndCell = endCell;
             }
         }
+    
     }
     public void CheckForEndCells()
     {
@@ -39,10 +40,10 @@ public class EndCell : MonoBehaviour
 
 
         //Check all four adjacent grid cells;
-        GridCell down = FindAdjacentEndCell(currentCell.x + 1, currentCell.y);
-        GridCell up = FindAdjacentEndCell(currentCell.x - 1, currentCell.y);
-        GridCell right = FindAdjacentEndCell(currentCell.x, currentCell.y + 1);
-        GridCell left = FindAdjacentEndCell(currentCell.x, currentCell.y - 1);
+        GridCell down = ConnectionSystem.instance. FindAdjacentEndCells(this,cellImage,currentCell.x + 1, currentCell.y);
+        GridCell up = ConnectionSystem.instance. FindAdjacentEndCells(this,cellImage,currentCell.x - 1, currentCell.y);
+        GridCell right = ConnectionSystem.instance.FindAdjacentEndCells(this,cellImage,currentCell.x, currentCell.y + 1);
+        GridCell left = ConnectionSystem.instance.FindAdjacentEndCells(this, cellImage, currentCell.x, currentCell.y - 1);
 
         //for debug purpose
         if (down != null)
@@ -68,76 +69,79 @@ public class EndCell : MonoBehaviour
 
         if(connectedEndCell.Count == 0)
         {
-            PulseColour();
+            //PulseColour();
+            ConnectionSystem.instance.BlinkBlockCell(blockUI,cellImage);
         }
         else
         {
-            StopPulseColour();
+            //StopPulseColour();
+            ConnectionSystem.instance.StopBlinkOnBlockCell(blockUI, cellImage);
         }
     }
 
-    private GridCell FindAdjacentEndCell(int x, int y)
-    {
+    //private GridCell FindAdjacentEndCell(int x, int y)
+    //{
 
-        List<RectTransform> placedBlocks = ConnectionSystem.instance.placedBlocks;
+    //    List<RectTransform> placedBlocks = ConnectionSystem.instance.placedBlocks;
 
-        List<EndCell> allEndCells = new List<EndCell>();
+    //    List<EndCell> allEndCells = new List<EndCell>();
 
-        foreach (RectTransform placedBlockRect in placedBlocks)
-        {
-            BlockSystem placedBlockSystem = placedBlockRect.GetComponent<BlockSystem>();
-            if (placedBlockSystem != null && placedBlockSystem != blockSystem) // Skip the current block
-            {
-                EndCell[] endCellsInBlock = placedBlockSystem.endCells;
-                allEndCells.AddRange(endCellsInBlock);
-            }
-        }
+    //    foreach (RectTransform placedBlockRect in placedBlocks)
+    //    {
+    //        BlockSystem placedBlockSystem = placedBlockRect.GetComponent<BlockSystem>();
+    //        if (placedBlockSystem != null && placedBlockSystem != blockSystem) // Skip the current block
+    //        {
+    //            EndCell[] endCellsInBlock = placedBlockSystem.endCells;
+    //            allEndCells.AddRange(endCellsInBlock);
+    //        }
+    //    }
 
 
 
-        foreach (EndCell endCell in allEndCells)
-        {
-            // Skip if this is the current EndCell or if it's already connected
-            if (endCell == this /*|| endCell.connectedEndCell != null */)
-                continue;
-            // If endcell is on start/finish = true, skip endcell connection
-            if (endCell.onlyConnectToStartFinish)
-            {
-                continue;
-            }
+    //    foreach (EndCell endCell in allEndCells)
+    //    {
+    //        // Skip if this is the current EndCell or if it's already connected
+    //        if (endCell == this /*|| endCell.connectedEndCell != null */)
+    //            continue;
+    //        // If endcell is on start/finish = true, skip endcell connection
+    //        if (endCell.onlyConnectToStartFinish)
+    //        {
+    //            continue;
+    //        }
 
-            // Get the grid cell for this end cell
-            GridCell endCellGridCell = blockSystem.SnapClosestGridCell(endCell.transform.position);
-            // Check if the coordinates match the adjacent position we're looking for
-            if (endCellGridCell == null || endCellGridCell.x != x || endCellGridCell.y != y)
-            {
-                continue;
-            }
+    //        // Get the grid cell for this end cell
+    //        GridCell endCellGridCell = blockSystem.SnapClosestGridCell(endCell.transform.position);
+    //        // Check if the coordinates match the adjacent position we're looking for
+    //        if (endCellGridCell == null || endCellGridCell.x != x || endCellGridCell.y != y)
+    //        {
+    //            continue;
+    //        }
 
-            // FIX: if removing block from middle of path then replacing it, end cell at end of placed block is still blinking and remaining block does not get reconnected
-            // TODO: ConnectionSystem knows what a path is - EndCells do not. Refactor so that ConnectionSystem drives blinking behaviour instead of EndCells
-            //if (!endCell.sisterEndCell.onlyConnectToStartFinish && endCell.sisterEndCell.connectedEndCell.Count == 0)
-            //{
-            //    continue;
-            //}
+    //        // FIX: if removing block from middle of path then replacing it, end cell at end of placed block is still blinking and remaining block does not get reconnected
+    //        // TODO: ConnectionSystem knows what a path is - EndCells do not. Refactor so that ConnectionSystem drives blinking behaviour instead of EndCells
+    //        //if (!endCell.sisterEndCell.onlyConnectToStartFinish && endCell.sisterEndCell.connectedEndCell.Count == 0)
+    //        //{
+    //        //    continue;
+    //        //}
 
-            // Found a match - establish connection
-            if (!endCell.connectedEndCell.Contains(this))
-            {
-                endCell.connectedEndCell.Add(this);
-                endCell.StopPulseColour();
-            }
+    //        // Found a match - establish connection
+    //        if (!endCell.connectedEndCell.Contains(this))
+    //        {
+    //            endCell.connectedEndCell.Add(this);
 
-            if (!connectedEndCell.Contains(endCell))
-            {
-                this.connectedEndCell.Add(endCell);
-            }
+    //            ConnectionSystem.instance.StopBlinkOnBlockCell();
+    //        }
 
-            return endCellGridCell;
-        }
+    //        if (!connectedEndCell.Contains(endCell))
+    //        {
+    //            this.connectedEndCell.Add(endCell);
+    //        }
 
-        return null;
-    }
+    //        return endCellGridCell;
+    //    }
+
+    //    return null;
+    //}
     public void UpdateGridPosition()//debug function
     {
         if (blockSystem == null)
@@ -187,38 +191,25 @@ public class EndCell : MonoBehaviour
         //GetComponent<Image>().color = Color.yellow;
         onlyConnectToStartFinish = true;
         connectedEndCell.Clear();
-        StopPulseColour();
+        //StopPulseColour();
+        ConnectionSystem.instance.StopBlinkOnBlockCell(blockUI, cellImage);   
 
     }
 
-    public void PulseColour()
-    {
-        //if (connectedEndCell.Count == 0 /*&& sisterEndCell != null && sisterEndCell.connectedEndCell.Count == 0*/)
-        //{
-        //    if (blockUI != null)
-        //    {
-        //        blockUI.BlockColourPulse("#FF8A8A", 0.5f);
-        //    }
-        //}
-        //else
-        //{
-        //    if (blockUI != null && connectedEndCell.Count > 0 /*&& sisterEndCell != null && sisterEndCell.connectedEndCell.Count > 0*/)
-        //    {
-        //        blockUI.StopColourPulse();
-        //    }
-        //}
+    //public void PulseColour()
+    //{
+     
+    //    if (blockUI != null)
+    //    {
+    //        blockUI.BlockColourBlink(cellImage, "#FF8A8A", 0.5f);
+    //    }
+    //}
 
-        if (blockUI != null)
-        {
-            blockUI.BlockColourPulse(cellImage, "#FF8A8A", 0.5f);
-        }
-    }
-
-    public void StopPulseColour()
-    {
-        if (blockUI != null)
-        {
-            blockUI.StopColourPulse(cellImage);
-        }
-    }
+    //public void StopPulseColour()
+    //{
+    //    if (blockUI != null)
+    //    {
+    //        blockUI.StopBlink(cellImage);
+    //    }
+    //}
 }

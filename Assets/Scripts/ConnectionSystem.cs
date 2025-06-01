@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using DG.Tweening;
 using UnityEngine;
@@ -9,11 +8,13 @@ using UnityEngine.UI;
 public class ConnectionSystem : MonoBehaviour
 {
     public static ConnectionSystem instance;
-
+    public List<EndCell> connectedEndCell = new List<EndCell>();
     public List<RectTransform> placedBlocks;
     public List<EndCell> endCells;
-    public static int currentLevelIndex = 1;
 
+    [HideInInspector] public BlockSystem blockSystem;
+    public static int currentLevelIndex = 1;
+    public GridCell currentGridCell;
     private EndCell startConnectedEndCell;
     private EndCell finishConnectedEndCell;
     //stores a single path.
@@ -24,18 +25,24 @@ public class ConnectionSystem : MonoBehaviour
     private List<BlockUI> previouslyPulsedBlocks = new List<BlockUI>();
     private BlockUI blockUI;
 
+
     [SerializeField] private UILineRenderer lineRenderer;
     [SerializeField] private RectTransform canvas;
     [SerializeField] private PathFinder pathFinder;
 
     private void Awake()
     {
+        blockSystem = GetComponentInParent<BlockSystem>();
+        //currentGridCell = blockSystem.SnapClosestGridCell(transform.position);
         instance = this;
         //Debug.Log("ConnectionSystem Awake called");
         if (blockUI == null)
         {
             blockUI = GetComponentInParent<BlockUI>();
         }
+
+
+
     }
     private void Start()
     {
@@ -112,6 +119,65 @@ public class ConnectionSystem : MonoBehaviour
         }
     }
 
+    public GridCell FindAdjacentEndCells(EndCell fromEndCell, Image blockCellImage, int x, int y)
+    {
+
+        //List<RectTransform> placedBlocks = ConnectionSystem.instance.placedBlocks;
+
+        //List<EndCell> allEndCells = new List<EndCell>();
+
+        foreach (RectTransform placedBlockRect in placedBlocks)
+        {
+            BlockSystem placedBlockSystem = placedBlockRect.GetComponent<BlockSystem>();
+            if (placedBlockSystem != null && placedBlockSystem != fromEndCell.blockSystem) // Skip the current block
+            {
+                //EndCell[] endCellsInBlock = placedBlockSystem.endCells;
+                //allEndCells.AddRange(endCellsInBlock);
+
+                foreach (EndCell endCell in placedBlockSystem.endCells)
+                {
+                    // Skip self
+                    if (endCell == fromEndCell)
+                        continue;
+
+                    // Skip if it's a restricted end cell
+                    if (endCell.onlyConnectToStartFinish)
+                        continue;
+                    // Check if this end cell is in the target grid position
+                    GridCell endCellGridCell = placedBlockSystem.SnapClosestGridCell(endCell.transform.position);
+                    if (endCellGridCell == null || endCellGridCell.x != x || endCellGridCell.y != y)
+                        continue;
+
+                    if (!endCell.sisterEndCell.onlyConnectToStartFinish && endCell.sisterEndCell.connectedEndCell.Count == 0)
+                    {
+                        continue;
+                    }
+                    // Connect the two end cells if not already connected
+                    if (!endCell.connectedEndCell.Contains(fromEndCell))
+                    {
+                        endCell.connectedEndCell.Add(fromEndCell);
+                        StopBlinkOnBlockCell(blockUI, blockCellImage);
+                    }
+
+
+
+                    if (!fromEndCell.connectedEndCell.Contains(endCell))
+                    {
+                        fromEndCell.connectedEndCell.Add(endCell);
+                    }
+
+                    return endCellGridCell;
+                }
+            }
+        }
+
+        return null;
+    }
+
+
+
+
+
     private void FindLongestPath()
     {
         // Clear any previous paths
@@ -165,6 +231,7 @@ public class ConnectionSystem : MonoBehaviour
         BlockUIListFoundInPath();
     }
 
+
     private void BlockUIListFoundInPath()
     {
         List<BlockUI> pathBlockUIs = new List<BlockUI>();
@@ -179,7 +246,7 @@ public class ConnectionSystem : MonoBehaviour
                 pathBlockUIs.Add(blockUI);
             }
         }
-            PulseAllBlocks(pathBlockUIs);
+        PulseAllBlocks(pathBlockUIs);
     }
 
     public void PulseAllBlocks(List<BlockUI> pathBlockUIs)
@@ -192,12 +259,12 @@ public class ConnectionSystem : MonoBehaviour
     private IEnumerator PulseAllBlocksSequentially(List<BlockUI> pathBlockUIs)
     {
         float delayBetweenBlocks = 0.5f;
- 
-       
+
+
         for (int i = 0; i < pathBlockUIs.Count; i++)
         {
             BlockUI blockUI = pathBlockUIs[i];
-            if (blockUI== null) continue;
+            if (blockUI == null) continue;
 
             Debug.Log("Pulsing block: " + blockUI.gameObject.name);
             StartCoroutine(PulseBlockCellsSeq(blockUI, Color.green));
@@ -209,7 +276,7 @@ public class ConnectionSystem : MonoBehaviour
 
     private IEnumerator PulseBlockCellsSeq(BlockUI blockUI, Color targetColor)
     {
-       
+
 
         List<Image> cellImages = blockUI.GetBlockCellImages();
         float delayBetweenCells = 0.3f;
@@ -227,17 +294,40 @@ public class ConnectionSystem : MonoBehaviour
         }
     }
 
+    public void BlinkBlockCell(BlockUI blockUI,Image blockCellImage)
+    {
+        if (blockUI != null)
+        {
+            blockUI.BlockColourBlink(blockCellImage, "#FF8A8A", 0.5f);
+        }
+        //EndCell thisEndCell = blockCellImage.GetComponentInParent<EndCell>();
+        //if (thisEndCell != null)
+        //{
+
+        //    BlockUI endCellBlockUI = thisEndCell.GetComponentInParent<BlockUI>();
+        //    if (endCellBlockUI != null)
+        //    {
+        //        endCellBlockUI.BlockColourBlink(blockCellImage, "#FF8A8A", 0.5f);
+
+        //    }
+        //}
+    }
+
+    public void StopBlinkOnBlockCell(BlockUI blockUI,Image blockCellImage)
+    {
+        if (blockUI != null && blockCellImage != null)
+        {
+            blockUI.StopBlink(blockCellImage);
+        }
+    }
 
 
 
-
-
-
-public void ClearBlockPulses()
+    public void ClearBlockPulses()
     {
         foreach (BlockUI blockUI in previouslyPulsedBlocks)
         {
-           if(blockUI == null) continue;
+            if (blockUI == null) continue;
 
             List<Image> cellImages = blockUI.GetBlockCellImages();
             foreach (Image img in cellImages)
@@ -370,5 +460,6 @@ public void ClearBlockPulses()
         lineRenderer.points = new Vector2[0];
         lineRenderer.SetAllDirty();
     }
+
 
 }

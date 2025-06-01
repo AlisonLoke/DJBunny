@@ -47,7 +47,7 @@ public class BlockUI : MonoBehaviour
     //        yield return new WaitForSeconds(delayBetweenCells);
     //    }
     //}
-    public void BlockColourPulse(Image pulsingBlockCell, string hexColour, float duration = 0.5f)
+    public void BlockColourBlink(Image pulsingBlockCell, string hexColour, float duration = 0.5f)
     {
       
 
@@ -83,7 +83,7 @@ public class BlockUI : MonoBehaviour
         blockCellToPulseList.Add(newBlockCellPulse);
     }
 
-    public void StopColourPulse(Image pulsingBlock)
+    public void StopBlink(Image pulsingBlock)
     {
         //Check our list of tween image pairs
         foreach (BlockCellPulse thisBlockCell in blockCellToPulseList)

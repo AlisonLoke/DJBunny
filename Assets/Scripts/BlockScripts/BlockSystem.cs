@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class BlockSystem : MonoBehaviour, IPointerClickHandler
 {
@@ -13,7 +14,8 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
     private bool isSnappedToGrid = false;
     private bool isFollowingMouse = false;
     private GameObject audioObject;
-
+    private Image cellImage;
+    private BlockUI blockUI;
 
     [SerializeField] private RectTransform blockParentRect;
     [SerializeField] private RectTransform[] blockRectransforms;
@@ -26,8 +28,10 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
     private void Start()
     {
+        cellImage = GetComponent<Image>();
         gridVisual = gridParent.GetComponent<GridVisual>();
         endCells = GetComponentsInChildren<EndCell>();
+        blockUI = GetComponent<BlockUI>();
 
         foreach (EndCell cell in endCells)
         {
@@ -162,11 +166,13 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         RemovePlaceBlockFromList(blockParentRect);
         RemoveBlockUIFromList();
         ConnectionSystem.instance.CheckConnectionsForAllEndCells();
+        ConnectionSystem.instance.ClearBlockPulses();
 
         ClearEndCells();
         foreach (EndCell thisCell in endCells)
         {
-            thisCell.StopPulseColour();
+            //thisCell.StopPulseColour();
+            ConnectionSystem.instance.StopBlinkOnBlockCell(blockUI,cellImage);
         }
 
         if (audioObject != null)
@@ -182,6 +188,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
         blockParentRect.position = blockOriginPos;
         blockParentRect.rotation = Quaternion.identity;
+        ConnectionSystem.instance.ClearBlockPulses();
 
 
 
@@ -239,9 +246,16 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             // Establish connections for each end cell
             UpdateEndCellGridPositions();
 
+            foreach (EndCell endCell in endCells)
+            {
+                endCell.CheckForEndCells();
+            }
+
+
             //Debug.Log(">> Triggering path check after placing block");
             //Check for any new connections if they are valid or complete
             ConnectionSystem.instance.CheckConnectionsForAllEndCells();
+            
         }
         else
         {
@@ -251,6 +265,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
     }
 
+   
     private void CheckForFirstEndCell()
     {
         if (!ConnectionSystem.instance.endCells.Contains(endCells[0]))
