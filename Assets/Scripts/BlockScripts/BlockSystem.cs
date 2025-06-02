@@ -95,7 +95,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         {
             return;
         }
-
+       
         if (isSnappedToGrid)
         {
             RemoveFromGrid();
@@ -147,6 +147,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
     private void BeginPickUp()
     {
+        
         selectedBlock = this;
         isFollowingMouse = true;
 
@@ -168,12 +169,14 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         ConnectionSystem.instance.CheckConnectionsForAllEndCells();
         ConnectionSystem.instance.ClearBlockPulses();
 
-        ClearEndCells();
+
         foreach (EndCell thisCell in endCells)
         {
-            //thisCell.StopPulseColour();
-            ConnectionSystem.instance.StopBlinkOnBlockCell(blockUI,cellImage);
+            thisCell.StopBlink();
+
         }
+
+        ClearEndCells();
 
         if (audioObject != null)
         {

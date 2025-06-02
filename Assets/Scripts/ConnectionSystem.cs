@@ -24,6 +24,7 @@ public class ConnectionSystem : MonoBehaviour
     public List<BlockUI> allBlockUIs = new List<BlockUI>();
     private List<BlockUI> previouslyPulsedBlocks = new List<BlockUI>();
     private BlockUI blockUI;
+    private Image cellImage;
 
 
     [SerializeField] private UILineRenderer lineRenderer;
@@ -33,6 +34,7 @@ public class ConnectionSystem : MonoBehaviour
     private void Awake()
     {
         blockSystem = GetComponentInParent<BlockSystem>();
+        cellImage= GetComponent<Image>();
         //currentGridCell = blockSystem.SnapClosestGridCell(transform.position);
         instance = this;
         //Debug.Log("ConnectionSystem Awake called");
@@ -64,6 +66,8 @@ public class ConnectionSystem : MonoBehaviour
 
     public void CheckConnectionsForAllEndCells()
     {
+        Debug.Log("BLINK STOPPED");
+        //StopBlinkOnBlockCell(blockUI);
         currentPath.Clear();
         startConnectedEndCell = null;
         finishConnectedEndCell = null;
@@ -148,15 +152,15 @@ public class ConnectionSystem : MonoBehaviour
                     if (endCellGridCell == null || endCellGridCell.x != x || endCellGridCell.y != y)
                         continue;
 
-                    if (!endCell.sisterEndCell.onlyConnectToStartFinish && endCell.sisterEndCell.connectedEndCell.Count == 0)
-                    {
-                        continue;
-                    }
+                    //if (!endCell.sisterEndCell.onlyConnectToStartFinish && endCell.sisterEndCell.connectedEndCell.Count == 0)
+                    //{
+                    //    continue;
+                    //}
+              
                     // Connect the two end cells if not already connected
                     if (!endCell.connectedEndCell.Contains(fromEndCell))
                     {
                         endCell.connectedEndCell.Add(fromEndCell);
-                        StopBlinkOnBlockCell(blockUI, blockCellImage);
                     }
 
 
@@ -294,37 +298,32 @@ public class ConnectionSystem : MonoBehaviour
         }
     }
 
-    public void BlinkBlockCell(BlockUI blockUI,Image blockCellImage)
-    {
-        if (blockUI != null)
-        {
-            blockUI.BlockColourBlink(blockCellImage, "#FF8A8A", 0.5f);
-        }
-        //EndCell thisEndCell = blockCellImage.GetComponentInParent<EndCell>();
-        //if (thisEndCell != null)
-        //{
+    //public void BlinkBlockCell(BlockUI blockUI)
+    //{
+    //    if (blockUI != null)
+    //    {
+    //        blockUI.BlockColourBlink("#FF8A8A", 0.5f);
+    //    }
+      
+    //}
 
-        //    BlockUI endCellBlockUI = thisEndCell.GetComponentInParent<BlockUI>();
-        //    if (endCellBlockUI != null)
-        //    {
-        //        endCellBlockUI.BlockColourBlink(blockCellImage, "#FF8A8A", 0.5f);
-
-        //    }
-        //}
-    }
-
-    public void StopBlinkOnBlockCell(BlockUI blockUI,Image blockCellImage)
-    {
-        if (blockUI != null && blockCellImage != null)
-        {
-            blockUI.StopBlink(blockCellImage);
-        }
-    }
+    //public void StopBlinkOnBlockCell(BlockUI blockUI)
+    //{
+    //    if (blockUI != null)
+    //    {
+    //        blockUI.StopBlink();
+    //    }
+    //}
 
 
 
     public void ClearBlockPulses()
     {
+
+
+
+
+
         foreach (BlockUI blockUI in previouslyPulsedBlocks)
         {
             if (blockUI == null) continue;

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,9 @@ public class EndCell : MonoBehaviour
     private RectTransform blockParent;
     private BlockUI blockUI;
     private Image cellImage;
+
+    private BlockCellPulse myTweenAnimation;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -29,7 +33,7 @@ public class EndCell : MonoBehaviour
                 sisterEndCell = endCell;
             }
         }
-    
+
     }
     public void CheckForEndCells()
     {
@@ -40,9 +44,9 @@ public class EndCell : MonoBehaviour
 
 
         //Check all four adjacent grid cells;
-        GridCell down = ConnectionSystem.instance. FindAdjacentEndCells(this,cellImage,currentCell.x + 1, currentCell.y);
-        GridCell up = ConnectionSystem.instance. FindAdjacentEndCells(this,cellImage,currentCell.x - 1, currentCell.y);
-        GridCell right = ConnectionSystem.instance.FindAdjacentEndCells(this,cellImage,currentCell.x, currentCell.y + 1);
+        GridCell down = ConnectionSystem.instance.FindAdjacentEndCells(this, cellImage, currentCell.x + 1, currentCell.y);
+        GridCell up = ConnectionSystem.instance.FindAdjacentEndCells(this, cellImage, currentCell.x - 1, currentCell.y);
+        GridCell right = ConnectionSystem.instance.FindAdjacentEndCells(this, cellImage, currentCell.x, currentCell.y + 1);
         GridCell left = ConnectionSystem.instance.FindAdjacentEndCells(this, cellImage, currentCell.x, currentCell.y - 1);
 
         //for debug purpose
@@ -67,81 +71,20 @@ public class EndCell : MonoBehaviour
             MakeCellRed();
         }
 
-        if(connectedEndCell.Count == 0)
+        if (connectedEndCell.Count == 0)
         {
             //PulseColour();
-            ConnectionSystem.instance.BlinkBlockCell(blockUI,cellImage);
+            StartBlink("#FF8A8A", 0.5f);
         }
         else
         {
             //StopPulseColour();
-            ConnectionSystem.instance.StopBlinkOnBlockCell(blockUI, cellImage);
+            StopBlink();
+
         }
     }
 
-    //private GridCell FindAdjacentEndCell(int x, int y)
-    //{
 
-    //    List<RectTransform> placedBlocks = ConnectionSystem.instance.placedBlocks;
-
-    //    List<EndCell> allEndCells = new List<EndCell>();
-
-    //    foreach (RectTransform placedBlockRect in placedBlocks)
-    //    {
-    //        BlockSystem placedBlockSystem = placedBlockRect.GetComponent<BlockSystem>();
-    //        if (placedBlockSystem != null && placedBlockSystem != blockSystem) // Skip the current block
-    //        {
-    //            EndCell[] endCellsInBlock = placedBlockSystem.endCells;
-    //            allEndCells.AddRange(endCellsInBlock);
-    //        }
-    //    }
-
-
-
-    //    foreach (EndCell endCell in allEndCells)
-    //    {
-    //        // Skip if this is the current EndCell or if it's already connected
-    //        if (endCell == this /*|| endCell.connectedEndCell != null */)
-    //            continue;
-    //        // If endcell is on start/finish = true, skip endcell connection
-    //        if (endCell.onlyConnectToStartFinish)
-    //        {
-    //            continue;
-    //        }
-
-    //        // Get the grid cell for this end cell
-    //        GridCell endCellGridCell = blockSystem.SnapClosestGridCell(endCell.transform.position);
-    //        // Check if the coordinates match the adjacent position we're looking for
-    //        if (endCellGridCell == null || endCellGridCell.x != x || endCellGridCell.y != y)
-    //        {
-    //            continue;
-    //        }
-
-    //        // FIX: if removing block from middle of path then replacing it, end cell at end of placed block is still blinking and remaining block does not get reconnected
-    //        // TODO: ConnectionSystem knows what a path is - EndCells do not. Refactor so that ConnectionSystem drives blinking behaviour instead of EndCells
-    //        //if (!endCell.sisterEndCell.onlyConnectToStartFinish && endCell.sisterEndCell.connectedEndCell.Count == 0)
-    //        //{
-    //        //    continue;
-    //        //}
-
-    //        // Found a match - establish connection
-    //        if (!endCell.connectedEndCell.Contains(this))
-    //        {
-    //            endCell.connectedEndCell.Add(this);
-
-    //            ConnectionSystem.instance.StopBlinkOnBlockCell();
-    //        }
-
-    //        if (!connectedEndCell.Contains(endCell))
-    //        {
-    //            this.connectedEndCell.Add(endCell);
-    //        }
-
-    //        return endCellGridCell;
-    //    }
-
-    //    return null;
-    //}
     public void UpdateGridPosition()//debug function
     {
         if (blockSystem == null)
@@ -175,9 +118,10 @@ public class EndCell : MonoBehaviour
     {
 
         //GetComponent<Image>().color = Color.red;
-
+        onlyConnectToStartFinish = false;
         connectedEndCell.Clear();
     }
+
     public void MakeCellBlue(GridCell cell)
     {
 
@@ -192,24 +136,36 @@ public class EndCell : MonoBehaviour
         onlyConnectToStartFinish = true;
         connectedEndCell.Clear();
         //StopPulseColour();
-        ConnectionSystem.instance.StopBlinkOnBlockCell(blockUI, cellImage);   
+        StopBlink();
 
     }
 
-    //public void PulseColour()
-    //{
-     
-    //    if (blockUI != null)
-    //    {
-    //        blockUI.BlockColourBlink(cellImage, "#FF8A8A", 0.5f);
-    //    }
-    //}
+    public void StartBlink(string hexColour, float duration = 0.5f)
+    {
+        StopBlink();
 
-    //public void StopPulseColour()
-    //{
-    //    if (blockUI != null)
-    //    {
-    //        blockUI.StopBlink(cellImage);
-    //    }
-    //}
+        //turn hex value into colour
+        if (!ColorUtility.TryParseHtmlString(hexColour, out Color targetColour))
+        {
+            Debug.LogWarning("Invalid hex color string: " + hexColour);
+            return;
+        }
+
+        // create the tween animation
+        Tween loopPulseAnim = cellImage.DOColor(targetColour, duration).SetLoops(-1, LoopType.Yoyo);
+
+        // store the tween animation
+        BlockCellPulse newBlockCellPulse = new BlockCellPulse();
+        newBlockCellPulse.pulseAnimation = loopPulseAnim;
+        newBlockCellPulse.BlockCellToPulse = cellImage;
+        myTweenAnimation = newBlockCellPulse;
+    }
+
+    public void StopBlink()
+    {
+        if (myTweenAnimation == null) { return; }
+        myTweenAnimation.pulseAnimation.Kill();
+        myTweenAnimation.BlockCellToPulse.color = Color.red;
+        myTweenAnimation = null;
+    }
 }
