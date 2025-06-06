@@ -125,7 +125,12 @@ public class ConnectionSystem : MonoBehaviour
 
     public GridCell FindAdjacentEndCells(EndCell fromEndCell, Image blockCellImage, int x, int y)
     {
+        // Don't try to connect if already connected
+        //if (fromEndCell.connectedEndCell.Count > 0)
+        //{
+        //    return null;
 
+        //}
         //List<RectTransform> placedBlocks = ConnectionSystem.instance.placedBlocks;
 
         //List<EndCell> allEndCells = new List<EndCell>();
@@ -156,7 +161,11 @@ public class ConnectionSystem : MonoBehaviour
                     //{
                     //    continue;
                     //}
-              
+
+                    //if (TryConnect(fromEndCell, endCell))
+                    //    return endCellGridCell;
+
+
                     // Connect the two end cells if not already connected
                     if (!endCell.connectedEndCell.Contains(fromEndCell))
                     {
@@ -178,7 +187,19 @@ public class ConnectionSystem : MonoBehaviour
         return null;
     }
 
+    public static bool TryConnect(EndCell a, EndCell b)
+    {
+        if (a.connectedEndCell.Count > 0 || b.connectedEndCell.Count > 0)
+        {
+            Debug.LogWarning($"Connection failed: {a.name} or {b.name} already has a connection.");
+            return false;
+        }
+        
 
+        a.connectedEndCell.Add(b);
+        b.connectedEndCell.Add(a);
+        return true;
+    }
 
 
 
