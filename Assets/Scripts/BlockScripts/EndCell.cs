@@ -14,6 +14,7 @@ public class EndCell : MonoBehaviour
     private BlockUI blockUI;
     private Image cellImage;
 
+
     private BlockCellPulse myTweenAnimation;
 
 
@@ -74,7 +75,7 @@ public class EndCell : MonoBehaviour
         if (connectedEndCell.Count == 0)
         {
             //PulseColour();
-            StartBlink("#FF8A8A", 0.5f);
+            StartBlink("#767676", 0.5f);
         }
         else
         {
@@ -122,14 +123,14 @@ public class EndCell : MonoBehaviour
         connectedEndCell.Clear();
     }
 
-    public void MakeCellBlue(GridCell cell)
-    {
+    //public void MakeCellBlue(GridCell cell)
+    //{
 
-        //GetComponent<Image>().color = Color.blue;
+    //    //GetComponent<Image>().color = Color.blue;
 
-    }
+    //}
 
-    public void MakeCellYellow(GridCell cell)
+    public void ConnectedToStartAndFinish(GridCell cell)
     {
 
         //GetComponent<Image>().color = Color.yellow;
@@ -150,6 +151,7 @@ public class EndCell : MonoBehaviour
             Debug.LogWarning("Invalid hex color string: " + hexColour);
             return;
         }
+        Color originalColour = cellImage.color;
 
         // create the tween animation
         Tween loopPulseAnim = cellImage.DOColor(targetColour, duration).SetLoops(-1, LoopType.Yoyo);
@@ -158,6 +160,7 @@ public class EndCell : MonoBehaviour
         BlockCellPulse newBlockCellPulse = new BlockCellPulse();
         newBlockCellPulse.pulseAnimation = loopPulseAnim;
         newBlockCellPulse.BlockCellToPulse = cellImage;
+        newBlockCellPulse.originalColour = originalColour;
         myTweenAnimation = newBlockCellPulse;
     }
 
@@ -165,7 +168,7 @@ public class EndCell : MonoBehaviour
     {
         if (myTweenAnimation == null) { return; }
         myTweenAnimation.pulseAnimation.Kill();
-        myTweenAnimation.BlockCellToPulse.color = Color.red;
+        myTweenAnimation.BlockCellToPulse.color = myTweenAnimation.originalColour;
         myTweenAnimation = null;
     }
 }

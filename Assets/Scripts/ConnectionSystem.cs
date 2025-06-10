@@ -98,14 +98,14 @@ public class ConnectionSystem : MonoBehaviour
             if (pathFinder != null && pathFinder.IsStartCell(endCell.currentGridCell))
             {
                 startConnectedEndCell = endCell;
-                endCell.MakeCellYellow(endCell.currentGridCell);
+                endCell.ConnectedToStartAndFinish(endCell.currentGridCell);
                 Debug.Log($"Found EndCell on start cell {endCell.name} at: ({endCell.currentGridCell.x}, {endCell.currentGridCell.y})");
             }
 
             if (pathFinder != null && pathFinder.IsFinishCell(endCell.currentGridCell))
             {
                 finishConnectedEndCell = endCell;
-                endCell.MakeCellYellow(endCell.currentGridCell);
+                endCell.ConnectedToStartAndFinish(endCell.currentGridCell);
                 Debug.Log($"Found EndCell on finish cell {endCell.name} at: ({endCell.currentGridCell.x}, {endCell.currentGridCell.y})");
             }
         }
@@ -189,19 +189,19 @@ public class ConnectionSystem : MonoBehaviour
         return null;
     }
 
-    public static bool TryConnect(EndCell a, EndCell b)
-    {
-        if (a.connectedEndCell.Count > 0 || b.connectedEndCell.Count > 0)
-        {
-            Debug.LogWarning($"Connection failed: {a.name} or {b.name} already has a connection.");
-            return false;
-        }
+    //public static bool TryConnect(EndCell a, EndCell b)
+    //{
+    //    if (a.connectedEndCell.Count > 0 || b.connectedEndCell.Count > 0)
+    //    {
+    //        Debug.LogWarning($"Connection failed: {a.name} or {b.name} already has a connection.");
+    //        return false;
+    //    }
         
 
-        a.connectedEndCell.Add(b);
-        b.connectedEndCell.Add(a);
-        return true;
-    }
+    //    a.connectedEndCell.Add(b);
+    //    b.connectedEndCell.Add(a);
+    //    return true;
+    //}
 
 
 

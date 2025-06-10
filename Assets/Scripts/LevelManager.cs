@@ -38,6 +38,7 @@ public class LevelManager : MonoBehaviour
 
     private void TriggerWin()
     {
+        Debug.Log("Triggering Win ");
         // do whatever a win would do
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }

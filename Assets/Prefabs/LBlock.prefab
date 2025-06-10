@@ -30,11 +30,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 7295766049151715133}
+  - {fileID: 6354828647050387698}
   - {fileID: 3809127391788960617}
   - {fileID: 4694508793944224858}
   - {fileID: 3689849784608768072}
-  - {fileID: 7295766049151715133}
-  - {fileID: 6354828647050387698}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -96,7 +96,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7295766049151715133
 RectTransform:
   m_ObjectHideFlags: 0
@@ -114,7 +114,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.6262, y: 19.1018}
-  m_SizeDelta: {x: 12.7375, y: 51.776}
+  m_SizeDelta: {x: 35, y: 74.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6694659110332297631
 CanvasRenderer:
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 892090587256195829, guid: 8c89f94e80a398a479f853762cc2ca3d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -246,7 +246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6354828647050387698
 RectTransform:
   m_ObjectHideFlags: 0
@@ -263,8 +263,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 19.832283, y: 0.3132}
-  m_SizeDelta: {x: 51.1496, y: 14.1988}
+  m_AnchoredPosition: {x: 20.6, y: 0.3132}
+  m_SizeDelta: {x: 75, y: 37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5849763360292922549
 CanvasRenderer:
@@ -294,7 +294,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 892090587256195829, guid: 8c89f94e80a398a479f853762cc2ca3d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

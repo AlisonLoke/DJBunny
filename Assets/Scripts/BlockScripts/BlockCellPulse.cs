@@ -6,4 +6,5 @@ public class BlockCellPulse
 {
     public Tween pulseAnimation;
     public Image BlockCellToPulse;
+    public Color originalColour;
 }
