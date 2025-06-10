@@ -11,7 +11,9 @@ public class GridVisual : MonoBehaviour
     [SerializeField] private GameObject gridCellPrefab;
     [SerializeField] private RectTransform gridParent;
     public GridCell[] cells;
+    
     public event System.Action OnGridGenerated;
+
     //public ConnectCellType currentConnectType = ConnectCellType.None;   
     //public enum ConnectCellType
     //{

@@ -1,0 +1,177 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "1170040669",
+    "Type": "User",
+    "GUID": "{7B1033E8-8458-42A7-9A7F-B9E7AD1BBBFB}",
+    "Language": "SFX",
+    "Hash": "{3AD4E0C6-424B-EC85-B640-5402FE8B4AE4}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Level0_SoundBank",
+    "ShortName": "Level0_SoundBank",
+    "Path": "Level0_SoundBank.bnk",
+    "Media": [
+     {
+      "Id": "236398914",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Banjo02 and drums.wav",
+      "CachePath": "D3/{D3D170E8-0ACD-0E3F-044A-95945CF49E29}.wem"
+     },
+     {
+      "Id": "427291558",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Banjo01 and drums.wav",
+      "CachePath": "73/{73E4FF96-09AE-63FD-4635-C14896ABE9BB}.wem"
+     },
+     {
+      "Id": "510210144",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Full track.wav",
+      "CachePath": "0A/{0A103D17-65B8-254A-C7BD-D1F006B8F7E2}.wem"
+     },
+     {
+      "Id": "620657622",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Bass02 and track.wav",
+      "CachePath": "F0/{F03E11F1-8E41-CD43-1F99-A28699139496}.wem"
+     },
+     {
+      "Id": "857777540",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Bass01 and track.wav",
+      "CachePath": "AD/{ADA3154E-EFD9-379C-4277-930EF46A1CC5}.wem"
+     },
+     {
+      "Id": "868671870",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "HiHats.wav",
+      "CachePath": "2C/{2CA6ADDB-6644-B9B3-DB8A-3F973C079AC9}.wem"
+     },
+     {
+      "Id": "982296495",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Snare and Bass.wav",
+      "CachePath": "5E/{5EF2EC8A-A8BB-DB36-9E2E-1453AACBA5D2}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1654636977",
+      "Name": "Banjo_01",
+      "ObjectPath": "\\Events\\Default Work Unit\\Banjo_01",
+      "GUID": "{4ACA443E-7121-40C4-A33A-1A510D6C1580}",
+      "DurationType": "OneShot",
+      "DurationMin": "8.151451",
+      "DurationMax": "8.151451",
+      "MediaRefs": [
+       {
+        "Id": "427291558"
+       }
+      ]
+     },
+     {
+      "Id": "1654636978",
+      "Name": "Banjo_02",
+      "ObjectPath": "\\Events\\Default Work Unit\\Banjo_02",
+      "GUID": "{854468E7-0D54-4E99-971A-9B8D746561EE}",
+      "DurationType": "OneShot",
+      "DurationMin": "8.151474",
+      "DurationMax": "8.151474",
+      "MediaRefs": [
+       {
+        "Id": "236398914"
+       }
+      ]
+     },
+     {
+      "Id": "2197579062",
+      "Name": "Bass_01",
+      "ObjectPath": "\\Events\\Default Work Unit\\Bass_01",
+      "GUID": "{15E0C550-C09D-46F4-A7E5-6D67B5761C38}",
+      "DurationType": "OneShot",
+      "DurationMin": "8.151474",
+      "DurationMax": "8.151474",
+      "MediaRefs": [
+       {
+        "Id": "857777540"
+       }
+      ]
+     },
+     {
+      "Id": "2197579061",
+      "Name": "Bass_02",
+      "ObjectPath": "\\Events\\Default Work Unit\\Bass_02",
+      "GUID": "{7A036B61-9F3B-41CC-8338-61A66C425ACC}",
+      "DurationType": "OneShot",
+      "DurationMin": "8",
+      "DurationMax": "8",
+      "MediaRefs": [
+       {
+        "Id": "620657622"
+       }
+      ]
+     },
+     {
+      "Id": "4059233419",
+      "Name": "Drum_Snare",
+      "ObjectPath": "\\Events\\Default Work Unit\\Drum_Snare",
+      "GUID": "{778F8030-11A8-42C2-B786-C368ABFB0CE1}",
+      "DurationType": "OneShot",
+      "DurationMin": "8",
+      "DurationMax": "8",
+      "MediaRefs": [
+       {
+        "Id": "982296495"
+       }
+      ]
+     },
+     {
+      "Id": "4075853312",
+      "Name": "Dum_HiHat",
+      "ObjectPath": "\\Events\\Default Work Unit\\Dum_HiHat",
+      "GUID": "{3456D58A-A01E-4D59-8272-8BB9DBC88F6E}",
+      "DurationType": "OneShot",
+      "DurationMin": "8.151451",
+      "DurationMax": "8.151451",
+      "MediaRefs": [
+       {
+        "Id": "868671870"
+       }
+      ]
+     },
+     {
+      "Id": "858850169",
+      "Name": "Level01Track",
+      "ObjectPath": "\\Events\\Default Work Unit\\Level01Track",
+      "GUID": "{88F7D19D-5955-400D-B2E5-BB5FEB127B94}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "510210144"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{F0E09FA3-708C-0A05-BA18-35CA57A48474}"
+ }
+}

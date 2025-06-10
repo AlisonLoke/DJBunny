@@ -10,6 +10,19 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<SoundBank Name="Level0_SoundBank" ID="{7B1033E8-8458-42A7-9A7F-B9E7AD1BBBFB}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Level01Track" ID="{88F7D19D-5955-400D-B2E5-BB5FEB127B94}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Banjo_01" ID="{4ACA443E-7121-40C4-A33A-1A510D6C1580}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Bass_02" ID="{7A036B61-9F3B-41CC-8338-61A66C425ACC}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Drum_Snare" ID="{778F8030-11A8-42C2-B786-C368ABFB0CE1}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Bass_01" ID="{15E0C550-C09D-46F4-A7E5-6D67B5761C38}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Dum_HiHat" ID="{3456D58A-A01E-4D59-8272-8BB9DBC88F6E}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Banjo_02" ID="{854468E7-0D54-4E99-971A-9B8D746561EE}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>

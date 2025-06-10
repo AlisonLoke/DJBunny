@@ -4,6 +4,7 @@ using System.Linq;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class ConnectionSystem : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class ConnectionSystem : MonoBehaviour
     private List<BlockUI> previouslyPulsedBlocks = new List<BlockUI>();
     private BlockUI blockUI;
     private Image cellImage;
+    public event System.Action<int> onValidPathCompleted;
 
 
     [SerializeField] private UILineRenderer lineRenderer;
@@ -253,6 +255,7 @@ public class ConnectionSystem : MonoBehaviour
         //SceneManager.LoadScene("WinCutScene");
         blockUI = startConnectedEndCell?.GetComponentInParent<BlockUI>();
 
+        onValidPathCompleted?.Invoke(currentPath.Count);//invoke fancy name for trigger event gets triggered
         BlockUIListFoundInPath();
     }
 
