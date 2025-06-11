@@ -1,4 +1,8 @@
+using NUnit.Framework;
 using UnityEngine;
+using System.Collections.Generic;
+
+
 
 [CreateAssetMenu(fileName = "GridData", menuName = "Scriptable Objects/GridData")]
 public class GridData : ScriptableObject
@@ -6,13 +10,18 @@ public class GridData : ScriptableObject
 
     public int x = 6;
     public int y = 6;
+    
+    [Header("Close Grid Space")]
+    public List<Vector2Int> closedGridSpace;
 
-    [SerializeField] private GridCell startCell;
-    [SerializeField] private GridCell endCell;
+    [Header("Start and Finish Cell")]
     public Vector2Int startCellCoordinates = Vector2Int.zero;
     public Vector2Int finishCellCoordinates = Vector2Int.zero;
 
-
+    public List<Vector2Int> GetClosedGridSpaceCoordinates()
+    {
+        return closedGridSpace;
+    }
     public Vector2Int GetStartCellCoordinates()
     {
         return startCellCoordinates;

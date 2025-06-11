@@ -8,15 +8,17 @@ public class GridCell : MonoBehaviour
     public int y;
     public bool isOccupied;// public for dev purposes
 
-    private GridData gridData;
+    //private GridData gridData;
 
     [SerializeField] private Color Blue;
     [SerializeField] private Color Green;
     [SerializeField] private Color Red;
     [SerializeField] private Image image;
     [SerializeField] private GameObject connectCellImage;
+    [SerializeField] private GameObject closedCellImage;
     public bool startCell = false;
     public bool finishCell = false;
+    public bool IsCloseCell = false;    
 
 
 
@@ -68,5 +70,12 @@ public class GridCell : MonoBehaviour
         finishCell = isFinishCell;
         
         connectCellImage.SetActive(true);
+    }
+
+    public void ClosedCellVisual()
+    {
+
+        IsCloseCell = true;
+        closedCellImage.SetActive(true);
     }
 }

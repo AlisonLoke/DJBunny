@@ -11,19 +11,10 @@ public class GridVisual : MonoBehaviour
     [SerializeField] private GameObject gridCellPrefab;
     [SerializeField] private RectTransform gridParent;
     public GridCell[] cells;
-    
+
     public event System.Action OnGridGenerated;
 
-    //public ConnectCellType currentConnectType = ConnectCellType.None;   
-    //public enum ConnectCellType
-    //{
-    //    None,
-    //    Start,
-    //    Finish
-    //}
 
-    //public delegate void OnGridGeneratedHandler();
-    //public event OnGridGeneratedHandler OnGridGenerated;
 
 
 
@@ -52,7 +43,7 @@ public class GridVisual : MonoBehaviour
         }
 
 
-        List <GridCell> tempCell = new List <GridCell>();
+        List<GridCell> tempCell = new List<GridCell>();
 
         for (int currentGridBox = 0; currentGridBox < gridData.x * gridData.y; currentGridBox++)
         {
@@ -62,12 +53,13 @@ public class GridVisual : MonoBehaviour
             GameObject newGridCell = Instantiate(gridCellPrefab, gridParent);
             newGridCell.name = $"GridCell: ({xAxis}, {yAxis})";  // Assign name based on coordinates
 
-            AssignCoordinatesToGridCell(xAxis, yAxis, newGridCell);
+            AssignStartandFinishCoordinatesToGridCell(xAxis, yAxis, newGridCell);
+            AssignClosedGridSpaceCoordinates(xAxis,yAxis,newGridCell);
 
             GridCell gridCell = newGridCell.GetComponent<GridCell>();
-            if(gridCell != null)
+            if (gridCell != null)
             {
-                tempCell.Add(gridCell); 
+                tempCell.Add(gridCell);
             }
         }
 
@@ -77,24 +69,44 @@ public class GridVisual : MonoBehaviour
     }
 
 
-    public void AssignCoordinatesToGridCell(int xAxis, int yAxis, GameObject newGridCell)
+    public void AssignStartandFinishCoordinatesToGridCell(int xAxis, int yAxis, GameObject newGridCell)
     {
         GridCell gridCell = newGridCell.GetComponent<GridCell>();
         if (gridCell != null)// if the gridcell component exists on gridcell prefab
         {
             gridCell.SetCoordinates(xAxis, yAxis); // assign coordinate values on the grid.
-            if(xAxis == gridData.startCellCoordinates.x && yAxis == gridData.startCellCoordinates.y)
+            if (xAxis == gridData.startCellCoordinates.x && yAxis == gridData.startCellCoordinates.y)
             {
                 gridCell.ConnectCellVisual(true, false);//specify start and end here
-                //currentConnectType = ConnectCellType.Start;
-     
+
+
             }
 
-            if(xAxis == gridData.finishCellCoordinates.x && yAxis == gridData.finishCellCoordinates.y )
+            if (xAxis == gridData.finishCellCoordinates.x && yAxis == gridData.finishCellCoordinates.y)
             {
                 gridCell.ConnectCellVisual(false, true);
-                 
-                //currentConnectType = ConnectCellType.Finish;
+
+
+            }
+        }
+    }
+
+    public void AssignClosedGridSpaceCoordinates(int xAxis, int yAxis, GameObject newGridCell)
+    {
+        
+        Debug.Log("GridSpace Closed");
+        GridCell gridCell = newGridCell.GetComponent<GridCell>();
+        if (gridCell != null)
+        {
+            gridCell.SetCoordinates(xAxis, yAxis);
+            for (int i = 0; i < gridData.closedGridSpace.Count; i++)
+            {
+                
+                if (xAxis == gridData.closedGridSpace[i].x && yAxis == gridData.closedGridSpace[i].y)
+                {
+                    gridCell.ClosedCellVisual();
+                }
+
             }
         }
     }

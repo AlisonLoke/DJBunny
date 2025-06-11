@@ -9,13 +9,17 @@ public class EndCell : MonoBehaviour
     public EndCell sisterEndCell = null;
     public GridCell currentGridCell;
     public bool onlyConnectToStartFinish = false;
+    public bool IsEndCellOnClosedCell = false;
     [HideInInspector] public BlockSystem blockSystem;
     private RectTransform blockParent;
     private BlockUI blockUI;
     private Image cellImage;
+    private GridVisual gridVisual;
+    private GridData gridData;
 
 
     private BlockCellPulse myTweenAnimation;
+    private GridCell closedCell;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -26,6 +30,7 @@ public class EndCell : MonoBehaviour
         blockUI = GetComponentInParent<BlockUI>();
         currentGridCell = blockSystem.SnapClosestGridCell(transform.position);
         cellImage = GetComponent<Image>();
+
 
         foreach (EndCell endCell in blockSystem.endCells)
         {
@@ -139,6 +144,34 @@ public class EndCell : MonoBehaviour
         //StopPulseColour();
         StopBlink();
 
+    }
+    public void EndCellOnClosedCell()
+    {
+        //find closest gridcell to end cell's current position
+        if (currentGridCell == null)
+        {
+            currentGridCell = blockSystem.SnapClosestGridCell(transform.position);
+        }
+        //
+        if (currentGridCell == null || LevelManager.Instance.gridData == null)
+        {
+            return;
+        }
+
+        //way to ask, is the current end cell in the list of closed cells?
+        Vector2Int currentEndCellPos = new Vector2Int(currentGridCell.x, currentGridCell.y);
+
+        //Checks whether the list of closed cells contains the coordinates of the cell the EndCell is on.
+        if (LevelManager.Instance.gridData.closedGridSpace.Contains(currentEndCellPos))
+        {
+            IsEndCellOnClosedCell = true;
+            Debug.Log($"EndCell is on a closed cell at ({currentEndCellPos.x}, {currentEndCellPos.y})");
+
+        }
+        else
+        {
+            IsEndCellOnClosedCell = false;
+        }
     }
 
     public void StartBlink(string hexColour, float duration = 0.5f)

@@ -6,14 +6,20 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    public static LevelManager Instance;
+   public GridData gridData;
     // needs to be called after ConnectionSystem.Awake()
     private EndCell[] allEndCells;
+    public GridData GetGridData => gridData;    
 
     private void Start()
     {
+        Instance = this;
         ConnectionSystem.instance.onValidPathCompleted += CheckIfLevelComplete;
 
         allEndCells = FindObjectsByType<EndCell>(FindObjectsSortMode.None);
+
+      
     }
 
     private void OnDestroy()

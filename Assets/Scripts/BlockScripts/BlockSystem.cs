@@ -134,9 +134,10 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             UnhighlightAllCells();
             return;
         }
-
         GridCell snapClosestGridCell = SnapClosestGridCell(blockParentRect.position);
         FinalBlockPlacement(snapClosestGridCell);
+
+       
         Debug.Log("PLAYING MUSIC");
 
         //audioObject = AudioManager.instance.PlayMusic(blockData.AudioClip);
@@ -245,6 +246,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             AddPlaceBlockToList(blockParentRect);
             AddBlockUIToList();
             CheckForFirstEndCell();
+            CheckIfEndCellOnClosedCell();
 
             // Establish connections for each end cell
             UpdateEndCellGridPositions();
@@ -292,6 +294,22 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         {
 
             blockParentRect.position = blockOriginPos;// no grid cell found so return origin pos
+        }
+    }
+
+  private void CheckIfEndCellOnClosedCell()
+    {
+        foreach(EndCell thisEndCell in endCells)
+        {
+            thisEndCell.EndCellOnClosedCell();
+            if (thisEndCell.IsEndCellOnClosedCell)
+            {
+                Debug.LogWarning("Block on end cell, returning to origin.");
+                blockParentRect.position = blockOriginPos;
+                ConnectionSystem.instance.ClearBlockPulses();
+                UnhighlightAllCells();
+                return;
+            }
         }
     }
     private void BlockIsDraggedOutOfBounds()
