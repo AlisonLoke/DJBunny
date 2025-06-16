@@ -386,7 +386,6 @@ public class ConnectionSystem : MonoBehaviour
             }
         }
 
-        // make sure the delay, WaitForSeconds = number of blocks in the pulse preview sequence * delayBetweenBlocks
         yield return new WaitForSeconds(blockUIPath.Count * PreviewPathPulseLength + 0.01f);
 
         ClearBlockPulses();
