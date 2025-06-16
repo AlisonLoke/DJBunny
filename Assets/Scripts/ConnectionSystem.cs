@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Android;
 using UnityEngine.UI;
 
 public class ConnectionSystem : MonoBehaviour
@@ -27,6 +28,8 @@ public class ConnectionSystem : MonoBehaviour
     private Image cellImage;
     public event System.Action<int> onValidPathCompleted;
 
+    private const float PreviewPathPulseLength = 0.15f;
+    private const float PathCompletePulseLength = 0.5f;
 
     [SerializeField] private UILineRenderer lineRenderer;
     [SerializeField] private RectTransform canvas;
@@ -230,8 +233,7 @@ public class ConnectionSystem : MonoBehaviour
 
         onValidPathCompleted?.Invoke(currentPath.Count);//invoke fancy name for trigger event gets triggered
 
-        // TODO: delay code below so that it happens after the preview pulse
-        // make sure the delay, WaitForSeconds = number of blocks in the pulse preview sequence * delayBetweenBlocks
+
 
         if (currentPath.Count == 0) return;
 
@@ -245,7 +247,7 @@ public class ConnectionSystem : MonoBehaviour
             }
         }
 
-        PulseCompletePath();
+        StartCoroutine(PulseCompletePath());
     }
 
     public void PreviewCurrentPath()
@@ -290,12 +292,14 @@ public class ConnectionSystem : MonoBehaviour
             }
         }
 
-        StartCoroutine(PulseCurrentPath(blockUIPath, Color.cyan, 0.15f));
+        StartCoroutine(PulseCurrentPath(blockUIPath, Color.cyan, PreviewPathPulseLength));
 
     }
 
     private IEnumerator PulseCurrentPath(List<BlockUI> blockUIs, Color pulseColour, float delayBetweenBlocks)
     {
+        // TODO: DISABLE INPUT
+
         for (int i = 0; i < blockUIs.Count; i++)
         {
             BlockUI block = blockUIs[i];
@@ -317,6 +321,8 @@ public class ConnectionSystem : MonoBehaviour
 
             yield return new WaitForSeconds(delayBetweenBlocks);
         }
+
+        // TODO: ENABLE INPUT
     }
 
     private void TrackCurrentPath(EndCell currentCell, List<EndCell> path)
@@ -343,13 +349,14 @@ public class ConnectionSystem : MonoBehaviour
             }
         }
     }
-    public void PulseCompletePath()
+
+    private IEnumerator PulseCompletePath()
     {
         currentPath.Clear();
         allPaths.Clear();
         if (startConnectedEndCell == null || finishConnectedEndCell == null)
         {
-            return;
+            yield break;
         }
 
         List<EndCell> workingPath = new List<EndCell>();
@@ -367,7 +374,7 @@ public class ConnectionSystem : MonoBehaviour
             }
         }
 
-        if (currentPath.Count == 0) return;
+        if (currentPath.Count == 0) yield break;
 
         List<BlockUI> blockUIPath = new List<BlockUI>();
         foreach (EndCell endCell in currentPath)
@@ -379,12 +386,18 @@ public class ConnectionSystem : MonoBehaviour
             }
         }
 
+        // delay code below so that it happens after the preview pulse
+        // make sure the delay, WaitForSeconds = number of blocks in the pulse preview sequence * delayBetweenBlocks
+        yield return new WaitForSeconds(blockUIPath.Count * PreviewPathPulseLength);
+
         ClearBlockPulses();
-        StartCoroutine(PulseCompletePath(blockUIPath, Color.green, 0.5f));
+        StartCoroutine(PulseCompletePath(blockUIPath, Color.green, PathCompletePulseLength));
     }
 
     private IEnumerator PulseCompletePath(List<BlockUI> blockUIs, Color pulseColour, float delayBetweenBlocks)
     {
+        // TODO: DISABLE INPUT
+        
         for (int i = 0; i < blockUIs.Count; i++)
         {
             BlockUI block = blockUIs[i];
@@ -403,7 +416,10 @@ public class ConnectionSystem : MonoBehaviour
 
             yield return new WaitForSeconds(delayBetweenBlocks);
         }
+
+        // TODO: ENABLE INPUT
     }
+
     private void BlockUIListFoundInPath()
     {
         List<BlockUI> pathBlockUIs = new List<BlockUI>();
