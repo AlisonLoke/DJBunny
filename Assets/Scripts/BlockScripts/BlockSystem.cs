@@ -142,7 +142,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
         //audioObject = AudioManager.instance.PlayMusic(blockData.AudioClip);
         //AudioManager.instance.drumSoundTest.Post(gameObject);
-        audioObject = AudioManager.instance.PlayMusic(blockData.Instruments);
+         AudioManager.instance.QueueMusic(blockData.Instruments);
     }
 
 
