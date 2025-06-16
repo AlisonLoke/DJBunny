@@ -12,11 +12,13 @@ public class InputBlocker : MonoBehaviour
     }
     public void EnableBlockInput()
     {
+        if (inputBlocker == null) { Debug.LogError("Forgot to assign an image to input blocker"); return; }
         inputBlocker.enabled = true;
     }
 
     public void DisableBlockInput()
     {
+        if (inputBlocker == null) { Debug.LogError("Forgot to assign an image to input blocker"); return; }
         inputBlocker.enabled = false;
     }
 
