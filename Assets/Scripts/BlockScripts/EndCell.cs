@@ -20,9 +20,8 @@ public class EndCell : MonoBehaviour
 
     private BlockCellPulse myTweenAnimation;
     private GridCell closedCell;
+    private Color originalColour;
 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     public void Initialise()
     {
@@ -40,6 +39,7 @@ public class EndCell : MonoBehaviour
             }
         }
 
+        originalColour = cellImage.color;
     }
     public void CheckForEndCells()
     {
@@ -184,7 +184,7 @@ public class EndCell : MonoBehaviour
             Debug.LogWarning("Invalid hex color string: " + hexColour);
             return;
         }
-        Color originalColour = cellImage.color;
+        //Color originalColour = cellImage.color;
 
         // create the tween animation
         Tween loopPulseAnim = cellImage.DOColor(targetColour, duration).SetLoops(-1, LoopType.Yoyo);
@@ -193,7 +193,7 @@ public class EndCell : MonoBehaviour
         BlockCellPulse newBlockCellPulse = new BlockCellPulse();
         newBlockCellPulse.pulseAnimation = loopPulseAnim;
         newBlockCellPulse.BlockCellToPulse = cellImage;
-        newBlockCellPulse.originalColour = originalColour;
+        newBlockCellPulse.originalColour = originalColour; 
         myTweenAnimation = newBlockCellPulse;
     }
 

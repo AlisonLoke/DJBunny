@@ -4,7 +4,6 @@ using System.Linq;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Events;
 
 public class ConnectionSystem : MonoBehaviour
 {
@@ -36,7 +35,7 @@ public class ConnectionSystem : MonoBehaviour
     private void Awake()
     {
         blockSystem = GetComponentInParent<BlockSystem>();
-        cellImage= GetComponent<Image>();
+        cellImage = GetComponent<Image>();
         //currentGridCell = blockSystem.SnapClosestGridCell(transform.position);
         instance = this;
         //Debug.Log("ConnectionSystem Awake called");
@@ -68,8 +67,7 @@ public class ConnectionSystem : MonoBehaviour
 
     public void CheckConnectionsForAllEndCells()
     {
-        Debug.Log("BLINK STOPPED");
-        //StopBlinkOnBlockCell(blockUI);
+
         currentPath.Clear();
         startConnectedEndCell = null;
         finishConnectedEndCell = null;
@@ -127,15 +125,7 @@ public class ConnectionSystem : MonoBehaviour
 
     public GridCell FindAdjacentEndCells(EndCell fromEndCell, Image blockCellImage, int x, int y)
     {
-        // Don't try to connect if already connected
-        //if (fromEndCell.connectedEndCell.Count > 0)
-        //{
-        //    return null;
 
-        //}
-        //List<RectTransform> placedBlocks = ConnectionSystem.instance.placedBlocks;
-
-        //List<EndCell> allEndCells = new List<EndCell>();
 
         foreach (RectTransform placedBlockRect in placedBlocks)
         {
@@ -159,13 +149,6 @@ public class ConnectionSystem : MonoBehaviour
                     if (endCellGridCell == null || endCellGridCell.x != x || endCellGridCell.y != y)
                         continue;
 
-                    //if (!endCell.sisterEndCell.onlyConnectToStartFinish && endCell.sisterEndCell.connectedEndCell.Count == 0)
-                    //{
-                    //    continue;
-                    //}
-
-                    //if (TryConnect(fromEndCell, endCell))
-                    //    return endCellGridCell;
 
 
                     // Connect the two end cells if not already connected
@@ -189,19 +172,7 @@ public class ConnectionSystem : MonoBehaviour
         return null;
     }
 
-    //public static bool TryConnect(EndCell a, EndCell b)
-    //{
-    //    if (a.connectedEndCell.Count > 0 || b.connectedEndCell.Count > 0)
-    //    {
-    //        Debug.LogWarning($"Connection failed: {a.name} or {b.name} already has a connection.");
-    //        return false;
-    //    }
-        
 
-    //    a.connectedEndCell.Add(b);
-    //    b.connectedEndCell.Add(a);
-    //    return true;
-    //}
 
 
 
@@ -256,10 +227,185 @@ public class ConnectionSystem : MonoBehaviour
         blockUI = startConnectedEndCell?.GetComponentInParent<BlockUI>();
 
         onValidPathCompleted?.Invoke(currentPath.Count);//invoke fancy name for trigger event gets triggered
-        BlockUIListFoundInPath();
+
+        // TODO: delay code below so that it happens after the preview pulse
+        // make sure the delay, WaitForSeconds = number of blocks in the pulse preview sequence * delayBetweenBlocks
+
+        if (currentPath.Count == 0) return;
+
+        List<BlockUI> blockUIPath = new List<BlockUI>();
+        foreach (EndCell endCell in currentPath)
+        {
+            BlockUI ui = endCell.GetComponentInParent<BlockUI>();
+            if (ui != null && !blockUIPath.Contains(ui))
+            {
+                blockUIPath.Add(ui);
+            }
+        }
+
+        // TODO: make variant of PulseCurrentPath() so that blocks remain green after the pulse sequence
+        //StartCoroutine(PulseCompletePath(blockUIPath, Color.green, 0.5f));
+        //PulseCompletePath();
+
+        //BlockUIListFoundInPath();
     }
 
+    public void PreviewCurrentPath()
+    {
+        currentPath.Clear();
+        allPaths.Clear();
+        if (startConnectedEndCell == null && finishConnectedEndCell == null)
+        {
+            return;
+        }
 
+        List<EndCell> workingPath = new List<EndCell>();
+
+        EndCell cellToTrackPathFrom = !startConnectedEndCell ? finishConnectedEndCell : startConnectedEndCell;
+        /* ternary operator - same as
+         * if (startConnectedEndCell == null)
+         * {
+         *      cellToTrackPathFrom = finishConnectedEndCell;
+         * }
+         */
+
+        TrackCurrentPath(cellToTrackPathFrom, workingPath);
+
+        // Grab the longest reachable partial path
+        foreach (List<EndCell> path in allPaths)
+        {
+            if (path.Count > currentPath.Count)
+            {
+                currentPath = new List<EndCell>(path);
+            }
+        }
+
+        if (currentPath.Count == 0) return;
+
+        List<BlockUI> blockUIPath = new List<BlockUI>();
+        foreach (EndCell endCell in currentPath)
+        {
+            BlockUI ui = endCell.GetComponentInParent<BlockUI>();
+            if (ui != null && !blockUIPath.Contains(ui))
+            {
+                blockUIPath.Add(ui);
+            }
+        }
+
+        StartCoroutine(PulseCurrentPath(blockUIPath, Color.cyan, 0.15f));
+
+    }
+
+    private IEnumerator PulseCurrentPath(List<BlockUI> blockUIs, Color pulseColour, float delayBetweenBlocks)
+    {
+        for (int i = 0; i < blockUIs.Count; i++)
+        {
+            BlockUI block = blockUIs[i];
+            if (block == null) continue;
+
+            List<Image> blockImages = block.GetBlockCellImages();
+
+            for (int j = 0; j < blockImages.Count; j++)
+            {
+                Image img = blockImages[j];
+                if (img == null) continue;
+
+                Color originalColor = img.color;
+                img.DOColor(pulseColour, 0.25f).OnComplete(() =>
+                {
+                    img.DOColor(originalColor, 0.25f);
+                });
+            }
+
+            yield return new WaitForSeconds(delayBetweenBlocks);
+        }
+    }
+
+    private void TrackCurrentPath(EndCell currentCell, List<EndCell> path)
+    {
+        if (path.Contains(currentCell)) return;
+
+        path.Add(currentCell);
+
+        // Save this reachable path as a potential partial path
+        allPaths.Add(new List<EndCell>(path));
+
+        // First, follow sister (if not visited)
+        if (currentCell.sisterEndCell != null && !path.Contains(currentCell.sisterEndCell))
+        {
+            TrackCurrentPath(currentCell.sisterEndCell, new List<EndCell>(path));
+            return; // prioritize full block connections
+        }
+
+        if (currentCell.connectedEndCell != null)
+        {
+            foreach (EndCell connected in currentCell.connectedEndCell)
+            {
+                TrackCurrentPath(connected, new List<EndCell>(path));
+            }
+        }
+    }
+    public void PulseCompletePath()
+    {
+        currentPath.Clear();
+        allPaths.Clear();
+        if (startConnectedEndCell == null || finishConnectedEndCell == null)
+        {
+            return;
+        }
+
+        List<EndCell> workingPath = new List<EndCell>();
+
+        FindAllPaths(startConnectedEndCell, finishConnectedEndCell, workingPath);
+
+
+
+        // Grab the longest reachable partial path
+        foreach (List<EndCell> path in allPaths)
+        {
+            if (path.Count > currentPath.Count)
+            {
+                currentPath = new List<EndCell>(path);
+            }
+        }
+
+        if (currentPath.Count == 0) return;
+
+        List<BlockUI> blockUIPath = new List<BlockUI>();
+        foreach (EndCell endCell in currentPath)
+        {
+            BlockUI ui = endCell.GetComponentInParent<BlockUI>();
+            if (ui != null && !blockUIPath.Contains(ui))
+            {
+                blockUIPath.Add(ui);
+            }
+        }
+
+        ClearBlockPulses();
+        StartCoroutine(PulseCompletePath(blockUIPath, Color.green, 0.5f));
+    }
+
+    private IEnumerator PulseCompletePath(List<BlockUI> blockUIs, Color pulseColour, float delayBetweenBlocks)
+    {
+        for (int i = 0; i < blockUIs.Count; i++)
+        {
+            BlockUI block = blockUIs[i];
+            if (block == null) continue;
+
+            List<Image> blockImages = block.GetBlockCellImages();
+
+            for (int j = 0; j < blockImages.Count; j++)
+            {
+                Image img = blockImages[j];
+                if (img == null) continue;
+                Color originalColor = img.color;
+                img.DOColor(pulseColour, 0.25f);
+                previouslyPulsedBlocks.Add(block);
+            }
+
+            yield return new WaitForSeconds(delayBetweenBlocks);
+        }
+    }
     private void BlockUIListFoundInPath()
     {
         List<BlockUI> pathBlockUIs = new List<BlockUI>();
@@ -322,32 +468,12 @@ public class ConnectionSystem : MonoBehaviour
         }
     }
 
-    //public void BlinkBlockCell(BlockUI blockUI)
-    //{
-    //    if (blockUI != null)
-    //    {
-    //        blockUI.BlockColourBlink("#FF8A8A", 0.5f);
-    //    }
-      
-    //}
 
-    //public void StopBlinkOnBlockCell(BlockUI blockUI)
-    //{
-    //    if (blockUI != null)
-    //    {
-    //        blockUI.StopBlink();
-    //    }
-    //}
 
 
 
     public void ClearBlockPulses()
     {
-
-
-
-
-
         foreach (BlockUI blockUI in previouslyPulsedBlocks)
         {
             if (blockUI == null) continue;

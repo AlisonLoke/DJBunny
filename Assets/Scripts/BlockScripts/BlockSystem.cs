@@ -136,8 +136,9 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         }
         GridCell snapClosestGridCell = SnapClosestGridCell(blockParentRect.position);
         FinalBlockPlacement(snapClosestGridCell);
+        //ConnectionSystem.instance.PreviewCurrentPath();
+        ConnectionSystem.instance.PulseCompletePath();
 
-       
         Debug.Log("PLAYING MUSIC");
 
         //audioObject = AudioManager.instance.PlayMusic(blockData.AudioClip);
