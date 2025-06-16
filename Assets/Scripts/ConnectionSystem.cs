@@ -23,7 +23,7 @@ public class ConnectionSystem : MonoBehaviour
     private List<List<EndCell>> allPaths = new List<List<EndCell>>();
     public List<BlockUI> allBlockUIs = new List<BlockUI>();
     private List<BlockUI> previouslyPulsedBlocks = new List<BlockUI>();
-    private BlockUI blockUI;
+    //private BlockUI blockUI;
     private Image cellImage;
     public event System.Action<int> onValidPathCompleted;
 
@@ -39,10 +39,10 @@ public class ConnectionSystem : MonoBehaviour
         //currentGridCell = blockSystem.SnapClosestGridCell(transform.position);
         instance = this;
         //Debug.Log("ConnectionSystem Awake called");
-        if (blockUI == null)
-        {
-            blockUI = GetComponentInParent<BlockUI>();
-        }
+        //if (blockUI == null)
+        //{
+        //    blockUI = GetComponentInParent<BlockUI>();
+        //}
 
 
 
@@ -120,7 +120,9 @@ public class ConnectionSystem : MonoBehaviour
             Debug.Log("Missing either start or finish cell, clearing path");
             currentPath.Clear();
             ClearConnectedLine();
+            ClearBlockPulses();
         }
+
     }
 
     public GridCell FindAdjacentEndCells(EndCell fromEndCell, Image blockCellImage, int x, int y)
@@ -224,7 +226,7 @@ public class ConnectionSystem : MonoBehaviour
         UpdateConnectionLine();
         //load win scene
         //SceneManager.LoadScene("WinCutScene");
-        blockUI = startConnectedEndCell?.GetComponentInParent<BlockUI>();
+        //blockUI = startConnectedEndCell?.GetComponentInParent<BlockUI>();
 
         onValidPathCompleted?.Invoke(currentPath.Count);//invoke fancy name for trigger event gets triggered
 
@@ -243,11 +245,7 @@ public class ConnectionSystem : MonoBehaviour
             }
         }
 
-        // TODO: make variant of PulseCurrentPath() so that blocks remain green after the pulse sequence
-        //StartCoroutine(PulseCompletePath(blockUIPath, Color.green, 0.5f));
-        //PulseCompletePath();
-
-        //BlockUIListFoundInPath();
+        PulseCompletePath();
     }
 
     public void PreviewCurrentPath()
@@ -400,8 +398,8 @@ public class ConnectionSystem : MonoBehaviour
                 if (img == null) continue;
                 Color originalColor = img.color;
                 img.DOColor(pulseColour, 0.25f);
-                previouslyPulsedBlocks.Add(block);
             }
+            previouslyPulsedBlocks.Add(block);
 
             yield return new WaitForSeconds(delayBetweenBlocks);
         }

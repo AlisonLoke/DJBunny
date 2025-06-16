@@ -137,7 +137,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         GridCell snapClosestGridCell = SnapClosestGridCell(blockParentRect.position);
         FinalBlockPlacement(snapClosestGridCell);
         //ConnectionSystem.instance.PreviewCurrentPath();
-        ConnectionSystem.instance.PulseCompletePath();
+        //ConnectionSystem.instance.PulseCompletePath();
 
         Debug.Log("PLAYING MUSIC");
 
@@ -169,7 +169,6 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         RemovePlaceBlockFromList(blockParentRect);
         RemoveBlockUIFromList();
         ConnectionSystem.instance.CheckConnectionsForAllEndCells();
-        ConnectionSystem.instance.ClearBlockPulses();
 
 
         foreach (EndCell thisCell in endCells)
