@@ -298,7 +298,6 @@ public class ConnectionSystem : MonoBehaviour
 
     private IEnumerator PulseCurrentPath(List<BlockUI> blockUIs, Color pulseColour, float delayBetweenBlocks)
     {
-        // TODO: DISABLE INPUT
         InputBlocker.Instance.EnableBlockInput();
 
         for (int i = 0; i < blockUIs.Count; i++)
@@ -323,7 +322,6 @@ public class ConnectionSystem : MonoBehaviour
             yield return new WaitForSeconds(delayBetweenBlocks);
         }
 
-        // TODO: ENABLE INPUT
         InputBlocker.Instance.DisableBlockInput();
     }
 
@@ -398,7 +396,6 @@ public class ConnectionSystem : MonoBehaviour
 
     private IEnumerator PulseCompletePath(List<BlockUI> blockUIs, Color pulseColour, float delayBetweenBlocks)
     {
-        // TODO: DISABLE INPUT
         InputBlocker.Instance.EnableBlockInput();
         
         for (int i = 0; i < blockUIs.Count; i++)
@@ -420,7 +417,6 @@ public class ConnectionSystem : MonoBehaviour
             yield return new WaitForSeconds(delayBetweenBlocks);
         }
 
-        // TODO: ENABLE INPUT
         InputBlocker.Instance.DisableBlockInput();
     }
 
