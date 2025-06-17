@@ -201,18 +201,18 @@ PrefabInstance:
     - target: {fileID: 827318165451391338, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 8414781971010109694, guid: baf7c3a58601d5e4dae357f2d6f552ed, type: 3}
+      objectReference: {fileID: -5584528404319551980, guid: 09fcd451d21a4ae46aba28db95c9b142, type: 3}
     - target: {fileID: 827318165451391338, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.68235296
       objectReference: {fileID: 0}
     - target: {fileID: 827318165451391338, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.68235296
       objectReference: {fileID: 0}
     - target: {fileID: 827318165451391338, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.9960785
       objectReference: {fileID: 0}
     - target: {fileID: 3804025796979829729, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Name
@@ -309,14 +309,14 @@ PrefabInstance:
     - target: {fileID: 8223551089483818459, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 8414781971010109694, guid: baf7c3a58601d5e4dae357f2d6f552ed, type: 3}
+      objectReference: {fileID: -5584528404319551980, guid: 09fcd451d21a4ae46aba28db95c9b142, type: 3}
     - target: {fileID: 8223551089483818459, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.68238986
       objectReference: {fileID: 0}
     - target: {fileID: 8223551089483818459, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.68238986
       objectReference: {fileID: 0}
     - target: {fileID: 8223551089483818459, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Color.r
@@ -935,18 +935,18 @@ PrefabInstance:
     - target: {fileID: 827318165451391338, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 8998254100677116372, guid: 7e39efa06a07c57479e9c5fbb6c64fe9, type: 3}
+      objectReference: {fileID: -5584528404319551980, guid: 09fcd451d21a4ae46aba28db95c9b142, type: 3}
     - target: {fileID: 827318165451391338, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.9960785
       objectReference: {fileID: 0}
     - target: {fileID: 827318165451391338, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.86274517
       objectReference: {fileID: 0}
     - target: {fileID: 827318165451391338, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.63529414
       objectReference: {fileID: 0}
     - target: {fileID: 3804025796979829729, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Name
@@ -1047,7 +1047,7 @@ PrefabInstance:
     - target: {fileID: 8223551089483818459, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 8998254100677116372, guid: 7e39efa06a07c57479e9c5fbb6c64fe9, type: 3}
+      objectReference: {fileID: -5584528404319551980, guid: 09fcd451d21a4ae46aba28db95c9b142, type: 3}
     - target: {fileID: 8223551089483818459, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -1058,11 +1058,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8223551089483818459, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.8643279
       objectReference: {fileID: 0}
     - target: {fileID: 8223551089483818459, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.63207537
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1874,6 +1874,30 @@ PrefabInstance:
     - target: {fileID: 391222831521635434, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
       propertyPath: m_Name
       value: DialogueCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+      propertyPath: textSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+      propertyPath: lines.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+      propertyPath: 'lines.Array.data[0]'
+      value: Try grabbing the blue block!
+      objectReference: {fileID: 0}
+    - target: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+      propertyPath: 'lines.Array.data[1]'
+      value: Rotate with your right mouse button
+      objectReference: {fileID: 0}
+    - target: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+      propertyPath: 'lines.Array.data[2]'
+      value: Try placing the block on the grid and connect the blue dots!
+      objectReference: {fileID: 0}
+    - target: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+      propertyPath: 'lines.Array.data[3]'
+      value: You have to use all the blocks to solve the puzzle
       objectReference: {fileID: 0}
     - target: {fileID: 3833232021050756787, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
       propertyPath: m_Pivot.x
