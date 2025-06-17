@@ -9,7 +9,8 @@ public class AudioManager : MonoBehaviour
 
     private List<GameObject> instruments = new List<GameObject>();
     private Queue<AK.Wwise.Event> musicQueue = new Queue<AK.Wwise.Event>();
-    private bool IsMusicPlaying = false;    
+    private bool IsMusicPlaying = false;
+    private GameObject currentAudioObject;
 
 
 
@@ -86,24 +87,25 @@ public class AudioManager : MonoBehaviour
     public GameObject PlayMusicNow(AK.Wwise.Event instrument)
     {
         if (instrument == null) return null;
+        StopMusic();
 
-        GameObject audioObject = new GameObject("Audio_" + instrument.Name);
-        audioObject.transform.SetParent(this.transform);
+        currentAudioObject = new GameObject("Audio_" + instrument.Name);
+        currentAudioObject.transform.SetParent(this.transform);
+        instruments.Add(currentAudioObject);
 
-        instruments.Add(audioObject);
+        instrument.Post(currentAudioObject);
 
-        instrument.Post(audioObject); 
-
-        return audioObject;
+        return currentAudioObject;
     }
 
-    public void StopMusic(GameObject audioObject)
+    public void StopMusic()
     {
-        if (audioObject != null)
+        if (currentAudioObject != null)
         {
-            AkUnitySoundEngine.StopAll(audioObject);
-            Destroy(audioObject);
-            instruments.Remove(audioObject);
+            AkUnitySoundEngine.StopAll(currentAudioObject);
+            Destroy(currentAudioObject);
+            instruments.Remove(currentAudioObject);
+            currentAudioObject = null;
         }
     }
 

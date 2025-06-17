@@ -127,7 +127,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         {
             ResetBlockToOrigin();
             UnhighlightAllCells();
-            AudioManager.instance.StopMusic(audioObject);
+            AudioManager.instance.StopMusic();
             return;
         }
         GridCell snapClosestGridCell = SnapClosestGridCell(blockParentRect.position);
@@ -140,7 +140,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         //AudioManager.instance.QueueMusic(blockData.Instruments);
         if (audioObject != null)
         {
-            AudioManager.instance.StopMusic(audioObject);
+            AudioManager.instance.StopMusic();
             audioObject = null;
         }
 
@@ -180,7 +180,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
         ClearEndCells();
 
-        AudioManager.instance.StopMusic(audioObject);
+        AudioManager.instance.StopMusic();
     }
 
     private void ResetBlockToOrigin()
