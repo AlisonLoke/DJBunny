@@ -13,8 +13,13 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID BANJO01_IND = 1106709462U;
+        static const AkUniqueID BANJO02_IND = 3686043613U;
         static const AkUniqueID BANJO_01 = 1654636977U;
         static const AkUniqueID BANJO_02 = 1654636978U;
+        static const AkUniqueID BASS01_IND = 2828584415U;
+        static const AkUniqueID BASS02_IND = 3835499564U;
+        static const AkUniqueID BASS03_IND = 1444490905U;
         static const AkUniqueID BASS_01 = 2197579062U;
         static const AkUniqueID BASS_02 = 2197579061U;
         static const AkUniqueID DRUM_SNARE = 4059233419U;

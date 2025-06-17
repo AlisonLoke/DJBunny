@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1c2f7ea7e019e44081a8c815ce5a8e1e
     GuidInternal: 
-    m_lastTime: -8584521196241023617
+    m_lastTime: -8584514365359506574
     List:
     - name: Level0_SoundBank
       guid: e833107b5884a7429a7fb9e7ad1bbbfb
@@ -108,7 +108,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 60318edf19da10499ab787cbf746dcca
     GuidInternal: 
-    m_lastTime: -8584521196241104982
+    m_lastTime: -8584514365747089864
     List:
     - name: Banjo_01
       guid: 3e44ca4a2171c440a33a1a510d6c1580
@@ -144,6 +144,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 8.151474
       minDuration: 8.151474
+    - name: Banjo01_Ind
+      guid: 225feb27b4997c44a3f23d0adb0a7a13
+      id: 1106709462
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Banjo01_Ind
+        ObjectType: 3
+        guid: 225feb27b4997c44a3f23d0adb0a7a13
+      Path: Events\Default Work Unit\Banjo01_Ind
+      maxAttenuation: 0
+      maxDuration: 8.139206
+      minDuration: 8.139206
+    - name: Banjo02_Ind
+      guid: a7282e1757800c469078ec54075ee699
+      id: 3686043613
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Banjo02_Ind
+        ObjectType: 3
+        guid: a7282e1757800c469078ec54075ee699
+      Path: Events\Default Work Unit\Banjo02_Ind
+      maxAttenuation: 0
+      maxDuration: 8.142086
+      minDuration: 8.142086
     - name: Bass_01
       guid: 50c5e0159dc0f446a7e56d67b5761c38
       id: 2197579062
@@ -178,6 +212,57 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 8
       minDuration: 8
+    - name: Bass01_Ind
+      guid: 830bfd8333c5f847b126514e5167944f
+      id: 2828584415
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Bass01_Ind
+        ObjectType: 3
+        guid: 830bfd8333c5f847b126514e5167944f
+      Path: Events\Default Work Unit\Bass01_Ind
+      maxAttenuation: 0
+      maxDuration: 8
+      minDuration: 8
+    - name: Bass02_Ind
+      guid: 95cbe706bf016d419d22329926fe7a7e
+      id: 3835499564
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Bass02_Ind
+        ObjectType: 3
+        guid: 95cbe706bf016d419d22329926fe7a7e
+      Path: Events\Default Work Unit\Bass02_Ind
+      maxAttenuation: 0
+      maxDuration: 8
+      minDuration: 8
+    - name: Bass03_Ind
+      guid: c9c28dcd2ba1254fa383734fb2ddca6f
+      id: 1444490905
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Bass03_Ind
+        ObjectType: 3
+        guid: c9c28dcd2ba1254fa383734fb2ddca6f
+      Path: Events\Default Work Unit\Bass03_Ind
+      maxAttenuation: 0
+      maxDuration: 8.008458
+      minDuration: 8.008458
     - name: Drum_Snare
       guid: 30808f77a811c242b786c368abfb0ce1
       id: 4059233419

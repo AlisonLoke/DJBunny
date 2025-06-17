@@ -185,6 +185,116 @@
 						<ActiveSource Name="Full track" ID="{5613510C-CBDD-494C-BA05-A808EDE4090D}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="Banjo01_Ind" ID="{079AA793-758A-4231-8AE9-A0BF63B434D8}" ShortID="479706040">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Banjo_01" ID="{A0830E73-5145-47B2-BC7E-2FB3EB77212C}">
+							<Language>SFX</Language>
+							<AudioFile>Banjo_01.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="651913571"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Banjo_01" ID="{A0830E73-5145-47B2-BC7E-2FB3EB77212C}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Banjo02_Ind" ID="{5926E273-0E00-403B-AA6C-3A067E1A33DB}" ShortID="865655053">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Banjo02" ID="{1C4E8BF6-AEE8-4719-966A-A4ADAA50944A}">
+							<Language>SFX</Language>
+							<AudioFile>Banjo02.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="628757770"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Banjo02" ID="{1C4E8BF6-AEE8-4719-966A-A4ADAA50944A}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Bass01_Ind" ID="{B4205E88-52F1-49EB-AE59-01B0505C8DA3}" ShortID="830215715">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Bass01" ID="{C19DA408-4441-439C-A17D-AD9D0B61E633}">
+							<Language>SFX</Language>
+							<AudioFile>Bass01.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1035927378"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Bass01" ID="{C19DA408-4441-439C-A17D-AD9D0B61E633}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Bass02_Ind" ID="{A5447BB3-7740-40D2-8333-714A87AED7A6}" ShortID="259844452">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Bass02" ID="{CA4F1114-45E7-4258-B0CE-CE7E8ADE5ED2}">
+							<Language>SFX</Language>
+							<AudioFile>Bass02.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="817619517"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Bass02" ID="{CA4F1114-45E7-4258-B0CE-CE7E8ADE5ED2}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Bss03_Ind" ID="{ED3F6C04-00B3-46DF-B958-7A88605A5963}" ShortID="85640890">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Bass03" ID="{7D29516B-4721-481B-8065-CDECDEF251CB}">
+							<Language>SFX</Language>
+							<AudioFile>Bass03.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="163788434"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Bass03" ID="{7D29516B-4721-481B-8065-CDECDEF251CB}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

@@ -10,11 +10,19 @@
     "Type": "User",
     "GUID": "{7B1033E8-8458-42A7-9A7F-B9E7AD1BBBFB}",
     "Language": "SFX",
-    "Hash": "{3AD4E0C6-424B-EC85-B640-5402FE8B4AE4}",
+    "Hash": "{B5AD45C6-6AE7-3FD3-72F9-46324E468DFA}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Level0_SoundBank",
     "ShortName": "Level0_SoundBank",
     "Path": "Level0_SoundBank.bnk",
     "Media": [
+     {
+      "Id": "163788434",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Bass03.wav",
+      "CachePath": "9F/{9F55C9F3-03F0-E321-0224-38F8010C29D1}.wem"
+     },
      {
       "Id": "236398914",
       "Language": "SFX",
@@ -48,6 +56,30 @@
       "CachePath": "F0/{F03E11F1-8E41-CD43-1F99-A28699139496}.wem"
      },
      {
+      "Id": "628757770",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Banjo02.wav",
+      "CachePath": "22/{227763B8-C2B7-EB01-B8E7-B515C300F184}.wem"
+     },
+     {
+      "Id": "651913571",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Banjo_01.wav",
+      "CachePath": "B9/{B9370F71-DC12-7B11-4AC7-873CC78F9AC8}.wem"
+     },
+     {
+      "Id": "817619517",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Bass02.wav",
+      "CachePath": "FE/{FE2AA5B4-1E0B-BCD0-51CF-B872168EFF5A}.wem"
+     },
+     {
       "Id": "857777540",
       "Language": "SFX",
       "Streaming": "false",
@@ -70,9 +102,45 @@
       "Location": "Memory",
       "ShortName": "Snare and Bass.wav",
       "CachePath": "5E/{5EF2EC8A-A8BB-DB36-9E2E-1453AACBA5D2}.wem"
+     },
+     {
+      "Id": "1035927378",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Bass01.wav",
+      "CachePath": "17/{170030F1-D131-3565-7890-D520D382D450}.wem"
      }
     ],
     "Events": [
+     {
+      "Id": "1106709462",
+      "Name": "Banjo01_Ind",
+      "ObjectPath": "\\Events\\Default Work Unit\\Banjo01_Ind",
+      "GUID": "{27EB5F22-99B4-447C-A3F2-3D0ADB0A7A13}",
+      "DurationType": "OneShot",
+      "DurationMin": "8.139206",
+      "DurationMax": "8.139206",
+      "MediaRefs": [
+       {
+        "Id": "651913571"
+       }
+      ]
+     },
+     {
+      "Id": "3686043613",
+      "Name": "Banjo02_Ind",
+      "ObjectPath": "\\Events\\Default Work Unit\\Banjo02_Ind",
+      "GUID": "{172E28A7-8057-460C-9078-EC54075EE699}",
+      "DurationType": "OneShot",
+      "DurationMin": "8.142086",
+      "DurationMax": "8.142086",
+      "MediaRefs": [
+       {
+        "Id": "628757770"
+       }
+      ]
+     },
      {
       "Id": "1654636977",
       "Name": "Banjo_01",
@@ -98,6 +166,48 @@
       "MediaRefs": [
        {
         "Id": "236398914"
+       }
+      ]
+     },
+     {
+      "Id": "2828584415",
+      "Name": "Bass01_Ind",
+      "ObjectPath": "\\Events\\Default Work Unit\\Bass01_Ind",
+      "GUID": "{83FD0B83-C533-47F8-B126-514E5167944F}",
+      "DurationType": "OneShot",
+      "DurationMin": "8",
+      "DurationMax": "8",
+      "MediaRefs": [
+       {
+        "Id": "1035927378"
+       }
+      ]
+     },
+     {
+      "Id": "3835499564",
+      "Name": "Bass02_Ind",
+      "ObjectPath": "\\Events\\Default Work Unit\\Bass02_Ind",
+      "GUID": "{06E7CB95-01BF-416D-9D22-329926FE7A7E}",
+      "DurationType": "OneShot",
+      "DurationMin": "8",
+      "DurationMax": "8",
+      "MediaRefs": [
+       {
+        "Id": "817619517"
+       }
+      ]
+     },
+     {
+      "Id": "1444490905",
+      "Name": "Bass03_Ind",
+      "ObjectPath": "\\Events\\Default Work Unit\\Bass03_Ind",
+      "GUID": "{CD8DC2C9-A12B-4F25-A383-734FB2DDCA6F}",
+      "DurationType": "OneShot",
+      "DurationMin": "8.008458",
+      "DurationMax": "8.008458",
+      "MediaRefs": [
+       {
+        "Id": "163788434"
        }
       ]
      },
@@ -172,6 +282,6 @@
     ]
    }
   ],
-  "FileHash": "{F0E09FA3-708C-0A05-BA18-35CA57A48474}"
+  "FileHash": "{5C36AF36-5C30-BA6E-9535-0A07B8404C8F}"
  }
 }

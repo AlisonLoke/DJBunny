@@ -91,6 +91,61 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Banjo01_Ind" ID="{27EB5F22-99B4-447C-A3F2-3D0ADB0A7A13}">
+					<ChildrenList>
+						<Action Name="" ID="{E63256EB-04E2-4F8C-A676-9CE45FD3029E}" ShortID="268650831">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Banjo01_Ind" ID="{079AA793-758A-4231-8AE9-A0BF63B434D8}" WorkUnitID="{E90C2CAF-B9AB-4A75-BFCA-1987D0D05287}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Banjo02_Ind" ID="{172E28A7-8057-460C-9078-EC54075EE699}">
+					<ChildrenList>
+						<Action Name="" ID="{66BACF1D-FEBB-47C5-A7E0-99E51B78F55D}" ShortID="21415027">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Banjo02_Ind" ID="{5926E273-0E00-403B-AA6C-3A067E1A33DB}" WorkUnitID="{E90C2CAF-B9AB-4A75-BFCA-1987D0D05287}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Bass01_Ind" ID="{83FD0B83-C533-47F8-B126-514E5167944F}">
+					<ChildrenList>
+						<Action Name="" ID="{22EF76E1-229C-4890-A2EA-1FD2B3DE61FB}" ShortID="462240941">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bass01_Ind" ID="{B4205E88-52F1-49EB-AE59-01B0505C8DA3}" WorkUnitID="{E90C2CAF-B9AB-4A75-BFCA-1987D0D05287}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Bass02_Ind" ID="{06E7CB95-01BF-416D-9D22-329926FE7A7E}">
+					<ChildrenList>
+						<Action Name="" ID="{8F544680-53DD-4A4A-B74F-2FB480F2E109}" ShortID="787390418">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bass02_Ind" ID="{A5447BB3-7740-40D2-8333-714A87AED7A6}" WorkUnitID="{E90C2CAF-B9AB-4A75-BFCA-1987D0D05287}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Bass03_Ind" ID="{CD8DC2C9-A12B-4F25-A383-734FB2DDCA6F}">
+					<ChildrenList>
+						<Action Name="" ID="{AB16536D-6030-4018-B4FF-F7A399D9C695}" ShortID="204902719">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bss03_Ind" ID="{ED3F6C04-00B3-46DF-B958-7A88605A5963}" WorkUnitID="{E90C2CAF-B9AB-4A75-BFCA-1987D0D05287}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
