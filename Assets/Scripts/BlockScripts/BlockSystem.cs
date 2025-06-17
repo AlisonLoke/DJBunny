@@ -81,7 +81,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         if (!isFollowingMouse)
         {
             BeginPickUp();
-
+            audioObject = AudioManager.instance.PlayMusicNow(blockData.Instruments);
         }
         else
         {
@@ -102,12 +102,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             ResetBlockToOrigin();
             Debug.Log("MUSIC STOPPED");
 
-            if (audioObject != null)
-            {
-                blockData.Instruments.Stop(audioObject); // stop this instrument on the block
-                Destroy(audioObject); // destroy it ro clean up
-                audioObject = null;
-            }
+        
             return;
         }
 
@@ -132,6 +127,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         {
             ResetBlockToOrigin();
             UnhighlightAllCells();
+            AudioManager.instance.StopMusic(audioObject);
             return;
         }
         GridCell snapClosestGridCell = SnapClosestGridCell(blockParentRect.position);
@@ -140,9 +136,15 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
         Debug.Log("PLAYING MUSIC");
 
-        //audioObject = AudioManager.instance.PlayMusic(blockData.AudioClip);
-        //AudioManager.instance.drumSoundTest.Post(gameObject);
-         AudioManager.instance.QueueMusic(blockData.Instruments);
+
+        //AudioManager.instance.QueueMusic(blockData.Instruments);
+        if (audioObject != null)
+        {
+            AudioManager.instance.StopMusic(audioObject);
+            audioObject = null;
+        }
+
+        audioObject = AudioManager.instance.PlayMusicNow(blockData.Instruments);
     }
 
 
@@ -178,12 +180,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
         ClearEndCells();
 
-        if (audioObject != null)
-        {
-            blockData.Instruments.Stop(audioObject); // stop this instrument on the block
-            Destroy(audioObject); // destroy it ro clean up
-            audioObject = null;
-        }
+        AudioManager.instance.StopMusic(audioObject);
     }
 
     private void ResetBlockToOrigin()
