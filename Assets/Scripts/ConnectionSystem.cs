@@ -41,13 +41,7 @@ public class ConnectionSystem : MonoBehaviour
         cellImage = GetComponent<Image>();
         //currentGridCell = blockSystem.SnapClosestGridCell(transform.position);
         instance = this;
-        //Debug.Log("ConnectionSystem Awake called");
-        //if (blockUI == null)
-        //{
-        //    blockUI = GetComponentInParent<BlockUI>();
-        //}
-
-
+     
 
     }
     private void Start()
@@ -417,71 +411,6 @@ public class ConnectionSystem : MonoBehaviour
 
         InputBlocker.Instance.DisableBlockInput();
     }
-
-    private void BlockUIListFoundInPath()
-    {
-        List<BlockUI> pathBlockUIs = new List<BlockUI>();
-        foreach (EndCell cell in currentPath)
-        {
-            // Try to get the BlockUI component from the cell's parent
-            BlockUI blockUI = cell.GetComponentInParent<BlockUI>();
-
-            // If we found one and it's not already in the list, add it
-            if (blockUI != null && !pathBlockUIs.Contains(blockUI))
-            {
-                pathBlockUIs.Add(blockUI);
-            }
-        }
-        PulseAllBlocks(pathBlockUIs);
-    }
-
-    public void PulseAllBlocks(List<BlockUI> pathBlockUIs)
-    {
-        ClearBlockPulses();
-
-        StartCoroutine(PulseAllBlocksSequentially(pathBlockUIs));
-    }
-
-    private IEnumerator PulseAllBlocksSequentially(List<BlockUI> pathBlockUIs)
-    {
-        float delayBetweenBlocks = 0.5f;
-
-
-        for (int i = 0; i < pathBlockUIs.Count; i++)
-        {
-            BlockUI blockUI = pathBlockUIs[i];
-            if (blockUI == null) continue;
-
-            Debug.Log("Pulsing block: " + blockUI.gameObject.name);
-            StartCoroutine(PulseBlockCellsSeq(blockUI, Color.green));
-            previouslyPulsedBlocks.Add(blockUI);
-
-            yield return new WaitForSeconds(delayBetweenBlocks);
-        }
-    }
-
-    private IEnumerator PulseBlockCellsSeq(BlockUI blockUI, Color targetColor)
-    {
-
-
-        List<Image> cellImages = blockUI.GetBlockCellImages();
-        float delayBetweenCells = 0.3f;
-
-        foreach (Image img in cellImages)
-        {
-            if (img == null) continue;
-
-            img.DOColor(targetColor, 0.5f)
-               .OnComplete(() => img.DOColor(img.color, 0.5f));
-
-
-
-            yield return new WaitForSeconds(delayBetweenCells);
-        }
-    }
-
-
-
 
 
     public void ClearBlockPulses()

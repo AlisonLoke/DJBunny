@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{7B1033E8-8458-42A7-9A7F-B9E7AD1BBBFB}",
     "Language": "SFX",
-    "Hash": "{B5AD45C6-6AE7-3FD3-72F9-46324E468DFA}",
+    "Hash": "{F67378AD-4B6A-B1BD-4B39-632C6F936223}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Level0_SoundBank",
     "ShortName": "Level0_SoundBank",
     "Path": "Level0_SoundBank.bnk",
@@ -88,6 +88,14 @@
       "CachePath": "AD/{ADA3154E-EFD9-379C-4277-930EF46A1CC5}.wem"
      },
      {
+      "Id": "861915621",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Track5_Banjo03.wav",
+      "CachePath": "F3/{F3A3255B-D871-A438-AE19-64659854CD92}.wem"
+     },
+     {
       "Id": "868671870",
       "Language": "SFX",
       "Streaming": "false",
@@ -138,6 +146,20 @@
       "MediaRefs": [
        {
         "Id": "628757770"
+       }
+      ]
+     },
+     {
+      "Id": "2616549120",
+      "Name": "Banjo03_Ind",
+      "ObjectPath": "\\Events\\Default Work Unit\\Banjo03_Ind",
+      "GUID": "{0A4D1323-1849-4278-A5F2-5B2EE4B9AE91}",
+      "DurationType": "OneShot",
+      "DurationMin": "8.131406",
+      "DurationMax": "8.131406",
+      "MediaRefs": [
+       {
+        "Id": "861915621"
        }
       ]
      },
@@ -282,6 +304,6 @@
     ]
    }
   ],
-  "FileHash": "{2F2FBD25-60C3-9C69-F07E-34D95C7D0C14}"
+  "FileHash": "{84FE6738-E6D6-4200-7509-A230F936DF52}"
  }
 }

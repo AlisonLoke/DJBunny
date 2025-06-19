@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID BANJO01_IND = 1106709462U;
         static const AkUniqueID BANJO02_IND = 3686043613U;
+        static const AkUniqueID BANJO03_IND = 2616549120U;
         static const AkUniqueID BANJO_01 = 1654636977U;
         static const AkUniqueID BANJO_02 = 1654636978U;
         static const AkUniqueID BASS01_IND = 2828584415U;

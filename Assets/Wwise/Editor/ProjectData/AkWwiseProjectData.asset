@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1c2f7ea7e019e44081a8c815ce5a8e1e
     GuidInternal: 
-    m_lastTime: -8584514365359506574
+    m_lastTime: -8584514300512634886
     List:
     - name: Level0_SoundBank
       guid: e833107b5884a7429a7fb9e7ad1bbbfb
@@ -108,7 +108,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 60318edf19da10499ab787cbf746dcca
     GuidInternal: 
-    m_lastTime: -8584514365747089864
+    m_lastTime: -8584514300512719989
     List:
     - name: Banjo_01
       guid: 3e44ca4a2171c440a33a1a510d6c1580
@@ -178,6 +178,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 8.142086
       minDuration: 8.142086
+    - name: Banjo03_Ind
+      guid: 23134d0a49187842a5f25b2ee4b9ae91
+      id: 2616549120
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Banjo03_Ind
+        ObjectType: 3
+        guid: 23134d0a49187842a5f25b2ee4b9ae91
+      Path: Events\Default Work Unit\Banjo03_Ind
+      maxAttenuation: 0
+      maxDuration: 8.131406
+      minDuration: 8.131406
     - name: Bass_01
       guid: 50c5e0159dc0f446a7e56d67b5761c38
       id: 2197579062
@@ -388,7 +405,7 @@ MonoBehaviour:
     m_lastTime: -8584542051206046839
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0500000006000000070000000b0000000c0000001100000012000000ab010000ac0100009e020000
+  ExpandedWaapiItemIds: 0500000006000000070000000b0000000c00000011000000120000001700000018000000ab010000ac0100009e020000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

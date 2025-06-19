@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -95,14 +96,14 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         {
             return;
         }
-       
+
         if (isSnappedToGrid)
         {
             RemoveFromGrid();
             ResetBlockToOrigin();
             Debug.Log("MUSIC STOPPED");
 
-        
+
             return;
         }
 
@@ -150,9 +151,10 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
     private void BeginPickUp()
     {
-        
+
         selectedBlock = this;
         isFollowingMouse = true;
+       
 
         if (!isSnappedToGrid)
         {
@@ -236,13 +238,18 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         if (gridCell != null && allBlocksCanPlace)
         {
             blockParentRect.position = snapClosestGridCell.GetComponent<RectTransform>().position;
+            CheckIfEndCellOnClosedCell();
+
+            if(endCells.Any(endCell => endCell.IsEndCellOnClosedCell))
+            {
+                return; // Do not continue placement if invalid
+            }
 
             MarkBlockCellsAsOccupied();
             isSnappedToGrid = true;
             AddPlaceBlockToList(blockParentRect);
             AddBlockUIToList();
             CheckForFirstEndCell();
-            CheckIfEndCellOnClosedCell();
 
             // Establish connections for each end cell
             UpdateEndCellGridPositions();
@@ -256,7 +263,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             //Debug.Log(">> Triggering path check after placing block");
             //Check for any new connections if they are valid or complete
             ConnectionSystem.instance.CheckConnectionsForAllEndCells();
-            
+
         }
         else
         {
@@ -266,7 +273,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
     }
 
-   
+
     private void CheckForFirstEndCell()
     {
         if (!ConnectionSystem.instance.endCells.Contains(endCells[0]))
@@ -293,16 +300,19 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         }
     }
 
-  private void CheckIfEndCellOnClosedCell()
+    private void CheckIfEndCellOnClosedCell()
     {
-        foreach(EndCell thisEndCell in endCells)
+        foreach (EndCell thisEndCell in endCells)
         {
             thisEndCell.EndCellOnClosedCell();
             if (thisEndCell.IsEndCellOnClosedCell)
             {
+                UnMarkBlockCellAsOccupied();
+                thisEndCell.StopBlink();
+                ConnectionSystem.instance.ClearBlockPulses();
                 Debug.LogWarning("Block on end cell, returning to origin.");
                 blockParentRect.position = blockOriginPos;
-                ConnectionSystem.instance.ClearBlockPulses();
+                isSnappedToGrid = false;
                 UnhighlightAllCells();
                 return;
             }

@@ -146,6 +146,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Banjo03_Ind" ID="{0A4D1323-1849-4278-A5F2-5B2EE4B9AE91}">
+					<ChildrenList>
+						<Action Name="" ID="{9F0E99D4-8DE1-4940-A067-385597FC6F0B}" ShortID="505496922">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Banjo03_Ind" ID="{0C608C10-DC11-4744-A6F6-8F9E504D52B5}" WorkUnitID="{E90C2CAF-B9AB-4A75-BFCA-1987D0D05287}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

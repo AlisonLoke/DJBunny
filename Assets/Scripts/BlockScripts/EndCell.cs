@@ -148,10 +148,8 @@ public class EndCell : MonoBehaviour
     public void EndCellOnClosedCell()
     {
         //find closest gridcell to end cell's current position
-        if (currentGridCell == null)
-        {
-            currentGridCell = blockSystem.SnapClosestGridCell(transform.position);
-        }
+
+        currentGridCell = blockSystem.SnapClosestGridCell(transform.position);
         //
         if (currentGridCell == null || LevelManager.Instance.gridData == null)
         {
@@ -173,6 +171,7 @@ public class EndCell : MonoBehaviour
             IsEndCellOnClosedCell = false;
         }
     }
+ 
 
     public void StartBlink(string hexColour, float duration = 0.5f)
     {
@@ -193,7 +192,7 @@ public class EndCell : MonoBehaviour
         BlockCellPulse newBlockCellPulse = new BlockCellPulse();
         newBlockCellPulse.pulseAnimation = loopPulseAnim;
         newBlockCellPulse.BlockCellToPulse = cellImage;
-        newBlockCellPulse.originalColour = originalColour; 
+        newBlockCellPulse.originalColour = originalColour;
         myTweenAnimation = newBlockCellPulse;
     }
 
