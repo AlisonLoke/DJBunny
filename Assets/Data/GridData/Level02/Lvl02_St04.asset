@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62d0f7aa4e8cd904c8261eb8cdfbd513, type: 3}
-  m_Name: GridData_Lvl04
+  m_Name: Lvl02_St04
   m_EditorClassIdentifier: 
   x: 4
   y: 4
-  startCell: {fileID: 0}
-  endCell: {fileID: 0}
+  closedGridSpace:
+  - {x: 0, y: 1}
+  - {x: 2, y: 2}
   startCellCoordinates: {x: 1, y: 1}
-  finishCellCoordinates: {x: 3, y: 3}
+  finishCellCoordinates: {x: 1, y: 2}
