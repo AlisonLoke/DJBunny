@@ -1912,22 +1912,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
       propertyPath: lines.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
       propertyPath: 'lines.Array.data[0]'
-      value: Try grabbing the blue block!
+      value: Try clicking once on a block below with the left mouse button!
       objectReference: {fileID: 0}
     - target: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
       propertyPath: 'lines.Array.data[1]'
-      value: Rotate with your right mouse button
+      value: Rotate the block with the right mouse button.
       objectReference: {fileID: 0}
     - target: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
       propertyPath: 'lines.Array.data[2]'
-      value: Try placing the block on the grid and connect the blue dots!
+      value: The blinks indicate where you can place your next block!
       objectReference: {fileID: 0}
     - target: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
       propertyPath: 'lines.Array.data[3]'
+      value: Try connectin the two dots together with another block
+      objectReference: {fileID: 0}
+    - target: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+      propertyPath: 'lines.Array.data[4]'
       value: You have to use all the blocks to solve the puzzle
       objectReference: {fileID: 0}
     - target: {fileID: 3833232021050756787, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}

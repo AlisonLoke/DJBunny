@@ -26,6 +26,7 @@ public class ConnectionSystem : MonoBehaviour
     private List<BlockUI> previouslyPulsedBlocks = new List<BlockUI>();
     //private BlockUI blockUI;
     private Image cellImage;
+  
     public event System.Action<int> onValidPathCompleted;
 
     private const float PreviewPathPulseLength = 0.15f;
@@ -41,7 +42,7 @@ public class ConnectionSystem : MonoBehaviour
         cellImage = GetComponent<Image>();
         //currentGridCell = blockSystem.SnapClosestGridCell(transform.position);
         instance = this;
-     
+    
 
     }
     private void Start()
@@ -453,12 +454,7 @@ public class ConnectionSystem : MonoBehaviour
         {
             if (blockUI == null) continue;
 
-            List<Image> cellImages = blockUI.GetBlockCellImages();
-            foreach (Image img in cellImages)
-            {
-                if (img == null) continue;
-                Color originalColour = img.color;
-            }
+           blockUI.ResetToOriginalColours();
         }
         previouslyPulsedBlocks.Clear();
     }

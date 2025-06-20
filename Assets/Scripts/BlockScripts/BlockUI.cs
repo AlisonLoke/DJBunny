@@ -8,21 +8,37 @@ public class BlockUI : MonoBehaviour
 {
     private List<BlockCellPulse> blockCellToPulseList = new();
     [SerializeField] private List<Image> blockImages = new();
-    public List<Image> GetBlockCellImages()
+    private List<Color> originalColours = new();
+
+    private void Awake()
     {
-        List<Image> validImages = new List<Image>();
-        foreach (Image blockImage in blockImages)
-        {
-            Image img = blockImage.GetComponent<Image>();
-            if (img != null)
-            {
-                validImages.Add(img);
-            }
-        }
-        return validImages;
+        SaveOriginalColours();
     }
 
-  
+    private void SaveOriginalColours()
+    {
+        originalColours.Clear();
+        foreach(Image image in blockImages)
+        {
+            originalColours.Add(image.color);
+        }
+    }
+
+    public List<Image> GetBlockCellImages()
+    {
+     return blockImages;    
+    }
+
+  public void ResetToOriginalColours()
+    {
+        for (int i = 0; i < blockImages.Count; i++)
+        {
+            if (blockImages[i] != null)
+            {
+                blockImages[i].color = originalColours[i];
+            }
+        }
+    }
 
 }
       
