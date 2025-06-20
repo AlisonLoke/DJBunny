@@ -219,11 +219,21 @@ public class ConnectionSystem : MonoBehaviour
         {
             Debug.Log($"Path point: {cell.name} at position {cell.transform.position}");
         }
+       
+        if(!AreAllBlockUsed(currentPath))
+        {
+            Debug.Log("Not all blocks are used in this Path");
+            ClearConnectedLine();
+            ClearBlockPulses() ;
+            return;
+        }
         Debug.Log("PATH COMPLETE");
         UpdateConnectionLine();
         //load win scene
         //SceneManager.LoadScene("WinCutScene");
         //blockUI = startConnectedEndCell?.GetComponentInParent<BlockUI>();
+
+
 
         onValidPathCompleted?.Invoke(currentPath.Count);//invoke fancy name for trigger event gets triggered
 
@@ -244,6 +254,30 @@ public class ConnectionSystem : MonoBehaviour
         StartCoroutine(PulseCompletePath());
     }
 
+
+    private bool AreAllBlockUsed(List<EndCell> path)
+    {
+        List<BlockUI> allBlocks = FindObjectsByType<BlockUI>(FindObjectsSortMode.None)
+       .Where(b => b.gameObject.activeInHierarchy)
+       .ToList();
+
+        List<BlockUI> usedBlocks = new List<BlockUI>();
+
+        foreach(EndCell endCell in path)
+        {
+            BlockUI blockUI = endCell.GetComponentInParent<BlockUI>();
+            
+            if(blockUI != null && !usedBlocks.Contains(blockUI))
+            {
+                usedBlocks.Add(blockUI);
+            }
+        }
+        bool allUsed = usedBlocks.Count == allBlocks.Count;
+
+        Debug.Log("Used blocks: " + usedBlocks.Count + ", Total placed blocks: " + allBlocks.Count + "  All used: " + allUsed);
+
+        return allUsed;
+    }
     public void PreviewCurrentPath()
     {
         currentPath.Clear();
@@ -423,7 +457,7 @@ public class ConnectionSystem : MonoBehaviour
             foreach (Image img in cellImages)
             {
                 if (img == null) continue;
-                img.color = Color.red;
+                Color originalColour = img.color;
             }
         }
         previouslyPulsedBlocks.Clear();
