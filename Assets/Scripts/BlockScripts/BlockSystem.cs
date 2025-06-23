@@ -154,7 +154,11 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
         selectedBlock = this;
         isFollowingMouse = true;
-       
+
+        if (blockUI != null)
+        {
+            blockUI.ResetToOriginalColours();
+        }
 
         if (!isSnappedToGrid)
         {
@@ -192,7 +196,10 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         blockParentRect.rotation = Quaternion.identity;
         ConnectionSystem.instance.ClearBlockPulses();
 
-
+        if (blockUI != null)
+        {
+            blockUI.ResetToOriginalColours();
+        }
 
     }
 

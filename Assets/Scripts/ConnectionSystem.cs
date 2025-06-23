@@ -352,6 +352,8 @@ public class ConnectionSystem : MonoBehaviour
         }
 
         InputBlocker.Instance.DisableBlockInput();
+        yield return new WaitForSeconds(0.25f);
+        StartCoroutine(HightlightCurrentPath(blockUIs, Color.yellow,PreviewPathPulseLength));
     }
 
     private void TrackCurrentPath(EndCell currentCell, List<EndCell> path)
@@ -379,6 +381,28 @@ public class ConnectionSystem : MonoBehaviour
         }
     }
 
+    private IEnumerator HightlightCurrentPath(List<BlockUI> blockUIs, Color highlightColour, float delayBetweenBlocks)
+    {
+        currentPath.Clear();
+        allPaths.Clear();
+        for (int i = 0; i < blockUIs.Count; i++)
+        {
+            BlockUI blockUI = blockUIs[i];  
+            if(blockUI == null) continue;   
+
+            List<Image> blockImages = blockUI.GetBlockCellImages();
+            foreach (Image image in blockImages)
+            {
+                if(image != null)
+                {
+                    
+                    image.color = highlightColour;
+                }
+            }
+            yield return new WaitForSeconds(delayBetweenBlocks);
+        }
+        
+    }
     private IEnumerator PulseCompletePath()
     {
         currentPath.Clear();
