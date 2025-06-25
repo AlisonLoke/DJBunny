@@ -574,10 +574,17 @@ public class ConnectionSystem : MonoBehaviour
             RectTransform rectTransform = thisCell.GetComponent<RectTransform>();
             if (rectTransform != null)
             {
-                Vector2 anchoredPos = rectTransform.position - (canvas.position / (canvas.localScale.x / 1.85f));
-                //Vector2 anchoredPos = rectTransform.position;
-                Debug.Log($"  - Cell at {anchoredPos}");
-                linePoints.Add(anchoredPos);
+                //Get world position of block's center
+                Vector2 worldPos = rectTransform.TransformPoint (rectTransform.rect.center);
+
+
+                // Convert world position to local position relative to the line renderer
+                // null camera for Screen Space - Overlay
+                Vector2 localPos;
+                RectTransformUtility.ScreenPointToLocalPointInRectangle(lineRenderer.rectTransform, worldPos, null, out localPos);
+
+                Debug.Log($"  - Cell at local position {localPos} (world: {worldPos})");
+                linePoints.Add(localPos);
             }
             else
             {
@@ -590,6 +597,9 @@ public class ConnectionSystem : MonoBehaviour
         {
             lineRenderer.points = linePoints.ToArray();
             lineRenderer.SetAllDirty(); // Force redraw
+
+            //Move line renderer to render on top
+            //lineRenderer.transform.SetAsLastSibling();
             Debug.Log($"Line renderer updated with {linePoints.Count} points");
         }
         else
