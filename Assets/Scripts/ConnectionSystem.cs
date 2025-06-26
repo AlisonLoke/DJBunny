@@ -231,7 +231,7 @@ public class ConnectionSystem : MonoBehaviour
             return;
         }
         Debug.Log("PATH COMPLETE");
-        UpdateConnectionLine();
+        //UpdateConnectionLine();
         //load win scene
         //SceneManager.LoadScene("WinCutScene");
         //blockUI = startConnectedEndCell?.GetComponentInParent<BlockUI>();
@@ -356,6 +356,7 @@ public class ConnectionSystem : MonoBehaviour
         InputBlocker.Instance.DisableBlockInput();
         yield return new WaitForSeconds(0.25f);
         StartCoroutine(HightlightCurrentPath(blockUIs, Color.yellow, PreviewPathPulseLength));
+ 
     }
 
     private void TrackCurrentPath(EndCell currentCell, List<EndCell> path)
@@ -389,9 +390,23 @@ public class ConnectionSystem : MonoBehaviour
         allPaths.Clear();
         for (int i = 0; i < blockUIs.Count; i++)
         {
+
             BlockUI blockUI = blockUIs[i];
             if (blockUI == null) continue;
+            List<EndCell> endCells = blockUI.GetComponentsInChildren<EndCell>().ToList();
 
+            //adding all endcells in specific block ui to current path
+            foreach (EndCell endCell in endCells)
+            {
+                if (!currentPath.Contains(endCell))
+                {
+                    currentPath.Add(endCell);
+                }
+            }
+
+            UpdateConnectionLine();
+
+            //visual highlight
             List<Image> blockImages = blockUI.GetBlockCellImages();
             foreach (Image image in blockImages)
             {
@@ -403,6 +418,7 @@ public class ConnectionSystem : MonoBehaviour
             }
             yield return new WaitForSeconds(delayBetweenBlocks);
         }
+                    
 
     }
     private IEnumerator PulseCompletePath()
@@ -621,7 +637,7 @@ public class ConnectionSystem : MonoBehaviour
             if (lastCellInPreviousBlock != null)
             {
                 float distanceToFirstCellInBlock = Vector2.Distance(rectTransformsInBlock[0].transform.position, lastCellInPreviousBlock.transform.position);
-                float distanceToLastCellInBlock = Vector2.Distance(rectTransformsInBlock[rectTransformsInBlock.Count-1].transform.position, lastCellInPreviousBlock.transform.position);
+                float distanceToLastCellInBlock = Vector2.Distance(rectTransformsInBlock[rectTransformsInBlock.Count - 1].transform.position, lastCellInPreviousBlock.transform.position);
 
                 if (distanceToFirstCellInBlock > distanceToLastCellInBlock)
                 {
