@@ -24,7 +24,8 @@ public class ConnectionSystem : MonoBehaviour
     public List<BlockUI> allBlockUIs = new List<BlockUI>();
     private List<BlockUI> previouslyPulsedBlocks = new List<BlockUI>();
     //private BlockUI blockUI;
-    private Image cellImage;
+    //private Image cellImage;
+    private Tween currentLineFadeTween;
 
     public event System.Action<int> onValidPathCompleted;
 
@@ -41,7 +42,7 @@ public class ConnectionSystem : MonoBehaviour
     private void Awake()
     {
         blockSystem = GetComponentInParent<BlockSystem>();
-        cellImage = GetComponent<Image>();
+        //cellImage = GetComponent<Image>();
         //currentGridCell = blockSystem.SnapClosestGridCell(transform.position);
         instance = this;
 
@@ -58,7 +59,7 @@ public class ConnectionSystem : MonoBehaviour
                 Debug.LogError("Line renderer not assigned to ConnectionSystem!");
             }
         }
-        lineRenderer.color = Color.yellow;
+
         lineRenderer.thickness = 5f;
         lineRenderer.raycastTarget = false;
 
@@ -335,9 +336,24 @@ public class ConnectionSystem : MonoBehaviour
         {
             BlockUI block = blockUIs[i];
             if (block == null) continue;
+            List<EndCell> endCells = block.GetComponentsInChildren<EndCell>().ToList();
+
+            //adding all endcells in specific block ui to current path
+            foreach (EndCell endCell in endCells)
+            {
+                if (!currentPath.Contains(endCell))
+                {
+                    currentPath.Add(endCell);
+                }
+            }
+            //Draw the line
+            UpdateConnectionLine();
+
+            //make it visible again after fading out
+            lineRenderer.color = new Color(lineRenderer.color.r, lineRenderer.color.g, lineRenderer.color.b, 1f);
+            lineRenderer.SetAllDirty();
 
             List<Image> blockImages = block.GetBlockCellImages();
-
             for (int j = 0; j < blockImages.Count; j++)
             {
                 Image img = blockImages[j];
@@ -351,12 +367,13 @@ public class ConnectionSystem : MonoBehaviour
             }
 
             yield return new WaitForSeconds(delayBetweenBlocks);
+            FadeOutPathLine(0.4f);
         }
 
         InputBlocker.Instance.DisableBlockInput();
         yield return new WaitForSeconds(0.25f);
         StartCoroutine(HightlightCurrentPath(blockUIs, Color.yellow, PreviewPathPulseLength));
- 
+
     }
 
     private void TrackCurrentPath(EndCell currentCell, List<EndCell> path)
@@ -393,18 +410,8 @@ public class ConnectionSystem : MonoBehaviour
 
             BlockUI blockUI = blockUIs[i];
             if (blockUI == null) continue;
-            List<EndCell> endCells = blockUI.GetComponentsInChildren<EndCell>().ToList();
 
-            //adding all endcells in specific block ui to current path
-            foreach (EndCell endCell in endCells)
-            {
-                if (!currentPath.Contains(endCell))
-                {
-                    currentPath.Add(endCell);
-                }
-            }
-
-            UpdateConnectionLine();
+     
 
             //visual highlight
             List<Image> blockImages = blockUI.GetBlockCellImages();
@@ -418,7 +425,7 @@ public class ConnectionSystem : MonoBehaviour
             }
             yield return new WaitForSeconds(delayBetweenBlocks);
         }
-                    
+
 
     }
     private IEnumerator PulseCompletePath()
@@ -704,7 +711,28 @@ public class ConnectionSystem : MonoBehaviour
 
         return blockUisInPath;
     }
+    private void FadeOutPathLine(float duration = 1.0f)
+    {
+        
+        //a is alpha, naming follows rgba
+        if (lineRenderer == null || lineRenderer.color.a <= 0f) return;
 
+        currentLineFadeTween?.Kill();
+        // DoTween.Alpha gradually changes alpha colour 
+        currentLineFadeTween = DOTween.ToAlpha(GetLineRendererColour,SetLineRendererColour, 0f, duration).SetEase(Ease.InOutSine);
+
+
+    }
+
+    private Color GetLineRendererColour()
+    {
+        return lineRenderer.color;  
+    }
+    private void SetLineRendererColour(Color newColour)
+    {
+        lineRenderer.color = newColour;
+        lineRenderer.SetAllDirty(); //refreshes ui so new colour can be applied
+    }
     private void ClearConnectedLine()
     {
         lineRenderer.points = new Vector2[0];
