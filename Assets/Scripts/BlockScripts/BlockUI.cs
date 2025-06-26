@@ -26,7 +26,17 @@ public class BlockUI : MonoBehaviour
 
     public List<Image> GetBlockCellImages()
     {
-     return blockImages;    
+        return blockImages;    
+    }
+
+    public List<RectTransform> GetBlockCellImagesRectTransforms()
+    {
+        List<RectTransform> rectTransforms = new();
+        foreach (Image image in blockImages)
+        {
+            rectTransforms.Add(image.rectTransform);
+        }
+        return rectTransforms;
     }
 
   public void ResetToOriginalColours()

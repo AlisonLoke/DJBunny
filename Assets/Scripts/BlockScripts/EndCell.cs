@@ -22,6 +22,10 @@ public class EndCell : MonoBehaviour
     private GridCell closedCell;
     private Color originalColour;
 
+    public BlockUI GetBlockUi()
+    {
+        return blockUI;
+    }
 
     public void Initialise()
     {

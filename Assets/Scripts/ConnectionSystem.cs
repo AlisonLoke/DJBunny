@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
 using UnityEngine;
-using UnityEngine.Android;
 using UnityEngine.UI;
 
 public class ConnectionSystem : MonoBehaviour
@@ -26,7 +25,7 @@ public class ConnectionSystem : MonoBehaviour
     private List<BlockUI> previouslyPulsedBlocks = new List<BlockUI>();
     //private BlockUI blockUI;
     private Image cellImage;
-  
+
     public event System.Action<int> onValidPathCompleted;
 
     private const float PreviewPathPulseLength = 0.15f;
@@ -36,13 +35,16 @@ public class ConnectionSystem : MonoBehaviour
     [SerializeField] private RectTransform canvas;
     [SerializeField] private PathFinder pathFinder;
 
+    [Tooltip("Disable for levels where not all blocks are required to complete the level")]
+    [SerializeField] private bool requireAllBlocksUsed = true;
+
     private void Awake()
     {
         blockSystem = GetComponentInParent<BlockSystem>();
         cellImage = GetComponent<Image>();
         //currentGridCell = blockSystem.SnapClosestGridCell(transform.position);
         instance = this;
-    
+
 
     }
     private void Start()
@@ -220,12 +222,12 @@ public class ConnectionSystem : MonoBehaviour
         {
             Debug.Log($"Path point: {cell.name} at position {cell.transform.position}");
         }
-       
-        if(!AreAllBlockUsed(currentPath))
+
+        if (requireAllBlocksUsed && !AreAllBlockUsed(currentPath))
         {
             Debug.Log("Not all blocks are used in this Path");
             ClearConnectedLine();
-            ClearBlockPulses() ;
+            ClearBlockPulses();
             return;
         }
         Debug.Log("PATH COMPLETE");
@@ -264,11 +266,11 @@ public class ConnectionSystem : MonoBehaviour
 
         List<BlockUI> usedBlocks = new List<BlockUI>();
 
-        foreach(EndCell endCell in path)
+        foreach (EndCell endCell in path)
         {
             BlockUI blockUI = endCell.GetComponentInParent<BlockUI>();
-            
-            if(blockUI != null && !usedBlocks.Contains(blockUI))
+
+            if (blockUI != null && !usedBlocks.Contains(blockUI))
             {
                 usedBlocks.Add(blockUI);
             }
@@ -353,7 +355,7 @@ public class ConnectionSystem : MonoBehaviour
 
         InputBlocker.Instance.DisableBlockInput();
         yield return new WaitForSeconds(0.25f);
-        StartCoroutine(HightlightCurrentPath(blockUIs, Color.yellow,PreviewPathPulseLength));
+        StartCoroutine(HightlightCurrentPath(blockUIs, Color.yellow, PreviewPathPulseLength));
     }
 
     private void TrackCurrentPath(EndCell currentCell, List<EndCell> path)
@@ -387,21 +389,21 @@ public class ConnectionSystem : MonoBehaviour
         allPaths.Clear();
         for (int i = 0; i < blockUIs.Count; i++)
         {
-            BlockUI blockUI = blockUIs[i];  
-            if(blockUI == null) continue;   
+            BlockUI blockUI = blockUIs[i];
+            if (blockUI == null) continue;
 
             List<Image> blockImages = blockUI.GetBlockCellImages();
             foreach (Image image in blockImages)
             {
-                if(image != null)
+                if (image != null)
                 {
-                    
+
                     image.color = highlightColour;
                 }
             }
             yield return new WaitForSeconds(delayBetweenBlocks);
         }
-        
+
     }
     private IEnumerator PulseCompletePath()
     {
@@ -448,7 +450,7 @@ public class ConnectionSystem : MonoBehaviour
     private IEnumerator PulseCompletePath(List<BlockUI> blockUIs, Color pulseColour, float delayBetweenBlocks)
     {
         InputBlocker.Instance.EnableBlockInput();
-        
+
         for (int i = 0; i < blockUIs.Count; i++)
         {
             BlockUI block = blockUIs[i];
@@ -478,7 +480,7 @@ public class ConnectionSystem : MonoBehaviour
         {
             if (blockUI == null) continue;
 
-           blockUI.ResetToOriginalColours();
+            blockUI.ResetToOriginalColours();
         }
         previouslyPulsedBlocks.Clear();
     }
@@ -560,37 +562,15 @@ public class ConnectionSystem : MonoBehaviour
             return;
         }
 
-        List<Vector2> linePoints = new List<Vector2>();
         Debug.Log("Current path cells:");
-        foreach (EndCell thisCell in currentPath)
-        {
-            if (thisCell == null)
-            {
-                Debug.LogError("Null EndCell in path!");
-                continue;
-            }
 
-            // Get the RectTransform and its position in UI space
-            RectTransform rectTransform = thisCell.GetComponent<RectTransform>();
-            if (rectTransform != null)
-            {
-                //Get world position of block's center
-                Vector2 worldPos = rectTransform.TransformPoint (rectTransform.rect.center);
+        List<BlockUI> blockUisOriginal = GetAllBlockUIInPath();
 
+        List<BlockUI> blockUisInPath = RemoveBlockUIDuplicatesInPath(blockUisOriginal);
 
-                // Convert world position to local position relative to the line renderer
-                // null camera for Screen Space - Overlay
-                Vector2 localPos;
-                RectTransformUtility.ScreenPointToLocalPointInRectangle(lineRenderer.rectTransform, worldPos, null, out localPos);
+        List<RectTransform> rectTransformsInPath = GetBlockUIRectTransformInPathSorted(blockUisInPath);
 
-                Debug.Log($"  - Cell at local position {localPos} (world: {worldPos})");
-                linePoints.Add(localPos);
-            }
-            else
-            {
-                Debug.LogError($"EndCell {thisCell.name} has no RectTransform!");
-            }
-        }
+        List<Vector2> linePoints = GetWorldPosFromBlockTransforms(rectTransformsInPath);
 
         Debug.Log($"Setting {linePoints.Count} points to line renderer");
         if (linePoints.Count >= 2)
@@ -607,6 +587,106 @@ public class ConnectionSystem : MonoBehaviour
             Debug.LogWarning("Not enough valid points to draw line");
             ClearConnectedLine();
         }
+    }
+
+    /// <summary>
+    /// Sorts RectTransforms in correct path order
+    /// Start on one of the EndCells marked with onlyConnectToStartFinish
+    /// Go to next Rect Transform in same Block UI
+    /// Once Block UI out of Rect Transforms, look at next Block UI
+    /// And so on
+    /// When reaching last BlockUI, start with the EndCell not marked as onlyConnectToStartFinish
+    /// End line on the Finish cell (EndCell.onlyConnectToStartFinish == true)
+    /// </summary>
+    private List<RectTransform> GetBlockUIRectTransformInPathSorted(List<BlockUI> blockUisInPath)
+    {
+        List<RectTransform> rectTransformsInPath = new();
+        RectTransform lastCellInPreviousBlock = null;
+        for (int index = 0; index < blockUisInPath.Count; index++)
+        {
+            BlockUI blockUi = blockUisInPath[index];
+            List<RectTransform> rectTransformsInBlock = blockUi.GetBlockCellImagesRectTransforms();
+
+            //TODO: refator method out
+            // Handle First/Last block "faster" check
+            bool isFirstBlock = index == 0;
+            bool isLastBlock = index == blockUisInPath.Count - 1;
+            EndCell endCell = rectTransformsInBlock[0].GetComponent<EndCell>();
+            if (isFirstBlock && !endCell.onlyConnectToStartFinish
+                || isLastBlock && endCell.onlyConnectToStartFinish)
+            {
+                rectTransformsInBlock.Reverse();
+            }
+
+            if (lastCellInPreviousBlock != null)
+            {
+                float distanceToFirstCellInBlock = Vector2.Distance(rectTransformsInBlock[0].transform.position, lastCellInPreviousBlock.transform.position);
+                float distanceToLastCellInBlock = Vector2.Distance(rectTransformsInBlock[rectTransformsInBlock.Count-1].transform.position, lastCellInPreviousBlock.transform.position);
+
+                if (distanceToFirstCellInBlock > distanceToLastCellInBlock)
+                {
+                    rectTransformsInBlock.Reverse();
+                }
+            }
+
+            rectTransformsInPath.AddRange(rectTransformsInBlock);
+            lastCellInPreviousBlock = rectTransformsInBlock[rectTransformsInBlock.Count - 1];
+        }
+
+        return rectTransformsInPath;
+    }
+
+    private List<Vector2> GetWorldPosFromBlockTransforms(List<RectTransform> rectTransformsInPath)
+    {
+        List<Vector2> linePoints = new List<Vector2>();
+        foreach (RectTransform rectTransform in rectTransformsInPath)
+        {
+            //Get world position of block's center
+            Vector2 worldPos = rectTransform.TransformPoint(rectTransform.rect.center);
+
+
+            // Convert world position to local position relative to the line renderer
+            // null camera for Screen Space - Overlay
+            Vector2 localPos;
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(lineRenderer.rectTransform, worldPos, null, out localPos);
+
+            Debug.Log($"  - Cell at local position {localPos} (world: {worldPos})");
+            linePoints.Add(localPos);
+        }
+
+        return linePoints;
+    }
+
+    private List<BlockUI> GetAllBlockUIInPath()
+    {
+        // Get all block Uis in current path
+        //picks up all the blocks it sees
+        List<BlockUI> blockUisOriginal = new();
+        foreach (EndCell endCell in currentPath)
+        {
+            blockUisOriginal.Add(endCell.GetBlockUi());
+        }
+
+        return blockUisOriginal;
+    }
+
+    private List<BlockUI> RemoveBlockUIDuplicatesInPath(List<BlockUI> blockUisOriginal)
+    {
+        // remove duplicate BlockUis
+        //if grabbed a blockui before that skip it
+        HashSet<BlockUI> blockUisSeen = new();
+        List<BlockUI> blockUisInPath = new();
+        foreach (BlockUI blockUI in blockUisOriginal)
+        {
+            if (!blockUisSeen.Add(blockUI))
+            {
+                continue;
+            }
+
+            blockUisInPath.Add(blockUI);
+        }
+
+        return blockUisInPath;
     }
 
     private void ClearConnectedLine()
