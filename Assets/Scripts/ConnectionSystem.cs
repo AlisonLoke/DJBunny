@@ -347,11 +347,10 @@ public class ConnectionSystem : MonoBehaviour
                 }
             }
             //Draw the line
-            UpdateConnectionLine();
 
             //make it visible again after fading out
-            lineRenderer.color = new Color(lineRenderer.color.r, lineRenderer.color.g, lineRenderer.color.b, 1f);
-            lineRenderer.SetAllDirty();
+            //lineRenderer.color = new Color(lineRenderer.color.r, lineRenderer.color.g, lineRenderer.color.b, 1f);
+            //lineRenderer.SetAllDirty();
 
             List<Image> blockImages = block.GetBlockCellImages();
             for (int j = 0; j < blockImages.Count; j++)
@@ -362,12 +361,13 @@ public class ConnectionSystem : MonoBehaviour
                 Color originalColor = img.color;
                 img.DOColor(pulseColour, 0.25f).OnComplete(() =>
                 {
+                    UpdateConnectionLine();
                     img.DOColor(originalColor, 0.25f);
                 });
             }
 
             yield return new WaitForSeconds(delayBetweenBlocks);
-            FadeOutPathLine(0.4f);
+            //FadeOutPathLine(0.4f);
         }
 
         InputBlocker.Instance.DisableBlockInput();
@@ -411,7 +411,7 @@ public class ConnectionSystem : MonoBehaviour
             BlockUI blockUI = blockUIs[i];
             if (blockUI == null) continue;
 
-     
+
 
             //visual highlight
             List<Image> blockImages = blockUI.GetBlockCellImages();
@@ -713,20 +713,20 @@ public class ConnectionSystem : MonoBehaviour
     }
     private void FadeOutPathLine(float duration = 1.0f)
     {
-        
+
         //a is alpha, naming follows rgba
         if (lineRenderer == null || lineRenderer.color.a <= 0f) return;
 
         currentLineFadeTween?.Kill();
         // DoTween.Alpha gradually changes alpha colour 
-        currentLineFadeTween = DOTween.ToAlpha(GetLineRendererColour,SetLineRendererColour, 0f, duration).SetEase(Ease.InOutSine);
+        currentLineFadeTween = DOTween.ToAlpha(GetLineRendererColour, SetLineRendererColour, 0f, duration).SetEase(Ease.InOutSine);
 
 
     }
 
     private Color GetLineRendererColour()
     {
-        return lineRenderer.color;  
+        return lineRenderer.color;
     }
     private void SetLineRendererColour(Color newColour)
     {
