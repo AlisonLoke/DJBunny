@@ -646,25 +646,36 @@ public class ConnectionSystem : MonoBehaviour
             {
                 rectTransformsInBlock.Reverse();
             }
-            
+
             if (lastCellInPreviousBlock != null)
             {
-                float distanceToFirstCellInBlock = Vector2.Distance(rectTransformsInBlock[0].transform.position, lastCellInPreviousBlock.transform.position);
-                float distanceToLastCellInBlock = Vector2.Distance(rectTransformsInBlock[rectTransformsInBlock.Count - 1].transform.position, lastCellInPreviousBlock.transform.position);
+                float distanceToFirstCell = Vector2.Distance(rectTransformsInBlock[0].transform.position, lastCellInPreviousBlock.transform.position);
+                float distanceToLastCell = Vector2.Distance(rectTransformsInBlock[^1].transform.position, lastCellInPreviousBlock.transform.position);
 
-                if (distanceToFirstCellInBlock > distanceToLastCellInBlock)
+                float distanceDifference = Mathf.Abs(distanceToFirstCell - distanceToLastCell);
+
+                // If nearly equidistant: look ahead to next block to break the tie
+                if (distanceDifference < 10f && index + 1 < blockUisInPath.Count)
                 {
-                    rectTransformsInBlock.Reverse();
+                    List<RectTransform> nextBlockRects = blockUisInPath[index + 1].GetBlockCellImagesRectTransforms();
+
+                    // Calculate cost of keeping current block order:
+                    float costNormal = Vector2.Distance(rectTransformsInBlock[^1].transform.position, nextBlockRects[0].transform.position);
+                    // Calculate cost of reversing current block order:
+                    float costReversed = Vector2.Distance(rectTransformsInBlock[0].transform.position, nextBlockRects[0].transform.position);
+
+                    if (costNormal > costReversed)
+                    {
+                        rectTransformsInBlock.Reverse();
+                    }
                 }
-
-                float minDistance = Mathf.Min(distanceToFirstCellInBlock, distanceToLastCellInBlock);
-                float difference = Mathf.Abs(minDistance - maxDistanceBetweenBlocks);
-                if (difference > 10f)
+                else
                 {
-                    //TODO: fix bug where both first & last blocks are equidistant and
-                    //line picks longest path arbitrarily
-                    //causing distance between points to be bigger than maxDistanceBetweenBlocks]
-                    Debug.LogError("Something wrong with the line renderer! Not going to display properly");
+                    // Default behavior: just pick the shortest direct connection to previous block
+                    if (distanceToFirstCell > distanceToLastCell)
+                    {
+                        rectTransformsInBlock.Reverse();
+                    }
                 }
             }
 
