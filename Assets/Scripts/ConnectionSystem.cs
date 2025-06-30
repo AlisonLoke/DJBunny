@@ -323,7 +323,7 @@ public class ConnectionSystem : MonoBehaviour
                 blockUIPath.Add(ui);
             }
         }
-
+        UpdateConnectionLine();
         StartCoroutine(PulseCurrentPath(blockUIPath, Color.cyan, PreviewPathPulseLength));
 
     }
@@ -361,7 +361,6 @@ public class ConnectionSystem : MonoBehaviour
                 Color originalColor = img.color;
                 img.DOColor(pulseColour, 0.25f).OnComplete(() =>
                 {
-                    UpdateConnectionLine();
                     img.DOColor(originalColor, 0.25f);
                 });
             }
