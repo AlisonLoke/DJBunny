@@ -592,7 +592,10 @@ public class ConnectionSystem : MonoBehaviour
 
         List<RectTransform> rectTransformsInPath = GetBlockUIRectTransformInPathSorted(blockUisInPath);
 
+        //TODO:  Resort line if "maxDistanceBetweenPointsBreached" flag marked
+
         List<Vector2> linePoints = GetWorldPosFromBlockTransforms(rectTransformsInPath);
+
 
         Debug.Log($"Setting {linePoints.Count} points to line renderer");
         if (linePoints.Count >= 2)
@@ -624,6 +627,10 @@ public class ConnectionSystem : MonoBehaviour
     {
         List<RectTransform> rectTransformsInPath = new();
         RectTransform lastCellInPreviousBlock = null;
+
+        List<RectTransform> firstBlockRectTransforms = blockUisInPath[0].GetBlockCellImagesRectTransforms();
+        float maxDistanceBetweenBlocks = Vector2.Distance(firstBlockRectTransforms[0].transform.position, firstBlockRectTransforms[1].transform.position);
+
         for (int index = 0; index < blockUisInPath.Count; index++)
         {
             BlockUI blockUi = blockUisInPath[index];
@@ -639,7 +646,7 @@ public class ConnectionSystem : MonoBehaviour
             {
                 rectTransformsInBlock.Reverse();
             }
-
+            
             if (lastCellInPreviousBlock != null)
             {
                 float distanceToFirstCellInBlock = Vector2.Distance(rectTransformsInBlock[0].transform.position, lastCellInPreviousBlock.transform.position);
@@ -648,6 +655,16 @@ public class ConnectionSystem : MonoBehaviour
                 if (distanceToFirstCellInBlock > distanceToLastCellInBlock)
                 {
                     rectTransformsInBlock.Reverse();
+                }
+
+                float minDistance = Mathf.Min(distanceToFirstCellInBlock, distanceToLastCellInBlock);
+                float difference = Mathf.Abs(minDistance - maxDistanceBetweenBlocks);
+                if (difference > 10f)
+                {
+                    //TODO: fix bug where both first & last blocks are equidistant and
+                    //line picks longest path arbitrarily
+                    //causing distance between points to be bigger than maxDistanceBetweenBlocks]
+                    Debug.LogError("Something wrong with the line renderer! Not going to display properly");
                 }
             }
 
