@@ -54,6 +54,7 @@ public class GridVisual : MonoBehaviour
             newGridCell.name = $"GridCell: ({xAxis}, {yAxis})";  // Assign name based on coordinates
 
             AssignStartandFinishCoordinatesToGridCell(xAxis, yAxis, newGridCell);
+            AssignDoubleStartandFinishCoordinatesToGridCell(xAxis,yAxis, newGridCell);  
             AssignClosedGridSpaceCoordinates(xAxis,yAxis,newGridCell);
 
             GridCell gridCell = newGridCell.GetComponent<GridCell>();
@@ -77,20 +78,40 @@ public class GridVisual : MonoBehaviour
             gridCell.SetCoordinates(xAxis, yAxis); // assign coordinate values on the grid.
             if (xAxis == gridData.startCellCoordinates.x && yAxis == gridData.startCellCoordinates.y)
             {
-                gridCell.ConnectCellVisual(true, false);//specify start and end here
+                gridCell.ConnectCellVisual(true);//specify start and end here
 
 
             }
 
             if (xAxis == gridData.finishCellCoordinates.x && yAxis == gridData.finishCellCoordinates.y)
             {
-                gridCell.ConnectCellVisual(false, true);
+                gridCell.ConnectCellVisual(false);
 
 
             }
         }
     }
+    public void AssignDoubleStartandFinishCoordinatesToGridCell(int xAxis, int yAxis, GameObject newGridCell)
+    {
+        GridCell gridCell = newGridCell.GetComponent<GridCell>();
+        if (gridCell != null)// if the gridcell component exists on gridcell prefab
+        {
+            gridCell.SetCoordinates(xAxis, yAxis); // assign coordinate values on the grid.
+            if (xAxis == gridData.doubleStartCellCoordinates.x && yAxis == gridData.doubleStartCellCoordinates.y)
+            {
+                gridCell.DoubleConnectCellVisual(true);//specify start and end here
 
+
+            }
+
+            if (xAxis == gridData.finishCellCoordinates.x && yAxis == gridData.finishCellCoordinates.y)
+            {
+                gridCell.DoubleConnectCellVisual(false);
+
+
+            }
+        }
+    }
     public void AssignClosedGridSpaceCoordinates(int xAxis, int yAxis, GameObject newGridCell)
     {
         

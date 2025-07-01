@@ -19,7 +19,7 @@ public class GridCell : MonoBehaviour
     [SerializeField] private GameObject closedCellImage;
     public bool startCell = false;
     public bool finishCell = false;
-    public bool IsCloseCell = false;    
+    public bool IsCloseCell = false;
 
 
 
@@ -65,12 +65,34 @@ public class GridCell : MonoBehaviour
         image.color = Green;
     }
 
-    public void ConnectCellVisual(bool isStartCell, bool isFinishCell)
+    public void ConnectCellVisual(bool isStartCell)
     {
-        startCell = isStartCell;    
-        finishCell = isFinishCell;
-        
+        if (isStartCell)
+        {
+            startCell = true;
+        }
+        else
+        {
+            finishCell = true;
+        }
+
+
+
         connectCellImage.SetActive(true);
+    }
+    public void DoubleConnectCellVisual(bool isStartCell)
+    {
+        if (isStartCell)
+        {
+            startCell = true;
+        }
+        else
+        {
+            finishCell = true;
+        }
+
+
+        doubleConnectCellImage.SetActive(true);
     }
 
     public void ClosedCellVisual()
