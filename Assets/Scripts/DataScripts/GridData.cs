@@ -17,6 +17,9 @@ public class GridData : ScriptableObject
     [Header("Start and Finish Cell")]
     public Vector2Int startCellCoordinates = Vector2Int.zero;
     public Vector2Int finishCellCoordinates = Vector2Int.zero;
+    public Vector2Int doubleStartCellCoordinates = Vector2Int.zero;
+    public Vector2Int doubleFinishCellCoordinates = Vector2Int.zero;
+  
 
     public List<Vector2Int> GetClosedGridSpaceCoordinates()
     {
