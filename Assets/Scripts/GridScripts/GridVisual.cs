@@ -104,7 +104,7 @@ public class GridVisual : MonoBehaviour
 
             }
 
-            if (xAxis == gridData.finishCellCoordinates.x && yAxis == gridData.finishCellCoordinates.y)
+            if (xAxis == gridData.doubleFinishCellCoordinates.x && yAxis == gridData.doubleFinishCellCoordinates.y)
             {
                 gridCell.DoubleConnectCellVisual(false);
 

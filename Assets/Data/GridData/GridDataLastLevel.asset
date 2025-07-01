@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   x: 6
   y: 6
-  startCell: {fileID: 0}
-  endCell: {fileID: 0}
+  closedGridSpace: []
   startCellCoordinates: {x: 0, y: 0}
   finishCellCoordinates: {x: 0, y: 5}
+  doubleStartCellCoordinates: {x: 1, y: 1}
+  doubleFinishCellCoordinates: {x: 1, y: 2}
