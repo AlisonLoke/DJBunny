@@ -54,12 +54,42 @@
 				<Event Name="Lvl2_3_Plucks" ID="{E3FB62E7-EF2F-44F7-B9FC-34FD71DFB87C}"/>
 				<Event Name="Lvl2_3_Tune" ID="{9F07300F-EC8C-449D-8349-E20920B2C5F4}"/>
 				<Event Name="Lvl2_3_Wow" ID="{269E1C3E-4D33-4C36-8C64-71ABAEC74635}"/>
-				<Event Name="Play_Music" ID="{9086E085-2FEA-4B25-B8C8-62027E714E71}">
+				<Event Name="Play_Lvl_1" ID="{9086E085-2FEA-4B25-B8C8-62027E714E71}">
 					<ChildrenList>
 						<Action Name="" ID="{D6006236-1633-46CE-8359-C4D20E5EF572}" ShortID="573707850">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Music_1" ID="{2D8E7A4A-1446-4023-9E30-38665D198834}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+									<ObjectRef Name="Lvl2_Stg1" ID="{D5C859D7-29A1-4F37-939D-C8169893E091}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{965352D7-FFB9-4E6B-AE2C-136CA99B99EC}" ShortID="872635891">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lvl2_1_SnareStop" ID="{DE01D4F6-D63F-484F-A8FC-EB74351E453F}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6ECA2662-C10E-4900-8FD8-5F31C00B3F9D}" ShortID="704895531">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lvl2_1_KickStop" ID="{C0A6A1C2-42D2-45F3-9E1C-42C3D3343F4D}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{CAB0CBB5-9A91-458E-AB92-BCD4141785DB}" ShortID="942911464">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lvl2_1_HiHatStop" ID="{B38394E9-DD62-4876-AEC3-3D44400FD199}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
