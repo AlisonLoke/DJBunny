@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{23DBE4A7-413B-4397-9F41-E18A383855A5}" SchemaVersion="123">
 	<Triggers>
-		<WorkUnit Name="Default Work Unit" ID="{23DBE4A7-413B-4397-9F41-E18A383855A5}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{23DBE4A7-413B-4397-9F41-E18A383855A5}" PersistMode="Standalone">
+			<ChildrenList>
+				<Trigger Name="Lvl2_1_KickPlay" ID="{332BBBB5-7211-40F8-98AA-856CE0A8D9F3}"/>
+				<Trigger Name="Lvl2_1_KickStop" ID="{05BBD679-8088-4E47-B93E-54A721E1563A}"/>
+				<Trigger Name="Lvl2_1_SnarePlay" ID="{F07DA852-2F12-416D-84E5-19416B792954}"/>
+				<Trigger Name="Lvl2_1_SnareStop" ID="{B2D703F7-0594-43CC-AAF8-75EA0D84041C}"/>
+				<Trigger Name="Lvl2_1_HiHatPlay" ID="{7EEB4022-076D-47A4-9B77-BE29792C2057}"/>
+				<Trigger Name="Lvl2_1_HiHatStop" ID="{CB591CAE-30FF-4CAB-B473-309A29C4CFDC}"/>
+			</ChildrenList>
+		</WorkUnit>
 	</Triggers>
 </WwiseDocument>

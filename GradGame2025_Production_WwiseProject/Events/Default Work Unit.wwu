@@ -3,89 +3,108 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Play_Drum" ID="{AFB9005F-D19A-4C75-9F83-5ED9EEE87A75}">
+				<Event Name="Lvl2_1_KickPlay" ID="{6B69B719-A285-44C9-8143-1563C0F3814C}">
 					<ChildrenList>
-						<Action Name="" ID="{61129174-75BE-4D1B-AE1C-6F1C4AFC1CA6}" ShortID="117663949">
+						<Action Name="" ID="{BCE3C51B-5DF8-4345-80E8-FD4B64FAD3B0}" ShortID="873307576">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Drum" ID="{04C44C88-7CFE-4D80-9EEA-114C57B9B60E}" WorkUnitID="{E90C2CAF-B9AB-4A75-BFCA-1987D0D05287}"/>
+									<ObjectRef Name="Lvl2_Stg1_Perc_Kick_160_44_8m" ID="{70CF811E-AD1F-40BC-8434-7DC42F130585}" WorkUnitID="{8E06FF18-BDE4-44F1-B461-C27CFB2C8BC4}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Drum_Snare" ID="{778F8030-11A8-42C2-B786-C368ABFB0CE1}">
+				<Event Name="Lvl2_1_HiHatPlay" ID="{82A1963D-C850-4098-8D62-079847A067C4}">
 					<ChildrenList>
-						<Action Name="" ID="{D556FF2E-8ABB-4F16-AED7-C074A4D34CAD}" ShortID="167692320">
+						<Action Name="" ID="{C1FAEF27-2E07-4D17-B332-FFC31C3C35BD}" ShortID="2466028">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="SnareDrum" ID="{B598BF0F-A049-46D5-B3F7-19544065464B}" WorkUnitID="{E90C2CAF-B9AB-4A75-BFCA-1987D0D05287}"/>
+									<ObjectRef Name="Lvl2_Stg1_Perc_HiHat_160_44_8m" ID="{FD3F20A3-6D0E-472F-8C85-9073906C2AE8}" WorkUnitID="{8E06FF18-BDE4-44F1-B461-C27CFB2C8BC4}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Dum_HiHat" ID="{3456D58A-A01E-4D59-8272-8BB9DBC88F6E}">
+				<Event Name="Lvl2_1_SnarePlay" ID="{4DC413AC-6685-4BFF-AFFD-103665B3C6C7}">
 					<ChildrenList>
-						<Action Name="" ID="{FDE4B338-78F1-43C4-B389-429188B54956}" ShortID="976571472">
+						<Action Name="" ID="{3B2FD2BD-75E1-4A7C-96E3-441946D8F968}" ShortID="706292417">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="HiHatDrum" ID="{95665594-2879-4488-9673-22D599DD8EBB}" WorkUnitID="{E90C2CAF-B9AB-4A75-BFCA-1987D0D05287}"/>
+									<ObjectRef Name="Lvl2_Stg1_Perc_Snare_160_44_8m" ID="{53E444CB-5DA7-4ED1-B0EF-91F2A001FE58}" WorkUnitID="{8E06FF18-BDE4-44F1-B461-C27CFB2C8BC4}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Banjo_01" ID="{4ACA443E-7121-40C4-A33A-1A510D6C1580}">
+				<Event Name="Lvl2_2_Chords" ID="{AD730937-8CC6-450A-A5DF-E42F05CF02CF}"/>
+				<Event Name="Lvl2_2_Bells" ID="{B93919B7-0D05-4903-B4F0-A97748AA5327}"/>
+				<Event Name="Lvl2_2_Bass" ID="{C2CD6012-3770-4EDB-AF47-1E99F7D3E7F9}"/>
+				<Event Name="Lvl2_3_Plucks" ID="{E3FB62E7-EF2F-44F7-B9FC-34FD71DFB87C}"/>
+				<Event Name="Lvl2_3_Tune" ID="{9F07300F-EC8C-449D-8349-E20920B2C5F4}"/>
+				<Event Name="Lvl2_3_Wow" ID="{269E1C3E-4D33-4C36-8C64-71ABAEC74635}"/>
+				<Event Name="Play_Music" ID="{9086E085-2FEA-4B25-B8C8-62027E714E71}">
 					<ChildrenList>
-						<Action Name="" ID="{81E2174E-9F21-47EC-BED7-8736142090D5}" ShortID="3799929">
+						<Action Name="" ID="{D6006236-1633-46CE-8359-C4D20E5EF572}" ShortID="573707850">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Banjo01" ID="{4837372A-5C76-4090-8B65-747E5B1CB9BE}" WorkUnitID="{E90C2CAF-B9AB-4A75-BFCA-1987D0D05287}"/>
+									<ObjectRef Name="Music" ID="{2D8E7A4A-1446-4023-9E30-38665D198834}" WorkUnitID="{8E06FF18-BDE4-44F1-B461-C27CFB2C8BC4}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Banjo_02" ID="{854468E7-0D54-4E99-971A-9B8D746561EE}">
+				<Event Name="Lvl2_1_KickStop" ID="{C0A6A1C2-42D2-45F3-9E1C-42C3D3343F4D}">
 					<ChildrenList>
-						<Action Name="" ID="{ED8AE0BE-2C19-4505-B493-3E263F876676}" ShortID="804513776">
+						<Action Name="" ID="{200238D2-8E5E-4A6A-AF15-15014351E623}" ShortID="967926821">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Banjo02" ID="{822B3CFF-3680-4CDB-B9D3-01212CCF6E37}" WorkUnitID="{E90C2CAF-B9AB-4A75-BFCA-1987D0D05287}"/>
+									<ObjectRef Name="Lvl2_Stg1_Perc_Kick_160_44_8m" ID="{70CF811E-AD1F-40BC-8434-7DC42F130585}" WorkUnitID="{8E06FF18-BDE4-44F1-B461-C27CFB2C8BC4}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Bass_01" ID="{15E0C550-C09D-46F4-A7E5-6D67B5761C38}">
+				<Event Name="Lvl2_1_HiHatStop" ID="{B38394E9-DD62-4876-AEC3-3D44400FD199}">
 					<ChildrenList>
-						<Action Name="" ID="{F0601345-33EB-4FA2-8482-E0D8540B9B12}" ShortID="277098335">
+						<Action Name="" ID="{69D2D970-7444-4759-86BE-481E36B58B15}" ShortID="679400688">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Bass01" ID="{1B9824F1-7556-4795-8E8D-31ACA197254F}" WorkUnitID="{E90C2CAF-B9AB-4A75-BFCA-1987D0D05287}"/>
+									<ObjectRef Name="Lvl2_Stg1_Perc_HiHat_160_44_8m" ID="{FD3F20A3-6D0E-472F-8C85-9073906C2AE8}" WorkUnitID="{8E06FF18-BDE4-44F1-B461-C27CFB2C8BC4}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Bass_02" ID="{7A036B61-9F3B-41CC-8338-61A66C425ACC}">
+				<Event Name="Lvl2_1_SnareStop" ID="{DE01D4F6-D63F-484F-A8FC-EB74351E453F}">
 					<ChildrenList>
-						<Action Name="" ID="{14F023BD-5DFC-4F39-8560-AD418AC9A15D}" ShortID="61391901">
+						<Action Name="" ID="{5FE252BA-EEE6-46C4-B6CF-B24358219B22}" ShortID="200059646">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Bass02" ID="{0819A31C-CC50-47A4-9CB8-BD9AA6FA5C0D}" WorkUnitID="{E90C2CAF-B9AB-4A75-BFCA-1987D0D05287}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Level01Track" ID="{88F7D19D-5955-400D-B2E5-BB5FEB127B94}">
-					<ChildrenList>
-						<Action Name="" ID="{DB9A858A-A640-4BD8-98BD-22F9F048941E}" ShortID="56952692">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Level01_Track" ID="{0D50C463-FD3F-4877-B281-CA9CC9AC2CDE}" WorkUnitID="{E90C2CAF-B9AB-4A75-BFCA-1987D0D05287}"/>
+									<ObjectRef Name="Lvl2_Stg1_Perc_Snare_160_44_8m" ID="{53E444CB-5DA7-4ED1-B0EF-91F2A001FE58}" WorkUnitID="{8E06FF18-BDE4-44F1-B461-C27CFB2C8BC4}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
