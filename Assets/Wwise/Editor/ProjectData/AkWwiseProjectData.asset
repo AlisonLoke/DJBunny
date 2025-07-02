@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1c2f7ea7e019e44081a8c815ce5a8e1e
     GuidInternal: 
-    m_lastTime: -8584514300512634886
+    m_lastTime: -8584501551278486184
     List:
     - name: Level0_SoundBank
       guid: e833107b5884a7429a7fb9e7ad1bbbfb
@@ -108,42 +108,8 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 60318edf19da10499ab787cbf746dcca
     GuidInternal: 
-    m_lastTime: -8584514300512719989
+    m_lastTime: -8584501551261016291
     List:
-    - name: Banjo_01
-      guid: 3e44ca4a2171c440a33a1a510d6c1580
-      id: 1654636977
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Banjo_01
-        ObjectType: 3
-        guid: 3e44ca4a2171c440a33a1a510d6c1580
-      Path: Events\Default Work Unit\Banjo_01
-      maxAttenuation: 0
-      maxDuration: 8.151451
-      minDuration: 8.151451
-    - name: Banjo_02
-      guid: e7684485540d994e971a9b8d746561ee
-      id: 1654636978
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Banjo_02
-        ObjectType: 3
-        guid: e7684485540d994e971a9b8d746561ee
-      Path: Events\Default Work Unit\Banjo_02
-      maxAttenuation: 0
-      maxDuration: 8.151474
-      minDuration: 8.151474
     - name: Banjo01_Ind
       guid: 225feb27b4997c44a3f23d0adb0a7a13
       id: 1106709462
@@ -159,8 +125,8 @@ MonoBehaviour:
         guid: 225feb27b4997c44a3f23d0adb0a7a13
       Path: Events\Default Work Unit\Banjo01_Ind
       maxAttenuation: 0
-      maxDuration: 8.139206
-      minDuration: 8.139206
+      maxDuration: 0
+      minDuration: 0
     - name: Banjo02_Ind
       guid: a7282e1757800c469078ec54075ee699
       id: 3686043613
@@ -176,8 +142,8 @@ MonoBehaviour:
         guid: a7282e1757800c469078ec54075ee699
       Path: Events\Default Work Unit\Banjo02_Ind
       maxAttenuation: 0
-      maxDuration: 8.142086
-      minDuration: 8.142086
+      maxDuration: 0
+      minDuration: 0
     - name: Banjo03_Ind
       guid: 23134d0a49187842a5f25b2ee4b9ae91
       id: 2616549120
@@ -195,40 +161,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 8.131406
       minDuration: 8.131406
-    - name: Bass_01
-      guid: 50c5e0159dc0f446a7e56d67b5761c38
-      id: 2197579062
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Bass_01
-        ObjectType: 3
-        guid: 50c5e0159dc0f446a7e56d67b5761c38
-      Path: Events\Default Work Unit\Bass_01
-      maxAttenuation: 0
-      maxDuration: 8.151474
-      minDuration: 8.151474
-    - name: Bass_02
-      guid: 616b037a3b9fcc41833861a66c425acc
-      id: 2197579061
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Bass_02
-        ObjectType: 3
-        guid: 616b037a3b9fcc41833861a66c425acc
-      Path: Events\Default Work Unit\Bass_02
-      maxAttenuation: 0
-      maxDuration: 8
-      minDuration: 8
     - name: Bass01_Ind
       guid: 830bfd8333c5f847b126514e5167944f
       id: 2828584415
@@ -244,8 +176,8 @@ MonoBehaviour:
         guid: 830bfd8333c5f847b126514e5167944f
       Path: Events\Default Work Unit\Bass01_Ind
       maxAttenuation: 0
-      maxDuration: 8
-      minDuration: 8
+      maxDuration: 0
+      minDuration: 0
     - name: Bass02_Ind
       guid: 95cbe706bf016d419d22329926fe7a7e
       id: 3835499564
@@ -261,8 +193,8 @@ MonoBehaviour:
         guid: 95cbe706bf016d419d22329926fe7a7e
       Path: Events\Default Work Unit\Bass02_Ind
       maxAttenuation: 0
-      maxDuration: 8
-      minDuration: 8
+      maxDuration: 0
+      minDuration: 0
     - name: Bass03_Ind
       guid: c9c28dcd2ba1254fa383734fb2ddca6f
       id: 1444490905
@@ -278,11 +210,11 @@ MonoBehaviour:
         guid: c9c28dcd2ba1254fa383734fb2ddca6f
       Path: Events\Default Work Unit\Bass03_Ind
       maxAttenuation: 0
-      maxDuration: 8.008458
-      minDuration: 8.008458
-    - name: Drum_Snare
-      guid: 30808f77a811c242b786c368abfb0ce1
-      id: 4059233419
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl2_1_HiHatPlay
+      guid: 3d96a18250c898408d62079847a067c4
+      id: 1029901154
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -290,50 +222,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Drum_Snare
+      - ElementName: Lvl2_1_HiHatPlay
         ObjectType: 3
-        guid: 30808f77a811c242b786c368abfb0ce1
-      Path: Events\Default Work Unit\Drum_Snare
-      maxAttenuation: 0
-      maxDuration: 8
-      minDuration: 8
-    - name: Dum_HiHat
-      guid: 8ad556341ea0594d82728bb9dbc88f6e
-      id: 4075853312
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Dum_HiHat
-        ObjectType: 3
-        guid: 8ad556341ea0594d82728bb9dbc88f6e
-      Path: Events\Default Work Unit\Dum_HiHat
-      maxAttenuation: 0
-      maxDuration: 8.151451
-      minDuration: 8.151451
-    - name: Level01Track
-      guid: 9dd1f78855590d40b2e5bb5feb127b94
-      id: 858850169
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Level01Track
-        ObjectType: 3
-        guid: 9dd1f78855590d40b2e5bb5feb127b94
-      Path: Events\Default Work Unit\Level01Track
+        guid: 3d96a18250c898408d62079847a067c4
+      Path: Events\Default Work Unit\Lvl2_1_HiHatPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Play_Drum
-      guid: 5f00b9af9ad1754c9f835ed9eee87a75
-      id: 2376459254
+    - name: Lvl2_1_HiHatStop
+      guid: e99483b362dd7648aec33d44400fd199
+      id: 1631337148
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -341,13 +239,200 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Play_Drum
+      - ElementName: Lvl2_1_HiHatStop
         ObjectType: 3
-        guid: 5f00b9af9ad1754c9f835ed9eee87a75
-      Path: Events\Default Work Unit\Play_Drum
+        guid: e99483b362dd7648aec33d44400fd199
+      Path: Events\Default Work Unit\Lvl2_1_HiHatStop
       maxAttenuation: 0
-      maxDuration: 6.4
-      minDuration: 6.4
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl2_1_KickPlay
+      guid: 19b7696b85a2c94481431563c0f3814c
+      id: 4260762352
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl2_1_KickPlay
+        ObjectType: 3
+        guid: 19b7696b85a2c94481431563c0f3814c
+      Path: Events\Default Work Unit\Lvl2_1_KickPlay
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl2_1_KickStop
+      guid: c2a1a6c0d242f3459e1c42c3d3343f4d
+      id: 2567667346
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl2_1_KickStop
+        ObjectType: 3
+        guid: c2a1a6c0d242f3459e1c42c3d3343f4d
+      Path: Events\Default Work Unit\Lvl2_1_KickStop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl2_1_SnarePlay
+      guid: ac13c44d8566ff4baffd103665b3c6c7
+      id: 233758521
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl2_1_SnarePlay
+        ObjectType: 3
+        guid: ac13c44d8566ff4baffd103665b3c6c7
+      Path: Events\Default Work Unit\Lvl2_1_SnarePlay
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl2_1_SnareStop
+      guid: f6d401de3fd64f48a8fceb74351e453f
+      id: 2824720255
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl2_1_SnareStop
+        ObjectType: 3
+        guid: f6d401de3fd64f48a8fceb74351e453f
+      Path: Events\Default Work Unit\Lvl2_1_SnareStop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl2_2_Bass
+      guid: 1260cdc27037db4eaf471e99f7d3e7f9
+      id: 52528120
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl2_2_Bass
+        ObjectType: 3
+        guid: 1260cdc27037db4eaf471e99f7d3e7f9
+      Path: Events\Default Work Unit\Lvl2_2_Bass
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl2_2_Bells
+      guid: b71939b9050d0349b4f0a97748aa5327
+      id: 544256877
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl2_2_Bells
+        ObjectType: 3
+        guid: b71939b9050d0349b4f0a97748aa5327
+      Path: Events\Default Work Unit\Lvl2_2_Bells
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl2_2_Chords
+      guid: 370973adc68c0a45a5dfe42f05cf02cf
+      id: 3227398492
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl2_2_Chords
+        ObjectType: 3
+        guid: 370973adc68c0a45a5dfe42f05cf02cf
+      Path: Events\Default Work Unit\Lvl2_2_Chords
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl2_3_Plucks
+      guid: e762fbe32feff744b9fc34fd71dfb87c
+      id: 3418998824
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl2_3_Plucks
+        ObjectType: 3
+        guid: e762fbe32feff744b9fc34fd71dfb87c
+      Path: Events\Default Work Unit\Lvl2_3_Plucks
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl2_3_Tune
+      guid: 0f30079f8cec9d448349e20920b2c5f4
+      id: 3891698248
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl2_3_Tune
+        ObjectType: 3
+        guid: 0f30079f8cec9d448349e20920b2c5f4
+      Path: Events\Default Work Unit\Lvl2_3_Tune
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl2_3_Wow
+      guid: 3e1c9e26334d364c8c6471abaec74635
+      id: 497870267
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl2_3_Wow
+        ObjectType: 3
+        guid: 3e1c9e26334d364c8c6471abaec74635
+      Path: Events\Default Work Unit\Lvl2_3_Wow
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Music
+      guid: 85e08690ea2f254bb8c862027e714e71
+      id: 2932040671
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Play_Music
+        ObjectType: 3
+        guid: 85e08690ea2f254bb8c862027e714e71
+      Path: Events\Default Work Unit\Play_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -374,8 +459,186 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: ce35905f33d6774dafac532b6a139962
     GuidInternal: 
-    m_lastTime: -8584542051205936530
-    List: []
+    m_lastTime: -8584501551257128309
+    List:
+    - name: MusicLvl2
+      guid: 4ab022ee7a77bc40ba343b9d8abd93fb
+      id: 2762093882
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ce35905f33d6774dafac532b6a139962
+      - ElementName: MusicLvl2
+        ObjectType: 9
+        guid: 4ab022ee7a77bc40ba343b9d8abd93fb
+      Path: States\Default Work Unit\MusicLvl2
+      values:
+      - name: Lvl2_1
+        guid: 6f7a599157983244b5550ef15eca1a8f
+        id: 3868115957
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: ce35905f33d6774dafac532b6a139962
+        - ElementName: MusicLvl2
+          ObjectType: 9
+          guid: 4ab022ee7a77bc40ba343b9d8abd93fb
+        - ElementName: Lvl2_1
+          ObjectType: 8
+          guid: 6f7a599157983244b5550ef15eca1a8f
+      - name: Lvl2_1_HiHatPlay
+        guid: 6a14735fd25af54cba3a361711501c9b
+        id: 1029901154
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: ce35905f33d6774dafac532b6a139962
+        - ElementName: MusicLvl2
+          ObjectType: 9
+          guid: 4ab022ee7a77bc40ba343b9d8abd93fb
+        - ElementName: Lvl2_1_HiHatPlay
+          ObjectType: 8
+          guid: 6a14735fd25af54cba3a361711501c9b
+      - name: Lvl2_1_HiHatStop
+        guid: d44ca16141f67045a4c7799948281845
+        id: 1631337148
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: ce35905f33d6774dafac532b6a139962
+        - ElementName: MusicLvl2
+          ObjectType: 9
+          guid: 4ab022ee7a77bc40ba343b9d8abd93fb
+        - ElementName: Lvl2_1_HiHatStop
+          ObjectType: 8
+          guid: d44ca16141f67045a4c7799948281845
+      - name: Lvl2_1_KickPlay
+        guid: 84dffdb563fcec4098165608a91e67d0
+        id: 4260762352
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: ce35905f33d6774dafac532b6a139962
+        - ElementName: MusicLvl2
+          ObjectType: 9
+          guid: 4ab022ee7a77bc40ba343b9d8abd93fb
+        - ElementName: Lvl2_1_KickPlay
+          ObjectType: 8
+          guid: 84dffdb563fcec4098165608a91e67d0
+      - name: Lvl2_1_KickStop
+        guid: ff67b72f046acb41b940807edaf62563
+        id: 2567667346
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: ce35905f33d6774dafac532b6a139962
+        - ElementName: MusicLvl2
+          ObjectType: 9
+          guid: 4ab022ee7a77bc40ba343b9d8abd93fb
+        - ElementName: Lvl2_1_KickStop
+          ObjectType: 8
+          guid: ff67b72f046acb41b940807edaf62563
+      - name: Lvl2_1_SnarePlay
+        guid: 3b5f2de9998ca94ab0917bc02f05f452
+        id: 233758521
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: ce35905f33d6774dafac532b6a139962
+        - ElementName: MusicLvl2
+          ObjectType: 9
+          guid: 4ab022ee7a77bc40ba343b9d8abd93fb
+        - ElementName: Lvl2_1_SnarePlay
+          ObjectType: 8
+          guid: 3b5f2de9998ca94ab0917bc02f05f452
+      - name: Lvl2_1_SnareStop
+        guid: 3603556883a4034bbf2e6b271331876d
+        id: 2824720255
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: ce35905f33d6774dafac532b6a139962
+        - ElementName: MusicLvl2
+          ObjectType: 9
+          guid: 4ab022ee7a77bc40ba343b9d8abd93fb
+        - ElementName: Lvl2_1_SnareStop
+          ObjectType: 8
+          guid: 3603556883a4034bbf2e6b271331876d
+      - name: Lvl2_2
+        guid: a25c8e246e0b2049a5e46ae218e7691d
+        id: 3868115958
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: ce35905f33d6774dafac532b6a139962
+        - ElementName: MusicLvl2
+          ObjectType: 9
+          guid: 4ab022ee7a77bc40ba343b9d8abd93fb
+        - ElementName: Lvl2_2
+          ObjectType: 8
+          guid: a25c8e246e0b2049a5e46ae218e7691d
+      - name: Lvl2_3
+        guid: 5249011a9f9ee6478686a544c3031410
+        id: 3868115959
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: ce35905f33d6774dafac532b6a139962
+        - ElementName: MusicLvl2
+          ObjectType: 9
+          guid: 4ab022ee7a77bc40ba343b9d8abd93fb
+        - ElementName: Lvl2_3
+          ObjectType: 8
+          guid: 5249011a9f9ee6478686a544c3031410
+      - name: None
+        guid: ef17128afd33fb4eb28388d25be5b33f
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: ce35905f33d6774dafac532b6a139962
+        - ElementName: MusicLvl2
+          ObjectType: 9
+          guid: 4ab022ee7a77bc40ba343b9d8abd93fb
+        - ElementName: None
+          ObjectType: 8
+          guid: ef17128afd33fb4eb28388d25be5b33f
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -388,7 +651,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 2d71c89aba83d4478e4b5b2ecc2dba7c
     GuidInternal: 
-    m_lastTime: -8584542051206452218
+    m_lastTime: -8584501551257118282
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -402,10 +665,94 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: a7e4db233b4197439f41e18a383855a5
     GuidInternal: 
-    m_lastTime: -8584542051206046839
-    List: []
+    m_lastTime: -8584501551257098295
+    List:
+    - name: Lvl2_1_HiHatPlay
+      guid: 2240eb7e6d07a4479b77be29792c2057
+      id: 1029901154
+      PathAndIcons:
+      - ElementName: Triggers
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a7e4db233b4197439f41e18a383855a5
+      - ElementName: Lvl2_1_HiHatPlay
+        ObjectType: 14
+        guid: 2240eb7e6d07a4479b77be29792c2057
+      Path: Triggers\Default Work Unit\Lvl2_1_HiHatPlay
+    - name: Lvl2_1_HiHatStop
+      guid: ae1c59cbff30ab4cb473309a29c4cfdc
+      id: 1631337148
+      PathAndIcons:
+      - ElementName: Triggers
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a7e4db233b4197439f41e18a383855a5
+      - ElementName: Lvl2_1_HiHatStop
+        ObjectType: 14
+        guid: ae1c59cbff30ab4cb473309a29c4cfdc
+      Path: Triggers\Default Work Unit\Lvl2_1_HiHatStop
+    - name: Lvl2_1_KickPlay
+      guid: b5bb2b331172f84098aa856ce0a8d9f3
+      id: 4260762352
+      PathAndIcons:
+      - ElementName: Triggers
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a7e4db233b4197439f41e18a383855a5
+      - ElementName: Lvl2_1_KickPlay
+        ObjectType: 14
+        guid: b5bb2b331172f84098aa856ce0a8d9f3
+      Path: Triggers\Default Work Unit\Lvl2_1_KickPlay
+    - name: Lvl2_1_KickStop
+      guid: 79d6bb058880474eb93e54a721e1563a
+      id: 2567667346
+      PathAndIcons:
+      - ElementName: Triggers
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a7e4db233b4197439f41e18a383855a5
+      - ElementName: Lvl2_1_KickStop
+        ObjectType: 14
+        guid: 79d6bb058880474eb93e54a721e1563a
+      Path: Triggers\Default Work Unit\Lvl2_1_KickStop
+    - name: Lvl2_1_SnarePlay
+      guid: 52a87df0122f6d4184e519416b792954
+      id: 233758521
+      PathAndIcons:
+      - ElementName: Triggers
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a7e4db233b4197439f41e18a383855a5
+      - ElementName: Lvl2_1_SnarePlay
+        ObjectType: 14
+        guid: 52a87df0122f6d4184e519416b792954
+      Path: Triggers\Default Work Unit\Lvl2_1_SnarePlay
+    - name: Lvl2_1_SnareStop
+      guid: f703d7b29405cc43aaf875ea0d84041c
+      id: 2824720255
+      PathAndIcons:
+      - ElementName: Triggers
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a7e4db233b4197439f41e18a383855a5
+      - ElementName: Lvl2_1_SnareStop
+        ObjectType: 14
+        guid: f703d7b29405cc43aaf875ea0d84041c
+      Path: Triggers\Default Work Unit\Lvl2_1_SnareStop
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0500000006000000070000000b0000000c00000011000000120000001700000018000000ab010000ac0100009e020000
+  ExpandedWaapiItemIds: 0300000006000000070000000b0000000c00000011000000120000001700000018000000190000001e0000001f00000021000000ab010000ac0100009e020000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

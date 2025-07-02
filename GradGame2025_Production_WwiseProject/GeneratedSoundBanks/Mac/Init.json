@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{89C218AE-9E0B-8562-B379-0ABAC724E516}",
+    "Hash": "{B701BD30-819F-E91D-F39B-064A66110B42}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -41,9 +41,88 @@
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
       "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
      }
+    ],
+    "StateGroups": [
+     {
+      "Id": "2762093882",
+      "Name": "MusicLvl2",
+      "ObjectPath": "\\States\\Default Work Unit\\MusicLvl2",
+      "GUID": "{EE22B04A-777A-40BC-BA34-3B9D8ABD93FB}",
+      "States": [
+       {
+        "Id": "233758521",
+        "Name": "Lvl2_1_SnarePlay",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicLvl2\\Lvl2_1_SnarePlay",
+        "GUID": "{E92D5F3B-8C99-4AA9-B091-7BC02F05F452}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicLvl2\\None",
+        "GUID": "{8A1217EF-33FD-4EFB-B283-88D25BE5B33F}"
+       },
+       {
+        "Id": "1029901154",
+        "Name": "Lvl2_1_HiHatPlay",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicLvl2\\Lvl2_1_HiHatPlay",
+        "GUID": "{5F73146A-5AD2-4CF5-BA3A-361711501C9B}"
+       },
+       {
+        "Id": "1631337148",
+        "Name": "Lvl2_1_HiHatStop",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicLvl2\\Lvl2_1_HiHatStop",
+        "GUID": "{61A14CD4-F641-4570-A4C7-799948281845}"
+       },
+       {
+        "Id": "2567667346",
+        "Name": "Lvl2_1_KickStop",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicLvl2\\Lvl2_1_KickStop",
+        "GUID": "{2FB767FF-6A04-41CB-B940-807EDAF62563}"
+       },
+       {
+        "Id": "2824720255",
+        "Name": "Lvl2_1_SnareStop",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicLvl2\\Lvl2_1_SnareStop",
+        "GUID": "{68550336-A483-4B03-BF2E-6B271331876D}"
+       },
+       {
+        "Id": "3868115957",
+        "Name": "Lvl2_1",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicLvl2\\Lvl2_1",
+        "GUID": "{91597A6F-9857-4432-B555-0EF15ECA1A8F}"
+       },
+       {
+        "Id": "3868115958",
+        "Name": "Lvl2_2",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicLvl2\\Lvl2_2",
+        "GUID": "{248E5CA2-0B6E-4920-A5E4-6AE218E7691D}"
+       },
+       {
+        "Id": "3868115959",
+        "Name": "Lvl2_3",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicLvl2\\Lvl2_3",
+        "GUID": "{1A014952-9E9F-47E6-8686-A544C3031410}"
+       },
+       {
+        "Id": "4260762352",
+        "Name": "Lvl2_1_KickPlay",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicLvl2\\Lvl2_1_KickPlay",
+        "GUID": "{B5FDDF84-FC63-40EC-9816-5608A91E67D0}"
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "2181839183",
+      "Name": "Kick",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Kick",
+      "GUID": "{9DB0987B-3074-4005-885D-25F221CF1DC4}",
+      "Switches": []
+     }
     ]
    }
   ],
-  "FileHash": "{5FC15D03-02CF-1184-7B9D-A889D0BB28DB}"
+  "FileHash": "{CB01ED15-8D35-120A-9077-DB33AEEBEAE6}"
  }
 }
