@@ -54,7 +54,11 @@ public class GridVisual : MonoBehaviour
             newGridCell.name = $"GridCell: ({xAxis}, {yAxis})";  // Assign name based on coordinates
 
             AssignStartandFinishCoordinatesToGridCell(xAxis, yAxis, newGridCell);
+            if (gridData.enableDoubleConnectCell)
+            {
             AssignDoubleStartandFinishCoordinatesToGridCell(xAxis,yAxis, newGridCell);  
+
+            }
             AssignClosedGridSpaceCoordinates(xAxis,yAxis,newGridCell);
 
             GridCell gridCell = newGridCell.GetComponent<GridCell>();

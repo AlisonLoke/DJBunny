@@ -20,6 +20,7 @@ public class GridData : ScriptableObject
     [Header("Double Start and Finish Cell")]
     public Vector2Int doubleStartCellCoordinates = Vector2Int.zero;
     public Vector2Int doubleFinishCellCoordinates = Vector2Int.zero;
+    public bool enableDoubleConnectCell = false;    
 
 
     public List<Vector2Int> GetClosedGridSpaceCoordinates()
