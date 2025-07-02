@@ -25,7 +25,7 @@ namespace AK
         static const AkUniqueID LVL2_3_PLUCKS = 3418998824U;
         static const AkUniqueID LVL2_3_TUNE = 3891698248U;
         static const AkUniqueID LVL2_3_WOW = 497870267U;
-        static const AkUniqueID PLAY_MUSIC = 2932040671U;
+        static const AkUniqueID PLAY_LVL_1 = 2152580024U;
     } // namespace EVENTS
 
     namespace STATES
@@ -77,8 +77,7 @@ namespace AK
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
-        static const AkUniqueID LEVEL0_SOUNDBANK = 1170040669U;
-        static const AkUniqueID PLAYDRUMTEST = 1932394983U;
+        static const AkUniqueID KATMUSICTEST = 1863621452U;
     } // namespace BANKS
 
     namespace BUSSES

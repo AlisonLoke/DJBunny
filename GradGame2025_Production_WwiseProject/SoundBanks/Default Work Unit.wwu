@@ -3,8 +3,9 @@
 	<SoundBanks>
 		<WorkUnit Name="Default Work Unit" ID="{A77E2F1C-19E0-40E4-81A8-C815CE5A8E1E}" PersistMode="Standalone">
 			<ChildrenList>
-				<SoundBank Name="PlayDrumTest" ID="{B6641220-D6F1-4876-AFCD-7AE0FED63CC5}">
+				<SoundBank Name="KatMusicTest" ID="{312BEA2E-3316-40A9-B82E-08D60148E83A}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Music_1" ID="{2D8E7A4A-1446-4023-9E30-38665D198834}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Lvl2_1_HiHatPlay" ID="{82A1963D-C850-4098-8D62-079847A067C4}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Lvl2_3_Tune" ID="{9F07300F-EC8C-449D-8349-E20920B2C5F4}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Lvl2_1_KickPlay" ID="{6B69B719-A285-44C9-8143-1563C0F3814C}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
@@ -15,31 +16,10 @@
 						<ObjectRef Name="Lvl2_1_HiHatStop" ID="{B38394E9-DD62-4876-AEC3-3D44400FD199}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Lvl2_2_Bells" ID="{B93919B7-0D05-4903-B4F0-A97748AA5327}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Default Work Unit" ID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Music" ID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_Music" ID="{9086E085-2FEA-4B25-B8C8-62027E714E71}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Lvl_1" ID="{9086E085-2FEA-4B25-B8C8-62027E714E71}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Lvl2_1_SnarePlay" ID="{4DC413AC-6685-4BFF-AFFD-103665B3C6C7}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Lvl2_3_Wow" ID="{269E1C3E-4D33-4C36-8C64-71ABAEC74635}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_Drum" ID="{AFB9005F-D19A-4C75-9F83-5ED9EEE87A75}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Lvl2_2_Bass" ID="{C2CD6012-3770-4EDB-AF47-1E99F7D3E7F9}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
-					</ObjectInclusionList>
-					<ObjectExclusionList/>
-					<GameSyncExclusionList/>
-				</SoundBank>
-				<SoundBank Name="Level0_SoundBank" ID="{7B1033E8-8458-42A7-9A7F-B9E7AD1BBBFB}">
-					<ObjectInclusionList>
-						<ObjectRef Name="Level01Track" ID="{88F7D19D-5955-400D-B2E5-BB5FEB127B94}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Banjo_01" ID="{4ACA443E-7121-40C4-A33A-1A510D6C1580}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Bass02_Ind" ID="{06E7CB95-01BF-416D-9D22-329926FE7A7E}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Bass_02" ID="{7A036B61-9F3B-41CC-8338-61A66C425ACC}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Drum_Snare" ID="{778F8030-11A8-42C2-B786-C368ABFB0CE1}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Banjo01_Ind" ID="{27EB5F22-99B4-447C-A3F2-3D0ADB0A7A13}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Banjo02_Ind" ID="{172E28A7-8057-460C-9078-EC54075EE699}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Bass_01" ID="{15E0C550-C09D-46F4-A7E5-6D67B5761C38}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Banjo03_Ind" ID="{0C608C10-DC11-4744-A6F6-8F9E504D52B5}" WorkUnitID="{E90C2CAF-B9AB-4A75-BFCA-1987D0D05287}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Bass01_Ind" ID="{83FD0B83-C533-47F8-B126-514E5167944F}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Dum_HiHat" ID="{3456D58A-A01E-4D59-8272-8BB9DBC88F6E}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Banjo_02" ID="{854468E7-0D54-4E99-971A-9B8D746561EE}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Bass03_Ind" ID="{CD8DC2C9-A12B-4F25-A383-734FB2DDCA6F}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
