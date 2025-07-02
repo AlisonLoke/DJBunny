@@ -32,61 +32,8 @@ public class AudioManager : MonoBehaviour
     //    Debug.Log("MUSIC IS PLAYING RIGHT NOW");
     //    musicEvent.Post(gameObject);
     //}
-    //public void QueueMusic(AK.Wwise.Event instrument)
-    //{
-    //    if (instrument == null) return;
-
-    //    musicQueue.Enqueue(instrument);
-
-    //    if (!IsMusicPlaying)
-    //        StartCoroutine(ProcessMusicQueue());
-    //}
-
-    //private IEnumerator ProcessMusicQueue()
-    //{
-    //    while (musicQueue.Count > 0)
-    //    {
-    //        IsMusicPlaying = true;
-
-    //        AK.Wwise.Event currentInstrument = musicQueue.Dequeue();
-    //        GameObject audioObj = new GameObject("Audio_" + currentInstrument);
-    //        audioObj.transform.SetParent(this.transform);
-
-    //        instruments.Add(audioObj);
-
-    //        Debug.Log("Playing: " + currentInstrument);
-
-    //        // Use a callback to detect end
-    //        uint playingId = currentInstrument.Post(audioObj, (uint)AkCallbackType.AK_EndOfEvent, OnMusicEnd);
-
-    //        // Wait until the callback marks the music done
-    //        while (IsMusicPlaying)
-    //            yield return null;
-
-    //        Destroy(audioObj);
-    //    }
-    //}
-    //private void OnMusicEnd(object in_cookie, AkCallbackType in_type, AkCallbackInfo in_info)
-    //{
-    //    IsMusicPlaying = false;
-    //}
 
 
-
-    //public void StopMusic()
-    //{
-    //    foreach (GameObject instrument in instruments)
-    //    {
-    //        if (instrument != null)
-    //        {
-    //            AkUnitySoundEngine.StopAll(instrument);
-    //            Destroy(instrument);
-
-    //        }
-    //    }
-
-    //    instruments.Clear();
-    //}
 
 
     public GameObject PlayMusicNow(AK.Wwise.Event instrument)

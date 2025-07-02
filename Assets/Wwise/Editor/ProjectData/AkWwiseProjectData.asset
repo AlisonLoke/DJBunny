@@ -66,11 +66,11 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1c2f7ea7e019e44081a8c815ce5a8e1e
     GuidInternal: 
-    m_lastTime: -8584501551278486184
+    m_lastTime: -8584501311759372928
     List:
-    - name: Level0_SoundBank
-      guid: e833107b5884a7429a7fb9e7ad1bbbfb
-      id: 1170040669
+    - name: KatMusicTest
+      guid: 2eea2b311633a940b82e08d60148e83a
+      id: 1863621452
       PathAndIcons:
       - ElementName: SoundBanks
         ObjectType: 5
@@ -78,24 +78,10 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 1c2f7ea7e019e44081a8c815ce5a8e1e
-      - ElementName: Level0_SoundBank
+      - ElementName: KatMusicTest
         ObjectType: 7
-        guid: e833107b5884a7429a7fb9e7ad1bbbfb
-      Path: SoundBanks\Default Work Unit\Level0_SoundBank
-    - name: PlayDrumTest
-      guid: 201264b6f1d67648afcd7ae0fed63cc5
-      id: 1932394983
-      PathAndIcons:
-      - ElementName: SoundBanks
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 1c2f7ea7e019e44081a8c815ce5a8e1e
-      - ElementName: PlayDrumTest
-        ObjectType: 7
-        guid: 201264b6f1d67648afcd7ae0fed63cc5
-      Path: SoundBanks\Default Work Unit\PlayDrumTest
+        guid: 2eea2b311633a940b82e08d60148e83a
+      Path: SoundBanks\Default Work Unit\KatMusicTest
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -108,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 60318edf19da10499ab787cbf746dcca
     GuidInternal: 
-    m_lastTime: -8584501551261016291
+    m_lastTime: -8584501311837749679
     List:
     - name: Banjo01_Ind
       guid: 225feb27b4997c44a3f23d0adb0a7a13
@@ -159,8 +145,8 @@ MonoBehaviour:
         guid: 23134d0a49187842a5f25b2ee4b9ae91
       Path: Events\Default Work Unit\Banjo03_Ind
       maxAttenuation: 0
-      maxDuration: 8.131406
-      minDuration: 8.131406
+      maxDuration: 0
+      minDuration: 0
     - name: Bass01_Ind
       guid: 830bfd8333c5f847b126514e5167944f
       id: 2828584415
@@ -416,9 +402,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Play_Music
+    - name: Play_Lvl_1
       guid: 85e08690ea2f254bb8c862027e714e71
-      id: 2932040671
+      id: 2152580024
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -426,10 +412,10 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Play_Music
+      - ElementName: Play_Lvl_1
         ObjectType: 3
         guid: 85e08690ea2f254bb8c862027e714e71
-      Path: Events\Default Work Unit\Play_Music
+      Path: Events\Default Work Unit\Play_Lvl_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -752,7 +738,7 @@ MonoBehaviour:
         guid: f703d7b29405cc43aaf875ea0d84041c
       Path: Triggers\Default Work Unit\Lvl2_1_SnareStop
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0300000006000000070000000b0000000c00000011000000120000001700000018000000190000001e0000001f00000021000000ab010000ac0100009e020000
+  ExpandedWaapiItemIds: 030000000500000006000000070000000b0000000c000000110000001200000018000000190000001e0000001f000000210000004400000045000000ab010000ac0100009e0200005c0d00005d0d0000270e0000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
