@@ -9,6 +9,8 @@ public class PathFinder : MonoBehaviour
 
     private GridCell startCell;
     private GridCell finishCell;
+    private GridCell doubleStartCell;
+    private GridCell doubleFinishCell;
     private List<EndCell> pathEndCells = new List<EndCell>();
   
 
@@ -36,12 +38,15 @@ public class PathFinder : MonoBehaviour
         // Get the coordinates from GridData
         Vector2Int startCoords = gridData.startCellCoordinates;
         Vector2Int endCoords = gridData.finishCellCoordinates;
+        Vector2Int doubleStartCoords = gridData.doubleStartCellCoordinates;
+        Vector2Int doubleFinishCoords = gridData.doubleFinishCellCoordinates;
         
         
         Debug.Log($"Looking for start at ({startCoords.x}, {startCoords.y}) and finish at ({endCoords.x}, {endCoords.y})");
         // Use the already marked cells from GridVisual if possible
         foreach (GridCell cell in allCells)
         {
+
             // Check if this cell has a connect cell image active (indicating start/end)
             if (cell.x == startCoords.x && cell.y == startCoords.y)
             {
@@ -54,9 +59,22 @@ public class PathFinder : MonoBehaviour
                 finishCell = cell;
                 Debug.Log("Found end cell at: " + cell.x + ", " + cell.y);
             }
+
+            if(cell.x == doubleStartCoords.x && cell.y == doubleStartCoords.y)
+            {
+                doubleStartCell = cell;
+                Debug.Log("Found double start cell at: " + cell.x + ", " + cell.y);
+            }
+
+            if( cell.x == doubleFinishCoords.x && cell.y == doubleFinishCoords.y)
+            {
+                doubleFinishCell = cell;    
+                Debug.Log("Found double finish cell at: " + cell.x + ", " + cell.y);
+    
+            }
         }
 
-        if (startCell == null || finishCell == null)
+        if (startCell == null || finishCell == null && (doubleStartCell == null || doubleFinishCell == null))
         {
             Debug.LogError("Could not find start or end cell!");
 
@@ -65,20 +83,30 @@ public class PathFinder : MonoBehaviour
 
    public bool IsStartCell(GridCell thisCell)
     {
-        if (thisCell == null || startCell == null) return false;
+        if (thisCell == null ) return false;
 
-        bool result = (thisCell != null && startCell != null && thisCell.x == startCell.x && thisCell.y == startCell.y);
-        Debug.Log($"Checking if cell ({thisCell?.x}, {thisCell?.y}) is start cell ({startCell?.x}, {startCell?.y}): {result}");
+        bool isPrimaryStart = startCell != null && thisCell.x == startCell.x && thisCell.y == startCell.y;
+
+        bool isDoubleStart = doubleStartCell != null && thisCell.x == doubleStartCell.x && thisCell.y == doubleStartCell.y;
+
+        bool result = isPrimaryStart || isDoubleStart;
+
+        Debug.Log($"Checking if cell ({thisCell?.x}, {thisCell?.y}) is start cell: {result}");
         return result;
     }
 
 
     public bool IsFinishCell(GridCell thisCell)
     {
-        if (thisCell == null || finishCell == null) return false;
+        if (thisCell == null) return false;
 
-        bool result = (thisCell != null && finishCell != null && thisCell.x == finishCell.x && thisCell.y == finishCell.y);
-        Debug.Log($"Checking if cell ({thisCell?.x}, {thisCell?.y}) is finish cell ({finishCell?.x}, {finishCell?.y}): {result}");
+        bool isPrimaryFinish = finishCell != null && thisCell.x == finishCell.x && thisCell.y == finishCell.y;
+
+        bool isDoubleFinish = doubleFinishCell != null && thisCell.x == doubleFinishCell.x && thisCell.y == doubleFinishCell.y;
+
+        bool result = isPrimaryFinish || isDoubleFinish;
+
+        Debug.Log($"Checking if cell ({thisCell?.x}, {thisCell?.y}) is finish cell: {result}");
         return result;
     }
 }

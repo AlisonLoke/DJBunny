@@ -23,6 +23,7 @@ public class ConnectionSystem : MonoBehaviour
     private List<List<EndCell>> allPaths = new List<List<EndCell>>();
     public List<BlockUI> allBlockUIs = new List<BlockUI>();
     private List<BlockUI> previouslyPulsedBlocks = new List<BlockUI>();
+    private List<List<EndCell>> completedPaths = new List<List<EndCell>>();
     //private BlockUI blockUI;
     //private Image cellImage;
     private Tween currentLineFadeTween;
@@ -75,7 +76,8 @@ public class ConnectionSystem : MonoBehaviour
         ClearConnectedLine();
 
         Debug.Log($"Checking connections for {endCells.Count} end cells");
-
+        List<EndCell> connectedStartCells = new();
+        List<EndCell> connectedFinishCells = new();
         // Check each end cell's position and connections
         foreach (EndCell endCell in endCells)
         {
@@ -97,6 +99,7 @@ public class ConnectionSystem : MonoBehaviour
             if (pathFinder != null && pathFinder.IsStartCell(endCell.currentGridCell))
             {
                 startConnectedEndCell = endCell;
+                //connectedStartCells.Add(endCell);
                 endCell.ConnectedToStartAndFinish(endCell.currentGridCell);
                 Debug.Log($"Found EndCell on start cell {endCell.name} at: ({endCell.currentGridCell.x}, {endCell.currentGridCell.y})");
             }
@@ -104,13 +107,28 @@ public class ConnectionSystem : MonoBehaviour
             if (pathFinder != null && pathFinder.IsFinishCell(endCell.currentGridCell))
             {
                 finishConnectedEndCell = endCell;
+                //connectedFinishCells.Add(endCell);
                 endCell.ConnectedToStartAndFinish(endCell.currentGridCell);
                 Debug.Log($"Found EndCell on finish cell {endCell.name} at: ({endCell.currentGridCell.x}, {endCell.currentGridCell.y})");
             }
         }
 
         // Find path if we have both start and finish cells
-        Debug.Log($"After checking all cells - Start cell found: {startConnectedEndCell != null}, Finish cell found: {finishConnectedEndCell != null}");
+        //Debug.Log($"After checking all cells - Start cell found: {startConnectedEndCell != null}, Finish cell found: {finishConnectedEndCell != null}");
+        //if(connectedStartCells.Count > 0 && connectedFinishCells.Count > 0)
+        //{
+        //    Debug.Log($"Found {connectedStartCells.Count} start(s) and {connectedFinishCells.Count} finish(es), finding paths...");
+        //    startConnectedEndCell = connectedStartCells[0];
+        //    finishConnectedEndCell = connectedFinishCells[0];
+        //    FindLongestPath();
+        //}
+        //else
+        //{
+        //    Debug.Log("Missing a start or finish connection, clearing path");
+        //    currentPath.Clear();
+        //    ClearConnectedLine();
+        //    ClearBlockPulses();
+        //}
         if (startConnectedEndCell != null && finishConnectedEndCell != null)
         {
             Debug.Log("Both start and finish cells found, finding path...");
