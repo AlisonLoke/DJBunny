@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -17,6 +18,12 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
     private GameObject audioObject;
     private Image cellImage;
     private BlockUI blockUI;
+    private bool isHovering = false;
+    private bool isAnimatingHover = false;
+    private Vector2 originalAnchoredPos;
+
+
+
 
     [SerializeField] private RectTransform blockParentRect;
     [SerializeField] private RectTransform[] blockRectransforms;
@@ -33,11 +40,12 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         gridVisual = gridParent.GetComponent<GridVisual>();
         endCells = GetComponentsInChildren<EndCell>();
         blockUI = GetComponent<BlockUI>();
-
+        originalAnchoredPos = blockParentRect.anchoredPosition;
         foreach (EndCell cell in endCells)
         {
             cell.Initialise();
         }
+     
     }
 
     private void Update()
@@ -56,7 +64,95 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             blockParentRect.position = pointerPosition;
             HighlightCells();
         }
+      
+        if (!isFollowingMouse && !isSnappedToGrid )
+        {
+            Vector2 mousePos = Mouse.current.position.ReadValue();
+            bool pointerOver = IsMouseOverEntireBlock(mousePos);
+
+            if (pointerOver && !isHovering)
+            {
+                isHovering = true;
+                StartHoverAnimation();
+            }
+            else if (!pointerOver && isHovering)
+            {
+
+                isHovering = false;
+                EndHoverAnimation();
+            }
+
+        }
+
+        if (!isFollowingMouse && !isSnappedToGrid && !isHovering && !isAnimatingHover)
+        {
+            Vector2 mousePos = Mouse.current.position.ReadValue();
+            bool pointerOver = IsMouseOverEntireBlock(mousePos);
+            bool blockOriginPos = Vector2.Distance(blockParentRect.anchoredPosition, originalAnchoredPos) > 0.1f;
+
+            if (!pointerOver && blockOriginPos)
+            {
+                // Force return to original position if we're somehow stuck
+                blockParentRect.anchoredPosition = originalAnchoredPos;
+            }
+        }
     }
+
+    private bool IsMouseOverEntireBlock(Vector2 mousePos)
+    {
+        // Check if mouse is over the parent rect
+        if (RectTransformUtility.RectangleContainsScreenPoint(blockParentRect, mousePos))
+        {
+            Debug.Log("Mouse is over the block");
+            return true;
+        }
+
+        // Check if mouse is over any of the child block rectangles
+        foreach (RectTransform blockRect in blockRectransforms)
+        {
+            if (RectTransformUtility.RectangleContainsScreenPoint(blockRect, mousePos))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private void StartHoverAnimation()
+    {
+        if (isAnimatingHover) { return; }
+
+        isAnimatingHover = true;
+        blockParentRect.DOKill();
+        blockParentRect.DOAnchorPos(originalAnchoredPos + new Vector2(0, 20f), 0.1f).SetEase(Ease.OutQuad)
+        .OnComplete(() =>
+        {
+            isAnimatingHover = false;
+        });
+    }
+
+
+    private void EndHoverAnimation()
+    {
+        if (isAnimatingHover) return;
+        isAnimatingHover = true;
+        blockParentRect.DOKill();
+        // Animate scale back to normal
+        blockParentRect.DOAnchorPos(originalAnchoredPos, 0.1f).SetEase(Ease.OutQuad)
+        .OnComplete(() =>
+        {
+            isAnimatingHover = false;
+        });
+    }
+    private void ResetHoverAnimation()
+    {
+        blockParentRect.DOKill(); // stop ongoing animations
+        blockParentRect.anchoredPosition = originalAnchoredPos;
+        isHovering = false;
+        isAnimatingHover = false;
+    }
+
 
     private void ClearEndCells()
     {
@@ -151,7 +247,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
     private void BeginPickUp()
     {
-
+        ResetHoverAnimation();
         selectedBlock = this;
         isFollowingMouse = true;
 
@@ -168,6 +264,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
         RemoveFromGrid();
     }
+
 
     private void RemoveFromGrid()
     {
@@ -247,7 +344,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             blockParentRect.position = snapClosestGridCell.GetComponent<RectTransform>().position;
             CheckIfEndCellOnClosedCell();
 
-            if(endCells.Any(endCell => endCell.IsEndCellOnClosedCell))
+            if (endCells.Any(endCell => endCell.IsEndCellOnClosedCell))
             {
                 return; // Do not continue placement if invalid
             }
