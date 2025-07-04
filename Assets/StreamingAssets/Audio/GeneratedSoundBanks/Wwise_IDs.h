@@ -13,19 +13,22 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID LVL2_1 = 3868115957U;
         static const AkUniqueID LVL2_1_HIHATPLAY = 1029901154U;
         static const AkUniqueID LVL2_1_HIHATSTOP = 1631337148U;
         static const AkUniqueID LVL2_1_KICKPLAY = 4260762352U;
         static const AkUniqueID LVL2_1_KICKSTOP = 2567667346U;
         static const AkUniqueID LVL2_1_SNAREPLAY = 233758521U;
         static const AkUniqueID LVL2_1_SNARESTOP = 2824720255U;
+        static const AkUniqueID LVL2_2 = 3868115958U;
         static const AkUniqueID LVL2_2_BASS = 52528120U;
         static const AkUniqueID LVL2_2_BELLS = 544256877U;
         static const AkUniqueID LVL2_2_CHORDS = 3227398492U;
+        static const AkUniqueID LVL2_3 = 3868115959U;
         static const AkUniqueID LVL2_3_PLUCKS = 3418998824U;
         static const AkUniqueID LVL2_3_TUNE = 3891698248U;
         static const AkUniqueID LVL2_3_WOW = 497870267U;
-        static const AkUniqueID PLAY_LVL_1 = 2152580024U;
+        static const AkUniqueID PLAYMUSIC = 417627684U;
     } // namespace EVENTS
 
     namespace STATES

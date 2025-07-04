@@ -54,42 +54,15 @@
 				<Event Name="Lvl2_3_Plucks" ID="{E3FB62E7-EF2F-44F7-B9FC-34FD71DFB87C}"/>
 				<Event Name="Lvl2_3_Tune" ID="{9F07300F-EC8C-449D-8349-E20920B2C5F4}"/>
 				<Event Name="Lvl2_3_Wow" ID="{269E1C3E-4D33-4C36-8C64-71ABAEC74635}"/>
-				<Event Name="Play_Lvl_1" ID="{9086E085-2FEA-4B25-B8C8-62027E714E71}">
+				<Event Name="Lvl2_1" ID="{9086E085-2FEA-4B25-B8C8-62027E714E71}">
 					<ChildrenList>
 						<Action Name="" ID="{D6006236-1633-46CE-8359-C4D20E5EF572}" ShortID="573707850">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Lvl2_Stg1" ID="{D5C859D7-29A1-4F37-939D-C8169893E091}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{965352D7-FFB9-4E6B-AE2C-136CA99B99EC}" ShortID="872635891">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="41"/>
+								<Property Name="ActionType" Type="int16" Value="22"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Lvl2_1_SnareStop" ID="{DE01D4F6-D63F-484F-A8FC-EB74351E453F}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{6ECA2662-C10E-4900-8FD8-5F31C00B3F9D}" ShortID="704895531">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="41"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Lvl2_1_KickStop" ID="{C0A6A1C2-42D2-45F3-9E1C-42C3D3343F4D}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{CAB0CBB5-9A91-458E-AB92-BCD4141785DB}" ShortID="942911464">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="41"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Lvl2_1_HiHatStop" ID="{B38394E9-DD62-4876-AEC3-3D44400FD199}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+									<ObjectRef Name="Lvl2_1" ID="{91597A6F-9857-4432-B555-0EF15ECA1A8F}" WorkUnitID="{5F9035CE-D633-4D77-AFAC-532B6A139962}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -140,67 +113,40 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Banjo01_Ind" ID="{27EB5F22-99B4-447C-A3F2-3D0ADB0A7A13}">
+				<Event Name="PlayMusic" ID="{0332F771-1AE4-4137-B15D-FC594A33FFFA}">
 					<ChildrenList>
-						<Action Name="" ID="{E63256EB-04E2-4F8C-A676-9CE45FD3029E}" ShortID="268650831">
+						<Action Name="" ID="{715C761B-1014-467A-845C-BC96D61CC17A}" ShortID="26810734">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Banjo01_Ind" ID="{079AA793-758A-4231-8AE9-A0BF63B434D8}" WorkUnitID="{E90C2CAF-B9AB-4A75-BFCA-1987D0D05287}"/>
+									<ObjectRef Name="Music_1" ID="{2D8E7A4A-1446-4023-9E30-38665D198834}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Banjo02_Ind" ID="{172E28A7-8057-460C-9078-EC54075EE699}">
+				<Event Name="Lvl2_2" ID="{CAE86D2A-C5AA-412F-BD67-E1A2B8B5B6BB}">
 					<ChildrenList>
-						<Action Name="" ID="{66BACF1D-FEBB-47C5-A7E0-99E51B78F55D}" ShortID="21415027">
+						<Action Name="" ID="{B5A06D70-07CE-4DDE-9DA9-C02AA72B9D59}" ShortID="391796223">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Banjo02_Ind" ID="{5926E273-0E00-403B-AA6C-3A067E1A33DB}" WorkUnitID="{E90C2CAF-B9AB-4A75-BFCA-1987D0D05287}"/>
+									<ObjectRef Name="Lvl2_2" ID="{248E5CA2-0B6E-4920-A5E4-6AE218E7691D}" WorkUnitID="{5F9035CE-D633-4D77-AFAC-532B6A139962}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Bass01_Ind" ID="{83FD0B83-C533-47F8-B126-514E5167944F}">
+				<Event Name="Lvl2_3" ID="{186009DE-4B58-40C5-AC4E-B045FB6705B9}">
 					<ChildrenList>
-						<Action Name="" ID="{22EF76E1-229C-4890-A2EA-1FD2B3DE61FB}" ShortID="462240941">
+						<Action Name="" ID="{F1233DE3-3D3A-4381-BAE9-8BA894414FBC}" ShortID="73111611">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Bass01_Ind" ID="{B4205E88-52F1-49EB-AE59-01B0505C8DA3}" WorkUnitID="{E90C2CAF-B9AB-4A75-BFCA-1987D0D05287}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Bass02_Ind" ID="{06E7CB95-01BF-416D-9D22-329926FE7A7E}">
-					<ChildrenList>
-						<Action Name="" ID="{8F544680-53DD-4A4A-B74F-2FB480F2E109}" ShortID="787390418">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Bass02_Ind" ID="{A5447BB3-7740-40D2-8333-714A87AED7A6}" WorkUnitID="{E90C2CAF-B9AB-4A75-BFCA-1987D0D05287}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Bass03_Ind" ID="{CD8DC2C9-A12B-4F25-A383-734FB2DDCA6F}">
-					<ChildrenList>
-						<Action Name="" ID="{AB16536D-6030-4018-B4FF-F7A399D9C695}" ShortID="204902719">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Bss03_Ind" ID="{ED3F6C04-00B3-46DF-B958-7A88605A5963}" WorkUnitID="{E90C2CAF-B9AB-4A75-BFCA-1987D0D05287}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Banjo03_Ind" ID="{0A4D1323-1849-4278-A5F2-5B2EE4B9AE91}">
-					<ChildrenList>
-						<Action Name="" ID="{9F0E99D4-8DE1-4940-A067-385597FC6F0B}" ShortID="505496922">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Banjo03_Ind" ID="{0C608C10-DC11-4744-A6F6-8F9E504D52B5}" WorkUnitID="{E90C2CAF-B9AB-4A75-BFCA-1987D0D05287}"/>
+									<ObjectRef Name="Lvl2_3" ID="{1A014952-9E9F-47E6-8686-A544C3031410}" WorkUnitID="{5F9035CE-D633-4D77-AFAC-532B6A139962}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
