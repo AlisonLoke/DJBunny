@@ -45,7 +45,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         {
             cell.Initialise();
         }
-     
+
     }
 
     private void Update()
@@ -64,8 +64,8 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             blockParentRect.position = pointerPosition;
             HighlightCells();
         }
-      
-        if (!isFollowingMouse && !isSnappedToGrid )
+
+        if (!isFollowingMouse && !isSnappedToGrid)
         {
             Vector2 mousePos = Mouse.current.position.ReadValue();
             bool pointerOver = IsMouseOverEntireBlock(mousePos);
@@ -175,6 +175,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             return;
         }
 
+
         if (!isFollowingMouse)
         {
             BeginPickUp();
@@ -247,7 +248,6 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
     private void BeginPickUp()
     {
-        ResetHoverAnimation();
         selectedBlock = this;
         isFollowingMouse = true;
 
@@ -256,13 +256,16 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             blockUI.ResetToOriginalColours();
         }
 
+
         if (!isSnappedToGrid)
         {
+            ResetHoverAnimation();
             blockOriginPos = blockParentRect.position;
             return;
         }
 
         RemoveFromGrid();
+        ResetHoverAnimation();
     }
 
 
