@@ -663,6 +663,9 @@ public class ConnectionSystem : MonoBehaviour
                 || isLastBlock && endCell.onlyConnectToStartFinish)
             {
                 rectTransformsInBlock.Reverse();
+                rectTransformsInPath.AddRange(rectTransformsInBlock);
+                lastCellInPreviousBlock = rectTransformsInBlock[rectTransformsInBlock.Count - 1];
+                continue;
             }
 
             if (lastCellInPreviousBlock != null)
