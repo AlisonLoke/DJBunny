@@ -12,7 +12,7 @@ public class PathFinder : MonoBehaviour
     private GridCell doubleStartCell;
     private GridCell doubleFinishCell;
     private List<EndCell> pathEndCells = new List<EndCell>();
-  
+
 
     private void Awake()
     {
@@ -34,14 +34,14 @@ public class PathFinder : MonoBehaviour
         // Instead of searching through all cells, let's get the references directly from GridVisual
         GridCell[] allCells = gridVisual.cells;
         Debug.Log($"Finding start/finish among {allCells.Length} cells");
-        
+
         // Get the coordinates from GridData
         Vector2Int startCoords = gridData.startCellCoordinates;
         Vector2Int endCoords = gridData.finishCellCoordinates;
         Vector2Int doubleStartCoords = gridData.doubleStartCellCoordinates;
         Vector2Int doubleFinishCoords = gridData.doubleFinishCellCoordinates;
-        
-        
+
+
         Debug.Log($"Looking for start at ({startCoords.x}, {startCoords.y}) and finish at ({endCoords.x}, {endCoords.y})");
         // Use the already marked cells from GridVisual if possible
         foreach (GridCell cell in allCells)
@@ -60,17 +60,20 @@ public class PathFinder : MonoBehaviour
                 Debug.Log("Found end cell at: " + cell.x + ", " + cell.y);
             }
 
-            if(cell.x == doubleStartCoords.x && cell.y == doubleStartCoords.y)
+            if (gridData.enableDoubleConnectCell)
             {
-                doubleStartCell = cell;
-                Debug.Log("Found double start cell at: " + cell.x + ", " + cell.y);
-            }
+                if (cell.x == doubleStartCoords.x && cell.y == doubleStartCoords.y)
+                {
+                    doubleStartCell = cell;
+                    Debug.Log("Found double start cell at: " + cell.x + ", " + cell.y);
+                }
 
-            if( cell.x == doubleFinishCoords.x && cell.y == doubleFinishCoords.y)
-            {
-                doubleFinishCell = cell;    
-                Debug.Log("Found double finish cell at: " + cell.x + ", " + cell.y);
-    
+                if (cell.x == doubleFinishCoords.x && cell.y == doubleFinishCoords.y)
+                {
+                    doubleFinishCell = cell;
+                    Debug.Log("Found double finish cell at: " + cell.x + ", " + cell.y);
+
+                }
             }
         }
 
@@ -81,9 +84,9 @@ public class PathFinder : MonoBehaviour
         }
     }
 
-   public bool IsStartCell(GridCell thisCell)
+    public bool IsStartCell(GridCell thisCell)
     {
-        if (thisCell == null ) return false;
+        if (thisCell == null) return false;
 
         bool isPrimaryStart = startCell != null && thisCell.x == startCell.x && thisCell.y == startCell.y;
 

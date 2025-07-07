@@ -659,6 +659,7 @@ public class ConnectionSystem : MonoBehaviour
             bool isFirstBlock = index == 0;
             bool isLastBlock = index == blockUisInPath.Count - 1;
             EndCell endCell = rectTransformsInBlock[0].GetComponent<EndCell>();
+           
             if (isFirstBlock && !endCell.onlyConnectToStartFinish
                 || isLastBlock && endCell.onlyConnectToStartFinish)
             {

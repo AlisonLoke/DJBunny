@@ -53,19 +53,23 @@ public class GridVisual : MonoBehaviour
             GameObject newGridCell = Instantiate(gridCellPrefab, gridParent);
             newGridCell.name = $"GridCell: ({xAxis}, {yAxis})";  // Assign name based on coordinates
 
+
             AssignStartandFinishCoordinatesToGridCell(xAxis, yAxis, newGridCell);
-            if (gridData.enableDoubleConnectCell)
-            {
-            AssignDoubleStartandFinishCoordinatesToGridCell(xAxis,yAxis, newGridCell);  
 
-            }
-            AssignClosedGridSpaceCoordinates(xAxis,yAxis,newGridCell);
-
+            AssignClosedGridSpaceCoordinates(xAxis, yAxis, newGridCell);
             GridCell gridCell = newGridCell.GetComponent<GridCell>();
             if (gridCell != null)
             {
                 tempCell.Add(gridCell);
             }
+            Debug.Log($"enableDoubleConnectCell: {gridData.enableDoubleConnectCell}");
+            
+            if (gridData.enableDoubleConnectCell)
+            {
+                AssignDoubleStartandFinishCoordinatesToGridCell(xAxis, yAxis, newGridCell);
+
+            }
+           
         }
 
         cells = tempCell.ToArray(); //list -> array
@@ -97,6 +101,10 @@ public class GridVisual : MonoBehaviour
     }
     public void AssignDoubleStartandFinishCoordinatesToGridCell(int xAxis, int yAxis, GameObject newGridCell)
     {
+        Debug.Log($"Assigning double start/finish at ({xAxis}, {yAxis})");
+
+        
+        
         GridCell gridCell = newGridCell.GetComponent<GridCell>();
         if (gridCell != null)// if the gridcell component exists on gridcell prefab
         {
@@ -118,7 +126,7 @@ public class GridVisual : MonoBehaviour
     }
     public void AssignClosedGridSpaceCoordinates(int xAxis, int yAxis, GameObject newGridCell)
     {
-        
+
         Debug.Log("GridSpace Closed");
         GridCell gridCell = newGridCell.GetComponent<GridCell>();
         if (gridCell != null)
@@ -126,7 +134,7 @@ public class GridVisual : MonoBehaviour
             gridCell.SetCoordinates(xAxis, yAxis);
             for (int i = 0; i < gridData.closedGridSpace.Count; i++)
             {
-                
+
                 if (xAxis == gridData.closedGridSpace[i].x && yAxis == gridData.closedGridSpace[i].y)
                 {
                     gridCell.ClosedCellVisual();

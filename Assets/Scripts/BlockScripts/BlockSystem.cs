@@ -179,7 +179,9 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         if (!isFollowingMouse)
         {
             BeginPickUp();
-            audioObject = AudioManager.instance.PlayMusicNow(blockData.Instruments);
+            //audioObject = AudioManager.instance.Play(blockData.PlayInstrument);
+            //Play the mute here
+            audioObject = AudioManager.instance.Play(blockData.MuteInstrument);
         }
         else
         {
@@ -242,7 +244,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             audioObject = null;
         }
 
-        audioObject = AudioManager.instance.PlayMusicNow(blockData.Instruments);
+        audioObject = AudioManager.instance.Play(blockData.PlayInstrument);
     }
 
 

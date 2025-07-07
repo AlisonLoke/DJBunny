@@ -8,8 +8,8 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
 
     private List<GameObject> instruments = new List<GameObject>();
-    private Queue<AK.Wwise.Event> musicQueue = new Queue<AK.Wwise.Event>();
-    private bool IsMusicPlaying = false;
+    //private Queue<AK.Wwise.Event> musicQueue = new Queue<AK.Wwise.Event>();
+    //private bool IsMusicPlaying = false;
     private GameObject currentAudioObject;
     public AK.Wwise.Event Lvl2_1 = null;
     public AK.Wwise.Event PlayMusic = null; 
@@ -39,7 +39,7 @@ public class AudioManager : MonoBehaviour
 
 
 
-    public GameObject PlayMusicNow(AK.Wwise.Event instrument)
+    public GameObject Play(AK.Wwise.Event instrument)
     {
         if (instrument == null) return null;
         StopMusic();
