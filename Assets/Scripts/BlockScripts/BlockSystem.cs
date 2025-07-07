@@ -198,7 +198,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         {
             RemoveFromGrid();
             ResetBlockToOrigin();
-            Debug.Log("MUSIC STOPPED");
+          
 
 
             return;

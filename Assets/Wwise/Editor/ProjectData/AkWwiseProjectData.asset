@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1c2f7ea7e019e44081a8c815ce5a8e1e
     GuidInternal: 
-    m_lastTime: -8584501311759372928
+    m_lastTime: -8584499620631751107
     List:
     - name: KatMusicTest
       guid: 2eea2b311633a940b82e08d60148e83a
@@ -94,11 +94,11 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 60318edf19da10499ab787cbf746dcca
     GuidInternal: 
-    m_lastTime: -8584501311837749679
+    m_lastTime: -8584499620562521832
     List:
-    - name: Banjo01_Ind
-      guid: 225feb27b4997c44a3f23d0adb0a7a13
-      id: 1106709462
+    - name: Lvl2_1
+      guid: 85e08690ea2f254bb8c862027e714e71
+      id: 3868115957
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -106,95 +106,10 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Banjo01_Ind
+      - ElementName: Lvl2_1
         ObjectType: 3
-        guid: 225feb27b4997c44a3f23d0adb0a7a13
-      Path: Events\Default Work Unit\Banjo01_Ind
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Banjo02_Ind
-      guid: a7282e1757800c469078ec54075ee699
-      id: 3686043613
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Banjo02_Ind
-        ObjectType: 3
-        guid: a7282e1757800c469078ec54075ee699
-      Path: Events\Default Work Unit\Banjo02_Ind
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Banjo03_Ind
-      guid: 23134d0a49187842a5f25b2ee4b9ae91
-      id: 2616549120
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Banjo03_Ind
-        ObjectType: 3
-        guid: 23134d0a49187842a5f25b2ee4b9ae91
-      Path: Events\Default Work Unit\Banjo03_Ind
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Bass01_Ind
-      guid: 830bfd8333c5f847b126514e5167944f
-      id: 2828584415
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Bass01_Ind
-        ObjectType: 3
-        guid: 830bfd8333c5f847b126514e5167944f
-      Path: Events\Default Work Unit\Bass01_Ind
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Bass02_Ind
-      guid: 95cbe706bf016d419d22329926fe7a7e
-      id: 3835499564
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Bass02_Ind
-        ObjectType: 3
-        guid: 95cbe706bf016d419d22329926fe7a7e
-      Path: Events\Default Work Unit\Bass02_Ind
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Bass03_Ind
-      guid: c9c28dcd2ba1254fa383734fb2ddca6f
-      id: 1444490905
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Bass03_Ind
-        ObjectType: 3
-        guid: c9c28dcd2ba1254fa383734fb2ddca6f
-      Path: Events\Default Work Unit\Bass03_Ind
+        guid: 85e08690ea2f254bb8c862027e714e71
+      Path: Events\Default Work Unit\Lvl2_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -300,6 +215,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Lvl2_2
+      guid: 2a6de8caaac52f41bd67e1a2b8b5b6bb
+      id: 3868115958
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl2_2
+        ObjectType: 3
+        guid: 2a6de8caaac52f41bd67e1a2b8b5b6bb
+      Path: Events\Default Work Unit\Lvl2_2
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Lvl2_2_Bass
       guid: 1260cdc27037db4eaf471e99f7d3e7f9
       id: 52528120
@@ -348,6 +280,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: 370973adc68c0a45a5dfe42f05cf02cf
       Path: Events\Default Work Unit\Lvl2_2_Chords
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl2_3
+      guid: de096018584bc540ac4eb045fb6705b9
+      id: 3868115959
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl2_3
+        ObjectType: 3
+        guid: de096018584bc540ac4eb045fb6705b9
+      Path: Events\Default Work Unit\Lvl2_3
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -402,9 +351,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Play_Lvl_1
-      guid: 85e08690ea2f254bb8c862027e714e71
-      id: 2152580024
+    - name: PlayMusic
+      guid: 71f73203e41a3741b15dfc594a33fffa
+      id: 417627684
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -412,10 +361,10 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Play_Lvl_1
+      - ElementName: PlayMusic
         ObjectType: 3
-        guid: 85e08690ea2f254bb8c862027e714e71
-      Path: Events\Default Work Unit\Play_Lvl_1
+        guid: 71f73203e41a3741b15dfc594a33fffa
+      Path: Events\Default Work Unit\PlayMusic
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -738,7 +687,7 @@ MonoBehaviour:
         guid: f703d7b29405cc43aaf875ea0d84041c
       Path: Triggers\Default Work Unit\Lvl2_1_SnareStop
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 030000000500000006000000070000000b0000000c000000110000001200000018000000190000001e0000001f000000210000004400000045000000ab010000ac0100009e0200005c0d00005d0d0000270e0000
+  ExpandedWaapiItemIds: 01000000030000000500000006000000070000000b0000000c000000110000001200000018000000190000001e0000001f0000002100000044000000450000001b0100001c010000ab010000ac010000ea010000eb0100009e0200005c0d00005d0d0000270e0000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

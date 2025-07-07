@@ -124,6 +124,9 @@
 									</ReferenceList>
 									<ChildrenList>
 										<MusicTrack Name="Lvl2_Stg1_Perc_HiHat_160_44_8m" ID="{FD3F20A3-6D0E-472F-8C85-9073906C2AE8}" ShortID="17736657">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="3"/>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="DefaultSwitchOrState">
 													<ObjectRef Name="Lvl2_1_HiHatStop" ID="{61A14CD4-F641-4570-A4C7-799948281845}" WorkUnitID="{5F9035CE-D633-4D77-AFAC-532B6A139962}"/>
@@ -205,6 +208,17 @@
 																<ReferenceList>
 																	<Reference Name="TrackSequenceSwitch">
 																		<ObjectRef Name="Lvl2_1_HiHatPlay" ID="{5F73146A-5AD2-4CF5-BA3A-361711501C9B}" WorkUnitID="{5F9035CE-D633-4D77-AFAC-532B6A139962}"/>
+																	</Reference>
+																</ReferenceList>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{EB5E9437-0A86-4333-A6A8-8F84DC870B5D}">
+																<ReferenceList>
+																	<Reference Name="TrackSequenceSwitch">
+																		<ObjectRef Name="Lvl2_1_HiHatStop" ID="{61A14CD4-F641-4570-A4C7-799948281845}" WorkUnitID="{5F9035CE-D633-4D77-AFAC-532B6A139962}"/>
 																	</Reference>
 																</ReferenceList>
 															</MusicTrackSequence>

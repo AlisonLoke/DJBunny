@@ -11,7 +11,8 @@ public class AudioManager : MonoBehaviour
     private Queue<AK.Wwise.Event> musicQueue = new Queue<AK.Wwise.Event>();
     private bool IsMusicPlaying = false;
     private GameObject currentAudioObject;
-    //public AK.Wwise.Event musicEvent;
+    public AK.Wwise.Event Lvl2_1 = null;
+    public AK.Wwise.Event PlayMusic = null; 
 
 
     private void Awake()
@@ -26,13 +27,15 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-    //private void Update()
-    //{
-    //    Debug.Log("MUSIC IS PLAYING RIGHT NOW");
-    //    musicEvent.Post(gameObject);
-    //}
+        PlayMusic.Post(gameObject); 
 
+    }
+
+    private void Start()
+    {
+        Lvl2_1.Post(gameObject);
+        
+    }
 
 
 
