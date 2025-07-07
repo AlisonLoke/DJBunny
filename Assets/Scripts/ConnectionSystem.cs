@@ -113,22 +113,7 @@ public class ConnectionSystem : MonoBehaviour
             }
         }
 
-        // Find path if we have both start and finish cells
-        //Debug.Log($"After checking all cells - Start cell found: {startConnectedEndCell != null}, Finish cell found: {finishConnectedEndCell != null}");
-        //if(connectedStartCells.Count > 0 && connectedFinishCells.Count > 0)
-        //{
-        //    Debug.Log($"Found {connectedStartCells.Count} start(s) and {connectedFinishCells.Count} finish(es), finding paths...");
-        //    startConnectedEndCell = connectedStartCells[0];
-        //    finishConnectedEndCell = connectedFinishCells[0];
-        //    FindLongestPath();
-        //}
-        //else
-        //{
-        //    Debug.Log("Missing a start or finish connection, clearing path");
-        //    currentPath.Clear();
-        //    ClearConnectedLine();
-        //    ClearBlockPulses();
-        //}
+
         if (startConnectedEndCell != null && finishConnectedEndCell != null)
         {
             Debug.Log("Both start and finish cells found, finding path...");
@@ -153,8 +138,7 @@ public class ConnectionSystem : MonoBehaviour
             BlockSystem placedBlockSystem = placedBlockRect.GetComponent<BlockSystem>();
             if (placedBlockSystem != null && placedBlockSystem != fromEndCell.blockSystem) // Skip the current block
             {
-                //EndCell[] endCellsInBlock = placedBlockSystem.endCells;
-                //allEndCells.AddRange(endCellsInBlock);
+
 
                 foreach (EndCell endCell in placedBlockSystem.endCells)
                 {
@@ -206,63 +190,63 @@ public class ConnectionSystem : MonoBehaviour
         Debug.Log($"Finding path from {startConnectedEndCell.name} to {finishConnectedEndCell.name}");
 
         // Create a new path to work with
-        List<EndCell> workingPath = new List<EndCell>();
-
-        // Start recursive search
-        FindAllPaths(startConnectedEndCell, finishConnectedEndCell, workingPath);
-        Debug.Log($"Found {allPaths.Count} possible paths");
+        CreateWorkingPathAndStartSearchForPossiblePaths();
 
         //Filter out Paths that use only one side of a sister pair
-        int beforeFilter = allPaths.Count;
-        allPaths = allPaths.Where(IsPathValid).ToList();
-        int removed = beforeFilter - allPaths.Count;
-
-        Debug.Log($"Removed {removed} invalid partial-block paths. Remaining: {allPaths.Count}");
+        FilterOutInvalidPaths();
 
         if (allPaths.Count == 0)
         {
-            allPaths.Clear();
-            currentPath.Clear();
-            Debug.Log("No valid path found. Don't trigger win scene");
+            NoValidPathFound();
             return;
         }
 
-        // Find the longest path
-        foreach (List<EndCell> path in allPaths)
-        {
-            if (path.Count > currentPath.Count)
-            {
-                currentPath = new List<EndCell>(path);
-            }
-        }
+        // Select the longest path
+        SelectLongestPath();
 
-        Debug.Log($"Selected longest path with {currentPath.Count} cells");
+        //Debug method to Log longest path
         foreach (EndCell cell in currentPath)
         {
             Debug.Log($"Path point: {cell.name} at position {cell.transform.position}");
         }
 
+        if (!CheckAllBlockUsed(currentPath))
+        {
+            return;
+        }
+        
+
+
+        Debug.Log("PATH COMPLETE");
+        onValidPathCompleted?.Invoke(currentPath.Count);//invoke fancy name for trigger event gets triggered
+
+        if (currentPath.Count == 0) return;
+
+        PathComplete();
+    }
+
+    private bool CheckAllBlockUsed(List<EndCell> path)
+    {
         if (requireAllBlocksUsed && !AreAllBlockUsed(currentPath))
         {
             Debug.Log("Not all blocks are used in this Path");
             ClearConnectedLine();
             ClearBlockPulses();
-            return;
+            return false;
         }
-        Debug.Log("PATH COMPLETE");
-        //UpdateConnectionLine();
-        //load win scene
-        //SceneManager.LoadScene("WinCutScene");
-        //blockUI = startConnectedEndCell?.GetComponentInParent<BlockUI>();
 
+        return true;
+    }
 
+    private void NoValidPathFound()
+    {
+        allPaths.Clear();
+        currentPath.Clear();
+        Debug.Log("No valid path found. Don't trigger win scene");
+    }
 
-        onValidPathCompleted?.Invoke(currentPath.Count);//invoke fancy name for trigger event gets triggered
-
-
-
-        if (currentPath.Count == 0) return;
-
+    private void PathComplete()
+    {
         List<BlockUI> blockUIPath = new List<BlockUI>();
         foreach (EndCell endCell in currentPath)
         {
@@ -275,6 +259,45 @@ public class ConnectionSystem : MonoBehaviour
 
         StartCoroutine(PulseCompletePath());
     }
+
+    private void SelectLongestPath()
+    {
+        foreach (List<EndCell> path in allPaths)
+        {
+            if (path.Count > currentPath.Count)
+            {
+                currentPath = new List<EndCell>(path);
+            }
+        }
+
+        Debug.Log($"Selected longest path with {currentPath.Count} cells");
+    }
+
+    private void FilterOutInvalidPaths()
+    {
+        int beforeFilter = allPaths.Count;
+        allPaths = allPaths.Where(IsPathValid).ToList();
+        int removed = beforeFilter - allPaths.Count;
+
+        Debug.Log($"Removed {removed} invalid partial-block paths. Remaining: {allPaths.Count}");
+    }
+
+    private void CreateWorkingPathAndStartSearchForPossiblePaths()
+    {
+        List<EndCell> workingPath = new List<EndCell>();
+
+        // Start recursive search
+        FindAllPaths(startConnectedEndCell, finishConnectedEndCell, workingPath);
+        Debug.Log($"Found {allPaths.Count} possible paths");
+    }
+
+
+
+
+
+
+
+
 
 
     private bool AreAllBlockUsed(List<EndCell> path)
@@ -300,6 +323,58 @@ public class ConnectionSystem : MonoBehaviour
 
         return allUsed;
     }
+    private void FindAllPaths(EndCell currentCell, EndCell targetCell, List<EndCell> path)
+    {
+        // Add current cell to path
+
+        if (path.Contains(currentCell)) { return; }
+        path.Add(currentCell);
+
+        // If we reached the target, we found a complete path
+        if (currentCell == targetCell)
+        {
+            // Save a copy of this path to our list of paths
+            allPaths.Add(new List<EndCell>(path));
+            return;// no need to keep going
+        }
+        // Check the sister (if it exists and isn't already visited)
+        if (currentCell.sisterEndCell != null)
+        {
+
+            if (!path.Contains(currentCell.sisterEndCell))
+            {
+                FindAllPaths(currentCell.sisterEndCell, targetCell, new List<EndCell>(path));
+                //Returning means that a sister end cell must be checked before further connections are checked
+                //This prevents a scenario where just part of a block in used in a path
+                return;
+            }
+        }
+
+        //  Try all connected cells (if any)
+        if (currentCell.connectedEndCell != null)
+        {
+            foreach (EndCell connected in currentCell.connectedEndCell)
+            {
+                FindAllPaths(connected, targetCell, new List<EndCell>(path));
+            }
+        }
+    }
+
+    private bool IsPathValid(List<EndCell> path)
+    {
+        if (path.Count < 3) return false; // Must go through at least one middle cell
+        foreach (EndCell cell in path)
+        {
+            if (cell.sisterEndCell != null && !path.Contains(cell.sisterEndCell))
+            {
+                //sister exists but is not in the path so it is invalid
+                return false;
+
+            }
+        }
+        return true;
+    }
+
     public void PreviewCurrentPath()
     {
         currentPath.Clear();
@@ -525,58 +600,6 @@ public class ConnectionSystem : MonoBehaviour
         previouslyPulsedBlocks.Clear();
     }
 
-    private void FindAllPaths(EndCell currentCell, EndCell targetCell, List<EndCell> path)
-    {
-        // Add current cell to path
-
-        if (path.Contains(currentCell)) { return; }
-        path.Add(currentCell);
-
-        // If we reached the target, we found a complete path
-        if (currentCell == targetCell)
-        {
-            // Save a copy of this path to our list of paths
-            allPaths.Add(new List<EndCell>(path));
-            return;// no need to keep going
-        }
-        // Check the sister (if it exists and isn't already visited)
-        if (currentCell.sisterEndCell != null)
-        {
-
-            if (!path.Contains(currentCell.sisterEndCell))
-            {
-                FindAllPaths(currentCell.sisterEndCell, targetCell, new List<EndCell>(path));
-                //Returning means that a sister end cell must be checked before further connections are checked
-                //This prevents a scenario where just part of a block in used in a path
-                return;
-            }
-        }
-
-        //  Try all connected cells (if any)
-        if (currentCell.connectedEndCell != null)
-        {
-            foreach (EndCell connected in currentCell.connectedEndCell)
-            {
-                FindAllPaths(connected, targetCell, new List<EndCell>(path));
-            }
-        }
-    }
-
-    private bool IsPathValid(List<EndCell> path)
-    {
-        if (path.Count < 3) return false; // Must go through at least one middle cell
-        foreach (EndCell cell in path)
-        {
-            if (cell.sisterEndCell != null && !path.Contains(cell.sisterEndCell))
-            {
-                //sister exists but is not in the path so it is invalid
-                return false;
-
-            }
-        }
-        return true;
-    }
-
     private void UpdateConnectionLine()
     {
         // If we don't have a path, don't draw anything
@@ -792,33 +815,33 @@ public class ConnectionSystem : MonoBehaviour
         return blockUisInPath;
     }
 
-    private void FadeOutPathLine(float duration = 1.0f)
-    {
-
-        //a is alpha, naming follows rgba
-        if (lineRenderer == null || lineRenderer.color.a <= 0f) return;
-
-        currentLineFadeTween?.Kill();
-        // DoTween.Alpha gradually changes alpha colour 
-        currentLineFadeTween = DOTween.ToAlpha(GetLineRendererColour, SetLineRendererColour, 0f, duration).SetEase(Ease.InOutSine);
-
-
-    }
-
-    private Color GetLineRendererColour()
-    {
-        return lineRenderer.color;
-    }
-    private void SetLineRendererColour(Color newColour)
-    {
-        lineRenderer.color = newColour;
-        lineRenderer.SetAllDirty(); //refreshes ui so new colour can be applied
-    }
     private void ClearConnectedLine()
     {
         lineRenderer.points = new Vector2[0];
         lineRenderer.SetAllDirty();
     }
 
+    //private void FadeOutPathLine(float duration = 1.0f)
+    //{
+
+    //    //a is alpha, naming follows rgba
+    //    if (lineRenderer == null || lineRenderer.color.a <= 0f) return;
+
+    //    currentLineFadeTween?.Kill();
+    //    // DoTween.Alpha gradually changes alpha colour 
+    //    currentLineFadeTween = DOTween.ToAlpha(GetLineRendererColour, SetLineRendererColour, 0f, duration).SetEase(Ease.InOutSine);
+
+
+    //}
+
+    //private Color GetLineRendererColour()
+    //{
+    //    return lineRenderer.color;
+    //}
+    //private void SetLineRendererColour(Color newColour)
+    //{
+    //    lineRenderer.color = newColour;
+    //    lineRenderer.SetAllDirty(); //refreshes ui so new colour can be applied
+    //}
 
 }
