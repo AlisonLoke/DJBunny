@@ -15,18 +15,26 @@ public class ConnectionSystem : MonoBehaviour
     [HideInInspector] public BlockSystem blockSystem;
     public static int currentLevelIndex = 1;
     public GridCell currentGridCell;
+   
+    //Primary Connection variables
     private EndCell startConnectedEndCell;
     private EndCell finishConnectedEndCell;
     //stores a single path.
     private List<EndCell> currentPath = new List<EndCell>();
+
+    //Secondary Connection variables for dual connect feature
+    private EndCell doubleStartConnectedEndCell;
+    private EndCell doubleFinishConnectedEndCell;
+    private List<EndCell> currentDoublePath = new();
+    
+    //Path Management
     //Contains multiple list of endCell object paths. A collection of paths
     private List<List<EndCell>> allPaths = new List<List<EndCell>>();
     public List<BlockUI> allBlockUIs = new List<BlockUI>();
     private List<BlockUI> previouslyPulsedBlocks = new List<BlockUI>();
-    private List<List<EndCell>> completedPaths = new List<List<EndCell>>();
-    //private BlockUI blockUI;
-    //private Image cellImage;
-    private Tween currentLineFadeTween;
+
+  
+    //private Tween currentLineFadeTween;
 
     public event System.Action<int> onValidPathCompleted;
 
@@ -36,6 +44,7 @@ public class ConnectionSystem : MonoBehaviour
     [SerializeField] private UILineRenderer lineRenderer;
     [SerializeField] private RectTransform canvas;
     [SerializeField] private PathFinder pathFinder;
+    [SerializeField] private GridData gridData; //ref the gridata for dual connect feature
 
     [Tooltip("Disable for levels where not all blocks are required to complete the level")]
     [SerializeField] private bool requireAllBlocksUsed = true;
@@ -69,51 +78,70 @@ public class ConnectionSystem : MonoBehaviour
 
     public void CheckConnectionsForAllEndCells()
     {
-
-        currentPath.Clear();
-        startConnectedEndCell = null;
-        finishConnectedEndCell = null;
-        ClearConnectedLine();
+        ResetStartAndFinishConnections();
 
         Debug.Log($"Checking connections for {endCells.Count} end cells");
-        List<EndCell> connectedStartCells = new();
-        List<EndCell> connectedFinishCells = new();
+
         // Check each end cell's position and connections
         foreach (EndCell endCell in endCells)
         {
             // Make sure we have current grid cell info - THIS IS CRITICAL
             endCell.currentGridCell = endCell.blockSystem.SnapClosestGridCell(endCell.transform.position);
 
-            if (endCell.currentGridCell == null)
-            {
-                Debug.Log($"EndCell {endCell.name} has no grid cell");
-                continue;
-            }
-
+            if (IsEndCellOffGrid(endCell)) continue;
             //Debug.Log($"EndCell at grid position: {endCell.currentGridCell.x}, {endCell.currentGridCell.y}");
 
             // Check for connections to other EndCells
             endCell.CheckForEndCells();
 
-            // Check if this EndCell is on a start or finish cell
-            if (pathFinder != null && pathFinder.IsStartCell(endCell.currentGridCell))
-            {
-                startConnectedEndCell = endCell;
-                //connectedStartCells.Add(endCell);
-                endCell.ConnectedToStartAndFinish(endCell.currentGridCell);
-                Debug.Log($"Found EndCell on start cell {endCell.name} at: ({endCell.currentGridCell.x}, {endCell.currentGridCell.y})");
-            }
-
-            if (pathFinder != null && pathFinder.IsFinishCell(endCell.currentGridCell))
-            {
-                finishConnectedEndCell = endCell;
-                //connectedFinishCells.Add(endCell);
-                endCell.ConnectedToStartAndFinish(endCell.currentGridCell);
-                Debug.Log($"Found EndCell on finish cell {endCell.name} at: ({endCell.currentGridCell.x}, {endCell.currentGridCell.y})");
-            }
+            CheckIfEndCellIsOnStartCell(endCell);
+            CheckIfEndCellIsOnFinishCell(endCell);
         }
 
+        EndCellFoundStartAndFinishCell();
 
+    }
+
+    private void ResetStartAndFinishConnections()
+    {
+        currentPath.Clear();
+        startConnectedEndCell = null;
+        finishConnectedEndCell = null;
+        ClearConnectedLine();
+    }
+    private bool IsEndCellOffGrid(EndCell endCell)
+    {
+        if (endCell.currentGridCell == null)
+        {
+            Debug.Log($"EndCell {endCell.name} has no grid cell");
+            return true;
+        }
+        return false;
+    }
+    private void CheckIfEndCellIsOnStartCell(EndCell endCell)
+    {
+        // Check if this EndCell is on a start or finish cell
+        if (pathFinder != null && pathFinder.IsStartCell(endCell.currentGridCell))
+        {
+            startConnectedEndCell = endCell;
+            //connectedStartCells.Add(endCell);
+            endCell.ConnectedToStartAndFinish(endCell.currentGridCell);
+            Debug.Log($"Found EndCell on start cell {endCell.name} at: ({endCell.currentGridCell.x}, {endCell.currentGridCell.y})");
+        }
+    }
+    private void CheckIfEndCellIsOnFinishCell(EndCell endCell)
+    {
+        if (pathFinder != null && pathFinder.IsFinishCell(endCell.currentGridCell))
+        {
+            finishConnectedEndCell = endCell;
+            //connectedFinishCells.Add(endCell);
+            endCell.ConnectedToStartAndFinish(endCell.currentGridCell);
+            Debug.Log($"Found EndCell on finish cell {endCell.name} at: ({endCell.currentGridCell.x}, {endCell.currentGridCell.y})");
+        }
+    }
+
+    private void EndCellFoundStartAndFinishCell()
+    {
         if (startConnectedEndCell != null && finishConnectedEndCell != null)
         {
             Debug.Log("Both start and finish cells found, finding path...");
@@ -126,8 +154,9 @@ public class ConnectionSystem : MonoBehaviour
             ClearConnectedLine();
             ClearBlockPulses();
         }
-
     }
+
+
 
     public GridCell FindAdjacentEndCells(EndCell fromEndCell, Image blockCellImage, int x, int y)
     {
@@ -290,16 +319,6 @@ public class ConnectionSystem : MonoBehaviour
         FindAllPaths(startConnectedEndCell, finishConnectedEndCell, workingPath);
         Debug.Log($"Found {allPaths.Count} possible paths");
     }
-
-
-
-
-
-
-
-
-
-
     private bool AreAllBlockUsed(List<EndCell> path)
     {
         List<BlockUI> allBlocks = FindObjectsByType<BlockUI>(FindObjectsSortMode.None)
@@ -323,6 +342,16 @@ public class ConnectionSystem : MonoBehaviour
 
         return allUsed;
     }
+
+
+
+
+
+
+
+
+
+
     private void FindAllPaths(EndCell currentCell, EndCell targetCell, List<EndCell> path)
     {
         // Add current cell to path
