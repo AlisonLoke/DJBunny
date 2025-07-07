@@ -646,67 +646,98 @@ public class ConnectionSystem : MonoBehaviour
         List<RectTransform> rectTransformsInPath = new();
         RectTransform lastCellInPreviousBlock = null;
 
-        List<RectTransform> firstBlockRectTransforms = blockUisInPath[0].GetBlockCellImagesRectTransforms();
-        float maxDistanceBetweenBlocks = Vector2.Distance(firstBlockRectTransforms[0].transform.position, firstBlockRectTransforms[1].transform.position);
-
         for (int index = 0; index < blockUisInPath.Count; index++)
         {
-            BlockUI blockUi = blockUisInPath[index];
-            List<RectTransform> rectTransformsInBlock = blockUi.GetBlockCellImagesRectTransforms();
+            BlockUI currentBlockUi = blockUisInPath[index];
+            List<RectTransform> currentBlockRects = currentBlockUi.GetBlockCellImagesRectTransforms();
 
-            //TODO: refator method out
-            // Handle First/Last block "faster" check
             bool isFirstBlock = index == 0;
             bool isLastBlock = index == blockUisInPath.Count - 1;
-            EndCell endCell = rectTransformsInBlock[0].GetComponent<EndCell>();
-           
-            if (isFirstBlock && !endCell.onlyConnectToStartFinish
-                || isLastBlock && endCell.onlyConnectToStartFinish)
+
+            if (isFirstBlock && !IsCellStartOrFinish(currentBlockRects[0]))
             {
-                rectTransformsInBlock.Reverse();
-                rectTransformsInPath.AddRange(rectTransformsInBlock);
-                lastCellInPreviousBlock = rectTransformsInBlock[rectTransformsInBlock.Count - 1];
+                currentBlockRects.Reverse();
+                rectTransformsInPath.AddRange(currentBlockRects);
+                lastCellInPreviousBlock = currentBlockRects[^1];
                 continue;
             }
 
             if (lastCellInPreviousBlock != null)
             {
-                float distanceToFirstCell = Vector2.Distance(rectTransformsInBlock[0].transform.position, lastCellInPreviousBlock.transform.position);
-                float distanceToLastCell = Vector2.Distance(rectTransformsInBlock[^1].transform.position, lastCellInPreviousBlock.transform.position);
-
-                float distanceDifference = Mathf.Abs(distanceToFirstCell - distanceToLastCell);
-
-                // If nearly equidistant: look ahead to next block to break the tie
-                if (distanceDifference < 10f && index + 1 < blockUisInPath.Count)
-                {
-                    List<RectTransform> nextBlockRects = blockUisInPath[index + 1].GetBlockCellImagesRectTransforms();
-
-                    // Calculate cost of keeping current block order:
-                    float costNormal = Vector2.Distance(rectTransformsInBlock[^1].transform.position, nextBlockRects[0].transform.position);
-                    // Calculate cost of reversing current block order:
-                    float costReversed = Vector2.Distance(rectTransformsInBlock[0].transform.position, nextBlockRects[0].transform.position);
-
-                    if (costNormal > costReversed)
-                    {
-                        rectTransformsInBlock.Reverse();
-                    }
-                }
-                else
-                {
-                    // Default behavior: just pick the shortest direct connection to previous block
-                    if (distanceToFirstCell > distanceToLastCell)
-                    {
-                        rectTransformsInBlock.Reverse();
-                    }
-                }
+                OrientBlockForShortestConnection(
+                    currentBlockRects,
+                    lastCellInPreviousBlock,
+                    blockUisInPath,
+                    index,
+                    isLastBlock
+                );
             }
 
-            rectTransformsInPath.AddRange(rectTransformsInBlock);
-            lastCellInPreviousBlock = rectTransformsInBlock[rectTransformsInBlock.Count - 1];
+            rectTransformsInPath.AddRange(currentBlockRects);
+            lastCellInPreviousBlock = currentBlockRects[^1];
         }
 
         return rectTransformsInPath;
     }
+
+
+    private bool IsCellStartOrFinish(RectTransform cell)
+    {
+        EndCell endCellComponent = cell.GetComponent<EndCell>();
+        return endCellComponent.onlyConnectToStartFinish;
+    }
+
+    private void OrientBlockForShortestConnection(
+        List<RectTransform> currentBlockRects,
+        RectTransform lastCellInPreviousBlock,
+        List<BlockUI> blockUisInPath,
+        int currentIndex,
+        bool isLastBlock
+    )
+    {
+        float distanceToFirstCell = Vector2.Distance(currentBlockRects[0].transform.position, lastCellInPreviousBlock.transform.position);
+        float distanceToLastCell = Vector2.Distance(currentBlockRects[^1].transform.position, lastCellInPreviousBlock.transform.position);
+        float distanceDifference = Mathf.Abs(distanceToFirstCell - distanceToLastCell);
+
+        if (distanceDifference >= 10f)
+        {
+            // Pick the shortest connection directly
+            if (distanceToFirstCell > distanceToLastCell)
+            {
+                currentBlockRects.Reverse();
+            }
+            return;
+        }
+
+        if (HasNextBlock(blockUisInPath, currentIndex))
+        {
+            List<RectTransform> nextBlockRects = blockUisInPath[currentIndex + 1].GetBlockCellImagesRectTransforms();
+            AdjustOrientationBasedOnNextBlock(currentBlockRects, nextBlockRects);
+            return;
+        }
+
+        if (isLastBlock && IsCellStartOrFinish(currentBlockRects[0]))
+        {
+            currentBlockRects.Reverse();
+        }
+    }
+
+    private bool HasNextBlock(List<BlockUI> blockUisInPath, int currentIndex)
+    {
+        return currentIndex + 1 < blockUisInPath.Count;
+    }
+
+    private void AdjustOrientationBasedOnNextBlock(List<RectTransform> currentBlockRects, List<RectTransform> nextBlockRects)
+    {
+        float costNormal = Vector2.Distance(currentBlockRects[^1].transform.position, nextBlockRects[0].transform.position);
+        float costReversed = Vector2.Distance(currentBlockRects[0].transform.position, nextBlockRects[0].transform.position);
+
+        if (costNormal > costReversed)
+        {
+            currentBlockRects.Reverse();
+        }
+    }
+
 
     private List<Vector2> GetWorldPosFromBlockTransforms(List<RectTransform> rectTransformsInPath)
     {
@@ -760,6 +791,7 @@ public class ConnectionSystem : MonoBehaviour
 
         return blockUisInPath;
     }
+
     private void FadeOutPathLine(float duration = 1.0f)
     {
 
