@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D7E43FE7-C43B-44D6-817F-D70215A07D42}" SchemaVersion="123" RootDocumentID="{4CFCD80E-9E6D-4B61-9334-558299F149BF}" ParentDocumentID="{4CFCD80E-9E6D-4B61-9334-558299F149BF}">
+	<Events>
+		<WorkUnit Name="Menu" ID="{D7E43FE7-C43B-44D6-817F-D70215A07D42}" OwnerID="{4CFCD80E-9E6D-4B61-9334-558299F149BF}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="MainMenu_Play" ID="{6315C09B-4757-448A-83D9-5F65328A40CD}">
+					<ChildrenList>
+						<Action Name="" ID="{73F23EF7-2421-4B7E-B008-21A6992DEA16}" ShortID="975843288">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Main Menu Button" ID="{EC7C4E5E-B8FB-4F0E-93FF-2075D07AE49F}" WorkUnitID="{9150BF7F-00AB-4373-9030-763DD4A5AE08}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

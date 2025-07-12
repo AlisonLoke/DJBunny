@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{42E49290-2BCC-4743-BBDE-E70655EFD427}" SchemaVersion="123" RootDocumentID="{6C117D23-D6B5-4862-ACA2-F489A152CC13}" ParentDocumentID="{6C117D23-D6B5-4862-ACA2-F489A152CC13}">
+	<AudioObjects>
+		<WorkUnit Name="Bus Int" ID="{42E49290-2BCC-4743-BBDE-E70655EFD427}" OwnerID="{6C117D23-D6B5-4862-ACA2-F489A152CC13}" PersistMode="Nested">
+			<ChildrenList>
+				<Sound Name="VEHBus_Bus Constant_1" ID="{C0C35AAF-039A-4807-A9E4-60FE21F411A9}" ShortID="24515289">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="VEHBus_Bus Constant_1" ID="{4B199D05-7A2E-4BA4-A822-094F44CC298D}">
+							<Language>SFX</Language>
+							<AudioFile>VEHBus_Bus Constant_1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="809242091"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="VEHBus_Bus Constant_1" ID="{4B199D05-7A2E-4BA4-A822-094F44CC298D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="VEHBus_Bus Constant_2" ID="{E449175C-97D5-4771-A580-FAC302F43FA9}" ShortID="616067917">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="VEHBus_Bus Constant_2" ID="{D2561120-B762-4B6D-8314-7785B355D81F}">
+							<Language>SFX</Language>
+							<AudioFile>VEHBus_Bus Constant_2.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="250890795"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="VEHBus_Bus Constant_2" ID="{D2561120-B762-4B6D-8314-7785B355D81F}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

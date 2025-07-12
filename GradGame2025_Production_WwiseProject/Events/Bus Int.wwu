@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FBCDEEFD-D914-4167-A56B-075138555946}" SchemaVersion="123" RootDocumentID="{6A59FCB6-35AD-44E1-BCCE-166BC9203635}" ParentDocumentID="{6A59FCB6-35AD-44E1-BCCE-166BC9203635}">
+	<Events>
+		<WorkUnit Name="Bus Int" ID="{FBCDEEFD-D914-4167-A56B-075138555946}" OwnerID="{6A59FCB6-35AD-44E1-BCCE-166BC9203635}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Bus_StopConstant" ID="{6753EE6B-156F-4144-B32A-D55142320BE4}">
+					<ChildrenList>
+						<Action Name="" ID="{57BAA2BE-80E5-420C-B8ED-BAE64C161160}" ShortID="195019647">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VEHBus_Bus Constant_1" ID="{C0C35AAF-039A-4807-A9E4-60FE21F411A9}" WorkUnitID="{42E49290-2BCC-4743-BBDE-E70655EFD427}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Bus_StopConstant2" ID="{37E38019-511F-4816-8568-CF8D5A5E33A8}">
+					<ChildrenList>
+						<Action Name="" ID="{AA86B1E9-C0B1-4E64-81E0-7658AD9DBD4B}" ShortID="806469407">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VEHBus_Bus Constant_2" ID="{E449175C-97D5-4771-A580-FAC302F43FA9}" WorkUnitID="{42E49290-2BCC-4743-BBDE-E70655EFD427}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Bus_PlayConstant" ID="{F15D593B-D074-405F-AF82-3D1BE54882F1}">
+					<ChildrenList>
+						<Action Name="" ID="{8D7FD474-DB2B-4D47-8AEB-2CDAB61D02DF}" ShortID="388845263">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VEHBus_Bus Constant_1" ID="{C0C35AAF-039A-4807-A9E4-60FE21F411A9}" WorkUnitID="{42E49290-2BCC-4743-BBDE-E70655EFD427}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Bus_PlayConstant2" ID="{DD722AD0-ABEE-430A-ACC0-4282A5BD91E2}">
+					<ChildrenList>
+						<Action Name="" ID="{FD5726B2-0349-4084-8592-DE8EBA90AC27}" ShortID="733953619">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VEHBus_Bus Constant_2" ID="{E449175C-97D5-4771-A580-FAC302F43FA9}" WorkUnitID="{42E49290-2BCC-4743-BBDE-E70655EFD427}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

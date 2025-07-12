@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4CFCD80E-9E6D-4B61-9334-558299F149BF}" SchemaVersion="123">
+	<Events>
+		<WorkUnit Name="UI" ID="{4CFCD80E-9E6D-4B61-9334-558299F149BF}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="Puzzle" ID="{D75AC369-FB43-4B91-BF4F-D22ECB85FF20}" PersistMode="Reference"/>
+				<WorkUnit Name="Menu" ID="{D7E43FE7-C43B-44D6-817F-D70215A07D42}" PersistMode="Reference"/>
+				<Event Name="UI_PlayPopUp" ID="{C4F4645C-335C-416F-B246-E8CE11D0A2FE}">
+					<ChildrenList>
+						<Action Name="" ID="{F5154C44-509E-4BE7-BF79-E6AB080EC5A5}" ShortID="715211473">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UIAlert_Pop_Up" ID="{8C895F2C-1180-44E9-A110-B93C52246768}" WorkUnitID="{F9EF6DF3-C3A5-49E1-8AC9-2B5959525D35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

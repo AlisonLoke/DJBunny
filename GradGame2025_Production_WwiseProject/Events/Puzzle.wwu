@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D75AC369-FB43-4B91-BF4F-D22ECB85FF20}" SchemaVersion="123" RootDocumentID="{4CFCD80E-9E6D-4B61-9334-558299F149BF}" ParentDocumentID="{4CFCD80E-9E6D-4B61-9334-558299F149BF}">
+	<Events>
+		<WorkUnit Name="Puzzle" ID="{D75AC369-FB43-4B91-BF4F-D22ECB85FF20}" OwnerID="{4CFCD80E-9E6D-4B61-9334-558299F149BF}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Puzzle_PlayRotation" ID="{B8FCC2DF-002E-407D-96D1-D96D5D2CCCE9}">
+					<ChildrenList>
+						<Action Name="" ID="{3D03083B-6AC6-46E2-A9B7-F66272D656DF}" ShortID="536458688">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Puzzle Mechanic_Rotation Sound" ID="{2ACF5C81-F9F1-4AFD-8E83-F79DC6289869}" WorkUnitID="{F9EF6DF3-C3A5-49E1-8AC9-2B5959525D35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Puzzle_PlayBlink" ID="{3F411BB5-5124-4AD0-B7CC-E0917024B231}">
+					<ChildrenList>
+						<Action Name="" ID="{362BF3D5-D250-436B-A77A-FE5F6DEFEE8B}" ShortID="7131208">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Puzzle Mechanic_Blink Sound 1-01" ID="{8BB618B5-3E34-4D21-87BC-FC6E91BC13E6}" WorkUnitID="{F9EF6DF3-C3A5-49E1-8AC9-2B5959525D35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Puzzle_PlayBlink2" ID="{CD18E3F3-81C5-47AD-BF63-24ABC3F7EEC4}">
+					<ChildrenList>
+						<Action Name="" ID="{57AC29EA-C65D-475F-B73D-4CB346EE3B1F}" ShortID="1008662918">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Puzzle Mechanic_Blink Sound 2-01" ID="{59E734EA-01AF-44D1-962E-645A67F8FC72}" WorkUnitID="{F9EF6DF3-C3A5-49E1-8AC9-2B5959525D35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Puzzle_PlayDrop" ID="{56BDD7CD-94E1-4ED4-B8BB-7C4995FF73B4}">
+					<ChildrenList>
+						<Action Name="" ID="{67F29923-656F-45A7-8CF9-4C70A2BC0A03}" ShortID="843561701">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Puzzle Mechanic_Drop sound" ID="{551F7D88-A269-4B2B-8510-92716A7DB5AA}" WorkUnitID="{F9EF6DF3-C3A5-49E1-8AC9-2B5959525D35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Puzzle_PlayPickUp" ID="{B6D83DAA-B4F7-446A-BC06-EECD98C6264C}">
+					<ChildrenList>
+						<Action Name="" ID="{E39FBF82-7E08-4116-BF14-6CE6F39FA6C9}" ShortID="286903506">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Puzzle Mechanic_Pick Up sound" ID="{EB9058B4-55DC-4600-A45D-9684E0E1E72C}" WorkUnitID="{F9EF6DF3-C3A5-49E1-8AC9-2B5959525D35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Puzzle_PlayCompletion" ID="{1A887FFA-6CB4-4C98-B63D-319DC7A5EF4E}">
+					<ChildrenList>
+						<Action Name="" ID="{E21C2F8B-804C-41C5-9BED-2DDE3762D5C9}" ShortID="1031868624">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Puzzle Mechanic_Completion Puzzle Lights Sound 1" ID="{BA94C168-CF27-43DA-B071-67E3A7239EDC}" WorkUnitID="{F9EF6DF3-C3A5-49E1-8AC9-2B5959525D35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Puzzle_PlayCompletion2" ID="{22A7D1C2-6E31-4114-A851-7427728080D6}">
+					<ChildrenList>
+						<Action Name="" ID="{E15B7776-D34A-4325-938A-79554C922070}" ShortID="926037725">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Puzzle Mechanic_Completion Puzzle Lights Sound 2" ID="{F94A7303-039E-48FC-9BB1-6E1D0632D433}" WorkUnitID="{F9EF6DF3-C3A5-49E1-8AC9-2B5959525D35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Puzzle_PlayCompletion4" ID="{78F1A261-5F56-4329-8CCA-71CD4361F435}">
+					<ChildrenList>
+						<Action Name="" ID="{DDEECB93-788A-47C3-8D82-1358FF194A01}" ShortID="1027104535">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Puzzle Mechanic_Completion Puzzle Lights Sound 4" ID="{AA8BF23C-59F0-42C8-BC76-DAB83FFAB484}" WorkUnitID="{F9EF6DF3-C3A5-49E1-8AC9-2B5959525D35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Puzzle_PlayCompletion5" ID="{3D0F6A3E-6A95-4BD5-B3F3-B161060EA86B}">
+					<ChildrenList>
+						<Action Name="" ID="{FC194420-0134-42B3-8B38-363F522325C1}" ShortID="680790972">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Puzzle Mechanic_Completion Puzzle Lights Sound 5" ID="{EE6CC619-702C-4CD1-995D-74FB6BED7DD4}" WorkUnitID="{F9EF6DF3-C3A5-49E1-8AC9-2B5959525D35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Puzzle_PlayCompletion3" ID="{1FA852FF-9D22-4C64-B3B4-666FB2B84729}">
+					<ChildrenList>
+						<Action Name="" ID="{C3E8F4EE-F128-415B-A96B-5F9879B965D1}" ShortID="386934438">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Puzzle Mechanic_Completion Puzzle Lights Sound 3" ID="{990013C0-B402-4C51-9372-CBFC705BA0A4}" WorkUnitID="{F9EF6DF3-C3A5-49E1-8AC9-2B5959525D35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Puzzle_StopBlink" ID="{FB2C8B83-DF04-4020-A729-2CE49FEA65CA}">
+					<ChildrenList>
+						<Action Name="" ID="{C374B67F-028D-4F9D-9C6B-A883E00CDB44}" ShortID="460046068">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Puzzle Mechanic_Blink Sound 1-01" ID="{8BB618B5-3E34-4D21-87BC-FC6E91BC13E6}" WorkUnitID="{F9EF6DF3-C3A5-49E1-8AC9-2B5959525D35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Puzzle_StopBlink2" ID="{9380F85A-6EA1-4CA9-BD83-532516AE6083}">
+					<ChildrenList>
+						<Action Name="" ID="{7201602D-B238-4EE7-932F-CA66ACA0235A}" ShortID="477726358">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Puzzle Mechanic_Blink Sound 2-01" ID="{59E734EA-01AF-44D1-962E-645A67F8FC72}" WorkUnitID="{F9EF6DF3-C3A5-49E1-8AC9-2B5959525D35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9150BF7F-00AB-4373-9030-763DD4A5AE08}" SchemaVersion="123" RootDocumentID="{22EF482E-BE34-4CBB-9C2C-E27382CF2D0C}" ParentDocumentID="{22EF482E-BE34-4CBB-9C2C-E27382CF2D0C}">
+	<AudioObjects>
+		<WorkUnit Name="Menu" ID="{9150BF7F-00AB-4373-9030-763DD4A5AE08}" OwnerID="{22EF482E-BE34-4CBB-9C2C-E27382CF2D0C}" PersistMode="Nested">
+			<ChildrenList>
+				<RandomSequenceContainer Name="Main Menu Button" ID="{EC7C4E5E-B8FB-4F0E-93FF-2075D07AE49F}" ShortID="435696633">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Main Menu_Buttons-04" ID="{0A64C5EA-C4DE-4A9C-B6F0-EBB5D2E5776A}" ShortID="374074417">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Main Menu_Buttons-04" ID="{DDA9FB1A-364E-4CAF-9D5D-B722BD51CD99}">
+									<Language>SFX</Language>
+									<AudioFile>Main Menu_Buttons-04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="71480746"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Main Menu_Buttons-04" ID="{DDA9FB1A-364E-4CAF-9D5D-B722BD51CD99}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Main Menu_Buttons-02" ID="{781EA0E2-62FC-4509-BF06-3FDF29BAAA68}" ShortID="416880868">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Main Menu_Buttons-02" ID="{B98B4C8C-CEE6-4859-84B3-B922C0BAF3AF}">
+									<Language>SFX</Language>
+									<AudioFile>Main Menu_Buttons-02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="864253250"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Main Menu_Buttons-02" ID="{B98B4C8C-CEE6-4859-84B3-B922C0BAF3AF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Main Menu_Buttons-08" ID="{08374DE5-C6CA-43F5-A09E-0BE5CCD511A8}" ShortID="1006661375">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Main Menu_Buttons-08" ID="{B9B43C12-186C-49E4-A89F-8A2A44D4C86E}">
+									<Language>SFX</Language>
+									<AudioFile>Main Menu_Buttons-08.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="298126571"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Main Menu_Buttons-08" ID="{B9B43C12-186C-49E4-A89F-8A2A44D4C86E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Main Menu_Buttons-10" ID="{47F35BCD-DF87-4D26-9129-D9596ABD5D67}" ShortID="1000800222">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Main Menu_Buttons-10" ID="{A4FBB6BE-CD00-4286-BC5A-F1408A0FD47E}">
+									<Language>SFX</Language>
+									<AudioFile>Main Menu_Buttons-10.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="643726567"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Main Menu_Buttons-10" ID="{A4FBB6BE-CD00-4286-BC5A-F1408A0FD47E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Main Menu_Buttons-06" ID="{EB0A5B7E-4A08-4157-B2DA-FF2483A12B41}" ShortID="568802113">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Main Menu_Buttons-06" ID="{D342C7F9-F51E-45DD-870C-C2F657C9D876}">
+									<Language>SFX</Language>
+									<AudioFile>Main Menu_Buttons-06.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="970725993"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Main Menu_Buttons-06" ID="{D342C7F9-F51E-45DD-870C-C2F657C9D876}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
