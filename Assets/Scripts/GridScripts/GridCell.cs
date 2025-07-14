@@ -1,3 +1,4 @@
+using NUnit.Framework.Api;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,7 +21,7 @@ public class GridCell : MonoBehaviour
     public bool startCell = false;
     public bool finishCell = false;
     public bool IsCloseCell = false;
-
+    public ConnectCellType connectCellType;
 
 
 
@@ -65,8 +66,9 @@ public class GridCell : MonoBehaviour
         image.color = Green;
     }
 
-    public void ConnectCellVisual(bool isStartCell)
+    public void ConnectCellVisual(bool isStartCell, ConnectCellType newConnectCellType)
     {
+        connectCellType = newConnectCellType;
         if (isStartCell)
         {
             startCell = true;
@@ -76,23 +78,17 @@ public class GridCell : MonoBehaviour
             finishCell = true;
         }
 
-
-
-        connectCellImage.SetActive(true);
-    }
-    public void DoubleConnectCellVisual(bool isStartCell)
-    {
-        if (isStartCell)
+        switch (connectCellType)
         {
-            startCell = true;
+            case ConnectCellType.Primary:
+                connectCellImage.SetActive(true);
+                break;
+            case ConnectCellType.Secondary:
+                doubleConnectCellImage.SetActive(true);
+                break;
+            default:
+                break;
         }
-        else
-        {
-            finishCell = true;
-        }
-
-
-        doubleConnectCellImage.SetActive(true);
     }
 
     public void ClosedCellVisual()

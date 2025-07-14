@@ -62,7 +62,7 @@ public class GridVisual : MonoBehaviour
             {
                 tempCell.Add(gridCell);
             }
-            Debug.Log($"enableDoubleConnectCell: {gridData.enableDoubleConnectCell}");
+            //Debug.Log($"enableDoubleConnectCell: {gridData.enableDoubleConnectCell}");
             
             if (gridData.enableDoubleConnectCell)
             {
@@ -86,14 +86,13 @@ public class GridVisual : MonoBehaviour
             gridCell.SetCoordinates(xAxis, yAxis); // assign coordinate values on the grid.
             if (xAxis == gridData.startCellCoordinates.x && yAxis == gridData.startCellCoordinates.y)
             {
-                gridCell.ConnectCellVisual(true);//specify start and end here
-
+                gridCell.ConnectCellVisual(true, ConnectCellType.Primary);//specify start and end here
 
             }
 
             if (xAxis == gridData.finishCellCoordinates.x && yAxis == gridData.finishCellCoordinates.y)
             {
-                gridCell.ConnectCellVisual(false);
+                gridCell.ConnectCellVisual(false, ConnectCellType.Primary);
 
 
             }
@@ -101,7 +100,7 @@ public class GridVisual : MonoBehaviour
     }
     public void AssignDoubleStartandFinishCoordinatesToGridCell(int xAxis, int yAxis, GameObject newGridCell)
     {
-        Debug.Log($"Assigning double start/finish at ({xAxis}, {yAxis})");
+        //Debug.Log($"Assigning double start/finish at ({xAxis}, {yAxis})");
 
         
         
@@ -111,14 +110,14 @@ public class GridVisual : MonoBehaviour
             gridCell.SetCoordinates(xAxis, yAxis); // assign coordinate values on the grid.
             if (xAxis == gridData.doubleStartCellCoordinates.x && yAxis == gridData.doubleStartCellCoordinates.y)
             {
-                gridCell.DoubleConnectCellVisual(true);//specify start and end here
+                gridCell.ConnectCellVisual(true, ConnectCellType.Secondary);//specify start and end here
 
 
             }
 
             if (xAxis == gridData.doubleFinishCellCoordinates.x && yAxis == gridData.doubleFinishCellCoordinates.y)
             {
-                gridCell.DoubleConnectCellVisual(false);
+                gridCell.ConnectCellVisual(false, ConnectCellType.Secondary);
 
 
             }
@@ -127,7 +126,7 @@ public class GridVisual : MonoBehaviour
     public void AssignClosedGridSpaceCoordinates(int xAxis, int yAxis, GameObject newGridCell)
     {
 
-        Debug.Log("GridSpace Closed");
+        //Debug.Log("GridSpace Closed");
         GridCell gridCell = newGridCell.GetComponent<GridCell>();
         if (gridCell != null)
         {

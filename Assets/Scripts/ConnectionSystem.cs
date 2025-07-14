@@ -15,6 +15,7 @@ public class ConnectionSystem : MonoBehaviour
     [HideInInspector] public BlockSystem blockSystem;
     public static int currentLevelIndex = 1;
     public GridCell currentGridCell;
+   [SerializeField] private ConnectCellType connectCellType = ConnectCellType.Primary;
    
     //Primary Connection variables
     private EndCell startConnectedEndCell;
@@ -123,6 +124,13 @@ public class ConnectionSystem : MonoBehaviour
         // Check if this EndCell is on a start or finish cell
         if (pathFinder != null && pathFinder.IsStartCell(endCell.currentGridCell))
         {
+
+            Debug.Log($"EndCell {endCell.name} has ConnectCellType: {endCell.currentGridCell.connectCellType}");
+            if (connectCellType != endCell.currentGridCell.connectCellType)
+            {
+                return;
+            }
+           
             startConnectedEndCell = endCell;
             //connectedStartCells.Add(endCell);
             endCell.ConnectedToStartAndFinish(endCell.currentGridCell);
@@ -133,6 +141,12 @@ public class ConnectionSystem : MonoBehaviour
     {
         if (pathFinder != null && pathFinder.IsFinishCell(endCell.currentGridCell))
         {
+            Debug.Log($"EndCell {endCell.name} has ConnectCellType: {endCell.currentGridCell.connectCellType}");
+            if (connectCellType != endCell.currentGridCell.connectCellType)
+            {
+                return;
+            }
+
             finishConnectedEndCell = endCell;
             //connectedFinishCells.Add(endCell);
             endCell.ConnectedToStartAndFinish(endCell.currentGridCell);
