@@ -103,7 +103,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         // Check if mouse is over the parent rect
         if (RectTransformUtility.RectangleContainsScreenPoint(blockParentRect, mousePos))
         {
-            Debug.Log("Mouse is over the block");
+            //Debug.Log("Mouse is over the block");
             return true;
         }
 

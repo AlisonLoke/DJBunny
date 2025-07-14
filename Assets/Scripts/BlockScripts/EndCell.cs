@@ -175,7 +175,7 @@ public class EndCell : MonoBehaviour
             IsEndCellOnClosedCell = false;
         }
     }
- 
+
 
     public void StartBlink(string hexColour, float duration = 0.5f)
     {
