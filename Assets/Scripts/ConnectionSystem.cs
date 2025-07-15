@@ -125,7 +125,7 @@ public class ConnectionSystem : MonoBehaviour
         if (pathFinder != null && pathFinder.IsStartCell(endCell.currentGridCell))
         {
 
-            Debug.Log($"EndCell {endCell.name} has ConnectCellType: {endCell.currentGridCell.connectCellType}");
+            //Debug.Log($"EndCell {endCell.name} has ConnectCellType: {endCell.connectCellType}");
             if (connectCellType != endCell.currentGridCell.connectCellType)
             {
                 return;

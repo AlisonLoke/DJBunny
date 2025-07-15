@@ -54,10 +54,10 @@ public class EndCell : MonoBehaviour
 
 
         //Check all four adjacent grid cells;
-        GridCell down = ConnectionSystem.instance.FindAdjacentEndCells(this, cellImage, currentCell.x + 1, currentCell.y);
-        GridCell up = ConnectionSystem.instance.FindAdjacentEndCells(this, cellImage, currentCell.x - 1, currentCell.y);
-        GridCell right = ConnectionSystem.instance.FindAdjacentEndCells(this, cellImage, currentCell.x, currentCell.y + 1);
-        GridCell left = ConnectionSystem.instance.FindAdjacentEndCells(this, cellImage, currentCell.x, currentCell.y - 1);
+        GridCell down = ConnectionManager.instance.FindAdjacentEndCells(this, cellImage, currentCell.x + 1, currentCell.y);
+        GridCell up = ConnectionManager.instance.FindAdjacentEndCells(this, cellImage, currentCell.x - 1, currentCell.y);
+        GridCell right = ConnectionManager.instance.FindAdjacentEndCells(this, cellImage, currentCell.x, currentCell.y + 1);
+        GridCell left = ConnectionManager.instance.FindAdjacentEndCells(this, cellImage, currentCell.x, currentCell.y - 1);
 
         //for debug purpose
         if (down != null)

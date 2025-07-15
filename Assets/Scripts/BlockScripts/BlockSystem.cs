@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -232,7 +233,8 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         }
         GridCell snapClosestGridCell = SnapClosestGridCell(blockParentRect.position);
         FinalBlockPlacement(snapClosestGridCell);
-        ConnectionSystem.instance.PreviewCurrentPath();
+        //ConnectionSystem.instance.PreviewCurrentPath();
+        ConnectionManager.instance.PreviewCurrentPath();    
 
         Debug.Log("PLAYING MUSIC");
 
@@ -277,7 +279,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         UnMarkBlockCellAsOccupied();
         RemovePlaceBlockFromList(blockParentRect);
         RemoveBlockUIFromList();
-        ConnectionSystem.instance.CheckConnectionsForAllEndCells();
+        ConnectionManager.instance.CheckConnectionsForAllEndCells();
 
 
         foreach (EndCell thisCell in endCells)
@@ -296,7 +298,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
         blockParentRect.position = blockOriginPos;
         blockParentRect.rotation = Quaternion.identity;
-        ConnectionSystem.instance.ClearBlockPulses();
+        ConnectionManager.instance.ClearBlockPulses();
 
         if (blockUI != null)
         {
@@ -371,7 +373,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
             //Debug.Log(">> Triggering path check after placing block");
             //Check for any new connections if they are valid or complete
-            ConnectionSystem.instance.CheckConnectionsForAllEndCells();
+            ConnectionManager.instance.CheckConnectionsForAllEndCells();
 
         }
         else
@@ -385,11 +387,12 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
     private void CheckForFirstEndCell()
     {
-        if (!ConnectionSystem.instance.endCells.Contains(endCells[0]))
-        {
-            //Debug.Log($"Adding {endCells.Length} EndCells to connection system");
-            ConnectionSystem.instance.endCells.AddRange(endCells);
-        }
+        //if (!ConnectionSystem.instance.endCells.Contains(endCells[0]))
+        //{
+        //    //Debug.Log($"Adding {endCells.Length} EndCells to connection system");
+        //    ConnectionSystem.instance.endCells.AddRange(endCells);
+        //}
+        ConnectionManager.instance.EndCell(endCells);
     }
     private void UpdateEndCellGridPositions()
     {
@@ -418,7 +421,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             {
                 UnMarkBlockCellAsOccupied();
                 thisEndCell.StopBlink();
-                ConnectionSystem.instance.ClearBlockPulses();
+                ConnectionManager.instance.ClearBlockPulses();
                 Debug.LogWarning("Block on end cell, returning to origin.");
                 blockParentRect.position = blockOriginPos;
                 isSnappedToGrid = false;
@@ -541,41 +544,59 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
     public void AddPlaceBlockToList(RectTransform thisBlock)
     {
-        ConnectionSystem.instance.placedBlocks.Add(thisBlock);
+        //ConnectionSystem.instance.placedBlocks.Add(thisBlock);  
+        ConnectionManager.instance.AddPlacedBlocks(thisBlock);
 
     }
 
     public void AddBlockUIToList()
     {
         BlockUI newBlockUI = GetComponent<BlockUI>();
-        if (newBlockUI != null)
-        {
+        //if (newBlockUI != null)
+        //{
 
-            ConnectionSystem.instance.allBlockUIs.Add(newBlockUI);
-        }
+        //    ConnectionSystem.instance.allBlockUIs.Add(newBlockUI);
+        //}
+        ConnectionManager.instance.AddAllBlockUI(newBlockUI);
     }
     public void RemoveBlockUIFromList()
     {
         BlockUI thisBlockUI = GetComponent<BlockUI>();
-        if (thisBlockUI != null && ConnectionSystem.instance.allBlockUIs.Contains(thisBlockUI))
-        {
-            ConnectionSystem.instance.allBlockUIs.Remove(thisBlockUI);
-        }
+        //if (thisBlockUI != null && ConnectionSystem.instance.allBlockUIs.Contains(thisBlockUI))
+        //{
+        //    ConnectionSystem.instance.allBlockUIs.Remove(thisBlockUI);
+        //}
+        ConnectionManager.instance.RemoveAllBlockUI(thisBlockUI);
     }
     public void RemovePlaceBlockFromList(RectTransform thisBlock)
     {
-        if (!ConnectionSystem.instance.placedBlocks.Contains(thisBlock))
-        {
-            return;
-        }
-        ConnectionSystem.instance.placedBlocks.Remove(thisBlock);
+        //if (!ConnectionSystem.instance.placedBlocks.Contains(thisBlock))
+        //{
+        //    return;
+        //}
+        ConnectionManager.instance.RemovePlacedBlock(thisBlock);
 
         foreach (EndCell cell in endCells)
         {
-            ConnectionSystem.instance.endCells.Remove(cell);
+            //ConnectionSystem.instance.endCells.Remove(cell);
+            ConnectionManager.instance.Remove(cell);
         }
     }
 
+    //public class ConnectionManager
+    //{
+    //    public static ConnectionManager instance;
+
+    //    private ConnectionSystem[] connectionSystems;
+
+    //    public void Remove(EndCell endCell)
+    //    {
+    //        foreach (ConnectionSystem system in connectionSystems)
+    //        {
+    //            system.endCells.Remove(endCell);
+    //        }
+    //    }
+    //}
 
     public List<RectTransform> GetListOfAllEndCells()
     {

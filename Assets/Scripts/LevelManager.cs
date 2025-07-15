@@ -16,7 +16,7 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         Instance = this;
-        ConnectionSystem.instance.onValidPathCompleted += CheckIfLevelComplete;
+        ConnectionManager.instance.onValidPathCompleted += CheckIfLevelComplete;
 
         allEndCells = FindObjectsByType<EndCell>(FindObjectsSortMode.None);
 
@@ -25,7 +25,7 @@ public class LevelManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        ConnectionSystem.instance.onValidPathCompleted -= CheckIfLevelComplete;
+        ConnectionManager.instance.onValidPathCompleted -= CheckIfLevelComplete;
     }
 
     // the one who triggers (invoke) the event is called the publisher
