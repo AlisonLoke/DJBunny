@@ -27,12 +27,14 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        Debug.Log("Starting to play music");
         PlayMusic.Post(gameObject); 
 
     }
 
     private void Start()
     {
+        Debug.Log("Loading Lvl2 music");
         Lvl2_1.Post(gameObject);
         
     }
@@ -42,13 +44,13 @@ public class AudioManager : MonoBehaviour
     public GameObject Play(AK.Wwise.Event instrument)
     {
         if (instrument == null) return null;
-        StopMusic();
+        //StopMusic();
 
-        currentAudioObject = new GameObject("Audio_" + instrument.Name);
-        currentAudioObject.transform.SetParent(this.transform);
-        instruments.Add(currentAudioObject);
+        //currentAudioObject = new GameObject("Audio_" + instrument.Name);
+        //currentAudioObject.transform.SetParent(this.transform);
+        //instruments.Add(currentAudioObject);
 
-        instrument.Post(currentAudioObject);
+        instrument.Post(gameObject);
 
         return currentAudioObject;
     }
