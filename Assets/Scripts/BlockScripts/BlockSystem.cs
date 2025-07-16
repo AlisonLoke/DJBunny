@@ -392,7 +392,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         //    //Debug.Log($"Adding {endCells.Length} EndCells to connection system");
         //    ConnectionSystem.instance.endCells.AddRange(endCells);
         //}
-        ConnectionManager.instance.EndCell(endCells);
+        ConnectionManager.instance.RegisterEndCells(endCells);
     }
     private void UpdateEndCellGridPositions()
     {

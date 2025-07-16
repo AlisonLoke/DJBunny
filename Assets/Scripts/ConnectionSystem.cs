@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class ConnectionSystem : MonoBehaviour
 {
-    public static ConnectionSystem instance;
+    //public static ConnectionSystem instance;
     public List<EndCell> connectedEndCell = new List<EndCell>();
     public List<RectTransform> placedBlocks;
     public List<EndCell> endCells;
@@ -24,9 +24,7 @@ public class ConnectionSystem : MonoBehaviour
     private List<EndCell> currentPath = new List<EndCell>();
 
     //Secondary Connection variables for dual connect feature
-    private EndCell doubleStartConnectedEndCell;
-    private EndCell doubleFinishConnectedEndCell;
-    private List<EndCell> currentDoublePath = new();
+ 
     
     //Path Management
     //Contains multiple list of endCell object paths. A collection of paths
@@ -55,7 +53,7 @@ public class ConnectionSystem : MonoBehaviour
         blockSystem = GetComponentInParent<BlockSystem>();
         //cellImage = GetComponent<Image>();
         //currentGridCell = blockSystem.SnapClosestGridCell(transform.position);
-        instance = this;
+        //instance = this;
 
 
     }
