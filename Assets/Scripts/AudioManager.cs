@@ -1,12 +1,18 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
+using System;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
-    //private List <AK.Wwise.Event> instruments = new List<AK.Wwise.Event>();
-    private List<GameObject> instruments = new List<GameObject>();
 
+    private List<GameObject> instruments = new List<GameObject>();
+    //private Queue<AK.Wwise.Event> musicQueue = new Queue<AK.Wwise.Event>();
+    //private bool IsMusicPlaying = false;
+    private GameObject currentAudioObject;
+    public AK.Wwise.Event Lvl2_1 = null;
+    public AK.Wwise.Event PlayMusic = null; 
 
 
     private void Awake()
@@ -21,49 +27,46 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-       
-  
+        Debug.Log("Starting to play music");
+        PlayMusic.Post(gameObject); 
 
-     
+    }
+
+    private void Start()
+    {
+        Debug.Log("Loading Lvl2 music");
+        Lvl2_1.Post(gameObject);
+        
     }
 
 
 
-    public GameObject PlayMusic(AK.Wwise.Event instrument)
+    public GameObject Play(AK.Wwise.Event instrument)
     {
-        if(instrument == null)
-        {
-            Debug.LogWarning("clip is null in PlayMusic");
-            return null; 
-        }
+        if (instrument == null) return null;
+        //StopMusic();
 
-        GameObject newAudioObj = new GameObject("Audio_" + instrument);
-        newAudioObj.transform.SetParent(this.transform);
+        //currentAudioObject = new GameObject("Audio_" + instrument.Name);
+        //currentAudioObject.transform.SetParent(this.transform);
+        //instruments.Add(currentAudioObject);
 
+        instrument.Post(gameObject);
 
-        //AudioSource newSource = newAudioObj.AddComponent<AudioSource>();
-        //newSource.clip = clip;
-        //newSource.loop = true; 
-        instrument.Post(newAudioObj); // post music to this game object
-
-        instruments.Add(newAudioObj);
-
-        Debug.Log("Playing layered sound: " + instrument);
-        return newAudioObj;
+        return currentAudioObject;
     }
 
     public void StopMusic()
     {
-        foreach (GameObject instrument in instruments)
+        if (currentAudioObject != null)
         {
-            if (instrument != null)
-            {
-                AkUnitySoundEngine.StopAll(instrument);
-                Destroy(instrument);
-                
-            }
+            AkUnitySoundEngine.StopAll(currentAudioObject);
+            Destroy(currentAudioObject);
+            instruments.Remove(currentAudioObject);
+            currentAudioObject = null;
         }
-
-        instruments.Clear();
     }
+
+
+
+
 }

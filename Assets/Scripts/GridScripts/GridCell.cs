@@ -1,3 +1,4 @@
+using NUnit.Framework.Api;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,11 +16,12 @@ public class GridCell : MonoBehaviour
     [SerializeField] private Color Red;
     [SerializeField] private Image image;
     [SerializeField] private GameObject connectCellImage;
+    [SerializeField] private GameObject doubleConnectCellImage;
     [SerializeField] private GameObject closedCellImage;
     public bool startCell = false;
     public bool finishCell = false;
-    public bool IsCloseCell = false;    
-
+    public bool IsCloseCell = false;
+    public ConnectCellType connectCellType;
 
 
 
@@ -64,12 +66,29 @@ public class GridCell : MonoBehaviour
         image.color = Green;
     }
 
-    public void ConnectCellVisual(bool isStartCell, bool isFinishCell)
+    public void ConnectCellVisual(bool isStartCell, ConnectCellType newConnectCellType)
     {
-        startCell = isStartCell;    
-        finishCell = isFinishCell;
-        
-        connectCellImage.SetActive(true);
+        connectCellType = newConnectCellType;
+        if (isStartCell)
+        {
+            startCell = true;
+        }
+        else
+        {
+            finishCell = true;
+        }
+
+        switch (connectCellType)
+        {
+            case ConnectCellType.Primary:
+                connectCellImage.SetActive(true);
+                break;
+            case ConnectCellType.Secondary:
+                doubleConnectCellImage.SetActive(true);
+                break;
+            default:
+                break;
+        }
     }
 
     public void ClosedCellVisual()

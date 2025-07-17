@@ -17,7 +17,8 @@ public class BlockData : ScriptableObject
     [SerializeField] private List<Vector2Int> BlockCoordinatesList;
 
     [Header("Music")]
-    public AK.Wwise.Event Instruments = null;
+    public AK.Wwise.Event PlayInstrument = null;
+    public AK.Wwise.Event MuteInstrument = null;
 
 
     [Header("Genre")]

@@ -1,4 +1,7 @@
 using System.Collections.Generic;
+using System.Linq;
+using DG.Tweening;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -16,6 +19,12 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
     private GameObject audioObject;
     private Image cellImage;
     private BlockUI blockUI;
+    private bool isHovering = false;
+    private bool isAnimatingHover = false;
+    private Vector2 originalAnchoredPos;
+
+
+
 
     [SerializeField] private RectTransform blockParentRect;
     [SerializeField] private RectTransform[] blockRectransforms;
@@ -32,11 +41,12 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         gridVisual = gridParent.GetComponent<GridVisual>();
         endCells = GetComponentsInChildren<EndCell>();
         blockUI = GetComponent<BlockUI>();
-
+        originalAnchoredPos = blockParentRect.anchoredPosition;
         foreach (EndCell cell in endCells)
         {
             cell.Initialise();
         }
+
     }
 
     private void Update()
@@ -55,7 +65,95 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             blockParentRect.position = pointerPosition;
             HighlightCells();
         }
+
+        if (!isFollowingMouse && !isSnappedToGrid)
+        {
+            Vector2 mousePos = Mouse.current.position.ReadValue();
+            bool pointerOver = IsMouseOverEntireBlock(mousePos);
+
+            if (pointerOver && !isHovering)
+            {
+                isHovering = true;
+                StartHoverAnimation();
+            }
+            else if (!pointerOver && isHovering)
+            {
+
+                isHovering = false;
+                EndHoverAnimation();
+            }
+
+        }
+
+        if (!isFollowingMouse && !isSnappedToGrid && !isHovering && !isAnimatingHover)
+        {
+            Vector2 mousePos = Mouse.current.position.ReadValue();
+            bool pointerOver = IsMouseOverEntireBlock(mousePos);
+            bool blockOriginPos = Vector2.Distance(blockParentRect.anchoredPosition, originalAnchoredPos) > 0.1f;
+
+            if (!pointerOver && blockOriginPos)
+            {
+                // Force return to original position if we're somehow stuck
+                blockParentRect.anchoredPosition = originalAnchoredPos;
+            }
+        }
     }
+
+    private bool IsMouseOverEntireBlock(Vector2 mousePos)
+    {
+        // Check if mouse is over the parent rect
+        if (RectTransformUtility.RectangleContainsScreenPoint(blockParentRect, mousePos))
+        {
+            //Debug.Log("Mouse is over the block");
+            return true;
+        }
+
+        // Check if mouse is over any of the child block rectangles
+        foreach (RectTransform blockRect in blockRectransforms)
+        {
+            if (RectTransformUtility.RectangleContainsScreenPoint(blockRect, mousePos))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private void StartHoverAnimation()
+    {
+        if (isAnimatingHover) { return; }
+
+        isAnimatingHover = true;
+        blockParentRect.DOKill();
+        blockParentRect.DOAnchorPos(originalAnchoredPos + new Vector2(0, 20f), 0.1f).SetEase(Ease.OutQuad)
+        .OnComplete(() =>
+        {
+            isAnimatingHover = false;
+        });
+    }
+
+
+    private void EndHoverAnimation()
+    {
+        if (isAnimatingHover) return;
+        isAnimatingHover = true;
+        blockParentRect.DOKill();
+        // Animate scale back to normal
+        blockParentRect.DOAnchorPos(originalAnchoredPos, 0.1f).SetEase(Ease.OutQuad)
+        .OnComplete(() =>
+        {
+            isAnimatingHover = false;
+        });
+    }
+    private void ResetHoverAnimation()
+    {
+        blockParentRect.DOKill(); // stop ongoing animations
+        blockParentRect.anchoredPosition = originalAnchoredPos;
+        isHovering = false;
+        isAnimatingHover = false;
+    }
+
 
     private void ClearEndCells()
     {
@@ -78,10 +176,13 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             return;
         }
 
+
         if (!isFollowingMouse)
         {
             BeginPickUp();
-
+            //audioObject = AudioManager.instance.Play(blockData.PlayInstrument);
+            //Play the mute here
+            //audioObject = AudioManager.instance.Play(blockData.MuteInstrument);
         }
         else
         {
@@ -95,19 +196,14 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         {
             return;
         }
-       
+
         if (isSnappedToGrid)
         {
             RemoveFromGrid();
             ResetBlockToOrigin();
-            Debug.Log("MUSIC STOPPED");
+          
 
-            if (audioObject != null)
-            {
-                blockData.Instruments.Stop(audioObject); // stop this instrument on the block
-                Destroy(audioObject); // destroy it ro clean up
-                audioObject = null;
-            }
+
             return;
         }
 
@@ -132,34 +228,51 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         {
             ResetBlockToOrigin();
             UnhighlightAllCells();
+            AudioManager.instance.StopMusic();
             return;
         }
         GridCell snapClosestGridCell = SnapClosestGridCell(blockParentRect.position);
         FinalBlockPlacement(snapClosestGridCell);
-        ConnectionSystem.instance.PreviewCurrentPath();
+        //ConnectionSystem.instance.PreviewCurrentPath();
+        ConnectionManager.instance.PreviewCurrentPath();    
 
         Debug.Log("PLAYING MUSIC");
 
-        //audioObject = AudioManager.instance.PlayMusic(blockData.AudioClip);
-        //AudioManager.instance.drumSoundTest.Post(gameObject);
-        audioObject = AudioManager.instance.PlayMusic(blockData.Instruments);
+
+        //AudioManager.instance.QueueMusic(blockData.Instruments);
+        if (audioObject != null)
+        {
+            AudioManager.instance.StopMusic();
+            audioObject = null;
+        }
+
+        audioObject = AudioManager.instance.Play(blockData.PlayInstrument);
     }
 
 
     private void BeginPickUp()
     {
-        
         selectedBlock = this;
         isFollowingMouse = true;
 
+        if (blockUI != null)
+        {
+            blockUI.ResetToOriginalColours();
+        }
+
+
         if (!isSnappedToGrid)
         {
+            ResetHoverAnimation();
             blockOriginPos = blockParentRect.position;
             return;
         }
-
+        audioObject = AudioManager.instance.Play(blockData.MuteInstrument);
         RemoveFromGrid();
+        ResetHoverAnimation();
+        ConnectionManager.instance.ResetCompletedPaths();
     }
+
 
     private void RemoveFromGrid()
     {
@@ -167,7 +280,8 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         UnMarkBlockCellAsOccupied();
         RemovePlaceBlockFromList(blockParentRect);
         RemoveBlockUIFromList();
-        ConnectionSystem.instance.CheckConnectionsForAllEndCells();
+        ConnectionManager.instance.CheckConnectionsForAllEndCells();
+        ConnectionManager.instance.ResetCompletedPaths();
 
 
         foreach (EndCell thisCell in endCells)
@@ -178,12 +292,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
         ClearEndCells();
 
-        if (audioObject != null)
-        {
-            blockData.Instruments.Stop(audioObject); // stop this instrument on the block
-            Destroy(audioObject); // destroy it ro clean up
-            audioObject = null;
-        }
+        AudioManager.instance.StopMusic();
     }
 
     private void ResetBlockToOrigin()
@@ -191,9 +300,13 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
         blockParentRect.position = blockOriginPos;
         blockParentRect.rotation = Quaternion.identity;
-        ConnectionSystem.instance.ClearBlockPulses();
+        ConnectionManager.instance.ClearBlockPulses();
+        ConnectionManager.instance.ResetCompletedPaths();
 
-
+        if (blockUI != null)
+        {
+            blockUI.ResetToOriginalColours();
+        }
 
     }
 
@@ -239,13 +352,18 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         if (gridCell != null && allBlocksCanPlace)
         {
             blockParentRect.position = snapClosestGridCell.GetComponent<RectTransform>().position;
+            CheckIfEndCellOnClosedCell();
+
+            if (endCells.Any(endCell => endCell.IsEndCellOnClosedCell))
+            {
+                return; // Do not continue placement if invalid
+            }
 
             MarkBlockCellsAsOccupied();
             isSnappedToGrid = true;
             AddPlaceBlockToList(blockParentRect);
             AddBlockUIToList();
             CheckForFirstEndCell();
-            CheckIfEndCellOnClosedCell();
 
             // Establish connections for each end cell
             UpdateEndCellGridPositions();
@@ -258,8 +376,8 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
             //Debug.Log(">> Triggering path check after placing block");
             //Check for any new connections if they are valid or complete
-            ConnectionSystem.instance.CheckConnectionsForAllEndCells();
-            
+            ConnectionManager.instance.CheckConnectionsForAllEndCells();
+
         }
         else
         {
@@ -269,14 +387,15 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
     }
 
-   
+
     private void CheckForFirstEndCell()
     {
-        if (!ConnectionSystem.instance.endCells.Contains(endCells[0]))
-        {
-            //Debug.Log($"Adding {endCells.Length} EndCells to connection system");
-            ConnectionSystem.instance.endCells.AddRange(endCells);
-        }
+        //if (!ConnectionSystem.instance.endCells.Contains(endCells[0]))
+        //{
+        //    //Debug.Log($"Adding {endCells.Length} EndCells to connection system");
+        //    ConnectionSystem.instance.endCells.AddRange(endCells);
+        //}
+        ConnectionManager.instance.RegisterEndCells(endCells);
     }
     private void UpdateEndCellGridPositions()
     {
@@ -296,16 +415,19 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         }
     }
 
-  private void CheckIfEndCellOnClosedCell()
+    private void CheckIfEndCellOnClosedCell()
     {
-        foreach(EndCell thisEndCell in endCells)
+        foreach (EndCell thisEndCell in endCells)
         {
             thisEndCell.EndCellOnClosedCell();
             if (thisEndCell.IsEndCellOnClosedCell)
             {
+                UnMarkBlockCellAsOccupied();
+                thisEndCell.StopBlink();
+                ConnectionManager.instance.ClearBlockPulses();
                 Debug.LogWarning("Block on end cell, returning to origin.");
                 blockParentRect.position = blockOriginPos;
-                ConnectionSystem.instance.ClearBlockPulses();
+                isSnappedToGrid = false;
                 UnhighlightAllCells();
                 return;
             }
@@ -425,41 +547,59 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
     public void AddPlaceBlockToList(RectTransform thisBlock)
     {
-        ConnectionSystem.instance.placedBlocks.Add(thisBlock);
+        //ConnectionSystem.instance.placedBlocks.Add(thisBlock);  
+        ConnectionManager.instance.AddPlacedBlocks(thisBlock);
 
     }
 
     public void AddBlockUIToList()
     {
         BlockUI newBlockUI = GetComponent<BlockUI>();
-        if (newBlockUI != null)
-        {
+        //if (newBlockUI != null)
+        //{
 
-            ConnectionSystem.instance.allBlockUIs.Add(newBlockUI);
-        }
+        //    ConnectionSystem.instance.allBlockUIs.Add(newBlockUI);
+        //}
+        ConnectionManager.instance.AddAllBlockUI(newBlockUI);
     }
     public void RemoveBlockUIFromList()
     {
         BlockUI thisBlockUI = GetComponent<BlockUI>();
-        if (thisBlockUI != null && ConnectionSystem.instance.allBlockUIs.Contains(thisBlockUI))
-        {
-            ConnectionSystem.instance.allBlockUIs.Remove(thisBlockUI);
-        }
+        //if (thisBlockUI != null && ConnectionSystem.instance.allBlockUIs.Contains(thisBlockUI))
+        //{
+        //    ConnectionSystem.instance.allBlockUIs.Remove(thisBlockUI);
+        //}
+        ConnectionManager.instance.RemoveAllBlockUI(thisBlockUI);
     }
     public void RemovePlaceBlockFromList(RectTransform thisBlock)
     {
-        if (!ConnectionSystem.instance.placedBlocks.Contains(thisBlock))
-        {
-            return;
-        }
-        ConnectionSystem.instance.placedBlocks.Remove(thisBlock);
+        //if (!ConnectionSystem.instance.placedBlocks.Contains(thisBlock))
+        //{
+        //    return;
+        //}
+        ConnectionManager.instance.RemovePlacedBlock(thisBlock);
 
         foreach (EndCell cell in endCells)
         {
-            ConnectionSystem.instance.endCells.Remove(cell);
+            //ConnectionSystem.instance.endCells.Remove(cell);
+            ConnectionManager.instance.Remove(cell);
         }
     }
 
+    //public class ConnectionManager
+    //{
+    //    public static ConnectionManager instance;
+
+    //    private ConnectionSystem[] connectionSystems;
+
+    //    public void Remove(EndCell endCell)
+    //    {
+    //        foreach (ConnectionSystem system in connectionSystems)
+    //        {
+    //            system.endCells.Remove(endCell);
+    //        }
+    //    }
+    //}
 
     public List<RectTransform> GetListOfAllEndCells()
     {

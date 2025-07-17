@@ -27,7 +27,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Lvl2_Stg1_Perc_HiHat_160_44_8m" ID="{FD3F20A3-6D0E-472F-8C85-9073906C2AE8}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+									<ObjectRef Name="Lvl2_Stg1_Perc_HiHat_160_44_8m" ID="{CCC7A725-1774-42BD-AF99-12BFF16D87AA}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -66,6 +66,36 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{AD38E4FD-8CC0-4DD7-A583-FF87F13F5F85}" ShortID="462311748">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lvl2_Stg1_Perc_HiHat_160_44_8m" ID="{CCC7A725-1774-42BD-AF99-12BFF16D87AA}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{046B38A4-A423-4ACC-A8C1-6956C79226A1}" ShortID="43629655">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lvl2_Stg1_Perc_Kick_160_44_8m" ID="{70CF811E-AD1F-40BC-8434-7DC42F130585}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{BDEC8510-C574-4C08-AA44-2E876A297ACB}" ShortID="174170503">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lvl2_Stg1_Perc_Snare_160_44_8m" ID="{53E444CB-5DA7-4ED1-B0EF-91F2A001FE58}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Lvl2_1_KickStop" ID="{C0A6A1C2-42D2-45F3-9E1C-42C3D3343F4D}">
@@ -92,7 +122,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Lvl2_Stg1_Perc_HiHat_160_44_8m" ID="{FD3F20A3-6D0E-472F-8C85-9073906C2AE8}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+									<ObjectRef Name="Lvl2_Stg1_Perc_HiHat_160_44_8m" ID="{CCC7A725-1774-42BD-AF99-12BFF16D87AA}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

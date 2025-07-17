@@ -6,7 +6,7 @@
 				<SoundcasterSession Name="Music" ID="{77DB5BCB-BF61-40A2-91E9-08AB6B14A977}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Lvl2_1_HiHatPlay" ID="{82A1963D-C850-4098-8D62-079847A067C4}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<ObjectRef Name="Lvl2_1" ID="{9086E085-2FEA-4B25-B8C8-62027E714E71}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
@@ -14,11 +14,7 @@
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="PlayMusic" ID="{0332F771-1AE4-4137-B15D-FC594A33FFFA}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
-							<Position X="0" Y="2"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Lvl2_1_HiHatStop" ID="{B38394E9-DD62-4876-AEC3-3D44400FD199}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<ObjectRef Name="Lvl2_1_HiHatPlay" ID="{82A1963D-C850-4098-8D62-079847A067C4}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
@@ -26,24 +22,28 @@
 							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Lvl2_1_KickPlay" ID="{6B69B719-A285-44C9-8143-1563C0F3814C}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<ObjectRef Name="Lvl2_1_HiHatStop" ID="{B38394E9-DD62-4876-AEC3-3D44400FD199}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
 							<Position X="2" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Lvl2_1" ID="{9086E085-2FEA-4B25-B8C8-62027E714E71}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
-							<Position X="2" Y="2"/>
+							<ObjectRef Name="PlayMusic" ID="{0332F771-1AE4-4137-B15D-FC594A33FFFA}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="2" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Lvl2_1_KickStop" ID="{C0A6A1C2-42D2-45F3-9E1C-42C3D3343F4D}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<ObjectRef Name="Lvl2_1_KickPlay" ID="{6B69B719-A285-44C9-8143-1563C0F3814C}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
 							<Position X="3" Y="0"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Lvl2_2" ID="{CAE86D2A-C5AA-412F-BD67-E1A2B8B5B6BB}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
-							<Position X="3" Y="2"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lvl2_1_KickStop" ID="{C0A6A1C2-42D2-45F3-9E1C-42C3D3343F4D}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="4" Y="0"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Lvl2_3" ID="{186009DE-4B58-40C5-AC4E-B045FB6705B9}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
-							<Position X="4" Y="2"/>
+							<Position X="4" Y="1"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>

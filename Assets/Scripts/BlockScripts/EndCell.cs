@@ -22,6 +22,10 @@ public class EndCell : MonoBehaviour
     private GridCell closedCell;
     private Color originalColour;
 
+    public BlockUI GetBlockUi()
+    {
+        return blockUI;
+    }
 
     public void Initialise()
     {
@@ -50,10 +54,10 @@ public class EndCell : MonoBehaviour
 
 
         //Check all four adjacent grid cells;
-        GridCell down = ConnectionSystem.instance.FindAdjacentEndCells(this, cellImage, currentCell.x + 1, currentCell.y);
-        GridCell up = ConnectionSystem.instance.FindAdjacentEndCells(this, cellImage, currentCell.x - 1, currentCell.y);
-        GridCell right = ConnectionSystem.instance.FindAdjacentEndCells(this, cellImage, currentCell.x, currentCell.y + 1);
-        GridCell left = ConnectionSystem.instance.FindAdjacentEndCells(this, cellImage, currentCell.x, currentCell.y - 1);
+        GridCell down = ConnectionManager.instance.FindAdjacentEndCells(this, cellImage, currentCell.x + 1, currentCell.y);
+        GridCell up = ConnectionManager.instance.FindAdjacentEndCells(this, cellImage, currentCell.x - 1, currentCell.y);
+        GridCell right = ConnectionManager.instance.FindAdjacentEndCells(this, cellImage, currentCell.x, currentCell.y + 1);
+        GridCell left = ConnectionManager.instance.FindAdjacentEndCells(this, cellImage, currentCell.x, currentCell.y - 1);
 
         //for debug purpose
         if (down != null)
@@ -148,10 +152,8 @@ public class EndCell : MonoBehaviour
     public void EndCellOnClosedCell()
     {
         //find closest gridcell to end cell's current position
-        if (currentGridCell == null)
-        {
-            currentGridCell = blockSystem.SnapClosestGridCell(transform.position);
-        }
+
+        currentGridCell = blockSystem.SnapClosestGridCell(transform.position);
         //
         if (currentGridCell == null || LevelManager.Instance.gridData == null)
         {
@@ -174,6 +176,7 @@ public class EndCell : MonoBehaviour
         }
     }
 
+
     public void StartBlink(string hexColour, float duration = 0.5f)
     {
         StopBlink();
@@ -193,7 +196,7 @@ public class EndCell : MonoBehaviour
         BlockCellPulse newBlockCellPulse = new BlockCellPulse();
         newBlockCellPulse.pulseAnimation = loopPulseAnim;
         newBlockCellPulse.BlockCellToPulse = cellImage;
-        newBlockCellPulse.originalColour = originalColour; 
+        newBlockCellPulse.originalColour = originalColour;
         myTweenAnimation = newBlockCellPulse;
     }
 

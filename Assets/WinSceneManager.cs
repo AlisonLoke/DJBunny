@@ -4,7 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class WinSceneManager : MonoBehaviour
 {
- 
+    public AK.Wwise.Event playFullTrack = null;
+    private void Update()
+    {
+        playFullTrack.Post(gameObject);
+    }
+
     void Start()
     {
         StartCoroutine(GoToNextLevel());
@@ -18,5 +23,5 @@ public class WinSceneManager : MonoBehaviour
         string nextLevel = "Level" + ConnectionSystem.currentLevelIndex.ToString("D2");
         SceneManager.LoadScene(nextLevel);
     }
-  
+
 }

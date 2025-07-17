@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -15,7 +16,7 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         Instance = this;
-        ConnectionSystem.instance.onValidPathCompleted += CheckIfLevelComplete;
+        ConnectionManager.instance.onValidPathCompleted += CheckIfLevelComplete;
 
         allEndCells = FindObjectsByType<EndCell>(FindObjectsSortMode.None);
 
@@ -24,7 +25,7 @@ public class LevelManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        ConnectionSystem.instance.onValidPathCompleted -= CheckIfLevelComplete;
+        ConnectionManager.instance.onValidPathCompleted -= CheckIfLevelComplete;
     }
 
     // the one who triggers (invoke) the event is called the publisher
@@ -34,7 +35,7 @@ public class LevelManager : MonoBehaviour
     {
         if (endCellsOnPathCount >= allEndCells.Length)
         {
-            TriggerWin();
+            StartCoroutine(TriggerWin());
         }
         else
         {
@@ -42,13 +43,15 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    private void TriggerWin()
+    private IEnumerator TriggerWin()
     {
         Debug.Log("Triggering Win ");
         // do whatever a win would do
+        yield return new WaitForSeconds(4f); 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    //TODO: Set of win sequence so that it gets full end track 
     private void ShowNotAllBlocksUsedAffordance()
     {
         // show something to the player to let them know that they need to use all blocks
