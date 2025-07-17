@@ -18,6 +18,7 @@ public class GridCell : MonoBehaviour
     [SerializeField] private GameObject connectCellImage;
     [SerializeField] private GameObject doubleConnectCellImage;
     [SerializeField] private GameObject closedCellImage;
+   [SerializeField] private Color gridCellColour;
     public bool startCell = false;
     public bool finishCell = false;
     public bool IsCloseCell = false;
@@ -25,7 +26,10 @@ public class GridCell : MonoBehaviour
 
 
 
-
+    private void Start()
+    {
+        gridCellColour = image.color;
+    }
 
 
     public void SetCoordinates(int x, int y)
@@ -46,13 +50,15 @@ public class GridCell : MonoBehaviour
 
         isOccupied = true;
         image.color = Blue;
+       
     }
 
     public void GridCellFree()
     {
 
         isOccupied = false;
-        image.color = Green;
+        //image.color = Green;
+        image.color = gridCellColour;
     }
 
     public void Highlight()
@@ -63,7 +69,8 @@ public class GridCell : MonoBehaviour
     public void UnHighlight()
     {
         if (isOccupied) { return; }
-        image.color = Green;
+        //image.color = Green;
+        image.color = gridCellColour;
     }
 
     public void ConnectCellVisual(bool isStartCell, ConnectCellType newConnectCellType)
