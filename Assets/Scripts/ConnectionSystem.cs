@@ -22,6 +22,8 @@ public class ConnectionSystem : MonoBehaviour
     private EndCell finishConnectedEndCell;
     //stores a single path.
     private List<EndCell> currentPath = new List<EndCell>();
+    private List<EndCell> lastSuccessfulPath = new List<EndCell>();
+    private bool pathIsComplete = false;
 
     //Secondary Connection variables for dual connect feature
  
@@ -77,6 +79,11 @@ public class ConnectionSystem : MonoBehaviour
 
     public void CheckConnectionsForAllEndCells()
     {
+        if (pathIsComplete)
+        {
+            Debug.Log("Path is already completed.Skipping further checks");
+            return;
+        }
         ResetStartAndFinishConnections();
 
         Debug.Log($"Checking connections for {endCells.Count} end cells");
@@ -100,7 +107,14 @@ public class ConnectionSystem : MonoBehaviour
         EndCellFoundStartAndFinishCell();
 
     }
-
+    public void ResetCompletedPath()
+    {
+        pathIsComplete = false;
+        lastSuccessfulPath.Clear();
+        currentPath.Clear();
+        ClearConnectedLine();
+        ClearBlockPulses();
+    }
     private void ResetStartAndFinishConnections()
     {
         currentPath.Clear();
@@ -154,6 +168,12 @@ public class ConnectionSystem : MonoBehaviour
 
     private void EndCellFoundStartAndFinishCell()
     {
+        if (pathIsComplete)
+        {
+            Debug.Log("Path is already completed.Skipping further checks");
+            return;
+        }
+      
         if (startConnectedEndCell != null && finishConnectedEndCell != null)
         {
             Debug.Log("Both start and finish cells found, finding path...");
@@ -255,15 +275,32 @@ public class ConnectionSystem : MonoBehaviour
         {
             return;
         }
-        
+        if (IsSamePath(currentPath,lastSuccessfulPath))
+        {
+            Debug.Log("Path hasn't changed. Skipping pulse animation.");
+            return;
+        }
 
 
         Debug.Log("PATH COMPLETE");
         onValidPathCompleted?.Invoke(currentPath.Count);//invoke fancy name for trigger event gets triggered
 
         if (currentPath.Count == 0) return;
-
+        lastSuccessfulPath = new List<EndCell>(currentPath);
         PathComplete();
+
+    }
+
+    private bool IsSamePath(List<EndCell> pathA, List<EndCell> pathB)
+    {
+        if (pathA.Count != pathB.Count) return false;
+
+        for (int i = 0; i < pathA.Count; i++)
+        {
+            if (pathA[i] != pathB[i]) return false;
+        }
+
+        return true;
     }
 
     private bool CheckAllBlockUsed(List<EndCell> path)
@@ -282,6 +319,7 @@ public class ConnectionSystem : MonoBehaviour
     private void NoValidPathFound()
     {
         allPaths.Clear();
+        lastSuccessfulPath.Clear();
         currentPath.Clear();
         Debug.Log("No valid path found. Don't trigger win scene");
     }
@@ -297,7 +335,7 @@ public class ConnectionSystem : MonoBehaviour
                 blockUIPath.Add(ui);
             }
         }
-
+        pathIsComplete = true;
         StartCoroutine(PulseCompletePath());
     }
 

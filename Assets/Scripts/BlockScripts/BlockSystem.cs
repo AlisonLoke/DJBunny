@@ -182,7 +182,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             BeginPickUp();
             //audioObject = AudioManager.instance.Play(blockData.PlayInstrument);
             //Play the mute here
-            audioObject = AudioManager.instance.Play(blockData.MuteInstrument);
+            //audioObject = AudioManager.instance.Play(blockData.MuteInstrument);
         }
         else
         {
@@ -267,9 +267,10 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             blockOriginPos = blockParentRect.position;
             return;
         }
-
+        audioObject = AudioManager.instance.Play(blockData.MuteInstrument);
         RemoveFromGrid();
         ResetHoverAnimation();
+        ConnectionManager.instance.ResetCompletedPaths();
     }
 
 
@@ -280,6 +281,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         RemovePlaceBlockFromList(blockParentRect);
         RemoveBlockUIFromList();
         ConnectionManager.instance.CheckConnectionsForAllEndCells();
+        ConnectionManager.instance.ResetCompletedPaths();
 
 
         foreach (EndCell thisCell in endCells)
@@ -299,6 +301,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         blockParentRect.position = blockOriginPos;
         blockParentRect.rotation = Quaternion.identity;
         ConnectionManager.instance.ClearBlockPulses();
+        ConnectionManager.instance.ResetCompletedPaths();
 
         if (blockUI != null)
         {

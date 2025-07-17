@@ -123,110 +123,6 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="Lvl2_Stg1_Perc_HiHat_160_44_8m" ID="{FD3F20A3-6D0E-472F-8C85-9073906C2AE8}" ShortID="17736657">
-											<PropertyList>
-												<Property Name="MusicTrackType" Type="int16" Value="3"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="DefaultSwitchOrState">
-													<ObjectRef Name="Lvl2_1_HiHatStop" ID="{61A14CD4-F641-4570-A4C7-799948281845}" WorkUnitID="{5F9035CE-D633-4D77-AFAC-532B6A139962}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
-												</Reference>
-												<Reference Name="SwitchGroupOrStateGroup">
-													<ObjectRef Name="MusicLvl2" ID="{EE22B04A-777A-40BC-BA34-3B9D8ABD93FB}" WorkUnitID="{5F9035CE-D633-4D77-AFAC-532B6A139962}"/>
-												</Reference>
-												<Reference Name="TransitionRoot">
-													<Custom>
-														<MusicTransition Name="Root" ID="{93082F90-C909-42CA-BB00-8EECAC4F8308}">
-															<PropertyList>
-																<Property Name="IsFolder" Type="bool" Value="True"/>
-															</PropertyList>
-															<ChildrenList>
-																<MusicTransition Name="Transition" ID="{364459E5-05BA-4EE1-96C7-6CB46FBBD703}">
-																	<PropertyList>
-																		<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
-																		<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
-																		<Property Name="ExitSourceAt" Type="int16" Value="3"/>
-																	</PropertyList>
-																	<TransitionInfo>
-																		<SourceFadeOut>
-																			<MusicFade Name="Source Fade-out" ID="{C1985621-6D0A-4266-AC59-9A483E9856AF}">
-																				<PropertyList>
-																					<Property Name="FadeTime" Type="Real64" Value="0.5"/>
-																					<Property Name="FadeType" Type="int16" Value="1"/>
-																				</PropertyList>
-																			</MusicFade>
-																		</SourceFadeOut>
-																		<DestinationFadeIn>
-																			<MusicFade Name="Destination Fade-in" ID="{BC6AE00F-BBE2-461A-A2E5-F3140871783D}">
-																				<PropertyList>
-																					<Property Name="FadeOffset" Type="Real64" Value="-0.5"/>
-																					<Property Name="FadeTime" Type="Real64" Value="0.5"/>
-																				</PropertyList>
-																			</MusicFade>
-																		</DestinationFadeIn>
-																	</TransitionInfo>
-																</MusicTransition>
-															</ChildrenList>
-															<TransitionInfo/>
-														</MusicTransition>
-													</Custom>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Lvl2_Stg1_Perc_ShakerHiHat_160_44_8m" ID="{62A10000-A984-45EF-80B1-548B73533B4C}">
-													<Language>SFX</Language>
-													<AudioFile>Lvl2_Stg1\Lvl2_Stg1_Perc_ShakerHiHat_160_44_8m.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="106521731"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="Sequences">
-													<Reference>
-														<Local>
-															<MusicTrackSequence Name="" ID="{52B987E8-A64A-478E-AF23-769724FDDB26}">
-																<ObjectLists>
-																	<ObjectList Name="Clips">
-																		<Reference>
-																			<Local>
-																				<MusicClip Name="Lvl2_Stg1_Perc_ShakerHiHat_160_44_8m" ID="{BFB94CBA-680F-42BD-9E14-4661E5B3CB8E}">
-																					<PropertyList>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="13500"/>
-																						<Property Name="FadeInMode" Type="int16" Value="0"/>
-																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																					</PropertyList>
-																					<AudioSourceRef Name="Lvl2_Stg1_Perc_ShakerHiHat_160_44_8m" ID="{62A10000-A984-45EF-80B1-548B73533B4C}"/>
-																				</MusicClip>
-																			</Local>
-																		</Reference>
-																	</ObjectList>
-																</ObjectLists>
-																<ReferenceList>
-																	<Reference Name="TrackSequenceSwitch">
-																		<ObjectRef Name="Lvl2_1_HiHatPlay" ID="{5F73146A-5AD2-4CF5-BA3A-361711501C9B}" WorkUnitID="{5F9035CE-D633-4D77-AFAC-532B6A139962}"/>
-																	</Reference>
-																</ReferenceList>
-															</MusicTrackSequence>
-														</Local>
-													</Reference>
-													<Reference>
-														<Local>
-															<MusicTrackSequence Name="" ID="{EB5E9437-0A86-4333-A6A8-8F84DC870B5D}">
-																<ReferenceList>
-																	<Reference Name="TrackSequenceSwitch">
-																		<ObjectRef Name="Lvl2_1_HiHatStop" ID="{61A14CD4-F641-4570-A4C7-799948281845}" WorkUnitID="{5F9035CE-D633-4D77-AFAC-532B6A139962}"/>
-																	</Reference>
-																</ReferenceList>
-															</MusicTrackSequence>
-														</Local>
-													</Reference>
-												</ObjectList>
-											</ObjectLists>
-										</MusicTrack>
 										<MusicTrack Name="Lvl2_Stg1_Perc_Snare_160_44_8m" ID="{53E444CB-5DA7-4ED1-B0EF-91F2A001FE58}" ShortID="87321978">
 											<ReferenceList>
 												<Reference Name="DefaultSwitchOrState">
@@ -400,6 +296,58 @@
 																		<ObjectRef Name="Lvl2_1_KickPlay" ID="{B5FDDF84-FC63-40EC-9816-5608A91E67D0}" WorkUnitID="{5F9035CE-D633-4D77-AFAC-532B6A139962}"/>
 																	</Reference>
 																</ReferenceList>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="Lvl2_Stg1_Perc_HiHat_160_44_8m" ID="{CCC7A725-1774-42BD-AF99-12BFF16D87AA}" ShortID="228506989">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{8F4F3E31-47A7-4E01-BB75-E8DC2FDBA66D}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Lvl2_Stg1_Perc_ShakerHiHat_160_44_8m" ID="{0D4ECD09-E9CC-4035-843F-30CE49E17CC1}">
+													<Language>SFX</Language>
+													<AudioFile>Lvl2_Stg1\Lvl2_Stg1_Perc_ShakerHiHat_160_44_8m.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="459171433"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{6A36D43F-0A29-43BD-9E2D-9BAB9B201BB5}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="Lvl2_Stg1_Perc_ShakerHiHat_160_44_8m" ID="{FEDE7746-CD73-442A-AEA5-24D37DC059C9}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="13500"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="Lvl2_Stg1_Perc_ShakerHiHat_160_44_8m" ID="{0D4ECD09-E9CC-4035-843F-30CE49E17CC1}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
 															</MusicTrackSequence>
 														</Local>
 													</Reference>

@@ -119,5 +119,12 @@ public class ConnectionManager : MonoBehaviour
         }
     }
 
+    public void ResetCompletedPaths()
+    {
+        foreach(ConnectionSystem connections in connectionSystems)
+        {
+            connections.ResetCompletedPath();
+        }
+    }
 
 }

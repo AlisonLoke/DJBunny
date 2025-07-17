@@ -10,19 +10,11 @@
     "Type": "User",
     "GUID": "{312BEA2E-3316-40A9-B82E-08D60148E83A}",
     "Language": "SFX",
-    "Hash": "{F274CFFF-D8CC-05A8-72DB-9B2E7CFF12E8}",
+    "Hash": "{B5722C61-696E-ED47-75A2-33D42AFB4758}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\KatMusicTest",
     "ShortName": "KatMusicTest",
     "Path": "KatMusicTest.bnk",
     "Media": [
-     {
-      "Id": "106521731",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Lvl2_Stg1\\Lvl2_Stg1_Perc_ShakerHiHat_160_44_8m.wav",
-      "CachePath": "2D/{2D7FD8FC-A209-228E-57CB-3668D767EC26}.wem"
-     },
      {
       "Id": "124010835",
       "Language": "SFX",
@@ -54,6 +46,14 @@
       "Location": "Memory",
       "ShortName": "Lvl2_Stg1\\Lvl2_Stg1_Perc_Snare_160_44_8m.wav",
       "CachePath": "A6/{A65BA76D-20AA-E8A9-DF6D-8EC8243491D9}.wem"
+     },
+     {
+      "Id": "459171433",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Lvl2_Stg1\\Lvl2_Stg1_Perc_ShakerHiHat_160_44_8m.wav",
+      "CachePath": "2D/{2D7FD8FC-A209-228E-57CB-3668D767EC26}.wem"
      },
      {
       "Id": "465530669",
@@ -98,6 +98,17 @@
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0",
+      "MediaRefs": [
+       {
+        "Id": "315459951"
+       },
+       {
+        "Id": "459171433"
+       },
+       {
+        "Id": "1048419855"
+       }
+      ],
       "ActionSetState": [
        {
         "GroupId": "2762093882",
@@ -119,7 +130,7 @@
       "DurationMax": "0",
       "MediaRefs": [
        {
-        "Id": "106521731"
+        "Id": "459171433"
        }
       ]
      },
@@ -134,7 +145,7 @@
       "DurationMax": "0",
       "MediaRefs": [
        {
-        "Id": "106521731"
+        "Id": "459171433"
        }
       ]
      },
@@ -312,10 +323,10 @@
         },
         "MediaRefs": [
          {
-          "Id": "106521731"
+          "Id": "315459951"
          },
          {
-          "Id": "315459951"
+          "Id": "459171433"
          },
          {
           "Id": "1048419855"
@@ -435,6 +446,6 @@
     ]
    }
   ],
-  "FileHash": "{77398486-1EAD-3201-F20B-EF6C282920CD}"
+  "FileHash": "{4873F16D-0AD8-C0AC-AF8B-4292F72870E8}"
  }
 }
