@@ -22,11 +22,10 @@ public class ConnectionSystem : MonoBehaviour
     private EndCell finishConnectedEndCell;
     //stores a single path.
     private List<EndCell> currentPath = new List<EndCell>();
-    private List<EndCell> lastSuccessfulPath = new List<EndCell>();
-    private bool pathIsComplete = false;
 
-    //Secondary Connection variables for dual connect feature
- 
+    public bool pathIsComplete = false;
+
+  
     
     //Path Management
     //Contains multiple list of endCell object paths. A collection of paths
@@ -43,6 +42,7 @@ public class ConnectionSystem : MonoBehaviour
     private const float PathCompletePulseLength = 0.5f;
 
     [SerializeField] private UILineRenderer lineRenderer;
+
     [SerializeField] private RectTransform canvas;
     [SerializeField] private PathFinder pathFinder;
     [SerializeField] private GridData gridData; //ref the gridata for dual connect feature
@@ -110,7 +110,7 @@ public class ConnectionSystem : MonoBehaviour
     public void ResetCompletedPath()
     {
         pathIsComplete = false;
-        lastSuccessfulPath.Clear();
+
         currentPath.Clear();
         ClearConnectedLine();
         ClearBlockPulses();
@@ -275,33 +275,19 @@ public class ConnectionSystem : MonoBehaviour
         {
             return;
         }
-        if (IsSamePath(currentPath,lastSuccessfulPath))
-        {
-            Debug.Log("Path hasn't changed. Skipping pulse animation.");
-            return;
-        }
+
 
 
         Debug.Log("PATH COMPLETE");
         onValidPathCompleted?.Invoke(currentPath.Count);//invoke fancy name for trigger event gets triggered
 
         if (currentPath.Count == 0) return;
-        lastSuccessfulPath = new List<EndCell>(currentPath);
+        //lastSuccessfulPath = new List<EndCell>(currentPath);
         PathComplete();
 
     }
 
-    private bool IsSamePath(List<EndCell> pathA, List<EndCell> pathB)
-    {
-        if (pathA.Count != pathB.Count) return false;
-
-        for (int i = 0; i < pathA.Count; i++)
-        {
-            if (pathA[i] != pathB[i]) return false;
-        }
-
-        return true;
-    }
+  
 
     private bool CheckAllBlockUsed(List<EndCell> path)
     {
@@ -319,7 +305,7 @@ public class ConnectionSystem : MonoBehaviour
     private void NoValidPathFound()
     {
         allPaths.Clear();
-        lastSuccessfulPath.Clear();
+        
         currentPath.Clear();
         Debug.Log("No valid path found. Don't trigger win scene");
     }
@@ -336,7 +322,7 @@ public class ConnectionSystem : MonoBehaviour
             }
         }
         pathIsComplete = true;
-        StartCoroutine(PulseCompletePath());
+        //StartCoroutine(PulseCompletePath());
     }
 
     private void SelectLongestPath()
@@ -898,6 +884,11 @@ public class ConnectionSystem : MonoBehaviour
     {
         lineRenderer.points = new Vector2[0];
         lineRenderer.SetAllDirty();
+    }
+
+    public void ShowPathComplete()
+    {
+        StartCoroutine(PulseCompletePath());
     }
 
     //private void FadeOutPathLine(float duration = 1.0f)

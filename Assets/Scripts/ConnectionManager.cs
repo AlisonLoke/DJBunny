@@ -30,8 +30,8 @@ public class ConnectionManager : MonoBehaviour
     {
         foreach (ConnectionSystem connections in connectionSystems)
         {
-            GridCell foundCell = connections.FindAdjacentEndCells(fromEndCell,blockCellImage,x,y);
-            if(foundCell != null)
+            GridCell foundCell = connections.FindAdjacentEndCells(fromEndCell, blockCellImage, x, y);
+            if (foundCell != null)
             {
                 return foundCell;
             }
@@ -89,7 +89,7 @@ public class ConnectionManager : MonoBehaviour
             if (!connections.endCells.Contains(endCells[0]))
             {
                 //Debug.Log($"Adding {endCells.Length} EndCells to connection system");
-               connections.endCells.AddRange(endCells);
+                connections.endCells.AddRange(endCells);
             }
 
         }
@@ -121,10 +121,31 @@ public class ConnectionManager : MonoBehaviour
 
     public void ResetCompletedPaths()
     {
-        foreach(ConnectionSystem connections in connectionSystems)
+        foreach (ConnectionSystem connections in connectionSystems)
         {
             connections.ResetCompletedPath();
         }
     }
+    //Call this event at the BlockSystem script
+    //Also have a second line rendererer
+    public void CheckPathsAreCompleted()
+    {
+        foreach (ConnectionSystem connections in connectionSystems)
+        {
+            if (!connections.pathIsComplete)
+            {
+                return;
+            }
+        }
 
+        ShowPathsAreCompleted();
+    }
+
+    private void ShowPathsAreCompleted()
+    {
+        foreach (ConnectionSystem connections in connectionSystems)
+        {
+            connections.ShowPathComplete();
+        }
+    }
 }

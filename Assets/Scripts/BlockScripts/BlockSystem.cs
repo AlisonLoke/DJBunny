@@ -234,7 +234,8 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         GridCell snapClosestGridCell = SnapClosestGridCell(blockParentRect.position);
         FinalBlockPlacement(snapClosestGridCell);
         //ConnectionSystem.instance.PreviewCurrentPath();
-        ConnectionManager.instance.PreviewCurrentPath();    
+        ConnectionManager.instance.PreviewCurrentPath();  
+        ConnectionManager.instance.CheckPathsAreCompleted();
 
         Debug.Log("PLAYING MUSIC");
 

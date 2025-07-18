@@ -1969,6 +1969,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 598840466}
     - target: {fileID: 3470291937293675033, guid: 5ec5ab5f3d246ff43af6dac7c4c503a9, type: 3}
+      propertyPath: lineRenderer2
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3470291937293675033, guid: 5ec5ab5f3d246ff43af6dac7c4c503a9, type: 3}
       propertyPath: connectCellType
       value: 2
       objectReference: {fileID: 0}
@@ -7148,7 +7152,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1293126450293535388, guid: d82a07b68e04241459d91f7c61258bb6, type: 3}
       propertyPath: connectionSystems.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1293126450293535388, guid: d82a07b68e04241459d91f7c61258bb6, type: 3}
       propertyPath: 'connectionSystems.Array.data[0]'
