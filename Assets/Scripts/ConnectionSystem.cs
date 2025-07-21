@@ -693,6 +693,7 @@ public class ConnectionSystem : MonoBehaviour
         Debug.Log("Current path cells:");
 
         List<BlockUI> blockUisOriginal = GetAllBlockUIInPath();
+        Debug.LogWarning($"BLOCK COUNT: {blockUisOriginal.Count}");
 
         List<BlockUI> blockUisInPath = RemoveBlockUIDuplicatesInPath(blockUisOriginal);
 
