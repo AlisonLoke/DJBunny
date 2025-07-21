@@ -76,12 +76,12 @@ public class EndCell : MonoBehaviour
         {
             //MakeCellBlue(left);
         }
-        else
+        else if (!onlyConnectToStartFinish)
         {
             MakeCellRed();
         }
 
-        if (connectedEndCell.Count == 0)
+        if (connectedEndCell.Count == 0 && !onlyConnectToStartFinish)
         {
             //PulseColour();
             StartBlink("#767676", 0.5f);
