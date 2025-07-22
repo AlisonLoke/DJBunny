@@ -239,12 +239,15 @@ public class ConnectionSystem : MonoBehaviour
     }
 
 
-
+    //TODO: Define paths as primary or secondary through the what connect cell type the endcells are on
+    //TODO: Feed that data into the linerenderer so that it draws in defined paths
+    //TODO: When two paths meet, prevent the linerenderer from merging
 
 
     private void FindLongestPath()
     {
         // Clear any previous paths
+       
         ClearBlockPulses();
         allPaths.Clear();
         currentPath.Clear();
@@ -327,6 +330,7 @@ public class ConnectionSystem : MonoBehaviour
 
     private void SelectLongestPath()
     {
+        //Find longest primary and Longest Secondary
         foreach (List<EndCell> path in allPaths)
         {
             if (path.Count > currentPath.Count)
