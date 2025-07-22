@@ -198,6 +198,7 @@ public class EndCell : MonoBehaviour
         newBlockCellPulse.BlockCellToPulse = cellImage;
         newBlockCellPulse.originalColour = originalColour;
         myTweenAnimation = newBlockCellPulse;
+        //AudioManager.instance.PlayBlink.Post(gameObject);
     }
 
     public void StopBlink()

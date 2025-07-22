@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
-using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -22,6 +21,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
     private bool isHovering = false;
     private bool isAnimatingHover = false;
     private Vector2 originalAnchoredPos;
+    public Quaternion originalRotation;
 
 
 
@@ -42,6 +42,8 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         endCells = GetComponentsInChildren<EndCell>();
         blockUI = GetComponent<BlockUI>();
         originalAnchoredPos = blockParentRect.anchoredPosition;
+        originalRotation = blockParentRect.rotation;
+        blockOriginPos = blockParentRect.position;
         foreach (EndCell cell in endCells)
         {
             cell.Initialise();
@@ -196,12 +198,13 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         {
             return;
         }
-
+      
         if (isSnappedToGrid)
         {
+           
             RemoveFromGrid();
             ResetBlockToOrigin();
-          
+
 
 
             return;
@@ -223,7 +226,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
     {
         isFollowingMouse = false;
         selectedBlock = null;
-
+        AudioManager.instance.PlayDrop.Post(gameObject);
         if (IsAnyBlockOutsideGrid())
         {
             ResetBlockToOrigin();
@@ -231,10 +234,15 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             AudioManager.instance.StopMusic();
             return;
         }
+
+        //blockOriginPos = blockParentRect.position;
+        //originalRotation = blockParentRect.rotation;
+
         GridCell snapClosestGridCell = SnapClosestGridCell(blockParentRect.position);
         FinalBlockPlacement(snapClosestGridCell);
-        //ConnectionSystem.instance.PreviewCurrentPath();
-        ConnectionManager.instance.PreviewCurrentPath();  
+    
+    
+        ConnectionManager.instance.PreviewCurrentPath();
         ConnectionManager.instance.CheckPathsAreCompleted();
 
         Debug.Log("PLAYING MUSIC");
@@ -255,6 +263,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
     {
         selectedBlock = this;
         isFollowingMouse = true;
+        AudioManager.instance.PlayPickUp.Post(gameObject);
 
         if (blockUI != null)
         {
@@ -265,7 +274,8 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         if (!isSnappedToGrid)
         {
             ResetHoverAnimation();
-            blockOriginPos = blockParentRect.position;
+            //blockOriginPos = blockParentRect.position;
+            //originalRotation = blockParentRect.rotation;
             return;
         }
         audioObject = AudioManager.instance.Play(blockData.MuteInstrument);
@@ -278,6 +288,8 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
     private void RemoveFromGrid()
     {
         isSnappedToGrid = false;
+        audioObject = AudioManager.instance.Play(blockData.MuteInstrument);
+        AudioManager.instance.PlayDrop.Post(gameObject);
         UnMarkBlockCellAsOccupied();
         RemovePlaceBlockFromList(blockParentRect);
         RemoveBlockUIFromList();
@@ -298,11 +310,15 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
     private void ResetBlockToOrigin()
     {
-
         blockParentRect.position = blockOriginPos;
-        blockParentRect.rotation = Quaternion.identity;
+        //blockParentRect.rotation = Quaternion.identity;
+        blockParentRect.rotation = originalRotation;
+        Debug.Log($"Resetting block to original rotation: {originalRotation.eulerAngles}");
+
         ConnectionManager.instance.ClearBlockPulses();
         ConnectionManager.instance.ResetCompletedPaths();
+        audioObject = AudioManager.instance.Play(blockData.MuteInstrument);
+        AudioManager.instance.PlayDrop.Post(gameObject);
 
         if (blockUI != null)
         {
@@ -358,6 +374,12 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             if (endCells.Any(endCell => endCell.IsEndCellOnClosedCell))
             {
                 return; // Do not continue placement if invalid
+            }
+            if (!isSnappedToGrid && originalRotation == Quaternion.identity)
+            {
+                //blockOriginPos = blockParentRect.position;
+                //originalRotation = blockParentRect.rotation;
+                Debug.Log(" Original Rotation saved");
             }
 
             MarkBlockCellsAsOccupied();
@@ -439,7 +461,8 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         if (IsBlockOutsideGrid(blockParentRect))
         {
             blockParentRect.position = blockOriginPos;
-            blockParentRect.rotation = Quaternion.identity; // rotate UI of block
+            /*   blockParentRect.rotation = Quaternion.identity;*/ // rotate UI of block
+            blockParentRect.rotation = originalRotation;
             UnMarkBlockCellAsOccupied();
         }
     }
@@ -509,7 +532,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             Debug.LogError("BlockData reference is missing!");
             return;
         }
-
+        AudioManager.instance.PlayRotation.Post(gameObject);
     }
 
 

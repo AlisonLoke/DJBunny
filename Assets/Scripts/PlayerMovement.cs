@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Keyboard.current.eKey.wasPressedThisFrame)
         {
-            SceneManager.LoadScene("Level01");
+            SceneManager.LoadScene("Lvl01_St01");
         }
 
         if (interactionAction.WasPressedThisFrame())

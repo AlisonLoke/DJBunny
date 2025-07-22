@@ -1,7 +1,5 @@
-using UnityEngine;
 using System.Collections.Generic;
-using System.Collections;
-using System;
+using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
@@ -12,13 +10,21 @@ public class AudioManager : MonoBehaviour
     //private bool IsMusicPlaying = false;
     private GameObject currentAudioObject;
     public AK.Wwise.Event Lvl2_1 = null;
-    public AK.Wwise.Event PlayMusic = null; 
+    public AK.Wwise.Event PlayMusic = null;
+   
+    [Header("BlockSFX")]
+    public AK.Wwise.Event PlayPickUp = null;
+    public AK.Wwise.Event PlayDrop = null;
+    public AK.Wwise.Event PlayRotation = null;
+    public AK.Wwise.Event PlayBlink = null;
+    public AK.Wwise.Event PlayCompletion = null;
+
 
 
     private void Awake()
     {
-   
-        if(instance == null)
+
+        if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
@@ -28,7 +34,7 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
         }
         Debug.Log("Starting to play music");
-        PlayMusic.Post(gameObject); 
+        PlayMusic.Post(gameObject);
 
     }
 
@@ -36,7 +42,7 @@ public class AudioManager : MonoBehaviour
     {
         Debug.Log("Loading Lvl2 music");
         Lvl2_1.Post(gameObject);
-        
+
     }
 
 

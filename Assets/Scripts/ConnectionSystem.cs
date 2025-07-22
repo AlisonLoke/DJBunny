@@ -890,6 +890,7 @@ public class ConnectionSystem : MonoBehaviour
     public void ShowPathComplete()
     {
         StartCoroutine(PulseCompletePath());
+        AudioManager.instance.PlayCompletion.Post(gameObject);
     }
 
     //private void FadeOutPathLine(float duration = 1.0f)

@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1c2f7ea7e019e44081a8c815ce5a8e1e
     GuidInternal: 
-    m_lastTime: -8584488540209798500
+    m_lastTime: -8584484843795702644
     List:
     - name: KatMusicTest
       guid: 2eea2b311633a940b82e08d60148e83a
@@ -82,7 +82,130 @@ MonoBehaviour:
         ObjectType: 7
         guid: 2eea2b311633a940b82e08d60148e83a
       Path: SoundBanks\Default Work Unit\KatMusicTest
+    - name: SFX
+      guid: a4d398b670e2374091b184932fa778ca
+      id: 393239870
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1c2f7ea7e019e44081a8c815ce5a8e1e
+      - ElementName: SFX
+        ObjectType: 7
+        guid: a4d398b670e2374091b184932fa778ca
+      Path: SoundBanks\Default Work Unit\SFX
   EventWwu:
+  - PhysicalPath: Events\ATM.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: ATM
+      ObjectType: 12
+      guid: b6fc596aad35e144bcce166bc9203635
+    ParentPath: Events\ATM
+    guid: b6fc596aad35e144bcce166bc9203635
+    GuidInternal: 
+    m_lastTime: -8584484843809452849
+    List: []
+  - PhysicalPath: Events\Bus Int.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: ATM
+      ObjectType: 12
+      guid: b6fc596aad35e144bcce166bc9203635
+    - ElementName: Bus Int
+      ObjectType: 12
+      guid: fdeecdfb14d96741a56b075138555946
+    ParentPath: Events\ATM\Bus Int
+    guid: fdeecdfb14d96741a56b075138555946
+    GuidInternal: 
+    m_lastTime: -8584484843809432094
+    List:
+    - name: Bus_PlayConstant
+      guid: 3b595df174d05f40af823d1be54882f1
+      id: 650913174
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: ATM
+        ObjectType: 12
+        guid: b6fc596aad35e144bcce166bc9203635
+      - ElementName: Bus Int
+        ObjectType: 12
+        guid: fdeecdfb14d96741a56b075138555946
+      - ElementName: Bus_PlayConstant
+        ObjectType: 3
+        guid: 3b595df174d05f40af823d1be54882f1
+      Path: Events\ATM\Bus Int\Bus_PlayConstant
+      maxAttenuation: 0
+      maxDuration: 187.21066
+      minDuration: 187.21066
+    - name: Bus_PlayConstant2
+      guid: d02a72ddeeab0a43acc04282a5bd91e2
+      id: 2841586448
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: ATM
+        ObjectType: 12
+        guid: b6fc596aad35e144bcce166bc9203635
+      - ElementName: Bus Int
+        ObjectType: 12
+        guid: fdeecdfb14d96741a56b075138555946
+      - ElementName: Bus_PlayConstant2
+        ObjectType: 3
+        guid: d02a72ddeeab0a43acc04282a5bd91e2
+      Path: Events\ATM\Bus Int\Bus_PlayConstant2
+      maxAttenuation: 0
+      maxDuration: 183.38133
+      minDuration: 183.38133
+    - name: Bus_StopConstant
+      guid: 6bee53676f154441b32ad55142320be4
+      id: 1216243508
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: ATM
+        ObjectType: 12
+        guid: b6fc596aad35e144bcce166bc9203635
+      - ElementName: Bus Int
+        ObjectType: 12
+        guid: fdeecdfb14d96741a56b075138555946
+      - ElementName: Bus_StopConstant
+        ObjectType: 3
+        guid: 6bee53676f154441b32ad55142320be4
+      Path: Events\ATM\Bus Int\Bus_StopConstant
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Bus_StopConstant2
+      guid: 1980e3371f5116488568cf8d5a5e33a8
+      id: 1392277230
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: ATM
+        ObjectType: 12
+        guid: b6fc596aad35e144bcce166bc9203635
+      - ElementName: Bus Int
+        ObjectType: 12
+        guid: fdeecdfb14d96741a56b075138555946
+      - ElementName: Bus_StopConstant2
+        ObjectType: 3
+        guid: 1980e3371f5116488568cf8d5a5e33a8
+      Path: Events\ATM\Bus Int\Bus_StopConstant2
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Events
@@ -94,7 +217,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 60318edf19da10499ab787cbf746dcca
     GuidInternal: 
-    m_lastTime: -8584488359290166210
+    m_lastTime: -8584484844663721834
     List:
     - name: Lvl2_1
       guid: 85e08690ea2f254bb8c862027e714e71
@@ -368,6 +491,328 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+  - PhysicalPath: Events\Menu.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: UI
+      ObjectType: 12
+      guid: 0ed8fc4c6d9e614b9334558299f149bf
+    - ElementName: Menu
+      ObjectType: 12
+      guid: e73fe4d73bc4d644817fd70215a07d42
+    ParentPath: Events\UI\Menu
+    guid: e73fe4d73bc4d644817fd70215a07d42
+    GuidInternal: 
+    m_lastTime: -8584484843809422083
+    List:
+    - name: MainMenu_Play
+      guid: 9bc0156357478a4483d95f65328a40cd
+      id: 777890284
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: UI
+        ObjectType: 12
+        guid: 0ed8fc4c6d9e614b9334558299f149bf
+      - ElementName: Menu
+        ObjectType: 12
+        guid: e73fe4d73bc4d644817fd70215a07d42
+      - ElementName: MainMenu_Play
+        ObjectType: 3
+        guid: 9bc0156357478a4483d95f65328a40cd
+      Path: Events\UI\Menu\MainMenu_Play
+      maxAttenuation: 0
+      maxDuration: 0.23535417
+      minDuration: 0.1046875
+    - name: UI_PlayPopUp
+      guid: 5c64f4c45c336f41b246e8ce11d0a2fe
+      id: 434496694
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: UI
+        ObjectType: 12
+        guid: 0ed8fc4c6d9e614b9334558299f149bf
+      - ElementName: UI_PlayPopUp
+        ObjectType: 3
+        guid: 5c64f4c45c336f41b246e8ce11d0a2fe
+      Path: Events\UI\UI_PlayPopUp
+      maxAttenuation: 0
+      maxDuration: 0.24727084
+      minDuration: 0.24727084
+  - PhysicalPath: Events\Puzzle.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: UI
+      ObjectType: 12
+      guid: 0ed8fc4c6d9e614b9334558299f149bf
+    - ElementName: Puzzle
+      ObjectType: 12
+      guid: 69c35ad743fb914bbf4fd22ecb85ff20
+    ParentPath: Events\UI\Puzzle
+    guid: 69c35ad743fb914bbf4fd22ecb85ff20
+    GuidInternal: 
+    m_lastTime: -8584484843809407026
+    List:
+    - name: Puzzle_PlayBlink
+      guid: b51b413f2451d04ab7cce0917024b231
+      id: 2122616712
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: UI
+        ObjectType: 12
+        guid: 0ed8fc4c6d9e614b9334558299f149bf
+      - ElementName: Puzzle
+        ObjectType: 12
+        guid: 69c35ad743fb914bbf4fd22ecb85ff20
+      - ElementName: Puzzle_PlayBlink
+        ObjectType: 3
+        guid: b51b413f2451d04ab7cce0917024b231
+      Path: Events\UI\Puzzle\Puzzle_PlayBlink
+      maxAttenuation: 0
+      maxDuration: 10.629979
+      minDuration: 10.629979
+    - name: Puzzle_PlayBlink2
+      guid: f3e318cdc581ad47bf6324abc3f7eec4
+      id: 2997744426
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: UI
+        ObjectType: 12
+        guid: 0ed8fc4c6d9e614b9334558299f149bf
+      - ElementName: Puzzle
+        ObjectType: 12
+        guid: 69c35ad743fb914bbf4fd22ecb85ff20
+      - ElementName: Puzzle_PlayBlink2
+        ObjectType: 3
+        guid: f3e318cdc581ad47bf6324abc3f7eec4
+      Path: Events\UI\Puzzle\Puzzle_PlayBlink2
+      maxAttenuation: 0
+      maxDuration: 4.3153334
+      minDuration: 4.3153334
+    - name: Puzzle_PlayCompletion
+      guid: fa7f881ab46c984cb63d319dc7a5ef4e
+      id: 3493478672
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: UI
+        ObjectType: 12
+        guid: 0ed8fc4c6d9e614b9334558299f149bf
+      - ElementName: Puzzle
+        ObjectType: 12
+        guid: 69c35ad743fb914bbf4fd22ecb85ff20
+      - ElementName: Puzzle_PlayCompletion
+        ObjectType: 3
+        guid: fa7f881ab46c984cb63d319dc7a5ef4e
+      Path: Events\UI\Puzzle\Puzzle_PlayCompletion
+      maxAttenuation: 0
+      maxDuration: 2.7652292
+      minDuration: 2.7652292
+    - name: Puzzle_PlayCompletion2
+      guid: c2d1a722316e1441a8517427728080d6
+      id: 3686034434
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: UI
+        ObjectType: 12
+        guid: 0ed8fc4c6d9e614b9334558299f149bf
+      - ElementName: Puzzle
+        ObjectType: 12
+        guid: 69c35ad743fb914bbf4fd22ecb85ff20
+      - ElementName: Puzzle_PlayCompletion2
+        ObjectType: 3
+        guid: c2d1a722316e1441a8517427728080d6
+      Path: Events\UI\Puzzle\Puzzle_PlayCompletion2
+      maxAttenuation: 0
+      maxDuration: 2.691729
+      minDuration: 2.691729
+    - name: Puzzle_PlayCompletion3
+      guid: ff52a81f229d644cb3b4666fb2b84729
+      id: 3686034435
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: UI
+        ObjectType: 12
+        guid: 0ed8fc4c6d9e614b9334558299f149bf
+      - ElementName: Puzzle
+        ObjectType: 12
+        guid: 69c35ad743fb914bbf4fd22ecb85ff20
+      - ElementName: Puzzle_PlayCompletion3
+        ObjectType: 3
+        guid: ff52a81f229d644cb3b4666fb2b84729
+      Path: Events\UI\Puzzle\Puzzle_PlayCompletion3
+      maxAttenuation: 0
+      maxDuration: 1.4070417
+      minDuration: 1.4070417
+    - name: Puzzle_PlayCompletion4
+      guid: 61a2f178565f29438cca71cd4361f435
+      id: 3686034436
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: UI
+        ObjectType: 12
+        guid: 0ed8fc4c6d9e614b9334558299f149bf
+      - ElementName: Puzzle
+        ObjectType: 12
+        guid: 69c35ad743fb914bbf4fd22ecb85ff20
+      - ElementName: Puzzle_PlayCompletion4
+        ObjectType: 3
+        guid: 61a2f178565f29438cca71cd4361f435
+      Path: Events\UI\Puzzle\Puzzle_PlayCompletion4
+      maxAttenuation: 0
+      maxDuration: 3.303146
+      minDuration: 3.303146
+    - name: Puzzle_PlayCompletion5
+      guid: 3e6a0f3d956ad54bb3f3b161060ea86b
+      id: 3686034437
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: UI
+        ObjectType: 12
+        guid: 0ed8fc4c6d9e614b9334558299f149bf
+      - ElementName: Puzzle
+        ObjectType: 12
+        guid: 69c35ad743fb914bbf4fd22ecb85ff20
+      - ElementName: Puzzle_PlayCompletion5
+        ObjectType: 3
+        guid: 3e6a0f3d956ad54bb3f3b161060ea86b
+      Path: Events\UI\Puzzle\Puzzle_PlayCompletion5
+      maxAttenuation: 0
+      maxDuration: 3.4743958
+      minDuration: 3.4743958
+    - name: Puzzle_PlayDrop
+      guid: cdd7bd56e194d44eb8bb7c4995ff73b4
+      id: 699607909
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: UI
+        ObjectType: 12
+        guid: 0ed8fc4c6d9e614b9334558299f149bf
+      - ElementName: Puzzle
+        ObjectType: 12
+        guid: 69c35ad743fb914bbf4fd22ecb85ff20
+      - ElementName: Puzzle_PlayDrop
+        ObjectType: 3
+        guid: cdd7bd56e194d44eb8bb7c4995ff73b4
+      Path: Events\UI\Puzzle\Puzzle_PlayDrop
+      maxAttenuation: 0
+      maxDuration: 0.086958334
+      minDuration: 0.086958334
+    - name: Puzzle_PlayPickUp
+      guid: aa3dd8b6f7b46a44bc06eecd98c6264c
+      id: 528779466
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: UI
+        ObjectType: 12
+        guid: 0ed8fc4c6d9e614b9334558299f149bf
+      - ElementName: Puzzle
+        ObjectType: 12
+        guid: 69c35ad743fb914bbf4fd22ecb85ff20
+      - ElementName: Puzzle_PlayPickUp
+        ObjectType: 3
+        guid: aa3dd8b6f7b46a44bc06eecd98c6264c
+      Path: Events\UI\Puzzle\Puzzle_PlayPickUp
+      maxAttenuation: 0
+      maxDuration: 0.070083335
+      minDuration: 0.070083335
+    - name: Puzzle_PlayRotation
+      guid: dfc2fcb82e007d4096d1d96d5d2ccce9
+      id: 1911763448
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: UI
+        ObjectType: 12
+        guid: 0ed8fc4c6d9e614b9334558299f149bf
+      - ElementName: Puzzle
+        ObjectType: 12
+        guid: 69c35ad743fb914bbf4fd22ecb85ff20
+      - ElementName: Puzzle_PlayRotation
+        ObjectType: 3
+        guid: dfc2fcb82e007d4096d1d96d5d2ccce9
+      Path: Events\UI\Puzzle\Puzzle_PlayRotation
+      maxAttenuation: 0
+      maxDuration: 0.34675
+      minDuration: 0.34675
+    - name: Puzzle_StopBlink
+      guid: 838b2cfb04df2040a7292ce49fea65ca
+      id: 4040085034
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: UI
+        ObjectType: 12
+        guid: 0ed8fc4c6d9e614b9334558299f149bf
+      - ElementName: Puzzle
+        ObjectType: 12
+        guid: 69c35ad743fb914bbf4fd22ecb85ff20
+      - ElementName: Puzzle_StopBlink
+        ObjectType: 3
+        guid: 838b2cfb04df2040a7292ce49fea65ca
+      Path: Events\UI\Puzzle\Puzzle_StopBlink
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Puzzle_StopBlink2
+      guid: 5af88093a16ea94cbd83532516ae6083
+      id: 1066306604
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: UI
+        ObjectType: 12
+        guid: 0ed8fc4c6d9e614b9334558299f149bf
+      - ElementName: Puzzle
+        ObjectType: 12
+        guid: 69c35ad743fb914bbf4fd22ecb85ff20
+      - ElementName: Puzzle_StopBlink2
+        ObjectType: 3
+        guid: 5af88093a16ea94cbd83532516ae6083
+      Path: Events\UI\Puzzle\Puzzle_StopBlink2
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  - PhysicalPath: Events\UI.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: UI
+      ObjectType: 12
+      guid: 0ed8fc4c6d9e614b9334558299f149bf
+    ParentPath: Events\UI
+    guid: 0ed8fc4c6d9e614b9334558299f149bf
+    GuidInternal: 
+    m_lastTime: -8584484843809396976
+    List: []
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -394,7 +839,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: ce35905f33d6774dafac532b6a139962
     GuidInternal: 
-    m_lastTime: -8584488590303955287
+    m_lastTime: -8584484844656936845
     List:
     - name: MusicLvl2
       guid: 4ab022ee7a77bc40ba343b9d8abd93fb
@@ -586,7 +1031,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 2d71c89aba83d4478e4b5b2ecc2dba7c
     GuidInternal: 
-    m_lastTime: -8584488590303935286
+    m_lastTime: -8584484844656911676
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -600,7 +1045,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: a7e4db233b4197439f41e18a383855a5
     GuidInternal: 
-    m_lastTime: -8584488590303925285
+    m_lastTime: -8584484844656891678
     List:
     - name: Lvl2_1_HiHatPlay
       guid: 2240eb7e6d07a4479b77be29792c2057
@@ -687,7 +1132,7 @@ MonoBehaviour:
         guid: f703d7b29405cc43aaf875ea0d84041c
       Path: Triggers\Default Work Unit\Lvl2_1_SnareStop
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 01000000030000000500000006000000070000000b0000000c000000110000001200000018000000190000001e0000001f0000002100000044000000450000001b0100001c010000ab010000ac010000ea010000eb0100009e0200005c0d00005d0d0000270e0000
+  ExpandedWaapiItemIds: 0100000003000000050000000600000007000000080000000b0000000c000000110000001200000018000000190000001b0000001e0000001f000000200000002100000044000000450000001b0100001c010000ab010000ac010000ea010000eb0100009e0200005c0d00005d0d0000270e0000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
