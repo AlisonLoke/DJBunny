@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1c2f7ea7e019e44081a8c815ce5a8e1e
     GuidInternal: 
-    m_lastTime: -8584484843795702644
+    m_lastTime: -8584484165831296169
     List:
     - name: KatMusicTest
       guid: 2eea2b311633a940b82e08d60148e83a
@@ -108,7 +108,7 @@ MonoBehaviour:
     ParentPath: Events\ATM
     guid: b6fc596aad35e144bcce166bc9203635
     GuidInternal: 
-    m_lastTime: -8584484843809452849
+    m_lastTime: -8584484165853865624
     List: []
   - PhysicalPath: Events\Bus Int.wwu
     PathAndIcons:
@@ -124,7 +124,7 @@ MonoBehaviour:
     ParentPath: Events\ATM\Bus Int
     guid: fdeecdfb14d96741a56b075138555946
     GuidInternal: 
-    m_lastTime: -8584484843809432094
+    m_lastTime: -8584484165853855557
     List:
     - name: Bus_PlayConstant
       guid: 3b595df174d05f40af823d1be54882f1
@@ -217,7 +217,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 60318edf19da10499ab787cbf746dcca
     GuidInternal: 
-    m_lastTime: -8584484844663721834
+    m_lastTime: -8584484165853835560
     List:
     - name: Lvl2_1
       guid: 85e08690ea2f254bb8c862027e714e71
@@ -505,7 +505,7 @@ MonoBehaviour:
     ParentPath: Events\UI\Menu
     guid: e73fe4d73bc4d644817fd70215a07d42
     GuidInternal: 
-    m_lastTime: -8584484843809422083
+    m_lastTime: -8584484165853810458
     List:
     - name: MainMenu_Play
       guid: 9bc0156357478a4483d95f65328a40cd
@@ -527,23 +527,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.23535417
       minDuration: 0.1046875
-    - name: UI_PlayPopUp
-      guid: 5c64f4c45c336f41b246e8ce11d0a2fe
-      id: 434496694
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: UI
-        ObjectType: 12
-        guid: 0ed8fc4c6d9e614b9334558299f149bf
-      - ElementName: UI_PlayPopUp
-        ObjectType: 3
-        guid: 5c64f4c45c336f41b246e8ce11d0a2fe
-      Path: Events\UI\UI_PlayPopUp
-      maxAttenuation: 0
-      maxDuration: 0.24727084
-      minDuration: 0.24727084
   - PhysicalPath: Events\Puzzle.wwu
     PathAndIcons:
     - ElementName: Events
@@ -558,7 +541,7 @@ MonoBehaviour:
     ParentPath: Events\UI\Puzzle
     guid: 69c35ad743fb914bbf4fd22ecb85ff20
     GuidInternal: 
-    m_lastTime: -8584484843809407026
+    m_lastTime: -8584484165853795817
     List:
     - name: Puzzle_PlayBlink
       guid: b51b413f2451d04ab7cce0917024b231
@@ -811,8 +794,25 @@ MonoBehaviour:
     ParentPath: Events\UI
     guid: 0ed8fc4c6d9e614b9334558299f149bf
     GuidInternal: 
-    m_lastTime: -8584484843809396976
-    List: []
+    m_lastTime: -8584484165853785768
+    List:
+    - name: UI_PlayPopUp
+      guid: 5c64f4c45c336f41b246e8ce11d0a2fe
+      id: 434496694
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: UI
+        ObjectType: 12
+        guid: 0ed8fc4c6d9e614b9334558299f149bf
+      - ElementName: UI_PlayPopUp
+        ObjectType: 3
+        guid: 5c64f4c45c336f41b246e8ce11d0a2fe
+      Path: Events\UI\UI_PlayPopUp
+      maxAttenuation: 0
+      maxDuration: 0.24727084
+      minDuration: 0.24727084
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -839,7 +839,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: ce35905f33d6774dafac532b6a139962
     GuidInternal: 
-    m_lastTime: -8584484844656936845
+    m_lastTime: -8584484165831256128
     List:
     - name: MusicLvl2
       guid: 4ab022ee7a77bc40ba343b9d8abd93fb
@@ -1031,7 +1031,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 2d71c89aba83d4478e4b5b2ecc2dba7c
     GuidInternal: 
-    m_lastTime: -8584484844656911676
+    m_lastTime: -8584484165831236104
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -1045,7 +1045,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: a7e4db233b4197439f41e18a383855a5
     GuidInternal: 
-    m_lastTime: -8584484844656891678
+    m_lastTime: -8584484165831223102
     List:
     - name: Lvl2_1_HiHatPlay
       guid: 2240eb7e6d07a4479b77be29792c2057

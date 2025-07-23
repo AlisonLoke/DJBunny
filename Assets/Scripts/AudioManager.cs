@@ -29,9 +29,10 @@ public class AudioManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else
+        else if(instance != this)
         {
             Destroy(gameObject);
+            return;
         }
         Debug.Log("Starting to play music");
         PlayMusic.Post(gameObject);
