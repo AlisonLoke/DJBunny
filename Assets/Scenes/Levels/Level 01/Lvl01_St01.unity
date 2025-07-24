@@ -385,6 +385,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3106259389938421848, guid: 5accc1d11f8a3854a8b1c867ea8fa3e8, type: 3}
+      propertyPath: Lvl2_1.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: f8104d792c81b0b4ba798f73be1ca010, type: 2}
+    - target: {fileID: 3106259389938421848, guid: 5accc1d11f8a3854a8b1c867ea8fa3e8, type: 3}
       propertyPath: PlayDrop.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: f555333a229e6ce44b55adc38591588a, type: 2}
@@ -392,6 +396,10 @@ PrefabInstance:
       propertyPath: PlayBlink.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: 5ae513adb828c7e418245635090aa66f, type: 2}
+    - target: {fileID: 3106259389938421848, guid: 5accc1d11f8a3854a8b1c867ea8fa3e8, type: 3}
+      propertyPath: PlayMusic.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 9ae1141820514584981d4c6646f50f62, type: 2}
     - target: {fileID: 3106259389938421848, guid: 5accc1d11f8a3854a8b1c867ea8fa3e8, type: 3}
       propertyPath: PlayPickUp.WwiseObjectReference
       value: 
@@ -1720,6 +1728,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1799665017}
   - component: {fileID: 1799665016}
+  - component: {fileID: 1799665019}
+  - component: {fileID: 1799665018}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -1767,6 +1777,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1799665018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799665015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be27bfebb0c4f148a44e94c2edc7550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 15372c21a35d9754eb92903b0f736f31, type: 2}
+  decodeBank: 0
+  overrideLoadSetting: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
+--- !u!114 &1799665019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799665015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be27bfebb0c4f148a44e94c2edc7550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: aa23f95fc30cdaa4491f1343feb3aa78, type: 2}
+  decodeBank: 0
+  overrideLoadSetting: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1001 &1811390872
 PrefabInstance:
   m_ObjectHideFlags: 0
