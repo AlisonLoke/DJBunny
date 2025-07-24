@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1c2f7ea7e019e44081a8c815ce5a8e1e
     GuidInternal: 
-    m_lastTime: -8584484165831296169
+    m_lastTime: -8584482434833039582
     List:
     - name: KatMusicTest
       guid: 2eea2b311633a940b82e08d60148e83a
@@ -217,7 +217,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 60318edf19da10499ab787cbf746dcca
     GuidInternal: 
-    m_lastTime: -8584484165853835560
+    m_lastTime: -8584482434835024070
     List:
     - name: Lvl2_1
       guid: 85e08690ea2f254bb8c862027e714e71
@@ -355,9 +355,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Lvl2_2_Bass
+    - name: Lvl2_2_BassPlay
       guid: 1260cdc27037db4eaf471e99f7d3e7f9
-      id: 52528120
+      id: 3286417742
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -365,16 +365,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Lvl2_2_Bass
+      - ElementName: Lvl2_2_BassPlay
         ObjectType: 3
         guid: 1260cdc27037db4eaf471e99f7d3e7f9
-      Path: Events\Default Work Unit\Lvl2_2_Bass
+      Path: Events\Default Work Unit\Lvl2_2_BassPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Lvl2_2_Bells
-      guid: b71939b9050d0349b4f0a97748aa5327
-      id: 544256877
+    - name: Lvl2_2_BassStop
+      guid: d9da1c5c5dd9a243863a51a07e4785e0
+      id: 34566192
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -382,16 +382,33 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Lvl2_2_Bells
+      - ElementName: Lvl2_2_BassStop
+        ObjectType: 3
+        guid: d9da1c5c5dd9a243863a51a07e4785e0
+      Path: Events\Default Work Unit\Lvl2_2_BassStop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl2_2_BellsPlay
+      guid: b71939b9050d0349b4f0a97748aa5327
+      id: 1775264455
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl2_2_BellsPlay
         ObjectType: 3
         guid: b71939b9050d0349b4f0a97748aa5327
-      Path: Events\Default Work Unit\Lvl2_2_Bells
+      Path: Events\Default Work Unit\Lvl2_2_BellsPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Lvl2_2_Chords
-      guid: 370973adc68c0a45a5dfe42f05cf02cf
-      id: 3227398492
+    - name: Lvl2_2_BellsStop
+      guid: 99a6f904d36ab24ca48718a1a6ac67a0
+      id: 468929557
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -399,10 +416,44 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Lvl2_2_Chords
+      - ElementName: Lvl2_2_BellsStop
+        ObjectType: 3
+        guid: 99a6f904d36ab24ca48718a1a6ac67a0
+      Path: Events\Default Work Unit\Lvl2_2_BellsStop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl2_2_ChordsPlay
+      guid: 370973adc68c0a45a5dfe42f05cf02cf
+      id: 1042721802
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl2_2_ChordsPlay
         ObjectType: 3
         guid: 370973adc68c0a45a5dfe42f05cf02cf
-      Path: Events\Default Work Unit\Lvl2_2_Chords
+      Path: Events\Default Work Unit\Lvl2_2_ChordsPlay
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl2_2_ChordsStop
+      guid: 7c951bef68facc46b506d335072e5cb4
+      id: 2446923828
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl2_2_ChordsStop
+        ObjectType: 3
+        guid: 7c951bef68facc46b506d335072e5cb4
+      Path: Events\Default Work Unit\Lvl2_2_ChordsStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -423,9 +474,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Lvl2_3_Plucks
+    - name: Lvl2_3_PlucksPlay
       guid: e762fbe32feff744b9fc34fd71dfb87c
-      id: 3418998824
+      id: 2625521726
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -433,16 +484,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Lvl2_3_Plucks
+      - ElementName: Lvl2_3_PlucksPlay
         ObjectType: 3
         guid: e762fbe32feff744b9fc34fd71dfb87c
-      Path: Events\Default Work Unit\Lvl2_3_Plucks
+      Path: Events\Default Work Unit\Lvl2_3_PlucksPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Lvl2_3_Tune
-      guid: 0f30079f8cec9d448349e20920b2c5f4
-      id: 3891698248
+    - name: Lvl2_3_PlucksStop
+      guid: 68e4a881f00e374b906ee4f3441dfa84
+      id: 3621837824
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -450,16 +501,33 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Lvl2_3_Tune
+      - ElementName: Lvl2_3_PlucksStop
+        ObjectType: 3
+        guid: 68e4a881f00e374b906ee4f3441dfa84
+      Path: Events\Default Work Unit\Lvl2_3_PlucksStop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl2_3_TunePlay
+      guid: 0f30079f8cec9d448349e20920b2c5f4
+      id: 410907230
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl2_3_TunePlay
         ObjectType: 3
         guid: 0f30079f8cec9d448349e20920b2c5f4
-      Path: Events\Default Work Unit\Lvl2_3_Tune
+      Path: Events\Default Work Unit\Lvl2_3_TunePlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Lvl2_3_Wow
-      guid: 3e1c9e26334d364c8c6471abaec74635
-      id: 497870267
+    - name: Lvl2_3_TuneStop
+      guid: 4cf3ed646e22e649ae097a26210c6a56
+      id: 1448903200
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -467,10 +535,44 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Lvl2_3_Wow
+      - ElementName: Lvl2_3_TuneStop
+        ObjectType: 3
+        guid: 4cf3ed646e22e649ae097a26210c6a56
+      Path: Events\Default Work Unit\Lvl2_3_TuneStop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl2_3_WowPlay
+      guid: 3e1c9e26334d364c8c6471abaec74635
+      id: 1876825709
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl2_3_WowPlay
         ObjectType: 3
         guid: 3e1c9e26334d364c8c6471abaec74635
-      Path: Events\Default Work Unit\Lvl2_3_Wow
+      Path: Events\Default Work Unit\Lvl2_3_WowPlay
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl2_3_WowStop
+      guid: fa77d1bf40765641ab2e7443a3812858
+      id: 2994122939
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl2_3_WowStop
+        ObjectType: 3
+        guid: fa77d1bf40765641ab2e7443a3812858
+      Path: Events\Default Work Unit\Lvl2_3_WowStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1132,7 +1234,7 @@ MonoBehaviour:
         guid: f703d7b29405cc43aaf875ea0d84041c
       Path: Triggers\Default Work Unit\Lvl2_1_SnareStop
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0100000003000000050000000600000007000000080000000b0000000c000000110000001200000018000000190000001b0000001e0000001f000000200000002100000044000000450000001b0100001c010000ab010000ac010000ea010000eb0100009e0200005c0d00005d0d0000270e0000
+  ExpandedWaapiItemIds: 0100000003000000050000000600000007000000080000000b0000000c000000110000001200000018000000190000001b0000001e0000001f0000002000000021000000260000002700000044000000450000001b0100001c010000ab010000ac010000ea010000eb0100009e0200005c0d00005d0d0000270e0000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
