@@ -13,11 +13,10 @@ MonoBehaviour:
   m_Name: Lvl02_Chords
   m_EditorClassIdentifier: 
   BlockName: Drum
-  BlockPrefab: {fileID: 1385824898608407974, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
+  BlockPrefab: {fileID: 3804025796979829729, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
   BlockCoordinatesList:
   - {x: 0, y: 0}
-  - {x: 0, y: 1}
-  - {x: 1, y: 1}
+  - {x: 1, y: 0}
   PlayInstrument:
     idInternal: 0
     valueGuidInternal: 
@@ -26,4 +25,4 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 559693be0c27d934b98f5a9b4415e62e, type: 2}
-  genre: 0
+  genre: 1

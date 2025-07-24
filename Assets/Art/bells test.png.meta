@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 7a732207b00fbbb499ede1cf5b0a5005
+guid: 32b2902954dcc7f4fb84c9e8e43606c5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3447091054394061052
-    second: inblock test_0
+      213: 2173357346757558757
+    second: bells test_0
+  - first:
+      213: -515826879803680232
+    second: bells test_1
+  - first:
+      213: -5618209960440276049
+    second: bells test_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,23 +132,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: inblock test_0
+      name: bells test_0
       rect:
         serializedVersion: 2
-        x: 260
-        y: 265
-        width: 481
-        height: 477
+        x: 357
+        y: 363
+        width: 285
+        height: 267
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 40f4a6213f87920d0800000000000000
-      internalID: -3447091054394061052
+      spriteID: 5e1487fedf0592e10800000000000000
+      internalID: 2173357346757558757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bells test_1
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 408
+        width: 165
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81a14bf8f2a67d8f0800000000000000
+      internalID: -515826879803680232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bells test_2
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 372
+        width: 144
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fab556abecb1802b0800000000000000
+      internalID: -5618209960440276049
       vertices: []
       indices: 
       edges: []
@@ -151,7 +201,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7f1a4ad04c08926479fc3df5c8aa4321
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +211,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      inblock test_0: -3447091054394061052
+      bells test_0: 2173357346757558757
+      bells test_1: -515826879803680232
+      bells test_2: -5618209960440276049
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
