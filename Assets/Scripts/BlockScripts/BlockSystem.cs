@@ -370,21 +370,27 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         {
 
             blockParentRect.position = snapClosestGridCell.GetComponent<RectTransform>().position;
-            CheckIfBlockOnClosedCell();
 
-            if (!isSnappedToGrid)
+            bool blockOnClosedCell = IsBlockOverClosedCell();
+            if (blockOnClosedCell)
             {
+                UnMarkBlockCellAsOccupied();
+                foreach (EndCell endCell in endCells)
+                {
+                    endCell.StopBlink();
+                }
+                ConnectionManager.instance.ClearBlockPulses();
+
+                blockParentRect.position = blockOriginPos;
+                blockParentRect.rotation = originalRotation;
+                isSnappedToGrid = false;
+                UnhighlightAllCells();
+
                 return;
             }
-            if (!isSnappedToGrid && originalRotation == Quaternion.identity)
-            {
-                //blockOriginPos = blockParentRect.position;
-                //originalRotation = blockParentRect.rotation;
-                Debug.Log(" Original Rotation saved");
-            }
 
-            MarkBlockCellsAsOccupied();
             isSnappedToGrid = true;
+            MarkBlockCellsAsOccupied();
             AddPlaceBlockToList(blockParentRect);
             AddBlockUIToList();
             CheckForFirstEndCell();
@@ -439,41 +445,28 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    private void CheckIfBlockOnClosedCell()
+
+
+    private bool IsBlockOverClosedCell()
     {
-        
-        foreach (RectTransform thisBlock in blockParentRect)
+        foreach (RectTransform blockRect in blockRectransforms)
         {
-            GridCell currentGridCell = SnapClosestGridCell(thisBlock.position);
+            GridCell currentCell = SnapClosestGridCell(blockRect.position);
 
-            if (currentGridCell == null || LevelManager.Instance.gridData == null)
+            if (currentCell == null || LevelManager.Instance.gridData == null)
+                continue;
+
+            Vector2Int blockPos = new Vector2Int(currentCell.x, currentCell.y);
+            bool isClosed = LevelManager.Instance.gridData.closedGridSpace.Contains(blockPos);
+
+            if (isClosed)
             {
-                return;
+                Debug.LogWarning($"Block is on a closed cell at {blockPos}");
+                return true;
             }
-
-            Vector2Int currentBlockPos = new Vector2Int(currentGridCell.x, currentGridCell.y);
-
-            if (LevelManager.Instance.gridData.closedGridSpace.Contains(currentBlockPos))
-            {
-                UnMarkBlockCellAsOccupied();
-                foreach (EndCell thisEndCell in endCells)
-
-                {
-
-                    thisEndCell.StopBlink();
-                }
-                ConnectionManager.instance.ClearBlockPulses();
-                Debug.LogWarning("Block on end cell, returning to origin.");
-                blockParentRect.position = blockOriginPos;
-                isSnappedToGrid = false;
-                UnhighlightAllCells();
-                return;
-            }
-
         }
 
-
-
+        return false;
     }
     private void BlockIsDraggedOutOfBounds()
     {
