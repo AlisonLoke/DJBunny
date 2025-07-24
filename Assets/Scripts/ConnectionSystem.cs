@@ -15,8 +15,9 @@ public class ConnectionSystem : MonoBehaviour
     [HideInInspector] public BlockSystem blockSystem;
     public static int currentLevelIndex = 1;
     public GridCell currentGridCell;
-   [SerializeField] private ConnectCellType connectCellType = ConnectCellType.Primary;
-   
+    [SerializeField] private ConnectCellType connectCellType = ConnectCellType.Primary;
+    public ConnectCellType ConnectionType => connectCellType;
+
     //Primary Connection variables
     private EndCell startConnectedEndCell;
     private EndCell finishConnectedEndCell;
@@ -25,15 +26,15 @@ public class ConnectionSystem : MonoBehaviour
 
     public bool pathIsComplete = false;
 
-  
-    
+
+
     //Path Management
     //Contains multiple list of endCell object paths. A collection of paths
     private List<List<EndCell>> allPaths = new List<List<EndCell>>();
     public List<BlockUI> allBlockUIs = new List<BlockUI>();
     private List<BlockUI> previouslyPulsedBlocks = new List<BlockUI>();
 
-  
+
     //private Tween currentLineFadeTween;
 
     public event System.Action<int> onValidPathCompleted;
@@ -142,7 +143,7 @@ public class ConnectionSystem : MonoBehaviour
             {
                 return;
             }
-           
+
             startConnectedEndCell = endCell;
             //connectedStartCells.Add(endCell);
             endCell.ConnectedToStartAndFinish(endCell.currentGridCell);
@@ -173,7 +174,7 @@ public class ConnectionSystem : MonoBehaviour
             Debug.Log("Path is already completed.Skipping further checks");
             return;
         }
-      
+
         if (startConnectedEndCell != null && finishConnectedEndCell != null)
         {
             Debug.Log("Both start and finish cells found, finding path...");
@@ -287,7 +288,7 @@ public class ConnectionSystem : MonoBehaviour
 
     }
 
-  
+
 
     private bool CheckAllBlockUsed(List<EndCell> path)
     {
@@ -305,7 +306,7 @@ public class ConnectionSystem : MonoBehaviour
     private void NoValidPathFound()
     {
         allPaths.Clear();
-        
+
         currentPath.Clear();
         Debug.Log("No valid path found. Don't trigger win scene");
     }
@@ -707,18 +708,23 @@ public class ConnectionSystem : MonoBehaviour
         Debug.Log($"Setting {linePoints.Count} points to line renderer");
         if (linePoints.Count >= 2)
         {
-            lineRenderer.points = linePoints.ToArray();
-            lineRenderer.SetAllDirty(); // Force redraw
-
-            //Move line renderer to render on top
-            //lineRenderer.transform.SetAsLastSibling();
-            Debug.Log($"Line renderer updated with {linePoints.Count} points");
+            SetLinePoints(linePoints,connectCellType);
         }
         else
         {
             Debug.LogWarning("Not enough valid points to draw line");
             ClearConnectedLine();
         }
+    }
+
+    private void SetLinePoints(List<Vector2> linePoints,ConnectCellType connectCellType)
+    {
+        lineRenderer.points = linePoints.ToArray();
+        SetLinerendererByType();
+        lineRenderer.SetAllDirty(); // Force redraw
+
+
+        Debug.Log($"Line renderer updated with {linePoints.Count} points");
     }
 
     /// <summary>
@@ -893,27 +899,17 @@ public class ConnectionSystem : MonoBehaviour
         AudioManager.instance.PlayCompletion.Post(gameObject);
     }
 
-    //private void FadeOutPathLine(float duration = 1.0f)
-    //{
+    private void SetLinerendererByType()
+    {
+        switch (ConnectionType)
+        {
+            case ConnectCellType.Primary:
+                Debug.Log("Linerenderer is on PRIMARY PATH"); 
+                break;
+            case ConnectCellType.Secondary:
+                Debug.Log("Linerenderer is on SECONDARY PATH");
 
-    //    //a is alpha, naming follows rgba
-    //    if (lineRenderer == null || lineRenderer.color.a <= 0f) return;
-
-    //    currentLineFadeTween?.Kill();
-    //    // DoTween.Alpha gradually changes alpha colour 
-    //    currentLineFadeTween = DOTween.ToAlpha(GetLineRendererColour, SetLineRendererColour, 0f, duration).SetEase(Ease.InOutSine);
-
-
-    //}
-
-    //private Color GetLineRendererColour()
-    //{
-    //    return lineRenderer.color;
-    //}
-    //private void SetLineRendererColour(Color newColour)
-    //{
-    //    lineRenderer.color = newColour;
-    //    lineRenderer.SetAllDirty(); //refreshes ui so new colour can be applied
-    //}
-
+                break;
+        }
+    }
 }

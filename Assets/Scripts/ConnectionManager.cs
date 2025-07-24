@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,6 +25,10 @@ public class ConnectionManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+    }
+    public ConnectionSystem GetConnectionSystemByType(ConnectCellType type)
+    {
+        return connectionSystems.FirstOrDefault(connectionSystem => connectionSystem.ConnectionType == type);
     }
 
     public GridCell FindAdjacentEndCells(EndCell fromEndCell, Image blockCellImage, int x, int y)
