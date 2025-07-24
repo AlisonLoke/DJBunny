@@ -13,10 +13,6 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID BUS_PLAYCONSTANT = 650913174U;
-        static const AkUniqueID BUS_PLAYCONSTANT2 = 2841586448U;
-        static const AkUniqueID BUS_STOPCONSTANT = 1216243508U;
-        static const AkUniqueID BUS_STOPCONSTANT2 = 1392277230U;
         static const AkUniqueID LVL2_1 = 3868115957U;
         static const AkUniqueID LVL2_1_HIHATPLAY = 1029901154U;
         static const AkUniqueID LVL2_1_HIHATSTOP = 1631337148U;
@@ -25,28 +21,20 @@ namespace AK
         static const AkUniqueID LVL2_1_SNAREPLAY = 233758521U;
         static const AkUniqueID LVL2_1_SNARESTOP = 2824720255U;
         static const AkUniqueID LVL2_2 = 3868115958U;
-        static const AkUniqueID LVL2_2_BASS = 52528120U;
-        static const AkUniqueID LVL2_2_BELLS = 544256877U;
-        static const AkUniqueID LVL2_2_CHORDS = 3227398492U;
+        static const AkUniqueID LVL2_2_BASSPLAY = 3286417742U;
+        static const AkUniqueID LVL2_2_BASSSTOP = 34566192U;
+        static const AkUniqueID LVL2_2_BELLSPLAY = 1775264455U;
+        static const AkUniqueID LVL2_2_BELLSSTOP = 468929557U;
+        static const AkUniqueID LVL2_2_CHORDSPLAY = 1042721802U;
+        static const AkUniqueID LVL2_2_CHORDSSTOP = 2446923828U;
         static const AkUniqueID LVL2_3 = 3868115959U;
-        static const AkUniqueID LVL2_3_PLUCKS = 3418998824U;
-        static const AkUniqueID LVL2_3_TUNE = 3891698248U;
-        static const AkUniqueID LVL2_3_WOW = 497870267U;
-        static const AkUniqueID MAINMENU_PLAY = 777890284U;
+        static const AkUniqueID LVL2_3_PLUCKSPLAY = 2625521726U;
+        static const AkUniqueID LVL2_3_PLUCKSSTOP = 3621837824U;
+        static const AkUniqueID LVL2_3_TUNEPLAY = 410907230U;
+        static const AkUniqueID LVL2_3_TUNESTOP = 1448903200U;
+        static const AkUniqueID LVL2_3_WOWPLAY = 1876825709U;
+        static const AkUniqueID LVL2_3_WOWSTOP = 2994122939U;
         static const AkUniqueID PLAYMUSIC = 417627684U;
-        static const AkUniqueID PUZZLE_PLAYBLINK = 2122616712U;
-        static const AkUniqueID PUZZLE_PLAYBLINK2 = 2997744426U;
-        static const AkUniqueID PUZZLE_PLAYCOMPLETION = 3493478672U;
-        static const AkUniqueID PUZZLE_PLAYCOMPLETION2 = 3686034434U;
-        static const AkUniqueID PUZZLE_PLAYCOMPLETION3 = 3686034435U;
-        static const AkUniqueID PUZZLE_PLAYCOMPLETION4 = 3686034436U;
-        static const AkUniqueID PUZZLE_PLAYCOMPLETION5 = 3686034437U;
-        static const AkUniqueID PUZZLE_PLAYDROP = 699607909U;
-        static const AkUniqueID PUZZLE_PLAYPICKUP = 528779466U;
-        static const AkUniqueID PUZZLE_PLAYROTATION = 1911763448U;
-        static const AkUniqueID PUZZLE_STOPBLINK = 4040085034U;
-        static const AkUniqueID PUZZLE_STOPBLINK2 = 1066306604U;
-        static const AkUniqueID UI_PLAYPOPUP = 434496694U;
     } // namespace EVENTS
 
     namespace STATES
@@ -99,7 +87,6 @@ namespace AK
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID KATMUSICTEST = 1863621452U;
-        static const AkUniqueID SFX = 393239870U;
     } // namespace BANKS
 
     namespace BUSSES

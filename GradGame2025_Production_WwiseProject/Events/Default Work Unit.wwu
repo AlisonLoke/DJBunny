@@ -48,12 +48,96 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Lvl2_2_Chords" ID="{AD730937-8CC6-450A-A5DF-E42F05CF02CF}"/>
-				<Event Name="Lvl2_2_Bells" ID="{B93919B7-0D05-4903-B4F0-A97748AA5327}"/>
-				<Event Name="Lvl2_2_Bass" ID="{C2CD6012-3770-4EDB-AF47-1E99F7D3E7F9}"/>
-				<Event Name="Lvl2_3_Plucks" ID="{E3FB62E7-EF2F-44F7-B9FC-34FD71DFB87C}"/>
-				<Event Name="Lvl2_3_Tune" ID="{9F07300F-EC8C-449D-8349-E20920B2C5F4}"/>
-				<Event Name="Lvl2_3_Wow" ID="{269E1C3E-4D33-4C36-8C64-71ABAEC74635}"/>
+				<Event Name="Lvl2_2_ChordsPlay" ID="{AD730937-8CC6-450A-A5DF-E42F05CF02CF}">
+					<ChildrenList>
+						<Action Name="" ID="{777E904B-6134-41BE-9D14-8D9E49DC32A8}" ShortID="200383659">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lvl2_Stg2_1_chords_160_44_8m" ID="{DD1CD549-E2D4-49B0-8743-E3AF86D83367}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Lvl2_2_BellsPlay" ID="{B93919B7-0D05-4903-B4F0-A97748AA5327}">
+					<ChildrenList>
+						<Action Name="" ID="{D4194C8A-B6A1-4440-B77E-9BBED0DEA376}" ShortID="293528480">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lvl2_Stg2_2_bells_160_44_8m" ID="{8A8E7FB7-4E3D-43B4-8F10-813AD8C97BB4}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Lvl2_2_BassPlay" ID="{C2CD6012-3770-4EDB-AF47-1E99F7D3E7F9}">
+					<ChildrenList>
+						<Action Name="" ID="{8970980F-96BE-49CC-8A05-BDDD1FC847F0}" ShortID="594107759">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lvl2_Stg2_3_bass_160_44_8m" ID="{6DB2099F-7156-4A93-9B16-E6FBE4E1CFFC}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Lvl2_3_PlucksPlay" ID="{E3FB62E7-EF2F-44F7-B9FC-34FD71DFB87C}">
+					<ChildrenList>
+						<Action Name="" ID="{BA980005-AEED-4706-A32A-2405B7CB255C}" ShortID="577479213">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lvl2_Stg3_Mel_Plucks_160_44_8m" ID="{87EAB1A6-5E66-4EAB-AEF0-00F8023F7EE8}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Lvl2_3_TunePlay" ID="{9F07300F-EC8C-449D-8349-E20920B2C5F4}">
+					<ChildrenList>
+						<Action Name="" ID="{F881DCD6-E653-4C6B-BC01-49562522231A}" ShortID="934444660">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lvl2_Stg3_Mel_Tune_160_44_8m" ID="{0540F010-320D-44B7-9CE5-B7304FD25236}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Lvl2_3_WowPlay" ID="{269E1C3E-4D33-4C36-8C64-71ABAEC74635}">
+					<ChildrenList>
+						<Action Name="" ID="{502053F0-C38F-4855-BFCC-A790D40CCBA6}" ShortID="699019820">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lvl2_Stg3_Mel_Wow_160_44_8m" ID="{B0DB7A6C-EC16-4005-8289-EAC82BC1217C}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="Lvl2_1" ID="{9086E085-2FEA-4B25-B8C8-62027E714E71}">
 					<ChildrenList>
 						<Action Name="" ID="{D6006236-1633-46CE-8359-C4D20E5EF572}" ShortID="573707850">
@@ -166,6 +250,36 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{DC3C43F3-59F3-4A84-BA98-E0CE26DD32AF}" ShortID="985156451">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lvl2_Stg2_1_chords_160_44_8m" ID="{DD1CD549-E2D4-49B0-8743-E3AF86D83367}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FA8F2FC5-19C1-4393-BB43-9654FCB746AD}" ShortID="377916112">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lvl2_Stg2_2_bells_160_44_8m" ID="{8A8E7FB7-4E3D-43B4-8F10-813AD8C97BB4}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8A431FC8-BE9C-4519-BB6F-4896B25A7A61}" ShortID="806739593">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lvl2_Stg2_3_bass_160_44_8m" ID="{6DB2099F-7156-4A93-9B16-E6FBE4E1CFFC}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Lvl2_3" ID="{186009DE-4B58-40C5-AC4E-B045FB6705B9}">
@@ -177,6 +291,126 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Lvl2_3" ID="{1A014952-9E9F-47E6-8686-A544C3031410}" WorkUnitID="{5F9035CE-D633-4D77-AFAC-532B6A139962}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{AC61EF29-543E-4206-ABFE-6ECB6E051498}" ShortID="221672328">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lvl2_Stg3_Mel_Plucks_160_44_8m" ID="{87EAB1A6-5E66-4EAB-AEF0-00F8023F7EE8}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D619E05D-2C4D-41D7-BAAA-FFAE633DBF06}" ShortID="250813075">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lvl2_Stg3_Mel_Tune_160_44_8m" ID="{0540F010-320D-44B7-9CE5-B7304FD25236}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F2EABFD5-8DE1-40B1-B29E-72D444BFE3EE}" ShortID="806442341">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lvl2_Stg3_Mel_Wow_160_44_8m" ID="{B0DB7A6C-EC16-4005-8289-EAC82BC1217C}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Lvl2_2_BassStop" ID="{5C1CDAD9-D95D-43A2-863A-51A07E4785E0}">
+					<ChildrenList>
+						<Action Name="" ID="{6B633C0A-A91B-4341-BA2C-7E6F9D89AAF4}" ShortID="95732198">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lvl2_Stg2_3_bass_160_44_8m" ID="{6DB2099F-7156-4A93-9B16-E6FBE4E1CFFC}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Lvl2_2_BellsStop" ID="{04F9A699-6AD3-4CB2-A487-18A1A6AC67A0}">
+					<ChildrenList>
+						<Action Name="" ID="{7B3C54CC-F195-4541-95C2-CA5B452FE190}" ShortID="506775405">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lvl2_Stg2_2_bells_160_44_8m" ID="{8A8E7FB7-4E3D-43B4-8F10-813AD8C97BB4}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Lvl2_2_ChordsStop" ID="{EF1B957C-FA68-46CC-B506-D335072E5CB4}">
+					<ChildrenList>
+						<Action Name="" ID="{711E7F2B-BB6E-4CA3-BA51-585DEB8320F0}" ShortID="843434948">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lvl2_Stg2_1_chords_160_44_8m" ID="{DD1CD549-E2D4-49B0-8743-E3AF86D83367}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Lvl2_3_PlucksStop" ID="{81A8E468-0EF0-4B37-906E-E4F3441DFA84}">
+					<ChildrenList>
+						<Action Name="" ID="{917DB466-FC88-4BCC-AC9E-AED75A27833B}" ShortID="140919417">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lvl2_Stg3_Mel_Plucks_160_44_8m" ID="{87EAB1A6-5E66-4EAB-AEF0-00F8023F7EE8}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Lvl2_3_TuneStop" ID="{64EDF34C-226E-49E6-AE09-7A26210C6A56}">
+					<ChildrenList>
+						<Action Name="" ID="{2685230F-096C-4118-A0D8-9038ABDD8C5C}" ShortID="296847941">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lvl2_Stg3_Mel_Tune_160_44_8m" ID="{0540F010-320D-44B7-9CE5-B7304FD25236}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Lvl2_3_WowStop" ID="{BFD177FA-7640-4156-AB2E-7443A3812858}">
+					<ChildrenList>
+						<Action Name="" ID="{078FE486-9D68-40D1-BBE7-8E735030EF37}" ShortID="928793818">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lvl2_Stg3_Mel_Wow_160_44_8m" ID="{B0DB7A6C-EC16-4005-8289-EAC82BC1217C}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
