@@ -1,18 +1,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelMusicManager : MonoBehaviour
+public class StageMusicManager : MonoBehaviour
 {
 
     [Header("This level's music setup")]
-    public AK.Wwise.Event levelMusic;
+    public AK.Wwise.Event nextStageMusic;
 
 
     private void Start()
     {
         if (MusicManager.instance != null)
         {
-            MusicManager.instance.SetLevelMusic(levelMusic);
+            MusicManager.instance.SetLevelMusic(nextStageMusic);
         }
         else
         {

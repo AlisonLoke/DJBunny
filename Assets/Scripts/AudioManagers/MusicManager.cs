@@ -10,7 +10,7 @@ public class MusicManager : MonoBehaviour
     //private bool IsMusicPlaying = false;
     private List<AK.Wwise.Event> activeInstrumentLayers = new();
     private GameObject currentAudioObject;
-    public AK.Wwise.Event LevelMusic = null;
+    public AK.Wwise.Event StartLevelMusic = null;
     public AK.Wwise.Event PlayMusic = null;
    
  
@@ -35,7 +35,18 @@ public class MusicManager : MonoBehaviour
 
     }
 
+    private void Start()
+    {
 
+        if (instance != null)
+        {
+            SetLevelMusic(StartLevelMusic);
+        }
+        else
+        {
+            Debug.LogWarning("AudioManager instance not found.");
+        }
+    }
     public void SetLevelMusic(AK.Wwise.Event levelMusic)
     {
         Debug.Log("Setting Level Music");

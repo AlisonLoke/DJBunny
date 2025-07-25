@@ -13,6 +13,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
     private GridCell gridCell;
     private GridVisual gridVisual;
     private float timeSinceLastRotation = Mathf.Infinity;
+    private float timeSinceLastHover = Mathf.Infinity;
     private bool isSnappedToGrid = false;
     private bool isFollowingMouse = false;
     private GameObject audioObject;
@@ -30,6 +31,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
     [SerializeField] private RectTransform[] blockRectransforms;
     [SerializeField] private BlockData blockData;
     [SerializeField] private float delayBetweenRotations = 1f;
+    [SerializeField] private float delaybetweenhovers = 1f;
 
     public RectTransform gridParent;
     public EndCell[] endCells;
@@ -59,6 +61,11 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             timeSinceLastRotation += Time.deltaTime;
             return;
         }
+        if(timeSinceLastHover < delaybetweenhovers)
+        {
+            timeSinceLastHover += Time.deltaTime;   
+            return; 
+        }
 
         // Follow mouse if selected
         if (isFollowingMouse)
@@ -75,8 +82,13 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
             if (pointerOver && !isHovering)
             {
+                if(timeSinceLastHover < delaybetweenhovers)
+                {
+                    return;
+                }
                 isHovering = true;
                 StartHoverAnimation();
+                timeSinceLastHover = 0;
             }
             else if (!pointerOver && isHovering)
             {
