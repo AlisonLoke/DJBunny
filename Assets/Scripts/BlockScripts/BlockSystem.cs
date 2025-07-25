@@ -226,12 +226,12 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
     {
         isFollowingMouse = false;
         selectedBlock = null;
-        AudioManager.instance.PlayDrop.Post(gameObject);
+        SFXManager.instance.PlayDrop.Post(gameObject);
         if (IsAnyBlockOutsideGrid())
         {
             ResetBlockToOrigin();
             UnhighlightAllCells();
-            AudioManager.instance.StopMusic();
+            //AudioManager.instance.StopMusic();
             return;
         }
 
@@ -249,13 +249,14 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
 
         //AudioManager.instance.QueueMusic(blockData.Instruments);
-        if (audioObject != null)
-        {
-            AudioManager.instance.StopMusic();
-            audioObject = null;
-        }
+        //if (audioObject != null)
+        //{
+        //    AudioManager.instance.StopMusic();
+        //    audioObject = null;
+        //}
 
-        audioObject = AudioManager.instance.Play(blockData.PlayInstrument);
+        //audioObject = AudioManager.instance.Play(blockData.PlayInstrument);
+        MusicManager.instance.PlayInstruments(blockData.PlayInstrument);
     }
 
 
@@ -263,7 +264,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
     {
         selectedBlock = this;
         isFollowingMouse = true;
-        AudioManager.instance.PlayPickUp.Post(gameObject);
+        SFXManager.instance.PlayPickUp.Post(gameObject);
 
         if (blockUI != null)
         {
@@ -278,7 +279,8 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             //originalRotation = blockParentRect.rotation;
             return;
         }
-        audioObject = AudioManager.instance.Play(blockData.MuteInstrument);
+        //audioObject = AudioManager.instance.Play(blockData.MuteInstrument);
+        MusicManager.instance.PlayInstruments(blockData.MuteInstrument);
         RemoveFromGrid();
         ResetHoverAnimation();
         ConnectionManager.instance.ResetCompletedPaths();
@@ -288,8 +290,9 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
     private void RemoveFromGrid()
     {
         isSnappedToGrid = false;
-        audioObject = AudioManager.instance.Play(blockData.MuteInstrument);
-        AudioManager.instance.PlayDrop.Post(gameObject);
+        //audioObject = AudioManager.instance.Play(blockData.MuteInstrument);
+        MusicManager.instance.PlayInstruments(blockData.MuteInstrument);
+        SFXManager.instance.PlayDrop.Post(gameObject);
         UnMarkBlockCellAsOccupied();
         RemovePlaceBlockFromList(blockParentRect);
         RemoveBlockUIFromList();
@@ -305,7 +308,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
         ClearEndCells();
 
-        AudioManager.instance.StopMusic();
+        //AudioManager.instance.StopMusic();
     }
 
     private void ResetBlockToOrigin()
@@ -317,8 +320,9 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
         ConnectionManager.instance.ClearBlockPulses();
         ConnectionManager.instance.ResetCompletedPaths();
-        audioObject = AudioManager.instance.Play(blockData.MuteInstrument);
-        AudioManager.instance.PlayDrop.Post(gameObject);
+        //audioObject = AudioManager.instance.Play(blockData.MuteInstrument);
+        MusicManager.instance.PlayInstruments(blockData.MuteInstrument);
+        SFXManager.instance.PlayDrop.Post(gameObject);
 
         if (blockUI != null)
         {
@@ -544,7 +548,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             Debug.LogError("BlockData reference is missing!");
             return;
         }
-        AudioManager.instance.PlayRotation.Post(gameObject);
+        SFXManager.instance.PlayRotation.Post(gameObject);
     }
 
 

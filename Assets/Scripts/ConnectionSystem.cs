@@ -896,7 +896,7 @@ public class ConnectionSystem : MonoBehaviour
     public void ShowPathComplete()
     {
         StartCoroutine(PulseCompletePath());
-        AudioManager.instance.PlayCompletion.Post(gameObject);
+        SFXManager.instance.PlayCompletion.Post(gameObject);
     }
 
     private void SetLinerendererByType()
