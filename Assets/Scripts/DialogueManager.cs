@@ -1,62 +1,74 @@
-using UnityEngine;
-using System.Collections.Generic;
 using System.Collections;
 using TMPro;
-using Unity.VisualScripting;
+using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
-    public TextMeshProUGUI textComponent;
-    public string[] lines;
+    public static DialogueManager instance; 
+    public TextMeshProUGUI DialogueText;
+    public TextMeshProUGUI nameTag;
     public float textSpeed;
+    public DialogueLine[] dialogueLines;
+    public Animator animator;
     private int index;
 
+    private void Awake()
+    {
+        instance = this;
+    }
     private void Start()
     {
-        textComponent.text = string.Empty;
-        StartDialogue();
+        DialogueText.text = string.Empty;
+       
     }
     private void Update()
     {
-       if (Mouse.current.leftButton.wasPressedThisFrame) // isPressed fires every frame while button is held not press and released so use wasPressedThisFrame
+        if (Mouse.current.leftButton.wasPressedThisFrame) // isPressed fires every frame while button is held not press and released so use wasPressedThisFrame
         {
-            if(textComponent.text == lines[index])
+            if (DialogueText.text == dialogueLines[index].line)
             {
                 NextLine();
             }
             else
             {
                 StopAllCoroutines();
-                textComponent.text = lines[index];  
+                DialogueText.text = dialogueLines[index].line;
+         
             }
         }
     }
-    private void StartDialogue()
+    public void StartDialogue()
     {
-       index = 0;
+        animator.SetBool("IsOpen", true);   
+        index = 0;
         StartCoroutine(TypeLine());
     }
     private IEnumerator TypeLine()
     {
-        foreach(char character in lines[index].ToCharArray())
+        nameTag.text = dialogueLines[index].characterName;
+        foreach (char character in dialogueLines[index].line.ToCharArray())
         {
-            textComponent.text += character;
+            DialogueText.text += character;
             yield return new WaitForSeconds(textSpeed);
         }
     }
 
     private void NextLine()
     {
-        if(index < lines.Length - 1 )
+        if (index < dialogueLines.Length - 1)
         {
             index++;
-            textComponent.text = string.Empty;
-            StartCoroutine (TypeLine());
+            DialogueText.text = string.Empty;
+            StartCoroutine(TypeLine());
         }
         else
         {
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
+            animator.SetBool("IsOpen", false);
+            SceneManager.LoadScene("Lvl01_St01");
+
         }
     }
 }

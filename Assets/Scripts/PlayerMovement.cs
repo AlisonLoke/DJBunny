@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("Interact Action Enabled!");
         interactionAction.Enable();
         interactionAction.performed += OnInteract;
+     
     }
     private void OnDisable()
     {
@@ -47,7 +48,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (Keyboard.current.eKey.wasPressedThisFrame)
         {
-            SceneManager.LoadScene("Lvl01_St01");
+            DialogueManager.instance.StartDialogue();
+            //SceneManager.LoadScene("Lvl01_St01");
         }
 
         if (interactionAction.WasPressedThisFrame())
