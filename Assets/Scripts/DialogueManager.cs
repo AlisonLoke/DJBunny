@@ -23,22 +23,22 @@ public class DialogueManager : MonoBehaviour
         DialogueText.text = string.Empty;
        
     }
-    private void Update()
-    {
-        if (Mouse.current.leftButton.wasPressedThisFrame) // isPressed fires every frame while button is held not press and released so use wasPressedThisFrame
-        {
-            if (DialogueText.text == dialogueLines[index].line)
-            {
-                NextLine();
-            }
-            else
-            {
-                StopAllCoroutines();
-                DialogueText.text = dialogueLines[index].line;
+    //private void Update()
+    //{
+        //if (Mouse.current.leftButton.wasPressedThisFrame) // isPressed fires every frame while button is held not press and released so use wasPressedThisFrame
+        //{
+        //    if (DialogueText.text == dialogueLines[index].line)
+        //    {
+        //        NextLine();
+        //    }
+        //    else
+        //    {
+        //        StopAllCoroutines();
+        //        DialogueText.text = dialogueLines[index].line;
          
-            }
-        }
-    }
+        //    }
+        //}
+    //}
     public void StartDialogue()
     {
         animator.SetBool("IsOpen", true);   
@@ -54,7 +54,19 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(textSpeed);
         }
     }
+    public void InteractToNextLine()
+    {
+        if (DialogueText.text == dialogueLines[index].line)
+        {
+            NextLine();
+        }
+        else
+        {
+            StopAllCoroutines();
+            DialogueText.text = dialogueLines[index].line;
 
+        }
+    }
     private void NextLine()
     {
         if (index < dialogueLines.Length - 1)
