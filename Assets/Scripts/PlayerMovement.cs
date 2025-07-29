@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     private bool isFacingRignt = true;
 
     public Rigidbody2D rb;
+    [SerializeField] private Vector2 targetPosition;
+    [SerializeField] private bool isMoving = false;
 
 
     private PlayerInput playerInput;
@@ -22,7 +23,9 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
-        moveAction = playerInput.actions["Move"]; // Ensure "Move" is the name of your action
+        //moveAction = playerInput.actions["Move"]; // Ensure "Move" is the name of your action
+
+        playerInput = GetComponent<PlayerInput>();
         interactionAction = playerInput.actions["Interact"];
 
 
@@ -33,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("Interact Action Enabled!");
         interactionAction.Enable();
         interactionAction.performed += OnInteract;
-     
+
     }
     private void OnDisable()
     {
@@ -43,30 +46,60 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        horizontal = moveAction.ReadValue<Vector2>().x; // Get horizontal input
+        //horizontal = moveAction.ReadValue<Vector2>().x; // Get horizontal input
+        //point and click movement
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            Vector3 screen = Mouse.current.position.ReadValue();
+            Vector2 clickPos = Camera.main.ScreenToWorldPoint(screen);
+
+            //Does click overlap an NPC Collider?
+            //Collider2D hit = Physics2D.OverlapPoint(clickPos);
+            //RaycastHit2D hit = Physics2D.Raycast(clickPos, Camera.main.transform.forward, 100f);
+            RaycastHit2D hit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(screen));
+
+            if (hit)
+            {
+                if (hit.transform.CompareTag("NPC"))
+                {
+
+                    Debug.Log("Clicked on NPC: " + hit.transform.name);
+                    DialogueManager.instance.StartDialogue();
+                    return; //dont start a walk this frame.
+                }
+                if (hit.transform.CompareTag("Ground"))
+                {
+                    targetPosition = hit.point;
+                    isMoving = true;    
+                }
+            }
+            //otherwise walk horizontally towards clicked x
+            //targetPosition = new Vector2(clickPos.x, rb.position.y);
+            //isMoving = true;
+        }
+
+
         Flip();
-
-        if (Keyboard.current.eKey.wasPressedThisFrame)
-        {
-            DialogueManager.instance.StartDialogue();
-            //SceneManager.LoadScene("Lvl01_St01");
-        }
-
-        if (interactionAction.WasPressedThisFrame())
-        {
-            Debug.Log("E key detected");
-        }
-
     }
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
+        //rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
+        if (isMoving)
+        {
+            Vector2 newPos = Vector2.MoveTowards(rb.position, targetPosition, speed * Time.fixedDeltaTime);
+            rb.MovePosition(newPos);
+            if (Vector2.Distance(rb.position, targetPosition) < 0.05f)
+            {
+                isMoving = false;
+            }
+        }
     }
 
     private void Flip()
     {
-        if ((isFacingRignt && horizontal < 0) || (!isFacingRignt && horizontal > 0))
+        Vector2 direction = targetPosition - rb.position;
+        if ((isFacingRignt && direction.x < 0) || (!isFacingRignt && direction.x > 0))
         {
             isFacingRignt = !isFacingRignt;
             transform.Rotate(0f, 180f, 0f);
@@ -79,7 +112,7 @@ public class PlayerMovement : MonoBehaviour
         {
             canInteract = true;
             interactableObject = other.gameObject;
-            Debug.Log("Press E to interact");
+            Debug.Log("Press left mouse button to interact");
         }
     }
 
