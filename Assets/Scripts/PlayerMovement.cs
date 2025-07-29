@@ -1,23 +1,25 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 public class PlayerMovement : MonoBehaviour
 {
 
-    private float horizontal;
-    [SerializeField] private float speed = 8f;
-    private bool isFacingRignt = true;
-
     public Rigidbody2D rb;
+   
+    [SerializeField] private float speed = 8f;
     [SerializeField] private Vector2 targetPosition;
     [SerializeField] private bool isMoving = false;
+    [SerializeField] private Animator animator;
 
 
+    private bool isFacingRignt = true;
     private PlayerInput playerInput;
-    private InputAction moveAction;
     private InputAction interactionAction;
     private bool canInteract = false;
     private GameObject interactableObject;
+    private bool isHovering = false;
+    private bool isAnimatingHover = false;
 
 
     private void Awake()
@@ -48,7 +50,8 @@ public class PlayerMovement : MonoBehaviour
     {
         //If dialogue open then dont fire left mouse button
         if (InputBlocked()) return;
-        //horizontal = moveAction.ReadValue<Vector2>().x; // Get horizontal input
+        HandleMouseHover();
+ 
         //point and click movement
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
@@ -85,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void HandleMouseClick()
     {
-        Vector2 clickPos = GetMouseWorldPosition();
+        GetMouseWorldPosition();
         RaycastHit2D hit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue()));
         if (!hit) return;
 
@@ -153,6 +156,51 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void HandleMouseHover()
+    {
+        RaycastHit2D hit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue()));
 
+        if (hit && hit.transform.CompareTag("NPC"))
+        {
+            Debug.Log("Mouse is hovering over NPC: " + hit.transform.name);
+            if (!isHovering)
+            {
+                isHovering = true;
+                interactableObject = hit.transform.gameObject;
+                StartHoverAnimation();
+            }
+        }
+        else
+        {
+            if(isHovering)
+            {
+                Debug.Log("Mouse stopped hovering NPC");
+                isHovering = false;
+                interactableObject=null;
+                EndHoverAnimation();    
+            }
+        }
+    }
+    private void StartHoverAnimation()
+    {
+
+        animator.SetBool("IsMouseOpen",true);
+        isAnimatingHover = true;
+
+    }
+
+    private void EndHoverAnimation()
+    {
+    
+        animator.SetBool("IsMouseOpen", false);
+        isAnimatingHover = true;
+
+    }
+    private void ResetHoverAnimation()
+    {
+        isHovering = false;
+        isAnimatingHover= false;
+        animator.SetBool("IsMouseOpen", false);
+    }
 
 }

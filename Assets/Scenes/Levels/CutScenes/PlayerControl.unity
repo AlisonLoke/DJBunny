@@ -1123,10 +1123,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce9a0e6255b22a4d9f36327d2d24d5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 200
   rb: {fileID: 1439729428}
+  speed: 200
   targetPosition: {x: 0, y: 0}
   isMoving: 0
+  animator: {fileID: 623062568}
 --- !u!114 &1439729427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1543,7 +1544,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1807531890
 RectTransform:
