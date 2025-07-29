@@ -22,4 +22,9 @@ public class InputBlocker : MonoBehaviour
         inputBlocker.enabled = false;
     }
 
+    public bool IsBlocking()
+    {
+        return inputBlocker != null && inputBlocker.enabled;
+    }
+
 }

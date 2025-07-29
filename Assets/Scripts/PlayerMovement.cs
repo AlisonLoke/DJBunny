@@ -46,6 +46,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        //If dialogue open then dont fire left mouse button
+        if ((InputBlocker.Instance != null && InputBlocker.Instance.IsBlocking()))
+        {
+            return;
+        }
         //horizontal = moveAction.ReadValue<Vector2>().x; // Get horizontal input
         //point and click movement
         if (Mouse.current.leftButton.wasPressedThisFrame)
@@ -65,6 +70,8 @@ public class PlayerMovement : MonoBehaviour
 
                     Debug.Log("Clicked on NPC: " + hit.transform.name);
                     DialogueManager.instance.StartDialogue();
+                    InputBlocker.Instance.EnableBlockInput();
+                    isMoving = false;
                     return; //dont start a walk this frame.
                 }
                 if (hit.transform.CompareTag("Ground"))
@@ -72,6 +79,7 @@ public class PlayerMovement : MonoBehaviour
                     targetPosition = hit.point;
                     isMoving = true;    
                 }
+               
             }
             //otherwise walk horizontally towards clicked x
             //targetPosition = new Vector2(clickPos.x, rb.position.y);

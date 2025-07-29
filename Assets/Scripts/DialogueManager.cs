@@ -79,6 +79,7 @@ public class DialogueManager : MonoBehaviour
         {
             //gameObject.SetActive(false);
             animator.SetBool("IsOpen", false);
+            InputBlocker.Instance.DisableBlockInput();
             SceneManager.LoadScene("Lvl01_St01");
 
         }
