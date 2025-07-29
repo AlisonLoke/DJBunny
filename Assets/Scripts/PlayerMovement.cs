@@ -47,43 +47,13 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         //If dialogue open then dont fire left mouse button
-        if ((InputBlocker.Instance != null && InputBlocker.Instance.IsBlocking()))
-        {
-            return;
-        }
+        if (InputBlocked()) return;
         //horizontal = moveAction.ReadValue<Vector2>().x; // Get horizontal input
         //point and click movement
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
-            Vector3 screen = Mouse.current.position.ReadValue();
-            Vector2 clickPos = Camera.main.ScreenToWorldPoint(screen);
-
-            //Does click overlap an NPC Collider?
-            //Collider2D hit = Physics2D.OverlapPoint(clickPos);
-            //RaycastHit2D hit = Physics2D.Raycast(clickPos, Camera.main.transform.forward, 100f);
-            RaycastHit2D hit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(screen));
-
-            if (hit)
-            {
-                if (hit.transform.CompareTag("NPC"))
-                {
-
-                    Debug.Log("Clicked on NPC: " + hit.transform.name);
-                    DialogueManager.instance.StartDialogue();
-                    InputBlocker.Instance.EnableBlockInput();
-                    isMoving = false;
-                    return; //dont start a walk this frame.
-                }
-                if (hit.transform.CompareTag("Ground"))
-                {
-                    targetPosition = hit.point;
-                    isMoving = true;    
-                }
-               
-            }
-            //otherwise walk horizontally towards clicked x
-            //targetPosition = new Vector2(clickPos.x, rb.position.y);
-            //isMoving = true;
+            HandleMouseClick();
+            
         }
 
 
@@ -113,26 +83,62 @@ public class PlayerMovement : MonoBehaviour
             transform.Rotate(0f, 180f, 0f);
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
+    private void HandleMouseClick()
     {
-        if (other.CompareTag("NPC"))
+        Vector2 clickPos = GetMouseWorldPosition();
+        RaycastHit2D hit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue()));
+        if (!hit) return;
+
+        if (hit.transform.CompareTag("NPC"))
         {
-            canInteract = true;
-            interactableObject = other.gameObject;
-            Debug.Log("Press left mouse button to interact");
+            HandleNPCClick(hit.transform);
+        }
+        else if (hit.transform.CompareTag("Ground"))
+        {
+            HandleGroundClick(hit.point);
         }
     }
-
-    private void OnTriggerExit2D(Collider2D other)
+    private Vector2 GetMouseWorldPosition()
     {
-        if (other.CompareTag("NPC"))
-        {
-            canInteract = false;
-            interactableObject = null;
-            Debug.Log("Left interaction zone.");
-        }
+        Vector3 screen = Mouse.current.position.ReadValue();
+        return Camera.main.ScreenToViewportPoint(screen);
     }
+
+    private void HandleNPCClick(Transform npc)
+    {
+        Debug.Log("Clicked on NPC: " + npc.name);
+        DialogueManager.instance.StartDialogue();
+        InputBlocker.Instance.EnableBlockInput();
+        isMoving = false;
+    }
+    private void HandleGroundClick(Vector2 point)
+    {
+        targetPosition = point;
+        isMoving = true;
+    }
+    private bool InputBlocked()
+    {
+        return InputBlocker.Instance != null && InputBlocker.Instance.IsBlocking();
+    }
+    //private void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    if (other.CompareTag("NPC"))
+    //    {
+    //        canInteract = true;
+    //        interactableObject = other.gameObject;
+    //        Debug.Log("Press left mouse button to interact");
+    //    }
+    //}
+
+    //private void OnTriggerExit2D(Collider2D other)
+    //{
+    //    if (other.CompareTag("NPC"))
+    //    {
+    //        canInteract = false;
+    //        interactableObject = null;
+    //        Debug.Log("Left interaction zone.");
+    //    }
+    //}
     private void OnInteract(InputAction.CallbackContext context)
     {
         Debug.Log("OnInteract function called!"); // Debug step 1
