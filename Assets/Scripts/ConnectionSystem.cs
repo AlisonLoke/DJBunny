@@ -421,6 +421,7 @@ public class ConnectionSystem : MonoBehaviour
         {
             foreach (EndCell connected in currentCell.connectedEndCell)
             {
+               
                 FindAllPaths(connected, targetCell, new List<EndCell>(path));
             }
         }
@@ -445,14 +446,24 @@ public class ConnectionSystem : MonoBehaviour
     {
         currentPath.Clear();
         allPaths.Clear();
-        if (startConnectedEndCell == null && finishConnectedEndCell == null)
+
+        EndCell typeSpecificStartCell = FindStartCellOfType(this.connectCellType);
+        EndCell typeSpecificFinishCell = FindFinishCellOfType(this.connectCellType);
+
+        if (typeSpecificStartCell == null && typeSpecificFinishCell == null)
         {
+            Debug.LogWarning($"No start or finish cells found for connection type {connectCellType}");
             return;
         }
 
+        //if (startConnectedEndCell == null && finishConnectedEndCell == null)
+        //{
+        //    return;
+        //}
+
         List<EndCell> workingPath = new List<EndCell>();
 
-        EndCell cellToTrackPathFrom = !startConnectedEndCell ? finishConnectedEndCell : startConnectedEndCell;
+        EndCell cellToTrackPathFrom = typeSpecificStartCell != null ? typeSpecificStartCell : typeSpecificFinishCell;
         /* ternary operator - same as
          * if (startConnectedEndCell == null)
          * {
@@ -486,7 +497,34 @@ public class ConnectionSystem : MonoBehaviour
         StartCoroutine(PulseCurrentPath(blockUIPath, Color.cyan, PreviewPathPulseLength));
 
     }
+    private EndCell FindStartCellOfType(ConnectCellType targetType)
+    {
+        // Look through all endCells for one that matches the type and is a start cell
+        foreach (EndCell endCell in endCells)
+        {
 
+            if (endCell.onlyConnectToStartFinish && PathFinder.instance.IsStartCell(endCell.currentGridCell) && endCell.currentGridCell.connectCellType == targetType)
+            {
+             
+                return endCell;
+            }
+        }
+        return null;
+    }
+
+    private EndCell FindFinishCellOfType(ConnectCellType targetType)
+    {
+        // Look through all endCells for one that matches the type and is a start cell
+        foreach (EndCell endCell in endCells)
+        {
+
+            if (endCell.onlyConnectToStartFinish && PathFinder.instance.IsFinishCell(endCell.currentGridCell) && endCell.currentGridCell.connectCellType == targetType) // You'll need to implement this logic
+            {
+                return endCell;
+            }
+        }
+        return null;
+    }
     private IEnumerator PulseCurrentPath(List<BlockUI> blockUIs, Color pulseColour, float delayBetweenBlocks)
     {
         InputBlocker.Instance.EnableBlockInput();
@@ -708,7 +746,7 @@ public class ConnectionSystem : MonoBehaviour
         Debug.Log($"Setting {linePoints.Count} points to line renderer");
         if (linePoints.Count >= 2)
         {
-            SetLinePoints(linePoints,connectCellType);
+            SetLinePoints(linePoints, connectCellType);
         }
         else
         {
@@ -717,7 +755,7 @@ public class ConnectionSystem : MonoBehaviour
         }
     }
 
-    private void SetLinePoints(List<Vector2> linePoints,ConnectCellType connectCellType)
+    private void SetLinePoints(List<Vector2> linePoints, ConnectCellType connectCellType)
     {
         lineRenderer.points = linePoints.ToArray();
         SetLinerendererByType();
@@ -904,11 +942,12 @@ public class ConnectionSystem : MonoBehaviour
         switch (ConnectionType)
         {
             case ConnectCellType.Primary:
-                Debug.Log("Linerenderer is on PRIMARY PATH"); 
+                Debug.Log("Linerenderer is on PRIMARY PATH");
+                lineRenderer.color = Color.red;
                 break;
             case ConnectCellType.Secondary:
                 Debug.Log("Linerenderer is on SECONDARY PATH");
-
+                lineRenderer.color = Color.cyan;
                 break;
         }
     }

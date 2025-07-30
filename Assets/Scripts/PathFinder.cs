@@ -98,27 +98,32 @@ public class PathFinder : MonoBehaviour
     {
         if (thisCell == null) return false;
 
-        bool isPrimaryStart = IsPrimaryStartCell(thisCell);
+        bool isPrimaryStart = startCell != null && thisCell.x == startCell.x && thisCell.y == startCell.y;
 
-        bool isDoubleStart = IsDoubleStartCell(thisCell);
+        bool isDoubleStart = gridData.enableDoubleConnectCell &&
+                         doubleStartCell != null &&
+                         thisCell.x == doubleStartCell.x &&
+                         thisCell.y == doubleStartCell.y;
 
-        bool result = isPrimaryStart || isDoubleStart;
+        return isPrimaryStart || isDoubleStart;
 
-        Debug.Log($"Checking if cell ({thisCell?.x}, {thisCell?.y}) is start cell: {result}");
-        return result;
+        //Debug.Log($"Checking if cell ({thisCell?.x}, {thisCell?.y}) is start cell: {result}");
+    
     }
     public bool IsFinishCell(GridCell thisCell)
     {
         if (thisCell == null) return false;
 
-        bool isPrimaryFinish = IsPrimaryFinishCell(thisCell);
+        bool isPrimaryFinish = finishCell != null && thisCell.x == finishCell.x && thisCell.y == finishCell.y;
 
-        bool isDoubleFinish = IsDoubelFinishCell(thisCell);
+        bool isDoubleFinish = gridData.enableDoubleConnectCell &&
+                          doubleFinishCell != null &&
+                          thisCell.x == doubleFinishCell.x &&
+                          thisCell.y == doubleFinishCell.y;
 
-        bool result = isPrimaryFinish || isDoubleFinish;
+        return isPrimaryFinish || isDoubleFinish;
 
-        Debug.Log($"Checking if cell ({thisCell?.x}, {thisCell?.y}) is finish cell: {result}");
-        return result;
+       
     }
    
     private bool IsPrimaryStartCell(GridCell thisCell)
