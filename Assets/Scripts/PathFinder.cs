@@ -65,13 +65,13 @@ public class PathFinder : MonoBehaviour
         if (cell.x == startCoords.x && cell.y == startCoords.y)
         {
             startCell = cell;
-            Debug.Log("Found start cell at: " + cell.x + ", " + cell.y);
+            //Debug.Log("Found start cell at: " + cell.x + ", " + cell.y);
         }
 
         if (cell.x == endCoords.x && cell.y == endCoords.y)
         {
             finishCell = cell;
-            Debug.Log("Found end cell at: " + cell.x + ", " + cell.y);
+            //Debug.Log("Found end cell at: " + cell.x + ", " + cell.y);
         }
     }
 
