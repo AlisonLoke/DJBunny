@@ -207,7 +207,10 @@ public class ConnectionSystem : MonoBehaviour
                     // Skip self
                     if (endCell == fromEndCell)
                         continue;
-
+                    if(endCell.blockSystem.connectCellType != fromEndCell.blockSystem.connectCellType)
+                    {
+                        continue;
+                    }
                     // Skip if it's a restricted end cell
                     if (endCell.onlyConnectToStartFinish)
                         continue;

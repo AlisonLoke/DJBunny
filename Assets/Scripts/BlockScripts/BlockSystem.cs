@@ -23,10 +23,10 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
     private bool isAnimatingHover = false;
     private Vector2 originalAnchoredPos;
     public Quaternion originalRotation;
+    public ConnectCellType connectCellType => connectType;
 
 
-
-
+    [SerializeField] private ConnectCellType connectType;
     [SerializeField] private RectTransform blockParentRect;
     [SerializeField] private RectTransform[] blockRectransforms;
     [SerializeField] private BlockData blockData;

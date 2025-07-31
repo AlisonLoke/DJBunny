@@ -139,6 +139,10 @@ PrefabInstance:
       propertyPath: blockData
       value: 
       objectReference: {fileID: 11400000, guid: 1679eb16912e67f4fac3061d0daf5bb0, type: 2}
+    - target: {fileID: 1426210828065714087, guid: a37a687d31418fa43961c2486285376d, type: 3}
+      propertyPath: connectType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1478484714294245317, guid: a37a687d31418fa43961c2486285376d, type: 3}
       propertyPath: m_Name
       value: GridCanvas 4X3
@@ -271,6 +275,10 @@ PrefabInstance:
       propertyPath: blockData
       value: 
       objectReference: {fileID: 11400000, guid: 1679eb16912e67f4fac3061d0daf5bb0, type: 2}
+    - target: {fileID: 9124864761841457880, guid: a37a687d31418fa43961c2486285376d, type: 3}
+      propertyPath: connectType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 273195605903777014, guid: a37a687d31418fa43961c2486285376d, type: 3}
@@ -456,6 +464,10 @@ PrefabInstance:
       propertyPath: gridParent
       value: 
       objectReference: {fileID: 1020587729}
+    - target: {fileID: 315326269192149421, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
+      propertyPath: connectType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1385824898608407974, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
       propertyPath: m_Name
       value: LBlock
@@ -707,6 +719,10 @@ PrefabInstance:
       propertyPath: gridParent
       value: 
       objectReference: {fileID: 1020587729}
+    - target: {fileID: 315326269192149421, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
+      propertyPath: connectType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1385824898608407974, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
       propertyPath: m_Name
       value: LBlock (1)
@@ -1217,6 +1233,10 @@ PrefabInstance:
       propertyPath: gridParent
       value: 
       objectReference: {fileID: 1020587729}
+    - target: {fileID: 6116093346985028512, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
+      propertyPath: connectType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6742391777000452425, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
