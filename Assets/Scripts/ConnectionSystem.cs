@@ -42,7 +42,7 @@ public class ConnectionSystem : MonoBehaviour
     private const float PreviewPathPulseLength = 0.15f;
     private const float PathCompletePulseLength = 0.5f;
 
-    [SerializeField] private UILineRenderer lineRenderer;
+    //[SerializeField] private UILineRenderer lineRenderer;
 
     [SerializeField] private RectTransform canvas;
     [SerializeField] private PathFinder pathFinder;
@@ -60,22 +60,22 @@ public class ConnectionSystem : MonoBehaviour
 
 
     }
-    private void Start()
-    {
-        // Make sure line renderer is properly initialized
-        if (lineRenderer == null)
-        {
-            lineRenderer = GetComponent<UILineRenderer>();
-            if (lineRenderer == null)
-            {
-                Debug.LogError("Line renderer not assigned to ConnectionSystem!");
-            }
-        }
+    //private void Start()
+    //{
+    //    // Make sure line renderer is properly initialized
+    //    if (lineRenderer == null)
+    //    {
+    //        lineRenderer = GetComponent<UILineRenderer>();
+    //        if (lineRenderer == null)
+    //        {
+    //            Debug.LogError("Line renderer not assigned to ConnectionSystem!");
+    //        }
+    //    }
 
-        lineRenderer.thickness = 5f;
-        lineRenderer.raycastTarget = false;
+    //    lineRenderer.thickness = 5f;
+    //    lineRenderer.raycastTarget = false;
 
-    }
+    //}
 
 
     public void CheckConnectionsForAllEndCells()
@@ -725,10 +725,17 @@ public class ConnectionSystem : MonoBehaviour
         if (currentPath.Count < 2)
         {
             Debug.LogWarning("Not enough points to draw a line");
-            ClearConnectedLine();
+
+            ConnectionManager.instance.HandlePathCleared(connectCellType);
             return;
         }
+        RectTransform targetLineRendererRect = ConnectionManager.instance.GetLineRendererByType(connectCellType)?.rectTransform;
 
+        if (targetLineRendererRect == null)
+        {
+            Debug.LogWarning("Line renderer not found for connection type");
+            return;
+        }
         Debug.Log("Current path cells:");
 
         List<BlockUI> blockUisOriginal = GetAllBlockUIInPath();
@@ -740,30 +747,32 @@ public class ConnectionSystem : MonoBehaviour
 
         //TODO:  Resort line if "maxDistanceBetweenPointsBreached" flag marked
 
-        List<Vector2> linePoints = GetWorldPosFromBlockTransforms(rectTransformsInPath);
+        List<Vector2> linePoints = GetWorldPosFromBlockTransforms(rectTransformsInPath, targetLineRendererRect);
 
 
         Debug.Log($"Setting {linePoints.Count} points to line renderer");
         if (linePoints.Count >= 2)
         {
-            SetLinePoints(linePoints, connectCellType);
+            //SetLinePoints(linePoints, connectCellType);
+            ConnectionManager.instance.HandlePathUpdate(connectCellType, linePoints);
         }
         else
         {
-            Debug.LogWarning("Not enough valid points to draw line");
-            ClearConnectedLine();
+            //Debug.LogWarning("Not enough valid points to draw line");
+            //ClearConnectedLine();
+            ConnectionManager.instance.HandlePathCleared(connectCellType);
         }
     }
 
-    private void SetLinePoints(List<Vector2> linePoints, ConnectCellType connectCellType)
-    {
-        lineRenderer.points = linePoints.ToArray();
-        SetLinerendererByType();
-        lineRenderer.SetAllDirty(); // Force redraw
+    //private void SetLinePoints(List<Vector2> linePoints, ConnectCellType connectCellType)
+    //{
+    //    lineRenderer.points = linePoints.ToArray();
+    //    SetLinerendererByType();
+    //    lineRenderer.SetAllDirty(); // Force redraw
 
 
-        Debug.Log($"Line renderer updated with {linePoints.Count} points");
-    }
+    //    Debug.Log($"Line renderer updated with {linePoints.Count} points");
+    //}
 
     /// <summary>
     /// Sorts RectTransforms in correct path order
@@ -872,7 +881,7 @@ public class ConnectionSystem : MonoBehaviour
     }
 
 
-    private List<Vector2> GetWorldPosFromBlockTransforms(List<RectTransform> rectTransformsInPath)
+    private List<Vector2> GetWorldPosFromBlockTransforms(List<RectTransform> rectTransformsInPath, RectTransform lineRendererRect)
     {
         List<Vector2> linePoints = new List<Vector2>();
         foreach (RectTransform rectTransform in rectTransformsInPath)
@@ -884,7 +893,7 @@ public class ConnectionSystem : MonoBehaviour
             // Convert world position to local position relative to the line renderer
             // null camera for Screen Space - Overlay
             Vector2 localPos;
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(lineRenderer.rectTransform, worldPos, null, out localPos);
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(lineRendererRect, worldPos, null, out localPos);
 
             Debug.Log($"  - Cell at local position {localPos} (world: {worldPos})");
             linePoints.Add(localPos);
@@ -927,8 +936,9 @@ public class ConnectionSystem : MonoBehaviour
 
     private void ClearConnectedLine()
     {
-        lineRenderer.points = new Vector2[0];
-        lineRenderer.SetAllDirty();
+        //lineRenderer.points = new Vector2[0];
+        //lineRenderer.SetAllDirty();
+        ConnectionManager.instance.HandlePathCleared(connectCellType);
     }
 
     public void ShowPathComplete()
@@ -937,18 +947,18 @@ public class ConnectionSystem : MonoBehaviour
         SFXManager.instance.PlayCompletion.Post(gameObject);
     }
 
-    private void SetLinerendererByType()
-    {
-        switch (ConnectionType)
-        {
-            case ConnectCellType.Primary:
-                Debug.Log("Linerenderer is on PRIMARY PATH");
-                lineRenderer.color = Color.red;
-                break;
-            case ConnectCellType.Secondary:
-                Debug.Log("Linerenderer is on SECONDARY PATH");
-                lineRenderer.color = Color.cyan;
-                break;
-        }
-    }
+    //private void SetLinerendererByType()
+    //{
+    //    switch (ConnectionType)
+    //    {
+    //        case ConnectCellType.Primary:
+    //            Debug.Log("Linerenderer is on PRIMARY PATH");
+    //            lineRenderer.color = Color.red;
+    //            break;
+    //        case ConnectCellType.Secondary:
+    //            Debug.Log("Linerenderer is on SECONDARY PATH");
+    //            lineRenderer.color = Color.cyan;
+    //            break;
+    //    }
+    //}
 }
