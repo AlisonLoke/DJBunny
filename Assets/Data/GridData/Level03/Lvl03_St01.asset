@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Lvl03_St01
   m_EditorClassIdentifier: 
   x: 4
-  y: 4
+  y: 3
   closedGridSpace:
-  - {x: 2, y: 0}
-  - {x: 2, y: 3}
+  - {x: 1, y: 0}
+  - {x: 1, y: 3}
   startCellCoordinates: {x: 0, y: 0}
-  finishCellCoordinates: {x: 3, y: 0}
-  doubleStartCellCoordinates: {x: 0, y: 3}
-  doubleFinishCellCoordinates: {x: 3, y: 3}
+  finishCellCoordinates: {x: 0, y: 3}
+  doubleStartCellCoordinates: {x: 2, y: 0}
+  doubleFinishCellCoordinates: {x: 2, y: 3}
   enableDoubleConnectCell: 1

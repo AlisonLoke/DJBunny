@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   x: 4
   y: 3
-  closedGridSpace: []
+  closedGridSpace:
+  - {x: 1, y: 3}
   startCellCoordinates: {x: 0, y: 0}
-  finishCellCoordinates: {x: 0, y: 3}
-  doubleStartCellCoordinates: {x: 2, y: 1}
-  doubleFinishCellCoordinates: {x: 2, y: 2}
+  finishCellCoordinates: {x: 1, y: 0}
+  doubleStartCellCoordinates: {x: 0, y: 3}
+  doubleFinishCellCoordinates: {x: 2, y: 3}
   enableDoubleConnectCell: 1

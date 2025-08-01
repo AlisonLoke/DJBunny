@@ -482,6 +482,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1541026340}
     - target: {fileID: 315326269192149421, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
+      propertyPath: connectType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 315326269192149421, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
       propertyPath: blockRectransforms.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -1153,6 +1157,10 @@ PrefabInstance:
       propertyPath: gridParent
       value: 
       objectReference: {fileID: 1541026340}
+    - target: {fileID: 315326269192149421, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
+      propertyPath: connectType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 315326269192149421, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
       propertyPath: blockRectransforms.Array.size
       value: 3
@@ -2060,6 +2068,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1541026340}
     - target: {fileID: 315326269192149421, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
+      propertyPath: connectType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 315326269192149421, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
       propertyPath: blockRectransforms.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -2590,6 +2602,10 @@ PrefabInstance:
       propertyPath: gridParent
       value: 
       objectReference: {fileID: 1541026340}
+    - target: {fileID: 6116093346985028512, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
+      propertyPath: connectType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6742391777000452425, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2652,11 +2668,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6742391777000452425, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -45.900024
+      value: 121.49695
       objectReference: {fileID: 0}
     - target: {fileID: 6742391777000452425, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -151.1
+      value: -112.909775
       objectReference: {fileID: 0}
     - target: {fileID: 6742391777000452425, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3273,6 +3289,10 @@ PrefabInstance:
       propertyPath: gridParent
       value: 
       objectReference: {fileID: 1541026340}
+    - target: {fileID: 6116093346985028512, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
+      propertyPath: connectType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6742391777000452425, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3448,6 +3468,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Line Renderer  (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6241842319172798543, guid: abbdd9f9a0ad6ad4696112bde59dc29b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241842319172798543, guid: abbdd9f9a0ad6ad4696112bde59dc29b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9259033
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241842319172798543, guid: abbdd9f9a0ad6ad4696112bde59dc29b, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5882353
+      objectReference: {fileID: 0}
     - target: {fileID: 9111660786706921632, guid: abbdd9f9a0ad6ad4696112bde59dc29b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3592,6 +3624,10 @@ PrefabInstance:
       propertyPath: gridParent
       value: 
       objectReference: {fileID: 1541026340}
+    - target: {fileID: 6116093346985028512, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
+      propertyPath: connectType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6742391777000452425, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3654,11 +3690,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6742391777000452425, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -45.900024
+      value: 121.49695
       objectReference: {fileID: 0}
     - target: {fileID: 6742391777000452425, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -151.1
+      value: -112.909775
       objectReference: {fileID: 0}
     - target: {fileID: 6742391777000452425, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3801,6 +3837,10 @@ PrefabInstance:
       propertyPath: gridParent
       value: 
       objectReference: {fileID: 1541026340}
+    - target: {fileID: 315326269192149421, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
+      propertyPath: connectType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 315326269192149421, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
       propertyPath: blockRectransforms.Array.size
       value: 3
@@ -4152,6 +4192,10 @@ PrefabInstance:
       propertyPath: gridParent
       value: 
       objectReference: {fileID: 1541026340}
+    - target: {fileID: 6116093346985028512, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
+      propertyPath: connectType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6742391777000452425, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4657,6 +4701,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1541026340}
     - target: {fileID: 315326269192149421, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
+      propertyPath: connectType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 315326269192149421, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
       propertyPath: blockRectransforms.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -4846,6 +4894,10 @@ PrefabInstance:
       propertyPath: gridParent
       value: 
       objectReference: {fileID: 1541026340}
+    - target: {fileID: 6116093346985028512, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
+      propertyPath: connectType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6742391777000452425, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5234,6 +5286,10 @@ PrefabInstance:
       propertyPath: gridParent
       value: 
       objectReference: {fileID: 1541026340}
+    - target: {fileID: 6116093346985028512, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
+      propertyPath: connectType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6742391777000452425, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5429,6 +5485,10 @@ PrefabInstance:
       propertyPath: gridParent
       value: 
       objectReference: {fileID: 1541026340}
+    - target: {fileID: 6116093346985028512, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
+      propertyPath: connectType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6742391777000452425, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5491,11 +5551,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6742391777000452425, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -45.900024
+      value: 205.04787
       objectReference: {fileID: 0}
     - target: {fileID: 6742391777000452425, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -151.1
+      value: -108.73222
       objectReference: {fileID: 0}
     - target: {fileID: 6742391777000452425, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5761,6 +5821,10 @@ PrefabInstance:
       propertyPath: gridParent
       value: 
       objectReference: {fileID: 1541026340}
+    - target: {fileID: 6116093346985028512, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
+      propertyPath: connectType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6742391777000452425, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5934,6 +5998,10 @@ PrefabInstance:
       propertyPath: gridParent
       value: 
       objectReference: {fileID: 1541026340}
+    - target: {fileID: 6116093346985028512, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
+      propertyPath: connectType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6742391777000452425, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6201,6 +6269,10 @@ PrefabInstance:
       propertyPath: gridParent
       value: 
       objectReference: {fileID: 1541026340}
+    - target: {fileID: 6116093346985028512, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
+      propertyPath: connectType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6742391777000452425, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6486,6 +6558,10 @@ PrefabInstance:
       propertyPath: gridParent
       value: 
       objectReference: {fileID: 1541026340}
+    - target: {fileID: 315326269192149421, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
+      propertyPath: connectType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1385824898608407974, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
       propertyPath: m_Name
       value: LBlock (3)
@@ -6983,6 +7059,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1293126450293535388, guid: d82a07b68e04241459d91f7c61258bb6, type: 3}
+      propertyPath: primaryLineRenderer
+      value: 
+      objectReference: {fileID: 598840466}
+    - target: {fileID: 1293126450293535388, guid: d82a07b68e04241459d91f7c61258bb6, type: 3}
+      propertyPath: secondaryLineRenderer
+      value: 
+      objectReference: {fileID: 1072052920}
     - target: {fileID: 1293126450293535388, guid: d82a07b68e04241459d91f7c61258bb6, type: 3}
       propertyPath: connectionSystems.Array.size
       value: 2
