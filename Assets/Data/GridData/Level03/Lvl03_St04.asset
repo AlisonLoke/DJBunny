@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62d0f7aa4e8cd904c8261eb8cdfbd513, type: 3}
-  m_Name: Lvl03_St02
+  m_Name: Lvl03_St04
   m_EditorClassIdentifier: 
   x: 4
-  y: 3
-  closedGridSpace: []
-  startCellCoordinates: {x: 0, y: 0}
-  finishCellCoordinates: {x: 1, y: 0}
-  doubleStartCellCoordinates: {x: 0, y: 3}
-  doubleFinishCellCoordinates: {x: 2, y: 3}
+  y: 4
+  closedGridSpace:
+  - {x: 1, y: 1}
+  - {x: 2, y: 2}
+  startCellCoordinates: {x: 0, y: 3}
+  finishCellCoordinates: {x: 3, y: 0}
+  doubleStartCellCoordinates: {x: 1, y: 2}
+  doubleFinishCellCoordinates: {x: 2, y: 1}
   enableDoubleConnectCell: 1

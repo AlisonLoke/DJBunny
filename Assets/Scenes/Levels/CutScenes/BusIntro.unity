@@ -453,7 +453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5623902958899469934, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -329.19864
+      value: -187.03835
       objectReference: {fileID: 0}
     - target: {fileID: 6223151664304027674, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
       propertyPath: m_RenderMode
@@ -710,10 +710,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce9a0e6255b22a4d9f36327d2d24d5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 200
   rb: {fileID: 907557615}
+  speed: 200
   targetPosition: {x: 0, y: 0}
   isMoving: 0
+  animator: {fileID: 0}
 --- !u!114 &907557614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1484,7 +1485,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Call Mom
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
