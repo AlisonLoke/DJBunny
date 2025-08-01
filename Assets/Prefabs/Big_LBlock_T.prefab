@@ -86,8 +86,9 @@ GameObject:
   - component: {fileID: 8401017802119976107}
   - component: {fileID: 193189770997690544}
   - component: {fileID: 9049598444072361859}
+  - component: {fileID: 8829844664590513890}
   m_Layer: 5
-  m_Name: BlockCell
+  m_Name: EndCell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,6 +151,24 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8829844664590513890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100946018751643974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 670de71b04640d54d9b5b99190a1dba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedEndCell: []
+  sisterEndCell: {fileID: 0}
+  currentGridCell: {fileID: 0}
+  onlyConnectToStartFinish: 0
+  IsEndCellOnClosedCell: 0
+  blockSystem: {fileID: 0}
 --- !u!1 &1574935810420165606
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,9 +180,8 @@ GameObject:
   - component: {fileID: 1523584609199847283}
   - component: {fileID: 8597669506335016490}
   - component: {fileID: 2790144306441084605}
-  - component: {fileID: 3501302164001184657}
   m_Layer: 5
-  m_Name: EndCell
+  m_Name: BlockCell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -226,24 +244,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3501302164001184657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1574935810420165606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 670de71b04640d54d9b5b99190a1dba2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  connectedEndCell: []
-  sisterEndCell: {fileID: 0}
-  currentGridCell: {fileID: 0}
-  onlyConnectToStartFinish: 0
-  IsEndCellOnClosedCell: 0
-  blockSystem: {fileID: 0}
 --- !u!1 &2596209293608631714
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +331,7 @@ GameObject:
   - component: {fileID: 3755718202776687710}
   - component: {fileID: 2411105244117530413}
   m_Layer: 0
-  m_Name: Big_LBlock
+  m_Name: Big_LBlock_T
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -353,16 +353,16 @@ RectTransform:
   - {fileID: 7866728967446371170}
   - {fileID: 1985168795695856985}
   - {fileID: 3187161121129732085}
+  - {fileID: 8888006407141519891}
   - {fileID: 1523584609199847283}
   - {fileID: 4415942323469106951}
   - {fileID: 8401017802119976107}
-  - {fileID: 8888006407141519891}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -8.223395, y: -141.21346}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3755718202776687710
 MonoBehaviour:
@@ -515,7 +515,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 40.836296, y: 0.36664057}
+  m_AnchoredPosition: {x: 40.836304, y: 81.27666}
   m_SizeDelta: {x: 42, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &535691216034464273
@@ -591,7 +591,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 40.83629, y: 0.36664343}
+  m_AnchoredPosition: {x: 40.836296, y: 81.27663}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4503559543735462283
