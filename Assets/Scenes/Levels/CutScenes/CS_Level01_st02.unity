@@ -176,6 +176,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &243216229
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 464224906712959636, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+      propertyPath: m_Name
+      value: LevelManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989203491967808597, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989203491967808597, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989203491967808597, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989203491967808597, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989203491967808597, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989203491967808597, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989203491967808597, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989203491967808597, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989203491967808597, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989203491967808597, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
 --- !u!1 &300603947
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,6 +423,72 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 394867747640707370, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 810261372}
+    - target: {fileID: 394867747640707370, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: InteractToNextLine
+      objectReference: {fileID: 0}
+    - target: {fileID: 394867747640707370, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DialogueManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+      propertyPath: dialogueLines.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+      propertyPath: dialogueLines.Array.data[0].line
+      value: 'WOWZA! That was totally awesome!! My partner would really dig that
+        cover!!
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+      propertyPath: dialogueLines.Array.data[1].line
+      value: '* smiles which reveals two separate buck teeth *
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+      propertyPath: dialogueLines.Array.data[2].line
+      value: "You\u2019ve really got something Bunnibee.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+      propertyPath: dialogueLines.Array.data[3].line
+      value: 'Hey, you should play some of that jazz in town! Rack up an audience
+        and see if they like your vibe.
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+      propertyPath: dialogueLines.Array.data[4].line
+      value: "Alright, you're a cool bun, Bunnibee. I\u2019ll see you around, I\u2019m
+        meeting my partner to set up a gig. I\u2019ll let them know about you!\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+      propertyPath: dialogueLines.Array.data[5].line
+      value: "Alright, you're a cool bun, Bunnibee. I\u2019ll see you around, I\u2019m
+        meeting my partner to set up a gig. I\u2019ll let them know about you!\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+      propertyPath: dialogueLines.Array.data[3].characterName
+      value: Todd
+      objectReference: {fileID: 0}
+    - target: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+      propertyPath: dialogueLines.Array.data[4].characterName
+      value: Todd
+      objectReference: {fileID: 0}
+    - target: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+      propertyPath: dialogueLines.Array.data[5].characterName
+      value: Todd
+      objectReference: {fileID: 0}
     - target: {fileID: 3833232021050756787, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -451,6 +574,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+--- !u!114 &810261372 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+  m_PrefabInstance: {fileID: 810261368}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a1ade943816d5a4ca7e526e786d8a6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &857803374
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,6 +1436,75 @@ Transform:
   - {fileID: 2004666326}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1481478155
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1481478157}
+  - component: {fileID: 1481478156}
+  m_Layer: 0
+  m_Name: DialogueTriggerOnStart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1481478156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481478155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 974f8ce6723e1544182983302c562b73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - characterName: Todd
+    line: 'WOWZA! That was totally awesome!! My partner would really dig that cover!!
+
+'
+  - characterName: DJ Bunny
+    line: '* smiles which reveals two separate buck teeth *
+
+'
+  - characterName: Todd
+    line: "You\u2019ve really got something Bunnibee."
+  - characterName: Todd
+    line: 'Hey, you should play some of that jazz in town! Rack up an audience and
+      see if they like your vibe.
+
+'
+  - characterName: DJ Bunny
+    line: ' * Gives a nod *
+
+'
+  - characterName: Todd
+    line: ' Alright, you''re a cool bun, Bunnibee.'
+  - characterName: Todd
+    line: " I\u2019ll see you around, I\u2019m meeting my partner to set up a gig.
+      I\u2019ll let them know about you!\r\n"
+--- !u!4 &1481478157
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481478155}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1584838165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1602,6 +1805,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1179964364}
+  - {fileID: 243216229}
+  - {fileID: 1481478157}
   - {fileID: 810261368}
   - {fileID: 1330260213}
   - {fileID: 857803377}

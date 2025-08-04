@@ -45,7 +45,8 @@ public class LevelManager : MonoBehaviour
         Debug.Log("Triggering Win ");
         // do whatever a win would do
         yield return new WaitForSeconds(4f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        GetNextSceneinBuildIndex();
     }
 
     //TODO: Set of win sequence so that it gets full end track 
@@ -54,5 +55,11 @@ public class LevelManager : MonoBehaviour
         // show something to the player to let them know that they need to use all blocks
     }
 
-
+    //Get next scene build
+    public void GetNextSceneinBuildIndex()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+   
+   
 }

@@ -1,15 +1,13 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
-    public static DialogueManager instance; 
+    public static DialogueManager instance;
     public TextMeshProUGUI DialogueText;
     public TextMeshProUGUI nameTag;
-    public float textSpeed;
+    public float textSpeed = 0.03f;
     public DialogueLine[] dialogueLines;
     public Animator animator;
     private int index;
@@ -21,27 +19,12 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         DialogueText.text = string.Empty;
-       
+
     }
-    //private void Update()
-    //{
-        //if (Mouse.current.leftButton.wasPressedThisFrame) // isPressed fires every frame while button is held not press and released so use wasPressedThisFrame
-        //{
-        //    if (DialogueText.text == dialogueLines[index].line)
-        //    {
-        //        NextLine();
-        //    }
-        //    else
-        //    {
-        //        StopAllCoroutines();
-        //        DialogueText.text = dialogueLines[index].line;
-         
-        //    }
-        //}
-    //}
+
     public void StartDialogue()
     {
-        animator.SetBool("IsOpen", true);   
+        animator.SetBool("IsOpen", true);
         index = 0;
         StartCoroutine(TypeLine());
     }
@@ -81,7 +64,8 @@ public class DialogueManager : MonoBehaviour
             animator.SetBool("IsOpen", false);
             InputBlocker.Instance.DisableBlockInput();
             //SceneManager.LoadScene("Lvl01_St01");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1 );
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1 );
+            LevelManager.Instance.GetNextSceneinBuildIndex();
 
         }
     }
