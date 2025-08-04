@@ -5,15 +5,13 @@ public class MusicManager : MonoBehaviour
 {
     public static MusicManager instance;
 
-    private List<GameObject> instruments = new List<GameObject>();
-    //private Queue<AK.Wwise.Event> musicQueue = new Queue<AK.Wwise.Event>();
-    //private bool IsMusicPlaying = false;
-    private List<AK.Wwise.Event> activeInstrumentLayers = new();
+  
     private GameObject currentAudioObject;
+    public AK.Wwise.Event currentLevelMusicEvent = null;
     public AK.Wwise.Event StartLevelMusic = null;
     public AK.Wwise.Event PlayMusic = null;
-   
- 
+
+
 
 
 
@@ -25,7 +23,7 @@ public class MusicManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else if(instance != this)
+        else if (instance != this)
         {
             Destroy(gameObject);
             return;
@@ -49,9 +47,15 @@ public class MusicManager : MonoBehaviour
     }
     public void SetLevelMusic(AK.Wwise.Event levelMusic)
     {
-        Debug.Log("Setting Level Music");
-        levelMusic?.Post(gameObject);
-       
+        if(currentLevelMusicEvent != null)
+        {
+            Debug.Log("Stopping previous level music.");
+            currentLevelMusicEvent.Stop(gameObject);
+        }
+        currentLevelMusicEvent= levelMusic;
+        currentLevelMusicEvent?.Post(gameObject);
+      
+
     }
 
     public void PlayInstruments(AK.Wwise.Event instruments)
@@ -63,30 +67,16 @@ public class MusicManager : MonoBehaviour
 
 
 
-    public GameObject Play(AK.Wwise.Event instrument)
+   
+    public void StopCurrentLevelMusic()
     {
-        if (instrument == null) return null;
-        //StopMusic();
-
-        //currentAudioObject = new GameObject("Audio_" + instrument.Name);
-        //currentAudioObject.transform.SetParent(this.transform);
-        //instruments.Add(currentAudioObject);
-
-        instrument.Post(gameObject);
-
-        return currentAudioObject;
+        if (currentLevelMusicEvent != null)
+        {
+            Debug.Log("Stopping current level music.");
+            currentLevelMusicEvent.Stop(gameObject);
+            currentLevelMusicEvent = null; // Optional: clears reference
+        }
     }
-
-    //public void StopMusic()
-    //{
-    //    if (currentAudioObject != null)
-    //    {
-    //        AkUnitySoundEngine.StopAll(currentAudioObject);
-    //        Destroy(currentAudioObject);
-    //        instruments.Remove(currentAudioObject);
-    //        currentAudioObject = null;
-    //    }
-    //}
 
 
 
