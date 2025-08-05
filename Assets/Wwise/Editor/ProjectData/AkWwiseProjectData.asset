@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1c2f7ea7e019e44081a8c815ce5a8e1e
     GuidInternal: 
-    m_lastTime: -8584482289740849685
+    m_lastTime: -8584472167621512145
     List:
     - name: KatMusicTest
       guid: 2eea2b311633a940b82e08d60148e83a
@@ -217,7 +217,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 60318edf19da10499ab787cbf746dcca
     GuidInternal: 
-    m_lastTime: -8584482289751262924
+    m_lastTime: -8584472167621460486
     List:
     - name: Lvl1
       guid: b50846f8bdea8744b8c1dbd79cc62c0f
@@ -1167,6 +1167,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: 71f73203e41a3741b15dfc594a33fffa
       Path: Events\Default Work Unit\PlayMusic
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: StopLevel01Music
+      guid: 8920dfeb67c19243b16667397921f008
+      id: 1585628541
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: StopLevel01Music
+        ObjectType: 3
+        guid: 8920dfeb67c19243b16667397921f008
+      Path: Events\Default Work Unit\StopLevel01Music
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0

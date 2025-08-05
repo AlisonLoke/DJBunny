@@ -1,12 +1,12 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {
     public static MusicManager instance;
 
-  
+
     private GameObject currentAudioObject;
+    public AK.Wwise.Event StopLevelMusic = null;
     public AK.Wwise.Event currentLevelMusicEvent = null;
     public AK.Wwise.Event StartLevelMusic = null;
     public AK.Wwise.Event PlayMusic = null;
@@ -38,24 +38,20 @@ public class MusicManager : MonoBehaviour
 
         if (instance != null)
         {
-            SetLevelMusic(StartLevelMusic);
+            SetLevelMusic(StartLevelMusic, StopLevelMusic);
         }
         else
         {
             Debug.LogWarning("AudioManager instance not found.");
         }
     }
-    public void SetLevelMusic(AK.Wwise.Event levelMusic)
+    public void SetLevelMusic(AK.Wwise.Event levelMusic, AK.Wwise.Event stopEvent)
     {
-        if(currentLevelMusicEvent != null)
-        {
-            Debug.Log("Stopping previous level music.");
-            currentLevelMusicEvent.Stop(gameObject);
-        }
-        currentLevelMusicEvent= levelMusic;
-        currentLevelMusicEvent?.Post(gameObject);
-      
 
+        currentLevelMusicEvent = levelMusic;
+        currentLevelMusicEvent?.Post(gameObject);
+
+        StopLevelMusic = stopEvent;
     }
 
     public void PlayInstruments(AK.Wwise.Event instruments)
@@ -67,14 +63,19 @@ public class MusicManager : MonoBehaviour
 
 
 
-   
+
     public void StopCurrentLevelMusic()
     {
-        if (currentLevelMusicEvent != null)
+        //    if (currentLevelMusicEvent != null)
+        //    {
+        //        Debug.Log("Stopping current level music.");
+        //        currentLevelMusicEvent.Stop(gameObject);
+        //        currentLevelMusicEvent = null; // Optional: clears reference
+        //    }
+        if (StopLevelMusic != null)
         {
-            Debug.Log("Stopping current level music.");
-            currentLevelMusicEvent.Stop(gameObject);
-            currentLevelMusicEvent = null; // Optional: clears reference
+            Debug.Log("Stopping current Level Music");
+            StopLevelMusic.Post(gameObject);
         }
     }
 

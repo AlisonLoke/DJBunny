@@ -882,6 +882,20 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="StopLevel01Music" ID="{EBDF2089-C167-4392-B166-67397921F008}">
+					<ChildrenList>
+						<Action Name="" ID="{1A44BEFB-9D14-4635-87D4-1A3EEF909B26}" ShortID="1070218919">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_1" ID="{2D8E7A4A-1446-4023-9E30-38665D198834}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

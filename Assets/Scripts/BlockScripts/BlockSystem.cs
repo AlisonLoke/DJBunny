@@ -238,6 +238,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
     {
         isFollowingMouse = false;
         selectedBlock = null;
+        bool isBlockOnClosedCell = IsBlockOverClosedCell();
         SFXManager.instance.PlayDrop.Post(gameObject);
         if (IsAnyBlockOutsideGrid())
         {
@@ -259,16 +260,17 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
         Debug.Log("PLAYING MUSIC");
 
+        if (isBlockOnClosedCell)
+        {
+            Debug.Log("block is over closed cell");
+            MusicManager.instance.PlayInstruments(blockData.MuteInstrument);
+        }
+        else
+        {
 
-        //AudioManager.instance.QueueMusic(blockData.Instruments);
-        //if (audioObject != null)
-        //{
-        //    AudioManager.instance.StopMusic();
-        //    audioObject = null;
-        //}
+            MusicManager.instance.PlayInstruments(blockData.PlayInstrument);
+        }
 
-        //audioObject = AudioManager.instance.Play(blockData.PlayInstrument);
-        MusicManager.instance.PlayInstruments(blockData.PlayInstrument);
     }
 
 
@@ -390,10 +392,13 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             bool blockOnClosedCell = IsBlockOverClosedCell();
             if (blockOnClosedCell)
             {
+              
                 UnMarkBlockCellAsOccupied();
+                
                 foreach (EndCell endCell in endCells)
                 {
                     endCell.StopBlink();
+                   
                 }
                 ConnectionManager.instance.ClearBlockPulses();
 
@@ -401,7 +406,6 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
                 blockParentRect.rotation = originalRotation;
                 isSnappedToGrid = false;
                 UnhighlightAllCells();
-
                 return;
             }
 
@@ -474,10 +478,11 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
             Vector2Int blockPos = new Vector2Int(currentCell.x, currentCell.y);
             bool isClosed = LevelManager.Instance.gridData.closedGridSpace.Contains(blockPos);
-
+        
             if (isClosed)
             {
                 Debug.LogWarning($"Block is on a closed cell at {blockPos}");
+               
                 return true;
             }
         }

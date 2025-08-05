@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Vector2 targetPosition;
     [SerializeField] private bool isMoving = false;
     [SerializeField] private Animator animator;
+    [SerializeField] private GameObject mouseIconCanvas;
 
 
     private bool isFacingRignt = true;
@@ -184,23 +185,20 @@ public class PlayerMovement : MonoBehaviour
     private void StartHoverAnimation()
     {
 
-        animator.SetBool("IsMouseOpen",true);
+        //animator.SetBool("IsMouseOpen",true);
+        mouseIconCanvas.SetActive(true);
         isAnimatingHover = true;
 
     }
 
     private void EndHoverAnimation()
     {
-    
-        animator.SetBool("IsMouseOpen", false);
+
+        //animator.SetBool("IsMouseOpen", false);
+        mouseIconCanvas.SetActive(false);
         isAnimatingHover = true;
 
     }
-    private void ResetHoverAnimation()
-    {
-        isHovering = false;
-        isAnimatingHover= false;
-        animator.SetBool("IsMouseOpen", false);
-    }
+
 
 }

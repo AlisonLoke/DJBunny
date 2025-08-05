@@ -76,6 +76,7 @@ namespace AK
         static const AkUniqueID PUZZLE_PLAYROTATION = 1911763448U;
         static const AkUniqueID PUZZLE_STOPBLINK = 4040085034U;
         static const AkUniqueID PUZZLE_STOPBLINK2 = 1066306604U;
+        static const AkUniqueID STOPLEVEL01MUSIC = 1585628541U;
         static const AkUniqueID UI_PLAYPOPUP = 434496694U;
     } // namespace EVENTS
 

@@ -65,10 +65,8 @@ public class DialogueManager : MonoBehaviour
             InputBlocker.Instance.DisableBlockInput();
             //SceneManager.LoadScene("Lvl01_St01");
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1 );
-            if (MusicManager.instance != null)
-            {
-                MusicManager.instance.StopCurrentLevelMusic();
-            }
+            Debug.Log("current music has stopped");
+            MusicManager.instance.StopCurrentLevelMusic();
             LevelManager.Instance.GetNextSceneinBuildIndex();
 
         }

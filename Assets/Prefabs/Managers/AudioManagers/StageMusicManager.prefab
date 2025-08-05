@@ -44,7 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ba0598aa8ef27145a98a7cb370664d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelMusic:
+  nextStageMusic:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 46d92aea7a177e548a0f35fddeaeb1d8, type: 2}
+  StopMusicEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9baa4283bfabb4a4cad31bf6547bcdaf, type: 2}
