@@ -7,7 +7,7 @@ public class MovesManager : MonoBehaviour
 {
     public static MovesManager instance;
     [SerializeField] private GameObject movesCounterUI;
-    public int maxMoves = 5;
+    //public int maxMoves = 5;
     private int currentMoves = 0;
     public TextMeshProUGUI movesText;
     public event System.Action onOutOfMoves;
@@ -22,7 +22,7 @@ public class MovesManager : MonoBehaviour
     }
     private void Update()
     {
-        movesText.text = $"Moves Left: {GetRemainingMoves()}";
+        movesText.text = $"{GetRemainingMoves()}";
     }
     public void ResetMoves()
     {
@@ -37,7 +37,7 @@ public class MovesManager : MonoBehaviour
         }
         currentMoves++;
 
-        if (currentMoves >= maxMoves)
+        if (currentMoves >= LevelManager.Instance.maxMoves)
         {
             Debug.LogWarning("No more moves left");
             onOutOfMoves?.Invoke();
@@ -46,6 +46,6 @@ public class MovesManager : MonoBehaviour
 
     public int GetRemainingMoves()
     {
-        return Mathf.Max(0, maxMoves - currentMoves);
+        return Mathf.Max(0, LevelManager.Instance.maxMoves - currentMoves);
     }
 }

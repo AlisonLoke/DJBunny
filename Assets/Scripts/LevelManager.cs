@@ -7,6 +7,7 @@ public class LevelManager : MonoBehaviour
     public static LevelManager Instance;
     public GridData gridData;
     public bool useMoveLimit = false;
+    public int maxMoves = 5;
     // needs to be called after ConnectionSystem.Awake()
     private EndCell[] allEndCells;
     [SerializeField] private GameObject gameOverUI;
