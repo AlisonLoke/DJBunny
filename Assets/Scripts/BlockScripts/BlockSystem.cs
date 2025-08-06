@@ -279,6 +279,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         selectedBlock = this;
         isFollowingMouse = true;
         SFXManager.instance.PlayPickUp.Post(gameObject);
+        MovesManager.instance.TrackMoves();
 
         if (blockUI != null)
         {
@@ -565,6 +566,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             return;
         }
         SFXManager.instance.PlayRotation.Post(gameObject);
+        MovesManager.instance.TrackMoves();
     }
 
 

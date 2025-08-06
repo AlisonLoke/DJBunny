@@ -6,14 +6,17 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance;
     public GridData gridData;
+    public bool useMoveLimit = false;
     // needs to be called after ConnectionSystem.Awake()
     private EndCell[] allEndCells;
+    [SerializeField] private GameObject gameOverUI;
     public GridData GetGridData => gridData;
 
     private void Start()
     {
         Instance = this;
         ConnectionManager.instance.onValidPathCompleted += CheckIfLevelComplete;
+        MovesManager.instance.onOutOfMoves += TriggerLose;
 
         allEndCells = FindObjectsByType<EndCell>(FindObjectsSortMode.None);
 
@@ -23,6 +26,7 @@ public class LevelManager : MonoBehaviour
     private void OnDestroy()
     {
         ConnectionManager.instance.onValidPathCompleted -= CheckIfLevelComplete;
+        MovesManager.instance.onOutOfMoves -= TriggerLose;  
     }
 
     // the one who triggers (invoke) the event is called the publisher
@@ -61,5 +65,9 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
    
-   
+   private void TriggerLose()
+    {
+        gameOverUI.SetActive(true);
+        Debug.Log("GameOver! You ran out of moves");
+    }
 }
