@@ -1,28 +1,34 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
+
 
 public class PlayerMovement : MonoBehaviour
 {
 
-    private float horizontal;
-    private float speed = 8f;
-    private bool isFacingRignt = true;
-
     public Rigidbody2D rb;
+   
+    [SerializeField] private float speed = 8f;
+    [SerializeField] private Vector2 targetPosition;
+    [SerializeField] private bool isMoving = false;
+    [SerializeField] private Animator animator;
+    [SerializeField] private GameObject mouseIconCanvas;
 
 
+    private bool isFacingRignt = true;
     private PlayerInput playerInput;
-    private InputAction moveAction;
     private InputAction interactionAction;
     private bool canInteract = false;
     private GameObject interactableObject;
+    private bool isHovering = false;
+    private bool isAnimatingHover = false;
 
 
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
-        moveAction = playerInput.actions["Move"]; // Ensure "Move" is the name of your action
+        //moveAction = playerInput.actions["Move"]; // Ensure "Move" is the name of your action
+
+        playerInput = GetComponent<PlayerInput>();
         interactionAction = playerInput.actions["Interact"];
 
 
@@ -33,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("Interact Action Enabled!");
         interactionAction.Enable();
         interactionAction.performed += OnInteract;
+
     }
     private void OnDisable()
     {
@@ -42,54 +49,100 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        horizontal = moveAction.ReadValue<Vector2>().x; // Get horizontal input
+        //If dialogue open then dont fire left mouse button
+        if (InputBlocked()) return;
+        HandleMouseHover();
+ 
+        //point and click movement
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            HandleMouseClick();
+            
+        }
+
+
         Flip();
-
-        if (Keyboard.current.eKey.wasPressedThisFrame)
-        {
-            SceneManager.LoadScene("Lvl01_St01");
-        }
-
-        if (interactionAction.WasPressedThisFrame())
-        {
-            Debug.Log("E key detected");
-        }
-
     }
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
+        //rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
+        if (isMoving)
+        {
+            Vector2 newPos = Vector2.MoveTowards(rb.position, targetPosition, speed * Time.fixedDeltaTime);
+            rb.MovePosition(newPos);
+            if (Vector2.Distance(rb.position, targetPosition) < 0.05f)
+            {
+                isMoving = false;
+            }
+        }
     }
 
     private void Flip()
     {
-        if ((isFacingRignt && horizontal < 0) || (!isFacingRignt && horizontal > 0))
+        Vector2 direction = targetPosition - rb.position;
+        if ((isFacingRignt && direction.x < 0) || (!isFacingRignt && direction.x > 0))
         {
             isFacingRignt = !isFacingRignt;
             transform.Rotate(0f, 180f, 0f);
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
+    private void HandleMouseClick()
     {
-        if (other.CompareTag("NPC"))
+        GetMouseWorldPosition();
+        RaycastHit2D hit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue()));
+        if (!hit) return;
+
+        if (hit.transform.CompareTag("NPC"))
         {
-            canInteract = true;
-            interactableObject = other.gameObject;
-            Debug.Log("Press E to interact");
+            HandleNPCClick(hit.transform);
+        }
+        else if (hit.transform.CompareTag("Ground"))
+        {
+            HandleGroundClick(hit.point);
         }
     }
-
-    private void OnTriggerExit2D(Collider2D other)
+    private Vector2 GetMouseWorldPosition()
     {
-        if (other.CompareTag("NPC"))
-        {
-            canInteract = false;
-            interactableObject = null;
-            Debug.Log("Left interaction zone.");
-        }
+        Vector3 screen = Mouse.current.position.ReadValue();
+        return Camera.main.ScreenToViewportPoint(screen);
     }
+
+    private void HandleNPCClick(Transform npc)
+    {
+        Debug.Log("Clicked on NPC: " + npc.name);
+        DialogueManager.instance.StartDialogue();
+        InputBlocker.Instance.EnableBlockInput();
+        isMoving = false;
+    }
+    private void HandleGroundClick(Vector2 point)
+    {
+        targetPosition = point;
+        isMoving = true;
+    }
+    private bool InputBlocked()
+    {
+        return InputBlocker.Instance != null && InputBlocker.Instance.IsBlocking();
+    }
+    //private void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    if (other.CompareTag("NPC"))
+    //    {
+    //        canInteract = true;
+    //        interactableObject = other.gameObject;
+    //        Debug.Log("Press left mouse button to interact");
+    //    }
+    //}
+
+    //private void OnTriggerExit2D(Collider2D other)
+    //{
+    //    if (other.CompareTag("NPC"))
+    //    {
+    //        canInteract = false;
+    //        interactableObject = null;
+    //        Debug.Log("Left interaction zone.");
+    //    }
+    //}
     private void OnInteract(InputAction.CallbackContext context)
     {
         Debug.Log("OnInteract function called!"); // Debug step 1
@@ -104,6 +157,48 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void HandleMouseHover()
+    {
+        RaycastHit2D hit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue()));
+
+        if (hit && hit.transform.CompareTag("NPC"))
+        {
+            Debug.Log("Mouse is hovering over NPC: " + hit.transform.name);
+            if (!isHovering)
+            {
+                isHovering = true;
+                interactableObject = hit.transform.gameObject;
+                StartHoverAnimation();
+            }
+        }
+        else
+        {
+            if(isHovering)
+            {
+                Debug.Log("Mouse stopped hovering NPC");
+                isHovering = false;
+                interactableObject=null;
+                EndHoverAnimation();    
+            }
+        }
+    }
+    private void StartHoverAnimation()
+    {
+
+        //animator.SetBool("IsMouseOpen",true);
+        mouseIconCanvas.SetActive(true);
+        isAnimatingHover = true;
+
+    }
+
+    private void EndHoverAnimation()
+    {
+
+        //animator.SetBool("IsMouseOpen", false);
+        mouseIconCanvas.SetActive(false);
+        isAnimatingHover = true;
+
+    }
 
 
 }

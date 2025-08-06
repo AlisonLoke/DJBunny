@@ -13,6 +13,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
     private GridCell gridCell;
     private GridVisual gridVisual;
     private float timeSinceLastRotation = Mathf.Infinity;
+    private float timeSinceLastHover = Mathf.Infinity;
     private bool isSnappedToGrid = false;
     private bool isFollowingMouse = false;
     private GameObject audioObject;
@@ -22,14 +23,15 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
     private bool isAnimatingHover = false;
     private Vector2 originalAnchoredPos;
     public Quaternion originalRotation;
+    public ConnectCellType connectCellType => connectType;
 
 
-
-
+    [SerializeField] private ConnectCellType connectType;
     [SerializeField] private RectTransform blockParentRect;
     [SerializeField] private RectTransform[] blockRectransforms;
     [SerializeField] private BlockData blockData;
     [SerializeField] private float delayBetweenRotations = 1f;
+    [SerializeField] private float delaybetweenhovers = 1f;
 
     public RectTransform gridParent;
     public EndCell[] endCells;
@@ -59,6 +61,11 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             timeSinceLastRotation += Time.deltaTime;
             return;
         }
+        if(timeSinceLastHover < delaybetweenhovers)
+        {
+            timeSinceLastHover += Time.deltaTime;   
+            return; 
+        }
 
         // Follow mouse if selected
         if (isFollowingMouse)
@@ -75,8 +82,13 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
             if (pointerOver && !isHovering)
             {
+                if(timeSinceLastHover < delaybetweenhovers)
+                {
+                    return;
+                }
                 isHovering = true;
                 StartHoverAnimation();
+                timeSinceLastHover = 0;
             }
             else if (!pointerOver && isHovering)
             {
@@ -198,10 +210,10 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         {
             return;
         }
-      
+
         if (isSnappedToGrid)
         {
-           
+
             RemoveFromGrid();
             ResetBlockToOrigin();
 
@@ -226,12 +238,13 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
     {
         isFollowingMouse = false;
         selectedBlock = null;
-        AudioManager.instance.PlayDrop.Post(gameObject);
+        bool isBlockOnClosedCell = IsBlockOverClosedCell();
+        SFXManager.instance.PlayDrop.Post(gameObject);
         if (IsAnyBlockOutsideGrid())
         {
             ResetBlockToOrigin();
             UnhighlightAllCells();
-            AudioManager.instance.StopMusic();
+            //AudioManager.instance.StopMusic();
             return;
         }
 
@@ -240,22 +253,24 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
         GridCell snapClosestGridCell = SnapClosestGridCell(blockParentRect.position);
         FinalBlockPlacement(snapClosestGridCell);
-    
-    
+
+
         ConnectionManager.instance.PreviewCurrentPath();
         ConnectionManager.instance.CheckPathsAreCompleted();
 
         Debug.Log("PLAYING MUSIC");
 
-
-        //AudioManager.instance.QueueMusic(blockData.Instruments);
-        if (audioObject != null)
+        if (isBlockOnClosedCell)
         {
-            AudioManager.instance.StopMusic();
-            audioObject = null;
+            Debug.Log("block is over closed cell");
+            MusicManager.instance.PlayInstruments(blockData.MuteInstrument);
+        }
+        else
+        {
+
+            MusicManager.instance.PlayInstruments(blockData.PlayInstrument);
         }
 
-        audioObject = AudioManager.instance.Play(blockData.PlayInstrument);
     }
 
 
@@ -263,7 +278,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
     {
         selectedBlock = this;
         isFollowingMouse = true;
-        AudioManager.instance.PlayPickUp.Post(gameObject);
+        SFXManager.instance.PlayPickUp.Post(gameObject);
 
         if (blockUI != null)
         {
@@ -274,11 +289,11 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         if (!isSnappedToGrid)
         {
             ResetHoverAnimation();
-            //blockOriginPos = blockParentRect.position;
-            //originalRotation = blockParentRect.rotation;
+
             return;
         }
-        audioObject = AudioManager.instance.Play(blockData.MuteInstrument);
+        //audioObject = AudioManager.instance.Play(blockData.MuteInstrument);
+        MusicManager.instance.PlayInstruments(blockData.MuteInstrument);
         RemoveFromGrid();
         ResetHoverAnimation();
         ConnectionManager.instance.ResetCompletedPaths();
@@ -288,8 +303,9 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
     private void RemoveFromGrid()
     {
         isSnappedToGrid = false;
-        audioObject = AudioManager.instance.Play(blockData.MuteInstrument);
-        AudioManager.instance.PlayDrop.Post(gameObject);
+        //audioObject = AudioManager.instance.Play(blockData.MuteInstrument);
+        MusicManager.instance.PlayInstruments(blockData.MuteInstrument);
+        SFXManager.instance.PlayDrop.Post(gameObject);
         UnMarkBlockCellAsOccupied();
         RemovePlaceBlockFromList(blockParentRect);
         RemoveBlockUIFromList();
@@ -305,7 +321,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
         ClearEndCells();
 
-        AudioManager.instance.StopMusic();
+        //AudioManager.instance.StopMusic();
     }
 
     private void ResetBlockToOrigin()
@@ -317,8 +333,9 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
         ConnectionManager.instance.ClearBlockPulses();
         ConnectionManager.instance.ResetCompletedPaths();
-        audioObject = AudioManager.instance.Play(blockData.MuteInstrument);
-        AudioManager.instance.PlayDrop.Post(gameObject);
+        //audioObject = AudioManager.instance.Play(blockData.MuteInstrument);
+        MusicManager.instance.PlayInstruments(blockData.MuteInstrument);
+        SFXManager.instance.PlayDrop.Post(gameObject);
 
         if (blockUI != null)
         {
@@ -368,22 +385,31 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
     {
         if (gridCell != null && allBlocksCanPlace)
         {
+
             blockParentRect.position = snapClosestGridCell.GetComponent<RectTransform>().position;
-            CheckIfEndCellOnClosedCell();
 
-            if (endCells.Any(endCell => endCell.IsEndCellOnClosedCell))
+            bool blockOnClosedCell = IsBlockOverClosedCell();
+            if (blockOnClosedCell)
             {
-                return; // Do not continue placement if invalid
-            }
-            if (!isSnappedToGrid && originalRotation == Quaternion.identity)
-            {
-                //blockOriginPos = blockParentRect.position;
-                //originalRotation = blockParentRect.rotation;
-                Debug.Log(" Original Rotation saved");
+              
+                UnMarkBlockCellAsOccupied();
+                
+                foreach (EndCell endCell in endCells)
+                {
+                    endCell.StopBlink();
+                   
+                }
+                ConnectionManager.instance.ClearBlockPulses();
+
+                blockParentRect.position = blockOriginPos;
+                blockParentRect.rotation = originalRotation;
+                isSnappedToGrid = false;
+                UnhighlightAllCells();
+                return;
             }
 
-            MarkBlockCellsAsOccupied();
             isSnappedToGrid = true;
+            MarkBlockCellsAsOccupied();
             AddPlaceBlockToList(blockParentRect);
             AddBlockUIToList();
             CheckForFirstEndCell();
@@ -438,23 +464,29 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    private void CheckIfEndCellOnClosedCell()
+
+
+    private bool IsBlockOverClosedCell()
     {
-        foreach (EndCell thisEndCell in endCells)
+        foreach (RectTransform blockRect in blockRectransforms)
         {
-            thisEndCell.EndCellOnClosedCell();
-            if (thisEndCell.IsEndCellOnClosedCell)
+            GridCell currentCell = SnapClosestGridCell(blockRect.position);
+
+            if (currentCell == null || LevelManager.Instance.gridData == null)
+                continue;
+
+            Vector2Int blockPos = new Vector2Int(currentCell.x, currentCell.y);
+            bool isClosed = LevelManager.Instance.gridData.closedGridSpace.Contains(blockPos);
+        
+            if (isClosed)
             {
-                UnMarkBlockCellAsOccupied();
-                thisEndCell.StopBlink();
-                ConnectionManager.instance.ClearBlockPulses();
-                Debug.LogWarning("Block on end cell, returning to origin.");
-                blockParentRect.position = blockOriginPos;
-                isSnappedToGrid = false;
-                UnhighlightAllCells();
-                return;
+                Debug.LogWarning($"Block is on a closed cell at {blockPos}");
+               
+                return true;
             }
         }
+
+        return false;
     }
     private void BlockIsDraggedOutOfBounds()
     {
@@ -532,7 +564,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             Debug.LogError("BlockData reference is missing!");
             return;
         }
-        AudioManager.instance.PlayRotation.Post(gameObject);
+        SFXManager.instance.PlayRotation.Post(gameObject);
     }
 
 
@@ -610,20 +642,6 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    //public class ConnectionManager
-    //{
-    //    public static ConnectionManager instance;
-
-    //    private ConnectionSystem[] connectionSystems;
-
-    //    public void Remove(EndCell endCell)
-    //    {
-    //        foreach (ConnectionSystem system in connectionSystems)
-    //        {
-    //            system.endCells.Remove(endCell);
-    //        }
-    //    }
-    //}
 
     public List<RectTransform> GetListOfAllEndCells()
     {

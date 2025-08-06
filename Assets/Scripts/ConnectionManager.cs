@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,6 +8,8 @@ public class ConnectionManager : MonoBehaviour
     public static ConnectionManager instance;
 
     [SerializeField] private ConnectionSystem[] connectionSystems;
+    [SerializeField] private UILineRenderer primaryLineRenderer;
+    [SerializeField] private UILineRenderer secondaryLineRenderer;
 
     public event System.Action<int> onValidPathCompleted;
     private void Awake()
@@ -24,6 +28,38 @@ public class ConnectionManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+    }
+  
+    public UILineRenderer GetLineRendererByType(ConnectCellType type)
+    {
+        return type == ConnectCellType.Primary ? primaryLineRenderer : secondaryLineRenderer;
+    }
+    public void HandlePathUpdate(ConnectCellType connectionType, List<Vector2> pathPoints)
+    {
+        UILineRenderer renderer = connectionType == ConnectCellType.Primary ?
+            primaryLineRenderer : secondaryLineRenderer;
+
+        if (renderer != null)
+        {
+            renderer.points = pathPoints.ToArray();
+            renderer.SetVerticesDirty();
+        }
+    }
+
+    public void HandlePathCleared(ConnectCellType connectionType)
+    {
+        UILineRenderer renderer = connectionType == ConnectCellType.Primary ?
+            primaryLineRenderer : secondaryLineRenderer;
+
+        if (renderer != null)
+        {
+            renderer.points = new Vector2[0];
+            renderer.SetVerticesDirty();
+        }
+    }
+    public ConnectionSystem GetConnectionSystemByType(ConnectCellType type)
+    {
+        return connectionSystems.FirstOrDefault(connectionSystem => connectionSystem.ConnectionType == type);
     }
 
     public GridCell FindAdjacentEndCells(EndCell fromEndCell, Image blockCellImage, int x, int y)

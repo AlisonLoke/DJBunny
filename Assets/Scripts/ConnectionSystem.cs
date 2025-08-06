@@ -15,8 +15,9 @@ public class ConnectionSystem : MonoBehaviour
     [HideInInspector] public BlockSystem blockSystem;
     public static int currentLevelIndex = 1;
     public GridCell currentGridCell;
-   [SerializeField] private ConnectCellType connectCellType = ConnectCellType.Primary;
-   
+    [SerializeField] private ConnectCellType connectCellType = ConnectCellType.Primary;
+    public ConnectCellType ConnectionType => connectCellType;
+
     //Primary Connection variables
     private EndCell startConnectedEndCell;
     private EndCell finishConnectedEndCell;
@@ -25,15 +26,15 @@ public class ConnectionSystem : MonoBehaviour
 
     public bool pathIsComplete = false;
 
-  
-    
+
+
     //Path Management
     //Contains multiple list of endCell object paths. A collection of paths
     private List<List<EndCell>> allPaths = new List<List<EndCell>>();
     public List<BlockUI> allBlockUIs = new List<BlockUI>();
     private List<BlockUI> previouslyPulsedBlocks = new List<BlockUI>();
 
-  
+
     //private Tween currentLineFadeTween;
 
     public event System.Action<int> onValidPathCompleted;
@@ -41,7 +42,7 @@ public class ConnectionSystem : MonoBehaviour
     private const float PreviewPathPulseLength = 0.15f;
     private const float PathCompletePulseLength = 0.5f;
 
-    [SerializeField] private UILineRenderer lineRenderer;
+    //[SerializeField] private UILineRenderer lineRenderer;
 
     [SerializeField] private RectTransform canvas;
     [SerializeField] private PathFinder pathFinder;
@@ -59,22 +60,22 @@ public class ConnectionSystem : MonoBehaviour
 
 
     }
-    private void Start()
-    {
-        // Make sure line renderer is properly initialized
-        if (lineRenderer == null)
-        {
-            lineRenderer = GetComponent<UILineRenderer>();
-            if (lineRenderer == null)
-            {
-                Debug.LogError("Line renderer not assigned to ConnectionSystem!");
-            }
-        }
+    //private void Start()
+    //{
+    //    // Make sure line renderer is properly initialized
+    //    if (lineRenderer == null)
+    //    {
+    //        lineRenderer = GetComponent<UILineRenderer>();
+    //        if (lineRenderer == null)
+    //        {
+    //            Debug.LogError("Line renderer not assigned to ConnectionSystem!");
+    //        }
+    //    }
 
-        lineRenderer.thickness = 5f;
-        lineRenderer.raycastTarget = false;
+    //    lineRenderer.thickness = 5f;
+    //    lineRenderer.raycastTarget = false;
 
-    }
+    //}
 
 
     public void CheckConnectionsForAllEndCells()
@@ -142,7 +143,7 @@ public class ConnectionSystem : MonoBehaviour
             {
                 return;
             }
-           
+
             startConnectedEndCell = endCell;
             //connectedStartCells.Add(endCell);
             endCell.ConnectedToStartAndFinish(endCell.currentGridCell);
@@ -173,7 +174,7 @@ public class ConnectionSystem : MonoBehaviour
             Debug.Log("Path is already completed.Skipping further checks");
             return;
         }
-      
+
         if (startConnectedEndCell != null && finishConnectedEndCell != null)
         {
             Debug.Log("Both start and finish cells found, finding path...");
@@ -206,7 +207,10 @@ public class ConnectionSystem : MonoBehaviour
                     // Skip self
                     if (endCell == fromEndCell)
                         continue;
-
+                    if(endCell.blockSystem.connectCellType != fromEndCell.blockSystem.connectCellType)
+                    {
+                        continue;
+                    }
                     // Skip if it's a restricted end cell
                     if (endCell.onlyConnectToStartFinish)
                         continue;
@@ -290,7 +294,7 @@ public class ConnectionSystem : MonoBehaviour
 
     }
 
-  
+
 
     private bool CheckAllBlockUsed(List<EndCell> path)
     {
@@ -308,7 +312,7 @@ public class ConnectionSystem : MonoBehaviour
     private void NoValidPathFound()
     {
         allPaths.Clear();
-        
+
         currentPath.Clear();
         Debug.Log("No valid path found. Don't trigger win scene");
     }
@@ -424,6 +428,7 @@ public class ConnectionSystem : MonoBehaviour
         {
             foreach (EndCell connected in currentCell.connectedEndCell)
             {
+               
                 FindAllPaths(connected, targetCell, new List<EndCell>(path));
             }
         }
@@ -448,14 +453,24 @@ public class ConnectionSystem : MonoBehaviour
     {
         currentPath.Clear();
         allPaths.Clear();
-        if (startConnectedEndCell == null && finishConnectedEndCell == null)
+
+        EndCell typeSpecificStartCell = FindStartCellOfType(this.connectCellType);
+        EndCell typeSpecificFinishCell = FindFinishCellOfType(this.connectCellType);
+
+        if (typeSpecificStartCell == null && typeSpecificFinishCell == null)
         {
+            Debug.LogWarning($"No start or finish cells found for connection type {connectCellType}");
             return;
         }
 
+        //if (startConnectedEndCell == null && finishConnectedEndCell == null)
+        //{
+        //    return;
+        //}
+
         List<EndCell> workingPath = new List<EndCell>();
 
-        EndCell cellToTrackPathFrom = !startConnectedEndCell ? finishConnectedEndCell : startConnectedEndCell;
+        EndCell cellToTrackPathFrom = typeSpecificStartCell != null ? typeSpecificStartCell : typeSpecificFinishCell;
         /* ternary operator - same as
          * if (startConnectedEndCell == null)
          * {
@@ -489,7 +504,34 @@ public class ConnectionSystem : MonoBehaviour
         StartCoroutine(PulseCurrentPath(blockUIPath, Color.cyan, PreviewPathPulseLength));
 
     }
+    private EndCell FindStartCellOfType(ConnectCellType targetType)
+    {
+        // Look through all endCells for one that matches the type and is a start cell
+        foreach (EndCell endCell in endCells)
+        {
 
+            if (endCell.onlyConnectToStartFinish && PathFinder.instance.IsStartCell(endCell.currentGridCell) && endCell.currentGridCell.connectCellType == targetType)
+            {
+             
+                return endCell;
+            }
+        }
+        return null;
+    }
+
+    private EndCell FindFinishCellOfType(ConnectCellType targetType)
+    {
+        // Look through all endCells for one that matches the type and is a start cell
+        foreach (EndCell endCell in endCells)
+        {
+
+            if (endCell.onlyConnectToStartFinish && PathFinder.instance.IsFinishCell(endCell.currentGridCell) && endCell.currentGridCell.connectCellType == targetType) // You'll need to implement this logic
+            {
+                return endCell;
+            }
+        }
+        return null;
+    }
     private IEnumerator PulseCurrentPath(List<BlockUI> blockUIs, Color pulseColour, float delayBetweenBlocks)
     {
         InputBlocker.Instance.EnableBlockInput();
@@ -690,10 +732,17 @@ public class ConnectionSystem : MonoBehaviour
         if (currentPath.Count < 2)
         {
             Debug.LogWarning("Not enough points to draw a line");
-            ClearConnectedLine();
+
+            ConnectionManager.instance.HandlePathCleared(connectCellType);
             return;
         }
+        RectTransform targetLineRendererRect = ConnectionManager.instance.GetLineRendererByType(connectCellType)?.rectTransform;
 
+        if (targetLineRendererRect == null)
+        {
+            Debug.LogWarning("Line renderer not found for connection type");
+            return;
+        }
         Debug.Log("Current path cells:");
 
         List<BlockUI> blockUisOriginal = GetAllBlockUIInPath();
@@ -705,25 +754,32 @@ public class ConnectionSystem : MonoBehaviour
 
         //TODO:  Resort line if "maxDistanceBetweenPointsBreached" flag marked
 
-        List<Vector2> linePoints = GetWorldPosFromBlockTransforms(rectTransformsInPath);
+        List<Vector2> linePoints = GetWorldPosFromBlockTransforms(rectTransformsInPath, targetLineRendererRect);
 
 
         Debug.Log($"Setting {linePoints.Count} points to line renderer");
         if (linePoints.Count >= 2)
         {
-            lineRenderer.points = linePoints.ToArray();
-            lineRenderer.SetAllDirty(); // Force redraw
-
-            //Move line renderer to render on top
-            //lineRenderer.transform.SetAsLastSibling();
-            Debug.Log($"Line renderer updated with {linePoints.Count} points");
+            //SetLinePoints(linePoints, connectCellType);
+            ConnectionManager.instance.HandlePathUpdate(connectCellType, linePoints);
         }
         else
         {
-            Debug.LogWarning("Not enough valid points to draw line");
-            ClearConnectedLine();
+            //Debug.LogWarning("Not enough valid points to draw line");
+            //ClearConnectedLine();
+            ConnectionManager.instance.HandlePathCleared(connectCellType);
         }
     }
+
+    //private void SetLinePoints(List<Vector2> linePoints, ConnectCellType connectCellType)
+    //{
+    //    lineRenderer.points = linePoints.ToArray();
+    //    SetLinerendererByType();
+    //    lineRenderer.SetAllDirty(); // Force redraw
+
+
+    //    Debug.Log($"Line renderer updated with {linePoints.Count} points");
+    //}
 
     /// <summary>
     /// Sorts RectTransforms in correct path order
@@ -832,7 +888,7 @@ public class ConnectionSystem : MonoBehaviour
     }
 
 
-    private List<Vector2> GetWorldPosFromBlockTransforms(List<RectTransform> rectTransformsInPath)
+    private List<Vector2> GetWorldPosFromBlockTransforms(List<RectTransform> rectTransformsInPath, RectTransform lineRendererRect)
     {
         List<Vector2> linePoints = new List<Vector2>();
         foreach (RectTransform rectTransform in rectTransformsInPath)
@@ -844,7 +900,7 @@ public class ConnectionSystem : MonoBehaviour
             // Convert world position to local position relative to the line renderer
             // null camera for Screen Space - Overlay
             Vector2 localPos;
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(lineRenderer.rectTransform, worldPos, null, out localPos);
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(lineRendererRect, worldPos, null, out localPos);
 
             Debug.Log($"  - Cell at local position {localPos} (world: {worldPos})");
             linePoints.Add(localPos);
@@ -887,37 +943,29 @@ public class ConnectionSystem : MonoBehaviour
 
     private void ClearConnectedLine()
     {
-        lineRenderer.points = new Vector2[0];
-        lineRenderer.SetAllDirty();
+        //lineRenderer.points = new Vector2[0];
+        //lineRenderer.SetAllDirty();
+        ConnectionManager.instance.HandlePathCleared(connectCellType);
     }
 
     public void ShowPathComplete()
     {
         StartCoroutine(PulseCompletePath());
-        AudioManager.instance.PlayCompletion.Post(gameObject);
+        SFXManager.instance.PlayCompletion.Post(gameObject);
     }
 
-    //private void FadeOutPathLine(float duration = 1.0f)
+    //private void SetLinerendererByType()
     //{
-
-    //    //a is alpha, naming follows rgba
-    //    if (lineRenderer == null || lineRenderer.color.a <= 0f) return;
-
-    //    currentLineFadeTween?.Kill();
-    //    // DoTween.Alpha gradually changes alpha colour 
-    //    currentLineFadeTween = DOTween.ToAlpha(GetLineRendererColour, SetLineRendererColour, 0f, duration).SetEase(Ease.InOutSine);
-
-
+    //    switch (ConnectionType)
+    //    {
+    //        case ConnectCellType.Primary:
+    //            Debug.Log("Linerenderer is on PRIMARY PATH");
+    //            lineRenderer.color = Color.red;
+    //            break;
+    //        case ConnectCellType.Secondary:
+    //            Debug.Log("Linerenderer is on SECONDARY PATH");
+    //            lineRenderer.color = Color.cyan;
+    //            break;
+    //    }
     //}
-
-    //private Color GetLineRendererColour()
-    //{
-    //    return lineRenderer.color;
-    //}
-    //private void SetLineRendererColour(Color newColour)
-    //{
-    //    lineRenderer.color = newColour;
-    //    lineRenderer.SetAllDirty(); //refreshes ui so new colour can be applied
-    //}
-
 }
