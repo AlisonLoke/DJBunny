@@ -78,6 +78,32 @@
 												</DestinationFadeIn>
 											</TransitionInfo>
 										</MusicTransition>
+										<MusicTransition Name="Transition" ID="{EDC1C720-F9CA-40F0-82FA-1F498E04331C}">
+											<PropertyList>
+												<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+												<Property Name="ExitSourceAt" Type="int16" Value="3"/>
+											</PropertyList>
+											<ReferenceList/>
+											<TransitionInfo>
+												<SourceFadeOut>
+													<MusicFade Name="Source Fade-out" ID="{ACE7B06C-09D6-4F72-8621-0B57FC290FEF}">
+														<PropertyList>
+															<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+															<Property Name="FadeType" Type="int16" Value="1"/>
+														</PropertyList>
+													</MusicFade>
+												</SourceFadeOut>
+												<DestinationFadeIn>
+													<MusicFade Name="Destination Fade-in" ID="{25E228FB-1B4B-4221-ABC0-1B9887196E58}">
+														<PropertyList>
+															<Property Name="FadeOffset" Type="Real64" Value="-0.5"/>
+															<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+														</PropertyList>
+													</MusicFade>
+												</DestinationFadeIn>
+											</TransitionInfo>
+										</MusicTransition>
 									</ChildrenList>
 									<TransitionInfo/>
 								</MusicTransition>
@@ -174,31 +200,6 @@
 														</SourceFadeOut>
 														<DestinationFadeIn>
 															<MusicFade Name="Destination Fade-in" ID="{4A45119F-3853-47EB-A10A-438116EA1636}">
-																<PropertyList>
-																	<Property Name="FadeOffset" Type="Real64" Value="-0.5"/>
-																	<Property Name="FadeTime" Type="Real64" Value="0.5"/>
-																</PropertyList>
-															</MusicFade>
-														</DestinationFadeIn>
-													</TransitionInfo>
-												</MusicTransition>
-												<MusicTransition Name="Transition" ID="{8F7C72CB-8249-4B73-A10E-6D8600A8FD7B}">
-													<PropertyList>
-														<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
-														<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
-														<Property Name="ExitSourceAt" Type="int16" Value="3"/>
-													</PropertyList>
-													<TransitionInfo>
-														<SourceFadeOut>
-															<MusicFade Name="Source Fade-out" ID="{5B266783-0214-4AB9-806F-92CB29926D1E}">
-																<PropertyList>
-																	<Property Name="FadeTime" Type="Real64" Value="0.5"/>
-																	<Property Name="FadeType" Type="int16" Value="1"/>
-																</PropertyList>
-															</MusicFade>
-														</SourceFadeOut>
-														<DestinationFadeIn>
-															<MusicFade Name="Destination Fade-in" ID="{9359FC8F-D800-47E7-AA22-B8327B4F3B4E}">
 																<PropertyList>
 																	<Property Name="FadeOffset" Type="Real64" Value="-0.5"/>
 																	<Property Name="FadeTime" Type="Real64" Value="0.5"/>
@@ -1905,6 +1906,32 @@
 												<MusicTransition Name="Transition" ID="{E29846E5-FD7C-484B-ADAA-AC97B42FEF61}">
 													<TransitionInfo/>
 												</MusicTransition>
+												<MusicTransition Name="Transition" ID="{6D0154DD-873D-49C3-B557-D39E44476983}">
+													<PropertyList>
+														<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+														<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+														<Property Name="ExitSourceAt" Type="int16" Value="3"/>
+													</PropertyList>
+													<ReferenceList/>
+													<TransitionInfo>
+														<SourceFadeOut>
+															<MusicFade Name="Source Fade-out" ID="{91C4A8BF-3B01-4AE7-AE3C-3171F51F08AD}">
+																<PropertyList>
+																	<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+																	<Property Name="FadeType" Type="int16" Value="1"/>
+																</PropertyList>
+															</MusicFade>
+														</SourceFadeOut>
+														<DestinationFadeIn>
+															<MusicFade Name="Destination Fade-in" ID="{7096AD42-4D9B-4804-AAB8-EA792A9CFF01}">
+																<PropertyList>
+																	<Property Name="FadeOffset" Type="Real64" Value="-0.5"/>
+																	<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+																</PropertyList>
+															</MusicFade>
+														</DestinationFadeIn>
+													</TransitionInfo>
+												</MusicTransition>
 											</ChildrenList>
 											<TransitionInfo/>
 										</MusicTransition>
@@ -2054,7 +2081,6 @@
 																				</Reference>
 																			</ObjectList>
 																		</ObjectLists>
-																		<ReferenceList/>
 																	</MusicTrackSequence>
 																</Local>
 															</Reference>
@@ -2134,7 +2160,6 @@
 																				</Reference>
 																			</ObjectList>
 																		</ObjectLists>
-																		<ReferenceList/>
 																	</MusicTrackSequence>
 																</Local>
 															</Reference>
@@ -2558,7 +2583,6 @@
 																				</Reference>
 																			</ObjectList>
 																		</ObjectLists>
-																		<ReferenceList/>
 																	</MusicTrackSequence>
 																</Local>
 															</Reference>
@@ -2637,7 +2661,6 @@
 																				</Reference>
 																			</ObjectList>
 																		</ObjectLists>
-																		<ReferenceList/>
 																	</MusicTrackSequence>
 																</Local>
 															</Reference>
@@ -3009,7 +3032,6 @@
 																				</Reference>
 																			</ObjectList>
 																		</ObjectLists>
-																		<ReferenceList/>
 																	</MusicTrackSequence>
 																</Local>
 															</Reference>
@@ -3088,7 +3110,6 @@
 																				</Reference>
 																			</ObjectList>
 																		</ObjectLists>
-																		<ReferenceList/>
 																	</MusicTrackSequence>
 																</Local>
 															</Reference>
