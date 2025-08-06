@@ -289,8 +289,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         if (!isSnappedToGrid)
         {
             ResetHoverAnimation();
-            //blockOriginPos = blockParentRect.position;
-            //originalRotation = blockParentRect.rotation;
+
             return;
         }
         //audioObject = AudioManager.instance.Play(blockData.MuteInstrument);
