@@ -283,7 +283,12 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             MovesManager.instance.TrackMoves();
 
         }
-        TutorialManager.Instance.SwitchToRotateTutorial();
+
+        if (LevelManager.Instance.Tutorial)
+        {
+
+            TutorialManager.Instance.SwitchToRotateTutorial();
+        }
         if (blockUI != null)
         {
             blockUI.ResetToOriginalColours();
@@ -557,7 +562,12 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         //bool isBlockOverlapping = IsBlockOverlapping();
         bool allBlockCellCanPlace = AllBlockCellsCanPlace();
         transform.Rotate(Vector3.forward, -90); // rotate UI of block
-        TutorialManager.Instance.SwitchToPlacementTutorial();
+        if (LevelManager.Instance.Tutorial)
+        {
+
+            TutorialManager.Instance.SwitchToPlacementTutorial();
+        }
+
         //Adjust coordinates for new rotation orientation
         if (blockData != null)
         {

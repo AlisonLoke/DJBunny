@@ -6,6 +6,7 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance;
     public GridData gridData;
+    public bool Tutorial = false;   
     public bool useMoveLimit = false;
     public int maxMoves = 5;
     // needs to be called after ConnectionSystem.Awake()

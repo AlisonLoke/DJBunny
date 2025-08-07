@@ -13,7 +13,7 @@ public class TutorialManager : MonoBehaviour
     }
     void Start()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 2)
+        if (LevelManager.Instance.Tutorial && SceneManager.GetActiveScene().buildIndex == 2)
         {
             tutorialUI.SetActive(true);
         }
