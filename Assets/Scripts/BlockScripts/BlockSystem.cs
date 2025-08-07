@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -61,10 +60,10 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             timeSinceLastRotation += Time.deltaTime;
             return;
         }
-        if(timeSinceLastHover < delaybetweenhovers)
+        if (timeSinceLastHover < delaybetweenhovers)
         {
-            timeSinceLastHover += Time.deltaTime;   
-            return; 
+            timeSinceLastHover += Time.deltaTime;
+            return;
         }
 
         // Follow mouse if selected
@@ -82,7 +81,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
             if (pointerOver && !isHovering)
             {
-                if(timeSinceLastHover < delaybetweenhovers)
+                if (timeSinceLastHover < delaybetweenhovers)
                 {
                     return;
                 }
@@ -279,8 +278,12 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         selectedBlock = this;
         isFollowingMouse = true;
         SFXManager.instance.PlayPickUp.Post(gameObject);
-        MovesManager.instance.TrackMoves();
+        if (LevelManager.Instance.useMoveLimit)
+        {
+            MovesManager.instance.TrackMoves();
 
+        }
+        TutorialManager.Instance.SwitchToRotateTutorial();
         if (blockUI != null)
         {
             blockUI.ResetToOriginalColours();
@@ -392,13 +395,13 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             bool blockOnClosedCell = IsBlockOverClosedCell();
             if (blockOnClosedCell)
             {
-              
+
                 UnMarkBlockCellAsOccupied();
-                
+
                 foreach (EndCell endCell in endCells)
                 {
                     endCell.StopBlink();
-                   
+
                 }
                 ConnectionManager.instance.ClearBlockPulses();
 
@@ -478,11 +481,11 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
             Vector2Int blockPos = new Vector2Int(currentCell.x, currentCell.y);
             bool isClosed = LevelManager.Instance.gridData.closedGridSpace.Contains(blockPos);
-        
+
             if (isClosed)
             {
                 Debug.LogWarning($"Block is on a closed cell at {blockPos}");
-               
+
                 return true;
             }
         }
@@ -554,7 +557,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         //bool isBlockOverlapping = IsBlockOverlapping();
         bool allBlockCellCanPlace = AllBlockCellsCanPlace();
         transform.Rotate(Vector3.forward, -90); // rotate UI of block
-
+        TutorialManager.Instance.SwitchToPlacementTutorial();
         //Adjust coordinates for new rotation orientation
         if (blockData != null)
         {
@@ -566,8 +569,13 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             return;
         }
         SFXManager.instance.PlayRotation.Post(gameObject);
-        MovesManager.instance.TrackMoves();
+        if (LevelManager.Instance.useMoveLimit)
+        {
+            MovesManager.instance.TrackMoves();
+        }
+
     }
+
 
 
     public GridCell SnapClosestGridCell(Vector3 thisPosition)

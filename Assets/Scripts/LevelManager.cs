@@ -17,17 +17,29 @@ public class LevelManager : MonoBehaviour
     {
         Instance = this;
         ConnectionManager.instance.onValidPathCompleted += CheckIfLevelComplete;
-        MovesManager.instance.onOutOfMoves += TriggerLose;
+
+        if (useMoveLimit)
+        {
+
+            MovesManager.instance.onOutOfMoves += TriggerLose;
+        }
 
         allEndCells = FindObjectsByType<EndCell>(FindObjectsSortMode.None);
 
-
+        if (!useMoveLimit && gameOverUI == null)
+        {
+            return;
+        }
     }
 
     private void OnDestroy()
     {
         ConnectionManager.instance.onValidPathCompleted -= CheckIfLevelComplete;
-        MovesManager.instance.onOutOfMoves -= TriggerLose;  
+        if (useMoveLimit)
+        {
+
+            MovesManager.instance.onOutOfMoves -= TriggerLose;
+        }
     }
 
     // the one who triggers (invoke) the event is called the publisher
@@ -65,8 +77,8 @@ public class LevelManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-   
-   private void TriggerLose()
+
+    private void TriggerLose()
     {
         gameOverUI.SetActive(true);
         Debug.Log("GameOver! You ran out of moves");
