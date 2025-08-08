@@ -44,6 +44,7 @@ public class MusicManager : MonoBehaviour
         {
             Debug.LogWarning("AudioManager instance not found.");
         }
+
     }
     public void SetLevelMusic(AK.Wwise.Event levelMusic, AK.Wwise.Event stopEvent)
     {
