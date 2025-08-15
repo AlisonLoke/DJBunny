@@ -7,7 +7,7 @@ public class ScrollingBackGround : MonoBehaviour
     [SerializeField] private List<RawImage> bgImage;
     [SerializeField] private float x, y;
 
-    void Update()
+   private void Update()
     {
         foreach (RawImage image in bgImage)
         {

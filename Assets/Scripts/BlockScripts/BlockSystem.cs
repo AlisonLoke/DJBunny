@@ -67,7 +67,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         }
 
         // Follow mouse if selected
-        if (isFollowingMouse)
+        if (isFollowingMouse && selectedBlock == this)
         {
             Vector2 pointerPosition = Mouse.current.position.ReadValue();
             blockParentRect.position = pointerPosition;
@@ -188,14 +188,15 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         {
             return;
         }
-
+        if(selectedBlock != null && selectedBlock != this)
+        {
+            return;
+        }
 
         if (!isFollowingMouse)
         {
             BeginPickUp();
-            //audioObject = AudioManager.instance.Play(blockData.PlayInstrument);
-            //Play the mute here
-            //audioObject = AudioManager.instance.Play(blockData.MuteInstrument);
+          
         }
         else
         {
@@ -301,7 +302,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
             return;
         }
-        //audioObject = AudioManager.instance.Play(blockData.MuteInstrument);
+       
         MusicManager.instance.PlayInstruments(blockData.MuteInstrument);
         RemoveFromGrid();
         ResetHoverAnimation();
