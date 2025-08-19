@@ -279,7 +279,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         selectedBlock = this;
         isFollowingMouse = true;
         SFXManager.instance.PlayPickUp.Post(gameObject);
-        if (LevelManager.Instance.useMoveLimit)
+        if (LevelManager.Instance.useMoveLimit && isSnappedToGrid)
         {
             MovesManager.instance.TrackMoves();
 
