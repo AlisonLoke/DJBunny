@@ -28,7 +28,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7295766049151715133}
   - {fileID: 6354828647050387698}
@@ -59,6 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originalRotation: {x: 0, y: 0, z: 0, w: 0}
+  connectType: 0
   blockParentRect: {fileID: 8837972349800196655}
   blockRectransforms:
   - {fileID: 3809127391788960617}
@@ -66,6 +67,7 @@ MonoBehaviour:
   - {fileID: 3689849784608768072}
   blockData: {fileID: 11400000, guid: 1110b1514f7d01847a4868cce3329323, type: 2}
   delayBetweenRotations: 0.2
+  delaybetweenhovers: 1
   gridParent: {fileID: 0}
   endCells: []
 --- !u!114 &1561661735480883897

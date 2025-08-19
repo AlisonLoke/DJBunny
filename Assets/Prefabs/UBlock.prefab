@@ -404,6 +404,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7886734148896199494}
   - component: {fileID: 6702226210742935298}
+  - component: {fileID: 3999392789721696078}
   m_Layer: 5
   m_Name: UBlock
   m_TagString: Untagged
@@ -421,7 +422,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3593952725265229675}
   - {fileID: 8538516607708806363}
@@ -453,7 +454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originalRotation: {x: 0, y: 0, z: 0, w: 0}
-  connectType: 0
+  connectType: 1
   blockParentRect: {fileID: 7886734148896199494}
   blockRectransforms:
   - {fileID: 4600293306695275412}
@@ -461,11 +462,26 @@ MonoBehaviour:
   - {fileID: 3205736593659022873}
   - {fileID: 2880600913115679036}
   - {fileID: 1995044544949797526}
-  blockData: {fileID: 0}
-  delayBetweenRotations: 1
+  blockData: {fileID: 11400000, guid: d2c92f385986ef1409afc574c621e37e, type: 2}
+  delayBetweenRotations: 0.2
   delaybetweenhovers: 1
   gridParent: {fileID: 0}
   endCells: []
+--- !u!114 &3999392789721696078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3525030621653700591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ac3039d5a071b74e8187dcfa6cfeac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockImages:
+  - {fileID: 8018637821029921682}
+  - {fileID: 3783683315354072857}
 --- !u!1 &5525614962493474251
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62d0f7aa4e8cd904c8261eb8cdfbd513, type: 3}
+  m_Name: Lvl04_St02
+  m_EditorClassIdentifier: 
+  x: 6
+  y: 3
+  closedGridSpace:
+  - {x: 0, y: 0}
+  - {x: 1, y: 3}
+  - {x: 2, y: 5}
+  startCellCoordinates: {x: 1, y: 0}
+  finishCellCoordinates: {x: 0, y: 3}
+  doubleStartCellCoordinates: {x: 2, y: 3}
+  doubleFinishCellCoordinates: {x: 1, y: 5}
+  enableDoubleConnectCell: 1
