@@ -10,7 +10,7 @@ public class BlockData : ScriptableObject
     //    Bass,
     //    Piano
     //}
-
+    public static BlockData Instance;
     [Header("Block Type")]
     [SerializeField] private string BlockName;
     [SerializeField] private GameObject BlockPrefab;
@@ -19,7 +19,10 @@ public class BlockData : ScriptableObject
     [Header("Music")]
     public AK.Wwise.Event PlayInstrument = null;
     public AK.Wwise.Event MuteInstrument = null;
-
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     [Header("Genre")]
     [Tooltip("Select the genre of music this block represents")]

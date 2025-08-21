@@ -28,7 +28,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
     [SerializeField] private ConnectCellType connectType;
     [SerializeField] private RectTransform blockParentRect;
     [SerializeField] private RectTransform[] blockRectransforms;
-    [SerializeField] private BlockData blockData;
+    [SerializeField] public BlockData blockData;
     [SerializeField] private float delayBetweenRotations = 1f;
     [SerializeField] private float delaybetweenhovers = 1f;
 
@@ -268,7 +268,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         else
         {
 
-            MusicManager.instance.PlayInstruments(blockData.PlayInstrument);
+            //MusicManager.instance.PlayInstruments(blockData.PlayInstrument);
         }
 
     }

@@ -102,6 +102,7 @@ public class ConnectionManager : MonoBehaviour
         foreach (ConnectionSystem connections in connectionSystems)
         {
             connections.PreviewCurrentPath();
+          
         }
     }
     public void CheckConnectionsForAllEndCells()

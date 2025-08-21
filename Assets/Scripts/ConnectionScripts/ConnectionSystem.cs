@@ -207,7 +207,7 @@ public class ConnectionSystem : MonoBehaviour
                     // Skip self
                     if (endCell == fromEndCell)
                         continue;
-                    if(endCell.blockSystem.connectCellType != fromEndCell.blockSystem.connectCellType)
+                    if (endCell.blockSystem.connectCellType != fromEndCell.blockSystem.connectCellType)
                     {
                         continue;
                     }
@@ -251,7 +251,7 @@ public class ConnectionSystem : MonoBehaviour
     private void FindLongestPath()
     {
         // Clear any previous paths
-       
+
         ClearBlockPulses();
         allPaths.Clear();
         currentPath.Clear();
@@ -428,7 +428,7 @@ public class ConnectionSystem : MonoBehaviour
         {
             foreach (EndCell connected in currentCell.connectedEndCell)
             {
-               
+
                 FindAllPaths(connected, targetCell, new List<EndCell>(path));
             }
         }
@@ -500,9 +500,22 @@ public class ConnectionSystem : MonoBehaviour
                 blockUIPath.Add(ui);
             }
         }
+        UpdateMusicLayers(blockUIPath);
         UpdateConnectionLine();
         StartCoroutine(PulseCurrentPath(blockUIPath, Color.cyan, PreviewPathPulseLength));
 
+    }
+    private void UpdateMusicLayers(List<BlockUI> activeBlocks)
+    {
+        foreach (BlockUI block in activeBlocks)
+        {
+            BlockData blockData = block.GetComponent<BlockSystem>().blockData;
+            if (blockData != null && blockData.PlayInstrument != null)
+            {
+                
+                MusicManager.instance.PlayInstruments(blockData.PlayInstrument);
+            }
+        }
     }
     private EndCell FindStartCellOfType(ConnectCellType targetType)
     {
@@ -512,7 +525,7 @@ public class ConnectionSystem : MonoBehaviour
 
             if (endCell.onlyConnectToStartFinish && PathFinder.instance.IsStartCell(endCell.currentGridCell) && endCell.currentGridCell.connectCellType == targetType)
             {
-             
+
                 return endCell;
             }
         }
