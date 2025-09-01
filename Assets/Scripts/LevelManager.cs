@@ -12,6 +12,7 @@ public class LevelManager : MonoBehaviour
     // needs to be called after ConnectionSystem.Awake()
     private EndCell[] allEndCells;
     [SerializeField] private GameObject gameOverUI;
+    [SerializeField] private float CutSceneTransitionTime = 1f;
     public GridData GetGridData => gridData;
 
     private void Start()
@@ -76,9 +77,21 @@ public class LevelManager : MonoBehaviour
     //Get next scene build
     public void GetNextSceneinBuildIndex()
     {
+       
+    
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+    public void GetNextCutScene()
+    {
+        StartCoroutine(StartCutSceneTransition(SceneManager.GetActiveScene().buildIndex + 1));
+    }
 
+    private IEnumerator StartCutSceneTransition(int levelIndex)
+    {
+        SceneTransition.Instance.StartCutSceneSceneTransition();
+        yield return new WaitForSeconds(CutSceneTransitionTime);
+        SceneManager.LoadScene(levelIndex); 
+    }
     private void TriggerLose()
     {
         gameOverUI.SetActive(true);

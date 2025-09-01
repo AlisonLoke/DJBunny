@@ -67,7 +67,7 @@ public class DialogueManager : MonoBehaviour
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1 );
             Debug.Log("current music has stopped");
             MusicManager.instance.StopCurrentLevelMusic();
-            LevelManager.Instance.GetNextSceneinBuildIndex();
+            LevelManager.Instance.GetNextCutScene();
 
         }
     }
