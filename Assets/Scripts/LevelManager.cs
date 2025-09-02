@@ -63,6 +63,8 @@ public class LevelManager : MonoBehaviour
     {
         Debug.Log("Triggering Win ");
         // do whatever a win would do
+
+        SceneTransition.Instance.StartPuzzleTransition();
         yield return new WaitForSeconds(4f);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         GetNextSceneinBuildIndex();
@@ -77,8 +79,7 @@ public class LevelManager : MonoBehaviour
     //Get next scene build
     public void GetNextSceneinBuildIndex()
     {
-       
-    
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void GetNextCutScene()

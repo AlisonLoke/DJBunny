@@ -7,6 +7,8 @@ public class SceneTransition : MonoBehaviour
 {
     public static SceneTransition Instance;
     [SerializeField] private Animator cutSceneTransition;
+    [SerializeField] private Animator puzzleTransition;
+  
 
     private void Awake()
     {
@@ -16,4 +18,15 @@ public class SceneTransition : MonoBehaviour
     {
         cutSceneTransition.SetTrigger("Start");
     }
+    public void StartPuzzleTransition()
+    {
+        puzzleTransition.SetTrigger("PuzzleTransitionStart");
+      
+
+    }
+    public void StartPuzzleToCutScene()
+    {
+        cutSceneTransition.SetTrigger("PuzzleToCutScene");
+    }
+
 }
