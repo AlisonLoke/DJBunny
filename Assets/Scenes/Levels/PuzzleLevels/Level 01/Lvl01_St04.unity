@@ -208,6 +208,63 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6742391777000452425, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
   m_PrefabInstance: {fileID: 952046527}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &353655028
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 353655030}
+  - component: {fileID: 353655029}
+  m_Layer: 0
+  m_Name: WwiseGlobal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &353655029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353655028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d055153e8a7272840be16a2b832dfe3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationSettings: {fileID: 11400000, guid: f2d04cdf3ce5e5b48ae8df2f44812184, type: 2}
+  basePath: 
+  language: 
+  defaultPoolSize: 0
+  lowerPoolSize: 0
+  streamingPoolSize: 0
+  memoryCutoffThreshold: 0
+  monitorPoolSize: 0
+  monitorQueuePoolSize: 0
+  callbackManagerBufferSize: 0
+  spatialAudioPoolSize: 0
+  maxSoundPropagationDepth: 0
+  engineLogging: 0
+--- !u!4 &353655030
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353655028}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &416433624
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,6 +647,10 @@ PrefabInstance:
       propertyPath: gridData
       value: 
       objectReference: {fileID: 11400000, guid: 91b96532e0f87e94185c950255400918, type: 2}
+    - target: {fileID: 2685476396588401627, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+      propertyPath: isLastPuzzle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6989203491967808597, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1513,6 +1574,10 @@ PrefabInstance:
       propertyPath: cutSceneTransition
       value: 
       objectReference: {fileID: 1141997978}
+    - target: {fileID: 8641849956048829752, guid: 12fbad70cffd4da4f8b2e871056cd8cb, type: 3}
+      propertyPath: lastPuzzleTransition
+      value: 
+      objectReference: {fileID: 1141997978}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1618,7 +1683,7 @@ GameObject:
   - component: {fileID: 1141997979}
   - component: {fileID: 1141997978}
   m_Layer: 0
-  m_Name: CrossFade (1)
+  m_Name: PuzzleToCutSceneTransition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2105,7 +2170,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1471713449}
-  - component: {fileID: 1471713448}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -2113,31 +2177,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1471713448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1471713447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d055153e8a7272840be16a2b832dfe3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InitializationSettings: {fileID: 11400000, guid: f2d04cdf3ce5e5b48ae8df2f44812184, type: 2}
-  basePath: 
-  language: 
-  defaultPoolSize: 0
-  lowerPoolSize: 0
-  streamingPoolSize: 0
-  memoryCutoffThreshold: 0
-  monitorPoolSize: 0
-  monitorQueuePoolSize: 0
-  callbackManagerBufferSize: 0
-  spatialAudioPoolSize: 0
-  maxSoundPropagationDepth: 0
-  engineLogging: 0
 --- !u!4 &1471713449
 Transform:
   m_ObjectHideFlags: 0
@@ -2726,3 +2765,4 @@ SceneRoots:
   - {fileID: 1395023579}
   - {fileID: 574878785}
   - {fileID: 1471713449}
+  - {fileID: 353655030}
