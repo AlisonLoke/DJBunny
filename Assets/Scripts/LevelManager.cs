@@ -6,9 +6,11 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance;
     public GridData gridData;
-    public bool Tutorial = false;   
+    [Header("LevelSettings")]
+    public bool Tutorial = false;
     public bool useMoveLimit = false;
     public int maxMoves = 5;
+    [SerializeField] private bool isLastPuzzle = false;
     // needs to be called after ConnectionSystem.Awake()
     private EndCell[] allEndCells;
     [SerializeField] private GameObject gameOverUI;
@@ -64,10 +66,20 @@ public class LevelManager : MonoBehaviour
         Debug.Log("Triggering Win ");
         // do whatever a win would do
 
-        SceneTransition.Instance.StartPuzzleTransition();
-        yield return new WaitForSeconds(4f);
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        GetNextSceneinBuildIndex();
+        if (isLastPuzzle)
+        {
+            SceneTransition.Instance.StartPuzzleToCutScene();
+            yield return new WaitForSeconds(1f);
+            GetNextCutScene();
+        }
+        else
+        {
+            SceneTransition.Instance.StartPuzzleTransition();
+            yield return new WaitForSeconds(4f);
+            GetNextSceneinBuildIndex();
+        }
+
+
     }
 
     //TODO: Set of win sequence so that it gets full end track 
@@ -79,9 +91,9 @@ public class LevelManager : MonoBehaviour
     //Get next scene build
     public void GetNextSceneinBuildIndex()
     {
-        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
     public void GetNextCutScene()
     {
         StartCoroutine(StartCutSceneTransition(SceneManager.GetActiveScene().buildIndex + 1));
@@ -91,7 +103,7 @@ public class LevelManager : MonoBehaviour
     {
         SceneTransition.Instance.StartCutSceneSceneTransition();
         yield return new WaitForSeconds(CutSceneTransitionTime);
-        SceneManager.LoadScene(levelIndex); 
+        SceneManager.LoadScene(levelIndex);
     }
     private void TriggerLose()
     {
