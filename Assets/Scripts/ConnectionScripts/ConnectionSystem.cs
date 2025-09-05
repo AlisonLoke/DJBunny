@@ -48,8 +48,8 @@ public class ConnectionSystem : MonoBehaviour
     [SerializeField] private PathFinder pathFinder;
     [SerializeField] private GridData gridData; //ref the gridata for dual connect feature
 
-    [Tooltip("Disable for levels where not all blocks are required to complete the level")]
-    [SerializeField] private bool requireAllBlocksUsed = true;
+    //[Tooltip("Disable for levels where not all blocks are required to complete the level")]
+    //[SerializeField] private bool requireAllBlocksUsed = true;
 
     private void Awake()
     {
@@ -278,10 +278,10 @@ public class ConnectionSystem : MonoBehaviour
             Debug.Log($"Path point: {cell.name} at position {cell.transform.position}");
         }
 
-        if (!CheckAllBlockUsed(currentPath))
-        {
-            return;
-        }
+        //if (!CheckAllBlockUsed(currentPath))
+        //{
+        //    return;
+        //}
 
 
 
@@ -296,18 +296,18 @@ public class ConnectionSystem : MonoBehaviour
 
 
 
-    private bool CheckAllBlockUsed(List<EndCell> path)
-    {
-        if (requireAllBlocksUsed && !AreAllBlockUsed(currentPath))
-        {
-            Debug.Log("Not all blocks are used in this Path");
-            ClearConnectedLine();
-            ClearBlockPulses();
-            return false;
-        }
+    //private bool CheckAllBlockUsed(List<EndCell> path)
+    //{
+    //    if (requireAllBlocksUsed && !AreAllBlockUsed(currentPath))
+    //    {
+    //        Debug.Log("Not all blocks are used in this Path");
+    //        ClearConnectedLine();
+    //        ClearBlockPulses();
+    //        return false;
+    //    }
 
-        return true;
-    }
+    //    return true;
+    //}
 
     private void NoValidPathFound()
     {
@@ -387,7 +387,10 @@ public class ConnectionSystem : MonoBehaviour
         return allUsed;
     }
 
-
+    public List<EndCell> GetCurrentPath()
+    {
+        return currentPath;
+    }
 
 
 

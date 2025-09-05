@@ -12,6 +12,7 @@ public class ConnectionManager : MonoBehaviour
     [SerializeField] private UILineRenderer secondaryLineRenderer;
 
     public event System.Action<int> onValidPathCompleted;
+    public event System.Action onAllConnectionsComplete;
     private void Awake()
     {
         if (instance == null)
@@ -29,7 +30,7 @@ public class ConnectionManager : MonoBehaviour
         }
 
     }
-  
+
     public UILineRenderer GetLineRendererByType(ConnectCellType type)
     {
         return type == ConnectCellType.Primary ? primaryLineRenderer : secondaryLineRenderer;
@@ -102,7 +103,7 @@ public class ConnectionManager : MonoBehaviour
         foreach (ConnectionSystem connections in connectionSystems)
         {
             connections.PreviewCurrentPath();
-          
+
         }
     }
     public void CheckConnectionsForAllEndCells()
@@ -174,8 +175,40 @@ public class ConnectionManager : MonoBehaviour
                 return;
             }
         }
+        if (AllBlocksUsed())
+        {
+            ShowPathsAreCompleted();
+            onAllConnectionsComplete?.Invoke();
+        }
+    }
 
-        ShowPathsAreCompleted();
+    private bool AllBlocksUsed()
+    {
+
+        List<BlockUI> allBlocks = FindObjectsByType<BlockUI>(FindObjectsSortMode.None)
+       .Where(b => b.gameObject.activeInHierarchy)
+       .ToList();
+
+        List<BlockUI> usedBlocks = new List<BlockUI>();
+
+        foreach (ConnectionSystem connections in connectionSystems)
+        {
+            foreach (EndCell endCell in connections.GetCurrentPath())
+            {
+                BlockUI blockUI = endCell.GetComponentInParent<BlockUI>();
+
+                if (blockUI != null && !usedBlocks.Contains(blockUI))
+                {
+                    usedBlocks.Add(blockUI);
+                }
+            }
+        }
+
+        bool allUsed = usedBlocks.Count == allBlocks.Count;
+
+        Debug.Log("Used blocks: " + usedBlocks.Count + ", Total placed blocks: " + allBlocks.Count + "  All used: " + allUsed);
+
+        return allUsed;
     }
 
     private void ShowPathsAreCompleted()

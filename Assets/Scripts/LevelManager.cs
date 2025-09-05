@@ -20,7 +20,8 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         Instance = this;
-        ConnectionManager.instance.onValidPathCompleted += CheckIfLevelComplete;
+        //ConnectionManager.instance.onValidPathCompleted += CheckIfLevelComplete;
+        ConnectionManager.instance.onAllConnectionsComplete += HandleLevelComplete;
 
         if (useMoveLimit)
         {
@@ -38,7 +39,8 @@ public class LevelManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        ConnectionManager.instance.onValidPathCompleted -= CheckIfLevelComplete;
+        //ConnectionManager.instance.onValidPathCompleted -= CheckIfLevelComplete;
+        ConnectionManager.instance.onAllConnectionsComplete -= HandleLevelComplete;
         if (useMoveLimit)
         {
 
@@ -49,17 +51,21 @@ public class LevelManager : MonoBehaviour
     // the one who triggers (invoke) the event is called the publisher
     // the one who "subscribes" / AddListener to the event is called the subscriber
     // below is the Subscriber's "handling" of the event => when the event gets called/triggered, all subscribers' handlers get called
-    private void CheckIfLevelComplete(int endCellsOnPathCount)
+    private void HandleLevelComplete()
     {
-        if (endCellsOnPathCount >= allEndCells.Length)
-        {
-            StartCoroutine(TriggerWin());
-        }
-        else
-        {
-            ShowNotAllBlocksUsedAffordance();
-        }
+        StartCoroutine(TriggerWin());
     }
+    //private void CheckIfLevelComplete(int endCellsOnPathCount)
+    //{
+    //    if (endCellsOnPathCount >= allEndCells.Length)
+    //    {
+    //        StartCoroutine(TriggerWin());
+    //    }
+    //    else
+    //    {
+    //        ShowNotAllBlocksUsedAffordance();
+    //    }
+    //}
 
     private IEnumerator TriggerWin()
     {
