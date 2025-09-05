@@ -404,7 +404,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7886734148896199494}
   - component: {fileID: 6702226210742935298}
-  - component: {fileID: 3999392789721696078}
+  - component: {fileID: 5322600387961373145}
   m_Layer: 5
   m_Name: UBlock
   m_TagString: Untagged
@@ -454,7 +454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originalRotation: {x: 0, y: 0, z: 0, w: 0}
-  connectType: 1
+  connectType: 2
   blockParentRect: {fileID: 7886734148896199494}
   blockRectransforms:
   - {fileID: 4600293306695275412}
@@ -467,7 +467,7 @@ MonoBehaviour:
   delaybetweenhovers: 1
   gridParent: {fileID: 0}
   endCells: []
---- !u!114 &3999392789721696078
+--- !u!114 &5322600387961373145
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -481,6 +481,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockImages:
   - {fileID: 8018637821029921682}
+  - {fileID: 8724318932967178774}
+  - {fileID: 4624047164597829887}
+  - {fileID: 1820058485928979313}
   - {fileID: 3783683315354072857}
 --- !u!1 &5525614962493474251
 GameObject:
