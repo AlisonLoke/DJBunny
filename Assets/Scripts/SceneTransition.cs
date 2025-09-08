@@ -9,6 +9,7 @@ public class SceneTransition : MonoBehaviour
     [SerializeField] private Animator cutSceneTransition;
     [SerializeField] private Animator puzzleTransition;
     [SerializeField] private Animator lastPuzzleTransition;
+    [SerializeField] private Animator tryAgainTransition;
   
 
     private void Awake()
@@ -33,4 +34,8 @@ public class SceneTransition : MonoBehaviour
         cutSceneTransition.SetTrigger("LastPuzzleFadeOut");
     }
 
+    public void StartTryAgainTransition()
+    {
+        tryAgainTransition.SetTrigger("StartTryAgain");
+    }
 }

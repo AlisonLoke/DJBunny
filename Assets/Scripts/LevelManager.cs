@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,14 +7,16 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance;
     public GridData gridData;
+
     [Header("LevelSettings")]
     public bool Tutorial = false;
     public bool useMoveLimit = false;
     public int maxMoves = 5;
     [SerializeField] private bool isLastPuzzle = false;
-    [SerializeField] private bool isLastLevel = false;  
+    [SerializeField] private bool isLastLevel = false;
+    [SerializeField] private GameObject tryAgainCanvas;
     // needs to be called after ConnectionSystem.Awake()
-   
+
     [SerializeField] private float CutSceneTransitionTime = 1f;
     private EndCell[] allEndCells;
     public GridData GetGridData => gridData;
@@ -24,7 +27,7 @@ public class LevelManager : MonoBehaviour
         //ConnectionManager.instance.onValidPathCompleted += CheckIfLevelComplete;
         ConnectionManager.instance.onAllConnectionsComplete += HandleLevelComplete;
 
-        if (useMoveLimit && isLastLevel)
+        if (useMoveLimit)
         {
 
             MovesManager.instance.onOutOfMoves += TriggerLose;
@@ -32,7 +35,7 @@ public class LevelManager : MonoBehaviour
 
         allEndCells = FindObjectsByType<EndCell>(FindObjectsSortMode.None);
 
-        if (!useMoveLimit )
+        if (!useMoveLimit && tryAgainCanvas == null)
         {
             return;
         }
@@ -114,9 +117,31 @@ public class LevelManager : MonoBehaviour
     }
     private void TriggerLose()
     {
+        if (isLastLevel)
+        {
+            Debug.Log("GameOver! You ran out of moves");
+            StartCoroutine(LoadFailScene());
+        }
+        else
+        {
+            RestartCurrentLevel();
+        }
+
        
-        Debug.Log("GameOver! You ran out of moves");
-        StartCoroutine(LoadFailScene());
+
+    }
+
+    private void RestartCurrentLevel()
+    {
+
+        SceneTransition.Instance.StartTryAgainTransition();
+        StartCoroutine(RestartCurrentLevelDelay(1f));
+    }
+    private IEnumerator RestartCurrentLevelDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
     }
 
     private IEnumerator LoadFailScene()

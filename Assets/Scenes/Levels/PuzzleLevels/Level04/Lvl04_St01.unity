@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneTransition
       objectReference: {fileID: 0}
+    - target: {fileID: 4818833672044298235, guid: 12fbad70cffd4da4f8b2e871056cd8cb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5237415777098926582, guid: 12fbad70cffd4da4f8b2e871056cd8cb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 816.30975
@@ -179,6 +183,10 @@ PrefabInstance:
       propertyPath: puzzleTransition
       value: 
       objectReference: {fileID: 585292635}
+    - target: {fileID: 8641849956048829752, guid: 12fbad70cffd4da4f8b2e871056cd8cb, type: 3}
+      propertyPath: tryAgainTransition
+      value: 
+      objectReference: {fileID: 933119195}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -963,7 +971,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 19756379668057341, guid: e797fe2bb448f424fbd1671815c38150, type: 3}
       propertyPath: m_Name
-      value: GameOverUI
+      value: TryAgainUI
       objectReference: {fileID: 0}
     - target: {fileID: 7725479948290802403, guid: e797fe2bb448f424fbd1671815c38150, type: 3}
       propertyPath: m_Pivot.x
@@ -1050,6 +1058,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e797fe2bb448f424fbd1671815c38150, type: 3}
+--- !u!95 &933119195 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3973958575962209653, guid: e797fe2bb448f424fbd1671815c38150, type: 3}
+  m_PrefabInstance: {fileID: 933119193}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1011709095
 GameObject:
   m_ObjectHideFlags: 0
@@ -1788,6 +1801,10 @@ PrefabInstance:
       propertyPath: useMoveLimit
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2685476396588401627, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+      propertyPath: tryAgainCanvas
+      value: 
+      objectReference: {fileID: 350737356}
     - target: {fileID: 6989203491967808597, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
