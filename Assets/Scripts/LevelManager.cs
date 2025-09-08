@@ -11,10 +11,11 @@ public class LevelManager : MonoBehaviour
     public bool useMoveLimit = false;
     public int maxMoves = 5;
     [SerializeField] private bool isLastPuzzle = false;
+    [SerializeField] private bool isLastLevel = false;  
     // needs to be called after ConnectionSystem.Awake()
-    private EndCell[] allEndCells;
-    [SerializeField] private GameObject gameOverUI;
+   
     [SerializeField] private float CutSceneTransitionTime = 1f;
+    private EndCell[] allEndCells;
     public GridData GetGridData => gridData;
 
     private void Start()
@@ -23,7 +24,7 @@ public class LevelManager : MonoBehaviour
         //ConnectionManager.instance.onValidPathCompleted += CheckIfLevelComplete;
         ConnectionManager.instance.onAllConnectionsComplete += HandleLevelComplete;
 
-        if (useMoveLimit)
+        if (useMoveLimit && isLastLevel)
         {
 
             MovesManager.instance.onOutOfMoves += TriggerLose;
@@ -31,7 +32,7 @@ public class LevelManager : MonoBehaviour
 
         allEndCells = FindObjectsByType<EndCell>(FindObjectsSortMode.None);
 
-        if (!useMoveLimit && gameOverUI == null)
+        if (!useMoveLimit )
         {
             return;
         }
@@ -53,7 +54,7 @@ public class LevelManager : MonoBehaviour
     // below is the Subscriber's "handling" of the event => when the event gets called/triggered, all subscribers' handlers get called
     private void HandleLevelComplete()
     {
-        StartCoroutine(TriggerWin());
+        StartCoroutine(TriggerPuzzleWin());
     }
     //private void CheckIfLevelComplete(int endCellsOnPathCount)
     //{
@@ -67,7 +68,7 @@ public class LevelManager : MonoBehaviour
     //    }
     //}
 
-    private IEnumerator TriggerWin()
+    private IEnumerator TriggerPuzzleWin()
     {
         Debug.Log("Triggering Win ");
         // do whatever a win would do
@@ -113,7 +114,15 @@ public class LevelManager : MonoBehaviour
     }
     private void TriggerLose()
     {
-        gameOverUI.SetActive(true);
+       
         Debug.Log("GameOver! You ran out of moves");
+        StartCoroutine(LoadFailScene());
+    }
+
+    private IEnumerator LoadFailScene()
+    {
+        SceneTransition.Instance.StartCutSceneSceneTransition();
+        yield return new WaitForSeconds(CutSceneTransitionTime);
+        SceneManager.LoadScene("FailDanceCutScene_Level05");
     }
 }
