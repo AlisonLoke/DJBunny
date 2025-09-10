@@ -265,11 +265,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             Debug.Log("block is over closed cell");
             MusicManager.instance.PlayInstruments(blockData.MuteInstrument);
         }
-        else
-        {
-
-            //MusicManager.instance.PlayInstruments(blockData.PlayInstrument);
-        }
+       
 
     }
 
@@ -372,7 +368,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         {
             //Debug.Log(snapClosestGridCell.x + "," + snapClosestGridCell.y);
             MoveBlockToGrid(snapClosestGridCell);
-
+            MovesManager.instance.TrackMoves();
         }
 
         DidNotFindAnyGridCell();

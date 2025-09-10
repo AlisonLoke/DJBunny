@@ -2404,6 +2404,10 @@ PrefabInstance:
       propertyPath: gridParent
       value: 
       objectReference: {fileID: 91082563}
+    - target: {fileID: 6702226210742935298, guid: 95dd5e52fcb2ec74bbe194ac928e6bb6, type: 3}
+      propertyPath: connectType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7612894800381107577, guid: 95dd5e52fcb2ec74bbe194ac928e6bb6, type: 3}
       propertyPath: m_SizeDelta.x
       value: 26
@@ -4716,7 +4720,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: b301d9292d5de8645a5413b1aa73aee4, type: 2}
     - target: {fileID: 2685476396588401627, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
       propertyPath: maxMoves
-      value: 13
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 2685476396588401627, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
       propertyPath: gameOverUI
