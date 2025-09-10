@@ -8,6 +8,7 @@ public class DialogueTriggerOnStart : MonoBehaviour
     {
         DialogueManager.instance.dialogueLines = dialogueLines;
         DialogueManager.instance.StartDialogue();
+        InputBlocker.Instance.EnableBlockInput();
     }
 }
 
