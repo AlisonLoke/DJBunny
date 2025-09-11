@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 [System.Serializable]
 public class DialogueLine 
 {
@@ -6,4 +7,6 @@ public class DialogueLine
 
     [TextArea(2,5)]
     public string line;
+
+    public UnityEvent onLineStart;
 }

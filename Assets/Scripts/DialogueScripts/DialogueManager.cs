@@ -56,6 +56,7 @@ public class DialogueManager : MonoBehaviour
         {
             index++;
             DialogueText.text = string.Empty;
+            dialogueLines[index].onLineStart?.Invoke();
             StartCoroutine(TypeLine());
         }
         else
