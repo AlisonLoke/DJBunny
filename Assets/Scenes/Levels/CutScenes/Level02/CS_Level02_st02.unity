@@ -239,7 +239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4818833672044298235, guid: 12fbad70cffd4da4f8b2e871056cd8cb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5237415777098926582, guid: 12fbad70cffd4da4f8b2e871056cd8cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -324,15 +324,54 @@ MonoBehaviour:
   - characterName: Tammy Lim
     line: " Haha that\u2019s literally my favourite chill song ever! I like your
       vibe."
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: Tammy Lim
     line: "I run a cafe called the Brew & Chill nearby. I\u2019ve got the brew but
       I don\u2019t think I\u2019ve got the chill yet."
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: Tammy Lim
     line: "Do you think you can fix that? \r\n"
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: DJ Bunny
     line: '* nods *'
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1439729432}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: SetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Nod
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2124918154}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: OnNodStart
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Nod
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Tammy Lim
     line: " Hah\u2026.. that\u2019s chill. "
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!4 &581747695
 Transform:
   m_ObjectHideFlags: 0
@@ -1346,6 +1385,8 @@ GameObject:
   - component: {fileID: 1439729428}
   - component: {fileID: 1439729427}
   - component: {fileID: 1439729426}
+  - component: {fileID: 1439729432}
+  - component: {fileID: 1439729433}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1539,12 +1580,46 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 613, y: 188, z: 0}
-  m_LocalScale: {x: 56.98, y: 56.98, z: 56.98}
+  m_LocalScale: {x: 30, y: 30, z: 30}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2004666326}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1439729432
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439729425}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 901b0a84ee0a91c439890b0b5986d8fa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1439729433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439729425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67d14a746a1467b4f9eb73c1bb00facb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1584838165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1897,6 +1972,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2124918154 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+  m_PrefabInstance: {fileID: 810261368}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a1ade943816d5a4ca7e526e786d8a6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2131771321
 PrefabInstance:
   m_ObjectHideFlags: 0
