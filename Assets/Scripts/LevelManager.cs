@@ -21,9 +21,14 @@ public class LevelManager : MonoBehaviour
     private EndCell[] allEndCells;
     public GridData GetGridData => gridData;
 
-    private void Start()
+    private void Awake()
     {
         Instance = this;
+    }
+
+    private void Start()
+    {
+        //Instance = this; // WHY DID I DO THAT?
         //ConnectionManager.instance.onValidPathCompleted += CheckIfLevelComplete;
         ConnectionManager.instance.onAllConnectionsComplete += HandleLevelComplete;
 

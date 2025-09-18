@@ -211,16 +211,16 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             return;
         }
 
-        if (isSnappedToGrid)
-        {
+        //if (isSnappedToGrid)
+        //{
 
-            RemoveFromGrid();
-            ResetBlockToOrigin();
+        //    RemoveFromGrid();
+        //    ResetBlockToOrigin();
 
 
 
-            return;
-        }
+        //    return;
+        //}
 
         if (isFollowingMouse)
         {
