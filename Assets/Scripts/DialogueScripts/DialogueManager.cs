@@ -72,11 +72,7 @@ public class DialogueManager : MonoBehaviour
 
         }
     }
-    public void OnNodFinish()
-    {
-        StartDialogue();
-    }
-
+    
     public void OnNodStart()
     {
         animator.SetBool("IsOpen", false);

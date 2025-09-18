@@ -188,7 +188,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         {
             return;
         }
-        if(selectedBlock != null && selectedBlock != this)
+        if (selectedBlock != null && selectedBlock != this)
         {
             return;
         }
@@ -196,7 +196,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         if (!isFollowingMouse)
         {
             BeginPickUp();
-          
+
         }
         else
         {
@@ -265,7 +265,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             Debug.Log("block is over closed cell");
             MusicManager.instance.PlayInstruments(blockData.MuteInstrument);
         }
-       
+
 
     }
 
@@ -298,7 +298,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
             return;
         }
-       
+
         MusicManager.instance.PlayInstruments(blockData.MuteInstrument);
         RemoveFromGrid();
         ResetHoverAnimation();
@@ -368,7 +368,12 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         {
             //Debug.Log(snapClosestGridCell.x + "," + snapClosestGridCell.y);
             MoveBlockToGrid(snapClosestGridCell);
-            MovesManager.instance.TrackMoves();
+
+            if (LevelManager.Instance.useMoveLimit)
+            {
+                MovesManager.instance.TrackMoves();
+
+            }
         }
 
         DidNotFindAnyGridCell();
