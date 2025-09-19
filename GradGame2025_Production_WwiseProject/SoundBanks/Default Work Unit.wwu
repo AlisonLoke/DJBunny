@@ -43,6 +43,14 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<SoundBank Name="SFX" ID="{D495C33D-C384-4BFC-8491-DA3FB5462D6C}">
+					<ObjectInclusionList>
+						<ObjectRef Name="ATM" ID="{6A59FCB6-35AD-44E1-BCCE-166BC9203635}" WorkUnitID="{6A59FCB6-35AD-44E1-BCCE-166BC9203635}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="UI" ID="{4CFCD80E-9E6D-4B61-9334-558299F149BF}" WorkUnitID="{4CFCD80E-9E6D-4B61-9334-558299F149BF}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>
