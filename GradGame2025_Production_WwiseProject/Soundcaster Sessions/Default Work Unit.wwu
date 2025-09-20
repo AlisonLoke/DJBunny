@@ -10,7 +10,7 @@
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Lvl1_1" ID="{4C3A3202-9E8F-48C3-B1F6-06E15DC0ADCC}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<ObjectRef Name="Lvl1_1_KickPlay" ID="{6A9ED2F8-BB4C-4CC2-ABA5-13E505693881}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
@@ -26,7 +26,7 @@
 							<Position X="0" Y="4"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Lvl2_1" ID="{9086E085-2FEA-4B25-B8C8-62027E714E71}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<ObjectRef Name="Lvl2" ID="{9086E085-2FEA-4B25-B8C8-62027E714E71}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
 							<Position X="0" Y="5"/>
 						</Module>
 						<Module>
@@ -42,7 +42,11 @@
 							<Position X="0" Y="8"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Lvl1_1_KickPlay" ID="{6A9ED2F8-BB4C-4CC2-ABA5-13E505693881}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<ObjectRef Name="Lvl1_Start" ID="{4C3A3202-9E8F-48C3-B1F6-06E15DC0ADCC}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lvl1_1_KickStop" ID="{05B15E1D-6F6A-4CD5-B60A-58C4F34194B4}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
 							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
@@ -62,10 +66,6 @@
 							<Position X="1" Y="5"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Lvl2_2" ID="{CAE86D2A-C5AA-412F-BD67-E1A2B8B5B6BB}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
-							<Position X="1" Y="6"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="Lvl2_2_ChordsStop" ID="{EF1B957C-FA68-46CC-B506-D335072E5CB4}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
 							<Position X="1" Y="7"/>
 						</Module>
@@ -74,7 +74,11 @@
 							<Position X="1" Y="8"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Lvl1_1_KickStop" ID="{05B15E1D-6F6A-4CD5-B60A-58C4F34194B4}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<ObjectRef Name="Lvl1_End" ID="{7FE4C5B8-E6C6-446E-BD51-5F3CB1491E0A}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lvl1_1_PercPlay" ID="{4D0DD700-34DD-4134-9BEF-C38980D5426A}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
 							<Position X="2" Y="1"/>
 						</Module>
 						<Module>
@@ -98,15 +102,15 @@
 							<Position X="2" Y="6"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Lvl2_3" ID="{186009DE-4B58-40C5-AC4E-B045FB6705B9}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
-							<Position X="2" Y="7"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="Lvl2_3_WowStop" ID="{BFD177FA-7640-4156-AB2E-7443A3812858}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
 							<Position X="2" Y="8"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Lvl1_1_PercPlay" ID="{4D0DD700-34DD-4134-9BEF-C38980D5426A}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<ObjectRef Name="Lvl3_Bg" ID="{9D0A3C55-8EA5-406F-B233-45E25D8A8740}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lvl1_1_PercStop" ID="{22F36B0D-B408-4166-807C-10012A00E1D3}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
 							<Position X="3" Y="1"/>
 						</Module>
 						<Module>
@@ -134,11 +138,47 @@
 							<Position X="3" Y="7"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Lvl1_1_PercStop" ID="{22F36B0D-B408-4166-807C-10012A00E1D3}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
-							<Position X="4" Y="1"/>
+							<ObjectRef Name="Lvl3_1_BassPlay" ID="{8B702ABA-1F6E-4BBB-99BC-80DF7AC0B592}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="3" Y="9"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Lvl1_3" ID="{9FF4AC2D-BA70-4F1F-9844-49A12D2955F1}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<ObjectRef Name="Lvl3_1_ChordPlay" ID="{B44117A5-7E11-4E3E-810D-21F043399CF7}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="3" Y="10"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lvl3_1_ClapPlay" ID="{AA33A376-247F-4A9D-A2ED-F20B7D1C6C3C}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="3" Y="11"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lvl3_1_End" ID="{0FA35EF9-6319-4E73-ABBA-C072AABC1B96}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="3" Y="12"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lvl3_1_GuitarStop" ID="{805F041B-E190-4147-9391-7FA7AF809C82}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="3" Y="13"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lvl3_1_HitsStop" ID="{0B775DC9-DCA4-4959-82F2-8F926C052F3C}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="3" Y="14"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lvl3_1_KickStop" ID="{68D72E4E-E122-4DCE-9115-6DE090959ED8}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="3" Y="15"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lvl3_1_OrchStop" ID="{660E1D12-3096-43EF-96C8-7CB4F973C7C5}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="3" Y="16"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lvl3_1_SnareStop" ID="{2617E663-602B-4364-93C5-832CD1ED613A}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="3" Y="17"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Reset_FX" ID="{F96A38A8-3EAF-418C-8721-7C717733BB5C}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lvl1_3_BanjoTex1Play" ID="{F5E0D21F-629A-4214-82D0-DFEC2F44E7B8}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
 							<Position X="4" Y="2"/>
 						</Module>
 						<Module>
@@ -162,16 +202,40 @@
 							<Position X="4" Y="7"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Lvl1_2" ID="{955CBC17-0838-4231-9B9A-E3AE15AB363E}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
-							<Position X="5" Y="1"/>
+							<ObjectRef Name="Lvl3_1_BassStop" ID="{D338E825-D7B3-4DBB-B1B8-A684A961E6B0}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="4" Y="9"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Lvl1_3_BanjoTex1Play" ID="{F5E0D21F-629A-4214-82D0-DFEC2F44E7B8}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
-							<Position X="5" Y="2"/>
+							<ObjectRef Name="Lvl3_1_ChordStop" ID="{C896FB77-53A5-417A-990F-726300F1CFD9}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="4" Y="10"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Lvl1_4" ID="{35106FBB-81D2-49B8-8736-B52F871AA0F2}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
-							<Position X="5" Y="3"/>
+							<ObjectRef Name="Lvl3_1_ClapStop" ID="{532AC1FA-86CA-4F06-8682-5DCA48220BB7}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="4" Y="11"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lvl3_1_GuitarPlay" ID="{0FB3F678-877D-4BE2-9960-BD6310037335}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="4" Y="12"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lvl3_1_HitsPlay" ID="{3EB2A5AC-57DA-430C-B82C-3D1F0A28DF70}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="4" Y="13"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lvl3_1_KickPlay" ID="{EEFF4AF9-78A8-4DD0-B750-6C12420A9AF9}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="4" Y="14"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lvl3_1_OrchPlay" ID="{5EF1C98A-C6B2-4C91-B5E1-AB4B9ED1CA42}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="4" Y="15"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lvl3_1_SnarePlay" ID="{30AFC76C-817E-4521-9E39-CD31DC11BE06}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="4" Y="16"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lvl3_1_Start" ID="{EE3D3F7B-C35F-40D1-8062-E4DBFEC8424E}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="4" Y="17"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Lvl1_4_TexStop" ID="{BF5E5D34-49F6-4396-9503-FD2AF44E5B41}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
@@ -192,7 +256,7 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Lvl2_1" ID="{7C6430AD-D52A-4E47-9ACA-9E83E1557DA3}"/>
+						<CurrentStateRef Name="Lvl3_Background" ID="{8EC7461E-1261-49F2-B763-669D8153E717}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
