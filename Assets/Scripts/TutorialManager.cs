@@ -1,6 +1,9 @@
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class TutorialManager : MonoBehaviour
@@ -29,11 +32,17 @@ public class TutorialManager : MonoBehaviour
     public void SwitchToRotateTutorial()
     {
         mouseAnimator.SetTrigger("RightClick");
-        SwitchText("RotateTheBlock");
+        StartCoroutine(SwitchText("Rotate The Block"));
     }
     public void SwitchToPlacementTutorial()
     {
         StartCoroutine(SwitchAnimationDelay());
+    
+        StartCoroutine(SwitchText("Place The Block On The Bunny"));
+    }
+    public void SwitchToTutorialEnd()
+    {
+        StartCoroutine(SwitchText("Use All The Blocks To Connect The Bunnies In A Single Line!"));
     }
 
     private IEnumerator SwitchAnimationDelay()
@@ -42,10 +51,13 @@ public class TutorialManager : MonoBehaviour
         mouseAnimator.SetTrigger("WithArrow");
     }
 
-    public void SwitchText(string newText)
+    private IEnumerator SwitchText(string newText)
     {
-        tutorialText.text = newText;
+        yield return new WaitForSeconds(1f);
         textAnimator.SetTrigger("Hide");
+        yield return new WaitForSeconds(1f);
+        tutorialText.text = newText;
 
     }
+
 }

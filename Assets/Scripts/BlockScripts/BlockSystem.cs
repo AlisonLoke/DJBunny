@@ -374,6 +374,11 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
                 MovesManager.instance.TrackMoves();
 
             }
+
+            if (LevelManager.Instance.Tutorial)
+            {
+                TutorialManager.Instance.SwitchToTutorialEnd();
+            }
         }
 
         DidNotFindAnyGridCell();
