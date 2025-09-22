@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +8,9 @@ public class TutorialManager : MonoBehaviour
     public static TutorialManager Instance;
     [SerializeField] private GameObject tutorialUI;
     [SerializeField] Animator mouseAnimator;
+    [SerializeField] private Animator textAnimator;
+    [SerializeField] private TextMeshProUGUI tutorialText;
+
     private void Awake()
     {
         Instance = this;
@@ -25,6 +29,7 @@ public class TutorialManager : MonoBehaviour
     public void SwitchToRotateTutorial()
     {
         mouseAnimator.SetTrigger("RightClick");
+        SwitchText("RotateTheBlock");
     }
     public void SwitchToPlacementTutorial()
     {
@@ -35,5 +40,12 @@ public class TutorialManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         mouseAnimator.SetTrigger("WithArrow");
+    }
+
+    public void SwitchText(string newText)
+    {
+        tutorialText.text = newText;
+        textAnimator.SetTrigger("Hide");
+
     }
 }
