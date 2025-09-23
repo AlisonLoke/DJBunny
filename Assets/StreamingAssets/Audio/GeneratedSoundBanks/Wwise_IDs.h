@@ -103,7 +103,7 @@ namespace AK
         static const AkUniqueID PUZZLE_STOPBLINK = 4040085034U;
         static const AkUniqueID PUZZLE_STOPBLINK2 = 1066306604U;
         static const AkUniqueID RESET_FX = 1671021767U;
-        static const AkUniqueID STOPLEVEL01MUSIC = 1585628541U;
+        static const AkUniqueID STOPMUSIC = 1917263390U;
         static const AkUniqueID UI_PLAYPOPUP = 434496694U;
     } // namespace EVENTS
 
@@ -162,7 +162,6 @@ namespace AK
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID KATMUSICTEST = 1863621452U;
         static const AkUniqueID SFX = 393239870U;
-        static const AkUniqueID SFX_01 = 2872857548U;
     } // namespace BANKS
 
     namespace BUSSES
