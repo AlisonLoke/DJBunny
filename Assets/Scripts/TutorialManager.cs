@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class TutorialManager : MonoBehaviour
 {
@@ -12,7 +13,8 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private GameObject tutorialUI;
     [SerializeField] Animator mouseAnimator;
     [SerializeField] private Animator textAnimator;
-    [SerializeField] private TextMeshProUGUI tutorialText;
+    [SerializeField] private List<GameObject> tutorialImage;
+    private int currentImageIndex = 0;
 
     private void Awake()
     {
@@ -23,6 +25,12 @@ public class TutorialManager : MonoBehaviour
         if (LevelManager.Instance.Tutorial && SceneManager.GetActiveScene().buildIndex == 2)
         {
             tutorialUI.SetActive(true);
+
+            for (int i = 0; i < tutorialImage.Count; i++)
+            {
+                tutorialImage[i].SetActive(i == 0);
+            }
+            currentImageIndex = 0;
         }
         else
         {
@@ -32,17 +40,19 @@ public class TutorialManager : MonoBehaviour
     public void SwitchToRotateTutorial()
     {
         mouseAnimator.SetTrigger("RightClick");
-        StartCoroutine(SwitchText("Rotate The Block"));
+        //StartCoroutine(SwitchText("Rotate The Block"));
+        StartCoroutine(SwitchTutorial());
     }
     public void SwitchToPlacementTutorial()
     {
         StartCoroutine(SwitchAnimationDelay());
-    
-        StartCoroutine(SwitchText("Place The Block On The Bunny"));
+        StartCoroutine(SwitchTutorial());
+        //StartCoroutine(SwitchText("Place The Block On The Bunny"));
     }
     public void SwitchToTutorialEnd()
     {
-        StartCoroutine(SwitchText("Use All The Blocks To Connect The Bunnies In A Single Line!"));
+        //StartCoroutine(SwitchText("Use All The Blocks To Connect The Bunnies In A Single Line!"));
+        StartCoroutine(SwitchTutorial());
     }
 
     private IEnumerator SwitchAnimationDelay()
@@ -50,14 +60,35 @@ public class TutorialManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         mouseAnimator.SetTrigger("WithArrow");
     }
+    private void ShowNextTutorialImage()
+    {
+        Debug.Log($"Switching tutorial image. CurrentIndex = {currentImageIndex}");
+        if (currentImageIndex < tutorialImage.Count)
+        {
+            Debug.Log($"Deactivating {tutorialImage[currentImageIndex].name}");
+            tutorialImage[currentImageIndex].SetActive(false);
+        }
 
-    private IEnumerator SwitchText(string newText)
+        currentImageIndex++;
+
+        if(currentImageIndex < tutorialImage.Count)
+        {
+            Debug.Log($"Activating {tutorialImage[currentImageIndex].name}");
+            tutorialImage[currentImageIndex].SetActive(true);
+        }
+        else
+        {
+            Debug.Log("End Tutorial");
+            tutorialUI.SetActive(false); 
+        }
+    }
+    private IEnumerator SwitchTutorial()
     {
         yield return new WaitForSeconds(1f);
         textAnimator.SetTrigger("Hide");
         yield return new WaitForSeconds(1f);
-        tutorialText.text = newText;
 
+        ShowNextTutorialImage();
     }
 
 }
