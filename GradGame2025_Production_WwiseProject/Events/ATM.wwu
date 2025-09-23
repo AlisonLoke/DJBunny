@@ -4,6 +4,73 @@
 		<WorkUnit Name="ATM" ID="{6A59FCB6-35AD-44E1-BCCE-166BC9203635}" PersistMode="Standalone">
 			<ChildrenList>
 				<WorkUnit Name="Bus Int" ID="{FBCDEEFD-D914-4167-A56B-075138555946}" PersistMode="Reference"/>
+				<Event Name="ATM_Play" ID="{22DA5624-43D3-4F4C-84B3-A821CD6F3DF5}">
+					<ChildrenList>
+						<Action Name="" ID="{212D5C59-6E7E-4354-A0E5-81428E69D0EA}" ShortID="281737848">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ATM" ID="{CCE9F4F2-AF96-4756-8AAF-5B0CD66125DB}" WorkUnitID="{6C117D23-D6B5-4862-ACA2-F489A152CC13}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ATM_Stop" ID="{E4A4284A-6214-4EA2-8E91-B50FD7FFE36B}">
+					<ChildrenList>
+						<Action Name="" ID="{83C9A287-6EBB-4AEE-AE27-ABA8156FDA88}" ShortID="1055406924">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ATM" ID="{CCE9F4F2-AF96-4756-8AAF-5B0CD66125DB}" WorkUnitID="{6C117D23-D6B5-4862-ACA2-F489A152CC13}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ATM_State_BusInt" ID="{5D2B09FA-D305-4BC3-A9D6-34EF401DC6AB}">
+					<ChildrenList>
+						<Action Name="" ID="{E288E2A1-329D-4713-B977-FAA9FDD3B49A}" ShortID="760684956">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BusInt" ID="{ED8D2DE0-A887-4248-9D61-5FA8C19594C7}" WorkUnitID="{E85EBD52-CC5B-40B0-BCDC-801FB4BC0373}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ATM_State_BusExt" ID="{B588085A-0E43-48B4-8C27-9E23D9CFFE57}">
+					<ChildrenList>
+						<Action Name="" ID="{698A8A43-339E-4CEA-B1FE-642144DFCC3F}" ShortID="587469402">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BusExt" ID="{D5E15A4F-277A-4F73-939D-128BC3969707}" WorkUnitID="{E85EBD52-CC5B-40B0-BCDC-801FB4BC0373}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ATM_State_Silence" ID="{4D1F608A-274C-4BDD-94F8-40261DFDC220}">
+					<ChildrenList>
+						<Action Name="" ID="{C578E57C-F4B0-445E-9405-66A190005C45}" ShortID="883919524">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="None" ID="{1E62D76D-AF0F-4D57-A97A-E50D64BBA68B}" WorkUnitID="{E85EBD52-CC5B-40B0-BCDC-801FB4BC0373}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
