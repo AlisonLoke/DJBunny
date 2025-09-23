@@ -4,11 +4,131 @@
 		<WorkUnit Name="ATM" ID="{6C117D23-D6B5-4862-ACA2-F489A152CC13}" PersistMode="Standalone">
 			<ChildrenList>
 				<WorkUnit Name="Bus Int" ID="{42E49290-2BCC-4743-BBDE-E70655EFD427}" PersistMode="Reference"/>
-				<WorkUnit Name="Bus Stop" ID="{284F4C8C-947E-4898-93B8-A9B5918BD13E}" PersistMode="Reference"/>
 				<WorkUnit Name="Cafe" ID="{95233D0D-D806-4A14-839B-105EC8511F9E}" PersistMode="Reference"/>
 				<WorkUnit Name="GlastonBunny" ID="{2856C4D6-016B-4AC0-B4AC-8DAC3378278F}" PersistMode="Reference"/>
 				<WorkUnit Name="Party" ID="{23D6AE82-47A0-4F95-8464-24FC6DCDA4F7}" PersistMode="Reference"/>
 				<WorkUnit Name="Town" ID="{AF296EB3-5BA3-4DB2-9864-BAF840F70B70}" PersistMode="Reference"/>
+				<SwitchContainer Name="ATM" ID="{CCE9F4F2-AF96-4756-8AAF-5B0CD66125DB}" ShortID="954349811">
+					<PropertyList>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+						</Reference>
+						<Reference Name="DefaultSwitchOrState">
+							<ObjectRef Name="BusInt" ID="{ED8D2DE0-A887-4248-9D61-5FA8C19594C7}" WorkUnitID="{E85EBD52-CC5B-40B0-BCDC-801FB4BC0373}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="ATM" ID="{94963405-77C6-4487-A159-B1B25095018C}" WorkUnitID="{E85EBD52-CC5B-40B0-BCDC-801FB4BC0373}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="VEHBus_Bus Constant_2" ID="{74445481-7A19-4089-81CC-C3F487C1170B}" ShortID="124064069">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VEHBus_Bus Constant_2" ID="{B180E3F2-EBA2-4D09-82F1-8BC404500938}">
+									<Language>SFX</Language>
+									<AudioFile>VEHBus_Bus Constant_2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="250890795"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VEHBus_Bus Constant_2" ID="{B180E3F2-EBA2-4D09-82F1-8BC404500938}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="01 Musée de Mahébourg garden-01" ID="{19F9EFFB-67A0-48AD-AE7C-7652174C9405}" ShortID="832238823">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="01 Musée de Mahébourg garden-01" ID="{ECA736A8-2EDE-4951-924C-D227F060F565}">
+									<Language>SFX</Language>
+									<AudioFile>01 Musée de Mahébourg garden-01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="96749036"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="01 Musée de Mahébourg garden-01" ID="{ECA736A8-2EDE-4951-924C-D227F060F565}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="VEHBus_Bus Constant_2" ID="{74445481-7A19-4089-81CC-C3F487C1170B}"/>
+								<PropertyList>
+									<Property Name="ContinuePlay" Type="bool" Value="True"/>
+									<Property Name="FadeInTime" Type="Real64">
+										<ValueList>
+											<Value>5</Value>
+										</ValueList>
+									</Property>
+									<Property Name="FadeOutTime" Type="Real64">
+										<ValueList>
+											<Value>5</Value>
+										</ValueList>
+									</Property>
+								</PropertyList>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="01 Musée de Mahébourg garden-01" ID="{19F9EFFB-67A0-48AD-AE7C-7652174C9405}"/>
+								<PropertyList>
+									<Property Name="ContinuePlay" Type="bool" Value="True"/>
+									<Property Name="FadeInTime" Type="Real64">
+										<ValueList>
+											<Value>5</Value>
+										</ValueList>
+									</Property>
+									<Property Name="FadeOutTime" Type="Real64">
+										<ValueList>
+											<Value>5</Value>
+										</ValueList>
+									</Property>
+								</PropertyList>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="BusExt" ID="{D5E15A4F-277A-4F73-939D-128BC3969707}"/>
+								<ItemList>
+									<ItemRef Name="01 Musée de Mahébourg garden-01" ID="{19F9EFFB-67A0-48AD-AE7C-7652174C9405}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="BusInt" ID="{ED8D2DE0-A887-4248-9D61-5FA8C19594C7}"/>
+								<ItemList>
+									<ItemRef Name="VEHBus_Bus Constant_2" ID="{74445481-7A19-4089-81CC-C3F487C1170B}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
