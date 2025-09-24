@@ -66,12 +66,20 @@
 							<Position X="1" Y="5"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Lvl3_1_Start" ID="{EE3D3F7B-C35F-40D1-8062-E4DBFEC8424E}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="1" Y="6"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Lvl2_2_ChordsStop" ID="{EF1B957C-FA68-46CC-B506-D335072E5CB4}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
 							<Position X="1" Y="7"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Lvl2_3_WowPlay" ID="{269E1C3E-4D33-4C36-8C64-71ABAEC74635}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
 							<Position X="1" Y="8"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lvl3_Bg" ID="{9D0A3C55-8EA5-406F-B233-45E25D8A8740}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="1" Y="9"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Lvl1_End" ID="{7FE4C5B8-E6C6-446E-BD51-5F3CB1491E0A}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
@@ -100,6 +108,10 @@
 						<Module>
 							<ObjectRef Name="Lvl2_2_BassPlay" ID="{C2CD6012-3770-4EDB-AF47-1E99F7D3E7F9}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
 							<Position X="2" Y="6"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lvl3_1_End" ID="{0FA35EF9-6319-4E73-ABBA-C072AABC1B96}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="2" Y="7"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Lvl2_3_WowStop" ID="{BFD177FA-7640-4156-AB2E-7443A3812858}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
@@ -136,6 +148,10 @@
 						<Module>
 							<ObjectRef Name="Lvl2_3_PlucksPlay" ID="{E3FB62E7-EF2F-44F7-B9FC-34FD71DFB87C}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
 							<Position X="3" Y="7"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lvl3_1_Start" ID="{EE3D3F7B-C35F-40D1-8062-E4DBFEC8424E}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="3" Y="8"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Lvl3_1_BassPlay" ID="{8B702ABA-1F6E-4BBB-99BC-80DF7AC0B592}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
@@ -202,6 +218,10 @@
 							<Position X="4" Y="7"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Lvl3_1_End" ID="{0FA35EF9-6319-4E73-ABBA-C072AABC1B96}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="4" Y="8"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Lvl3_1_BassStop" ID="{D338E825-D7B3-4DBB-B1B8-A684A961E6B0}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
 							<Position X="4" Y="9"/>
 						</Module>
@@ -256,7 +276,7 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Lvl3_Background" ID="{8EC7461E-1261-49F2-B763-669D8153E717}"/>
+						<CurrentStateRef Name="Lvl3_1" ID="{D6230507-5073-46C7-B273-0079D9845E3D}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

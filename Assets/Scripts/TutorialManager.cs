@@ -39,7 +39,8 @@ public class TutorialManager : MonoBehaviour
     }
     public void SwitchToRotateTutorial()
     {
-        mouseAnimator.SetTrigger("RightClick");
+        //mouseAnimator.SetTrigger("RightClick");
+        //textAnimator.SetTrigger("Hide");
         //StartCoroutine(SwitchText("Rotate The Block"));
         StartCoroutine(SwitchTutorial());
     }
@@ -60,6 +61,10 @@ public class TutorialManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         mouseAnimator.SetTrigger("WithArrow");
     }
+    public void OnHideComplete()
+    {
+        ShowNextTutorialImage();
+    }
     private void ShowNextTutorialImage()
     {
         Debug.Log($"Switching tutorial image. CurrentIndex = {currentImageIndex}");
@@ -75,6 +80,12 @@ public class TutorialManager : MonoBehaviour
         {
             Debug.Log($"Activating {tutorialImage[currentImageIndex].name}");
             tutorialImage[currentImageIndex].SetActive(true);
+          //trigger show animation on next image
+            Animator animator = tutorialImage[currentImageIndex].GetComponent<Animator>();  
+            if(animator != null)
+            {
+                animator.SetTrigger("Show");
+            }
         }
         else
         {
