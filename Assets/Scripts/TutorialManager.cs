@@ -10,6 +10,8 @@ using UnityEngine.UI;
 public class TutorialManager : MonoBehaviour
 {
     public static TutorialManager Instance;
+    public enum TutorialStage { Start,Rotate,Placement,End}
+    public TutorialStage currentStage = TutorialStage.Start;    
     [SerializeField] private GameObject tutorialUI;
     [SerializeField] Animator mouseAnimator;
     [SerializeField] private Animator textAnimator;
@@ -42,10 +44,14 @@ public class TutorialManager : MonoBehaviour
         //mouseAnimator.SetTrigger("RightClick");
         //textAnimator.SetTrigger("Hide");
         //StartCoroutine(SwitchText("Rotate The Block"));
+        if (currentStage != TutorialStage.Start) return; // prevent skipping
+        currentStage = TutorialStage.Rotate;
         StartCoroutine(SwitchTutorial());
     }
     public void SwitchToPlacementTutorial()
     {
+        if (currentStage != TutorialStage.Rotate) return; // only valid after rotation
+        currentStage = TutorialStage.Placement;
         StartCoroutine(SwitchAnimationDelay());
         StartCoroutine(SwitchTutorial());
         //StartCoroutine(SwitchText("Place The Block On The Bunny"));
@@ -53,6 +59,8 @@ public class TutorialManager : MonoBehaviour
     public void SwitchToTutorialEnd()
     {
         //StartCoroutine(SwitchText("Use All The Blocks To Connect The Bunnies In A Single Line!"));
+        if (currentStage != TutorialStage.Placement) return; // only valid after placement
+        currentStage = TutorialStage.End;
         StartCoroutine(SwitchTutorial());
     }
 

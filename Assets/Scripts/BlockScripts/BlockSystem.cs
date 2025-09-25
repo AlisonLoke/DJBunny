@@ -375,7 +375,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
             }
 
-            if (LevelManager.Instance.Tutorial)
+            if (LevelManager.Instance.Tutorial )
             {
                 TutorialManager.Instance.SwitchToTutorialEnd();
             }

@@ -9,6 +9,7 @@ public class MusicManager : MonoBehaviour
     public AK.Wwise.Event StopLevelMusic = null;
     public AK.Wwise.Event currentLevelMusicEvent = null;
     public AK.Wwise.Event StartLevelMusic = null;
+    public AK.Wwise.Event EndLevelMusic = null;
     public AK.Wwise.Event PlayMusic = null;
 
 

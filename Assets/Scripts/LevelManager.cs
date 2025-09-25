@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,7 +11,7 @@ public class LevelManager : MonoBehaviour
     public bool Tutorial = false;
     public bool useMoveLimit = false;
     public int maxMoves = 5;
-    [SerializeField] private bool isLastPuzzle = false;
+    public bool isLastPuzzle = false;
     [SerializeField] private bool isLastLevel = false;
     [SerializeField] private GameObject tryAgainCanvas;
     // needs to be called after ConnectionSystem.Awake()
@@ -132,7 +131,7 @@ public class LevelManager : MonoBehaviour
             RestartCurrentLevel();
         }
 
-       
+
 
     }
 

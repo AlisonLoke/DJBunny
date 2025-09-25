@@ -967,6 +967,13 @@ public class ConnectionSystem : MonoBehaviour
     public void ShowPathComplete()
     {
         StartCoroutine(PulseCompletePath());
+        if (LevelManager.Instance.isLastPuzzle)
+        {
+            //Play end music
+            Debug.Log("ENDING LEVEL 01 MUSIC");
+            MusicManager.instance.EndLevelMusic.Post(gameObject);
+        }
+        
         SFXManager.instance.PlayCompletion.Post(gameObject);
     }
 
