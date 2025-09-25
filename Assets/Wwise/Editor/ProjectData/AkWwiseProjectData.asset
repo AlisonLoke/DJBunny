@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1c2f7ea7e019e44081a8c815ce5a8e1e
     GuidInternal: 
-    m_lastTime: -8584429641540659090
+    m_lastTime: -8584427943564362886
     List:
     - name: KatMusicTest
       guid: 2eea2b311633a940b82e08d60148e83a
@@ -83,7 +83,7 @@ MonoBehaviour:
         guid: 2eea2b311633a940b82e08d60148e83a
       Path: SoundBanks\Default Work Unit\KatMusicTest
     - name: SFX
-      guid: a4d398b670e2374091b184932fa778ca
+      guid: 3dc395d484c3fc4b8491da3fb5462d6c
       id: 393239870
       PathAndIcons:
       - ElementName: SoundBanks
@@ -94,22 +94,8 @@ MonoBehaviour:
         guid: 1c2f7ea7e019e44081a8c815ce5a8e1e
       - ElementName: SFX
         ObjectType: 7
-        guid: a4d398b670e2374091b184932fa778ca
-      Path: SoundBanks\Default Work Unit\SFX
-    - name: SFX_01
-      guid: 3dc395d484c3fc4b8491da3fb5462d6c
-      id: 2872857548
-      PathAndIcons:
-      - ElementName: SoundBanks
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 1c2f7ea7e019e44081a8c815ce5a8e1e
-      - ElementName: SFX_01
-        ObjectType: 7
         guid: 3dc395d484c3fc4b8491da3fb5462d6c
-      Path: SoundBanks\Default Work Unit\SFX_01
+      Path: SoundBanks\Default Work Unit\SFX
   EventWwu:
   - PhysicalPath: Events\ATM.wwu
     PathAndIcons:
@@ -122,7 +108,7 @@ MonoBehaviour:
     ParentPath: Events\ATM
     guid: b6fc596aad35e144bcce166bc9203635
     GuidInternal: 
-    m_lastTime: -8584429740688849440
+    m_lastTime: -8584427942594366306
     List: []
   - PhysicalPath: Events\Bus Int.wwu
     PathAndIcons:
@@ -231,7 +217,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 60318edf19da10499ab787cbf746dcca
     GuidInternal: 
-    m_lastTime: -8584429641559168045
+    m_lastTime: -8584427943573065610
     List:
     - name: Lvl1
       guid: b50846f8bdea8744b8c1dbd79cc62c0f
@@ -1518,9 +1504,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: StopLevel01Music
-      guid: 8920dfeb67c19243b16667397921f008
-      id: 1585628541
+    - name: StopMusic
+      guid: e464eafee7ceb143a334efe3e9925b47
+      id: 1917263390
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -1528,13 +1514,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: StopLevel01Music
+      - ElementName: StopMusic
         ObjectType: 3
-        guid: 8920dfeb67c19243b16667397921f008
-      Path: Events\Default Work Unit\StopLevel01Music
+        guid: e464eafee7ceb143a334efe3e9925b47
+      Path: Events\Default Work Unit\StopMusic
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events\Menu.wwu
     PathAndIcons:
     - ElementName: Events
@@ -2460,7 +2446,7 @@ MonoBehaviour:
         guid: f703d7b29405cc43aaf875ea0d84041c
       Path: Triggers\Default Work Unit\Lvl2_1_SnareStop
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 010000000300000005000000060000000700000008000000090000000c0000000d0000000e00000010000000110000001200000013000000140000001700000018000000190000001b0000001e0000001f0000002000000021000000260000002700000044000000450000001b0100001c010000ab010000ac010000ea010000eb0100009e0200005c0d00005d0d0000270e0000
+  ExpandedWaapiItemIds: 010000000300000005000000060000000700000008000000090000000c0000000d0000000e00000010000000110000001200000013000000140000001700000018000000190000001b0000001e0000001f0000002000000021000000260000002700000044000000450000001b0100001c010000ab010000ac010000ea010000eb0100000e0200009e020000310300005c0d00005d0d0000270e0000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
