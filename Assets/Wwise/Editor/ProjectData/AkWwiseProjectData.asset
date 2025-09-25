@@ -108,8 +108,93 @@ MonoBehaviour:
     ParentPath: Events\ATM
     guid: b6fc596aad35e144bcce166bc9203635
     GuidInternal: 
-    m_lastTime: -8584427942594366306
-    List: []
+    m_lastTime: -8584427939338329675
+    List:
+    - name: ATM_Play
+      guid: 2456da22d3434c4f84b3a821cd6f3df5
+      id: 135431296
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: ATM
+        ObjectType: 12
+        guid: b6fc596aad35e144bcce166bc9203635
+      - ElementName: ATM_Play
+        ObjectType: 3
+        guid: 2456da22d3434c4f84b3a821cd6f3df5
+      Path: Events\ATM\ATM_Play
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: ATM_State_BusExt
+      guid: 5a0888b5430eb4488c279e23d9cffe57
+      id: 4228493107
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: ATM
+        ObjectType: 12
+        guid: b6fc596aad35e144bcce166bc9203635
+      - ElementName: ATM_State_BusExt
+        ObjectType: 3
+        guid: 5a0888b5430eb4488c279e23d9cffe57
+      Path: Events\ATM\ATM_State_BusExt
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: ATM_State_BusInt
+      guid: fa092b5d05d3c34ba9d634ef401dc6ab
+      id: 169000921
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: ATM
+        ObjectType: 12
+        guid: b6fc596aad35e144bcce166bc9203635
+      - ElementName: ATM_State_BusInt
+        ObjectType: 3
+        guid: fa092b5d05d3c34ba9d634ef401dc6ab
+      Path: Events\ATM\ATM_State_BusInt
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: ATM_State_Silence
+      guid: 8a601f4d4c27dd4b94f840261dfdc220
+      id: 3639482733
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: ATM
+        ObjectType: 12
+        guid: b6fc596aad35e144bcce166bc9203635
+      - ElementName: ATM_State_Silence
+        ObjectType: 3
+        guid: 8a601f4d4c27dd4b94f840261dfdc220
+      Path: Events\ATM\ATM_State_Silence
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: ATM_Stop
+      guid: 4a28a4e41462a24e8e91b50fd7ffe36b
+      id: 2773657602
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: ATM
+        ObjectType: 12
+        guid: b6fc596aad35e144bcce166bc9203635
+      - ElementName: ATM_Stop
+        ObjectType: 3
+        guid: 4a28a4e41462a24e8e91b50fd7ffe36b
+      Path: Events\ATM\ATM_Stop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events\Bus Int.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1519,8 +1604,8 @@ MonoBehaviour:
         guid: e464eafee7ceb143a334efe3e9925b47
       Path: Events\Default Work Unit\StopMusic
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events\Menu.wwu
     PathAndIcons:
     - ElementName: Events
@@ -2333,6 +2418,85 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
+  - PhysicalPath: States\SFX.wwu
+    PathAndIcons:
+    - ElementName: States
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: SFX
+      ObjectType: 12
+      guid: 52bd5ee85bccb040bcdc801fb4bc0373
+    ParentPath: States\SFX
+    guid: 52bd5ee85bccb040bcdc801fb4bc0373
+    GuidInternal: 
+    m_lastTime: -8584427938828143856
+    List:
+    - name: ATM
+      guid: 05349694c6778744a159b1b25095018c
+      id: 966532871
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: 52bd5ee85bccb040bcdc801fb4bc0373
+      - ElementName: ATM
+        ObjectType: 9
+        guid: 05349694c6778744a159b1b25095018c
+      Path: States\SFX\ATM
+      values:
+      - name: BusExt
+        guid: 4f5ae1d57a27734f939d128bc3969707
+        id: 2007588150
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: SFX
+          ObjectType: 12
+          guid: 52bd5ee85bccb040bcdc801fb4bc0373
+        - ElementName: ATM
+          ObjectType: 9
+          guid: 05349694c6778744a159b1b25095018c
+        - ElementName: BusExt
+          ObjectType: 8
+          guid: 4f5ae1d57a27734f939d128bc3969707
+      - name: BusInt
+        guid: e02d8ded87a848429d615fa8c19594c7
+        id: 1637788976
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: SFX
+          ObjectType: 12
+          guid: 52bd5ee85bccb040bcdc801fb4bc0373
+        - ElementName: ATM
+          ObjectType: 9
+          guid: 05349694c6778744a159b1b25095018c
+        - ElementName: BusInt
+          ObjectType: 8
+          guid: e02d8ded87a848429d615fa8c19594c7
+      - name: None
+        guid: 6dd7621e0faf574da97ae50d64bba68b
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: SFX
+          ObjectType: 12
+          guid: 52bd5ee85bccb040bcdc801fb4bc0373
+        - ElementName: ATM
+          ObjectType: 9
+          guid: 05349694c6778744a159b1b25095018c
+        - ElementName: None
+          ObjectType: 8
+          guid: 6dd7621e0faf574da97ae50d64bba68b
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -2446,7 +2610,7 @@ MonoBehaviour:
         guid: f703d7b29405cc43aaf875ea0d84041c
       Path: Triggers\Default Work Unit\Lvl2_1_SnareStop
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 010000000300000005000000060000000700000008000000090000000c0000000d0000000e00000010000000110000001200000013000000140000001700000018000000190000001b0000001e0000001f0000002000000021000000260000002700000044000000450000001b0100001c010000ab010000ac010000ea010000eb0100000e0200009e020000310300005c0d00005d0d0000270e0000
+  ExpandedWaapiItemIds: 010000000300000005000000060000000700000008000000090000000c0000000d0000000e00000010000000110000001200000013000000140000001700000018000000190000001b0000001e0000001f0000002000000021000000260000002700000044000000450000001b0100001c010000ab010000ac010000ea010000eb0100000e0200009e0200003003000031030000320300005c0d00005d0d0000270e0000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

@@ -13,6 +13,11 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID ATM_PLAY = 135431296U;
+        static const AkUniqueID ATM_STATE_BUSEXT = 4228493107U;
+        static const AkUniqueID ATM_STATE_BUSINT = 169000921U;
+        static const AkUniqueID ATM_STATE_SILENCE = 3639482733U;
+        static const AkUniqueID ATM_STOP = 2773657602U;
         static const AkUniqueID BUS_PLAYCONSTANT = 650913174U;
         static const AkUniqueID BUS_PLAYCONSTANT2 = 2841586448U;
         static const AkUniqueID BUS_STOPCONSTANT = 1216243508U;
@@ -109,6 +114,18 @@ namespace AK
 
     namespace STATES
     {
+        namespace ATM
+        {
+            static const AkUniqueID GROUP = 966532871U;
+
+            namespace STATE
+            {
+                static const AkUniqueID BUSEXT = 2007588150U;
+                static const AkUniqueID BUSINT = 1637788976U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace ATM
+
         namespace MUSIC
         {
             static const AkUniqueID GROUP = 3991942870U;

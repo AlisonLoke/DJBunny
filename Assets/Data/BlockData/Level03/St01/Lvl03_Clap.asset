@@ -10,22 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e7e63b03d3ea3a4dac14a8664b09b92, type: 3}
-  m_Name: BigL_Block_5
+  m_Name: Lvl03_Clap
   m_EditorClassIdentifier: 
-  BlockName: BigLBlock
-  BlockPrefab: {fileID: 5638065995961572559, guid: 5b1b9db6810ae204fb8c599342e54ff3, type: 3}
+  BlockName: Drum
+  BlockPrefab: {fileID: 3804025796979829729, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
   BlockCoordinatesList:
-  - {x: 1, y: 0}
   - {x: 0, y: 0}
-  - {x: 0, y: 1}
-  - {x: 0, y: 2}
-  - {x: 0, y: 3}
+  - {x: -1, y: 0}
   PlayInstrument:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: b73e787c13566544d8dc78c22cecdbed, type: 2}
   MuteInstrument:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 55753e7694ec8654582fa8da5c92385a, type: 2}
   genre: 0
