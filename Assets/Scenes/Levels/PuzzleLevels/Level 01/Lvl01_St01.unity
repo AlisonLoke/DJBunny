@@ -199,7 +199,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &177636590
 RectTransform:
@@ -927,6 +927,10 @@ PrefabInstance:
       propertyPath: LevelMusic.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: f8104d792c81b0b4ba798f73be1ca010, type: 2}
+    - target: {fileID: 5993523896433815721, guid: 5accc1d11f8a3854a8b1c867ea8fa3e8, type: 3}
+      propertyPath: EndLevelMusic.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 4c862c80e8c0487438aa6ac24f330f20, type: 2}
     - target: {fileID: 5993523896433815721, guid: 5accc1d11f8a3854a8b1c867ea8fa3e8, type: 3}
       propertyPath: StopLevelMusic.WwiseObjectReference
       value: 
@@ -1725,6 +1729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2d9b28ed964c004cb0c21a054e5794c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentStage: 0
   tutorialUI: {fileID: 177636586}
   mouseAnimator: {fileID: 2070324898}
   textAnimator: {fileID: 1020201446}
@@ -1761,7 +1766,6 @@ GameObject:
   - component: {fileID: 1020201444}
   - component: {fileID: 1020201446}
   - component: {fileID: 1020201447}
-  - component: {fileID: 1020201448}
   m_Layer: 5
   m_Name: ClickBlockImage
   m_TagString: Untagged
@@ -1862,22 +1866,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &1020201448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1020201442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2d9b28ed964c004cb0c21a054e5794c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tutorialUI: {fileID: 0}
-  mouseAnimator: {fileID: 0}
-  textAnimator: {fileID: 0}
-  tutorialImage: []
 --- !u!224 &1053748466 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3689849784608768072, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
@@ -1901,7 +1889,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4818833672044298235, guid: 12fbad70cffd4da4f8b2e871056cd8cb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5237415777098926582, guid: 12fbad70cffd4da4f8b2e871056cd8cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3217,7 +3205,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!1 &1799665015
 GameObject:
