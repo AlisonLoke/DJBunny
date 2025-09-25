@@ -16,7 +16,7 @@
 				</Event>
 				<Folder Name="Lvl2" ID="{214F1FA5-3030-450B-B469-BA6BDA1FD31C}" ShortID="257946689">
 					<ChildrenList>
-						<Event Name="Lvl2" ID="{9086E085-2FEA-4B25-B8C8-62027E714E71}">
+						<Event Name="Lvl2_Start" ID="{9086E085-2FEA-4B25-B8C8-62027E714E71}">
 							<ChildrenList>
 								<Action Name="" ID="{D6006236-1633-46CE-8359-C4D20E5EF572}" ShortID="573707850">
 									<PropertyList>
@@ -55,6 +55,66 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Lvl2_Stg1_Perc_Snare_160_44_8m" ID="{53E444CB-5DA7-4ED1-B0EF-91F2A001FE58}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{7B89B670-E8FB-4EB2-A274-B7ECF848C8F9}" ShortID="831569934">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl2_Stg2_1_chords_160_44_8m" ID="{DD1CD549-E2D4-49B0-8743-E3AF86D83367}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{541285BD-31CF-4E5E-A2B7-7ED15CD59CBA}" ShortID="239189954">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl2_Stg2_2_bells_160_44_8m" ID="{8A8E7FB7-4E3D-43B4-8F10-813AD8C97BB4}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{DF856474-95D3-426E-BE07-8A7C86997A8D}" ShortID="961074782">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl2_Stg2_3_bass_160_44_8m" ID="{6DB2099F-7156-4A93-9B16-E6FBE4E1CFFC}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D2C25094-5857-47FA-A64D-5A1138A296DE}" ShortID="973294186">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl2_Stg3_Mel_Plucks_160_44_8m" ID="{87EAB1A6-5E66-4EAB-AEF0-00F8023F7EE8}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{255630FD-80DB-48DB-AA2E-2EE900A0F8C4}" ShortID="601856621">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl2_Stg3_Mel_Tune_160_44_8m" ID="{0540F010-320D-44B7-9CE5-B7304FD25236}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C8A4A337-F53A-49B8-8F69-14900AB55161}" ShortID="47080035">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl2_Stg3_Mel_Wow_160_44_8m" ID="{B0DB7A6C-EC16-4005-8289-EAC82BC1217C}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -325,6 +385,20 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Lvl2_Stg3_Mel_Wow_160_44_8m" ID="{B0DB7A6C-EC16-4005-8289-EAC82BC1217C}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Lvl2_End" ID="{797B0A8E-9DF0-49FD-8D96-8DC417B6B2D3}">
+							<ChildrenList>
+								<Action Name="" ID="{9D67A742-0989-4B66-9162-36D9D83832BE}" ShortID="620082724">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl2_Dance" ID="{9DE6169B-266A-4EBE-AFD6-A1F5FFA35184}" WorkUnitID="{5F9035CE-D633-4D77-AFAC-532B6A139962}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
