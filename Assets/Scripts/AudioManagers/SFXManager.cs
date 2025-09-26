@@ -4,12 +4,14 @@ public class SFXManager : MonoBehaviour
 {
     public static SFXManager instance;
     [Header("Atmos")]
-    [SerializeField] private AK.Wwise.Event playAtmos;
+    [SerializeField] private AK.Wwise.Event startAtmos;
+    [SerializeField] private AK.Wwise.Event playCurrentAtmos;
+ 
     [Header("BlockSFX")]
     public AK.Wwise.Event PlayPickUp = null;
     public AK.Wwise.Event PlayDrop = null;
     public AK.Wwise.Event PlayRotation = null;
-    public AK.Wwise.Event PlayBlink = null;
+
     public AK.Wwise.Event PlayCompletion = null;
 
 
@@ -26,10 +28,10 @@ public class SFXManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-  
+        startAtmos.Post(gameObject);
     }
     private void Start()
     {
-        playAtmos.Post(gameObject);
+        playCurrentAtmos.Post(gameObject);
     }
 }

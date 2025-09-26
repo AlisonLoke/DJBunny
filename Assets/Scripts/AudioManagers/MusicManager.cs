@@ -68,12 +68,7 @@ public class MusicManager : MonoBehaviour
 
     public void StopCurrentLevelMusic()
     {
-        //    if (currentLevelMusicEvent != null)
-        //    {
-        //        Debug.Log("Stopping current level music.");
-        //        currentLevelMusicEvent.Stop(gameObject);
-        //        currentLevelMusicEvent = null; // Optional: clears reference
-        //    }
+     
         if (StopLevelMusic != null)
         {
             Debug.Log("Stopping current Level Music");

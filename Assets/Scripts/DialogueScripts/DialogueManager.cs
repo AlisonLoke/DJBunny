@@ -47,7 +47,7 @@ public class DialogueManager : MonoBehaviour
         {
             StopAllCoroutines();
             DialogueText.text = dialogueLines[index].line;
-
+          
         }
     }
     private void NextLine()
