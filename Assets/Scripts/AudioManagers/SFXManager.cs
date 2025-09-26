@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SFXManager : MonoBehaviour
 {
@@ -6,7 +7,7 @@ public class SFXManager : MonoBehaviour
     [Header("Atmos")]
     [SerializeField] private AK.Wwise.Event startAtmos;
     [SerializeField] private AK.Wwise.Event playCurrentAtmos;
- 
+
     [Header("BlockSFX")]
     public AK.Wwise.Event PlayPickUp = null;
     public AK.Wwise.Event PlayDrop = null;
@@ -22,15 +23,26 @@ public class SFXManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+           
+            startAtmos.Post(gameObject);
+            SceneManager.sceneLoaded += OnSceneLoad;
         }
         else if (instance != this)
         {
             Destroy(gameObject);
             return;
         }
-        startAtmos.Post(gameObject);
+
     }
-    private void Start()
+    //private void Start()
+    //{
+    //    playCurrentAtmos.Post(gameObject);
+    //}
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoad;
+    }
+    private void OnSceneLoad(Scene scene, LoadSceneMode mode)
     {
         playCurrentAtmos.Post(gameObject);
     }
