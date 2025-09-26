@@ -129,7 +129,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2123379313936335058, guid: 12fbad70cffd4da4f8b2e871056cd8cb, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4818833672044298235, guid: 12fbad70cffd4da4f8b2e871056cd8cb, type: 3}
       propertyPath: m_Name
@@ -1857,6 +1857,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+--- !u!114 &1353128374 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2685476396588401627, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+  m_PrefabInstance: {fileID: 1353128373}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca8a66fdc97259429f320aaab6ee0f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1450290050
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2319,9 +2330,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovesCounterCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 1631288159041603417, guid: ce76f57af57b0804eb3c434340a26433, type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
+    - target: {fileID: 4207754903558403333, guid: ce76f57af57b0804eb3c434340a26433, type: 3}
+      propertyPath: m_Color.g
+      value: 0.972549
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207754903558403333, guid: ce76f57af57b0804eb3c434340a26433, type: 3}
+      propertyPath: m_Color.r
+      value: 0.7019608
       objectReference: {fileID: 0}
     - target: {fileID: 4859592912775740510, guid: ce76f57af57b0804eb3c434340a26433, type: 3}
       propertyPath: m_Pivot.x
@@ -2403,6 +2418,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8185101053014127466, guid: ce76f57af57b0804eb3c434340a26433, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1353128374}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

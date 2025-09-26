@@ -128,26 +128,30 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
-            RestartCurrentLevel();
+            StartTryAgainTransition();
         }
 
 
 
     }
 
-    private void RestartCurrentLevel()
+    private void StartTryAgainTransition()
     {
 
         SceneTransition.Instance.StartTryAgainTransition();
-        StartCoroutine(RestartCurrentLevelDelay(1f));
+        StartCoroutine(TryAgainDelay(1f));
     }
-    private IEnumerator RestartCurrentLevelDelay(float delay)
+    private IEnumerator TryAgainDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
+    public void RestartCurrentLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
+    }
     private IEnumerator LoadFailScene()
     {
         SceneTransition.Instance.StartCutSceneSceneTransition();
