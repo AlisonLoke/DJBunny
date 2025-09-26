@@ -375,10 +375,10 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
             }
 
-            if (LevelManager.Instance.Tutorial )
-            {
-                TutorialManager.Instance.SwitchToTutorialEnd();
-            }
+            //if (LevelManager.Instance.Tutorial )
+            //{
+            //    TutorialManager.Instance.SwitchToTutorialEnd();
+            //}
         }
 
         DidNotFindAnyGridCell();

@@ -143,6 +143,10 @@ public class EndCell : MonoBehaviour
         //GetComponent<Image>().color = Color.yellow;
         onlyConnectToStartFinish = true;
         connectedEndCell.Clear();
+        if (LevelManager.Instance.Tutorial && onlyConnectToStartFinish)
+        {
+            TutorialManager.Instance.SwitchToTutorialEnd();
+        }
         //StopPulseColour();
         StopBlink();
 

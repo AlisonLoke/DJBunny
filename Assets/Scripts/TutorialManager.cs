@@ -41,9 +41,7 @@ public class TutorialManager : MonoBehaviour
     }
     public void SwitchToRotateTutorial()
     {
-        //mouseAnimator.SetTrigger("RightClick");
-        //textAnimator.SetTrigger("Hide");
-        //StartCoroutine(SwitchText("Rotate The Block"));
+        
         if (currentStage != TutorialStage.Start) return; // prevent skipping
         currentStage = TutorialStage.Rotate;
         StartCoroutine(SwitchTutorial());
@@ -53,6 +51,7 @@ public class TutorialManager : MonoBehaviour
         if (currentStage != TutorialStage.Rotate) return; // only valid after rotation
         currentStage = TutorialStage.Placement;
         StartCoroutine(SwitchAnimationDelay());
+    
         StartCoroutine(SwitchTutorial());
         //StartCoroutine(SwitchText("Place The Block On The Bunny"));
     }
@@ -60,6 +59,7 @@ public class TutorialManager : MonoBehaviour
     {
         //StartCoroutine(SwitchText("Use All The Blocks To Connect The Bunnies In A Single Line!"));
         if (currentStage != TutorialStage.Placement) return; // only valid after placement
+
         currentStage = TutorialStage.End;
         StartCoroutine(SwitchTutorial());
     }
@@ -69,10 +69,7 @@ public class TutorialManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         mouseAnimator.SetTrigger("WithArrow");
     }
-    public void OnHideComplete()
-    {
-        ShowNextTutorialImage();
-    }
+
     private void ShowNextTutorialImage()
     {
         Debug.Log($"Switching tutorial image. CurrentIndex = {currentImageIndex}");
@@ -105,9 +102,11 @@ public class TutorialManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         textAnimator.SetTrigger("Hide");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
 
         ShowNextTutorialImage();
     }
+
+ 
 
 }
