@@ -586,10 +586,10 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             return;
         }
         SFXManager.instance.PlayRotation.Post(gameObject);
-        if (LevelManager.Instance.useMoveLimit)
-        {
-            MovesManager.instance.TrackMoves();
-        }
+        //if (LevelManager.Instance.useMoveLimit)
+        //{
+        //    MovesManager.instance.TrackMoves();
+        //}
 
     }
 
