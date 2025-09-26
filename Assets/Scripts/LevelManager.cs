@@ -29,6 +29,10 @@ public class LevelManager : MonoBehaviour
     {
         //Instance = this; // WHY DID I DO THAT?
         //ConnectionManager.instance.onValidPathCompleted += CheckIfLevelComplete;
+        if(ConnectionManager.instance == null)
+        {
+            return;
+        }
         ConnectionManager.instance.onAllConnectionsComplete += HandleLevelComplete;
 
         if (useMoveLimit)
@@ -48,6 +52,10 @@ public class LevelManager : MonoBehaviour
     private void OnDestroy()
     {
         //ConnectionManager.instance.onValidPathCompleted -= CheckIfLevelComplete;
+        if (ConnectionManager.instance == null)
+        {
+            return;
+        }
         ConnectionManager.instance.onAllConnectionsComplete -= HandleLevelComplete;
         if (useMoveLimit)
         {

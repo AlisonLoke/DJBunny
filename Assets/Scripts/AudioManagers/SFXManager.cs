@@ -22,7 +22,7 @@ public class SFXManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
            
             startAtmos.Post(gameObject);
             SceneManager.sceneLoaded += OnSceneLoad;
@@ -34,16 +34,22 @@ public class SFXManager : MonoBehaviour
         }
 
     }
-    //private void Start()
-    //{
-    //    playCurrentAtmos.Post(gameObject);
-    //}
+  
     private void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoad;
     }
     private void OnSceneLoad(Scene scene, LoadSceneMode mode)
     {
-        playCurrentAtmos.Post(gameObject);
+        if (playCurrentAtmos != null)
+        {
+            playCurrentAtmos.Post(gameObject);
+            Debug.Log($"[SFXManager] Scene '{scene.name}'Playing Atmos Event: {playCurrentAtmos.Name}");
+        }
+        else
+        {
+            Debug.LogWarning($"[SFXManager] Scene '{scene.name}' No Atmos event assigned!");
+        }
     }
 }
+
