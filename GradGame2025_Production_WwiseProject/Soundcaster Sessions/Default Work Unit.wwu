@@ -256,8 +256,8 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Lvl1" ID="{29A5FF5D-BFC9-4ABD-BEC9-94BAC2AD0EE4}"/>
-						<CurrentStateRef Name="BusExt" ID="{D5E15A4F-277A-4F73-939D-128BC3969707}"/>
+						<CurrentStateRef Name="Lvl3_Background" ID="{8EC7461E-1261-49F2-B763-669D8153E717}"/>
+						<CurrentStateRef Name="Win" ID="{98F43A0F-A471-4F90-9EF4-880B1BB3BE99}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
@@ -276,17 +276,41 @@
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="ATM_State_Cafe" ID="{7B82CACD-A4A0-4C7C-B269-976C66EF8F03}" WorkUnitID="{6A59FCB6-35AD-44E1-BCCE-166BC9203635}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="ATM_State_Party" ID="{C918F7CD-E271-4D32-9C50-FF4F21D89833}" WorkUnitID="{6A59FCB6-35AD-44E1-BCCE-166BC9203635}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="ATM_State_BusInt" ID="{5D2B09FA-D305-4BC3-A9D6-34EF401DC6AB}" WorkUnitID="{6A59FCB6-35AD-44E1-BCCE-166BC9203635}"/>
 							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="ATM_State_GlastonBunny" ID="{A2BAD97C-7E81-4FE9-AA9E-F661D55978A0}" WorkUnitID="{6A59FCB6-35AD-44E1-BCCE-166BC9203635}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="ATM_State_TownCentre" ID="{1AA986AE-FEB9-46E9-A012-06CF769F808C}" WorkUnitID="{6A59FCB6-35AD-44E1-BCCE-166BC9203635}"/>
+							<Position X="2" Y="2"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="ATM_Stop" ID="{E4A4284A-6214-4EA2-8E91-B50FD7FFE36B}" WorkUnitID="{6A59FCB6-35AD-44E1-BCCE-166BC9203635}"/>
 							<Position X="3" Y="0"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="ATM_State_Lose" ID="{765834F6-C2A9-4193-B0E0-A22681814566}" WorkUnitID="{6A59FCB6-35AD-44E1-BCCE-166BC9203635}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="ATM_State_Win" ID="{6F47EB01-AA51-45A7-8A66-F84AD7EF79D8}" WorkUnitID="{6A59FCB6-35AD-44E1-BCCE-166BC9203635}"/>
+							<Position X="3" Y="2"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="BusExt" ID="{D5E15A4F-277A-4F73-939D-128BC3969707}"/>
+						<CurrentStateRef Name="Win" ID="{98F43A0F-A471-4F90-9EF4-880B1BB3BE99}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
