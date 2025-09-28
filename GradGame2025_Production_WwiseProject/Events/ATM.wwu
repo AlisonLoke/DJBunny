@@ -71,6 +71,90 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="ATM_State_Cafe" ID="{7B82CACD-A4A0-4C7C-B269-976C66EF8F03}">
+					<ChildrenList>
+						<Action Name="" ID="{2904943F-5861-439B-BBB6-4BEA47459030}" ShortID="380186928">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cafe" ID="{EF4C47EC-3620-4B64-8886-BAD6AF9B7EC3}" WorkUnitID="{E85EBD52-CC5B-40B0-BCDC-801FB4BC0373}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ATM_State_Lose" ID="{765834F6-C2A9-4193-B0E0-A22681814566}">
+					<ChildrenList>
+						<Action Name="" ID="{6559C828-9E41-45AD-A7B4-3E7AA79EE2C7}" ShortID="80022504">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lose" ID="{73B28E34-0EB5-4C0B-8DA8-257408ED844F}" WorkUnitID="{E85EBD52-CC5B-40B0-BCDC-801FB4BC0373}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ATM_State_GlastonBunny" ID="{A2BAD97C-7E81-4FE9-AA9E-F661D55978A0}">
+					<ChildrenList>
+						<Action Name="" ID="{DAB169E3-71AD-4539-AFEB-BBB8FA26CBDC}" ShortID="323864353">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GlastonBunny" ID="{E5288C83-3F8C-428A-B52C-70DEBF89A06D}" WorkUnitID="{E85EBD52-CC5B-40B0-BCDC-801FB4BC0373}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ATM_State_Win" ID="{6F47EB01-AA51-45A7-8A66-F84AD7EF79D8}">
+					<ChildrenList>
+						<Action Name="" ID="{7C9AE921-8C9D-4B05-8FBC-5CDE358EC371}" ShortID="1035017584">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Win" ID="{98F43A0F-A471-4F90-9EF4-880B1BB3BE99}" WorkUnitID="{E85EBD52-CC5B-40B0-BCDC-801FB4BC0373}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ATM_State_Party" ID="{C918F7CD-E271-4D32-9C50-FF4F21D89833}">
+					<ChildrenList>
+						<Action Name="" ID="{7C9DD71D-EF80-461E-AC63-C00D628C029F}" ShortID="958240955">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Party" ID="{BFD5943A-056B-4D7A-8AC2-77279AF5D05A}" WorkUnitID="{E85EBD52-CC5B-40B0-BCDC-801FB4BC0373}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ATM_State_TownCentre" ID="{1AA986AE-FEB9-46E9-A012-06CF769F808C}">
+					<ChildrenList>
+						<Action Name="" ID="{D677DAC4-0C20-429B-B6BB-8DB2FDDF19D5}" ShortID="780928434">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TownCentre" ID="{E8ED2EAA-0286-40B7-86EE-74903AC9CBBB}" WorkUnitID="{E85EBD52-CC5B-40B0-BCDC-801FB4BC0373}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
