@@ -12,6 +12,7 @@ public class LevelManager : MonoBehaviour
     public bool useMoveLimit = false;
     public int maxMoves = 5;
     public bool isLastPuzzle = false;
+    public bool isFailCutScene = false; 
     [SerializeField] private bool isLastLevel = false;
     [SerializeField] private GameObject tryAgainCanvas;
     // needs to be called after ConnectionSystem.Awake()
@@ -71,17 +72,7 @@ public class LevelManager : MonoBehaviour
     {
         StartCoroutine(TriggerPuzzleWin());
     }
-    //private void CheckIfLevelComplete(int endCellsOnPathCount)
-    //{
-    //    if (endCellsOnPathCount >= allEndCells.Length)
-    //    {
-    //        StartCoroutine(TriggerWin());
-    //    }
-    //    else
-    //    {
-    //        ShowNotAllBlocksUsedAffordance();
-    //    }
-    //}
+  
 
     private IEnumerator TriggerPuzzleWin()
     {
@@ -165,5 +156,10 @@ public class LevelManager : MonoBehaviour
         SceneTransition.Instance.StartCutSceneSceneTransition();
         yield return new WaitForSeconds(CutSceneTransitionTime);
         SceneManager.LoadScene("FailDanceCutScene_Level05");
+    }
+
+    public void OnPlayerFail()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }

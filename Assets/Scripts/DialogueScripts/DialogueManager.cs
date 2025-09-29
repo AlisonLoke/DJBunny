@@ -61,14 +61,20 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            //gameObject.SetActive(false);
+           
             animator.SetBool("IsOpen", false);
             InputBlocker.Instance.DisableBlockInput();
-            //SceneManager.LoadScene("Lvl01_St01");
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1 );
+           
             Debug.Log("current music has stopped");
-            //MusicManager.instance.StopCurrentLevelMusic();
-            LevelManager.Instance.GetNextCutScene();
+            if (LevelManager.Instance.isFailCutScene)
+            {
+                LevelManager.Instance.OnPlayerFail();
+            }
+            else
+            {
+                
+                LevelManager.Instance.GetNextCutScene();
+            }
 
         }
     }
