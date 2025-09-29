@@ -132,12 +132,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originalRotation: {x: 0, y: 0, z: 0, w: 0}
+  connectType: 0
   blockParentRect: {fileID: 6742391777000452425}
   blockRectransforms:
   - {fileID: 1539544542790670266}
   - {fileID: 6167459128897280882}
   blockData: {fileID: 11400000, guid: 1b4e9d99e95ea7143b8381a8c4b1b82c, type: 2}
   delayBetweenRotations: 0.2
+  delaybetweenhovers: 1
   gridParent: {fileID: 0}
   endCells: []
 --- !u!222 &1956268177823983048
