@@ -129,7 +129,13 @@ namespace AK
             {
                 static const AkUniqueID BUSEXT = 2007588150U;
                 static const AkUniqueID BUSINT = 1637788976U;
+                static const AkUniqueID CAFE = 3853951854U;
+                static const AkUniqueID GLASTONBUNNY = 2799519545U;
+                static const AkUniqueID LOSE = 221232726U;
                 static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID PARTY = 3177314091U;
+                static const AkUniqueID TOWNCENTRE = 1559954680U;
+                static const AkUniqueID WIN = 979765101U;
             } // namespace STATE
         } // namespace ATM
 

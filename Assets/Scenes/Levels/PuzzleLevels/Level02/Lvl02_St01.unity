@@ -746,6 +746,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 3501e6b2fd2158649947726764022a52, type: 2}
     - target: {fileID: 5993523896433815721, guid: 5accc1d11f8a3854a8b1c867ea8fa3e8, type: 3}
+      propertyPath: StopLevelMusic.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5993523896433815721, guid: 5accc1d11f8a3854a8b1c867ea8fa3e8, type: 3}
       propertyPath: StartLevelMusic.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: dc043221266d4ab41bf024d83dc6cc02, type: 2}
@@ -1627,6 +1631,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 108bc7cf6ed847f4d9c93232bf65879b, type: 2}
     - target: {fileID: 421663544604815440, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
+      propertyPath: startAtmos.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 85094b10d5182c349931b2125c3406d5, type: 2}
+    - target: {fileID: 421663544604815440, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
       propertyPath: PlayRotation.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: ab6ea06c0d05b1a4f96920aa8bd2df9d, type: 2}
@@ -1634,6 +1642,10 @@ PrefabInstance:
       propertyPath: PlayCompletion.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: add79cf5f1da5ae4d9a32b290f26afc1, type: 2}
+    - target: {fileID: 421663544604815440, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
+      propertyPath: playCurrentAtmos.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: c7886e2ecd9a7d84d9fb4a72c6080b70, type: 2}
     - target: {fileID: 2612409587306168315, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2332,6 +2344,10 @@ PrefabInstance:
       propertyPath: gridData
       value: 
       objectReference: {fileID: 11400000, guid: 08a44bda4c97a4842aaa776d13234613, type: 2}
+    - target: {fileID: 2685476396588401627, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+      propertyPath: IsNewLevel
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6989203491967808597, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -2551,7 +2551,7 @@ MonoBehaviour:
     ParentPath: States\SFX
     guid: 52bd5ee85bccb040bcdc801fb4bc0373
     GuidInternal: 
-    m_lastTime: -8584424393615718934
+    m_lastTime: -8584424383960638553
     List:
     - name: ATM
       guid: 05349694c6778744a159b1b25095018c
@@ -2600,6 +2600,54 @@ MonoBehaviour:
         - ElementName: BusInt
           ObjectType: 8
           guid: e02d8ded87a848429d615fa8c19594c7
+      - name: Cafe
+        guid: ec474cef2036644b8886bad6af9b7ec3
+        id: 3853951854
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: SFX
+          ObjectType: 12
+          guid: 52bd5ee85bccb040bcdc801fb4bc0373
+        - ElementName: ATM
+          ObjectType: 9
+          guid: 05349694c6778744a159b1b25095018c
+        - ElementName: Cafe
+          ObjectType: 8
+          guid: ec474cef2036644b8886bad6af9b7ec3
+      - name: GlastonBunny
+        guid: 838c28e58c3f8a42b52c70debf89a06d
+        id: 2799519545
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: SFX
+          ObjectType: 12
+          guid: 52bd5ee85bccb040bcdc801fb4bc0373
+        - ElementName: ATM
+          ObjectType: 9
+          guid: 05349694c6778744a159b1b25095018c
+        - ElementName: GlastonBunny
+          ObjectType: 8
+          guid: 838c28e58c3f8a42b52c70debf89a06d
+      - name: Lose
+        guid: 348eb273b50e0b4c8da8257408ed844f
+        id: 221232726
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: SFX
+          ObjectType: 12
+          guid: 52bd5ee85bccb040bcdc801fb4bc0373
+        - ElementName: ATM
+          ObjectType: 9
+          guid: 05349694c6778744a159b1b25095018c
+        - ElementName: Lose
+          ObjectType: 8
+          guid: 348eb273b50e0b4c8da8257408ed844f
       - name: None
         guid: 6dd7621e0faf574da97ae50d64bba68b
         id: 748895195
@@ -2616,6 +2664,54 @@ MonoBehaviour:
         - ElementName: None
           ObjectType: 8
           guid: 6dd7621e0faf574da97ae50d64bba68b
+      - name: Party
+        guid: 3a94d5bf6b057a4d8ac277279af5d05a
+        id: 3177314091
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: SFX
+          ObjectType: 12
+          guid: 52bd5ee85bccb040bcdc801fb4bc0373
+        - ElementName: ATM
+          ObjectType: 9
+          guid: 05349694c6778744a159b1b25095018c
+        - ElementName: Party
+          ObjectType: 8
+          guid: 3a94d5bf6b057a4d8ac277279af5d05a
+      - name: TownCentre
+        guid: aa2eede88602b74086ee74903ac9cbbb
+        id: 1559954680
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: SFX
+          ObjectType: 12
+          guid: 52bd5ee85bccb040bcdc801fb4bc0373
+        - ElementName: ATM
+          ObjectType: 9
+          guid: 05349694c6778744a159b1b25095018c
+        - ElementName: TownCentre
+          ObjectType: 8
+          guid: aa2eede88602b74086ee74903ac9cbbb
+      - name: Win
+        guid: 0f3af49871a4904f9ef4880b1bb3be99
+        id: 979765101
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: SFX
+          ObjectType: 12
+          guid: 52bd5ee85bccb040bcdc801fb4bc0373
+        - ElementName: ATM
+          ObjectType: 9
+          guid: 05349694c6778744a159b1b25095018c
+        - ElementName: Win
+          ObjectType: 8
+          guid: 0f3af49871a4904f9ef4880b1bb3be99
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -2732,7 +2828,7 @@ MonoBehaviour:
         guid: f703d7b29405cc43aaf875ea0d84041c
       Path: Triggers\Default Work Unit\Lvl2_1_SnareStop
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 010000000300000005000000060000000700000008000000090000000c0000000d0000001100000012000000130000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f00000020000000210000002300000024000000260000002700000044000000450000001b0100001c010000ab010000ac010000ea010000eb0100000e0200009e0200003003000031030000320300005c0d00005d0d0000270e0000
+  ExpandedWaapiItemIds: 010000000300000005000000060000000700000008000000090000000c0000000d0000001100000012000000130000001700000018000000190000001b0000001d0000001e0000001f0000002000000021000000260000002700000044000000450000001b0100001c010000ab010000ac010000ea010000eb0100000e0200009e0200003003000031030000320300005c0d00005d0d0000270e0000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

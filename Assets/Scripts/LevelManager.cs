@@ -12,7 +12,8 @@ public class LevelManager : MonoBehaviour
     public bool useMoveLimit = false;
     public int maxMoves = 5;
     public bool isLastPuzzle = false;
-    public bool isFailCutScene = false; 
+    public bool isFailCutScene = false;
+    public bool IsNewLevel = false;
     [SerializeField] private bool isLastLevel = false;
     [SerializeField] private GameObject tryAgainCanvas;
     // needs to be called after ConnectionSystem.Awake()
@@ -30,7 +31,7 @@ public class LevelManager : MonoBehaviour
     {
         //Instance = this; // WHY DID I DO THAT?
         //ConnectionManager.instance.onValidPathCompleted += CheckIfLevelComplete;
-        if(ConnectionManager.instance == null)
+        if (ConnectionManager.instance == null)
         {
             return;
         }
@@ -48,6 +49,18 @@ public class LevelManager : MonoBehaviour
         {
             return;
         }
+        if (IsNewLevel)
+        {
+            Debug.Log("Resetting Music Manager for new level.");
+            AK.Wwise.Event startMusic = MusicManager.instance.StartLevelMusic;
+            AK.Wwise.Event stopMusic = MusicManager.instance.StopLevelMusic;
+
+            MusicManager.instance.ResetForNewLevel(startMusic,stopMusic);
+
+            IsNewLevel = false;
+
+        }
+
     }
 
     private void OnDestroy()
@@ -72,7 +85,7 @@ public class LevelManager : MonoBehaviour
     {
         StartCoroutine(TriggerPuzzleWin());
     }
-  
+
 
     private IEnumerator TriggerPuzzleWin()
     {
