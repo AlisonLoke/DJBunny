@@ -1435,6 +1435,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5accc1d11f8a3854a8b1c867ea8fa3e8, type: 3}
+--- !u!1 &1243869302 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 121991345401876096, guid: 5accc1d11f8a3854a8b1c867ea8fa3e8, type: 3}
+  m_PrefabInstance: {fileID: 1243869301}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1353128373
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1451,6 +1456,14 @@ PrefabInstance:
       propertyPath: gridData
       value: 
       objectReference: {fileID: 11400000, guid: 1bf0ab19bf8e9044e9f4670d7dd0c1c0, type: 2}
+    - target: {fileID: 2685476396588401627, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+      propertyPath: IsNewLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2685476396588401627, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+      propertyPath: musicManager
+      value: 
+      objectReference: {fileID: 1243869302}
     - target: {fileID: 6989203491967808597, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

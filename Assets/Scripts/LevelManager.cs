@@ -16,6 +16,10 @@ public class LevelManager : MonoBehaviour
     public bool IsNewLevel = false;
     [SerializeField] private bool isLastLevel = false;
     [SerializeField] private GameObject tryAgainCanvas;
+    [Header("Level Music")]
+    [SerializeField] private AK.Wwise.Event levelStartMusic;
+    [SerializeField] private AK.Wwise.Event levelStopMusic;
+    public GameObject musicManager;
     // needs to be called after ConnectionSystem.Awake()
 
     [SerializeField] private float CutSceneTransitionTime = 1f;
@@ -49,16 +53,21 @@ public class LevelManager : MonoBehaviour
         {
             return;
         }
-        if (IsNewLevel)
+        //if (IsNewLevel)
+        //{
+        //    Debug.Log("Resetting Music Manager for new level.");
+        //    AK.Wwise.Event startMusic = MusicManager.instance.StartLevelMusic;
+        //    AK.Wwise.Event stopMusic = MusicManager.instance.StopLevelMusic;
+
+        //    MusicManager.instance.ResetForNewLevel(startMusic,stopMusic);
+
+        //    IsNewLevel = false;
+
+        //}
+        if (MusicManager.instance != null)
         {
             Debug.Log("Resetting Music Manager for new level.");
-            AK.Wwise.Event startMusic = MusicManager.instance.StartLevelMusic;
-            AK.Wwise.Event stopMusic = MusicManager.instance.StopLevelMusic;
-
-            MusicManager.instance.ResetForNewLevel(startMusic,stopMusic);
-
-            IsNewLevel = false;
-
+            MusicManager.instance.ResetForNewLevel(levelStartMusic, levelStopMusic);
         }
 
     }

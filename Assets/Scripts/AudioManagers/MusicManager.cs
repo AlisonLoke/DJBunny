@@ -69,7 +69,7 @@ public class MusicManager : MonoBehaviour
 
     public void StopCurrentLevelMusic()
     {
-     
+
         if (StopLevelMusic != null)
         {
             Debug.Log("Stopping current Level Music");
@@ -79,17 +79,25 @@ public class MusicManager : MonoBehaviour
 
     public void ResetForNewLevel(AK.Wwise.Event levelMusic, AK.Wwise.Event stopEvent)
     {
-        // Stop previous level’s music
+        Debug.Log("Resetting Music Manager for new level.");
+
+        // Stop previous level's music
         StopCurrentLevelMusic();
+
+        // Clear the reference to prevent the old stop event from being reused
+        StopLevelMusic = null;
+        currentLevelMusicEvent = null;
 
         // Assign new music events
         currentLevelMusicEvent = levelMusic;
         StopLevelMusic = stopEvent;
 
         // Start new music
-        Debug.Log("Resetting Music Manager for new level.");
-        currentLevelMusicEvent?.Post(gameObject);
+        if (currentLevelMusicEvent != null)
+        {
+            currentLevelMusicEvent.Post(gameObject);
+        }
+
+
     }
-
-
 }

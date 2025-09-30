@@ -385,6 +385,14 @@ PrefabInstance:
       propertyPath: gridData
       value: 
       objectReference: {fileID: 11400000, guid: 316b535920b909e498bffbaa9c673da8, type: 2}
+    - target: {fileID: 2685476396588401627, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+      propertyPath: IsNewLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2685476396588401627, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+      propertyPath: musicManager
+      value: 
+      objectReference: {fileID: 585913390}
     - target: {fileID: 6989203491967808597, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -570,6 +578,11 @@ CanvasRenderer:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8837972349800196655, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
   m_PrefabInstance: {fileID: 1474247419}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &585913390 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 121991345401876096, guid: 5accc1d11f8a3854a8b1c867ea8fa3e8, type: 3}
+  m_PrefabInstance: {fileID: 832256672}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &646890480
 PrefabInstance:
@@ -4204,6 +4217,7 @@ SceneRoots:
   - {fileID: 832256672}
   - {fileID: 5869733464311376994}
   - {fileID: 308415713}
+  - {fileID: 1019981593}
   - {fileID: 1515809662}
   - {fileID: 8840011090474930140}
   - {fileID: 177636590}
@@ -4211,6 +4225,5 @@ SceneRoots:
   - {fileID: 1119229842}
   - {fileID: 977304989}
   - {fileID: 1799665017}
-  - {fileID: 1019981593}
   - {fileID: 1493651421}
   - {fileID: 1345410559}

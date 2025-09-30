@@ -21,10 +21,13 @@ public class TutorialManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+       
     }
     void Start()
     {
-        if (LevelManager.Instance.Tutorial && SceneManager.GetActiveScene().buildIndex == 2)
+        Debug.Log($"LevelManager.Instance.Tutorial = {LevelManager.Instance.Tutorial}");
+        Debug.Log($"Scene Build Index = {SceneManager.GetActiveScene().buildIndex}");
+        if (LevelManager.Instance.Tutorial && SceneManager.GetActiveScene().buildIndex == 3)
         {
             tutorialUI.SetActive(true);
 
@@ -36,9 +39,11 @@ public class TutorialManager : MonoBehaviour
         }
         else
         {
+            Debug.Log($"tutorialUI active state = {tutorialUI.activeSelf}");
             tutorialUI.SetActive(false);
         }
     }
+   
     public void SwitchToRotateTutorial()
     {
         
