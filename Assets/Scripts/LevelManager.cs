@@ -33,6 +33,12 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        if (MusicManager.instance != null && IsNewLevel)
+        {
+            Debug.Log("Resetting Music Manager for new level.");
+            MusicManager.instance.ResetForNewLevel(levelStartMusic, levelStopMusic);
+        }
+
         //Instance = this; // WHY DID I DO THAT?
         //ConnectionManager.instance.onValidPathCompleted += CheckIfLevelComplete;
         if (ConnectionManager.instance == null)
@@ -64,11 +70,7 @@ public class LevelManager : MonoBehaviour
         //    IsNewLevel = false;
 
         //}
-        if (MusicManager.instance != null)
-        {
-            Debug.Log("Resetting Music Manager for new level.");
-            MusicManager.instance.ResetForNewLevel(levelStartMusic, levelStopMusic);
-        }
+
 
     }
 
