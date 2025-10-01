@@ -10,14 +10,16 @@ public class EndCell : MonoBehaviour
     public GridCell currentGridCell;
     public bool onlyConnectToStartFinish = false;
     public bool IsEndCellOnClosedCell = false;
+    [SerializeField] private GameObject bunnyImage;
+
     [HideInInspector] public BlockSystem blockSystem;
 
     private BlockUI blockUI;
     private Image cellImage;
-  
+
 
     private BlockCellPulse myTweenAnimation;
- 
+
     private Color originalColour;
 
     public BlockUI GetBlockUi()
@@ -128,6 +130,7 @@ public class EndCell : MonoBehaviour
         //GetComponent<Image>().color = Color.red;
         onlyConnectToStartFinish = false;
         connectedEndCell.Clear();
+        bunnyImage.SetActive(false);
     }
 
     //public void MakeCellBlue(GridCell cell)
@@ -143,6 +146,11 @@ public class EndCell : MonoBehaviour
         //GetComponent<Image>().color = Color.yellow;
         onlyConnectToStartFinish = true;
         connectedEndCell.Clear();
+        //set active true bunnies
+
+        bunnyImage.SetActive(true);
+
+
         if (LevelManager.Instance.Tutorial && onlyConnectToStartFinish)
         {
             TutorialManager.Instance.SwitchToTutorialEnd();
@@ -151,7 +159,7 @@ public class EndCell : MonoBehaviour
         StopBlink();
 
     }
- 
+
 
     public void StartBlink(string hexColour, float duration = 0.5f)
     {
@@ -174,7 +182,7 @@ public class EndCell : MonoBehaviour
         newBlockCellPulse.BlockCellToPulse = cellImage;
         newBlockCellPulse.originalColour = originalColour;
         myTweenAnimation = newBlockCellPulse;
-       
+
     }
 
     public void StopBlink()

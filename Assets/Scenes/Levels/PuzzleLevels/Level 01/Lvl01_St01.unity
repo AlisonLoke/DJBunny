@@ -2450,6 +2450,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TwoBlock
       objectReference: {fileID: 0}
+    - target: {fileID: 3848575791990003980, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
+      propertyPath: bunnyImage01
+      value: 
+      objectReference: {fileID: 1467307658}
     - target: {fileID: 4211410334129221290, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2800,6 +2804,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1467307658 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6791966124578240859, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
+  m_PrefabInstance: {fileID: 1352377122}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1474247419
 PrefabInstance:
   m_ObjectHideFlags: 0
