@@ -12,14 +12,15 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
     private GridCell gridCell;
     private GridVisual gridVisual;
     private float timeSinceLastRotation = Mathf.Infinity;
-    private float timeSinceLastHover = Mathf.Infinity;
+
     private bool isSnappedToGrid = false;
     private bool isFollowingMouse = false;
     private GameObject audioObject;
     private Image cellImage;
     private BlockUI blockUI;
-    private bool isHovering = false;
-    private bool isAnimatingHover = false;
+    private bool isHighlighting = false;
+
+    private Color[] originalColours;
     private Vector2 originalAnchoredPos;
     public Quaternion originalRotation;
     public ConnectCellType connectCellType => connectType;
@@ -60,12 +61,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             timeSinceLastRotation += Time.deltaTime;
             return;
         }
-        if (timeSinceLastHover < delaybetweenhovers)
-        {
-            timeSinceLastHover += Time.deltaTime;
-            return;
-        }
-
+     
         // Follow mouse if selected
         if (isFollowingMouse && selectedBlock == this)
         {
@@ -79,26 +75,25 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             Vector2 mousePos = Mouse.current.position.ReadValue();
             bool pointerOver = IsMouseOverEntireBlock(mousePos);
 
-            if (pointerOver && !isHovering)
+            if (pointerOver && !isHighlighting)
             {
-                if (timeSinceLastHover < delaybetweenhovers)
-                {
-                    return;
-                }
-                isHovering = true;
-                StartHoverAnimation();
-                timeSinceLastHover = 0;
+                
+                isHighlighting = true;
+              
+                HighlightBlock();
+            
             }
-            else if (!pointerOver && isHovering)
+            else if (!pointerOver && isHighlighting)
             {
 
-                isHovering = false;
-                EndHoverAnimation();
+                isHighlighting = false;
+                UnhighlightBlock();
+              
             }
 
         }
 
-        if (!isFollowingMouse && !isSnappedToGrid && !isHovering && !isAnimatingHover)
+        if (!isFollowingMouse && !isSnappedToGrid && !isHighlighting )
         {
             Vector2 mousePos = Mouse.current.position.ReadValue();
             bool pointerOver = IsMouseOverEntireBlock(mousePos);
@@ -133,40 +128,53 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         return false;
     }
 
-    private void StartHoverAnimation()
+    private void HighlightBlock()
     {
-        if (isAnimatingHover) { return; }
-
-        isAnimatingHover = true;
-        blockParentRect.DOKill();
-        blockParentRect.DOAnchorPos(originalAnchoredPos + new Vector2(0, 20f), 0.1f).SetEase(Ease.OutQuad)
-        .OnComplete(() =>
+        StoreOrignalBlockColours();
+        //highlight effect
+        for (int i = 0; i < blockRectransforms.Length; i++)
         {
-            isAnimatingHover = false;
-        });
+            Image img = blockRectransforms[i].GetComponent<Image>();
+            if (img != null)
+            {
+                img.color = originalColours[i] * 1.2f; // brighten
+            }
+        }
     }
-
-
-    private void EndHoverAnimation()
+    private void StoreOrignalBlockColours()
     {
-        if (isAnimatingHover) return;
-        isAnimatingHover = true;
-        blockParentRect.DOKill();
-        // Animate scale back to normal
-        blockParentRect.DOAnchorPos(originalAnchoredPos, 0.1f).SetEase(Ease.OutQuad)
-        .OnComplete(() =>
+        //Store original colours
+        if(blockUI == null) { return; }
+
+        if(originalColours == null || originalColours.Length != blockRectransforms.Length)
         {
-            isAnimatingHover = false;
-        });
-    }
-    private void ResetHoverAnimation()
-    {
-        blockParentRect.DOKill(); // stop ongoing animations
-        blockParentRect.anchoredPosition = originalAnchoredPos;
-        isHovering = false;
-        isAnimatingHover = false;
+            originalColours = new Color[blockRectransforms.Length];
+            for(int i = 0; i < blockRectransforms.Length; i++)
+            {
+                Image image = blockRectransforms[i].GetComponent<Image>();
+                if (image != null)
+                {
+                    originalColours[i] = image.color;   
+                }
+            }
+        }
+
     }
 
+    private void UnhighlightBlock()
+    {
+        if (originalColours == null) return;
+
+        for (int i = 0; i < blockRectransforms.Length; i++)
+        {
+            Image image = blockRectransforms[i].GetComponent<Image>();
+            if (image != null)
+            {
+                image.color = originalColours[i]; // reset
+            }
+        }
+    }
+    
 
     private void ClearEndCells()
     {
@@ -294,14 +302,14 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
         if (!isSnappedToGrid)
         {
-            ResetHoverAnimation();
+            //ResetHoverAnimation();
 
             return;
         }
 
         MusicManager.instance.PlayInstruments(blockData.MuteInstrument);
         RemoveFromGrid();
-        ResetHoverAnimation();
+        //ResetHoverAnimation();
         ConnectionManager.instance.ResetCompletedPaths();
     }
 
