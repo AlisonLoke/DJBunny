@@ -59,7 +59,7 @@ public class LevelManager : MonoBehaviour
         //    AK.Wwise.Event startMusic = MusicManager.instance.StartLevelMusic;
         //    AK.Wwise.Event stopMusic = MusicManager.instance.StopLevelMusic;
 
-        //    MusicManager.instance.ResetForNewLevel(startMusic,stopMusic);
+        //    MusicManager.instance.ResetForNewLevel(startMusic, stopMusic);
 
         //    IsNewLevel = false;
 
