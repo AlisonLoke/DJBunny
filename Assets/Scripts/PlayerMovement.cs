@@ -101,6 +101,10 @@ public class PlayerMovement : MonoBehaviour
         {
             HandleGroundClick(hit.point);
         }
+        else if (hit.transform.CompareTag("Sky"))
+        {
+            HandleGroundClick(hit.point);
+        }
     }
     private Vector2 GetMouseWorldPosition()
     {
