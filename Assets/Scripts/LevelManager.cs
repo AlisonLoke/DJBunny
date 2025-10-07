@@ -111,6 +111,7 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
+            yield return new WaitForSeconds(1.5f);
             SceneTransition.Instance.StartPuzzleTransition();
             yield return new WaitForSeconds(4f);
             GetNextSceneinBuildIndex();

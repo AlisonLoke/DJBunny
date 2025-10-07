@@ -2355,6 +2355,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 936205818}
     m_Modifications:
+    - target: {fileID: 3983621606065395422, guid: abbdd9f9a0ad6ad4696112bde59dc29b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4859407021708749476, guid: abbdd9f9a0ad6ad4696112bde59dc29b, type: 3}
       propertyPath: m_Name
       value: Line Renderer (1)
@@ -2703,7 +2707,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!1001 &1388616234
 PrefabInstance:
@@ -3839,6 +3843,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 936205818}
     m_Modifications:
+    - target: {fileID: 3983621606065395422, guid: abbdd9f9a0ad6ad4696112bde59dc29b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4859407021708749476, guid: abbdd9f9a0ad6ad4696112bde59dc29b, type: 3}
       propertyPath: m_Name
       value: Line Renderer
