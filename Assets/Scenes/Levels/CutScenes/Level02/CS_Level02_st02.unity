@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 370016250056852631, guid: 7424ac7c65b9e4a4c901d73868f63bb6, type: 3}
+  m_Sprite: {fileID: 5799041793792800819, guid: 8b5582cccf45ea3488c4a7b4b127244a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -208,7 +208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4818833672044298235, guid: 12fbad70cffd4da4f8b2e871056cd8cb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5237415777098926582, guid: 12fbad70cffd4da4f8b2e871056cd8cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -269,7 +269,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 581747695}
-  - component: {fileID: 581747694}
+  - component: {fileID: 581747696}
   m_Layer: 0
   m_Name: DialogueTriggerOnStart
   m_TagString: Untagged
@@ -277,70 +277,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &581747694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 581747693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 974f8ce6723e1544182983302c562b73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueLines:
-  - characterName: Tammy Lim
-    line: " Haha that\u2019s literally my favourite chill song ever! I like your
-      vibe."
-    onLineStart:
-      m_PersistentCalls:
-        m_Calls: []
-  - characterName: Tammy Lim
-    line: "I run a cafe called the Brew & Chill nearby. I\u2019ve got the brew but
-      I don\u2019t think I\u2019ve got the chill yet."
-    onLineStart:
-      m_PersistentCalls:
-        m_Calls: []
-  - characterName: Tammy Lim
-    line: "Do you think you can fix that? \r\n"
-    onLineStart:
-      m_PersistentCalls:
-        m_Calls: []
-  - characterName: DJ Bunny
-    line: '* nods *'
-    onLineStart:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1439729432}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Nod
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 2124918154}
-          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-          m_MethodName: OnNodStart
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Nod
-            m_BoolArgument: 0
-          m_CallState: 2
-  - characterName: Tammy Lim
-    line: " Hah\u2026.. that\u2019s chill. "
-    onLineStart:
-      m_PersistentCalls:
-        m_Calls: []
 --- !u!4 &581747695
 Transform:
   m_ObjectHideFlags: 0
@@ -356,6 +292,46 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &581747696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581747693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 974f8ce6723e1544182983302c562b73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - characterName: Tammy Lim
+    line: "Haha now that\u2019s a classic that makes the world slow down. I like
+      your vibe. "
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Tammy Lim
+    line: "I run a cafe called the Brew & Chill. I\u2019ve got the brew but I don\u2019t
+      think I\u2019ve got the chill yet.\r\n"
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Tammy Lim
+    line: "Do you think you can fix that? \r\n"
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: DJ Bunny
+    line: '* nods *'
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Tammy Lim
+    line: "Hah\u2026.. that\u2019s chill. "
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &623062564
 GameObject:
   m_ObjectHideFlags: 0
@@ -1584,7 +1560,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.8111111, y: 3.2166667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1663,8 +1639,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.45597476, g: 0.9559967, b: 1, a: 1}
+  m_Sprite: {fileID: -1581651022900073573, guid: f475617490b352b4e8582bc02de26bc9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1683,7 +1659,7 @@ Transform:
   m_GameObject: {fileID: 1584838165}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 448, y: 197, z: 1}
+  m_LocalPosition: {x: 288, y: 241, z: 1}
   m_LocalScale: {x: 54.43, y: 54.43, z: 54.43}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1966,17 +1942,6 @@ MonoBehaviour:
   unloadTriggerList: 958ca0ea
   bankNameInternal: 
   valueGuidInternal: 
---- !u!114 &2124918154 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
-  m_PrefabInstance: {fileID: 810261368}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a1ade943816d5a4ca7e526e786d8a6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2131771321
 PrefabInstance:
   m_ObjectHideFlags: 0
