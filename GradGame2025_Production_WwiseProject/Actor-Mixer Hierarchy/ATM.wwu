@@ -77,21 +77,211 @@
 								<ActiveSource Name="01 Musée de Mahébourg garden-01" ID="{ECA736A8-2EDE-4951-924C-D227F060F565}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="AMB_Restaurant_China" ID="{9D05B2F0-0336-4DF9-8D11-E98F753CBD53}" ShortID="217233644">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="AMB_Restaurant_China" ID="{066F94A5-1F9D-46CA-A2E1-0BC4D0608C4A}">
+									<Language>SFX</Language>
+									<AudioFile>AMB_Restaurant_China.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="680215027"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="AMB_Restaurant_China" ID="{066F94A5-1F9D-46CA-A2E1-0BC4D0608C4A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Party_At_Da_Club_Crowd_Atmos 2" ID="{0063D5E3-BA3A-4583-9EA2-A066CA80FF16}" ShortID="168653233">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Party_At_Da_Club_Crowd_Atmos 2" ID="{F3885E08-2D5E-4FAF-9B90-4C96072E3D4D}">
+									<Language>SFX</Language>
+									<AudioFile>Party_At_Da_Club_Crowd_Atmos 2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="389386674"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Party_At_Da_Club_Crowd_Atmos 2" ID="{F3885E08-2D5E-4FAF-9B90-4C96072E3D4D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="GlastonBunny_Crowd Atmos 2" ID="{6B4CAA01-D3E3-4E00-AC60-F0AF6AC8501C}" ShortID="664674724">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="GlastonBunny_Crowd Atmos 2" ID="{817C8445-2FF7-4579-8892-06CFEDF8A962}">
+									<Language>SFX</Language>
+									<AudioFile>GlastonBunny_Crowd Atmos 2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="641315372"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="GlastonBunny_Crowd Atmos 2" ID="{817C8445-2FF7-4579-8892-06CFEDF8A962}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="GlastonBunny_Crowd Atmos 4" ID="{902B7C4A-A0C0-4AE9-873C-870DFD030C3A}" ShortID="364046271">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="GlastonBunny_Crowd Atmos 4" ID="{2E5A2F43-885D-4C8E-852E-B2F540C40AE5}">
+									<Language>SFX</Language>
+									<AudioFile>GlastonBunny_Crowd Atmos 4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="856666474"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="GlastonBunny_Crowd Atmos 4" ID="{2E5A2F43-885D-4C8E-852E-B2F540C40AE5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="AMB_Busy_Traffic-01" ID="{CD5C7213-80BF-448D-A4B0-50822057C93E}" ShortID="494613220">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="AMB_Busy_Traffic-01" ID="{4A52AABE-D6BF-44CC-BFDB-E58E81539A46}">
+									<Language>SFX</Language>
+									<AudioFile>AMB_Busy_Traffic-01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="743475728"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="AMB_Busy_Traffic-01" ID="{4A52AABE-D6BF-44CC-BFDB-E58E81539A46}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 					<GroupingInfo>
 						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="GlastonBunny_Crowd Atmos 2" ID="{6B4CAA01-D3E3-4E00-AC60-F0AF6AC8501C}"/>
+								<PropertyList>
+									<Property Name="ContinuePlay" Type="bool" Value="True"/>
+									<Property Name="FadeInTime" Type="Real64">
+										<ValueList>
+											<Value>2.5</Value>
+										</ValueList>
+									</Property>
+									<Property Name="FadeOutTime" Type="Real64">
+										<ValueList>
+											<Value>3</Value>
+										</ValueList>
+									</Property>
+								</PropertyList>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="AMB_Busy_Traffic-01" ID="{CD5C7213-80BF-448D-A4B0-50822057C93E}"/>
+								<PropertyList>
+									<Property Name="ContinuePlay" Type="bool" Value="True"/>
+									<Property Name="FadeInTime" Type="Real64">
+										<ValueList>
+											<Value>2.5</Value>
+										</ValueList>
+									</Property>
+									<Property Name="FadeOutTime" Type="Real64">
+										<ValueList>
+											<Value>3</Value>
+										</ValueList>
+									</Property>
+								</PropertyList>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="GlastonBunny_Crowd Atmos 4" ID="{902B7C4A-A0C0-4AE9-873C-870DFD030C3A}"/>
+								<PropertyList>
+									<Property Name="ContinuePlay" Type="bool" Value="True"/>
+									<Property Name="FadeInTime" Type="Real64">
+										<ValueList>
+											<Value>2.5</Value>
+										</ValueList>
+									</Property>
+									<Property Name="FadeOutTime" Type="Real64">
+										<ValueList>
+											<Value>3</Value>
+										</ValueList>
+									</Property>
+								</PropertyList>
+							</GroupingBehavior>
 							<GroupingBehavior>
 								<ItemRef Name="VEHBus_Bus Constant_2" ID="{74445481-7A19-4089-81CC-C3F487C1170B}"/>
 								<PropertyList>
 									<Property Name="ContinuePlay" Type="bool" Value="True"/>
 									<Property Name="FadeInTime" Type="Real64">
 										<ValueList>
-											<Value>5</Value>
+											<Value>2.5</Value>
 										</ValueList>
 									</Property>
 									<Property Name="FadeOutTime" Type="Real64">
 										<ValueList>
-											<Value>5</Value>
+											<Value>3</Value>
+										</ValueList>
+									</Property>
+								</PropertyList>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Party_At_Da_Club_Crowd_Atmos 2" ID="{0063D5E3-BA3A-4583-9EA2-A066CA80FF16}"/>
+								<PropertyList>
+									<Property Name="ContinuePlay" Type="bool" Value="True"/>
+									<Property Name="FadeInTime" Type="Real64">
+										<ValueList>
+											<Value>2.5</Value>
+										</ValueList>
+									</Property>
+									<Property Name="FadeOutTime" Type="Real64">
+										<ValueList>
+											<Value>3</Value>
+										</ValueList>
+									</Property>
+								</PropertyList>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="AMB_Restaurant_China" ID="{9D05B2F0-0336-4DF9-8D11-E98F753CBD53}"/>
+								<PropertyList>
+									<Property Name="ContinuePlay" Type="bool" Value="True"/>
+									<Property Name="FadeInTime" Type="Real64">
+										<ValueList>
+											<Value>2.5</Value>
+										</ValueList>
+									</Property>
+									<Property Name="FadeOutTime" Type="Real64">
+										<ValueList>
+											<Value>3</Value>
 										</ValueList>
 									</Property>
 								</PropertyList>
@@ -102,12 +292,12 @@
 									<Property Name="ContinuePlay" Type="bool" Value="True"/>
 									<Property Name="FadeInTime" Type="Real64">
 										<ValueList>
-											<Value>5</Value>
+											<Value>2.5</Value>
 										</ValueList>
 									</Property>
 									<Property Name="FadeOutTime" Type="Real64">
 										<ValueList>
-											<Value>5</Value>
+											<Value>3</Value>
 										</ValueList>
 									</Property>
 								</PropertyList>
@@ -115,15 +305,45 @@
 						</GroupingBehaviorList>
 						<GroupingList>
 							<Grouping>
+								<SwitchRef Name="Win" ID="{98F43A0F-A471-4F90-9EF4-880B1BB3BE99}"/>
+								<ItemList>
+									<ItemRef Name="GlastonBunny_Crowd Atmos 4" ID="{902B7C4A-A0C0-4AE9-873C-870DFD030C3A}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Party" ID="{BFD5943A-056B-4D7A-8AC2-77279AF5D05A}"/>
+								<ItemList>
+									<ItemRef Name="Party_At_Da_Club_Crowd_Atmos 2" ID="{0063D5E3-BA3A-4583-9EA2-A066CA80FF16}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
 								<SwitchRef Name="BusExt" ID="{D5E15A4F-277A-4F73-939D-128BC3969707}"/>
 								<ItemList>
 									<ItemRef Name="01 Musée de Mahébourg garden-01" ID="{19F9EFFB-67A0-48AD-AE7C-7652174C9405}"/>
 								</ItemList>
 							</Grouping>
 							<Grouping>
+								<SwitchRef Name="GlastonBunny" ID="{E5288C83-3F8C-428A-B52C-70DEBF89A06D}"/>
+								<ItemList>
+									<ItemRef Name="GlastonBunny_Crowd Atmos 2" ID="{6B4CAA01-D3E3-4E00-AC60-F0AF6AC8501C}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="TownCentre" ID="{E8ED2EAA-0286-40B7-86EE-74903AC9CBBB}"/>
+								<ItemList>
+									<ItemRef Name="AMB_Busy_Traffic-01" ID="{CD5C7213-80BF-448D-A4B0-50822057C93E}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
 								<SwitchRef Name="BusInt" ID="{ED8D2DE0-A887-4248-9D61-5FA8C19594C7}"/>
 								<ItemList>
 									<ItemRef Name="VEHBus_Bus Constant_2" ID="{74445481-7A19-4089-81CC-C3F487C1170B}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Cafe" ID="{EF4C47EC-3620-4B64-8886-BAD6AF9B7EC3}"/>
+								<ItemList>
+									<ItemRef Name="AMB_Restaurant_China" ID="{9D05B2F0-0336-4DF9-8D11-E98F753CBD53}"/>
 								</ItemList>
 							</Grouping>
 						</GroupingList>
