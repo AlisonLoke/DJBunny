@@ -2521,6 +2521,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 108bc7cf6ed847f4d9c93232bf65879b, type: 2}
     - target: {fileID: 421663544604815440, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
+      propertyPath: startAtmos.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 089bd2e4e714d544c9cc5efb623fe43b, type: 2}
+    - target: {fileID: 421663544604815440, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
       propertyPath: PlayRotation.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: ab6ea06c0d05b1a4f96920aa8bd2df9d, type: 2}
@@ -2528,6 +2532,10 @@ PrefabInstance:
       propertyPath: PlayCompletion.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: add79cf5f1da5ae4d9a32b290f26afc1, type: 2}
+    - target: {fileID: 421663544604815440, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
+      propertyPath: playCurrentAtmos.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: c7886e2ecd9a7d84d9fb4a72c6080b70, type: 2}
     - target: {fileID: 2612409587306168315, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2587,7 +2595,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2123677883}
   - component: {fileID: 2123677885}
-  - component: {fileID: 2123677884}
   - component: {fileID: 2123677886}
   m_Layer: 0
   m_Name: WwiseGlobal
@@ -2611,31 +2618,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2123677884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2123677881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4be27bfebb0c4f148a44e94c2edc7550, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: ae8d9d44
-  useOtherObject: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 15372c21a35d9754eb92903b0f736f31, type: 2}
-  decodeBank: 0
-  overrideLoadSetting: 0
-  loadAsynchronous: 0
-  saveDecodedBank: 0
-  unloadTriggerList: 958ca0ea
-  bankNameInternal: 
-  valueGuidInternal: 
 --- !u!114 &2123677885
 MonoBehaviour:
   m_ObjectHideFlags: 0

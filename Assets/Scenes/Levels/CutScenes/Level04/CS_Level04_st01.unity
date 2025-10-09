@@ -194,7 +194,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 15372c21a35d9754eb92903b0f736f31, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 85df1f709a5747b44a481d14474a9490, type: 2}
   decodeBank: 0
   overrideLoadSetting: 0
   loadAsynchronous: 0
@@ -747,6 +747,14 @@ PrefabInstance:
       propertyPath: playAtmos.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: 48102705cf1768741b51bb2d8c9e3987, type: 2}
+    - target: {fileID: 421663544604815440, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
+      propertyPath: startAtmos.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 089bd2e4e714d544c9cc5efb623fe43b, type: 2}
+    - target: {fileID: 421663544604815440, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
+      propertyPath: playCurrentAtmos.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 0c9c86e1370c60f429a1d03ebe860155, type: 2}
     - target: {fileID: 2612409587306168315, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1912,6 +1920,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1179964364}
   - {fileID: 693357040}
+  - {fileID: 1043867199}
   - {fileID: 824610046}
   - {fileID: 2131771321}
   - {fileID: 810261368}
@@ -1922,4 +1931,3 @@ SceneRoots:
   - {fileID: 1053427892}
   - {fileID: 1114036956}
   - {fileID: 1807531890}
-  - {fileID: 1043867199}

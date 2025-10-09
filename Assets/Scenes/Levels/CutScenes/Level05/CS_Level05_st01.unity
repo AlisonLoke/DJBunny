@@ -131,6 +131,14 @@ PrefabInstance:
       propertyPath: playAtmos.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: f995f60c4a9e3b846bc76e1570615055, type: 2}
+    - target: {fileID: 421663544604815440, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
+      propertyPath: startAtmos.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 089bd2e4e714d544c9cc5efb623fe43b, type: 2}
+    - target: {fileID: 421663544604815440, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
+      propertyPath: playCurrentAtmos.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 99aee9e1c5297df4dbc32305d26974e8, type: 2}
     - target: {fileID: 2612409587306168315, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -494,7 +502,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 15372c21a35d9754eb92903b0f736f31, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 85df1f709a5747b44a481d14474a9490, type: 2}
   decodeBank: 0
   overrideLoadSetting: 0
   loadAsynchronous: 0
@@ -528,8 +536,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
       propertyPath: dialogueLines.Array.data[2].line
-      value: "Give it all you\u2019ve got, cause once the jam ends, it\u2019s lights
-        out, til you spin it again, of course.\r"
+      value: "Give it all you\u2019ve got cause once the jam ends it\u2019s lights
+        out, til you spin it again of course.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
       propertyPath: dialogueLines.Array.data[3].line
