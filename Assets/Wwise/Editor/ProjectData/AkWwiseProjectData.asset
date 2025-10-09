@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1c2f7ea7e019e44081a8c815ce5a8e1e
     GuidInternal: 
-    m_lastTime: -8584416896215039532
+    m_lastTime: -8584415870467144508
     List:
     - name: KatMusicTest
       guid: 2eea2b311633a940b82e08d60148e83a
@@ -404,7 +404,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 60318edf19da10499ab787cbf746dcca
     GuidInternal: 
-    m_lastTime: -8584424393980507727
+    m_lastTime: -8584415870450267197
     List:
     - name: Lvl1
       guid: b50846f8bdea8744b8c1dbd79cc62c0f
@@ -1657,9 +1657,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Lvl3_Bg
-      guid: 553c0a9da58e6f40b23345e25d8a8740
-      id: 1043716922
+    - name: Lvl3_2
+      guid: de8fe861b51b3641b82295628400a628
+      id: 3867968799
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -1667,13 +1667,450 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Lvl3_1
+      - ElementName: Lvl3_2
         ObjectType: 4
-        guid: f3cc2aaa27a6474ea02002905cf1cecb
-      - ElementName: Lvl3_Bg
+        guid: de8fe861b51b3641b82295628400a628
+      Path: Events\Default Work Unit\Lvl3_2
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl3_2_BassPlay
+      guid: 7a7a762c8a99b7448b22bd8f97e80688
+      id: 3709306649
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl3_2
+        ObjectType: 4
+        guid: de8fe861b51b3641b82295628400a628
+      - ElementName: Lvl3_2_BassPlay
         ObjectType: 3
-        guid: 553c0a9da58e6f40b23345e25d8a8740
-      Path: Events\Default Work Unit\Lvl3_1\Lvl3_Bg
+        guid: 7a7a762c8a99b7448b22bd8f97e80688
+      Path: Events\Default Work Unit\Lvl3_2\Lvl3_2_BassPlay
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl3_2_BassPlay01
+      guid: ee57adc355620b488a3cc24bd1550c05
+      id: 3107613760
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl3_2
+        ObjectType: 4
+        guid: de8fe861b51b3641b82295628400a628
+      - ElementName: Lvl3_2_BassPlay01
+        ObjectType: 3
+        guid: ee57adc355620b488a3cc24bd1550c05
+      Path: Events\Default Work Unit\Lvl3_2\Lvl3_2_BassPlay01
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl3_2_End
+      guid: 46d7154df3a80641942ff9127ec3f318
+      id: 2716414849
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl3_2
+        ObjectType: 4
+        guid: de8fe861b51b3641b82295628400a628
+      - ElementName: Lvl3_2_End
+        ObjectType: 3
+        guid: 46d7154df3a80641942ff9127ec3f318
+      Path: Events\Default Work Unit\Lvl3_2\Lvl3_2_End
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl3_2_GuitarPlay
+      guid: 6ea6faabb5ccab45a2b8414d18cf6481
+      id: 2956608286
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl3_2
+        ObjectType: 4
+        guid: de8fe861b51b3641b82295628400a628
+      - ElementName: Lvl3_2_GuitarPlay
+        ObjectType: 3
+        guid: 6ea6faabb5ccab45a2b8414d18cf6481
+      Path: Events\Default Work Unit\Lvl3_2\Lvl3_2_GuitarPlay
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl3_2_GuitarStop
+      guid: 7c590b477e58044a93dea9f50be08ba4
+      id: 3952924640
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl3_2
+        ObjectType: 4
+        guid: de8fe861b51b3641b82295628400a628
+      - ElementName: Lvl3_2_GuitarStop
+        ObjectType: 3
+        guid: 7c590b477e58044a93dea9f50be08ba4
+      Path: Events\Default Work Unit\Lvl3_2\Lvl3_2_GuitarStop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl3_2_HarmonyPlay
+      guid: e3712d913259c540a29e2b38dc5ccebc
+      id: 1492357594
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl3_2
+        ObjectType: 4
+        guid: de8fe861b51b3641b82295628400a628
+      - ElementName: Lvl3_2_HarmonyPlay
+        ObjectType: 3
+        guid: e3712d913259c540a29e2b38dc5ccebc
+      Path: Events\Default Work Unit\Lvl3_2\Lvl3_2_HarmonyPlay
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl3_2_HarmonyStop
+      guid: 104f253b1fc2734b8f8f6cf9c49c572e
+      id: 2891336676
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl3_2
+        ObjectType: 4
+        guid: de8fe861b51b3641b82295628400a628
+      - ElementName: Lvl3_2_HarmonyStop
+        ObjectType: 3
+        guid: 104f253b1fc2734b8f8f6cf9c49c572e
+      Path: Events\Default Work Unit\Lvl3_2\Lvl3_2_HarmonyStop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl3_2_KickPlay
+      guid: 3f0f50f717ed4c44a474fb7c6f564f33
+      id: 3376480374
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl3_2
+        ObjectType: 4
+        guid: de8fe861b51b3641b82295628400a628
+      - ElementName: Lvl3_2_KickPlay
+        ObjectType: 3
+        guid: 3f0f50f717ed4c44a474fb7c6f564f33
+      Path: Events\Default Work Unit\Lvl3_2\Lvl3_2_KickPlay
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl3_2_KickStop
+      guid: 33fb64fd3f53144aa929e3cebfb640bc
+      id: 4148594184
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl3_2
+        ObjectType: 4
+        guid: de8fe861b51b3641b82295628400a628
+      - ElementName: Lvl3_2_KickStop
+        ObjectType: 3
+        guid: 33fb64fd3f53144aa929e3cebfb640bc
+      Path: Events\Default Work Unit\Lvl3_2\Lvl3_2_KickStop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl3_2_KnockPlay
+      guid: e028d4beda4c3949ae2a9a45030bb816
+      id: 1137860708
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl3_2
+        ObjectType: 4
+        guid: de8fe861b51b3641b82295628400a628
+      - ElementName: Lvl3_2_KnockPlay
+        ObjectType: 3
+        guid: e028d4beda4c3949ae2a9a45030bb816
+      Path: Events\Default Work Unit\Lvl3_2\Lvl3_2_KnockPlay
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl3_2_KnockStop
+      guid: c1f05d3bc9665f43bddd193c77dbbcfc
+      id: 3910411102
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl3_2
+        ObjectType: 4
+        guid: de8fe861b51b3641b82295628400a628
+      - ElementName: Lvl3_2_KnockStop
+        ObjectType: 3
+        guid: c1f05d3bc9665f43bddd193c77dbbcfc
+      Path: Events\Default Work Unit\Lvl3_2\Lvl3_2_KnockStop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl3_2_MelodyPlay
+      guid: 7fd28f1d17b3d047922ebc9609e5bcb6
+      id: 787537544
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl3_2
+        ObjectType: 4
+        guid: de8fe861b51b3641b82295628400a628
+      - ElementName: Lvl3_2_MelodyPlay
+        ObjectType: 3
+        guid: 7fd28f1d17b3d047922ebc9609e5bcb6
+      Path: Events\Default Work Unit\Lvl3_2\Lvl3_2_MelodyPlay
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl3_2_MelodyStop
+      guid: dcc389e857e1c04aa400b309d53d4038
+      id: 3165104890
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl3_2
+        ObjectType: 4
+        guid: de8fe861b51b3641b82295628400a628
+      - ElementName: Lvl3_2_MelodyStop
+        ObjectType: 3
+        guid: dcc389e857e1c04aa400b309d53d4038
+      Path: Events\Default Work Unit\Lvl3_2\Lvl3_2_MelodyStop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl3_2_Rhyth1Play
+      guid: 407b94b1e2b30a468706284c12cfecff
+      id: 198484192
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl3_2
+        ObjectType: 4
+        guid: de8fe861b51b3641b82295628400a628
+      - ElementName: Lvl3_2_Rhyth1Play
+        ObjectType: 3
+        guid: 407b94b1e2b30a468706284c12cfecff
+      Path: Events\Default Work Unit\Lvl3_2\Lvl3_2_Rhyth1Play
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl3_2_Rhyth1Stop
+      guid: 934e5b6713ed514e94becbd9568c473c
+      id: 2836813666
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl3_2
+        ObjectType: 4
+        guid: de8fe861b51b3641b82295628400a628
+      - ElementName: Lvl3_2_Rhyth1Stop
+        ObjectType: 3
+        guid: 934e5b6713ed514e94becbd9568c473c
+      Path: Events\Default Work Unit\Lvl3_2\Lvl3_2_Rhyth1Stop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl3_2_Rhyth2Play
+      guid: 2c47c2b4ff5f9f43a85031f19640e0c2
+      id: 4138102315
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl3_2
+        ObjectType: 4
+        guid: de8fe861b51b3641b82295628400a628
+      - ElementName: Lvl3_2_Rhyth2Play
+        ObjectType: 3
+        guid: 2c47c2b4ff5f9f43a85031f19640e0c2
+      Path: Events\Default Work Unit\Lvl3_2\Lvl3_2_Rhyth2Play
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl3_2_Rhyth2Stop
+      guid: 28ee035927f63c4ebbee357e1349e69a
+      id: 2960765633
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl3_2
+        ObjectType: 4
+        guid: de8fe861b51b3641b82295628400a628
+      - ElementName: Lvl3_2_Rhyth2Stop
+        ObjectType: 3
+        guid: 28ee035927f63c4ebbee357e1349e69a
+      Path: Events\Default Work Unit\Lvl3_2\Lvl3_2_Rhyth2Stop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl3_2_Scrapeplay
+      guid: e96aaf5edaec094c9f308e9cfc6bf91c
+      id: 3765250092
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl3_2
+        ObjectType: 4
+        guid: de8fe861b51b3641b82295628400a628
+      - ElementName: Lvl3_2_Scrapeplay
+        ObjectType: 3
+        guid: e96aaf5edaec094c9f308e9cfc6bf91c
+      Path: Events\Default Work Unit\Lvl3_2\Lvl3_2_Scrapeplay
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl3_2_ScrapeStop
+      guid: 7e3469bf9a57394e8703a8e1bbbf27fe
+      id: 1440067382
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl3_2
+        ObjectType: 4
+        guid: de8fe861b51b3641b82295628400a628
+      - ElementName: Lvl3_2_ScrapeStop
+        ObjectType: 3
+        guid: 7e3469bf9a57394e8703a8e1bbbf27fe
+      Path: Events\Default Work Unit\Lvl3_2\Lvl3_2_ScrapeStop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl3_2_Start
+      guid: e64f1108262c084688cd0017ed25d6e1
+      id: 3374273650
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl3_2
+        ObjectType: 4
+        guid: de8fe861b51b3641b82295628400a628
+      - ElementName: Lvl3_2_Start
+        ObjectType: 3
+        guid: e64f1108262c084688cd0017ed25d6e1
+      Path: Events\Default Work Unit\Lvl3_2\Lvl3_2_Start
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl3_2_TecxStop
+      guid: 81f0179db38fe245a99abd313338602b
+      id: 1061742814
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl3_2
+        ObjectType: 4
+        guid: de8fe861b51b3641b82295628400a628
+      - ElementName: Lvl3_2_TecxStop
+        ObjectType: 3
+        guid: 81f0179db38fe245a99abd313338602b
+      Path: Events\Default Work Unit\Lvl3_2\Lvl3_2_TecxStop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lvl3_2_TexStop
+      guid: ee44dec6966ba64fae16ef938459a9ec
+      id: 2947848697
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl3_2
+        ObjectType: 4
+        guid: de8fe861b51b3641b82295628400a628
+      - ElementName: Lvl3_2_TexStop
+        ObjectType: 3
+        guid: ee44dec6966ba64fae16ef938459a9ec
+      Path: Events\Default Work Unit\Lvl3_2\Lvl3_2_TexStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2828,7 +3265,7 @@ MonoBehaviour:
         guid: f703d7b29405cc43aaf875ea0d84041c
       Path: Triggers\Default Work Unit\Lvl2_1_SnareStop
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 010000000300000005000000060000000700000008000000090000000c0000000d0000001100000012000000130000001700000018000000190000001b0000001d0000001e0000001f0000002000000021000000260000002700000044000000450000001b0100001c010000ab010000ac010000ea010000eb0100000e0200009e0200003003000031030000320300005c0d00005d0d0000270e0000
+  ExpandedWaapiItemIds: 010000000300000005000000060000000700000008000000090000000c0000000d0000001100000012000000130000001700000018000000190000001b0000001d0000001e0000001f000000200000002100000026000000270000004400000045000000de000000ec0000001b0100001c010000ab010000ac010000ea010000eb0100000e0200009e0200003003000031030000320300005c0d00005d0d0000270e0000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

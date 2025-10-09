@@ -154,7 +154,7 @@ PrefabInstance:
     - target: {fileID: 6116093346985028512, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: blockData
       value: 
-      objectReference: {fileID: 11400000, guid: 1679eb16912e67f4fac3061d0daf5bb0, type: 2}
+      objectReference: {fileID: 11400000, guid: ae6d8c0ba61f06b4995450beaadfe042, type: 2}
     - target: {fileID: 6116093346985028512, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: gridParent
       value: 
@@ -714,6 +714,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 3542472544675815736}
     m_Modifications:
     - target: {fileID: 315326269192149421, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
+      propertyPath: blockData
+      value: 
+      objectReference: {fileID: 11400000, guid: 61788af62cfec3a4f902fcf533d8c231, type: 2}
+    - target: {fileID: 315326269192149421, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
       propertyPath: gridParent
       value: 
       objectReference: {fileID: 2835731695588692762}
@@ -1051,6 +1055,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.98823535
       objectReference: {fileID: 0}
+    - target: {fileID: 6702226210742935298, guid: 95dd5e52fcb2ec74bbe194ac928e6bb6, type: 3}
+      propertyPath: blockData
+      value: 
+      objectReference: {fileID: 11400000, guid: 47b4a71130c1fed42a9347b97d421c48, type: 2}
     - target: {fileID: 6702226210742935298, guid: 95dd5e52fcb2ec74bbe194ac928e6bb6, type: 3}
       propertyPath: gridParent
       value: 
@@ -1601,11 +1609,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5993523896433815721, guid: 5accc1d11f8a3854a8b1c867ea8fa3e8, type: 3}
+      propertyPath: PlayMusic.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 9ae1141820514584981d4c6646f50f62, type: 2}
+    - target: {fileID: 5993523896433815721, guid: 5accc1d11f8a3854a8b1c867ea8fa3e8, type: 3}
+      propertyPath: EndLevelMusic.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 3af862f0adaed2944becc3ad9fed97a5, type: 2}
+    - target: {fileID: 5993523896433815721, guid: 5accc1d11f8a3854a8b1c867ea8fa3e8, type: 3}
+      propertyPath: StartLevelMusic.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: bb79a4e60bc5c40478251fd22b8f026c, type: 2}
+    - target: {fileID: 5993523896433815721, guid: 5accc1d11f8a3854a8b1c867ea8fa3e8, type: 3}
+      propertyPath: currentLevelMusicEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: bb79a4e60bc5c40478251fd22b8f026c, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5accc1d11f8a3854a8b1c867ea8fa3e8, type: 3}
+--- !u!1 &1243869302 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 121991345401876096, guid: 5accc1d11f8a3854a8b1c867ea8fa3e8, type: 3}
+  m_PrefabInstance: {fileID: 1243869301}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1353128373
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1622,6 +1651,18 @@ PrefabInstance:
       propertyPath: gridData
       value: 
       objectReference: {fileID: 11400000, guid: 94f27635cf91af74891f5a8181df0960, type: 2}
+    - target: {fileID: 2685476396588401627, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+      propertyPath: musicManager
+      value: 
+      objectReference: {fileID: 1243869302}
+    - target: {fileID: 2685476396588401627, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+      propertyPath: levelStopMusic.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 3af862f0adaed2944becc3ad9fed97a5, type: 2}
+    - target: {fileID: 2685476396588401627, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+      propertyPath: levelStartMusic.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: bb79a4e60bc5c40478251fd22b8f026c, type: 2}
     - target: {fileID: 6989203491967808597, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2095,7 +2136,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2123677883}
   - component: {fileID: 2123677885}
-  - component: {fileID: 2123677884}
   - component: {fileID: 2123677886}
   m_Layer: 0
   m_Name: WwiseGlobal
@@ -2119,31 +2159,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2123677884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2123677881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4be27bfebb0c4f148a44e94c2edc7550, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: ae8d9d44
-  useOtherObject: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 15372c21a35d9754eb92903b0f736f31, type: 2}
-  decodeBank: 0
-  overrideLoadSetting: 0
-  loadAsynchronous: 0
-  saveDecodedBank: 0
-  unloadTriggerList: 958ca0ea
-  bankNameInternal: 
-  valueGuidInternal: 
 --- !u!114 &2123677885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2458,7 +2473,7 @@ PrefabInstance:
     - target: {fileID: 6116093346985028512, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: blockData
       value: 
-      objectReference: {fileID: 11400000, guid: 1679eb16912e67f4fac3061d0daf5bb0, type: 2}
+      objectReference: {fileID: 11400000, guid: bb8ec39012931a74083f66f8059ab251, type: 2}
     - target: {fileID: 6116093346985028512, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: gridParent
       value: 
@@ -2848,7 +2863,7 @@ PrefabInstance:
     - target: {fileID: 6116093346985028512, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: blockData
       value: 
-      objectReference: {fileID: 11400000, guid: 1679eb16912e67f4fac3061d0daf5bb0, type: 2}
+      objectReference: {fileID: 11400000, guid: e56d7de7a1c75e443964a00e92b2e555, type: 2}
     - target: {fileID: 6116093346985028512, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
       propertyPath: gridParent
       value: 

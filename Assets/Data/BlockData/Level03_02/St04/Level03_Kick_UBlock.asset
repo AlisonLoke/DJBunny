@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e7e63b03d3ea3a4dac14a8664b09b92, type: 3}
+  m_Name: Level03_Kick_UBlock
+  m_EditorClassIdentifier: 
+  BlockName: UBlock
+  BlockPrefab: {fileID: 3525030621653700591, guid: 95dd5e52fcb2ec74bbe194ac928e6bb6, type: 3}
+  BlockCoordinatesList:
+  - {x: 1, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 1}
+  - {x: 0, y: 2}
+  - {x: 1, y: 2}
+  PlayInstrument:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5cdda20cc9c67e34fa0c5641a3d2d1bd, type: 2}
+  MuteInstrument:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 10934435ef823a445901d6e2af73ee54, type: 2}
+  genre: 0
