@@ -1628,11 +1628,11 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Lvl3_2_BassPlay01" ID="{C3AD57EE-6255-480B-8A3C-C24BD1550C05}">
+						<Event Name="Lvl3_2_BassStop" ID="{C3AD57EE-6255-480B-8A3C-C24BD1550C05}">
 							<ChildrenList>
 								<Action Name="" ID="{4E9C4867-FCB2-48EC-B506-BEB16BB60962}" ShortID="261834022">
 									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="5"/>
+										<Property Name="ActionType" Type="int16" Value="4"/>
 										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
 									</PropertyList>
 									<ReferenceList>
@@ -1643,11 +1643,11 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Lvl3_2_TecxStop" ID="{9D17F081-8FB3-45E2-A99A-BD313338602B}">
+						<Event Name="Lvl3_2_TexPlay" ID="{9D17F081-8FB3-45E2-A99A-BD313338602B}">
 							<ChildrenList>
 								<Action Name="" ID="{E715224C-7EA6-44DA-B5C1-E661D653E245}" ShortID="1008079702">
 									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="4"/>
+										<Property Name="ActionType" Type="int16" Value="5"/>
 										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
 									</PropertyList>
 									<ReferenceList>
