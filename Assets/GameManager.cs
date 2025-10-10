@@ -9,9 +9,9 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-
-    public void OnPlayerFail()
+    public void RestartLastLevel()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("CS_Level05_st01");
     }
+
 }

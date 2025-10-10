@@ -176,6 +176,10 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
+    public void RestartLastLevel()
+    {
+        SceneManager.LoadScene("CS_Level05_st01");
+    }
     private IEnumerator LoadFailScene()
     {
         SceneTransition.Instance.StartCutSceneSceneTransition();
@@ -185,6 +189,7 @@ public class LevelManager : MonoBehaviour
 
     public void OnPlayerFail()
     {
-        SceneManager.LoadScene("MainMenu");
+        //Level Manager takes you back to Main Menu 
+        SceneManager.LoadScene("ReplayMenu");
     }
 }
