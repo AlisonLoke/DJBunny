@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
     private void Flip()
     {
         Vector2 direction = targetPosition - rb.position;
-        if ((isFacingRignt && direction.x < 0) || (!isFacingRignt && direction.x > 0))
+        if ((isFacingRignt && direction.x > 0) || (!isFacingRignt && direction.x < 0))
         {
             isFacingRignt = !isFacingRignt;
             transform.Rotate(0f, 180f, 0f);
