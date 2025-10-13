@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{24638E55-9864-4EFD-AA33-318C83DEBEF8}" SchemaVersion="123">
+	<Events>
+		<WorkUnit Name="Dialogue" ID="{24638E55-9864-4EFD-AA33-318C83DEBEF8}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Dialogue_Normal_Play" ID="{98BF7360-E237-4C5F-8D0E-733334345D9F}">
+					<ChildrenList>
+						<Action Name="" ID="{A407FD65-8876-4BD1-92F7-A8A9C9CED3A1}" ShortID="46182945">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Neutral" ID="{615F1F78-386F-4566-B14D-DD8DE3479C13}" WorkUnitID="{CBCAD006-C04E-48CB-9EA4-078A80A3221F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Dialogue_Normal_Break" ID="{7C711844-8FC9-4CC8-8F82-9994789C365A}">
+					<ChildrenList>
+						<Action Name="" ID="{ACBA0ED7-5AF9-4CDF-A6EF-273345498562}" ShortID="349229097">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="34"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Neutral" ID="{615F1F78-386F-4566-B14D-DD8DE3479C13}" WorkUnitID="{CBCAD006-C04E-48CB-9EA4-078A80A3221F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

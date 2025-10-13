@@ -205,6 +205,21 @@
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
+				<SoundcasterSession Name="Dialogue" ID="{2D4757E8-0790-473F-B7B4-926757AEAEBE}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Dialogue_Normal_Play" ID="{98BF7360-E237-4C5F-8D0E-733334345D9F}" WorkUnitID="{24638E55-9864-4EFD-AA33-318C83DEBEF8}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Dialogue_Normal_Break" ID="{7C711844-8FC9-4CC8-8F82-9994789C365A}" WorkUnitID="{24638E55-9864-4EFD-AA33-318C83DEBEF8}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundcasterSessions>
