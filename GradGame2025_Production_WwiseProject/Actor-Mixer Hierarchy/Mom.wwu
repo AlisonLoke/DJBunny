@@ -1,6 +1,545 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{A9BB3ACD-49A0-4DCD-BEEE-B1A83B4708EE}" SchemaVersion="123" RootDocumentID="{8B8B9163-3C97-4C38-BFFA-2B3AF56B8CE0}" ParentDocumentID="{8B8B9163-3C97-4C38-BFFA-2B3AF56B8CE0}">
 	<AudioObjects>
-		<WorkUnit Name="Mom" ID="{A9BB3ACD-49A0-4DCD-BEEE-B1A83B4708EE}" OwnerID="{8B8B9163-3C97-4C38-BFFA-2B3AF56B8CE0}" PersistMode="Nested"/>
+		<WorkUnit Name="Mom" ID="{A9BB3ACD-49A0-4DCD-BEEE-B1A83B4708EE}" OwnerID="{8B8B9163-3C97-4C38-BFFA-2B3AF56B8CE0}" PersistMode="Nested">
+			<ChildrenList>
+				<RandomSequenceContainer Name="Mom" ID="{4BF32B19-0F7A-4248-A057-C0CF07B4C8F2}" ShortID="332353868">
+					<PropertyList>
+						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="KATHRINE BABBLES MUM STINGERS_1" ID="{2377CCCF-D681-451E-BA4D-56868B770EAF}" ShortID="480335640">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{5CBB8E05-0FF8-4702-BA51-DB4849A303A4}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.307942175358398"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.662406521596972"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES MUM STINGERS_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="22850961"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{5CBB8E05-0FF8-4702-BA51-DB4849A303A4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES MUM STINGERS_01" ID="{4C07BD5A-85A9-41BB-93FA-83EA293F0F29}" ShortID="858122235">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{FBDC36E5-B60F-4A48-BE88-B5CF24045569}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.02775491779335"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.93795704311774"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES MUM STINGERS_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="482023060"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{FBDC36E5-B60F-4A48-BE88-B5CF24045569}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES MUM STINGERS_02" ID="{6D4753D0-583A-4E9E-A636-D6FC0A9ACDCB}" ShortID="1071448053">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{E10AF157-16B5-4A6C-835D-3427BB4D13F4}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0768505957364378"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0640421631136983"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2.38544877580376"/>
+										<Property Name="TrimEnd" Type="Real64" Value="3.1838682164206"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES MUM STINGERS_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="811902580"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{E10AF157-16B5-4A6C-835D-3427BB4D13F4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES MUM STINGERS_03" ID="{3D3EB407-763F-4A61-ACFE-578C45C55419}" ShortID="385332523">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{C48D40AA-2A6F-4CFC-BAC2-BAF7A1164787}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0768505957364378"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0640421631136983"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="3.1423107035111"/>
+										<Property Name="TrimEnd" Type="Real64" Value="3.60887529890241"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES MUM STINGERS_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="334350073"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{C48D40AA-2A6F-4CFC-BAC2-BAF7A1164787}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES MUM STINGERS_04" ID="{4EE0CC4B-22E3-4E9B-B3DF-86B57983856E}" ShortID="1028689923">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{E809B2D4-B372-4044-A22D-573E3D1AAAD7}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0768505957364378"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0640421631136983"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="3.56572996376696"/>
+										<Property Name="TrimEnd" Type="Real64" Value="4.32339530058417"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES MUM STINGERS_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="340148523"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{E809B2D4-B372-4044-A22D-573E3D1AAAD7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES MUM STINGERS_05" ID="{44AFC92E-BA37-4EA3-8D3A-FFBC378301E3}" ShortID="514207471">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{538D55FB-F7C6-45A0-A5FD-B82969459189}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0768505957364378"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0640421631136983"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="4.72050976446475"/>
+										<Property Name="TrimEnd" Type="Real64" Value="5.14136432607844"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES MUM STINGERS_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="412475602"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{538D55FB-F7C6-45A0-A5FD-B82969459189}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES MUM STINGERS_06" ID="{757C6310-AD7D-4DCC-9D10-617115876635}" ShortID="1037500743">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{6C5181A3-409D-482C-94A7-A94447B55A43}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0768505957364378"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0640421631136983"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="5.33976043258894"/>
+										<Property Name="TrimEnd" Type="Real64" Value="6.48042773663758"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES MUM STINGERS_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="295536467"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{6C5181A3-409D-482C-94A7-A94447B55A43}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES MUM STINGERS_07" ID="{EED80DB5-F9AC-446D-9A4D-207CA3701DB2}" ShortID="302062945">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{95C8C3B5-7714-443E-A263-BF9FF791DEBE}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0768505957364378"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0640421631136983"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="6.96707179730801"/>
+										<Property Name="TrimEnd" Type="Real64" Value="7.52655647109984"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES MUM STINGERS_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="807642726"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{95C8C3B5-7714-443E-A263-BF9FF791DEBE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES MUM STINGERS_08" ID="{03979F86-CC37-4A52-8115-F452A020076E}" ShortID="660381241">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{A27FEDDF-5DE0-4424-9D0D-4B859CAE5E4B}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0768505957364378"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0640421631136983"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="7.83164099934293"/>
+										<Property Name="TrimEnd" Type="Real64" Value="8.48718891780532"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES MUM STINGERS_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="521050773"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{A27FEDDF-5DE0-4424-9D0D-4B859CAE5E4B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES MUM STINGERS_09" ID="{0D504F1B-8F56-4028-9499-6AC8E948D8A5}" ShortID="637853036">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{DD03A364-2D40-4087-BB20-9D6BA0C1C5CC}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0768505957364378"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0640421631136983"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="9.00809553574157"/>
+										<Property Name="TrimEnd" Type="Real64" Value="9.80453621305409"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES MUM STINGERS_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1040206195"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{DD03A364-2D40-4087-BB20-9D6BA0C1C5CC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES MUM STINGERS_10" ID="{9B715711-B3F0-4370-9162-06A8F81B52B1}" ShortID="146113204">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{8F235AAE-8D46-4C91-B3E9-3AE4C195D8AA}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0768505957364378"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0640421631136983"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="10.5579158830931"/>
+										<Property Name="TrimEnd" Type="Real64" Value="11.4600261295432"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES MUM STINGERS_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="381085801"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{8F235AAE-8D46-4C91-B3E9-3AE4C195D8AA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES MUM STINGERS_11" ID="{29BD1DF4-7CE1-47E9-8096-65B58E11E6D6}" ShortID="1023306271">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{6DB4D44B-1240-4E36-BE4C-7AAAF992E72E}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0768505957364378"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0640421631136983"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="11.713089977195"/>
+										<Property Name="TrimEnd" Type="Real64" Value="12.1923239927685"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES MUM STINGERS_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="523995820"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{6DB4D44B-1240-4E36-BE4C-7AAAF992E72E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES MUM STINGERS_12" ID="{3A979CBB-70E2-4A12-9EB7-1AF67A280691}" ShortID="703150106">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{AB5BD33D-9298-432E-8BEB-CE92B25D2A35}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0768505957364378"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0640421631136983"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="12.4623832856253"/>
+										<Property Name="TrimEnd" Type="Real64" Value="13.2938491983241"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES MUM STINGERS_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="338072895"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{AB5BD33D-9298-432E-8BEB-CE92B25D2A35}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES MUM STINGERS_13" ID="{19C3BACA-9AAD-4B6B-8D8B-F37F3C3EC37B}" ShortID="199341617">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{E089F35A-9FB9-4F15-BE9A-3EB8120ABBE5}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0768505957364378"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0640421631136983"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="14.5465442605822"/>
+										<Property Name="TrimEnd" Type="Real64" Value="15.3405701557668"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES MUM STINGERS_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="327519813"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{E089F35A-9FB9-4F15-BE9A-3EB8120ABBE5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES MUM STINGERS_14" ID="{373A8F2F-EE6A-4EAE-AE94-E9B15BA77DBE}" ShortID="69755115">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{63B3F9BB-6D9A-430B-88EC-7D15B5620124}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0768505957364378"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0640421631136983"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="16.0602681159968"/>
+										<Property Name="TrimEnd" Type="Real64" Value="17.2618350491778"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES MUM STINGERS_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="754648494"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{63B3F9BB-6D9A-430B-88EC-7D15B5620124}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES MUM STINGERS_15" ID="{3E601E03-869E-441C-AD29-2C52878142EB}" ShortID="943521971">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{860C84FC-746D-4F76-B131-8FB934FA55A4}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0768505957364378"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0640421631136983"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="17.9742962449759"/>
+										<Property Name="TrimEnd" Type="Real64" Value="18.4784440218487"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES MUM STINGERS_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="299375063"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{860C84FC-746D-4F76-B131-8FB934FA55A4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES MUM STINGERS_16" ID="{E7677400-6945-4632-B242-F4D366E79AFD}" ShortID="771685588">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{C4FDF4BA-2268-4487-8981-92FEE045C32C}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0768505957364378"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0640421631136983"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="18.4362081652551"/>
+										<Property Name="TrimEnd" Type="Real64" Value="19.1809350672732"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES MUM STINGERS_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="603661817"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{C4FDF4BA-2268-4487-8981-92FEE045C32C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES MUM STINGERS_17" ID="{866028BC-F49E-410D-AD21-4C4AC49FB1D5}" ShortID="826044923">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{AD69341B-8CC5-465A-B7E2-FA95DE298334}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0768505957364378"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0640421631136983"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="19.5134820840127"/>
+										<Property Name="TrimEnd" Type="Real64" Value="20.1642186441258"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES MUM STINGERS_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="619963534"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES MUM STINGERS_1" ID="{AD69341B-8CC5-465A-B7E2-FA95DE298334}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

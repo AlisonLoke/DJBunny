@@ -1,6 +1,300 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{B9489D13-2D1C-46F5-9BCB-A01F995677CE}" SchemaVersion="123" RootDocumentID="{8B8B9163-3C97-4C38-BFFA-2B3AF56B8CE0}" ParentDocumentID="{8B8B9163-3C97-4C38-BFFA-2B3AF56B8CE0}">
 	<AudioObjects>
-		<WorkUnit Name="Sad" ID="{B9489D13-2D1C-46F5-9BCB-A01F995677CE}" OwnerID="{8B8B9163-3C97-4C38-BFFA-2B3AF56B8CE0}" PersistMode="Nested"/>
+		<WorkUnit Name="Sad" ID="{B9489D13-2D1C-46F5-9BCB-A01F995677CE}" OwnerID="{8B8B9163-3C97-4C38-BFFA-2B3AF56B8CE0}" PersistMode="Nested">
+			<ChildrenList>
+				<RandomSequenceContainer Name="Sad" ID="{0E51A70A-F955-46E5-9C02-856A2144BAA3}" ShortID="248787737">
+					<PropertyList>
+						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="KATHRINE BABBLES SAD_1" ID="{3B82F873-C520-4C84-AE36-1E99E1F4C77F}" ShortID="162754548">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES SAD_1" ID="{0FAD3F4D-DFCE-4552-A984-E1E728F34210}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.06916128155616"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.99673731079318"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES SAD_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="135990482"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES SAD_1" ID="{0FAD3F4D-DFCE-4552-A984-E1E728F34210}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES SAD_01" ID="{0D976E6E-151E-4763-95D4-2D166F63D0E9}" ShortID="879758373">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES SAD_1" ID="{EB9AD5F6-3363-49BB-BD5E-0B7BA1355BE0}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.164362470511952"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.763457060394601"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES SAD_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1030824902"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES SAD_1" ID="{EB9AD5F6-3363-49BB-BD5E-0B7BA1355BE0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES SAD_02" ID="{3BB028DE-E968-4C10-BA64-E4ADB9D3D907}" ShortID="162333782">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES SAD_1" ID="{0543E66E-3DEF-4622-8D94-A52B7F5E4150}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.125552918126894"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="3.12890976875622"/>
+										<Property Name="TrimEnd" Type="Real64" Value="4.42859658756318"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES SAD_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="412681968"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES SAD_1" ID="{0543E66E-3DEF-4622-8D94-A52B7F5E4150}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES SAD_03" ID="{FB29ABB0-6030-4BF0-BEDA-F83BC641451D}" ShortID="808999865">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES SAD_1" ID="{845D27DE-BE74-44B4-AF62-D350E8A2B2B6}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.125552918126894"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="7.60662387136503"/>
+										<Property Name="TrimEnd" Type="Real64" Value="9.3839335277836"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES SAD_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="786537987"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES SAD_1" ID="{845D27DE-BE74-44B4-AF62-D350E8A2B2B6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES SAD_04" ID="{098FED6E-04DE-4EE4-9697-39DCDF46A8B1}" ShortID="682586147">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES SAD_1" ID="{B4F33530-3E8C-442E-B693-72632F6C6F67}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.125552918126894"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="10.1167617321586"/>
+										<Property Name="TrimEnd" Type="Real64" Value="10.8168020406184"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES SAD_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="523041790"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES SAD_1" ID="{B4F33530-3E8C-442E-B693-72632F6C6F67}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES SAD_05" ID="{D5C02FEA-7C48-4237-971B-B93ABD321BBC}" ShortID="1072861131">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES SAD_1" ID="{C306B616-4FF4-4B4F-93DF-59C556F9F2D9}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="11.5969519254974"/>
+										<Property Name="TrimEnd" Type="Real64" Value="12.8161641469776"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES SAD_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1049852473"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES SAD_1" ID="{C306B616-4FF4-4B4F-93DF-59C556F9F2D9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES SAD_06" ID="{C1430465-D789-421B-88FC-4038770667EA}" ShortID="530887567">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES SAD_1" ID="{D19E2216-91EB-4EEF-89A6-CF9B1E47590B}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="13.3880375665409"/>
+										<Property Name="TrimEnd" Type="Real64" Value="14.4281412239167"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES SAD_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="481458548"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES SAD_1" ID="{D19E2216-91EB-4EEF-89A6-CF9B1E47590B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES SAD_07" ID="{0EF8DA19-32D8-4767-8865-B7931FAFF1AE}" ShortID="900924414">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES SAD_1" ID="{F1A7F654-F76B-4FE5-8613-2B1E4F0AC44E}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="16.2502795594934"/>
+										<Property Name="TrimEnd" Type="Real64" Value="17.9783411863543"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES SAD_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="374966704"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES SAD_1" ID="{F1A7F654-F76B-4FE5-8613-2B1E4F0AC44E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES SAD_08" ID="{8C9A8794-8082-4017-B583-865388D08537}" ShortID="905129077">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES SAD_1" ID="{0098E2EF-6EF2-4A18-BBED-FE5FBDA5DBD9}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="19.9138638252643"/>
+										<Property Name="TrimEnd" Type="Real64" Value="20.8006579540592"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES SAD_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="38498817"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES SAD_1" ID="{0098E2EF-6EF2-4A18-BBED-FE5FBDA5DBD9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES SAD_09" ID="{BF9E0518-FD74-4F8D-96A9-B5F35ADB3CE0}" ShortID="837217964">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES SAD_1" ID="{7264F3D6-DF33-449E-BDF1-23D9141FB0DB}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="21.5855437569049"/>
+										<Property Name="TrimEnd" Type="Real64" Value="22.8305550139086"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES SAD_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="619502203"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES SAD_1" ID="{7264F3D6-DF33-449E-BDF1-23D9141FB0DB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>
