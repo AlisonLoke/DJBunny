@@ -201,7 +201,7 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Lvl4_Dance" ID="{D34EE5F8-5FBB-4C1A-B002-AA3882A8141E}"/>
+						<CurrentStateRef Name="Lvl4" ID="{ACDDADA0-42C4-48E9-B6EB-E012007AF2F0}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
@@ -228,6 +228,10 @@
 							<Position X="0" Y="5"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Lvl4_Dist1Play" ID="{D02B00E8-68E2-4444-9505-B06F8921963F}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="0" Y="6"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Lvl4_Start" ID="{9DA547B0-4060-46AC-B5FF-C24FB38628ED}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
 							<Position X="1" Y="0"/>
 						</Module>
@@ -250,6 +254,10 @@
 						<Module>
 							<ObjectRef Name="Lvl4_TriangStop" ID="{EF535DAA-C886-4608-911C-3A31A0D5CBA0}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
 							<Position X="1" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lvl4_Dist1Stop" ID="{F447506E-928B-4E13-B884-890568CCE143}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="1" Y="6"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Lvl4_End" ID="{33C182C9-42E7-48B3-B2A8-D52DD5B5E005}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
@@ -276,6 +284,10 @@
 							<Position X="2" Y="5"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Lvl4_Dist2Play" ID="{699F2C7C-D47F-4286-98E4-ACC5C0C8169C}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="2" Y="6"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Lvl4_ChordStop" ID="{6A040B1D-8E5F-4D54-B952-A9D78176D3AB}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
 							<Position X="3" Y="1"/>
 						</Module>
@@ -296,6 +308,10 @@
 							<Position X="3" Y="5"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Lvl4_Dist2Stop" ID="{F4483BC1-B0EB-4C8B-B5C4-C2E9875CD372}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="3" Y="6"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Lvl4_CounterPlay" ID="{BAC6EF4D-2541-46B3-BD89-34610E4D6480}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
 							<Position X="4" Y="1"/>
 						</Module>
@@ -312,6 +328,10 @@
 							<Position X="4" Y="4"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Lvl4_Dist3Play" ID="{A313294D-3ADE-471B-B9EC-5EEF51E23D6A}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="4" Y="6"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Lvl4_CounterStop" ID="{D59C9B4E-0D50-4166-9FD9-58D388B6CD2D}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
 							<Position X="5" Y="1"/>
 						</Module>
@@ -322,6 +342,10 @@
 						<Module>
 							<ObjectRef Name="Lvl4_Pulse1Play" ID="{563DF9FB-652C-4F7B-9EA3-4B32501B9F1B}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
 							<Position X="5" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lvl4_Dist3Stop" ID="{A16CD9EA-A5E2-4C7B-8849-F6929F141BA8}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="5" Y="6"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
