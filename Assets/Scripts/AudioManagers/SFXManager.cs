@@ -1,9 +1,12 @@
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SFXManager : MonoBehaviour
 {
     public static SFXManager instance;
+    public AK.Wwise.Event PlayCompletion = null;
     [Header("Atmos")]
     [SerializeField] private AK.Wwise.Event startAtmos;
     [SerializeField] private AK.Wwise.Event playCurrentAtmos;
@@ -13,7 +16,10 @@ public class SFXManager : MonoBehaviour
     public AK.Wwise.Event PlayDrop = null;
     public AK.Wwise.Event PlayRotation = null;
 
-    public AK.Wwise.Event PlayCompletion = null;
+    [Header("DialogueSFX")]
+    [SerializeField] private AK.Wwise.Event playDialogueSfx;
+    [SerializeField] private AK.Wwise.Event stopDialogueSfx;
+    public bool allowDialogueSFX = true;
 
 
     private void Awake()
@@ -51,5 +57,22 @@ public class SFXManager : MonoBehaviour
             Debug.LogWarning($"[SFXManager] Scene '{scene.name}' No Atmos event assigned!");
         }
     }
+
+    public void TriggerDialogueSFX()
+    {
+        if (!allowDialogueSFX)
+        {
+            return;
+        }
+
+        playDialogueSfx.Post(gameObject);
+    }
+    public void StopDialogueSFXAtEnd()
+    {
+        stopDialogueSfx.Post(gameObject);
+    }
+
+    public void DisableDialogueSFX() => allowDialogueSFX = false;
+    public void EnableDialogueSFX() => allowDialogueSFX=true;
 }
 

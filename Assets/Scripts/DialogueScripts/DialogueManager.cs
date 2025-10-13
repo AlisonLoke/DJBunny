@@ -31,11 +31,13 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator TypeLine()
     {
         nameTag.text = dialogueLines[index].characterName;
+        SFXManager.instance.TriggerDialogueSFX(/*character*/);
         foreach (char character in dialogueLines[index].line.ToCharArray())
         {
             DialogueText.text += character;
             yield return new WaitForSeconds(textSpeed);
         }
+        SFXManager.instance.StopDialogueSFXAtEnd();
     }
     public void InteractToNextLine()
     {
@@ -47,7 +49,8 @@ public class DialogueManager : MonoBehaviour
         {
             StopAllCoroutines();
             DialogueText.text = dialogueLines[index].line;
-          
+            SFXManager.instance.StopDialogueSFXAtEnd();
+
         }
     }
     private void NextLine()
@@ -61,10 +64,10 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-           
+
             animator.SetBool("IsOpen", false);
             InputBlocker.Instance.DisableBlockInput();
-           
+
             Debug.Log("current music has stopped");
             if (LevelManager.Instance.isFailCutScene)
             {
@@ -72,13 +75,13 @@ public class DialogueManager : MonoBehaviour
             }
             else
             {
-                
+
                 LevelManager.Instance.GetNextCutScene();
             }
 
         }
     }
-    
+
     public void OnNodStart()
     {
         animator.SetBool("IsOpen", false);
