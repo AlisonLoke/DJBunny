@@ -404,7 +404,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 60318edf19da10499ab787cbf746dcca
     GuidInternal: 
-    m_lastTime: -8584412312738253229
+    m_lastTime: -8584412202815673555
     List:
     - name: Lvl1
       guid: b50846f8bdea8744b8c1dbd79cc62c0f
@@ -2753,8 +2753,93 @@ MonoBehaviour:
     ParentPath: Events\Dialogue
     guid: 558e63246498fd4eaa33318c83debef8
     GuidInternal: 
-    m_lastTime: -8584412367263930804
+    m_lastTime: -8584412202797219809
     List:
+    - name: Dialogue_All_Break
+      guid: 4eb6b71a1609fc4f9c425682f4fbeb6a
+      id: 64818519
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Dialogue
+        ObjectType: 12
+        guid: 558e63246498fd4eaa33318c83debef8
+      - ElementName: Dialogue_All_Break
+        ObjectType: 3
+        guid: 4eb6b71a1609fc4f9c425682f4fbeb6a
+      Path: Events\Dialogue\Dialogue_All_Break
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Dialogue_Excited_Break
+      guid: aaa4b06228f0f443aca71eb75fc02710
+      id: 2289190684
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Dialogue
+        ObjectType: 12
+        guid: 558e63246498fd4eaa33318c83debef8
+      - ElementName: Dialogue_Excited_Break
+        ObjectType: 3
+        guid: aaa4b06228f0f443aca71eb75fc02710
+      Path: Events\Dialogue\Dialogue_Excited_Break
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Dialogue_Excited_Play
+      guid: 266f6cbebc10eb4b84ae69a68649c2e2
+      id: 2504262045
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Dialogue
+        ObjectType: 12
+        guid: 558e63246498fd4eaa33318c83debef8
+      - ElementName: Dialogue_Excited_Play
+        ObjectType: 3
+        guid: 266f6cbebc10eb4b84ae69a68649c2e2
+      Path: Events\Dialogue\Dialogue_Excited_Play
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Dialogue_Mom_Break
+      guid: 33499593efd56940a7563b072f347a30
+      id: 1118844967
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Dialogue
+        ObjectType: 12
+        guid: 558e63246498fd4eaa33318c83debef8
+      - ElementName: Dialogue_Mom_Break
+        ObjectType: 3
+        guid: 33499593efd56940a7563b072f347a30
+      Path: Events\Dialogue\Dialogue_Mom_Break
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Dialogue_Mom_Play
+      guid: 5e564da589cb2b429cfd9db0f152385e
+      id: 3703302944
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Dialogue
+        ObjectType: 12
+        guid: 558e63246498fd4eaa33318c83debef8
+      - ElementName: Dialogue_Mom_Play
+        ObjectType: 3
+        guid: 5e564da589cb2b429cfd9db0f152385e
+      Path: Events\Dialogue\Dialogue_Mom_Play
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Dialogue_Normal_Break
       guid: 4418717cc98fc84c8f829994789c365a
       id: 3088671431
@@ -2787,8 +2872,42 @@ MonoBehaviour:
         guid: 6073bf9837e25f4c8d0e733334345d9f
       Path: Events\Dialogue\Dialogue_Normal_Play
       maxAttenuation: 0
-      maxDuration: 15.195563
-      minDuration: 15.195563
+      maxDuration: 0
+      minDuration: 0
+    - name: Dialogue_Sad_Break
+      guid: dd870d95ff73c843a9df6b179b746963
+      id: 137688710
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Dialogue
+        ObjectType: 12
+        guid: 558e63246498fd4eaa33318c83debef8
+      - ElementName: Dialogue_Sad_Break
+        ObjectType: 3
+        guid: dd870d95ff73c843a9df6b179b746963
+      Path: Events\Dialogue\Dialogue_Sad_Break
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Dialogue_Sad_Play
+      guid: 4f6a01a6c664ce499172df9ce96a7465
+      id: 2329179231
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Dialogue
+        ObjectType: 12
+        guid: 558e63246498fd4eaa33318c83debef8
+      - ElementName: Dialogue_Sad_Play
+        ObjectType: 3
+        guid: 4f6a01a6c664ce499172df9ce96a7465
+      Path: Events\Dialogue\Dialogue_Sad_Play
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events\Menu.wwu
     PathAndIcons:
     - ElementName: Events

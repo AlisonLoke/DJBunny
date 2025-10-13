@@ -413,12 +413,36 @@ MonoBehaviour:
     line: '* nods *'
     onLineStart:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 2053368853}
+          m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
+          m_MethodName: DisableDialogueSFX
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Tammy Lim
     line: "Hah\u2026.. that\u2019s chill. "
     onLineStart:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 2053368853}
+          m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
+          m_MethodName: EnableDialogueSFX
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &623062564
 GameObject:
   m_ObjectHideFlags: 0
@@ -2088,6 +2112,14 @@ PrefabInstance:
       propertyPath: playAtmos.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: 17aec461850427245812152a65b17400, type: 2}
+    - target: {fileID: 421663544604815440, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
+      propertyPath: playDialogueSfx.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 65d5f79894ea12145a43447404d0d3c3, type: 2}
+    - target: {fileID: 421663544604815440, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
+      propertyPath: stopDialogueSfx.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: b83aecc2907af6a4b8e2fbf963b420f3, type: 2}
     - target: {fileID: 2612409587306168315, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2137,6 +2169,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
+--- !u!114 &2053368853 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 421663544604815440, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
+  m_PrefabInstance: {fileID: 2053368852}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a529a51620810c409262620a76aa9a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2082592741
 GameObject:
   m_ObjectHideFlags: 0
