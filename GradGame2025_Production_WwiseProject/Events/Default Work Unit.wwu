@@ -1690,6 +1690,595 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Lvl4" ID="{62002EFD-E878-403E-BAD8-4534A583ED46}" ShortID="699533948">
+					<ChildrenList>
+						<Event Name="Lvl4_808Play" ID="{C989C895-313B-46FA-8FB1-E388F35DE945}">
+							<ChildrenList>
+								<Action Name="" ID="{1427F451-E193-4CD0-9001-FC1F386BE200}" ShortID="259370613">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_808_16_135" ID="{6A0DDD61-62AE-45D2-BA11-98443A62B0B1}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Lvl4_TriangStop" ID="{EF535DAA-C886-4608-911C-3A31A0D5CBA0}">
+							<ChildrenList>
+								<Action Name="" ID="{09C1736C-A3B2-4002-A07A-2C1ED288C3A4}" ShortID="188255268">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_TRIANG_16_135" ID="{E65508BB-C921-4547-B81C-978A4E368E02}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Lvl4_CounterPlay" ID="{BAC6EF4D-2541-46B3-BD89-34610E4D6480}">
+							<ChildrenList>
+								<Action Name="" ID="{B6DAAA36-BFC1-45D0-BFA9-87B7FCF5B806}" ShortID="44359369">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_COUNTER_16_135" ID="{0EC65D31-0DF5-48ED-93DD-E59FBBE0B8DA}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Lvl4_CounterStop" ID="{D59C9B4E-0D50-4166-9FD9-58D388B6CD2D}">
+							<ChildrenList>
+								<Action Name="" ID="{D514C1AE-50DC-4449-A444-074C0901E1D2}" ShortID="816902908">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_COUNTER_16_135" ID="{0EC65D31-0DF5-48ED-93DD-E59FBBE0B8DA}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Lvl4_MelodyPlay" ID="{0610DA4E-A1F3-4DFD-BB66-213EB63E3F48}">
+							<ChildrenList>
+								<Action Name="" ID="{6EC0EA7D-8064-4DA0-BC97-56539A311343}" ShortID="170597959">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_MEL_16_135" ID="{273B8DE2-B8F9-4B48-A8D1-1D388B9BFB72}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Lvl4_MelodyStop" ID="{2976F818-9078-4C78-BC44-AC69BB42FB32}">
+							<ChildrenList>
+								<Action Name="" ID="{8BE78E32-52C7-4B72-9C5D-B668268F596E}" ShortID="449446146">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_MEL_16_135" ID="{273B8DE2-B8F9-4B48-A8D1-1D388B9BFB72}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Lvl4_End" ID="{33C182C9-42E7-48B3-B2A8-D52DD5B5E005}">
+							<ChildrenList>
+								<Action Name="" ID="{50BC8D54-B849-4E36-AD6D-820CFA53C5BC}" ShortID="1067300753">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_Dance" ID="{D34EE5F8-5FBB-4C1A-B002-AA3882A8141E}" WorkUnitID="{5F9035CE-D633-4D77-AFAC-532B6A139962}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Lvl4_ChordPlay" ID="{832C514B-C42C-4AF6-9963-EDE3D1AB8974}">
+							<ChildrenList>
+								<Action Name="" ID="{69C94B16-4F21-44E2-92A2-3C2CDF6BEBD9}" ShortID="110112196">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_CHORD_16_135" ID="{73C8ADD8-EF2C-4B3F-A49D-A71743BE1401}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Lvl4_ChordStop" ID="{6A040B1D-8E5F-4D54-B952-A9D78176D3AB}">
+							<ChildrenList>
+								<Action Name="" ID="{CEE30467-5AB2-4542-9C42-75DE97DD7E4E}" ShortID="609131664">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_CHORD_16_135" ID="{73C8ADD8-EF2C-4B3F-A49D-A71743BE1401}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Lvl4_Hat2Play" ID="{E71EDEDA-B562-4C07-8BEC-C181ABC7498F}">
+							<ChildrenList>
+								<Action Name="" ID="{B8373CA9-A258-4514-AE00-2D5DC1B8C1A8}" ShortID="674121058">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_HAT 2_16_135" ID="{1490F78D-0576-4C62-8438-857E24C5F20D}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Lvl4_Hat2Stop" ID="{07537DE1-1F84-44FF-A3F0-B9C6BF458C07}">
+							<ChildrenList>
+								<Action Name="" ID="{60CAEC1F-D30A-4339-AD9A-84C036E00A2D}" ShortID="917171373">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_HAT 2_16_135" ID="{1490F78D-0576-4C62-8438-857E24C5F20D}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Lvl4_KickPlay" ID="{02719B04-1E95-4347-A838-EB013C44F735}">
+							<ChildrenList>
+								<Action Name="" ID="{1BD28E4A-EFB1-4E08-B9CA-37EB8C81DA9E}" ShortID="218754176">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_KICK_16_135" ID="{16370CBC-11E5-4374-8810-62E3169420B9}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Lvl4_KickStop" ID="{9EBACD04-4578-4F3D-89FA-354B82C8BB3F}">
+							<ChildrenList>
+								<Action Name="" ID="{317B6773-7ECD-4727-8A8D-56CB7F8AC400}" ShortID="665392993">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_KICK_16_135" ID="{16370CBC-11E5-4374-8810-62E3169420B9}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Lvl4_PluckPlay" ID="{C51F4293-215A-4247-98BB-D2A2FA95F974}">
+							<ChildrenList>
+								<Action Name="" ID="{05DD5A51-FA4A-426A-BC04-318A8252BF60}" ShortID="642154766">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_PLUCK_16_135" ID="{1DE0E941-21C2-4F69-9B27-2BBE6FAE0C4D}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Lvl4_PluckStop" ID="{9380C9FF-A5F7-4EA4-AFBB-14FC73F64EE5}">
+							<ChildrenList>
+								<Action Name="" ID="{75BB31FF-1900-4DD0-9ACC-64BB34184B86}" ShortID="648793288">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_PLUCK_16_135" ID="{1DE0E941-21C2-4F69-9B27-2BBE6FAE0C4D}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Lvl4_HatPlay" ID="{673DFE66-6EC7-4677-B13B-899F77A47BE1}">
+							<ChildrenList>
+								<Action Name="" ID="{05028EF2-7013-428A-B87E-44B955888CBE}" ShortID="723045047">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_HAT_16_135" ID="{00B53BE5-6089-476A-8A70-54AA882CD7CD}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Lvl4_HatStop" ID="{23898C62-D491-4533-92FB-BB5A757A4970}">
+							<ChildrenList>
+								<Action Name="" ID="{26290E2D-02DA-4DEC-B98A-809634252846}" ShortID="624901916">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_HAT_16_135" ID="{00B53BE5-6089-476A-8A70-54AA882CD7CD}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Lvl4_Start" ID="{9DA547B0-4060-46AC-B5FF-C24FB38628ED}">
+							<ChildrenList>
+								<Action Name="" ID="{E94DE882-AE51-41F7-8602-5C2E5CB756F2}" ShortID="99636194">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="45"/>
+										<Property Name="Delay" Type="Real64" Value="1.5"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+								<Action Name="" ID="{8EE745A8-35D0-4A0D-BD7F-0BCACC106B3D}" ShortID="316373736">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4" ID="{ACDDADA0-42C4-48E9-B6EB-E012007AF2F0}" WorkUnitID="{5F9035CE-D633-4D77-AFAC-532B6A139962}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C04C79A5-3C88-4EDE-B96B-1B7EB2E27FED}" ShortID="831034921">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_808_16_135" ID="{6A0DDD61-62AE-45D2-BA11-98443A62B0B1}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A6A1C1D9-1BEB-40FC-BB0C-135A56D0C44E}" ShortID="1886907">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_CHORD_16_135" ID="{73C8ADD8-EF2C-4B3F-A49D-A71743BE1401}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{05ECEC66-398F-48F0-84EB-DCCFA69CCF21}" ShortID="101310528">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_COUNTER_16_135" ID="{0EC65D31-0DF5-48ED-93DD-E59FBBE0B8DA}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C5FA4A87-148E-4EB4-ACC8-235DEAD2955D}" ShortID="390237397">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_GLOCK_16_135" ID="{B24D1265-603F-4056-BABE-820DCC3A9ECB}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4BDDFE9E-6DC5-4B5C-9A1E-6A55EAC7096E}" ShortID="248278657">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_HAT 2_16_135" ID="{1490F78D-0576-4C62-8438-857E24C5F20D}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C5847E32-628F-4E87-9B9F-192B3B2E2FFE}" ShortID="490588363">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_HAT_16_135" ID="{00B53BE5-6089-476A-8A70-54AA882CD7CD}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{98E5CEDE-C46A-46B1-9A59-92115B7CC516}" ShortID="1015485281">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_HIGH_16_135" ID="{64198EC4-51E2-4A5F-889F-2DD0B295091C}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{80173CB0-A127-499E-9C00-86F1A1A52E1F}" ShortID="1039667122">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_KICK_16_135" ID="{16370CBC-11E5-4374-8810-62E3169420B9}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{65E10DE7-FFD2-4E49-9F6D-0FEE54790540}" ShortID="263600071">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_MEL_16_135" ID="{273B8DE2-B8F9-4B48-A8D1-1D388B9BFB72}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{AEF80210-7AF1-47E9-9194-01D3205DBB6D}" ShortID="429086466">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_PERC_16_135" ID="{0CF6A745-D7F7-4659-AD48-3FD4A986FF7E}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{CD2BDCE8-402E-4A60-A5F3-C8AAD3B0211B}" ShortID="320550043">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_PLUCK_16_135" ID="{1DE0E941-21C2-4F69-9B27-2BBE6FAE0C4D}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{99637037-1F35-47AE-A58E-8BDAD6F93D3A}" ShortID="1068566688">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_PULSE1_16_135" ID="{10BCA8EB-A0C7-45C5-8499-E1E8DEB587C4}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B8B4B445-D1D4-4DC8-AD14-93A842CD2D95}" ShortID="850213611">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_PULSE2_16_135" ID="{6AF068E1-0FF6-4DDE-AED8-0296B5A9EF1C}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{064D046A-1E99-4633-A636-F618BECD0817}" ShortID="358946644">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_TRIANG_16_135" ID="{E65508BB-C921-4547-B81C-978A4E368E02}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4448716A-EF58-428E-954C-E180C429FC2A}" ShortID="254776819">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_WOW_16_135" ID="{1657DCB4-B6BC-4F42-8A8D-12BA12365B73}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{02F04898-1F77-4B2F-A229-B38DDC553B60}" ShortID="564363058">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_SHIM_16_135" ID="{156E6EC4-90EC-4653-A899-2DB1CBEFF888}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Lvl4_808Stop" ID="{05B01110-C6D1-45DB-893D-3D34C724182D}">
+							<ChildrenList>
+								<Action Name="" ID="{947454B1-8FF2-48F0-809F-18072FBCBDFD}" ShortID="314697623">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_808_16_135" ID="{6A0DDD61-62AE-45D2-BA11-98443A62B0B1}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Lvl4_TriangPlay" ID="{CE02FF65-41D9-4A05-9A52-D67590A4148B}">
+							<ChildrenList>
+								<Action Name="" ID="{C9566BAD-15C1-43EA-956D-107703EE12E4}" ShortID="993799389">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_TRIANG_16_135" ID="{E65508BB-C921-4547-B81C-978A4E368E02}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Lvl4_Pulse1Stop" ID="{F2272309-9020-4BB6-B2D7-8D9E5B654632}">
+							<ChildrenList>
+								<Action Name="" ID="{53110CB1-8791-4128-BBE5-1C6C586EDFF9}" ShortID="306345104">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_PULSE1_16_135" ID="{10BCA8EB-A0C7-45C5-8499-E1E8DEB587C4}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Lvl4_Pulse1Play" ID="{563DF9FB-652C-4F7B-9EA3-4B32501B9F1B}">
+							<ChildrenList>
+								<Action Name="" ID="{800748ED-D04F-4A0E-B8EF-FEA77E53C1B6}" ShortID="640974538">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_PULSE1_16_135" ID="{10BCA8EB-A0C7-45C5-8499-E1E8DEB587C4}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Lvl4_Pulse2Play" ID="{05F5A9B4-5104-41F7-BEF8-725FE343412B}">
+							<ChildrenList>
+								<Action Name="" ID="{60F7FC3C-FB69-4E53-BB6B-647FD1B1DFEB}" ShortID="111018625">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_PULSE2_16_135" ID="{6AF068E1-0FF6-4DDE-AED8-0296B5A9EF1C}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Lvl4_Pulse2Stop" ID="{2C0C07C3-BD60-4704-9DC5-1758C3A5755C}">
+							<ChildrenList>
+								<Action Name="" ID="{8D10FE0D-AD3E-4644-B307-20FE8A98FB3A}" ShortID="884342622">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_PULSE2_16_135" ID="{6AF068E1-0FF6-4DDE-AED8-0296B5A9EF1C}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Lvl4_ShimPlay" ID="{80D44C89-CE60-4569-B0F0-5D995D14C739}">
+							<ChildrenList>
+								<Action Name="" ID="{869BAA22-BC5B-4D73-93CE-AB132A560545}" ShortID="550759652">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_SHIM_16_135" ID="{156E6EC4-90EC-4653-A899-2DB1CBEFF888}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Lvl4_ShimStop" ID="{6C8E4887-224F-4781-A10F-5ED636EDAA98}">
+							<ChildrenList>
+								<Action Name="" ID="{DB5C660B-9A8D-41DB-85E1-EBF6CEE5C53D}" ShortID="994073693">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_SHIM_16_135" ID="{156E6EC4-90EC-4653-A899-2DB1CBEFF888}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Lvl4_WowPlay" ID="{E7C7D463-2ED5-441B-A7A4-BEF0F6A8C1B6}">
+							<ChildrenList>
+								<Action Name="" ID="{BCD948D1-F17E-49E7-BDFE-F41DF07A7CBC}" ShortID="1040741160">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_WOW_16_135" ID="{1657DCB4-B6BC-4F42-8A8D-12BA12365B73}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Lvl4_WowStop" ID="{EB499919-1114-4F31-9B19-EF05691A917B}">
+							<ChildrenList>
+								<Action Name="" ID="{D5AC7AA1-FF85-4BE0-B430-D5C579112D1A}" ShortID="834303310">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl4_WOW_16_135" ID="{1657DCB4-B6BC-4F42-8A8D-12BA12365B73}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
