@@ -16,6 +16,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="UI_PlayClick" ID="{CAB2F995-34B5-4401-A6E8-63FD551D41E1}">
+					<ChildrenList>
+						<Action Name="" ID="{E554AD43-0D73-428A-AB19-375712B5CE21}" ShortID="895616590">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CLICK UI" ID="{FFA78E66-F963-446C-AA3D-50D1FB5DE411}" WorkUnitID="{9150BF7F-00AB-4373-9030-763DD4A5AE08}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UI_PlayPopUp2" ID="{5C91A818-961A-418F-9AD2-1B79005A80CC}">
+					<ChildrenList>
+						<Action Name="" ID="{20D1B978-AC71-4DCC-8E87-694F5105457E}" ShortID="525235332">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DIALOGUE POP UP" ID="{6EDB039F-AEC5-4AC7-AC54-5F435ACC5589}" WorkUnitID="{9150BF7F-00AB-4373-9030-763DD4A5AE08}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
