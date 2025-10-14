@@ -61,32 +61,32 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        Flip();
+        //Flip();
     }
 
-    private void FixedUpdate()
-    {
-        //rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
-        if (isMoving)
-        {
-            Vector2 newPos = Vector2.MoveTowards(rb.position, targetPosition, speed * Time.fixedDeltaTime);
-            rb.MovePosition(newPos);
-            if (Vector2.Distance(rb.position, targetPosition) < 0.05f)
-            {
-                isMoving = false;
-            }
-        }
-    }
+    //private void FixedUpdate()
+    //{
+    //    //rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
+    //    if (isMoving)
+    //    {
+    //        Vector2 newPos = Vector2.MoveTowards(rb.position, targetPosition, speed * Time.fixedDeltaTime);
+    //        rb.MovePosition(newPos);
+    //        if (Vector2.Distance(rb.position, targetPosition) < 0.05f)
+    //        {
+    //            isMoving = false;
+    //        }
+    //    }
+    //}
 
-    private void Flip()
-    {
-        Vector2 direction = targetPosition - rb.position;
-        if ((isFacingRignt && direction.x > 0) || (!isFacingRignt && direction.x < 0))
-        {
-            isFacingRignt = !isFacingRignt;
-            transform.Rotate(0f, 180f, 0f);
-        }
-    }
+    //private void Flip()
+    //{
+    //    Vector2 direction = targetPosition - rb.position;
+    //    if ((isFacingRignt && direction.x > 0) || (!isFacingRignt && direction.x < 0))
+    //    {
+    //        isFacingRignt = !isFacingRignt;
+    //        transform.Rotate(0f, 180f, 0f);
+    //    }
+    //}
     private void HandleMouseClick()
     {
         GetMouseWorldPosition();
