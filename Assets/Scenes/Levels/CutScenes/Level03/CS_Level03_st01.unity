@@ -1969,7 +1969,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 85.71429, y: 130.14285}
+    oldSize: {x: 1.2, y: 1.822}
     newSize: {x: 85.71429, y: 130.14285}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2128,7 +2128,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 179, y: 411}
+    oldSize: {x: 3.58, y: 8.22}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2399,6 +2399,10 @@ PrefabInstance:
     - target: {fileID: 121991345401876096, guid: 5accc1d11f8a3854a8b1c867ea8fa3e8, type: 3}
       propertyPath: m_Name
       value: MusicManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 121991345401876096, guid: 5accc1d11f8a3854a8b1c867ea8fa3e8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2401296920616341122, guid: 5accc1d11f8a3854a8b1c867ea8fa3e8, type: 3}
       propertyPath: m_LocalPosition.x
