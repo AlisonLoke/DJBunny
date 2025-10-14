@@ -73,6 +73,10 @@ public class DialogueManager : MonoBehaviour
             {
                 LevelManager.Instance.OnPlayerFail();
             }
+            else if (LevelManager.Instance.isWinCutScene)
+            {
+                LevelManager.Instance.OnPlayerWin();
+            }
             else
             {
 

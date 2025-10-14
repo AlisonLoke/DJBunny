@@ -13,6 +13,7 @@ public class LevelManager : MonoBehaviour
     public int maxMoves = 5;
     public bool isLastPuzzle = false;
     public bool isFailCutScene = false;
+    public bool isWinCutScene = false;
     public bool IsNewLevel = false;
     [SerializeField] private bool isLastLevel = false;
     [SerializeField] private GameObject tryAgainCanvas;
@@ -191,5 +192,9 @@ public class LevelManager : MonoBehaviour
     {
         //Level Manager takes you back to Main Menu 
         SceneManager.LoadScene("ReplayMenu");
+    }
+    public void OnPlayerWin()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
