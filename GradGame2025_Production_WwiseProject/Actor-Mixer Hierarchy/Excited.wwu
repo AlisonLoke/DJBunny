@@ -1,6 +1,372 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{1ED4FF16-D9E4-4C4C-86B5-A4626E107210}" SchemaVersion="123" RootDocumentID="{8B8B9163-3C97-4C38-BFFA-2B3AF56B8CE0}" ParentDocumentID="{8B8B9163-3C97-4C38-BFFA-2B3AF56B8CE0}">
 	<AudioObjects>
-		<WorkUnit Name="Excited" ID="{1ED4FF16-D9E4-4C4C-86B5-A4626E107210}" OwnerID="{8B8B9163-3C97-4C38-BFFA-2B3AF56B8CE0}" PersistMode="Nested"/>
+		<WorkUnit Name="Excited" ID="{1ED4FF16-D9E4-4C4C-86B5-A4626E107210}" OwnerID="{8B8B9163-3C97-4C38-BFFA-2B3AF56B8CE0}" PersistMode="Nested">
+			<ChildrenList>
+				<RandomSequenceContainer Name="Excited" ID="{10DF7D9E-0C95-4B5A-B9DB-4F529CDD7F46}" ShortID="233145391">
+					<PropertyList>
+						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="KATHRINE BABBLES EXCITED_1" ID="{B8B6D993-CC21-4A61-9511-1E4EC8CB54E6}" ShortID="76246692">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES EXCITED_1" ID="{EDC21541-9403-4E71-AA30-D9F6892BE04F}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.228324041934954"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.605417897124355"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES EXCITED_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="311286029"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES EXCITED_1" ID="{EDC21541-9403-4E71-AA30-D9F6892BE04F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES EXCITED_01" ID="{CEE233DF-C409-49F7-AA84-8EBC93776CDF}" ShortID="559020901">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES EXCITED_1" ID="{D20C16E3-504F-42B4-92C0-235E0280BA38}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0387326729607174"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.970700273682038"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.58707241844281"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES EXCITED_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="17646650"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES EXCITED_1" ID="{D20C16E3-504F-42B4-92C0-235E0280BA38}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES EXCITED_02" ID="{4E90FCFA-ECE0-4D71-A2D6-06339556143B}" ShortID="274858944">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES EXCITED_1" ID="{7C33A743-919A-4AE6-93D1-58D432BFD03F}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0603584153637846"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0387326729607174"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.60978937753387"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.4214387484716"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES EXCITED_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="324081046"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES EXCITED_1" ID="{7C33A743-919A-4AE6-93D1-58D432BFD03F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES EXCITED_03" ID="{28374E98-A270-426A-925B-396E5C2A2EBE}" ShortID="230147280">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES EXCITED_1" ID="{3D3C3F7C-007D-4837-A8CF-923C00293492}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0603584153637846"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0387326729607174"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2.40892352430622"/>
+										<Property Name="TrimEnd" Type="Real64" Value="3.46411853997456"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES EXCITED_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="958687796"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES EXCITED_1" ID="{3D3C3F7C-007D-4837-A8CF-923C00293492}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES EXCITED_04" ID="{C6B75063-95B9-455D-93C3-CEC950F974EE}" ShortID="836057956">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES EXCITED_1" ID="{AB0140B1-CC2B-42FB-83AF-2DDDBBEBACC3}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0603584153637846"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0387326729607174"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="3.6681652101293"/>
+										<Property Name="TrimEnd" Type="Real64" Value="4.31246883297384"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES EXCITED_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="611400828"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES EXCITED_1" ID="{AB0140B1-CC2B-42FB-83AF-2DDDBBEBACC3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES EXCITED_05" ID="{CB931B0D-3BBA-4D84-934B-BB0A5BAD7729}" ShortID="994283841">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES EXCITED_1" ID="{4A5B04B1-AB39-475D-8222-D8A8CDBDEBD7}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0603584153637846"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0387326729607174"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="5.9790812709255"/>
+										<Property Name="TrimEnd" Type="Real64" Value="6.45733104509008"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES EXCITED_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="622457084"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES EXCITED_1" ID="{4A5B04B1-AB39-475D-8222-D8A8CDBDEBD7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES EXCITED_06" ID="{D11F5D24-AF92-4007-B160-2B3BA1F5449C}" ShortID="878699291">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES EXCITED_1" ID="{504CA274-7F80-4A38-A1C0-57DC0BDF1FE6}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0603584153637846"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0387326729607174"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="6.56506917123729"/>
+										<Property Name="TrimEnd" Type="Real64" Value="7.17563879385937"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES EXCITED_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="51228509"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES EXCITED_1" ID="{504CA274-7F80-4A38-A1C0-57DC0BDF1FE6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES EXCITED_07" ID="{583358B6-FEF5-4D83-A93B-B7594AF1A3BC}" ShortID="372082719">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES EXCITED_1" ID="{611A5650-FA44-4301-ADB1-EB63726678D8}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0603584153637846"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0387326729607174"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="8.0035258570303"/>
+										<Property Name="TrimEnd" Type="Real64" Value="8.94838470944934"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES EXCITED_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="202105328"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES EXCITED_1" ID="{611A5650-FA44-4301-ADB1-EB63726678D8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES EXCITED_08" ID="{0A9C59E4-A444-4D0E-A24D-97804CCDD8EF}" ShortID="646040906">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES EXCITED_1" ID="{506F598C-6CE4-4728-9828-C9B43537F5A2}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0603584153637846"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0387326729607174"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="8.92443282616795"/>
+										<Property Name="TrimEnd" Type="Real64" Value="9.57460144846294"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES EXCITED_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="822569205"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES EXCITED_1" ID="{506F598C-6CE4-4728-9828-C9B43537F5A2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES EXCITED_09" ID="{1F6E216A-799D-4A48-87F6-C26E6566804F}" ShortID="952879149">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES EXCITED_1" ID="{B120118B-43AD-49D8-A151-4C3D715CBBCD}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0603584153637846"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0387326729607174"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="12.3933228847665"/>
+										<Property Name="TrimEnd" Type="Real64" Value="12.9316567559429"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES EXCITED_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="215939874"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES EXCITED_1" ID="{B120118B-43AD-49D8-A151-4C3D715CBBCD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES EXCITED_10" ID="{938C99F4-B32B-496A-8791-92C111778CC6}" ShortID="520813981">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES EXCITED_1" ID="{79D45BF4-BA9E-4A32-A675-FA9A80646726}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0603584153637846"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0387326729607174"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="13.0909320286699"/>
+										<Property Name="TrimEnd" Type="Real64" Value="13.589239145688"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES EXCITED_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="505852585"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES EXCITED_1" ID="{79D45BF4-BA9E-4A32-A675-FA9A80646726}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KATHRINE BABBLES EXCITED_11" ID="{C08F972A-F600-4CFF-AF7E-35D830F10A27}" ShortID="924521309">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KATHRINE BABBLES EXCITED_1" ID="{32AF3E7C-4B53-444D-A2BA-BEDC82CE3500}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0603584153637846"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0387326729607174"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="13.7171487676835"/>
+										<Property Name="TrimEnd" Type="Real64" Value="14.6022368117394"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>KATHRINE BABBLES EXCITED_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="32614602"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KATHRINE BABBLES EXCITED_1" ID="{32AF3E7C-4B53-444D-A2BA-BEDC82CE3500}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

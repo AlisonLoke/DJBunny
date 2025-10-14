@@ -28,6 +28,125 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Dialogue_Sad_Play" ID="{A6016A4F-64C6-49CE-9172-DF9CE96A7465}">
+					<ChildrenList>
+						<Action Name="" ID="{570CCD27-FD1A-41D1-9A28-1FFAB3F4CE99}" ShortID="11466800">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sad" ID="{0E51A70A-F955-46E5-9C02-856A2144BAA3}" WorkUnitID="{B9489D13-2D1C-46F5-9BCB-A01F995677CE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Dialogue_Excited_Play" ID="{BE6C6F26-10BC-4BEB-84AE-69A68649C2E2}">
+					<ChildrenList>
+						<Action Name="" ID="{ECAA2806-8F53-4C36-8796-4A8661F5EF89}" ShortID="594458628">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Excited" ID="{10DF7D9E-0C95-4B5A-B9DB-4F529CDD7F46}" WorkUnitID="{1ED4FF16-D9E4-4C4C-86B5-A4626E107210}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Dialogue_Mom_Play" ID="{A54D565E-CB89-422B-9CFD-9DB0F152385E}">
+					<ChildrenList>
+						<Action Name="" ID="{90FE5090-8E7B-49A9-89C4-E3E80D64BEA4}" ShortID="58846931">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mom" ID="{4BF32B19-0F7A-4248-A057-C0CF07B4C8F2}" WorkUnitID="{A9BB3ACD-49A0-4DCD-BEEE-B1A83B4708EE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Dialogue_Sad_Break" ID="{950D87DD-73FF-43C8-A9DF-6B179B746963}">
+					<ChildrenList>
+						<Action Name="" ID="{FD28B286-3841-49BB-A340-43C47D1D46C7}" ShortID="702859853">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="34"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sad" ID="{0E51A70A-F955-46E5-9C02-856A2144BAA3}" WorkUnitID="{B9489D13-2D1C-46F5-9BCB-A01F995677CE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Dialogue_Excited_Break" ID="{62B0A4AA-F028-43F4-ACA7-1EB75FC02710}">
+					<ChildrenList>
+						<Action Name="" ID="{C9BB3533-116B-42A4-BDB4-7DD7EE2A75B8}" ShortID="1015603225">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="34"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Excited" ID="{10DF7D9E-0C95-4B5A-B9DB-4F529CDD7F46}" WorkUnitID="{1ED4FF16-D9E4-4C4C-86B5-A4626E107210}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Dialogue_Mom_Break" ID="{93954933-D5EF-4069-A756-3B072F347A30}">
+					<ChildrenList>
+						<Action Name="" ID="{E7AAA1BA-9E84-4D94-8E30-05ADE9971320}" ShortID="623802396">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="34"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mom" ID="{4BF32B19-0F7A-4248-A057-C0CF07B4C8F2}" WorkUnitID="{A9BB3ACD-49A0-4DCD-BEEE-B1A83B4708EE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Dialogue_All_Break" ID="{1AB7B64E-0916-4FFC-9C42-5682F4FBEB6A}">
+					<ChildrenList>
+						<Action Name="" ID="{F9417FFD-964A-400C-AD34-3782052FBD8B}" ShortID="549831588">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="34"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Excited" ID="{10DF7D9E-0C95-4B5A-B9DB-4F529CDD7F46}" WorkUnitID="{1ED4FF16-D9E4-4C4C-86B5-A4626E107210}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2C75453A-A4F6-4761-A9AB-2307ACB07B5B}" ShortID="242287157">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="34"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mom" ID="{4BF32B19-0F7A-4248-A057-C0CF07B4C8F2}" WorkUnitID="{A9BB3ACD-49A0-4DCD-BEEE-B1A83B4708EE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{12E4FB27-C166-4E6F-8D1D-0887E8CA7F26}" ShortID="25134355">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="34"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Neutral" ID="{615F1F78-386F-4566-B14D-DD8DE3479C13}" WorkUnitID="{CBCAD006-C04E-48CB-9EA4-078A80A3221F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C01CE030-6DC5-4D19-9C8F-15FA5E8E2793}" ShortID="955133971">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="34"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sad" ID="{0E51A70A-F955-46E5-9C02-856A2144BAA3}" WorkUnitID="{B9489D13-2D1C-46F5-9BCB-A01F995677CE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
