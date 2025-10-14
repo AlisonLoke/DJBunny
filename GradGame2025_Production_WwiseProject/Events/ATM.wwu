@@ -155,6 +155,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Bus_Leave_Play" ID="{AECF3417-6CCF-4C1F-9480-A98D42F7EC46}">
+					<ChildrenList>
+						<Action Name="" ID="{7E6A81A8-33A3-4578-818F-08AD39D56A43}" ShortID="793881956">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BUS LEAVING BUS STOP" ID="{BDB8C70A-BBFA-4249-8190-F672A0BA064B}" WorkUnitID="{42E49290-2BCC-4743-BBDE-E70655EFD427}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
