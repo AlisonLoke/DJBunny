@@ -1,37 +1,43 @@
 fileFormatVersion: 2
-guid: e68fd95837db1664cb713d9e3d7701f9
+guid: 7755d7b5457e94c468d6bb30b7d4a797
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9217282560150704298
-    second: LadyF_IdleSpriteSheet_0
+      213: -2208614963925680855
+    second: Tammy_DanceSpritesheet_0
   - first:
-      213: -3918700813318402661
-    second: LadyF_IdleSpriteSheet_1
+      213: -47368443907164787
+    second: Tammy_DanceSpritesheet_1
   - first:
-      213: 6421794569037735537
-    second: LadyF_IdleSpriteSheet_2
+      213: -1705240956044644793
+    second: Tammy_DanceSpritesheet_2
   - first:
-      213: -2344495698418428399
-    second: LadyF_IdleSpriteSheet_3
+      213: 8835500317385998292
+    second: Tammy_DanceSpritesheet_3
   - first:
-      213: -4350680755947628517
-    second: LadyF_IdleSpriteSheet_4
+      213: -8412749180285258536
+    second: Tammy_DanceSpritesheet_4
   - first:
-      213: 4363560905958827741
-    second: LadyF_IdleSpriteSheet_5
+      213: 7743335232881885244
+    second: Tammy_DanceSpritesheet_5
   - first:
-      213: -651617024246770573
-    second: LadyF_IdleSpriteSheet_6
+      213: -6099447209220214062
+    second: Tammy_DanceSpritesheet_6
   - first:
-      213: -2341015122028711846
-    second: LadyF_IdleSpriteSheet_7
+      213: -7441553185442720172
+    second: Tammy_DanceSpritesheet_7
   - first:
-      213: 5558845946365134047
-    second: LadyF_IdleSpriteSheet_8
+      213: 8102673184890331407
+    second: Tammy_DanceSpritesheet_8
   - first:
-      213: 2394085702235928441
-    second: LadyF_IdleSpriteSheet_9
+      213: -7798280400454240749
+    second: Tammy_DanceSpritesheet_9
+  - first:
+      213: -168308601304834876
+    second: Tammy_DanceSpritesheet_10
+  - first:
+      213: -8995389643582495769
+    second: Tammy_DanceSpritesheet_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -64,7 +70,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -78,7 +84,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 2
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -99,10 +105,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -153,7 +159,183 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LadyF_IdleSpriteSheet_0
+      name: Tammy_DanceSpritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2423326929161a84a9e225c4596ddd48
+      internalID: 955349919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tammy_DanceSpritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1000
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc9255e70f8dc0d4a8648b23cef8cb67
+      internalID: 316481391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tammy_DanceSpritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1000
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cffabd33af488ce4a99acb5c27ae29fe
+      internalID: -1410940250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tammy_DanceSpritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1000
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2e25c11614481444b723c2dea0e708a
+      internalID: -1246761553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tammy_DanceSpritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 890bac271c6151d4cb8859048eb2829e
+      internalID: -312391379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tammy_DanceSpritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5427bc518ada897418a1a74af6cc6789
+      internalID: 2008282603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tammy_DanceSpritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f7530b4877dd5842afa8d13900f2e41
+      internalID: -2113411260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tammy_DanceSpritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9457021886ef9244bb648c1b90353ef7
+      internalID: -524851053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tammy_DanceSpritesheet_8
       rect:
         serializedVersion: 2
         x: 0
@@ -168,14 +350,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 899d183d764348a4883c4af24f89d0e7
-      internalID: -1341924373
+      spriteID: 79807f7e85fd40c4fa9b65823d48b533
+      internalID: -2031649205
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LadyF_IdleSpriteSheet_1
+      name: Tammy_DanceSpritesheet_9
       rect:
         serializedVersion: 2
         x: 500
@@ -190,14 +372,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 049fac7270a3167498e959796063280d
-      internalID: -1614305684
+      spriteID: 83aedeb9e5a85a543a6a51ec64fe7237
+      internalID: -2042727601
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LadyF_IdleSpriteSheet_2
+      name: Tammy_DanceSpritesheet_10
       rect:
         serializedVersion: 2
         x: 1000
@@ -212,14 +394,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0829b25173e3f9c44ad2daaf40465102
-      internalID: -2115757017
+      spriteID: ee3f734ed74eb8a47a564c3578b3915d
+      internalID: 866031663
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LadyF_IdleSpriteSheet_3
+      name: Tammy_DanceSpritesheet_11
       rect:
         serializedVersion: 2
         x: 1500
@@ -234,140 +416,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51ca8de35b923d94093ce9f24e5f8052
-      internalID: 1380920720
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LadyF_IdleSpriteSheet_4
-      rect:
-        serializedVersion: 2
-        x: 2000
-        y: 0
-        width: 500
-        height: 500
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7cc1449404647744e832db5fedd677a3
-      internalID: -2100840061
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LadyF_IdleSpriteSheet_5
-      rect:
-        serializedVersion: 2
-        x: 2500
-        y: 0
-        width: 500
-        height: 500
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87fc8706e60f595489fdd5ac5f38db79
-      internalID: -366813733
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LadyF_IdleSpriteSheet_6
-      rect:
-        serializedVersion: 2
-        x: 3000
-        y: 0
-        width: 500
-        height: 500
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d087fd80f15fae4c910a2e01316c440
-      internalID: 1074300502
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LadyF_IdleSpriteSheet_7
-      rect:
-        serializedVersion: 2
-        x: 3500
-        y: 0
-        width: 500
-        height: 500
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cb1b656836e77f9428a7b0e383481210
-      internalID: -1471641323
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LadyF_IdleSpriteSheet_8
-      rect:
-        serializedVersion: 2
-        x: 4000
-        y: 0
-        width: 500
-        height: 500
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 82581bb722c93934d8ac45005850121b
-      internalID: 1833413862
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LadyF_IdleSpriteSheet_9
-      rect:
-        serializedVersion: 2
-        x: 4500
-        y: 0
-        width: 500
-        height: 500
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c752f146f2e95742839869025064b81
-      internalID: 389936372
+      spriteID: f8999f0617e841f48bc2c1a89a5286b5
+      internalID: 894551459
       vertices: []
       indices: 
       edges: []
@@ -376,7 +426,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a2da48ef77c582e4fa90e0830d0ebb30
+    spriteID: 9e94d9884a2ae2c46b4906aabeb49b38
     internalID: 0
     vertices: []
     indices: 
@@ -386,16 +436,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      LadyF_IdleSpriteSheet_0: -1341924373
-      LadyF_IdleSpriteSheet_1: -1614305684
-      LadyF_IdleSpriteSheet_2: -2115757017
-      LadyF_IdleSpriteSheet_3: 1380920720
-      LadyF_IdleSpriteSheet_4: -2100840061
-      LadyF_IdleSpriteSheet_5: -366813733
-      LadyF_IdleSpriteSheet_6: 1074300502
-      LadyF_IdleSpriteSheet_7: -1471641323
-      LadyF_IdleSpriteSheet_8: 1833413862
-      LadyF_IdleSpriteSheet_9: 389936372
+      Tammy_DanceSpritesheet_0: 955349919
+      Tammy_DanceSpritesheet_1: 316481391
+      Tammy_DanceSpritesheet_10: 866031663
+      Tammy_DanceSpritesheet_11: 894551459
+      Tammy_DanceSpritesheet_2: -1410940250
+      Tammy_DanceSpritesheet_3: -1246761553
+      Tammy_DanceSpritesheet_4: -312391379
+      Tammy_DanceSpritesheet_5: 2008282603
+      Tammy_DanceSpritesheet_6: -2113411260
+      Tammy_DanceSpritesheet_7: -524851053
+      Tammy_DanceSpritesheet_8: -2031649205
+      Tammy_DanceSpritesheet_9: -2042727601
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

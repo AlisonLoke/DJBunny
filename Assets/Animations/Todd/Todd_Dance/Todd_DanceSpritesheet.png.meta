@@ -1,37 +1,76 @@
 fileFormatVersion: 2
-guid: e68fd95837db1664cb713d9e3d7701f9
+guid: 653390194307b8b4a8a242193121c471
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9217282560150704298
-    second: LadyF_IdleSpriteSheet_0
+      213: -5972817686996604461
+    second: Todd_DanceSpritesheet_0
   - first:
-      213: -3918700813318402661
-    second: LadyF_IdleSpriteSheet_1
+      213: -2860305590645824457
+    second: Todd_DanceSpritesheet_1
   - first:
-      213: 6421794569037735537
-    second: LadyF_IdleSpriteSheet_2
+      213: 7949427558339949286
+    second: Todd_DanceSpritesheet_2
   - first:
-      213: -2344495698418428399
-    second: LadyF_IdleSpriteSheet_3
+      213: 7858725414575983107
+    second: Todd_DanceSpritesheet_3
   - first:
-      213: -4350680755947628517
-    second: LadyF_IdleSpriteSheet_4
+      213: 1105637834436503371
+    second: Todd_DanceSpritesheet_4
   - first:
-      213: 4363560905958827741
-    second: LadyF_IdleSpriteSheet_5
+      213: -5308059650100302649
+    second: Todd_DanceSpritesheet_5
   - first:
-      213: -651617024246770573
-    second: LadyF_IdleSpriteSheet_6
+      213: -4717979626041557995
+    second: Todd_DanceSpritesheet_6
   - first:
-      213: -2341015122028711846
-    second: LadyF_IdleSpriteSheet_7
+      213: -5411444826556943621
+    second: Todd_DanceSpritesheet_7
   - first:
-      213: 5558845946365134047
-    second: LadyF_IdleSpriteSheet_8
+      213: -4142703183953303787
+    second: Todd_DanceSpritesheet_8
   - first:
-      213: 2394085702235928441
-    second: LadyF_IdleSpriteSheet_9
+      213: -785334513009396645
+    second: Todd_DanceSpritesheet_9
+  - first:
+      213: 2424267665316239408
+    second: Todd_DanceSpritesheet_10
+  - first:
+      213: -1678494957151840577
+    second: Todd_DanceSpritesheet_11
+  - first:
+      213: 2850775237708987231
+    second: Todd_DanceSpritesheet_12
+  - first:
+      213: 1116501207187388417
+    second: Todd_DanceSpritesheet_13
+  - first:
+      213: 508829571248302106
+    second: Todd_DanceSpritesheet_14
+  - first:
+      213: -914597448481187337
+    second: Todd_DanceSpritesheet_15
+  - first:
+      213: 3515245088958970993
+    second: Todd_DanceSpritesheet_16
+  - first:
+      213: 915002662957203490
+    second: Todd_DanceSpritesheet_17
+  - first:
+      213: -6892948833200381402
+    second: Todd_DanceSpritesheet_18
+  - first:
+      213: -4753826232554789100
+    second: Todd_DanceSpritesheet_19
+  - first:
+      213: -1665571710581412507
+    second: Todd_DanceSpritesheet_20
+  - first:
+      213: -5275844907056986158
+    second: Todd_DanceSpritesheet_21
+  - first:
+      213: 4976795654385796732
+    second: Todd_DanceSpritesheet_22
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -64,7 +103,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -78,7 +117,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 2
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -99,10 +138,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -153,7 +192,183 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LadyF_IdleSpriteSheet_0
+      name: Todd_DanceSpritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9297b3977d7f8474d8e48fa4135ddb4e
+      internalID: -263876262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todd_DanceSpritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1000
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dc805b10899f72419d7ca5bd23e119f
+      internalID: 1751619775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todd_DanceSpritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1000
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e29950599d28a4b40994ab59becf0478
+      internalID: 660762204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todd_DanceSpritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1000
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ebcbcc0a98a73742a551b4b5e3cb5c6
+      internalID: 1975591487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todd_DanceSpritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06bdbb82df7132d45acee935e009c49e
+      internalID: 1226840738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todd_DanceSpritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c044eb66cc2050649a435f51e1cf9f1b
+      internalID: 998289147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todd_DanceSpritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b13469ce8aa4249884592cb9701688
+      internalID: 1604856677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todd_DanceSpritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cf30b04fc8876146aa3225e2912e1f7
+      internalID: -184519719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todd_DanceSpritesheet_8
       rect:
         serializedVersion: 2
         x: 0
@@ -168,14 +383,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 899d183d764348a4883c4af24f89d0e7
-      internalID: -1341924373
+      spriteID: 7ff13888cf99fb144a5849f624e23623
+      internalID: 301215777
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LadyF_IdleSpriteSheet_1
+      name: Todd_DanceSpritesheet_9
       rect:
         serializedVersion: 2
         x: 500
@@ -190,14 +405,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 049fac7270a3167498e959796063280d
-      internalID: -1614305684
+      spriteID: d6f5b51c043aa68418b9f53d7137d426
+      internalID: -921364173
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LadyF_IdleSpriteSheet_2
+      name: Todd_DanceSpritesheet_10
       rect:
         serializedVersion: 2
         x: 1000
@@ -212,14 +427,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0829b25173e3f9c44ad2daaf40465102
-      internalID: -2115757017
+      spriteID: 963d3174d6720eb4696c64922b43eae8
+      internalID: -2039221052
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LadyF_IdleSpriteSheet_3
+      name: Todd_DanceSpritesheet_11
       rect:
         serializedVersion: 2
         x: 1500
@@ -234,140 +449,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51ca8de35b923d94093ce9f24e5f8052
-      internalID: 1380920720
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LadyF_IdleSpriteSheet_4
-      rect:
-        serializedVersion: 2
-        x: 2000
-        y: 0
-        width: 500
-        height: 500
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7cc1449404647744e832db5fedd677a3
-      internalID: -2100840061
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LadyF_IdleSpriteSheet_5
-      rect:
-        serializedVersion: 2
-        x: 2500
-        y: 0
-        width: 500
-        height: 500
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87fc8706e60f595489fdd5ac5f38db79
-      internalID: -366813733
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LadyF_IdleSpriteSheet_6
-      rect:
-        serializedVersion: 2
-        x: 3000
-        y: 0
-        width: 500
-        height: 500
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d087fd80f15fae4c910a2e01316c440
-      internalID: 1074300502
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LadyF_IdleSpriteSheet_7
-      rect:
-        serializedVersion: 2
-        x: 3500
-        y: 0
-        width: 500
-        height: 500
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cb1b656836e77f9428a7b0e383481210
-      internalID: -1471641323
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LadyF_IdleSpriteSheet_8
-      rect:
-        serializedVersion: 2
-        x: 4000
-        y: 0
-        width: 500
-        height: 500
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 82581bb722c93934d8ac45005850121b
-      internalID: 1833413862
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LadyF_IdleSpriteSheet_9
-      rect:
-        serializedVersion: 2
-        x: 4500
-        y: 0
-        width: 500
-        height: 500
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c752f146f2e95742839869025064b81
-      internalID: 389936372
+      spriteID: ccc88f28bf8c768458886a1e8881e56f
+      internalID: 1172557294
       vertices: []
       indices: 
       edges: []
@@ -376,7 +459,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a2da48ef77c582e4fa90e0830d0ebb30
+    spriteID: d39f30c1932073f4a921f35935c3daac
     internalID: 0
     vertices: []
     indices: 
@@ -386,16 +469,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      LadyF_IdleSpriteSheet_0: -1341924373
-      LadyF_IdleSpriteSheet_1: -1614305684
-      LadyF_IdleSpriteSheet_2: -2115757017
-      LadyF_IdleSpriteSheet_3: 1380920720
-      LadyF_IdleSpriteSheet_4: -2100840061
-      LadyF_IdleSpriteSheet_5: -366813733
-      LadyF_IdleSpriteSheet_6: 1074300502
-      LadyF_IdleSpriteSheet_7: -1471641323
-      LadyF_IdleSpriteSheet_8: 1833413862
-      LadyF_IdleSpriteSheet_9: 389936372
+      Todd_DanceSpritesheet_0: -263876262
+      Todd_DanceSpritesheet_1: 1751619775
+      Todd_DanceSpritesheet_10: -2039221052
+      Todd_DanceSpritesheet_11: 1172557294
+      Todd_DanceSpritesheet_2: 660762204
+      Todd_DanceSpritesheet_3: 1975591487
+      Todd_DanceSpritesheet_4: 1226840738
+      Todd_DanceSpritesheet_5: 998289147
+      Todd_DanceSpritesheet_6: 1604856677
+      Todd_DanceSpritesheet_7: -184519719
+      Todd_DanceSpritesheet_8: 301215777
+      Todd_DanceSpritesheet_9: -921364173
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
