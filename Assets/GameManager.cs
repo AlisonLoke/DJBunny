@@ -7,11 +7,17 @@ public class GameManager : MonoBehaviour
 
     public void PlayGame()
     {
+        SFXManager.instance.PlayButtonUI();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void RestartLastLevel()
     {
         SceneManager.LoadScene("CS_Level05_st01");
+    }
+
+    public void OnApplicationQuit()
+    {
+        OnApplicationQuit();
     }
 
 }

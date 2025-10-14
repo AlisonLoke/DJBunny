@@ -1,5 +1,3 @@
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -23,6 +21,11 @@ public class SFXManager : MonoBehaviour
     public bool allowDialogueSFX = true;
 
 
+    [Header("UI SFX")]
+    public AK.Wwise.Event UIClick = null;
+
+
+
     private void Awake()
     {
 
@@ -30,7 +33,7 @@ public class SFXManager : MonoBehaviour
         {
             instance = this;
             //DontDestroyOnLoad(gameObject);
-           
+
             startAtmos.Post(gameObject);
             SceneManager.sceneLoaded += OnSceneLoad;
         }
@@ -78,6 +81,11 @@ public class SFXManager : MonoBehaviour
     }
 
     public void DisableDialogueSFX() => allowDialogueSFX = false;
-    public void EnableDialogueSFX() => allowDialogueSFX=true;
+    public void EnableDialogueSFX() => allowDialogueSFX = true;
+
+    public void PlayButtonUI()
+    {
+        UIClick.Post(gameObject);   
+    }
 }
 
