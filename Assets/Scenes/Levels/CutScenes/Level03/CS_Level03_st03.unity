@@ -497,6 +497,79 @@ MonoBehaviour:
   unloadTriggerList: 958ca0ea
   bankNameInternal: 
   valueGuidInternal: 
+--- !u!1 &526233216
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 526233218}
+  - component: {fileID: 526233217}
+  m_Layer: 0
+  m_Name: DialogueTriggerOnStart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &526233217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526233216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 974f8ce6723e1544182983302c562b73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - characterName: Lady Foo Foo
+    line: SICK!! Now that is some beat!! My partner was right about you.
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Lady Foo Foo
+    line: "I don\u2019t have a DJ for my party tonight before The Hippity Hop Music
+      Festival. Come on over and play a set!"
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: DJ Bunny
+    line: '* nods*'
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
+          m_MethodName: DisableDialogueSFX
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!4 &526233218
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526233216}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &556277780
 GameObject:
   m_ObjectHideFlags: 0
@@ -1733,6 +1806,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 421663544604815440, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
+      propertyPath: UIClick.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: f8fcbc782d9e38f4084304b25bcd55d3, type: 2}
+    - target: {fileID: 421663544604815440, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
       propertyPath: playAtmos.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: 9bcbc061747938c45aa7dafaea5d7d00, type: 2}
@@ -1740,6 +1817,10 @@ PrefabInstance:
       propertyPath: startAtmos.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: 089bd2e4e714d544c9cc5efb623fe43b, type: 2}
+    - target: {fileID: 421663544604815440, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
+      propertyPath: dialogueBox.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 21d8a315afa48ca47bbbe49245172b11, type: 2}
     - target: {fileID: 421663544604815440, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
       propertyPath: playDialogueSfx.WwiseObjectReference
       value: 
@@ -1852,7 +1933,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1601864352}
-  - component: {fileID: 1601864351}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -1860,31 +1940,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1601864351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1601864350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d055153e8a7272840be16a2b832dfe3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InitializationSettings: {fileID: 11400000, guid: f2d04cdf3ce5e5b48ae8df2f44812184, type: 2}
-  basePath: 
-  language: 
-  defaultPoolSize: 0
-  lowerPoolSize: 0
-  streamingPoolSize: 0
-  memoryCutoffThreshold: 0
-  monitorPoolSize: 0
-  monitorQueuePoolSize: 0
-  callbackManagerBufferSize: 0
-  spatialAudioPoolSize: 0
-  maxSoundPropagationDepth: 0
-  engineLogging: 0
 --- !u!4 &1601864352
 Transform:
   m_ObjectHideFlags: 0
@@ -2409,6 +2464,7 @@ SceneRoots:
   - {fileID: 1179964364}
   - {fileID: 824610046}
   - {fileID: 2131771321}
+  - {fileID: 526233218}
   - {fileID: 810261368}
   - {fileID: 157330864}
   - {fileID: 857803377}

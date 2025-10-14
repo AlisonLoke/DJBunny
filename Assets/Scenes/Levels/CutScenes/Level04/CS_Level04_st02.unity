@@ -211,9 +211,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 421663544604815440, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
+      propertyPath: UIClick.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: f8fcbc782d9e38f4084304b25bcd55d3, type: 2}
+    - target: {fileID: 421663544604815440, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
       propertyPath: startAtmos.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: 089bd2e4e714d544c9cc5efb623fe43b, type: 2}
+    - target: {fileID: 421663544604815440, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
+      propertyPath: dialogueBox.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 21d8a315afa48ca47bbbe49245172b11, type: 2}
     - target: {fileID: 421663544604815440, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
       propertyPath: playDialogueSfx.WwiseObjectReference
       value: 
@@ -1669,7 +1677,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 85.71429, y: 130.14285}
+    oldSize: {x: 1.2, y: 1.822}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2141,6 +2149,10 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
+  playBusLeaving:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   startAtmos:
     idInternal: 0
     valueGuidInternal: 
@@ -2170,6 +2182,14 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
   allowDialogueSFX: 1
+  UIClick:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  dialogueBox:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

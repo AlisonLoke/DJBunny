@@ -23,7 +23,7 @@ public class SFXManager : MonoBehaviour
 
     [Header("UI SFX")]
     public AK.Wwise.Event UIClick = null;
-
+    public AK.Wwise.Event dialogueBox = null;
 
 
     private void Awake()
@@ -86,6 +86,10 @@ public class SFXManager : MonoBehaviour
     public void PlayButtonUI()
     {
         UIClick.Post(gameObject);   
+    }
+    public void PlayOpenDialogue()
+    {
+        dialogueBox.Post(gameObject);   
     }
 }
 

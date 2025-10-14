@@ -24,6 +24,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue()
     {
+        SFXManager.instance.PlayOpenDialogue();
         animator.SetBool("IsOpen", true);
         index = 0;
         StartCoroutine(TypeLine());
@@ -41,6 +42,7 @@ public class DialogueManager : MonoBehaviour
     }
     public void InteractToNextLine()
     {
+        SFXManager.instance.PlayButtonUI( );
         if (DialogueText.text == dialogueLines[index].line)
         {
             NextLine();

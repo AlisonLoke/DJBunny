@@ -838,9 +838,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 421663544604815440, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
+      propertyPath: UIClick.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: f8fcbc782d9e38f4084304b25bcd55d3, type: 2}
+    - target: {fileID: 421663544604815440, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
       propertyPath: playAtmos.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: 793246bd66bc2524681260993c78b352, type: 2}
+    - target: {fileID: 421663544604815440, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
+      propertyPath: dialogueBox.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 21d8a315afa48ca47bbbe49245172b11, type: 2}
     - target: {fileID: 421663544604815440, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
       propertyPath: playDialogueSfx.WwiseObjectReference
       value: 
@@ -1458,7 +1466,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 85.71429, y: 130.14285}
+    oldSize: {x: 1.2, y: 1.822}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
