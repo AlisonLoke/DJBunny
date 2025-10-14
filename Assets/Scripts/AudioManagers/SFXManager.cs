@@ -8,6 +8,7 @@ public class SFXManager : MonoBehaviour
     public static SFXManager instance;
     public AK.Wwise.Event PlayCompletion = null;
     [Header("Atmos")]
+    [SerializeField] private AK.Wwise.Event playBusLeaving;
     [SerializeField] private AK.Wwise.Event startAtmos;
     [SerializeField] private AK.Wwise.Event playCurrentAtmos;
 
@@ -40,7 +41,11 @@ public class SFXManager : MonoBehaviour
         }
 
     }
-  
+    private void Start()
+    {
+        playBusLeaving.Post(gameObject);
+    }
+
     private void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoad;
