@@ -13,17 +13,6 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID ATM_PLAY = 135431296U;
-        static const AkUniqueID ATM_STATE_BUSEXT = 4228493107U;
-        static const AkUniqueID ATM_STATE_BUSINT = 169000921U;
-        static const AkUniqueID ATM_STATE_CAFE = 3100231099U;
-        static const AkUniqueID ATM_STATE_GLASTONBUNNY = 632839520U;
-        static const AkUniqueID ATM_STATE_LOSE = 716125719U;
-        static const AkUniqueID ATM_STATE_PARTY = 407230456U;
-        static const AkUniqueID ATM_STATE_SILENCE = 3639482733U;
-        static const AkUniqueID ATM_STATE_TOWNCENTRE = 347565745U;
-        static const AkUniqueID ATM_STATE_WIN = 69196366U;
-        static const AkUniqueID ATM_STOP = 2773657602U;
         static const AkUniqueID BUS_PLAYCONSTANT = 650913174U;
         static const AkUniqueID BUS_PLAYCONSTANT2 = 2841586448U;
         static const AkUniqueID BUS_STOPCONSTANT = 1216243508U;
@@ -50,6 +39,7 @@ namespace AK
         static const AkUniqueID LVL1_4_TEXSTOP = 451841993U;
         static const AkUniqueID LVL1_END = 3981109304U;
         static const AkUniqueID LVL1_START = 267820003U;
+        static const AkUniqueID LVL2 = 141331489U;
         static const AkUniqueID LVL2_1_HIHATPLAY = 1029901154U;
         static const AkUniqueID LVL2_1_HIHATSTOP = 1631337148U;
         static const AkUniqueID LVL2_1_KICKPLAY = 4260762352U;
@@ -68,8 +58,6 @@ namespace AK
         static const AkUniqueID LVL2_3_TUNESTOP = 1448903200U;
         static const AkUniqueID LVL2_3_WOWPLAY = 1876825709U;
         static const AkUniqueID LVL2_3_WOWSTOP = 2994122939U;
-        static const AkUniqueID LVL2_END = 2970251203U;
-        static const AkUniqueID LVL2_START = 3655569304U;
         static const AkUniqueID LVL3_1_BASSPLAY = 3684848360U;
         static const AkUniqueID LVL3_1_BASSSTOP = 1725974618U;
         static const AkUniqueID LVL3_1_CHORDPLAY = 2059920373U;
@@ -121,24 +109,6 @@ namespace AK
 
     namespace STATES
     {
-        namespace ATM
-        {
-            static const AkUniqueID GROUP = 966532871U;
-
-            namespace STATE
-            {
-                static const AkUniqueID BUSEXT = 2007588150U;
-                static const AkUniqueID BUSINT = 1637788976U;
-                static const AkUniqueID CAFE = 3853951854U;
-                static const AkUniqueID GLASTONBUNNY = 2799519545U;
-                static const AkUniqueID LOSE = 221232726U;
-                static const AkUniqueID NONE = 748895195U;
-                static const AkUniqueID PARTY = 3177314091U;
-                static const AkUniqueID TOWNCENTRE = 1559954680U;
-                static const AkUniqueID WIN = 979765101U;
-            } // namespace STATE
-        } // namespace ATM
-
         namespace MUSIC
         {
             static const AkUniqueID GROUP = 3991942870U;
