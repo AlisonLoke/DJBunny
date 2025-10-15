@@ -16,6 +16,13 @@
 						<State Name="Lose" ID="{73B28E34-0EB5-4C0B-8DA8-257408ED844F}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="MomDJBunnySwitch" ID="{0618D551-D95B-4D82-BAB4-B1C0AD1FF9EB}">
+					<ChildrenList>
+						<State Name="None" ID="{168D78DC-461C-4876-8A62-F97CC2584BC4}"/>
+						<State Name="Mom" ID="{5F335BB0-4DD8-4A28-8D3A-5379868C8423}"/>
+						<State Name="DJBunny" ID="{E8D2531B-1BFF-4F27-84EB-406B7338C18B}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

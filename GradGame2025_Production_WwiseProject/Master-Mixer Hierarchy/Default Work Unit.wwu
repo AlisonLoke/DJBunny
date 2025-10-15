@@ -9,6 +9,55 @@
 							<ObjectRef Name="System" ID="{FA8D75B6-6D30-4B2E-813B-B3898CCAFD1F}" WorkUnitID="{78C26239-F49F-493C-B048-15284FDD24A9}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="Music Bus" ID="{7B3C4097-1CAA-4D1D-B8FB-1A774AF66998}"/>
+						<Bus Name="SFX Bus" ID="{8E8879C3-A872-4A43-AC21-67CBB7025600}"/>
+						<Bus Name="ATM Bus" ID="{732E89A4-5099-442D-9435-FFA0A2B8B826}">
+							<ChildrenList>
+								<Bus Name="ATM Duck Bus" ID="{558626BF-22BC-471A-9B5B-E491DAC3C549}">
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{10BE53B6-C4D6-4307-BEBF-EB50D52D076A}" ShortID="840946768">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="ATMFade" ID="{79801727-494D-4794-81A2-82227FE4D441}" WorkUnitID="{758C8348-3EA2-4F93-BA7E-6175051E1EED}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{536C9CDB-6199-437F-B457-6FDBA9F0E270}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>-12.26682</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</Bus>
+							</ChildrenList>
+						</Bus>
+					</ChildrenList>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>
