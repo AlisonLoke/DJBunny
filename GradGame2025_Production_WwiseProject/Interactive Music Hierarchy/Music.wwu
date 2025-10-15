@@ -2684,58 +2684,6 @@
 												</ObjectList>
 											</ObjectLists>
 										</MusicTrack>
-										<MusicTrack Name="SNARE_8_01" ID="{C70FEEDA-7716-4983-9A80-0DFB513710FE}" ShortID="942978567">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
-												</Reference>
-												<Reference Name="TransitionRoot">
-													<Custom>
-														<MusicTransition Name="Root" ID="{E09713B3-43B8-4116-8DF1-A28D20EF453A}">
-															<PropertyList>
-																<Property Name="IsFolder" Type="bool" Value="True"/>
-															</PropertyList>
-															<TransitionInfo/>
-														</MusicTransition>
-													</Custom>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="SNARE_8_105" ID="{5D44EFD6-7AFD-4412-8F74-9EE083F281CF}">
-													<Language>SFX</Language>
-													<AudioFile>SNARE_8_105.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="294628112"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="Sequences">
-													<Reference>
-														<Local>
-															<MusicTrackSequence Name="" ID="{47AFA5B1-7937-405C-AC8A-DCE43D1B6993}">
-																<ObjectLists>
-																	<ObjectList Name="Clips">
-																		<Reference>
-																			<Local>
-																				<MusicClip Name="SNARE_8_105" ID="{9C25BE3F-309D-4F96-871D-F68454845D32}">
-																					<PropertyList>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="24000"/>
-																						<Property Name="FadeInMode" Type="int16" Value="0"/>
-																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																					</PropertyList>
-																					<AudioSourceRef Name="SNARE_8_105" ID="{5D44EFD6-7AFD-4412-8F74-9EE083F281CF}"/>
-																				</MusicClip>
-																			</Local>
-																		</Reference>
-																	</ObjectList>
-																</ObjectLists>
-															</MusicTrackSequence>
-														</Local>
-													</Reference>
-												</ObjectList>
-											</ObjectLists>
-										</MusicTrack>
 									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="Cues">
