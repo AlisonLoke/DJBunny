@@ -505,6 +505,10 @@ PrefabInstance:
       value: LBlock_lvl5_S (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1233302080639021175, guid: 13af49de97eaf084dac3c358f98d38fc, type: 3}
+      propertyPath: blockData
+      value: 
+      objectReference: {fileID: 11400000, guid: 0b202b7c295826943b67e7eacd0f7053, type: 2}
+    - target: {fileID: 1233302080639021175, guid: 13af49de97eaf084dac3c358f98d38fc, type: 3}
       propertyPath: gridParent
       value: 
       objectReference: {fileID: 91082563}
@@ -1612,11 +1616,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5993523896433815721, guid: 5accc1d11f8a3854a8b1c867ea8fa3e8, type: 3}
+      propertyPath: PlayMusic.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 9ae1141820514584981d4c6646f50f62, type: 2}
+    - target: {fileID: 5993523896433815721, guid: 5accc1d11f8a3854a8b1c867ea8fa3e8, type: 3}
+      propertyPath: EndLevelMusic.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1c508cd4a13a313448218aa4488be037, type: 2}
+    - target: {fileID: 5993523896433815721, guid: 5accc1d11f8a3854a8b1c867ea8fa3e8, type: 3}
+      propertyPath: StartLevelMusic.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 25826bc81c43cce48b1a3ff1bd66def4, type: 2}
+    - target: {fileID: 5993523896433815721, guid: 5accc1d11f8a3854a8b1c867ea8fa3e8, type: 3}
+      propertyPath: currentLevelMusicEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 25826bc81c43cce48b1a3ff1bd66def4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5accc1d11f8a3854a8b1c867ea8fa3e8, type: 3}
+--- !u!1 &1243869302 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 121991345401876096, guid: 5accc1d11f8a3854a8b1c867ea8fa3e8, type: 3}
+  m_PrefabInstance: {fileID: 1243869301}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1346782022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1710,6 +1735,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7929203607124664235, guid: c0dec09bbf1af2042a07281687870097, type: 3}
+      propertyPath: blockData
+      value: 
+      objectReference: {fileID: 11400000, guid: 2036934acc77cc542a81d2d9a750a08b, type: 2}
+    - target: {fileID: 7929203607124664235, guid: c0dec09bbf1af2042a07281687870097, type: 3}
       propertyPath: gridParent
       value: 
       objectReference: {fileID: 91082563}
@@ -1744,17 +1773,33 @@ PrefabInstance:
       value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 2685476396588401627, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+      propertyPath: IsNewLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2685476396588401627, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
       propertyPath: gameOverUI
       value: 
       objectReference: {fileID: 1235425409}
     - target: {fileID: 2685476396588401627, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
       propertyPath: isLastLevel
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2685476396588401627, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+      propertyPath: musicManager
+      value: 
+      objectReference: {fileID: 1243869302}
     - target: {fileID: 2685476396588401627, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
       propertyPath: useMoveLimit
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2685476396588401627, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+      propertyPath: levelStopMusic.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1c508cd4a13a313448218aa4488be037, type: 2}
+    - target: {fileID: 2685476396588401627, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+      propertyPath: levelStartMusic.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 25826bc81c43cce48b1a3ff1bd66def4, type: 2}
     - target: {fileID: 6989203491967808597, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2136,6 +2181,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9094050785186780507, guid: 092d12b9c6fd96b41ac5af2510ba4de4, type: 3}
+      propertyPath: blockData
+      value: 
+      objectReference: {fileID: 11400000, guid: 79bfaa953805d9442b4e193ad3b984fd, type: 2}
+    - target: {fileID: 9094050785186780507, guid: 092d12b9c6fd96b41ac5af2510ba4de4, type: 3}
       propertyPath: gridParent
       value: 
       objectReference: {fileID: 91082563}
@@ -2241,6 +2290,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -180
       objectReference: {fileID: 0}
+    - target: {fileID: 7929203607124664235, guid: c0dec09bbf1af2042a07281687870097, type: 3}
+      propertyPath: blockData
+      value: 
+      objectReference: {fileID: 11400000, guid: 0537231dc8cb5b746ad6a1bd715a2619, type: 2}
     - target: {fileID: 7929203607124664235, guid: c0dec09bbf1af2042a07281687870097, type: 3}
       propertyPath: gridParent
       value: 
@@ -2937,7 +2990,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2123677883}
   - component: {fileID: 2123677885}
-  - component: {fileID: 2123677884}
   - component: {fileID: 2123677886}
   m_Layer: 0
   m_Name: WwiseGlobal
@@ -2961,31 +3013,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2123677884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2123677881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4be27bfebb0c4f148a44e94c2edc7550, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: ae8d9d44
-  useOtherObject: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 15372c21a35d9754eb92903b0f736f31, type: 2}
-  decodeBank: 0
-  overrideLoadSetting: 0
-  loadAsynchronous: 0
-  saveDecodedBank: 0
-  unloadTriggerList: 958ca0ea
-  bankNameInternal: 
-  valueGuidInternal: 
 --- !u!114 &2123677885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3129,6 +3156,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7929203607124664235, guid: c0dec09bbf1af2042a07281687870097, type: 3}
+      propertyPath: blockData
+      value: 
+      objectReference: {fileID: 11400000, guid: 7a176e7bea70d0440990fb93b2f5198d, type: 2}
+    - target: {fileID: 7929203607124664235, guid: c0dec09bbf1af2042a07281687870097, type: 3}
       propertyPath: gridParent
       value: 
       objectReference: {fileID: 91082563}
@@ -3229,6 +3260,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8467287665319525062, guid: db79b26012b2aee48b66a5536b7b5250, type: 3}
+      propertyPath: blockData
+      value: 
+      objectReference: {fileID: 11400000, guid: 9968a66d5f3b32e4599a5240ddec21ec, type: 2}
     - target: {fileID: 8467287665319525062, guid: db79b26012b2aee48b66a5536b7b5250, type: 3}
       propertyPath: gridParent
       value: 
@@ -3331,6 +3366,10 @@ PrefabInstance:
       value: Big_LBlock_T_lvl5_P
       objectReference: {fileID: 0}
     - target: {fileID: 6558525237314340303, guid: 088a1f2dbf61b974c8e25816d2d6da62, type: 3}
+      propertyPath: blockData
+      value: 
+      objectReference: {fileID: 11400000, guid: 0a2d1ea731d233f4c8a5c9df6f313dd7, type: 2}
+    - target: {fileID: 6558525237314340303, guid: 088a1f2dbf61b974c8e25816d2d6da62, type: 3}
       propertyPath: gridParent
       value: 
       objectReference: {fileID: 91082563}
@@ -3351,6 +3390,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Big_LBlock_B_Lvl5_S
       objectReference: {fileID: 0}
+    - target: {fileID: 7516474540193791946, guid: 10c3057b7d09f7e41b6f28146b4382bd, type: 3}
+      propertyPath: blockData
+      value: 
+      objectReference: {fileID: 11400000, guid: fecae65246be2d947a6db2b45ac90dc7, type: 2}
     - target: {fileID: 7516474540193791946, guid: 10c3057b7d09f7e41b6f28146b4382bd, type: 3}
       propertyPath: gridParent
       value: 
@@ -3468,6 +3511,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 725768700}
     m_Modifications:
+    - target: {fileID: 3382342148420371177, guid: a3731724ee70fd14a9e5660a75e37d48, type: 3}
+      propertyPath: blockData
+      value: 
+      objectReference: {fileID: 11400000, guid: 1b766155a10429946bf0104d7bd92844, type: 2}
     - target: {fileID: 3382342148420371177, guid: a3731724ee70fd14a9e5660a75e37d48, type: 3}
       propertyPath: gridParent
       value: 
@@ -3667,6 +3714,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9094050785186780507, guid: 092d12b9c6fd96b41ac5af2510ba4de4, type: 3}
+      propertyPath: blockData
+      value: 
+      objectReference: {fileID: 11400000, guid: a909f02ea83f2564d91009697dac45c0, type: 2}
+    - target: {fileID: 9094050785186780507, guid: 092d12b9c6fd96b41ac5af2510ba4de4, type: 3}
       propertyPath: gridParent
       value: 
       objectReference: {fileID: 91082563}
@@ -3687,6 +3738,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LBlock_lvl5_S
       objectReference: {fileID: 0}
+    - target: {fileID: 1233302080639021175, guid: 13af49de97eaf084dac3c358f98d38fc, type: 3}
+      propertyPath: blockData
+      value: 
+      objectReference: {fileID: 11400000, guid: da0c3fed81968d940ab377f45e7b39b0, type: 2}
     - target: {fileID: 1233302080639021175, guid: 13af49de97eaf084dac3c358f98d38fc, type: 3}
       propertyPath: gridParent
       value: 

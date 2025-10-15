@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e7e63b03d3ea3a4dac14a8664b09b92, type: 3}
-  m_Name: UBlock
+  m_Name: Lvl05_Perc_UB
   m_EditorClassIdentifier: 
   BlockName: UBlock
   BlockPrefab: {fileID: 3525030621653700591, guid: 95dd5e52fcb2ec74bbe194ac928e6bb6, type: 3}
@@ -20,3 +20,12 @@ MonoBehaviour:
   - {x: 0, y: 1}
   - {x: 0, y: 2}
   - {x: 1, y: 2}
+  PlayInstrument:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 437ef26085bc59f45a248572f29e42f2, type: 2}
+  MuteInstrument:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 68a33beddf7785e419e9f29fab6c3149, type: 2}
+  genre: 0
