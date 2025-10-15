@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 58555146}
   - component: {fileID: 58555147}
+  - component: {fileID: 58555148}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -169,6 +170,31 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 85df1f709a5747b44a481d14474a9490, type: 2}
+  decodeBank: 0
+  overrideLoadSetting: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
+--- !u!114 &58555148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58555144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be27bfebb0c4f148a44e94c2edc7550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: aa23f95fc30cdaa4491f1343feb3aa78, type: 2}
   decodeBank: 0
   overrideLoadSetting: 0
   loadAsynchronous: 0
@@ -766,6 +792,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a529a51620810c409262620a76aa9a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &457715105
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1280764873754448000, guid: 0d2d7ebfa806df14ebe378c2fa3981d4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 871.9541
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280764873754448000, guid: 0d2d7ebfa806df14ebe378c2fa3981d4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 346.93857
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280764873754448000, guid: 0d2d7ebfa806df14ebe378c2fa3981d4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.388124
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280764873754448000, guid: 0d2d7ebfa806df14ebe378c2fa3981d4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280764873754448000, guid: 0d2d7ebfa806df14ebe378c2fa3981d4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280764873754448000, guid: 0d2d7ebfa806df14ebe378c2fa3981d4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280764873754448000, guid: 0d2d7ebfa806df14ebe378c2fa3981d4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280764873754448000, guid: 0d2d7ebfa806df14ebe378c2fa3981d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280764873754448000, guid: 0d2d7ebfa806df14ebe378c2fa3981d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280764873754448000, guid: 0d2d7ebfa806df14ebe378c2fa3981d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3200627094451029930, guid: 0d2d7ebfa806df14ebe378c2fa3981d4, type: 3}
+      propertyPath: m_Name
+      value: CutsceneMusic
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0d2d7ebfa806df14ebe378c2fa3981d4, type: 3}
 --- !u!224 &559815803 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6335411009151936866, guid: f2161c7f3f551fa40939c9be67635d61, type: 3}
@@ -2535,3 +2618,4 @@ SceneRoots:
   - {fileID: 2052059522}
   - {fileID: 1955755690}
   - {fileID: 215440513}
+  - {fileID: 457715105}
