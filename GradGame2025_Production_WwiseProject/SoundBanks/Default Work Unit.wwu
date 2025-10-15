@@ -31,6 +31,7 @@
 						<ObjectRef Name="Lvl2_1_SnarePlay" ID="{4DC413AC-6685-4BFF-AFFD-103665B3C6C7}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Lvl2_3_WowPlay" ID="{269E1C3E-4D33-4C36-8C64-71ABAEC74635}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Lvl2_2_BellsStop" ID="{04F9A699-6AD3-4CB2-A487-18A1A6AC67A0}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Music Bus" ID="{7B3C4097-1CAA-4D1D-B8FB-1A774AF66998}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Lvl2_2_BassPlay" ID="{C2CD6012-3770-4EDB-AF47-1E99F7D3E7F9}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Lvl2" ID="{D5C859D7-29A1-4F37-939D-C8169893E091}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
@@ -39,7 +40,9 @@
 				</SoundBank>
 				<SoundBank Name="SFX" ID="{D495C33D-C384-4BFC-8491-DA3FB5462D6C}">
 					<ObjectInclusionList>
+						<ObjectRef Name="ATM Bus" ID="{732E89A4-5099-442D-9435-FFA0A2B8B826}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="ATM" ID="{6A59FCB6-35AD-44E1-BCCE-166BC9203635}" WorkUnitID="{6A59FCB6-35AD-44E1-BCCE-166BC9203635}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="SFX Bus" ID="{8E8879C3-A872-4A43-AC21-67CBB7025600}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="UI" ID="{4CFCD80E-9E6D-4B61-9334-558299F149BF}" WorkUnitID="{4CFCD80E-9E6D-4B61-9334-558299F149BF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Dialogue" ID="{24638E55-9864-4EFD-AA33-318C83DEBEF8}" WorkUnitID="{24638E55-9864-4EFD-AA33-318C83DEBEF8}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
