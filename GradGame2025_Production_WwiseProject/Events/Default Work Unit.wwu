@@ -1688,6 +1688,55 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Lvl3_bg" ID="{91D1E6DE-A44D-495D-9CF7-29F592A3026A}">
+							<ChildrenList>
+								<Action Name="" ID="{0B407A57-6833-4684-9966-EEBD2805D4D0}" ShortID="971932480">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl3_Background" ID="{8EC7461E-1261-49F2-B763-669D8153E717}" WorkUnitID="{5F9035CE-D633-4D77-AFAC-532B6A139962}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{3801A4FD-40D9-4862-9429-0E6BCAA8B1DE}" ShortID="832474000">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="12"/>
+										<Property Name="Volume" Type="Real64" Value="-22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl2" ID="{D5C859D7-29A1-4F37-939D-C8169893E091}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{285983AA-64D6-4D96-9913-C1F7238C2825}" ShortID="609330549">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="43"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl2" ID="{D5C859D7-29A1-4F37-939D-C8169893E091}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+										<Reference Name="TargetEffect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+											<ObjectRef Name="Room_Medium_High_Absorbtion" ID="{E22DBBB6-7656-4B93-A28D-C003FD416889}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E586248D-DA18-47E9-A778-EB41A8912D23}" ShortID="779034313">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="29"/>
+										<Property Name="Highpass" Type="int16" Value="45"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl2" ID="{D5C859D7-29A1-4F37-939D-C8169893E091}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Lvl4" ID="{62002EFD-E878-403E-BAD8-4534A583ED46}" ShortID="699533948">
