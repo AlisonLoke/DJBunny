@@ -47,10 +47,22 @@
 							<GameParameterRef Name="MomBunny" ID="{DFF898CC-1FE2-482B-A17D-AF8200BDCEEA}"/>
 							<Value>0</Value>
 						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SFX_Vol" ID="{879A7DF4-4C27-4A3C-8ACE-18F20265C2AD}"/>
+							<Value>57</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Music_Vol" ID="{4F8DD7AB-047F-4AF4-A621-9266B573CA25}"/>
+							<Value>57</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="ATM_Vol" ID="{48758389-A1F1-4B45-8BB8-F77BB5E84792}"/>
+							<Value>57</Value>
+						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="Lvl4" ID="{ACDDADA0-42C4-48E9-B6EB-E012007AF2F0}"/>
-						<CurrentStateRef Name="None" ID="{1E62D76D-AF0F-4D57-A97A-E50D64BBA68B}"/>
+						<CurrentStateRef Name="BusExt" ID="{D5E15A4F-277A-4F73-939D-128BC3969707}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
