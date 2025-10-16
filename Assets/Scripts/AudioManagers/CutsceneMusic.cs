@@ -7,6 +7,8 @@ public class CutsceneMusic : MonoBehaviour
     public AK.Wwise.Event PlayMusic = null;
     public AK.Wwise.Event startBackgroundMusic = null;
 
+
+
     private void Awake()
     {
 

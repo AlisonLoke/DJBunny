@@ -71,6 +71,7 @@ public class TutorialManager : MonoBehaviour
 
     private IEnumerator SwitchAnimationDelay()
     {
+        if(mouseAnimator == null) { yield break; }  
         yield return new WaitForSeconds(1f);
         mouseAnimator.SetTrigger("WithArrow");
     }
@@ -105,6 +106,7 @@ public class TutorialManager : MonoBehaviour
     }
     private IEnumerator SwitchTutorial()
     {
+        if(textAnimator == null) {yield break; }
         yield return new WaitForSeconds(1f);
         textAnimator.SetTrigger("Hide");
         yield return new WaitForSeconds(2f);

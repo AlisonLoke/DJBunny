@@ -387,12 +387,20 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 316b535920b909e498bffbaa9c673da8, type: 2}
     - target: {fileID: 2685476396588401627, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
       propertyPath: IsNewLevel
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2685476396588401627, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
       propertyPath: musicManager
       value: 
       objectReference: {fileID: 585913390}
+    - target: {fileID: 2685476396588401627, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+      propertyPath: EndLevelMusic.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 4c862c80e8c0487438aa6ac24f330f20, type: 2}
+    - target: {fileID: 2685476396588401627, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
+      propertyPath: StartLevelMusic.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: f8104d792c81b0b4ba798f73be1ca010, type: 2}
     - target: {fileID: 6989203491967808597, guid: 6a575dbe69c79a84fb68b88e9f2ad261, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -972,7 +980,7 @@ PrefabInstance:
     - target: {fileID: 5993523896433815721, guid: 5accc1d11f8a3854a8b1c867ea8fa3e8, type: 3}
       propertyPath: StopLevelMusic.WwiseObjectReference
       value: 
-      objectReference: {fileID: 11400000, guid: 9baa4283bfabb4a4cad31bf6547bcdaf, type: 2}
+      objectReference: {fileID: 11400000, guid: ba4b31fc005a9c44a9e42e0b09a5e1cc, type: 2}
     - target: {fileID: 5993523896433815721, guid: 5accc1d11f8a3854a8b1c867ea8fa3e8, type: 3}
       propertyPath: StartLevelMusic.WwiseObjectReference
       value: 

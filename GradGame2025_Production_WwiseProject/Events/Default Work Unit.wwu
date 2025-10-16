@@ -3376,6 +3376,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Bus" ID="{58A2518A-B170-4A40-989B-887A51830336}">
+					<ChildrenList>
+						<Action Name="" ID="{7E0B5107-7E34-40D5-A0B0-A10EBF517C29}" ShortID="704893538">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bus" ID="{B2CB2F55-0768-4D5F-818F-A2C35CAA5125}" WorkUnitID="{5F9035CE-D633-4D77-AFAC-532B6A139962}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

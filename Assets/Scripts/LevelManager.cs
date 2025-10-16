@@ -2,6 +2,11 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// FULLY IN CONTROL OF MUSIC
+/// To make a new track start playing on scene load, make sure IsNewLevel = true then set StartLevelMusic to desired track.
+/// To make a new track start playing on Connection Path Completed, make sure IsLastPuzzle = true then set EndLevelMusic to desired track.
+/// </summary>
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance;
@@ -18,14 +23,14 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private bool isLastLevel = false;
     [SerializeField] private GameObject tryAgainCanvas;
     [Header("Level Music")]
-    [SerializeField] private AK.Wwise.Event levelStartMusic;
-    [SerializeField] private AK.Wwise.Event levelStopMusic;
-    public GameObject musicManager;
+    public AK.Wwise.Event StartLevelMusic;
+    public AK.Wwise.Event EndLevelMusic = null;
     // needs to be called after ConnectionSystem.Awake()
 
     [SerializeField] private float CutSceneTransitionTime = 1f;
     private EndCell[] allEndCells;
     public GridData GetGridData => gridData;
+
 
     private void Awake()
     {
@@ -37,7 +42,7 @@ public class LevelManager : MonoBehaviour
         if (MusicManager.instance != null && IsNewLevel)
         {
             Debug.Log("Resetting Music Manager for new level.");
-            MusicManager.instance.ResetForNewLevel(levelStartMusic, levelStopMusic);
+            MusicManager.instance.ResetForNewLevel(StartLevelMusic, EndLevelMusic);
         }
 
         //Instance = this; // WHY DID I DO THAT?
@@ -60,17 +65,7 @@ public class LevelManager : MonoBehaviour
         {
             return;
         }
-        //if (IsNewLevel)
-        //{
-        //    Debug.Log("Resetting Music Manager for new level.");
-        //    AK.Wwise.Event startMusic = MusicManager.instance.StartLevelMusic;
-        //    AK.Wwise.Event stopMusic = MusicManager.instance.StopLevelMusic;
-
-        //    MusicManager.instance.ResetForNewLevel(startMusic, stopMusic);
-
-        //    IsNewLevel = false;
-
-        //}
+     
 
 
     }

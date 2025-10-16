@@ -515,7 +515,7 @@ public class ConnectionSystem : MonoBehaviour
             BlockData blockData = block.GetComponent<BlockSystem>().blockData;
             if (blockData != null && blockData.PlayInstrument != null)
             {
-                
+
                 MusicManager.instance.PlayInstruments(blockData.PlayInstrument);
             }
         }
@@ -971,9 +971,9 @@ public class ConnectionSystem : MonoBehaviour
         {
             //Play end music
             Debug.Log("ENDING LEVEL 01 MUSIC");
-            MusicManager.instance.EndLevelMusic.Post(gameObject);
+            LevelManager.Instance.EndLevelMusic.Post(gameObject);
         }
-        
+
         SFXManager.instance.PlayCompletion.Post(gameObject);
     }
 
