@@ -9,6 +9,11 @@
 						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 						<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-7</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -627,18 +632,18 @@
 												<Custom>
 													<Effect Name="Guitar Distortion (Custom)" ID="{0EE8C338-3EA4-4278-877B-4E714520E5C8}" ShortID="377609638" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
 														<PropertyList>
-															<Property Name="DistortionDrive" Type="Real32" Value="21"/>
+															<Property Name="DistortionDrive" Type="Real32" Value="42"/>
 															<Property Name="DistortionTone" Type="Real32" Value="24"/>
 															<Property Name="DistortionType" Type="int32" Value="1"/>
-															<Property Name="OutputLevel" Type="Real32" Value="-10"/>
+															<Property Name="OutputLevel" Type="Real32" Value="-5"/>
 															<Property Name="PostEQBand1Frequency" Type="Real32" Value="815"/>
 															<Property Name="PreEQBand1Enable" Type="bool" Value="True"/>
 															<Property Name="PreEQBand1FilterType" Type="int32" Value="3"/>
-															<Property Name="PreEQBand1Frequency" Type="Real32" Value="4466"/>
+															<Property Name="PreEQBand1Frequency" Type="Real32" Value="764"/>
 															<Property Name="PreEQBand1Gain" Type="Real32" Value="-29"/>
 															<Property Name="PreEQBand2Enable" Type="bool" Value="True"/>
 															<Property Name="PreEQBand2FilterType" Type="int32" Value="4"/>
-															<Property Name="PreEQBand2Frequency" Type="Real32" Value="353"/>
+															<Property Name="PreEQBand2Frequency" Type="Real32" Value="708"/>
 														</PropertyList>
 													</Effect>
 												</Custom>
