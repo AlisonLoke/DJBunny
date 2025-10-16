@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 848f33f89179cb842832a87c2fe2e7f6
+guid: 734e1f083fc4ae04da33e76573926dfa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7360478550242476312
-    second: BunnyPhone_0
+      213: -9033425333094624219
+    second: todd icon_0
+  - first:
+      213: -4206233718834722110
+    second: todd icon_1
+  - first:
+      213: 1544608565231336944
+    second: todd icon_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +132,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BunnyPhone_0
+      name: todd icon_0
       rect:
         serializedVersion: 2
-        x: 142
-        y: 90
-        width: 212
-        height: 324
+        x: 83
+        y: 372
+        width: 123
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +147,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8ee3aeb81c35ad990800000000000000
-      internalID: -7360478550242476312
+      spriteID: 52451eb4583d2a280800000000000000
+      internalID: -9033425333094624219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd icon_1
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 378
+        width: 61
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ca0692e7b470a5c0800000000000000
+      internalID: -4206233718834722110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: todd icon_2
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 26
+        width: 215
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fdb3af6e4d8f6510800000000000000
+      internalID: 1544608565231336944
       vertices: []
       indices: 
       edges: []
@@ -160,8 +210,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      BunnyPhone_0: -7360478550242476312
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

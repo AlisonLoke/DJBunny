@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 848f33f89179cb842832a87c2fe2e7f6
+guid: f75a842c2a995e642b6f61a0c2239525
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7360478550242476312
-    second: BunnyPhone_0
+      213: -3358933203163112000
+    second: settings_0
+  - first:
+      213: 5522462000872384587
+    second: settings_1
+  - first:
+      213: -402267231098221219
+    second: settings_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +132,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BunnyPhone_0
+      name: settings_0
       rect:
         serializedVersion: 2
-        x: 142
-        y: 90
-        width: 212
-        height: 324
+        x: 93
+        y: 306
+        width: 314
+        height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +147,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8ee3aeb81c35ad990800000000000000
-      internalID: -7360478550242476312
+      spriteID: 0cd92315c0ca261d0800000000000000
+      internalID: -3358933203163112000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: settings_1
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 197
+        width: 314
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4867973ee9b3ac40800000000000000
+      internalID: 5522462000872384587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: settings_2
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 89
+        width: 314
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5d4c99a51cda6af0800000000000000
+      internalID: -402267231098221219
       vertices: []
       indices: 
       edges: []
@@ -160,8 +210,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      BunnyPhone_0: -7360478550242476312
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

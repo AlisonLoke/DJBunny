@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 848f33f89179cb842832a87c2fe2e7f6
+guid: bedd5a5165d09fd4bb985f870c36b136
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7360478550242476312
-    second: BunnyPhone_0
+      213: 7358084117759320229
+    second: mom icon_0
+  - first:
+      213: 6115585838081625851
+    second: mom icon_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BunnyPhone_0
+      name: mom icon_0
       rect:
         serializedVersion: 2
-        x: 142
-        y: 90
-        width: 212
-        height: 324
+        x: 83
+        y: 82
+        width: 334
+        height: 335
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +144,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8ee3aeb81c35ad990800000000000000
-      internalID: -7360478550242476312
+      spriteID: 5a0ec72358a2d1660800000000000000
+      internalID: 7358084117759320229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mom icon_1
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 81
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfec3400beceed450800000000000000
+      internalID: 6115585838081625851
       vertices: []
       indices: 
       edges: []
@@ -160,8 +185,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      BunnyPhone_0: -7360478550242476312
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
