@@ -38,8 +38,46 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 7e3613d8f1242a46bc3913423e02c807
     GuidInternal: 
-    m_lastTime: -8584542051205833552
+    m_lastTime: -8584409828210861600
     List:
+    - name: ATM Bus
+      guid: a4892e7399502d449435ffa0a2b8b826
+      id: 3226797093
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7e3613d8f1242a46bc3913423e02c807
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: ATM Bus
+        ObjectType: 2
+        guid: a4892e7399502d449435ffa0a2b8b826
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\ATM Bus
+    - name: ATM Duck Bus
+      guid: bf268655bc221a479b5be491dac3c549
+      id: 3016177656
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7e3613d8f1242a46bc3913423e02c807
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: ATM Bus
+        ObjectType: 2
+        guid: a4892e7399502d449435ffa0a2b8b826
+      - ElementName: ATM Duck Bus
+        ObjectType: 2
+        guid: bf268655bc221a479b5be491dac3c549
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\ATM Bus\ATM
+        Duck Bus
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -54,6 +92,40 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: Music Bus
+      guid: 97403c7baa1c1d4db8fb1a774af66998
+      id: 3127962312
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7e3613d8f1242a46bc3913423e02c807
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Music Bus
+        ObjectType: 2
+        guid: 97403c7baa1c1d4db8fb1a774af66998
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music Bus
+    - name: SFX Bus
+      guid: c379888e72a8434aac2167cbb7025600
+      id: 1502772432
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7e3613d8f1242a46bc3913423e02c807
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX Bus
+        ObjectType: 2
+        guid: c379888e72a8434aac2167cbb7025600
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Bus
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -66,7 +138,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1c2f7ea7e019e44081a8c815ce5a8e1e
     GuidInternal: 
-    m_lastTime: -8584412367057886131
+    m_lastTime: -8584409828210841300
     List:
     - name: KatMusicTest
       guid: 2eea2b311633a940b82e08d60148e83a
@@ -108,8 +180,42 @@ MonoBehaviour:
     ParentPath: Events\ATM
     guid: b6fc596aad35e144bcce166bc9203635
     GuidInternal: 
-    m_lastTime: -8584411367716485535
+    m_lastTime: -8584409828210983509
     List:
+    - name: ATM_Fade_Down
+      guid: e802417a62352a409ec48b374e387983
+      id: 44639447
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: ATM
+        ObjectType: 12
+        guid: b6fc596aad35e144bcce166bc9203635
+      - ElementName: ATM_Fade_Down
+        ObjectType: 3
+        guid: e802417a62352a409ec48b374e387983
+      Path: Events\ATM\ATM_Fade_Down
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: ATM_Fade_Up
+      guid: d05bcc550447c641b5cdc7e48a40568b
+      id: 3821751680
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: ATM
+        ObjectType: 12
+        guid: b6fc596aad35e144bcce166bc9203635
+      - ElementName: ATM_Fade_Up
+        ObjectType: 3
+        guid: d05bcc550447c641b5cdc7e48a40568b
+      Path: Events\ATM\ATM_Fade_Up
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: ATM_Play
       guid: 2456da22d3434c4f84b3a821cd6f3df5
       id: 135431296
@@ -421,7 +527,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 60318edf19da10499ab787cbf746dcca
     GuidInternal: 
-    m_lastTime: -8584409891140343208
+    m_lastTime: -8584409828301751439
     List:
     - name: Bus
       guid: 8a51a25870b1404a989b887a51830336
@@ -3858,7 +3964,7 @@ MonoBehaviour:
     ParentPath: Events\Dialogue
     guid: 558e63246498fd4eaa33318c83debef8
     GuidInternal: 
-    m_lastTime: -8584412202797219809
+    m_lastTime: -8584409828210968463
     List:
     - name: Dialogue_All_Break
       guid: 4eb6b71a1609fc4f9c425682f4fbeb6a
@@ -3874,6 +3980,40 @@ MonoBehaviour:
         ObjectType: 3
         guid: 4eb6b71a1609fc4f9c425682f4fbeb6a
       Path: Events\Dialogue\Dialogue_All_Break
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Dialogue_Bunny_Break
+      guid: 0f02a6136a741846901ff79ba50977d7
+      id: 946337906
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Dialogue
+        ObjectType: 12
+        guid: 558e63246498fd4eaa33318c83debef8
+      - ElementName: Dialogue_Bunny_Break
+        ObjectType: 3
+        guid: 0f02a6136a741846901ff79ba50977d7
+      Path: Events\Dialogue\Dialogue_Bunny_Break
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Dialogue_Bunny_Play
+      guid: 20722374e70f134ab905064c3b0acd7d
+      id: 3725547267
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Dialogue
+        ObjectType: 12
+        guid: 558e63246498fd4eaa33318c83debef8
+      - ElementName: Dialogue_Bunny_Play
+        ObjectType: 3
+        guid: 20722374e70f134ab905064c3b0acd7d
+      Path: Events\Dialogue\Dialogue_Bunny_Play
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4618,8 +4758,100 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: f6f231b16bbe6b488969e554ce119fd9
     GuidInternal: 
-    m_lastTime: -8584542051205788376
-    List: []
+    m_lastTime: -8584409828210943356
+    List:
+    - name: ATM_Vol
+      guid: 89837548f1a1454b8bb8f77bb5e84792
+      id: 1110899529
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f6f231b16bbe6b488969e554ce119fd9
+      - ElementName: ATM_Vol
+        ObjectType: 13
+        guid: 89837548f1a1454b8bb8f77bb5e84792
+      Path: Game Parameters\Default Work Unit\ATM_Vol
+    - name: Music_Vol
+      guid: abd78d4f7f04f44aa6219266b573ca25
+      id: 2246609544
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f6f231b16bbe6b488969e554ce119fd9
+      - ElementName: Music_Vol
+        ObjectType: 13
+        guid: abd78d4f7f04f44aa6219266b573ca25
+      Path: Game Parameters\Default Work Unit\Music_Vol
+    - name: SFX_Vol
+      guid: f47d9a87274c3c4a8ace18f20265c2ad
+      id: 42448320
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f6f231b16bbe6b488969e554ce119fd9
+      - ElementName: SFX_Vol
+        ObjectType: 13
+        guid: f47d9a87274c3c4a8ace18f20265c2ad
+      Path: Game Parameters\Default Work Unit\SFX_Vol
+  - PhysicalPath: Game Parameters\SFX.wwu
+    PathAndIcons:
+    - ElementName: Game Parameters
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: f6f231b16bbe6b488969e554ce119fd9
+    - ElementName: SFX
+      ObjectType: 12
+      guid: 48838c75a23e934fba7e6175051e1eed
+    ParentPath: Game Parameters\Default Work Unit\SFX
+    guid: 48838c75a23e934fba7e6175051e1eed
+    GuidInternal: 
+    m_lastTime: -8584409828210933303
+    List:
+    - name: ATMFade
+      guid: 271780794d49944781a282227fe4d441
+      id: 446238529
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f6f231b16bbe6b488969e554ce119fd9
+      - ElementName: SFX
+        ObjectType: 12
+        guid: 48838c75a23e934fba7e6175051e1eed
+      - ElementName: ATMFade
+        ObjectType: 13
+        guid: 271780794d49944781a282227fe4d441
+      Path: Game Parameters\Default Work Unit\SFX\ATMFade
+    - name: MomBunny
+      guid: cc98f8dfe21f2b48a17daf8200bdceea
+      id: 4256555742
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f6f231b16bbe6b488969e554ce119fd9
+      - ElementName: SFX
+        ObjectType: 12
+        guid: 48838c75a23e934fba7e6175051e1eed
+      - ElementName: MomBunny
+        ObjectType: 13
+        guid: cc98f8dfe21f2b48a17daf8200bdceea
+      Path: Game Parameters\Default Work Unit\SFX\MomBunny
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -4935,7 +5167,7 @@ MonoBehaviour:
     ParentPath: States\SFX
     guid: 52bd5ee85bccb040bcdc801fb4bc0373
     GuidInternal: 
-    m_lastTime: -8584424383960638553
+    m_lastTime: -8584409828210785720
     List:
     - name: ATM
       guid: 05349694c6778744a159b1b25095018c
@@ -5096,6 +5328,72 @@ MonoBehaviour:
         - ElementName: Win
           ObjectType: 8
           guid: 0f3af49871a4904f9ef4880b1bb3be99
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: MomDJBunnySwitch
+      guid: 51d518065bd9824dbab4b1c0ad1ff9eb
+      id: 1769167556
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: 52bd5ee85bccb040bcdc801fb4bc0373
+      - ElementName: MomDJBunnySwitch
+        ObjectType: 9
+        guid: 51d518065bd9824dbab4b1c0ad1ff9eb
+      Path: States\SFX\MomDJBunnySwitch
+      values:
+      - name: DJBunny
+        guid: 1b53d2e8ff1b274f84eb406b7338c18b
+        id: 896685753
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: SFX
+          ObjectType: 12
+          guid: 52bd5ee85bccb040bcdc801fb4bc0373
+        - ElementName: MomDJBunnySwitch
+          ObjectType: 9
+          guid: 51d518065bd9824dbab4b1c0ad1ff9eb
+        - ElementName: DJBunny
+          ObjectType: 8
+          guid: 1b53d2e8ff1b274f84eb406b7338c18b
+      - name: Mom
+        guid: b05b335fd84d284a8d3a5379868c8423
+        id: 1082004790
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: SFX
+          ObjectType: 12
+          guid: 52bd5ee85bccb040bcdc801fb4bc0373
+        - ElementName: MomDJBunnySwitch
+          ObjectType: 9
+          guid: 51d518065bd9824dbab4b1c0ad1ff9eb
+        - ElementName: Mom
+          ObjectType: 8
+          guid: b05b335fd84d284a8d3a5379868c8423
+      - name: None
+        guid: dc788d161c4676488a62f97cc2584bc4
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: SFX
+          ObjectType: 12
+          guid: 52bd5ee85bccb040bcdc801fb4bc0373
+        - ElementName: MomDJBunnySwitch
+          ObjectType: 9
+          guid: 51d518065bd9824dbab4b1c0ad1ff9eb
+        - ElementName: None
+          ObjectType: 8
+          guid: dc788d161c4676488a62f97cc2584bc4
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
