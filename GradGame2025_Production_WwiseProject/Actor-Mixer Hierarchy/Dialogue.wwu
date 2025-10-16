@@ -7,6 +7,63 @@
 				<WorkUnit Name="Mom" ID="{A9BB3ACD-49A0-4DCD-BEEE-B1A83B4708EE}" PersistMode="Reference"/>
 				<WorkUnit Name="Neutral" ID="{CBCAD006-C04E-48CB-9EA4-078A80A3221F}" PersistMode="Reference"/>
 				<WorkUnit Name="Sad" ID="{B9489D13-2D1C-46F5-9BCB-A01F995677CE}" PersistMode="Reference"/>
+				<Sound Name="Phone Noise" ID="{5387EF6A-342C-4C4C-99BC-DD90005D9D66}" ShortID="1002927106">
+					<PropertyList>
+						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Communications, Telephone, Background Noise Telephone Other End SND65020" ID="{21A0B29E-2020-4CAE-8D45-3E129B457800}">
+							<PropertyList>
+								<Property Name="VolumeOffset" Type="Real64">
+									<ValueList>
+										<Value>-9.1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Communications, Telephone, Background Noise Telephone Other End SND65020.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="639688869"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{0221342C-34FD-435F-B5DA-9015491493AE}" ShortID="1058056519">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+												<ObjectRef Name="New_Guitar_Distortion_01" ID="{5A84E5D6-E1EC-4E21-B822-8915A2782DE7}" WorkUnitID="{A6655D03-7C0D-4E9A-9178-FE43B44D4C03}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+					<ActiveSourceList>
+						<ActiveSource Name="Communications, Telephone, Background Noise Telephone Other End SND65020" ID="{21A0B29E-2020-4CAE-8D45-3E129B457800}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

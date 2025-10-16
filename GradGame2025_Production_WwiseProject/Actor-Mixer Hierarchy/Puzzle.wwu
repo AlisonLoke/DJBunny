@@ -4,6 +4,13 @@
 		<WorkUnit Name="Puzzle" ID="{F9EF6DF3-C3A5-49E1-8AC9-2B5959525D35}" OwnerID="{22EF482E-BE34-4CBB-9C2C-E27382CF2D0C}" PersistMode="Nested">
 			<ChildrenList>
 				<Sound Name="Puzzle Mechanic_Blink Sound 1-01" ID="{8BB618B5-3E34-4D21-87BC-FC6E91BC13E6}" ShortID="328754845">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-8</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
@@ -26,6 +33,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Puzzle Mechanic_Blink Sound 2-01" ID="{59E734EA-01AF-44D1-962E-645A67F8FC72}" ShortID="936951064">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-8</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
@@ -48,6 +62,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Puzzle Mechanic_Completion Puzzle Lights Sound 1" ID="{BA94C168-CF27-43DA-B071-67E3A7239EDC}" ShortID="380104545">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-13</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
@@ -70,6 +91,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Puzzle Mechanic_Completion Puzzle Lights Sound 2" ID="{F94A7303-039E-48FC-9BB1-6E1D0632D433}" ShortID="524418358">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-13</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
@@ -92,6 +120,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Puzzle Mechanic_Completion Puzzle Lights Sound 3" ID="{990013C0-B402-4C51-9372-CBFC705BA0A4}" ShortID="676130532">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-13</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
@@ -114,6 +149,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Puzzle Mechanic_Completion Puzzle Lights Sound 4" ID="{AA8BF23C-59F0-42C8-BC76-DAB83FFAB484}" ShortID="943726143">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-13</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
@@ -136,6 +178,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Puzzle Mechanic_Completion Puzzle Lights Sound 5" ID="{EE6CC619-702C-4CD1-995D-74FB6BED7DD4}" ShortID="727829544">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-13</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
@@ -158,6 +207,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Puzzle Mechanic_Drop sound" ID="{551F7D88-A269-4B2B-8510-92716A7DB5AA}" ShortID="923775968">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
@@ -180,6 +236,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Puzzle Mechanic_Pick Up sound" ID="{EB9058B4-55DC-4600-A45D-9684E0E1E72C}" ShortID="534164492">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
@@ -202,6 +265,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Puzzle Mechanic_Rotation Sound" ID="{2ACF5C81-F9F1-4AFD-8E83-F79DC6289869}" ShortID="1050940588">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-13</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
@@ -224,6 +294,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="UIAlert_Pop_Up" ID="{8C895F2C-1180-44E9-A110-B93C52246768}" ShortID="724393990">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-15</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
@@ -246,6 +323,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Puzzle Mechanic_Rotation Sound 2" ID="{F7870A2A-23C6-4676-9AB0-BD0CB2D6F34D}" ShortID="768788700">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-20</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
@@ -268,6 +352,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Puzzle Mechanic_Rotation Sound 3" ID="{AA4CADC4-70FD-438B-AA90-CCB13BCF2A9C}" ShortID="271453657">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-17</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
@@ -290,6 +381,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Puzzle Mechanic_Rotation Sound 4" ID="{73CF7C5F-FCEE-4DC1-9EC8-CCA2567E31C3}" ShortID="823369294">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
@@ -312,6 +410,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Puzzle Mechanic_Rotation Sound 5" ID="{E30A0E6A-13B4-490D-AD4B-C11FBF284796}" ShortID="396486837">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-7</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
@@ -334,6 +439,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Puzzle Mechanic_Completion Puzzle Lights Sound 6" ID="{ED72FA08-D720-4FD0-B100-1796162863F9}" ShortID="953403155">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-13</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
@@ -356,6 +468,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Puzzle Mechanic_Completion Puzzle Lights Sound 7" ID="{E48745C8-3D21-4994-8440-D6BD7B8FE3A0}" ShortID="380726902">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-13</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
@@ -378,6 +497,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Puzzle Mechanic_Completion Puzzle Lights Sound 8" ID="{CA17C5DC-760E-4DE5-9228-9A33B4759CF2}" ShortID="150391575">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-13</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
@@ -400,6 +526,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Puzzle Mechanic_Completion Puzzle Lights Sound 9" ID="{41CCF309-8EE5-4D52-A6C8-385BBC673CDD}" ShortID="229175577">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-13</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
@@ -422,6 +555,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Puzzle Mechanic_Completion Puzzle Lights Sound 10" ID="{F1AFA5E3-BC66-4B12-8FB2-8A891172801B}" ShortID="807847281">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-13</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
@@ -444,6 +584,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Puzzle Mechanic_Completion Puzzle Lights Sound 12" ID="{11909399-DC4E-4606-82D6-121F73056F67}" ShortID="517513492">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-13</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
@@ -466,6 +613,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Puzzle Mechanic_Completion Puzzle Lights Sound 13" ID="{D600E06F-5C11-43A2-99EA-F3040B009CE5}" ShortID="550098665">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-13</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
