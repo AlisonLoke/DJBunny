@@ -7,6 +7,7 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager instance;
     public TextMeshProUGUI DialogueText;
     public TextMeshProUGUI nameTag;
+    private GameObject currentCharacterImage;
     public float textSpeed = 0.03f;
     public DialogueLine[] dialogueLines;
     public Animator animator;
@@ -27,6 +28,7 @@ public class DialogueManager : MonoBehaviour
         SFXManager.instance.PlayOpenDialogue();
         animator.SetBool("IsOpen", true);
         index = 0;
+        ShowCharacterImage();
         StartCoroutine(TypeLine());
     }
     private IEnumerator TypeLine()
@@ -42,9 +44,10 @@ public class DialogueManager : MonoBehaviour
     }
     public void InteractToNextLine()
     {
-        SFXManager.instance.PlayButtonUI( );
+        SFXManager.instance.PlayButtonUI();
         if (DialogueText.text == dialogueLines[index].line)
         {
+           
             NextLine();
         }
         else
@@ -60,6 +63,7 @@ public class DialogueManager : MonoBehaviour
         if (index < dialogueLines.Length - 1)
         {
             index++;
+            ShowCharacterImage();
             DialogueText.text = string.Empty;
             dialogueLines[index].onLineStart?.Invoke();
             StartCoroutine(TypeLine());
@@ -91,5 +95,29 @@ public class DialogueManager : MonoBehaviour
     public void OnNodStart()
     {
         animator.SetBool("IsOpen", false);
+    }
+    private void ShowCharacterImage()
+    {
+        // Hide the currently active one
+        if (currentCharacterImage != null)
+            currentCharacterImage.SetActive(false);
+
+        // Get the image for this dialogue line
+        GetNextImage();
+    }
+
+    private void GetNextImage()
+    {
+        GameObject nextImage = dialogueLines[index].characterImage;
+
+        if (nextImage != null)
+        {
+            nextImage.SetActive(true);
+            currentCharacterImage = nextImage; // Track it so we can hide it later
+        }
+        else
+        {
+            currentCharacterImage = null;
+        }
     }
 }
