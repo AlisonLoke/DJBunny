@@ -3598,7 +3598,20 @@
 								</Reference>
 								<Reference Name="PlaylistRoot">
 									<Custom>
-										<MusicPlaylistItem Name="" ID="{FAB93FC3-CCD0-43B1-8E21-838F5F8F34B3}" ShortID="854234676"/>
+										<MusicPlaylistItem Name="" ID="{FAB93FC3-CCD0-43B1-8E21-838F5F8F34B3}" ShortID="854234676">
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{6CA61637-07F6-4DB0-A55F-480307E5CA28}" ShortID="81870381">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Segment">
+															<ObjectRef Name="3_2" ID="{16EED3F1-82C2-44B4-AFE5-8A57E24E9F37}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicPlaylistItem>
+											</ChildrenList>
+										</MusicPlaylistItem>
 									</Custom>
 								</Reference>
 								<Reference Name="TransitionRoot">
@@ -7517,7 +7530,20 @@
 								</Reference>
 								<Reference Name="PlaylistRoot">
 									<Custom>
-										<MusicPlaylistItem Name="" ID="{D6867C31-86F9-45BD-ABFB-749B4516F8B2}" ShortID="212115262"/>
+										<MusicPlaylistItem Name="" ID="{D6867C31-86F9-45BD-ABFB-749B4516F8B2}" ShortID="212115262">
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{C0B7053B-D85C-4D8C-B012-5478BE003370}" ShortID="712393296">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Segment">
+															<ObjectRef Name="Lvl4" ID="{6EA7FB7A-082F-4826-A264-85C6F4F7CFD9}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicPlaylistItem>
+											</ChildrenList>
+										</MusicPlaylistItem>
 									</Custom>
 								</Reference>
 								<Reference Name="TransitionRoot">
@@ -10322,7 +10348,20 @@
 								</Reference>
 								<Reference Name="PlaylistRoot">
 									<Custom>
-										<MusicPlaylistItem Name="" ID="{E6A0FE17-F6FF-4DCC-9358-4A8429F0078F}" ShortID="308939833"/>
+										<MusicPlaylistItem Name="" ID="{E6A0FE17-F6FF-4DCC-9358-4A8429F0078F}" ShortID="308939833">
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{4F1B85EE-B6C9-43F1-8CE7-897D3F01F4BA}" ShortID="513435766">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Segment">
+															<ObjectRef Name="Lvl5" ID="{7ED1E2DD-CBD9-46BB-9621-0012DC0E95E9}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicPlaylistItem>
+											</ChildrenList>
+										</MusicPlaylistItem>
 									</Custom>
 								</Reference>
 								<Reference Name="TransitionRoot">

@@ -14,8 +14,20 @@
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="ATM_Fade_Down" ID="{7A4102E8-3562-402A-9EC4-8B374E387983}" WorkUnitID="{6A59FCB6-35AD-44E1-BCCE-166BC9203635}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="ATM_State_BusExt" ID="{B588085A-0E43-48B4-8C27-9E23D9CFFE57}" WorkUnitID="{6A59FCB6-35AD-44E1-BCCE-166BC9203635}"/>
 							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="ATM_State_GlastonBunny" ID="{A2BAD97C-7E81-4FE9-AA9E-F661D55978A0}" WorkUnitID="{6A59FCB6-35AD-44E1-BCCE-166BC9203635}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="ATM_Fade_Up" ID="{55CC5BD0-4704-41C6-B5CD-C7E48A40568B}" WorkUnitID="{6A59FCB6-35AD-44E1-BCCE-166BC9203635}"/>
+							<Position X="1" Y="2"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="ATM_State_BusInt" ID="{5D2B09FA-D305-4BC3-A9D6-34EF401DC6AB}" WorkUnitID="{6A59FCB6-35AD-44E1-BCCE-166BC9203635}"/>
@@ -26,10 +38,60 @@
 							<Position X="3" Y="0"/>
 						</Module>
 					</ModuleList>
-					<RTPCValueList ShowAll="true"/>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="ATMFade" ID="{79801727-494D-4794-81A2-82227FE4D441}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="MomBunny" ID="{DFF898CC-1FE2-482B-A17D-AF8200BDCEEA}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SFX_Vol" ID="{879A7DF4-4C27-4A3C-8ACE-18F20265C2AD}"/>
+							<Value>57</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Music_Vol" ID="{4F8DD7AB-047F-4AF4-A621-9266B573CA25}"/>
+							<Value>57</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="ATM_Vol" ID="{48758389-A1F1-4B45-8BB8-F77BB5E84792}"/>
+							<Value>57</Value>
+						</RTPCValue>
+					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="BusInt" ID="{ED8D2DE0-A887-4248-9D61-5FA8C19594C7}"/>
+						<CurrentStateRef Name="Lvl4" ID="{ACDDADA0-42C4-48E9-B6EB-E012007AF2F0}"/>
+						<CurrentStateRef Name="BusExt" ID="{D5E15A4F-277A-4F73-939D-128BC3969707}"/>
 					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Dialogue" ID="{4D56F7FE-65A5-4891-AFAE-2F04EB89D91D}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Dialogue_All_Break" ID="{1AB7B64E-0916-4FFC-9C42-5682F4FBEB6A}" WorkUnitID="{24638E55-9864-4EFD-AA33-318C83DEBEF8}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Dialogue_Bunny_Play" ID="{74237220-0FE7-4A13-B905-064C3B0ACD7D}" WorkUnitID="{24638E55-9864-4EFD-AA33-318C83DEBEF8}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Dialogue_Mom_Play" ID="{A54D565E-CB89-422B-9CFD-9DB0F152385E}" WorkUnitID="{24638E55-9864-4EFD-AA33-318C83DEBEF8}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="ATMFade" ID="{79801727-494D-4794-81A2-82227FE4D441}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="MomBunny" ID="{DFF898CC-1FE2-482B-A17D-AF8200BDCEEA}"/>
+							<Value>0</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
 			</ChildrenList>

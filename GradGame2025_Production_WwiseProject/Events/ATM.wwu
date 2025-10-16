@@ -166,6 +166,37 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="ATM_Fade_Down" ID="{7A4102E8-3562-402A-9EC4-8B374E387983}">
+					<ChildrenList>
+						<Action Name="" ID="{AB4D9BF4-E4D8-4DD1-B96B-01D05517A863}" ShortID="710045757">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="51"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ATMFade" ID="{79801727-494D-4794-81A2-82227FE4D441}" WorkUnitID="{758C8348-3EA2-4F93-BA7E-6175051E1EED}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ATM_Fade_Up" ID="{55CC5BD0-4704-41C6-B5CD-C7E48A40568B}">
+					<ChildrenList>
+						<Action Name="" ID="{48F41C55-2EE7-4BDA-9D0E-094C98FC73EE}" ShortID="897982445">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ATMFade" ID="{79801727-494D-4794-81A2-82227FE4D441}" WorkUnitID="{758C8348-3EA2-4F93-BA7E-6175051E1EED}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

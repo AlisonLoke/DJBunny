@@ -26,7 +26,7 @@
 							<ObjectRef Name="BusInt" ID="{ED8D2DE0-A887-4248-9D61-5FA8C19594C7}" WorkUnitID="{E85EBD52-CC5B-40B0-BCDC-801FB4BC0373}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+							<ObjectRef Name="ATM Duck Bus" ID="{558626BF-22BC-471A-9B5B-E491DAC3C549}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
 						</Reference>
 						<Reference Name="SwitchGroupOrStateGroup">
 							<ObjectRef Name="ATM" ID="{94963405-77C6-4487-A159-B1B25095018C}" WorkUnitID="{E85EBD52-CC5B-40B0-BCDC-801FB4BC0373}"/>
@@ -34,6 +34,9 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="VEHBus_Bus Constant_2" ID="{74445481-7A19-4089-81CC-C3F487C1170B}" ShortID="124064069">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
@@ -44,10 +47,17 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="VEHBus_Bus Constant_2" ID="{B180E3F2-EBA2-4D09-82F1-8BC404500938}">
+									<PropertyList>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>-6.3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>VEHBus_Bus Constant_2.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="250890795"/>
+										<MediaID ID="795777669"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
@@ -56,6 +66,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="01 Musée de Mahébourg garden-01" ID="{19F9EFFB-67A0-48AD-AE7C-7652174C9405}" ShortID="832238823">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
@@ -66,6 +79,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="01 Musée de Mahébourg garden-01" ID="{ECA736A8-2EDE-4951-924C-D227F060F565}">
+									<PropertyList>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>-24</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>01 Musée de Mahébourg garden-01.wav</AudioFile>
 									<MediaIDList>
@@ -78,6 +98,14 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="AMB_Restaurant_China" ID="{9D05B2F0-0336-4DF9-8D11-E98F753CBD53}" ShortID="217233644">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
@@ -88,6 +116,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="AMB_Restaurant_China" ID="{066F94A5-1F9D-46CA-A2E1-0BC4D0608C4A}">
+									<PropertyList>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>-24</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>AMB_Restaurant_China.wav</AudioFile>
 									<MediaIDList>
@@ -100,6 +135,14 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Party_At_Da_Club_Crowd_Atmos 2" ID="{0063D5E3-BA3A-4583-9EA2-A066CA80FF16}" ShortID="168653233">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
@@ -110,6 +153,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Party_At_Da_Club_Crowd_Atmos 2" ID="{F3885E08-2D5E-4FAF-9B90-4C96072E3D4D}">
+									<PropertyList>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>-24</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Party_At_Da_Club_Crowd_Atmos 2.wav</AudioFile>
 									<MediaIDList>
@@ -122,6 +172,14 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="GlastonBunny_Crowd Atmos 2" ID="{6B4CAA01-D3E3-4E00-AC60-F0AF6AC8501C}" ShortID="664674724">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
@@ -132,6 +190,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="GlastonBunny_Crowd Atmos 2" ID="{817C8445-2FF7-4579-8892-06CFEDF8A962}">
+									<PropertyList>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>-24</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>GlastonBunny_Crowd Atmos 2.wav</AudioFile>
 									<MediaIDList>
@@ -144,6 +209,14 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="GlastonBunny_Crowd Atmos 4" ID="{902B7C4A-A0C0-4AE9-873C-870DFD030C3A}" ShortID="364046271">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
@@ -154,6 +227,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="GlastonBunny_Crowd Atmos 4" ID="{2E5A2F43-885D-4C8E-852E-B2F540C40AE5}">
+									<PropertyList>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>-24</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>GlastonBunny_Crowd Atmos 4.wav</AudioFile>
 									<MediaIDList>
@@ -166,6 +246,14 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="AMB_Busy_Traffic-01" ID="{CD5C7213-80BF-448D-A4B0-50822057C93E}" ShortID="494613220">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-14</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3F638154-FA3F-479F-BC1F-370509F24FD6}"/>
@@ -176,6 +264,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="AMB_Busy_Traffic-01" ID="{4A52AABE-D6BF-44CC-BFDB-E58E81539A46}">
+									<PropertyList>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>-24</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>AMB_Busy_Traffic-01.wav</AudioFile>
 									<MediaIDList>

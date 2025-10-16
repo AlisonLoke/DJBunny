@@ -52,6 +52,16 @@
 				</Event>
 				<Event Name="Dialogue_Mom_Play" ID="{A54D565E-CB89-422B-9CFD-9DB0F152385E}">
 					<ChildrenList>
+						<Action Name="" ID="{17027F10-E87C-4C09-8AC8-8A9E8AAA0CCB}" ShortID="929768965">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MomBunny" ID="{DFF898CC-1FE2-482B-A17D-AF8200BDCEEA}" WorkUnitID="{758C8348-3EA2-4F93-BA7E-6175051E1EED}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 						<Action Name="" ID="{90FE5090-8E7B-49A9-89C4-E3E80D64BEA4}" ShortID="58846931">
 							<ReferenceList>
 								<Reference Name="Target">
@@ -142,6 +152,42 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Sad" ID="{0E51A70A-F955-46E5-9C02-856A2144BAA3}" WorkUnitID="{B9489D13-2D1C-46F5-9BCB-A01F995677CE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Dialogue_Bunny_Break" ID="{13A6020F-746A-4618-901F-F79BA50977D7}">
+					<ChildrenList>
+						<Action Name="" ID="{38E1525A-F4BA-4C21-AD53-3E9A3DBE374B}" ShortID="854047029">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="34"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mom" ID="{4BF32B19-0F7A-4248-A057-C0CF07B4C8F2}" WorkUnitID="{A9BB3ACD-49A0-4DCD-BEEE-B1A83B4708EE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Dialogue_Bunny_Play" ID="{74237220-0FE7-4A13-B905-064C3B0ACD7D}">
+					<ChildrenList>
+						<Action Name="" ID="{913E522E-2E14-4F98-B3C2-02738A4324C3}" ShortID="172430013">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MomBunny" ID="{DFF898CC-1FE2-482B-A17D-AF8200BDCEEA}" WorkUnitID="{758C8348-3EA2-4F93-BA7E-6175051E1EED}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{46C2F825-6C56-4A23-9291-5549B9DB09E9}" ShortID="581656653">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mom" ID="{4BF32B19-0F7A-4248-A057-C0CF07B4C8F2}" WorkUnitID="{A9BB3ACD-49A0-4DCD-BEEE-B1A83B4708EE}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
