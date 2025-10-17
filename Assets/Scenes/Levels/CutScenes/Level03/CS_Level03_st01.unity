@@ -879,6 +879,14 @@ PrefabInstance:
       value: Tammy Lim
       objectReference: {fileID: 0}
     - target: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+      propertyPath: dialogueLines.Array.data[0].characterImage
+      value: 
+      objectReference: {fileID: 2017433583}
+    - target: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+      propertyPath: dialogueLines.Array.data[1].characterImage
+      value: 
+      objectReference: {fileID: 1782933398}
+    - target: {fileID: 868777168068917524, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
       propertyPath: dialogueLines.Array.data[1].onLineStart.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -2414,6 +2422,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1782933398 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1244660912533167796, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+  m_PrefabInstance: {fileID: 810261368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1807531886
 GameObject:
   m_ObjectHideFlags: 0
@@ -2547,6 +2560,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1439729431}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2017433583 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8368011893718262598, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+  m_PrefabInstance: {fileID: 810261368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

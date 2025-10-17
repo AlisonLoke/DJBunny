@@ -393,23 +393,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - characterName: Tammy Lim
+    characterImage: {fileID: 1579164413}
     line: "Haha now that\u2019s a classic that makes the world slow down. I like
       your vibe. "
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
   - characterName: Tammy Lim
+    characterImage: {fileID: 1579164413}
     line: "I run a cafe called the Brew & Chill. I\u2019ve got the brew but I don\u2019t
       think I\u2019ve got the chill yet.\r\n"
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
   - characterName: Tammy Lim
+    characterImage: {fileID: 1579164413}
     line: "Do you think you can fix that? \r\n"
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
   - characterName: DJ Bunny
+    characterImage: {fileID: 701599554}
     line: '* nods *'
     onLineStart:
       m_PersistentCalls:
@@ -439,6 +443,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - characterName: Tammy Lim
+    characterImage: {fileID: 1579164413}
     line: "Hah\u2026.. that\u2019s chill. "
     onLineStart:
       m_PersistentCalls:
@@ -553,6 +558,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &701599554 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1244660912533167796, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+  m_PrefabInstance: {fileID: 810261368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &810261368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1760,6 +1770,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1579164413 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1280979604525283531, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+  m_PrefabInstance: {fileID: 810261368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1584838165
 GameObject:
   m_ObjectHideFlags: 0

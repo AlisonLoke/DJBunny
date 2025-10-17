@@ -554,22 +554,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - characterName: Lady Foo Foo
+    characterImage: {fileID: 810261369}
     line: SICK!! Now that is some beat!! My partner was right about you.
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
   - characterName: Lady Foo Foo
+    characterImage: {fileID: 810261369}
     line: "I don\u2019t have a DJ for my party tonight before The Hippity Hop Music
       Festival. Come on over and play a set!"
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
   - characterName: DJ Bunny
+    characterImage: {fileID: 810261370}
     line: '* nods*'
     onLineStart:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1436886943}
           m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
           m_MethodName: DisableDialogueSFX
           m_Mode: 1
@@ -973,6 +976,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+--- !u!1 &810261369 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8368011893718262598, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+  m_PrefabInstance: {fileID: 810261368}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &810261370 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1244660912533167796, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+  m_PrefabInstance: {fileID: 810261368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &824610046
 PrefabInstance:
   m_ObjectHideFlags: 0

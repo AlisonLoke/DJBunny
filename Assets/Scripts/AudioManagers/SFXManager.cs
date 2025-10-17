@@ -17,6 +17,7 @@ public class SFXManager : MonoBehaviour
 
     [Header("DialogueSFX")]
     [SerializeField] private AK.Wwise.Event playDialogueSfx;
+    [SerializeField] private AK.Wwise.Event playMomDialogueSfx;
     [SerializeField] private AK.Wwise.Event stopDialogueSfx;
     public bool allowDialogueSFX = true;
 

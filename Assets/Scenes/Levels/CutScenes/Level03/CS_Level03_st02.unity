@@ -562,17 +562,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - characterName: Lady Foo Foo
+    characterImage: {fileID: 810261369}
     line: That was sick! Now this is a coffee run.
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
   - characterName: Lady Foo Foo
+    characterImage: {fileID: 810261369}
     line: "But I\u2019ve heard that song before. I don\u2019t get your vibe. Don\u2019t
       you have your own songs to play?  "
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
   - characterName: DJ Bunny
+    characterImage: {fileID: 810261370}
     line: '*shrugs*'
     onLineStart:
       m_PersistentCalls:
@@ -590,6 +593,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - characterName: Lady Foo Foo
+    characterImage: {fileID: 810261369}
     line: Show this cafe what you got DJ Bunny!
     onLineStart:
       m_PersistentCalls:
@@ -1109,6 +1113,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+--- !u!1 &810261369 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8368011893718262598, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+  m_PrefabInstance: {fileID: 810261368}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &810261370 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1244660912533167796, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+  m_PrefabInstance: {fileID: 810261368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &824610046
 PrefabInstance:
   m_ObjectHideFlags: 0

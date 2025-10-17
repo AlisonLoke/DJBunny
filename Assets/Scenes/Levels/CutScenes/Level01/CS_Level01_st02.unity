@@ -1932,6 +1932,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1325754302 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8095094698723638150, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+  m_PrefabInstance: {fileID: 810261368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1330260211
 GameObject:
   m_ObjectHideFlags: 0
@@ -2230,6 +2235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - characterName: Todd
+    characterImage: {fileID: 1325754302}
     line: 'WOWZA! That was totally awesome!! That is some cover!!
 
 '
@@ -2237,6 +2243,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - characterName: DJ Bunny
+    characterImage: {fileID: 1505009553}
     line: '* smiles which reveals two separate buck teeth *
 
 '
@@ -2256,6 +2263,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - characterName: Todd
+    characterImage: {fileID: 1325754302}
     line: "You\u2019ve really got something Bunnibee."
     onLineStart:
       m_PersistentCalls:
@@ -2273,6 +2281,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - characterName: Todd
+    characterImage: {fileID: 1325754302}
     line: 'Hey, you should play some of those tunes in town! Rack up an audience
       and see if they like your vibe.
 
@@ -2281,6 +2290,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - characterName: DJ Bunny
+    characterImage: {fileID: 1505009553}
     line: ' * Gives a nod *
 
 '
@@ -2300,6 +2310,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - characterName: Todd
+    characterImage: {fileID: 1325754302}
     line: ' Alright, you''re a cool bun, Bunnibee.'
     onLineStart:
       m_PersistentCalls:
@@ -2317,6 +2328,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - characterName: Todd
+    characterImage: {fileID: 1325754302}
     line: " I\u2019ll see you around, I\u2019m meeting my partner to set up a gig.
       I\u2019ll let them know about you!\r\n"
     onLineStart:
@@ -2337,6 +2349,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1505009553 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1244660912533167796, guid: 58e286f6f3af6bd4f828df69aea7acae, type: 3}
+  m_PrefabInstance: {fileID: 810261368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1584838165
 GameObject:
   m_ObjectHideFlags: 0
