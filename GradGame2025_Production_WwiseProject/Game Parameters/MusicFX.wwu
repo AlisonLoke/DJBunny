@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A956B1D1-93EC-401A-AAAD-6DAC7ABF0394}" SchemaVersion="123" RootDocumentID="{B131F2F6-BE6B-486B-8969-E554CE119FD9}" ParentDocumentID="{B131F2F6-BE6B-486B-8969-E554CE119FD9}">
+	<GameParameters>
+		<WorkUnit Name="MusicFX" ID="{A956B1D1-93EC-401A-AAAD-6DAC7ABF0394}" OwnerID="{B131F2F6-BE6B-486B-8969-E554CE119FD9}" PersistMode="Nested">
+			<ChildrenList>
+				<GameParameter Name="Pitch" ID="{69FDE3A1-F49F-4E2C-BCFD-D8383424FD16}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="Cafe" ID="{990DB334-E5E0-405E-BD79-1313E10B6008}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="Flanger" ID="{2F78A7DF-D5C9-4285-9273-1BDB862E4FA2}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="Dist" ID="{E7C4D08B-97CE-4D37-9CFB-8F5DA58CFA93}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>
