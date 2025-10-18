@@ -201,6 +201,10 @@
 							<Position X="2" Y="5"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Reset_FX" ID="{F96A38A8-3EAF-418C-8721-7C717733BB5C}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Lvl3_1_ChordStop" ID="{C896FB77-53A5-417A-990F-726300F1CFD9}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
 							<Position X="3" Y="1"/>
 						</Module>
@@ -248,7 +252,7 @@
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="Cafe" ID="{990DB334-E5E0-405E-BD79-1313E10B6008}"/>
-							<Value>92</Value>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Flanger" ID="{2F78A7DF-D5C9-4285-9273-1BDB862E4FA2}"/>
@@ -268,7 +272,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Lvl4_Dance" ID="{D34EE5F8-5FBB-4C1A-B002-AA3882A8141E}"/>
+						<CurrentStateRef Name="Lvl5" ID="{F9E6CCB4-BF0E-432F-A37E-4C10CF8F106F}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
@@ -567,7 +571,7 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Lvl5_Dance" ID="{A0F8CA77-BA96-42FE-97DD-542F67B564D2}"/>
+						<CurrentStateRef Name="Lvl5" ID="{F9E6CCB4-BF0E-432F-A37E-4C10CF8F106F}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
