@@ -190,6 +190,6 @@ public class LevelManager : MonoBehaviour
     }
     public void OnPlayerWin()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Credits");
     }
 }
