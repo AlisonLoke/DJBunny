@@ -551,7 +551,7 @@
 												<Property Name="FrequencyBand1" Type="Real32" Value="81"/>
 												<Property Name="FrequencyBand2" Type="Real32" Value="892"/>
 												<Property Name="FrequencyBand3" Type="Real32" Value="8967"/>
-												<Property Name="GainBand1" Type="Real32" Value="-8"/>
+												<Property Name="GainBand1" Type="Real32" Value="-2.5"/>
 												<Property Name="GainBand2" Type="Real32" Value="3.5"/>
 												<Property Name="GainBand3" Type="Real32" Value="-3"/>
 											</PropertyList>
@@ -669,8 +669,117 @@
 										<Property Name="FrequencyBand2" Type="Real32" Value="3000"/>
 										<Property Name="FrequencyBand3" Type="Real32" Value="4660"/>
 										<Property Name="GainBand2" Type="Real32" Value="18"/>
-										<Property Name="OutputLevel" Type="Real32" Value="-12"/>
+										<Property Name="OutputLevel" Type="Real32" Value="-10.5"/>
 									</PropertyList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{1BAAB38B-A243-4481-953A-488B460F3B35}" ShortID="214036067">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="OnOffBand1"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="Cafe" ID="{990DB334-E5E0-405E-BD79-1313E10B6008}" WorkUnitID="{A956B1D1-93EC-401A-AAAD-6DAC7ABF0394}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{A6F81881-A604-46FA-90CA-D1FC287A9ED6}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>1</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{3190A24F-9CC2-45B5-9A10-E3FFD1B0B509}" ShortID="752787226">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="OnOffBand2"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="Cafe" ID="{990DB334-E5E0-405E-BD79-1313E10B6008}" WorkUnitID="{A956B1D1-93EC-401A-AAAD-6DAC7ABF0394}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{3AB29949-8741-4E1B-8320-1103443BC707}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>1</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{8E44D13E-5E13-44E2-9B22-8ECBB9C898CC}" ShortID="982395501">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="OnOffBand3"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="Cafe" ID="{990DB334-E5E0-405E-BD79-1313E10B6008}" WorkUnitID="{A956B1D1-93EC-401A-AAAD-6DAC7ABF0394}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{2747498D-9BD9-4E52-BFCD-01C00B575803}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>1</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
 								</Effect>
 							</ChildrenList>
 						</Folder>
@@ -1276,6 +1385,7 @@
 										<Property Name="DecayTime" Type="Real32" Value="0.7"/>
 										<Property Name="Density" Type="Real32" Value="44"/>
 										<Property Name="Diffusion" Type="Real32" Value="46"/>
+										<Property Name="DryLevel" Type="Real32" Value="-0.3"/>
 										<Property Name="ERLevel" Type="Real32" Value="-23"/>
 										<Property Name="ERPattern" Type="int32" Value="22"/>
 										<Property Name="Filter1Freq" Type="Real32" Value="590"/>
@@ -1283,9 +1393,9 @@
 										<Property Name="Filter3Gain" Type="Real32" Value="-4.5"/>
 										<Property Name="HFDamping" Type="Real32" Value="2.7"/>
 										<Property Name="PreDelay" Type="Real32" Value="12"/>
-										<Property Name="ReverbLevel" Type="Real32" Value="-22"/>
+										<Property Name="ReverbLevel" Type="Real32" Value="-32"/>
 										<Property Name="RoomShape" Type="Real32" Value="55"/>
-										<Property Name="RoomSize" Type="Real32" Value="15"/>
+										<Property Name="RoomSize" Type="Real32" Value="23"/>
 										<Property Name="StereoWidth" Type="Real32" Value="90"/>
 									</PropertyList>
 								</Effect>
@@ -1626,7 +1736,49 @@
 									<PropertyList>
 										<Property Name="DelayTime" Type="Real32" Value="2.5"/>
 										<Property Name="EnableLFO" Type="bool" Value="False"/>
+										<Property Name="FeedBackLevel" Type="Real32" Value="0.7"/>
+										<Property Name="OutputLevel" Type="Real32" Value="-10"/>
+										<Property Name="WetDryMix" Type="Real32" Value="73"/>
 									</PropertyList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{4B5D0FE8-BD51-47B6-BC98-B3449033A1C0}" ShortID="708272532">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="WetDryMix"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="Flanger" ID="{2F78A7DF-D5C9-4285-9273-1BDB862E4FA2}" WorkUnitID="{A956B1D1-93EC-401A-AAAD-6DAC7ABF0394}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{C17C1AC9-F87D-429F-A47D-A6D2BCB0DDE7}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-100</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>100</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
 								</Effect>
 								<Effect Name="Few_Odd_Harm_Peaks" ID="{08C13A59-4200-4E97-8B9B-72CE1926B0A7}" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
 									<PropertyList>
@@ -1955,8 +2107,8 @@
 								</Effect>
 								<Effect Name="Octave_Down" ID="{062EC4B1-5372-4D1E-917B-C757293F2B42}" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">
 									<PropertyList>
-										<Property Name="DryLevel" Type="Real32" Value="0"/>
 										<Property Name="Pitch" Type="Real32" Value="-1200"/>
+										<Property Name="WetLevel" Type="Real32" Value="24"/>
 									</PropertyList>
 								</Effect>
 							</ChildrenList>
