@@ -225,10 +225,6 @@
 							<Position X="3" Y="5"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Lvl3_2_Start" ID="{08114FE6-2C26-4608-88CD-0017ED25D6E1}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
-							<Position X="4" Y="0"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="Lvl3_1_ClapPlay" ID="{AA33A376-247F-4A9D-A2ED-F20B7D1C6C3C}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
 							<Position X="4" Y="1"/>
 						</Module>
@@ -239,10 +235,6 @@
 						<Module>
 							<ObjectRef Name="Lvl3_1_MelPlay" ID="{4693D688-E234-4BC8-9AC7-193ADBDB0CD0}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
 							<Position X="4" Y="3"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Lvl3_bg" ID="{91D1E6DE-A44D-495D-9CF7-29F592A3026A}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
-							<Position X="5" Y="0"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Lvl3_1_ClapStop" ID="{532AC1FA-86CA-4F06-8682-5DCA48220BB7}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
@@ -259,16 +251,12 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
-							<GameParameterRef Name="Cafe" ID="{990DB334-E5E0-405E-BD79-1313E10B6008}"/>
-							<Value>100</Value>
-						</RTPCValue>
-						<RTPCValue>
 							<GameParameterRef Name="Flanger" ID="{2F78A7DF-D5C9-4285-9273-1BDB862E4FA2}"/>
 							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Music_Vol" ID="{4F8DD7AB-047F-4AF4-A621-9266B573CA25}"/>
-							<Value>65.524</Value>
+							<Value>80</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Dist" ID="{E7C4D08B-97CE-4D37-9CFB-8F5DA58CFA93}"/>
@@ -280,7 +268,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Lvl3_Background" ID="{8EC7461E-1261-49F2-B763-669D8153E717}"/>
+						<CurrentStateRef Name="Bus" ID="{B2CB2F55-0768-4D5F-818F-A2C35CAA5125}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
@@ -692,7 +680,7 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Lvl3_Background" ID="{8EC7461E-1261-49F2-B763-669D8153E717}"/>
+						<CurrentStateRef Name="Lvl3_2_Dance" ID="{961F475A-308B-4AA8-8F50-4FA560D31492}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

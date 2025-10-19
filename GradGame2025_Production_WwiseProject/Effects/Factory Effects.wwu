@@ -669,117 +669,11 @@
 										<Property Name="FrequencyBand2" Type="Real32" Value="3000"/>
 										<Property Name="FrequencyBand3" Type="Real32" Value="4660"/>
 										<Property Name="GainBand2" Type="Real32" Value="18"/>
+										<Property Name="OnOffBand1" Type="bool" Value="False"/>
+										<Property Name="OnOffBand2" Type="bool" Value="False"/>
+										<Property Name="OnOffBand3" Type="bool" Value="False"/>
 										<Property Name="OutputLevel" Type="Real32" Value="-10.5"/>
 									</PropertyList>
-									<ObjectLists>
-										<ObjectList Name="RTPC">
-											<Reference>
-												<Local>
-													<RTPC Name="" ID="{1BAAB38B-A243-4481-953A-488B460F3B35}" ShortID="214036067">
-														<PropertyList>
-															<Property Name="PropertyName" Type="string" Value="OnOffBand1"/>
-														</PropertyList>
-														<ReferenceList>
-															<Reference Name="ControlInput">
-																<ObjectRef Name="Cafe" ID="{990DB334-E5E0-405E-BD79-1313E10B6008}" WorkUnitID="{A956B1D1-93EC-401A-AAAD-6DAC7ABF0394}"/>
-															</Reference>
-															<Reference Name="Curve">
-																<Custom>
-																	<Curve Name="" ID="{A6F81881-A604-46FA-90CA-D1FC287A9ED6}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="65537"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>0</XPos>
-																				<YPos>1</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>100</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</Custom>
-															</Reference>
-														</ReferenceList>
-													</RTPC>
-												</Local>
-											</Reference>
-											<Reference>
-												<Local>
-													<RTPC Name="" ID="{3190A24F-9CC2-45B5-9A10-E3FFD1B0B509}" ShortID="752787226">
-														<PropertyList>
-															<Property Name="PropertyName" Type="string" Value="OnOffBand2"/>
-														</PropertyList>
-														<ReferenceList>
-															<Reference Name="ControlInput">
-																<ObjectRef Name="Cafe" ID="{990DB334-E5E0-405E-BD79-1313E10B6008}" WorkUnitID="{A956B1D1-93EC-401A-AAAD-6DAC7ABF0394}"/>
-															</Reference>
-															<Reference Name="Curve">
-																<Custom>
-																	<Curve Name="" ID="{3AB29949-8741-4E1B-8320-1103443BC707}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="65537"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>0</XPos>
-																				<YPos>1</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>100</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</Custom>
-															</Reference>
-														</ReferenceList>
-													</RTPC>
-												</Local>
-											</Reference>
-											<Reference>
-												<Local>
-													<RTPC Name="" ID="{8E44D13E-5E13-44E2-9B22-8ECBB9C898CC}" ShortID="982395501">
-														<PropertyList>
-															<Property Name="PropertyName" Type="string" Value="OnOffBand3"/>
-														</PropertyList>
-														<ReferenceList>
-															<Reference Name="ControlInput">
-																<ObjectRef Name="Cafe" ID="{990DB334-E5E0-405E-BD79-1313E10B6008}" WorkUnitID="{A956B1D1-93EC-401A-AAAD-6DAC7ABF0394}"/>
-															</Reference>
-															<Reference Name="Curve">
-																<Custom>
-																	<Curve Name="" ID="{2747498D-9BD9-4E52-BFCD-01C00B575803}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="65537"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>0</XPos>
-																				<YPos>1</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>100</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</Custom>
-															</Reference>
-														</ReferenceList>
-													</RTPC>
-												</Local>
-											</Reference>
-										</ObjectList>
-									</ObjectLists>
 								</Effect>
 							</ChildrenList>
 						</Folder>
@@ -822,10 +716,11 @@
 						</Effect>
 						<Effect Name="Medium_Room1" ID="{71B802A7-03E2-4998-B241-B2B84FE9DDFF}" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
 							<PropertyList>
-								<Property Name="HFRatio" Type="Real32" Value="6"/>
+								<Property Name="DryLevel" Type="Real32" Value="-3.3"/>
+								<Property Name="HFRatio" Type="Real32" Value="5"/>
 								<Property Name="NumberOfDelays" Type="int32" Value="12"/>
 								<Property Name="ReverbTime" Type="Real32" Value="2"/>
-								<Property Name="WetLevel" Type="Real32" Value="-30"/>
+								<Property Name="WetLevel" Type="Real32" Value="-34"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="PA_Announcement1" ID="{65E0ACE4-B404-4485-87A4-5907277D9858}" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">

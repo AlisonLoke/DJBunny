@@ -926,25 +926,6 @@
 					<ChildrenList>
 						<Event Name="Lvl3_1_Start" ID="{EE3D3F7B-C35F-40D1-8062-E4DBFEC8424E}">
 							<ChildrenList>
-								<Action Name="" ID="{E9771080-6BFE-4281-8C0D-2EBF1322F4C8}" ShortID="84452167">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="45"/>
-										<Property Name="Delay" Type="Real64" Value="1.5"/>
-									</PropertyList>
-									<ReferenceList/>
-								</Action>
-								<Action Name="" ID="{53991780-D0FF-417C-9858-85293BB9EA6E}" ShortID="713633122">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="38"/>
-										<Property Name="FadeTime" Type="Real64" Value="1"/>
-										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Cafe" ID="{990DB334-E5E0-405E-BD79-1313E10B6008}" WorkUnitID="{A956B1D1-93EC-401A-AAAD-6DAC7ABF0394}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 								<Action Name="" ID="{0DDEB140-6919-48DC-B3CB-0E16FD875500}" ShortID="594252952">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="22"/>
@@ -1537,25 +1518,6 @@
 						</Event>
 						<Event Name="Lvl3_2_Start" ID="{08114FE6-2C26-4608-88CD-0017ED25D6E1}">
 							<ChildrenList>
-								<Action Name="" ID="{84B80DD9-D3B1-423C-9465-8C29BFEEFB6F}" ShortID="40079216">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="45"/>
-										<Property Name="Delay" Type="Real64" Value="1.5"/>
-									</PropertyList>
-									<ReferenceList/>
-								</Action>
-								<Action Name="" ID="{53EEB8DA-BF61-42BA-8965-C404BD6A44FB}" ShortID="643926085">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="38"/>
-										<Property Name="FadeTime" Type="Real64" Value="1"/>
-										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Cafe" ID="{990DB334-E5E0-405E-BD79-1313E10B6008}" WorkUnitID="{A956B1D1-93EC-401A-AAAD-6DAC7ABF0394}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 								<Action Name="" ID="{1BD95479-4B8D-459D-AB08-BEBF544F195F}" ShortID="539618456">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="22"/>
@@ -1737,17 +1699,6 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Lvl3_Background" ID="{8EC7461E-1261-49F2-B763-669D8153E717}" WorkUnitID="{5F9035CE-D633-4D77-AFAC-532B6A139962}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{B2BF8B14-0C80-4681-9E49-BC4DC596A543}" ShortID="100389031">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="38"/>
-										<Property Name="FadeTime" Type="Real64" Value="1.2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Cafe" ID="{990DB334-E5E0-405E-BD79-1313E10B6008}" WorkUnitID="{A956B1D1-93EC-401A-AAAD-6DAC7ABF0394}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -2265,25 +2216,6 @@
 						</Event>
 						<Event Name="Lvl4_Start" ID="{9DA547B0-4060-46AC-B5FF-C24FB38628ED}">
 							<ChildrenList>
-								<Action Name="" ID="{E94DE882-AE51-41F7-8602-5C2E5CB756F2}" ShortID="99636194">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="45"/>
-										<Property Name="Delay" Type="Real64" Value="1.5"/>
-									</PropertyList>
-									<ReferenceList/>
-								</Action>
-								<Action Name="" ID="{EABAEEBB-8EF7-4186-A9C6-B52A17C5812D}" ShortID="280664366">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="38"/>
-										<Property Name="FadeTime" Type="Real64" Value="1"/>
-										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Cafe" ID="{990DB334-E5E0-405E-BD79-1313E10B6008}" WorkUnitID="{A956B1D1-93EC-401A-AAAD-6DAC7ABF0394}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 								<Action Name="" ID="{8EE745A8-35D0-4A0D-BD7F-0BCACC106B3D}" ShortID="316373736">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="22"/>
@@ -4465,20 +4397,6 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Credits" ID="{51EED57B-6892-463E-B401-19A783DF378C}" WorkUnitID="{5F9035CE-D633-4D77-AFAC-532B6A139962}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Bus" ID="{58A2518A-B170-4A40-989B-887A51830336}">
-					<ChildrenList>
-						<Action Name="" ID="{7E0B5107-7E34-40D5-A0B0-A10EBF517C29}" ShortID="704893538">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="22"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Bus" ID="{B2CB2F55-0768-4D5F-818F-A2C35CAA5125}" WorkUnitID="{5F9035CE-D633-4D77-AFAC-532B6A139962}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
