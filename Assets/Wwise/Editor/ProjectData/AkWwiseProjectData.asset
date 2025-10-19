@@ -527,25 +527,8 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 60318edf19da10499ab787cbf746dcca
     GuidInternal: 
-    m_lastTime: -8584407305523737518
+    m_lastTime: -8584407142393746659
     List:
-    - name: Bus
-      guid: 8a51a25870b1404a989b887a51830336
-      id: 714721605
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Bus
-        ObjectType: 3
-        guid: 8a51a25870b1404a989b887a51830336
-      Path: Events\Default Work Unit\Bus
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
     - name: Credits
       guid: dc15297e1d4d0140afcbf37950d933a8
       id: 2201105581
@@ -5562,7 +5545,7 @@ MonoBehaviour:
       maxDuration: 0
       minDuration: 0
     - name: Stg1
-      guid: 8f24917bc76d3c478ae07586e29e875f
+      guid: 736061d4f938834f8c14d81bbec14460
       id: 654663588
       PathAndIcons:
       - ElementName: Events
@@ -5571,13 +5554,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Lvl1
+      - ElementName: Lvl5
         ObjectType: 4
-        guid: b50846f8bdea8744b8c1dbd79cc62c0f
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
       - ElementName: Stg1
         ObjectType: 4
-        guid: 8f24917bc76d3c478ae07586e29e875f
-      Path: Events\Default Work Unit\Lvl1\Stg1
+        guid: 736061d4f938834f8c14d81bbec14460
+      Path: Events\Default Work Unit\Lvl5\Stg1
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -5598,26 +5581,6 @@ MonoBehaviour:
         ObjectType: 4
         guid: 354439276a884b428632244e5cba1dc0
       Path: Events\Default Work Unit\Lvl3_1\Stg1
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Stg1
-      guid: 0a90ec45b30ddb4b8f0e4fe56d952906
-      id: 654663588
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Lvl2
-        ObjectType: 4
-        guid: a51f4f2130300b45b469ba6bda1fd31c
-      - ElementName: Stg1
-        ObjectType: 4
-        guid: 0a90ec45b30ddb4b8f0e4fe56d952906
-      Path: Events\Default Work Unit\Lvl2\Stg1
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -5662,28 +5625,8 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: Stg1
-      guid: 736061d4f938834f8c14d81bbec14460
+      guid: 0a90ec45b30ddb4b8f0e4fe56d952906
       id: 654663588
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Lvl5
-        ObjectType: 4
-        guid: c25e0467a839ad41ad1301f9f63ba1e6
-      - ElementName: Stg1
-        ObjectType: 4
-        guid: 736061d4f938834f8c14d81bbec14460
-      Path: Events\Default Work Unit\Lvl5\Stg1
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Stg2
-      guid: 4f343e46c8b1e0488e0050c9b54371a4
-      id: 654663591
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -5694,36 +5637,16 @@ MonoBehaviour:
       - ElementName: Lvl2
         ObjectType: 4
         guid: a51f4f2130300b45b469ba6bda1fd31c
-      - ElementName: Stg2
+      - ElementName: Stg1
         ObjectType: 4
-        guid: 4f343e46c8b1e0488e0050c9b54371a4
-      Path: Events\Default Work Unit\Lvl2\Stg2
+        guid: 0a90ec45b30ddb4b8f0e4fe56d952906
+      Path: Events\Default Work Unit\Lvl2\Stg1
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Stg2
-      guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
-      id: 654663591
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Lvl5
-        ObjectType: 4
-        guid: c25e0467a839ad41ad1301f9f63ba1e6
-      - ElementName: Stg2
-        ObjectType: 4
-        guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
-      Path: Events\Default Work Unit\Lvl5\Stg2
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Stg2
-      guid: ef307bfa0799a244831945563d52aebb
-      id: 654663591
+    - name: Stg1
+      guid: 8f24917bc76d3c478ae07586e29e875f
+      id: 654663588
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -5734,30 +5657,10 @@ MonoBehaviour:
       - ElementName: Lvl1
         ObjectType: 4
         guid: b50846f8bdea8744b8c1dbd79cc62c0f
-      - ElementName: Stg2
+      - ElementName: Stg1
         ObjectType: 4
-        guid: ef307bfa0799a244831945563d52aebb
-      Path: Events\Default Work Unit\Lvl1\Stg2
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Stg2
-      guid: 98d60993a249f7488f3ae385b017e0cf
-      id: 654663591
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Lvl3_2
-        ObjectType: 4
-        guid: de8fe861b51b3641b82295628400a628
-      - ElementName: Stg2
-        ObjectType: 4
-        guid: 98d60993a249f7488f3ae385b017e0cf
-      Path: Events\Default Work Unit\Lvl3_2\Stg2
+        guid: 8f24917bc76d3c478ae07586e29e875f
+      Path: Events\Default Work Unit\Lvl1\Stg1
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -5801,9 +5704,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Stg3
-      guid: 610692cf67f9cf4ea0d0b9a64b9c6afd
-      id: 654663590
+    - name: Stg2
+      guid: 98d60993a249f7488f3ae385b017e0cf
+      id: 654663591
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -5811,19 +5714,39 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Lvl4
+      - ElementName: Lvl3_2
         ObjectType: 4
-        guid: fd2e006278e83e40bad84534a583ed46
-      - ElementName: Stg3
+        guid: de8fe861b51b3641b82295628400a628
+      - ElementName: Stg2
         ObjectType: 4
-        guid: 610692cf67f9cf4ea0d0b9a64b9c6afd
-      Path: Events\Default Work Unit\Lvl4\Stg3
+        guid: 98d60993a249f7488f3ae385b017e0cf
+      Path: Events\Default Work Unit\Lvl3_2\Stg2
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Stg3
-      guid: ba1ce3715bfcef47ab74920435f383fc
-      id: 654663590
+    - name: Stg2
+      guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
+      id: 654663591
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
+      Path: Events\Default Work Unit\Lvl5\Stg2
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stg2
+      guid: 4f343e46c8b1e0488e0050c9b54371a4
+      id: 654663591
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -5834,10 +5757,30 @@ MonoBehaviour:
       - ElementName: Lvl2
         ObjectType: 4
         guid: a51f4f2130300b45b469ba6bda1fd31c
-      - ElementName: Stg3
+      - ElementName: Stg2
         ObjectType: 4
-        guid: ba1ce3715bfcef47ab74920435f383fc
-      Path: Events\Default Work Unit\Lvl2\Stg3
+        guid: 4f343e46c8b1e0488e0050c9b54371a4
+      Path: Events\Default Work Unit\Lvl2\Stg2
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stg2
+      guid: ef307bfa0799a244831945563d52aebb
+      id: 654663591
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl1
+        ObjectType: 4
+        guid: b50846f8bdea8744b8c1dbd79cc62c0f
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: ef307bfa0799a244831945563d52aebb
+      Path: Events\Default Work Unit\Lvl1\Stg2
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -5862,7 +5805,7 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: Stg3
-      guid: ddc29c871c04e94e98313623ba2ec2c7
+      guid: ccfd2430386c1f409ade8f9c5694fef2
       id: 654663590
       PathAndIcons:
       - ElementName: Events
@@ -5871,13 +5814,33 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Lvl3_1
+      - ElementName: Lvl5
         ObjectType: 4
-        guid: f3cc2aaa27a6474ea02002905cf1cecb
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
       - ElementName: Stg3
         ObjectType: 4
-        guid: ddc29c871c04e94e98313623ba2ec2c7
-      Path: Events\Default Work Unit\Lvl3_1\Stg3
+        guid: ccfd2430386c1f409ade8f9c5694fef2
+      Path: Events\Default Work Unit\Lvl5\Stg3
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stg3
+      guid: ba1ce3715bfcef47ab74920435f383fc
+      id: 654663590
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl2
+        ObjectType: 4
+        guid: a51f4f2130300b45b469ba6bda1fd31c
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ba1ce3715bfcef47ab74920435f383fc
+      Path: Events\Default Work Unit\Lvl2\Stg3
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -5902,7 +5865,7 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: Stg3
-      guid: ccfd2430386c1f409ade8f9c5694fef2
+      guid: 610692cf67f9cf4ea0d0b9a64b9c6afd
       id: 654663590
       PathAndIcons:
       - ElementName: Events
@@ -5911,13 +5874,33 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Lvl5
+      - ElementName: Lvl4
         ObjectType: 4
-        guid: c25e0467a839ad41ad1301f9f63ba1e6
+        guid: fd2e006278e83e40bad84534a583ed46
       - ElementName: Stg3
         ObjectType: 4
-        guid: ccfd2430386c1f409ade8f9c5694fef2
-      Path: Events\Default Work Unit\Lvl5\Stg3
+        guid: 610692cf67f9cf4ea0d0b9a64b9c6afd
+      Path: Events\Default Work Unit\Lvl4\Stg3
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stg3
+      guid: ddc29c871c04e94e98313623ba2ec2c7
+      id: 654663590
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl3_1
+        ObjectType: 4
+        guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ddc29c871c04e94e98313623ba2ec2c7
+      Path: Events\Default Work Unit\Lvl3_1\Stg3
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -6821,25 +6804,8 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit\MusicFX
     guid: d1b156a9ec931a40aaad6dac7abf0394
     GuidInternal: 
-    m_lastTime: -8584407363690597474
+    m_lastTime: -8584407142775038028
     List:
-    - name: Cafe
-      guid: 34b30d99e0e55e40bd791313e10b6008
-      id: 3853951854
-      PathAndIcons:
-      - ElementName: Game Parameters
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: f6f231b16bbe6b488969e554ce119fd9
-      - ElementName: MusicFX
-        ObjectType: 12
-        guid: d1b156a9ec931a40aaad6dac7abf0394
-      - ElementName: Cafe
-        ObjectType: 13
-        guid: 34b30d99e0e55e40bd791313e10b6008
-      Path: Game Parameters\Default Work Unit\MusicFX\Cafe
     - name: Dist
       guid: 8bd0c4e7ce97374d9cfb8f5da58cfa93
       id: 2212414277
