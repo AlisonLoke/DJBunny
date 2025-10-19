@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 7e3613d8f1242a46bc3913423e02c807
     GuidInternal: 
-    m_lastTime: -8584409828210861600
+    m_lastTime: -8584407363690542368
     List:
     - name: ATM Bus
       guid: a4892e7399502d449435ffa0a2b8b826
@@ -527,7 +527,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 60318edf19da10499ab787cbf746dcca
     GuidInternal: 
-    m_lastTime: -8584408085973666967
+    m_lastTime: -8584407363690632543
     List:
     - name: Bus
       guid: 8a51a25870b1404a989b887a51830336
@@ -593,10 +593,13 @@ MonoBehaviour:
       - ElementName: Lvl1
         ObjectType: 4
         guid: b50846f8bdea8744b8c1dbd79cc62c0f
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 8f24917bc76d3c478ae07586e29e875f
       - ElementName: Lvl1_1_KickPlay
         ObjectType: 3
         guid: f8d29e6a4cbbc24caba513e505693881
-      Path: Events\Default Work Unit\Lvl1\Lvl1_1_KickPlay
+      Path: Events\Default Work Unit\Lvl1\Stg1\Lvl1_1_KickPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -613,10 +616,13 @@ MonoBehaviour:
       - ElementName: Lvl1
         ObjectType: 4
         guid: b50846f8bdea8744b8c1dbd79cc62c0f
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 8f24917bc76d3c478ae07586e29e875f
       - ElementName: Lvl1_1_KickStop
         ObjectType: 3
         guid: 1d5eb1056a6fd54cb60a58c4f34194b4
-      Path: Events\Default Work Unit\Lvl1\Lvl1_1_KickStop
+      Path: Events\Default Work Unit\Lvl1\Stg1\Lvl1_1_KickStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -633,10 +639,13 @@ MonoBehaviour:
       - ElementName: Lvl1
         ObjectType: 4
         guid: b50846f8bdea8744b8c1dbd79cc62c0f
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 8f24917bc76d3c478ae07586e29e875f
       - ElementName: Lvl1_1_PercPlay
         ObjectType: 3
         guid: 00d70d4ddd3434419befc38980d5426a
-      Path: Events\Default Work Unit\Lvl1\Lvl1_1_PercPlay
+      Path: Events\Default Work Unit\Lvl1\Stg1\Lvl1_1_PercPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -653,10 +662,13 @@ MonoBehaviour:
       - ElementName: Lvl1
         ObjectType: 4
         guid: b50846f8bdea8744b8c1dbd79cc62c0f
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 8f24917bc76d3c478ae07586e29e875f
       - ElementName: Lvl1_1_PercStop
         ObjectType: 3
         guid: 0d6bf32208b46641807c10012a00e1d3
-      Path: Events\Default Work Unit\Lvl1\Lvl1_1_PercStop
+      Path: Events\Default Work Unit\Lvl1\Stg1\Lvl1_1_PercStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1050,10 +1062,13 @@ MonoBehaviour:
       - ElementName: Lvl2
         ObjectType: 4
         guid: a51f4f2130300b45b469ba6bda1fd31c
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 0a90ec45b30ddb4b8f0e4fe56d952906
       - ElementName: Lvl2_1_HiHatPlay
         ObjectType: 3
         guid: 3d96a18250c898408d62079847a067c4
-      Path: Events\Default Work Unit\Lvl2\Lvl2_1_HiHatPlay
+      Path: Events\Default Work Unit\Lvl2\Stg1\Lvl2_1_HiHatPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1070,10 +1085,13 @@ MonoBehaviour:
       - ElementName: Lvl2
         ObjectType: 4
         guid: a51f4f2130300b45b469ba6bda1fd31c
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 0a90ec45b30ddb4b8f0e4fe56d952906
       - ElementName: Lvl2_1_HiHatStop
         ObjectType: 3
         guid: e99483b362dd7648aec33d44400fd199
-      Path: Events\Default Work Unit\Lvl2\Lvl2_1_HiHatStop
+      Path: Events\Default Work Unit\Lvl2\Stg1\Lvl2_1_HiHatStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1090,10 +1108,13 @@ MonoBehaviour:
       - ElementName: Lvl2
         ObjectType: 4
         guid: a51f4f2130300b45b469ba6bda1fd31c
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 0a90ec45b30ddb4b8f0e4fe56d952906
       - ElementName: Lvl2_1_KickPlay
         ObjectType: 3
         guid: 19b7696b85a2c94481431563c0f3814c
-      Path: Events\Default Work Unit\Lvl2\Lvl2_1_KickPlay
+      Path: Events\Default Work Unit\Lvl2\Stg1\Lvl2_1_KickPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1110,10 +1131,13 @@ MonoBehaviour:
       - ElementName: Lvl2
         ObjectType: 4
         guid: a51f4f2130300b45b469ba6bda1fd31c
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 0a90ec45b30ddb4b8f0e4fe56d952906
       - ElementName: Lvl2_1_KickStop
         ObjectType: 3
         guid: c2a1a6c0d242f3459e1c42c3d3343f4d
-      Path: Events\Default Work Unit\Lvl2\Lvl2_1_KickStop
+      Path: Events\Default Work Unit\Lvl2\Stg1\Lvl2_1_KickStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1130,10 +1154,13 @@ MonoBehaviour:
       - ElementName: Lvl2
         ObjectType: 4
         guid: a51f4f2130300b45b469ba6bda1fd31c
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 0a90ec45b30ddb4b8f0e4fe56d952906
       - ElementName: Lvl2_1_SnarePlay
         ObjectType: 3
         guid: ac13c44d8566ff4baffd103665b3c6c7
-      Path: Events\Default Work Unit\Lvl2\Lvl2_1_SnarePlay
+      Path: Events\Default Work Unit\Lvl2\Stg1\Lvl2_1_SnarePlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1150,10 +1177,13 @@ MonoBehaviour:
       - ElementName: Lvl2
         ObjectType: 4
         guid: a51f4f2130300b45b469ba6bda1fd31c
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 0a90ec45b30ddb4b8f0e4fe56d952906
       - ElementName: Lvl2_1_SnareStop
         ObjectType: 3
         guid: f6d401de3fd64f48a8fceb74351e453f
-      Path: Events\Default Work Unit\Lvl2\Lvl2_1_SnareStop
+      Path: Events\Default Work Unit\Lvl2\Stg1\Lvl2_1_SnareStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1467,10 +1497,13 @@ MonoBehaviour:
       - ElementName: Lvl3_1
         ObjectType: 4
         guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: b695b291487df045b76d66809cddbe56
       - ElementName: Lvl3_1_BassPlay
         ObjectType: 3
         guid: ba2a708b6e1fbb4b99bc80df7ac0b592
-      Path: Events\Default Work Unit\Lvl3_1\Lvl3_1_BassPlay
+      Path: Events\Default Work Unit\Lvl3_1\Stg2\Lvl3_1_BassPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1487,10 +1520,13 @@ MonoBehaviour:
       - ElementName: Lvl3_1
         ObjectType: 4
         guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: b695b291487df045b76d66809cddbe56
       - ElementName: Lvl3_1_BassStop
         ObjectType: 3
         guid: 25e838d3b3d7bb4db1b8a684a961e6b0
-      Path: Events\Default Work Unit\Lvl3_1\Lvl3_1_BassStop
+      Path: Events\Default Work Unit\Lvl3_1\Stg2\Lvl3_1_BassStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1507,10 +1543,13 @@ MonoBehaviour:
       - ElementName: Lvl3_1
         ObjectType: 4
         guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: b695b291487df045b76d66809cddbe56
       - ElementName: Lvl3_1_ChordPlay
         ObjectType: 3
         guid: a51741b4117e3e4e810d21f043399cf7
-      Path: Events\Default Work Unit\Lvl3_1\Lvl3_1_ChordPlay
+      Path: Events\Default Work Unit\Lvl3_1\Stg2\Lvl3_1_ChordPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1527,10 +1566,13 @@ MonoBehaviour:
       - ElementName: Lvl3_1
         ObjectType: 4
         guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: b695b291487df045b76d66809cddbe56
       - ElementName: Lvl3_1_ChordStop
         ObjectType: 3
         guid: 77fb96c8a5537a41990f726300f1cfd9
-      Path: Events\Default Work Unit\Lvl3_1\Lvl3_1_ChordStop
+      Path: Events\Default Work Unit\Lvl3_1\Stg2\Lvl3_1_ChordStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1547,10 +1589,13 @@ MonoBehaviour:
       - ElementName: Lvl3_1
         ObjectType: 4
         guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 354439276a884b428632244e5cba1dc0
       - ElementName: Lvl3_1_ClapPlay
         ObjectType: 3
         guid: 76a333aa7f249d4aa2edf20b7d1c6c3c
-      Path: Events\Default Work Unit\Lvl3_1\Lvl3_1_ClapPlay
+      Path: Events\Default Work Unit\Lvl3_1\Stg1\Lvl3_1_ClapPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1567,10 +1612,13 @@ MonoBehaviour:
       - ElementName: Lvl3_1
         ObjectType: 4
         guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 354439276a884b428632244e5cba1dc0
       - ElementName: Lvl3_1_ClapStop
         ObjectType: 3
         guid: fac12a53ca86064f86825dca48220bb7
-      Path: Events\Default Work Unit\Lvl3_1\Lvl3_1_ClapStop
+      Path: Events\Default Work Unit\Lvl3_1\Stg1\Lvl3_1_ClapStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1607,10 +1655,13 @@ MonoBehaviour:
       - ElementName: Lvl3_1
         ObjectType: 4
         guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: b695b291487df045b76d66809cddbe56
       - ElementName: Lvl3_1_GuitarPlay
         ObjectType: 3
         guid: 78f6b30f7d87e24b9960bd6310037335
-      Path: Events\Default Work Unit\Lvl3_1\Lvl3_1_GuitarPlay
+      Path: Events\Default Work Unit\Lvl3_1\Stg2\Lvl3_1_GuitarPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1627,10 +1678,13 @@ MonoBehaviour:
       - ElementName: Lvl3_1
         ObjectType: 4
         guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: b695b291487df045b76d66809cddbe56
       - ElementName: Lvl3_1_GuitarStop
         ObjectType: 3
         guid: 6b1b1fa4bdf5954eb6dbf079a953655a
-      Path: Events\Default Work Unit\Lvl3_1\Lvl3_1_GuitarStop
+      Path: Events\Default Work Unit\Lvl3_1\Stg2\Lvl3_1_GuitarStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1647,10 +1701,13 @@ MonoBehaviour:
       - ElementName: Lvl3_1
         ObjectType: 4
         guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ddc29c871c04e94e98313623ba2ec2c7
       - ElementName: Lvl3_1_Harmony1Play
         ObjectType: 3
         guid: 03770f98e31a9341a0e82011d21f9b80
-      Path: Events\Default Work Unit\Lvl3_1\Lvl3_1_Harmony1Play
+      Path: Events\Default Work Unit\Lvl3_1\Stg3\Lvl3_1_Harmony1Play
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1667,10 +1724,13 @@ MonoBehaviour:
       - ElementName: Lvl3_1
         ObjectType: 4
         guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ddc29c871c04e94e98313623ba2ec2c7
       - ElementName: Lvl3_1_Harmony1Stop
         ObjectType: 3
         guid: 2d83de900365484dbb0bafdf878a27b4
-      Path: Events\Default Work Unit\Lvl3_1\Lvl3_1_Harmony1Stop
+      Path: Events\Default Work Unit\Lvl3_1\Stg3\Lvl3_1_Harmony1Stop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1687,10 +1747,13 @@ MonoBehaviour:
       - ElementName: Lvl3_1
         ObjectType: 4
         guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ddc29c871c04e94e98313623ba2ec2c7
       - ElementName: Lvl3_1_Harmony2Play
         ObjectType: 3
         guid: 6f30892c5ee4ae4899c9af15f6fbe344
-      Path: Events\Default Work Unit\Lvl3_1\Lvl3_1_Harmony2Play
+      Path: Events\Default Work Unit\Lvl3_1\Stg3\Lvl3_1_Harmony2Play
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1707,10 +1770,13 @@ MonoBehaviour:
       - ElementName: Lvl3_1
         ObjectType: 4
         guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ddc29c871c04e94e98313623ba2ec2c7
       - ElementName: Lvl3_1_Harmony2Stop
         ObjectType: 3
         guid: 1b045f8090e1474193917fa7af809c82
-      Path: Events\Default Work Unit\Lvl3_1\Lvl3_1_Harmony2Stop
+      Path: Events\Default Work Unit\Lvl3_1\Stg3\Lvl3_1_Harmony2Stop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1727,10 +1793,13 @@ MonoBehaviour:
       - ElementName: Lvl3_1
         ObjectType: 4
         guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 354439276a884b428632244e5cba1dc0
       - ElementName: Lvl3_1_HitsPlay
         ObjectType: 3
         guid: aca5b23eda570c43b82c3d1f0a28df70
-      Path: Events\Default Work Unit\Lvl3_1\Lvl3_1_HitsPlay
+      Path: Events\Default Work Unit\Lvl3_1\Stg1\Lvl3_1_HitsPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1747,10 +1816,13 @@ MonoBehaviour:
       - ElementName: Lvl3_1
         ObjectType: 4
         guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 354439276a884b428632244e5cba1dc0
       - ElementName: Lvl3_1_HitsStop
         ObjectType: 3
         guid: c95d770ba4dc594982f28f926c052f3c
-      Path: Events\Default Work Unit\Lvl3_1\Lvl3_1_HitsStop
+      Path: Events\Default Work Unit\Lvl3_1\Stg1\Lvl3_1_HitsStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1767,10 +1839,13 @@ MonoBehaviour:
       - ElementName: Lvl3_1
         ObjectType: 4
         guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 354439276a884b428632244e5cba1dc0
       - ElementName: Lvl3_1_KickPlay
         ObjectType: 3
         guid: f94affeea878d04db7506c12420a9af9
-      Path: Events\Default Work Unit\Lvl3_1\Lvl3_1_KickPlay
+      Path: Events\Default Work Unit\Lvl3_1\Stg1\Lvl3_1_KickPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1787,10 +1862,13 @@ MonoBehaviour:
       - ElementName: Lvl3_1
         ObjectType: 4
         guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 354439276a884b428632244e5cba1dc0
       - ElementName: Lvl3_1_KickStop
         ObjectType: 3
         guid: 4e2ed76822e1ce4d91156de090959ed8
-      Path: Events\Default Work Unit\Lvl3_1\Lvl3_1_KickStop
+      Path: Events\Default Work Unit\Lvl3_1\Stg1\Lvl3_1_KickStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1807,10 +1885,13 @@ MonoBehaviour:
       - ElementName: Lvl3_1
         ObjectType: 4
         guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ddc29c871c04e94e98313623ba2ec2c7
       - ElementName: Lvl3_1_MelPlay
         ObjectType: 3
         guid: 88d6934634e2c84b9ac7193adbdb0cd0
-      Path: Events\Default Work Unit\Lvl3_1\Lvl3_1_MelPlay
+      Path: Events\Default Work Unit\Lvl3_1\Stg3\Lvl3_1_MelPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1827,10 +1908,13 @@ MonoBehaviour:
       - ElementName: Lvl3_1
         ObjectType: 4
         guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ddc29c871c04e94e98313623ba2ec2c7
       - ElementName: Lvl3_1_MelStop
         ObjectType: 3
         guid: 2391e4f23cc37849b1c7424ea56a5388
-      Path: Events\Default Work Unit\Lvl3_1\Lvl3_1_MelStop
+      Path: Events\Default Work Unit\Lvl3_1\Stg3\Lvl3_1_MelStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1847,10 +1931,13 @@ MonoBehaviour:
       - ElementName: Lvl3_1
         ObjectType: 4
         guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: b695b291487df045b76d66809cddbe56
       - ElementName: Lvl3_1_OrchPlay
         ObjectType: 3
         guid: 8ac9f15eb2c6914cb5e1ab4b9ed1ca42
-      Path: Events\Default Work Unit\Lvl3_1\Lvl3_1_OrchPlay
+      Path: Events\Default Work Unit\Lvl3_1\Stg2\Lvl3_1_OrchPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1867,10 +1954,13 @@ MonoBehaviour:
       - ElementName: Lvl3_1
         ObjectType: 4
         guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: b695b291487df045b76d66809cddbe56
       - ElementName: Lvl3_1_OrchStop
         ObjectType: 3
         guid: 121d0e669630ef4396c87cb4f973c7c5
-      Path: Events\Default Work Unit\Lvl3_1\Lvl3_1_OrchStop
+      Path: Events\Default Work Unit\Lvl3_1\Stg2\Lvl3_1_OrchStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1887,10 +1977,13 @@ MonoBehaviour:
       - ElementName: Lvl3_1
         ObjectType: 4
         guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 354439276a884b428632244e5cba1dc0
       - ElementName: Lvl3_1_SnarePlay
         ObjectType: 3
         guid: 6cc7af307e8121459e39cd31dc11be06
-      Path: Events\Default Work Unit\Lvl3_1\Lvl3_1_SnarePlay
+      Path: Events\Default Work Unit\Lvl3_1\Stg1\Lvl3_1_SnarePlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1907,10 +2000,13 @@ MonoBehaviour:
       - ElementName: Lvl3_1
         ObjectType: 4
         guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 354439276a884b428632244e5cba1dc0
       - ElementName: Lvl3_1_SnareStop
         ObjectType: 3
         guid: 63e617262b60644393c5832cd1ed613a
-      Path: Events\Default Work Unit\Lvl3_1\Lvl3_1_SnareStop
+      Path: Events\Default Work Unit\Lvl3_1\Stg1\Lvl3_1_SnareStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1947,10 +2043,13 @@ MonoBehaviour:
       - ElementName: Lvl3_1
         ObjectType: 4
         guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ddc29c871c04e94e98313623ba2ec2c7
       - ElementName: Lvl3_1_StringsPlay
         ObjectType: 3
         guid: a721304df4109d4684b39bb5abb04d11
-      Path: Events\Default Work Unit\Lvl3_1\Lvl3_1_StringsPlay
+      Path: Events\Default Work Unit\Lvl3_1\Stg3\Lvl3_1_StringsPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1967,10 +2066,13 @@ MonoBehaviour:
       - ElementName: Lvl3_1
         ObjectType: 4
         guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ddc29c871c04e94e98313623ba2ec2c7
       - ElementName: Lvl3_1_StringsStop
         ObjectType: 3
         guid: 0445106ae4ff8c43bde95d72f9f5801f
-      Path: Events\Default Work Unit\Lvl3_1\Lvl3_1_StringsStop
+      Path: Events\Default Work Unit\Lvl3_1\Stg3\Lvl3_1_StringsStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1987,10 +2089,13 @@ MonoBehaviour:
       - ElementName: Lvl3_1
         ObjectType: 4
         guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ddc29c871c04e94e98313623ba2ec2c7
       - ElementName: Lvl3_1_TrumpPlay
         ObjectType: 3
         guid: ef54f26f53c0104bac9db66d331e640d
-      Path: Events\Default Work Unit\Lvl3_1\Lvl3_1_TrumpPlay
+      Path: Events\Default Work Unit\Lvl3_1\Stg3\Lvl3_1_TrumpPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2007,10 +2112,13 @@ MonoBehaviour:
       - ElementName: Lvl3_1
         ObjectType: 4
         guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ddc29c871c04e94e98313623ba2ec2c7
       - ElementName: Lvl3_1_TrumpStop
         ObjectType: 3
         guid: 83c0f103b1188c45ac5880553f3763bd
-      Path: Events\Default Work Unit\Lvl3_1\Lvl3_1_TrumpStop
+      Path: Events\Default Work Unit\Lvl3_1\Stg3\Lvl3_1_TrumpStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2857,10 +2965,13 @@ MonoBehaviour:
       - ElementName: Lvl4
         ObjectType: 4
         guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 1054277ee669ab4686323026ed6a2fb9
       - ElementName: Lvl4_808Play
         ObjectType: 3
         guid: 95c889c93b31fa468fb1e388f35de945
-      Path: Events\Default Work Unit\Lvl4\Lvl4_808Play
+      Path: Events\Default Work Unit\Lvl4\Stg1\Lvl4_808Play
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2877,10 +2988,13 @@ MonoBehaviour:
       - ElementName: Lvl4
         ObjectType: 4
         guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 1054277ee669ab4686323026ed6a2fb9
       - ElementName: Lvl4_808Stop
         ObjectType: 3
         guid: 1011b005d1c6db45893d3d34c724182d
-      Path: Events\Default Work Unit\Lvl4\Lvl4_808Stop
+      Path: Events\Default Work Unit\Lvl4\Stg1\Lvl4_808Stop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2897,10 +3011,13 @@ MonoBehaviour:
       - ElementName: Lvl4
         ObjectType: 4
         guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: e979ad7dacc3914c9a360631628b88bb
       - ElementName: Lvl4_ChordPlay
         ObjectType: 3
         guid: 4b512c832cc4f64a9963ede3d1ab8974
-      Path: Events\Default Work Unit\Lvl4\Lvl4_ChordPlay
+      Path: Events\Default Work Unit\Lvl4\Stg2\Lvl4_ChordPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2917,10 +3034,13 @@ MonoBehaviour:
       - ElementName: Lvl4
         ObjectType: 4
         guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: e979ad7dacc3914c9a360631628b88bb
       - ElementName: Lvl4_ChordStop
         ObjectType: 3
         guid: 1d0b046a5f8e544db952a9d78176d3ab
-      Path: Events\Default Work Unit\Lvl4\Lvl4_ChordStop
+      Path: Events\Default Work Unit\Lvl4\Stg2\Lvl4_ChordStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2937,10 +3057,13 @@ MonoBehaviour:
       - ElementName: Lvl4
         ObjectType: 4
         guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: 610692cf67f9cf4ea0d0b9a64b9c6afd
       - ElementName: Lvl4_CounterPlay
         ObjectType: 3
         guid: 4defc6ba4125b346bd8934610e4d6480
-      Path: Events\Default Work Unit\Lvl4\Lvl4_CounterPlay
+      Path: Events\Default Work Unit\Lvl4\Stg3\Lvl4_CounterPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2957,16 +3080,19 @@ MonoBehaviour:
       - ElementName: Lvl4
         ObjectType: 4
         guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: 610692cf67f9cf4ea0d0b9a64b9c6afd
       - ElementName: Lvl4_CounterStop
         ObjectType: 3
         guid: 4e9b9cd5500d66419fd958d388b6cd2d
-      Path: Events\Default Work Unit\Lvl4\Lvl4_CounterStop
+      Path: Events\Default Work Unit\Lvl4\Stg3\Lvl4_CounterStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Lvl4_Dist1Play
+    - name: Lvl4_DistPlay
       guid: e8002bd0e26844449505b06f8921963f
-      id: 2994364789
+      id: 3070914388
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -2977,16 +3103,19 @@ MonoBehaviour:
       - ElementName: Lvl4
         ObjectType: 4
         guid: fd2e006278e83e40bad84534a583ed46
-      - ElementName: Lvl4_Dist1Play
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: 610692cf67f9cf4ea0d0b9a64b9c6afd
+      - ElementName: Lvl4_DistPlay
         ObjectType: 3
         guid: e8002bd0e26844449505b06f8921963f
-      Path: Events\Default Work Unit\Lvl4\Lvl4_Dist1Play
+      Path: Events\Default Work Unit\Lvl4\Stg3\Lvl4_DistPlay
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Lvl4_Dist1Stop
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl4_DistStop
       guid: 6e5047f48b92134eb884890568cce143
-      id: 1161360979
+      id: 438375982
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -2997,93 +3126,16 @@ MonoBehaviour:
       - ElementName: Lvl4
         ObjectType: 4
         guid: fd2e006278e83e40bad84534a583ed46
-      - ElementName: Lvl4_Dist1Stop
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: 610692cf67f9cf4ea0d0b9a64b9c6afd
+      - ElementName: Lvl4_DistStop
         ObjectType: 3
         guid: 6e5047f48b92134eb884890568cce143
-      Path: Events\Default Work Unit\Lvl4\Lvl4_Dist1Stop
+      Path: Events\Default Work Unit\Lvl4\Stg3\Lvl4_DistStop
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Lvl4_Dist2Play
-      guid: 7c2c9f697fd4864298e4acc5c0c8169c
-      id: 2026184662
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Lvl4
-        ObjectType: 4
-        guid: fd2e006278e83e40bad84534a583ed46
-      - ElementName: Lvl4_Dist2Play
-        ObjectType: 3
-        guid: 7c2c9f697fd4864298e4acc5c0c8169c
-      Path: Events\Default Work Unit\Lvl4\Lvl4_Dist2Play
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Lvl4_Dist2Stop
-      guid: c13b48f4ebb08b4cb5c4c2e9875cd372
-      id: 2798195560
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Lvl4
-        ObjectType: 4
-        guid: fd2e006278e83e40bad84534a583ed46
-      - ElementName: Lvl4_Dist2Stop
-        ObjectType: 3
-        guid: c13b48f4ebb08b4cb5c4c2e9875cd372
-      Path: Events\Default Work Unit\Lvl4\Lvl4_Dist2Stop
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Lvl4_Dist3Play
-      guid: 4d2913a3de3a1b47b9ec5eef51e23d6a
-      id: 2314423251
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Lvl4
-        ObjectType: 4
-        guid: fd2e006278e83e40bad84534a583ed46
-      - ElementName: Lvl4_Dist3Play
-        ObjectType: 3
-        guid: 4d2913a3de3a1b47b9ec5eef51e23d6a
-      Path: Events\Default Work Unit\Lvl4\Lvl4_Dist3Play
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Lvl4_Dist3Stop
-      guid: ead96ca1e2a57b4c8849f6929f141ba8
-      id: 1444442041
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 60318edf19da10499ab787cbf746dcca
-      - ElementName: Lvl4
-        ObjectType: 4
-        guid: fd2e006278e83e40bad84534a583ed46
-      - ElementName: Lvl4_Dist3Stop
-        ObjectType: 3
-        guid: ead96ca1e2a57b4c8849f6929f141ba8
-      Path: Events\Default Work Unit\Lvl4\Lvl4_Dist3Stop
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Lvl4_End
       guid: c982c133e742b348b2a8d52dd5b5e005
       id: 4149237353
@@ -3104,6 +3156,98 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Lvl4_FlangPlay
+      guid: 7c2c9f697fd4864298e4acc5c0c8169c
+      id: 3949575418
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl4
+        ObjectType: 4
+        guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: 610692cf67f9cf4ea0d0b9a64b9c6afd
+      - ElementName: Lvl4_FlangPlay
+        ObjectType: 3
+        guid: 7c2c9f697fd4864298e4acc5c0c8169c
+      Path: Events\Default Work Unit\Lvl4\Stg3\Lvl4_FlangPlay
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl4_FlangStop
+      guid: c13b48f4ebb08b4cb5c4c2e9875cd372
+      id: 1095163652
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl4
+        ObjectType: 4
+        guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: 610692cf67f9cf4ea0d0b9a64b9c6afd
+      - ElementName: Lvl4_FlangStop
+        ObjectType: 3
+        guid: c13b48f4ebb08b4cb5c4c2e9875cd372
+      Path: Events\Default Work Unit\Lvl4\Stg3\Lvl4_FlangStop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl4_GlockPlay
+      guid: bad892556fcf46478dea2f01c27b4556
+      id: 3371274426
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl4
+        ObjectType: 4
+        guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: e979ad7dacc3914c9a360631628b88bb
+      - ElementName: Lvl4_GlockPlay
+        ObjectType: 3
+        guid: bad892556fcf46478dea2f01c27b4556
+      Path: Events\Default Work Unit\Lvl4\Stg2\Lvl4_GlockPlay
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl4_GlockStop
+      guid: c725d48ef6428341bb1c5c70802be5af
+      id: 475389380
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl4
+        ObjectType: 4
+        guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: e979ad7dacc3914c9a360631628b88bb
+      - ElementName: Lvl4_GlockStop
+        ObjectType: 3
+        guid: c725d48ef6428341bb1c5c70802be5af
+      Path: Events\Default Work Unit\Lvl4\Stg2\Lvl4_GlockStop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Lvl4_Hat2Play
       guid: dade1ee762b5074c8becc181abc7498f
       id: 4120513967
@@ -3117,10 +3261,13 @@ MonoBehaviour:
       - ElementName: Lvl4
         ObjectType: 4
         guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 1054277ee669ab4686323026ed6a2fb9
       - ElementName: Lvl4_Hat2Play
         ObjectType: 3
         guid: dade1ee762b5074c8becc181abc7498f
-      Path: Events\Default Work Unit\Lvl4\Lvl4_Hat2Play
+      Path: Events\Default Work Unit\Lvl4\Stg1\Lvl4_Hat2Play
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3137,10 +3284,13 @@ MonoBehaviour:
       - ElementName: Lvl4
         ObjectType: 4
         guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 1054277ee669ab4686323026ed6a2fb9
       - ElementName: Lvl4_Hat2Stop
         ObjectType: 3
         guid: e17d5307841fff44a3f0b9c6bf458c07
-      Path: Events\Default Work Unit\Lvl4\Lvl4_Hat2Stop
+      Path: Events\Default Work Unit\Lvl4\Stg1\Lvl4_Hat2Stop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3157,10 +3307,13 @@ MonoBehaviour:
       - ElementName: Lvl4
         ObjectType: 4
         guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 1054277ee669ab4686323026ed6a2fb9
       - ElementName: Lvl4_HatPlay
         ObjectType: 3
         guid: 66fe3d67c76e7746b13b899f77a47be1
-      Path: Events\Default Work Unit\Lvl4\Lvl4_HatPlay
+      Path: Events\Default Work Unit\Lvl4\Stg1\Lvl4_HatPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3177,13 +3330,62 @@ MonoBehaviour:
       - ElementName: Lvl4
         ObjectType: 4
         guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 1054277ee669ab4686323026ed6a2fb9
       - ElementName: Lvl4_HatStop
         ObjectType: 3
         guid: 628c892391d4334592fbbb5a757a4970
-      Path: Events\Default Work Unit\Lvl4\Lvl4_HatStop
+      Path: Events\Default Work Unit\Lvl4\Stg1\Lvl4_HatStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Lvl4_HighPlay
+      guid: 17e4b3fa3470404d86995b0f9b115e26
+      id: 3325302336
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl4
+        ObjectType: 4
+        guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: 610692cf67f9cf4ea0d0b9a64b9c6afd
+      - ElementName: Lvl4_HighPlay
+        ObjectType: 3
+        guid: 17e4b3fa3470404d86995b0f9b115e26
+      Path: Events\Default Work Unit\Lvl4\Stg3\Lvl4_HighPlay
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl4_HighStop
+      guid: acce3717409d62479a773ed7991fe3da
+      id: 1668664514
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl4
+        ObjectType: 4
+        guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: 610692cf67f9cf4ea0d0b9a64b9c6afd
+      - ElementName: Lvl4_HighStop
+        ObjectType: 3
+        guid: acce3717409d62479a773ed7991fe3da
+      Path: Events\Default Work Unit\Lvl4\Stg3\Lvl4_HighStop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Lvl4_KickPlay
       guid: 049b7102951e4743a838eb013c44f735
       id: 1903319118
@@ -3197,10 +3399,13 @@ MonoBehaviour:
       - ElementName: Lvl4
         ObjectType: 4
         guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 1054277ee669ab4686323026ed6a2fb9
       - ElementName: Lvl4_KickPlay
         ObjectType: 3
         guid: 049b7102951e4743a838eb013c44f735
-      Path: Events\Default Work Unit\Lvl4\Lvl4_KickPlay
+      Path: Events\Default Work Unit\Lvl4\Stg1\Lvl4_KickPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3217,10 +3422,13 @@ MonoBehaviour:
       - ElementName: Lvl4
         ObjectType: 4
         guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 1054277ee669ab4686323026ed6a2fb9
       - ElementName: Lvl4_KickStop
         ObjectType: 3
         guid: 04cdba9e78453d4f89fa354b82c8bb3f
-      Path: Events\Default Work Unit\Lvl4\Lvl4_KickStop
+      Path: Events\Default Work Unit\Lvl4\Stg1\Lvl4_KickStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3237,10 +3445,13 @@ MonoBehaviour:
       - ElementName: Lvl4
         ObjectType: 4
         guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: 610692cf67f9cf4ea0d0b9a64b9c6afd
       - ElementName: Lvl4_MelodyPlay
         ObjectType: 3
         guid: 4eda1006f3a1fd4dbb66213eb63e3f48
-      Path: Events\Default Work Unit\Lvl4\Lvl4_MelodyPlay
+      Path: Events\Default Work Unit\Lvl4\Stg3\Lvl4_MelodyPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3257,13 +3468,108 @@ MonoBehaviour:
       - ElementName: Lvl4
         ObjectType: 4
         guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: 610692cf67f9cf4ea0d0b9a64b9c6afd
       - ElementName: Lvl4_MelodyStop
         ObjectType: 3
         guid: 18f876297890784cbc44ac69bb42fb32
-      Path: Events\Default Work Unit\Lvl4\Lvl4_MelodyStop
+      Path: Events\Default Work Unit\Lvl4\Stg3\Lvl4_MelodyStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Lvl4_PercPlay
+      guid: ebdd20778ae8014f9c2d4f8cdc0dbaef
+      id: 2799786940
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl4
+        ObjectType: 4
+        guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 1054277ee669ab4686323026ed6a2fb9
+      - ElementName: Lvl4_PercPlay
+        ObjectType: 3
+        guid: ebdd20778ae8014f9c2d4f8cdc0dbaef
+      Path: Events\Default Work Unit\Lvl4\Stg1\Lvl4_PercPlay
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl4_PercStop
+      guid: b6a7c8e67413d64b83a442be7f6e3771
+      id: 1553491494
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl4
+        ObjectType: 4
+        guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 1054277ee669ab4686323026ed6a2fb9
+      - ElementName: Lvl4_PercStop
+        ObjectType: 3
+        guid: b6a7c8e67413d64b83a442be7f6e3771
+      Path: Events\Default Work Unit\Lvl4\Stg1\Lvl4_PercStop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl4_PitchPlay
+      guid: 4d2913a3de3a1b47b9ec5eef51e23d6a
+      id: 2542772786
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl4
+        ObjectType: 4
+        guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: 610692cf67f9cf4ea0d0b9a64b9c6afd
+      - ElementName: Lvl4_PitchPlay
+        ObjectType: 3
+        guid: 4d2913a3de3a1b47b9ec5eef51e23d6a
+      Path: Events\Default Work Unit\Lvl4\Stg3\Lvl4_PitchPlay
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl4_PitchStop
+      guid: ead96ca1e2a57b4c8849f6929f141ba8
+      id: 4212753580
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl4
+        ObjectType: 4
+        guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: 610692cf67f9cf4ea0d0b9a64b9c6afd
+      - ElementName: Lvl4_PitchStop
+        ObjectType: 3
+        guid: ead96ca1e2a57b4c8849f6929f141ba8
+      Path: Events\Default Work Unit\Lvl4\Stg3\Lvl4_PitchStop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Lvl4_PluckPlay
       guid: 93421fc55a21474298bbd2a2fa95f974
       id: 163974683
@@ -3277,10 +3583,13 @@ MonoBehaviour:
       - ElementName: Lvl4
         ObjectType: 4
         guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: 610692cf67f9cf4ea0d0b9a64b9c6afd
       - ElementName: Lvl4_PluckPlay
         ObjectType: 3
         guid: 93421fc55a21474298bbd2a2fa95f974
-      Path: Events\Default Work Unit\Lvl4\Lvl4_PluckPlay
+      Path: Events\Default Work Unit\Lvl4\Stg3\Lvl4_PluckPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3297,10 +3606,13 @@ MonoBehaviour:
       - ElementName: Lvl4
         ObjectType: 4
         guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: 610692cf67f9cf4ea0d0b9a64b9c6afd
       - ElementName: Lvl4_PluckStop
         ObjectType: 3
         guid: ffc98093f7a5a44eafbb14fc73f64ee5
-      Path: Events\Default Work Unit\Lvl4\Lvl4_PluckStop
+      Path: Events\Default Work Unit\Lvl4\Stg3\Lvl4_PluckStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3317,10 +3629,13 @@ MonoBehaviour:
       - ElementName: Lvl4
         ObjectType: 4
         guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: e979ad7dacc3914c9a360631628b88bb
       - ElementName: Lvl4_Pulse1Play
         ObjectType: 3
         guid: fbf93d562c657b4f9ea34b32501b9f1b
-      Path: Events\Default Work Unit\Lvl4\Lvl4_Pulse1Play
+      Path: Events\Default Work Unit\Lvl4\Stg2\Lvl4_Pulse1Play
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3337,10 +3652,13 @@ MonoBehaviour:
       - ElementName: Lvl4
         ObjectType: 4
         guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: e979ad7dacc3914c9a360631628b88bb
       - ElementName: Lvl4_Pulse1Stop
         ObjectType: 3
         guid: 092327f22090b64bb2d78d9e5b654632
-      Path: Events\Default Work Unit\Lvl4\Lvl4_Pulse1Stop
+      Path: Events\Default Work Unit\Lvl4\Stg2\Lvl4_Pulse1Stop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3357,10 +3675,13 @@ MonoBehaviour:
       - ElementName: Lvl4
         ObjectType: 4
         guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: 610692cf67f9cf4ea0d0b9a64b9c6afd
       - ElementName: Lvl4_Pulse2Play
         ObjectType: 3
         guid: b4a9f5050451f741bef8725fe343412b
-      Path: Events\Default Work Unit\Lvl4\Lvl4_Pulse2Play
+      Path: Events\Default Work Unit\Lvl4\Stg3\Lvl4_Pulse2Play
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3377,10 +3698,13 @@ MonoBehaviour:
       - ElementName: Lvl4
         ObjectType: 4
         guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: 610692cf67f9cf4ea0d0b9a64b9c6afd
       - ElementName: Lvl4_Pulse2Stop
         ObjectType: 3
         guid: c3070c2c60bd04479dc51758c3a5755c
-      Path: Events\Default Work Unit\Lvl4\Lvl4_Pulse2Stop
+      Path: Events\Default Work Unit\Lvl4\Stg3\Lvl4_Pulse2Stop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3397,10 +3721,13 @@ MonoBehaviour:
       - ElementName: Lvl4
         ObjectType: 4
         guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: e979ad7dacc3914c9a360631628b88bb
       - ElementName: Lvl4_ShimPlay
         ObjectType: 3
         guid: 894cd48060ce6945b0f05d995d14c739
-      Path: Events\Default Work Unit\Lvl4\Lvl4_ShimPlay
+      Path: Events\Default Work Unit\Lvl4\Stg2\Lvl4_ShimPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3417,10 +3744,13 @@ MonoBehaviour:
       - ElementName: Lvl4
         ObjectType: 4
         guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: e979ad7dacc3914c9a360631628b88bb
       - ElementName: Lvl4_ShimStop
         ObjectType: 3
         guid: 87488e6c4f228147a10f5ed636edaa98
-      Path: Events\Default Work Unit\Lvl4\Lvl4_ShimStop
+      Path: Events\Default Work Unit\Lvl4\Stg2\Lvl4_ShimStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3457,10 +3787,13 @@ MonoBehaviour:
       - ElementName: Lvl4
         ObjectType: 4
         guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: e979ad7dacc3914c9a360631628b88bb
       - ElementName: Lvl4_TriangPlay
         ObjectType: 3
         guid: 65ff02ced941054a9a52d67590a4148b
-      Path: Events\Default Work Unit\Lvl4\Lvl4_TriangPlay
+      Path: Events\Default Work Unit\Lvl4\Stg2\Lvl4_TriangPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3477,10 +3810,13 @@ MonoBehaviour:
       - ElementName: Lvl4
         ObjectType: 4
         guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: e979ad7dacc3914c9a360631628b88bb
       - ElementName: Lvl4_TriangStop
         ObjectType: 3
         guid: aa5d53ef86c80846911c3a31a0d5cba0
-      Path: Events\Default Work Unit\Lvl4\Lvl4_TriangStop
+      Path: Events\Default Work Unit\Lvl4\Stg2\Lvl4_TriangStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3497,10 +3833,13 @@ MonoBehaviour:
       - ElementName: Lvl4
         ObjectType: 4
         guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: 610692cf67f9cf4ea0d0b9a64b9c6afd
       - ElementName: Lvl4_WowPlay
         ObjectType: 3
         guid: 63d4c7e7d52e1b44a7a4bef0f6a8c1b6
-      Path: Events\Default Work Unit\Lvl4\Lvl4_WowPlay
+      Path: Events\Default Work Unit\Lvl4\Stg3\Lvl4_WowPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3517,10 +3856,13 @@ MonoBehaviour:
       - ElementName: Lvl4
         ObjectType: 4
         guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: 610692cf67f9cf4ea0d0b9a64b9c6afd
       - ElementName: Lvl4_WowStop
         ObjectType: 3
         guid: 199949eb1411314f9b19ef05691a917b
-      Path: Events\Default Work Unit\Lvl4\Lvl4_WowStop
+      Path: Events\Default Work Unit\Lvl4\Stg3\Lvl4_WowStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3541,6 +3883,52 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Lvl5_BambPlay
+      guid: 1e822dc79ee56d42bc539c49f41fa7f1
+      id: 1951137233
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
+      - ElementName: Lvl5_BambPlay
+        ObjectType: 3
+        guid: 1e822dc79ee56d42bc539c49f41fa7f1
+      Path: Events\Default Work Unit\Lvl5\Stg2\Lvl5_BambPlay
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_BambStop
+      guid: 21fe05efdcf9314dbcd2ccc9213385b6
+      id: 3202552199
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
+      - ElementName: Lvl5_BambStop
+        ObjectType: 3
+        guid: 21fe05efdcf9314dbcd2ccc9213385b6
+      Path: Events\Default Work Unit\Lvl5\Stg2\Lvl5_BambStop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Lvl5_BassPlay
       guid: 0a38dc58a2cd7f42b5829d4c93ad4780
       id: 3051832318
@@ -3554,10 +3942,13 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
       - ElementName: Lvl5_BassPlay
         ObjectType: 3
         guid: 0a38dc58a2cd7f42b5829d4c93ad4780
-      Path: Events\Default Work Unit\Lvl5\Lvl5_BassPlay
+      Path: Events\Default Work Unit\Lvl5\Stg2\Lvl5_BassPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3574,13 +3965,108 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
       - ElementName: Lvl5_BassStop
         ObjectType: 3
         guid: bde52556d3c7c14ea9c29908a8f90e2d
-      Path: Events\Default Work Unit\Lvl5\Lvl5_BassStop
+      Path: Events\Default Work Unit\Lvl5\Stg2\Lvl5_BassStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Lvl5_Bunny1Play
+      guid: 52240248bdf49f4bbaab94528a19f109
+      id: 1447386318
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ccfd2430386c1f409ade8f9c5694fef2
+      - ElementName: Lvl5_Bunny1Play
+        ObjectType: 3
+        guid: 52240248bdf49f4bbaab94528a19f109
+      Path: Events\Default Work Unit\Lvl5\Stg3\Lvl5_Bunny1Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_Bunny1Stop
+      guid: a8eedaee1948ce49b8a9a00dd6a978be
+      id: 2490502064
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ccfd2430386c1f409ade8f9c5694fef2
+      - ElementName: Lvl5_Bunny1Stop
+        ObjectType: 3
+        guid: a8eedaee1948ce49b8a9a00dd6a978be
+      Path: Events\Default Work Unit\Lvl5\Stg3\Lvl5_Bunny1Stop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_ChordPlay
+      guid: 7356f0f0716e564f830481444f9e0ebf
+      id: 2418201695
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
+      - ElementName: Lvl5_ChordPlay
+        ObjectType: 3
+        guid: 7356f0f0716e564f830481444f9e0ebf
+      Path: Events\Default Work Unit\Lvl5\Stg2\Lvl5_ChordPlay
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_ChordStop
+      guid: 09df248767ade64c94a5b25dbac7bb8e
+      id: 1909409917
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
+      - ElementName: Lvl5_ChordStop
+        ObjectType: 3
+        guid: 09df248767ade64c94a5b25dbac7bb8e
+      Path: Events\Default Work Unit\Lvl5\Stg2\Lvl5_ChordStop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Lvl5_Clap1Play
       guid: c203086a19e0904f91fc9430cfe62371
       id: 510076302
@@ -3594,10 +4080,13 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 736061d4f938834f8c14d81bbec14460
       - ElementName: Lvl5_Clap1Play
         ObjectType: 3
         guid: c203086a19e0904f91fc9430cfe62371
-      Path: Events\Default Work Unit\Lvl5\Lvl5_Clap1Play
+      Path: Events\Default Work Unit\Lvl5\Stg1\Lvl5_Clap1Play
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3614,10 +4103,13 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 736061d4f938834f8c14d81bbec14460
       - ElementName: Lvl5_Clap1Stop
         ObjectType: 3
         guid: a120d02f9f7d764685f47bfb616edafc
-      Path: Events\Default Work Unit\Lvl5\Lvl5_Clap1Stop
+      Path: Events\Default Work Unit\Lvl5\Stg1\Lvl5_Clap1Stop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3634,10 +4126,13 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 736061d4f938834f8c14d81bbec14460
       - ElementName: Lvl5_Clap2Play
         ObjectType: 3
         guid: 292c278bbb37bb49aa20187c566b7b8e
-      Path: Events\Default Work Unit\Lvl5\Lvl5_Clap2Play
+      Path: Events\Default Work Unit\Lvl5\Stg1\Lvl5_Clap2Play
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3654,13 +4149,338 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 736061d4f938834f8c14d81bbec14460
       - ElementName: Lvl5_Clap2Stop
         ObjectType: 3
         guid: 0822dfc798f1a14eba52de29ea7e5003
-      Path: Events\Default Work Unit\Lvl5\Lvl5_Clap2Stop
+      Path: Events\Default Work Unit\Lvl5\Stg1\Lvl5_Clap2Stop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Lvl5_Count1Play
+      guid: 255994f6984c404985e7facbef0457da
+      id: 988020969
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ccfd2430386c1f409ade8f9c5694fef2
+      - ElementName: Lvl5_Count1Play
+        ObjectType: 3
+        guid: 255994f6984c404985e7facbef0457da
+      Path: Events\Default Work Unit\Lvl5\Stg3\Lvl5_Count1Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_Count1Stop
+      guid: e89de999db7be94992f8eff15667a081
+      id: 2510540815
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ccfd2430386c1f409ade8f9c5694fef2
+      - ElementName: Lvl5_Count1Stop
+        ObjectType: 3
+        guid: e89de999db7be94992f8eff15667a081
+      Path: Events\Default Work Unit\Lvl5\Stg3\Lvl5_Count1Stop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_Count2Play
+      guid: 803ef90e69dcc94e9bd987ed7a7f2d9a
+      id: 3701851882
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ccfd2430386c1f409ade8f9c5694fef2
+      - ElementName: Lvl5_Count2Play
+        ObjectType: 3
+        guid: 803ef90e69dcc94e9bd987ed7a7f2d9a
+      Path: Events\Default Work Unit\Lvl5\Stg3\Lvl5_Count2Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_Count2Stop
+      guid: 68e474a413c85f4ba207865103cac22a
+      id: 852663060
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ccfd2430386c1f409ade8f9c5694fef2
+      - ElementName: Lvl5_Count2Stop
+        ObjectType: 3
+        guid: 68e474a413c85f4ba207865103cac22a
+      Path: Events\Default Work Unit\Lvl5\Stg3\Lvl5_Count2Stop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_DelayPlay
+      guid: 745cbdacb8a3c04d8d9623a02b3025b9
+      id: 2038600456
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
+      - ElementName: Lvl5_DelayPlay
+        ObjectType: 3
+        guid: 745cbdacb8a3c04d8d9623a02b3025b9
+      Path: Events\Default Work Unit\Lvl5\Stg2\Lvl5_DelayPlay
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_DelayStop
+      guid: 07327a348de02d4badb2091e89778bd9
+      id: 121200506
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
+      - ElementName: Lvl5_DelayStop
+        ObjectType: 3
+        guid: 07327a348de02d4badb2091e89778bd9
+      Path: Events\Default Work Unit\Lvl5\Stg2\Lvl5_DelayStop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_DingPlay
+      guid: 2399af3607182748ab460f4469636e60
+      id: 336574631
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
+      - ElementName: Lvl5_DingPlay
+        ObjectType: 3
+        guid: 2399af3607182748ab460f4469636e60
+      Path: Events\Default Work Unit\Lvl5\Stg2\Lvl5_DingPlay
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_DingStop
+      guid: 238425c38668be45bad21c1a2f7e070d
+      id: 3366680821
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
+      - ElementName: Lvl5_DingStop
+        ObjectType: 3
+        guid: 238425c38668be45bad21c1a2f7e070d
+      Path: Events\Default Work Unit\Lvl5\Stg2\Lvl5_DingStop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_DJ1Play
+      guid: 37e4f50717cd1648a967aea5dcf25cc1
+      id: 202257054
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ccfd2430386c1f409ade8f9c5694fef2
+      - ElementName: Lvl5_DJ1Play
+        ObjectType: 3
+        guid: 37e4f50717cd1648a967aea5dcf25cc1
+      Path: Events\Default Work Unit\Lvl5\Stg3\Lvl5_DJ1Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_DJ1Stop
+      guid: a5c341e788a6794e9c0310b95c49230a
+      id: 1198573408
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ccfd2430386c1f409ade8f9c5694fef2
+      - ElementName: Lvl5_DJ1Stop
+        ObjectType: 3
+        guid: a5c341e788a6794e9c0310b95c49230a
+      Path: Events\Default Work Unit\Lvl5\Stg3\Lvl5_DJ1Stop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_DJBPlay_PLACEHOLD
+      guid: f6b02255a8d7dc43948a233004ab8a59
+      id: 122642286
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ccfd2430386c1f409ade8f9c5694fef2
+      - ElementName: Lvl5_DJBPlay_PLACEHOLD
+        ObjectType: 3
+        guid: f6b02255a8d7dc43948a233004ab8a59
+      Path: Events\Default Work Unit\Lvl5\Stg3\Lvl5_DJBPlay_PLACEHOLD
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_DJBStop_PLACEHOLD
+      guid: ffef1fdbc8af0f4c8c039a72e51e4ca5
+      id: 3904780488
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ccfd2430386c1f409ade8f9c5694fef2
+      - ElementName: Lvl5_DJBStop_PLACEHOLD
+        ObjectType: 3
+        guid: ffef1fdbc8af0f4c8c039a72e51e4ca5
+      Path: Events\Default Work Unit\Lvl5\Stg3\Lvl5_DJBStop_PLACEHOLD
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_EchoPlay
+      guid: 25687b9c168a6b4bb9a060c2a53de76f
+      id: 1259991952
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ccfd2430386c1f409ade8f9c5694fef2
+      - ElementName: Lvl5_EchoPlay
+        ObjectType: 3
+        guid: 25687b9c168a6b4bb9a060c2a53de76f
+      Path: Events\Default Work Unit\Lvl5\Stg3\Lvl5_EchoPlay
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_EchoStop
+      guid: 88d49eb7345ee94bb4157a3c9487be98
+      id: 3903544370
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ccfd2430386c1f409ade8f9c5694fef2
+      - ElementName: Lvl5_EchoStop
+        ObjectType: 3
+        guid: 88d49eb7345ee94bb4157a3c9487be98
+      Path: Events\Default Work Unit\Lvl5\Stg3\Lvl5_EchoStop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Lvl5_End
       guid: 512d52eb49a7f14b8f35df6db782a5d7
       id: 722590412
@@ -3681,6 +4501,98 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Lvl5_Harm1Play
+      guid: a6cb2286ead15f499a7e61a4cce89889
+      id: 2566518778
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ccfd2430386c1f409ade8f9c5694fef2
+      - ElementName: Lvl5_Harm1Play
+        ObjectType: 3
+        guid: a6cb2286ead15f499a7e61a4cce89889
+      Path: Events\Default Work Unit\Lvl5\Stg3\Lvl5_Harm1Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_Harm1Stop
+      guid: 3b047eaa46c5554990c7a5c550703af6
+      id: 4007074308
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ccfd2430386c1f409ade8f9c5694fef2
+      - ElementName: Lvl5_Harm1Stop
+        ObjectType: 3
+        guid: 3b047eaa46c5554990c7a5c550703af6
+      Path: Events\Default Work Unit\Lvl5\Stg3\Lvl5_Harm1Stop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_Harm2Play
+      guid: 6f15e0b033bc834ea2ac30244904c758
+      id: 3115464121
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ccfd2430386c1f409ade8f9c5694fef2
+      - ElementName: Lvl5_Harm2Play
+        ObjectType: 3
+        guid: 6f15e0b033bc834ea2ac30244904c758
+      Path: Events\Default Work Unit\Lvl5\Stg3\Lvl5_Harm2Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_Harm2Stop
+      guid: 7525b0f10638eb4e8a44142af7ce16f1
+      id: 1411458559
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ccfd2430386c1f409ade8f9c5694fef2
+      - ElementName: Lvl5_Harm2Stop
+        ObjectType: 3
+        guid: 7525b0f10638eb4e8a44142af7ce16f1
+      Path: Events\Default Work Unit\Lvl5\Stg3\Lvl5_Harm2Stop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Lvl5_HatPlay
       guid: 854eaa1d7377f1459ffb77ff6b2cff95
       id: 1616311782
@@ -3694,10 +4606,13 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 736061d4f938834f8c14d81bbec14460
       - ElementName: Lvl5_HatPlay
         ObjectType: 3
         guid: 854eaa1d7377f1459ffb77ff6b2cff95
-      Path: Events\Default Work Unit\Lvl5\Lvl5_HatPlay
+      Path: Events\Default Work Unit\Lvl5\Stg1\Lvl5_HatPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3714,10 +4629,13 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 736061d4f938834f8c14d81bbec14460
       - ElementName: Lvl5_HatStop
         ObjectType: 3
         guid: 44d3671a738c1f44b9e242c69d575e7a
-      Path: Events\Default Work Unit\Lvl5\Lvl5_HatStop
+      Path: Events\Default Work Unit\Lvl5\Stg1\Lvl5_HatStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3734,10 +4652,13 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 736061d4f938834f8c14d81bbec14460
       - ElementName: Lvl5_ImpactPlay
         ObjectType: 3
         guid: b7281cede06b3741a45432a1ad1099b3
-      Path: Events\Default Work Unit\Lvl5\Lvl5_ImpactPlay
+      Path: Events\Default Work Unit\Lvl5\Stg1\Lvl5_ImpactPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3754,10 +4675,13 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 736061d4f938834f8c14d81bbec14460
       - ElementName: Lvl5_ImpactStop
         ObjectType: 3
         guid: 8e9096b6889187438d6e06a87be265e8
-      Path: Events\Default Work Unit\Lvl5\Lvl5_ImpactStop
+      Path: Events\Default Work Unit\Lvl5\Stg1\Lvl5_ImpactStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3774,10 +4698,13 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 736061d4f938834f8c14d81bbec14460
       - ElementName: Lvl5_Kick1Play
         ObjectType: 3
         guid: 59040eaa85bc62409234f2accc7a01ec
-      Path: Events\Default Work Unit\Lvl5\Lvl5_Kick1Play
+      Path: Events\Default Work Unit\Lvl5\Stg1\Lvl5_Kick1Play
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3794,10 +4721,13 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 736061d4f938834f8c14d81bbec14460
       - ElementName: Lvl5_Kick1Stop
         ObjectType: 3
         guid: 98231c3d403e8e48b5f95b1e7fdbc54d
-      Path: Events\Default Work Unit\Lvl5\Lvl5_Kick1Stop
+      Path: Events\Default Work Unit\Lvl5\Stg1\Lvl5_Kick1Stop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3814,10 +4744,13 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 736061d4f938834f8c14d81bbec14460
       - ElementName: Lvl5_Kick2Play
         ObjectType: 3
         guid: 64f4ff59c7a9fa45bf2291b37ed774c2
-      Path: Events\Default Work Unit\Lvl5\Lvl5_Kick2Play
+      Path: Events\Default Work Unit\Lvl5\Stg1\Lvl5_Kick2Play
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3834,13 +4767,131 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 736061d4f938834f8c14d81bbec14460
       - ElementName: Lvl5_Kick2Stop
         ObjectType: 3
         guid: 8252b43e22679340987053e5a703c3d8
-      Path: Events\Default Work Unit\Lvl5\Lvl5_Kick2Stop
+      Path: Events\Default Work Unit\Lvl5\Stg1\Lvl5_Kick2Stop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Lvl5_Kick3Play
+      guid: 94f9ebdec8f30549b3f8caa313e688fc
+      id: 775518116
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 736061d4f938834f8c14d81bbec14460
+      - ElementName: Lvl5_Kick3Play
+        ObjectType: 3
+        guid: 94f9ebdec8f30549b3f8caa313e688fc
+      Path: Events\Default Work Unit\Lvl5\Stg1\Lvl5_Kick3Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_Kick3Stop
+      guid: a00a8a039c1c234a85d0babffd5606cf
+      id: 3547965342
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 736061d4f938834f8c14d81bbec14460
+      - ElementName: Lvl5_Kick3Stop
+        ObjectType: 3
+        guid: a00a8a039c1c234a85d0babffd5606cf
+      Path: Events\Default Work Unit\Lvl5\Stg1\Lvl5_Kick3Stop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_Mel1Play
+      guid: ecfb1213b288454aac82f4a482568d69
+      id: 2775387748
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ccfd2430386c1f409ade8f9c5694fef2
+      - ElementName: Lvl5_Mel1Play
+        ObjectType: 3
+        guid: ecfb1213b288454aac82f4a482568d69
+      Path: Events\Default Work Unit\Lvl5\Stg3\Lvl5_Mel1Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_Mel2Stop
+      guid: 2370a52422f0ee4c9f571eb69e17d29a
+      id: 3945230637
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ccfd2430386c1f409ade8f9c5694fef2
+      - ElementName: Lvl5_Mel2Stop
+        ObjectType: 3
+        guid: 2370a52422f0ee4c9f571eb69e17d29a
+      Path: Events\Default Work Unit\Lvl5\Stg3\Lvl5_Mel2Stop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_Mel3Play
+      guid: 9b30225afce6234f96be684d4a8628d9
+      id: 897784610
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ccfd2430386c1f409ade8f9c5694fef2
+      - ElementName: Lvl5_Mel3Play
+        ObjectType: 3
+        guid: 9b30225afce6234f96be684d4a8628d9
+      Path: Events\Default Work Unit\Lvl5\Stg3\Lvl5_Mel3Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Lvl5_PadPlay
       guid: 3762a20e79dd8b4d80871b89e4faaf0a
       id: 2649766814
@@ -3854,10 +4905,13 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
       - ElementName: Lvl5_PadPlay
         ObjectType: 3
         guid: 3762a20e79dd8b4d80871b89e4faaf0a
-      Path: Events\Default Work Unit\Lvl5\Lvl5_PadPlay
+      Path: Events\Default Work Unit\Lvl5\Stg2\Lvl5_PadPlay
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3874,10 +4928,13 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
       - ElementName: Lvl5_PadStop
         ObjectType: 3
         guid: 1ed558480316da419bb4e8af3c6580d8
-      Path: Events\Default Work Unit\Lvl5\Lvl5_PadStop
+      Path: Events\Default Work Unit\Lvl5\Stg2\Lvl5_PadStop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3894,10 +4951,13 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 736061d4f938834f8c14d81bbec14460
       - ElementName: Lvl5_Perc1Play
         ObjectType: 3
         guid: ab4947704ce67f42a46934897cef2a64
-      Path: Events\Default Work Unit\Lvl5\Lvl5_Perc1Play
+      Path: Events\Default Work Unit\Lvl5\Stg1\Lvl5_Perc1Play
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3914,10 +4974,13 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 736061d4f938834f8c14d81bbec14460
       - ElementName: Lvl5_Perc1Stop
         ObjectType: 3
         guid: e4bac732e701af42a77fe0cb7b427109
-      Path: Events\Default Work Unit\Lvl5\Lvl5_Perc1Stop
+      Path: Events\Default Work Unit\Lvl5\Stg1\Lvl5_Perc1Stop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3934,10 +4997,13 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 736061d4f938834f8c14d81bbec14460
       - ElementName: Lvl5_Perc2Play
         ObjectType: 3
         guid: 543122c2dbdd444196fa601e46c6d7d6
-      Path: Events\Default Work Unit\Lvl5\Lvl5_Perc2Play
+      Path: Events\Default Work Unit\Lvl5\Stg1\Lvl5_Perc2Play
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3954,10 +5020,13 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 736061d4f938834f8c14d81bbec14460
       - ElementName: Lvl5_Perc2Stop
         ObjectType: 3
         guid: a8ccb859ffde6d41be4d8d533544439d
-      Path: Events\Default Work Unit\Lvl5\Lvl5_Perc2Stop
+      Path: Events\Default Work Unit\Lvl5\Stg1\Lvl5_Perc2Stop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3974,10 +5043,13 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 736061d4f938834f8c14d81bbec14460
       - ElementName: Lvl5_Perc3Play
         ObjectType: 3
         guid: c404b500527c34458b3ecfa8eb3e89e0
-      Path: Events\Default Work Unit\Lvl5\Lvl5_Perc3Play
+      Path: Events\Default Work Unit\Lvl5\Stg1\Lvl5_Perc3Play
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3994,15 +5066,64 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 736061d4f938834f8c14d81bbec14460
       - ElementName: Lvl5_Perc3Stop
         ObjectType: 3
         guid: 2d4a6eaba0351d4989ee5f8378d4cf81
-      Path: Events\Default Work Unit\Lvl5\Lvl5_Perc3Stop
+      Path: Events\Default Work Unit\Lvl5\Stg1\Lvl5_Perc3Stop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Lvl5_PLACEHOLD1Play
+      guid: 0fc02395e59de547bdfdb938944ad76e
+      id: 2955585364
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
+      - ElementName: Lvl5_PLACEHOLD1Play
+        ObjectType: 3
+        guid: 0fc02395e59de547bdfdb938944ad76e
+      Path: Events\Default Work Unit\Lvl5\Stg2\Lvl5_PLACEHOLD1Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_PLACEHOLD1Stop
+      guid: 5e2de18ed3e5af40b1461500836bd979
+      id: 323046958
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
+      - ElementName: Lvl5_PLACEHOLD1Stop
+        ObjectType: 3
+        guid: 5e2de18ed3e5af40b1461500836bd979
+      Path: Events\Default Work Unit\Lvl5\Stg2\Lvl5_PLACEHOLD1Stop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Lvl5_PLACEHOLD2Play
-      guid: 7356f0f0716e564f830481444f9e0ebf
+      guid: 8471ccd9060a1148965a3aedb2ee07e4
       id: 4131832095
       PathAndIcons:
       - ElementName: Events
@@ -4014,15 +5135,18 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
       - ElementName: Lvl5_PLACEHOLD2Play
         ObjectType: 3
-        guid: 7356f0f0716e564f830481444f9e0ebf
-      Path: Events\Default Work Unit\Lvl5\Lvl5_PLACEHOLD2Play
+        guid: 8471ccd9060a1148965a3aedb2ee07e4
+      Path: Events\Default Work Unit\Lvl5\Stg2\Lvl5_PLACEHOLD2Play
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: Lvl5_PLACEHOLD2Stop
-      guid: 09df248767ade64c94a5b25dbac7bb8e
+      guid: 8ee82431efa6e24a81882b8ba1a083a2
       id: 3664513853
       PathAndIcons:
       - ElementName: Events
@@ -4034,16 +5158,19 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
       - ElementName: Lvl5_PLACEHOLD2Stop
         ObjectType: 3
-        guid: 09df248767ade64c94a5b25dbac7bb8e
-      Path: Events\Default Work Unit\Lvl5\Lvl5_PLACEHOLD2Stop
+        guid: 8ee82431efa6e24a81882b8ba1a083a2
+      Path: Events\Default Work Unit\Lvl5\Stg2\Lvl5_PLACEHOLD2Stop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Lvl5_PLACEHOLDPlay
-      guid: 745cbdacb8a3c04d8d9623a02b3025b9
-      id: 3674842823
+    - name: Lvl5_PLACEHOLD3Play
+      guid: f67dbf9d354f074296ec91547032ce74
+      id: 3843593490
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -4054,16 +5181,19 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
-      - ElementName: Lvl5_PLACEHOLDPlay
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ccfd2430386c1f409ade8f9c5694fef2
+      - ElementName: Lvl5_PLACEHOLD3Play
         ObjectType: 3
-        guid: 745cbdacb8a3c04d8d9623a02b3025b9
-      Path: Events\Default Work Unit\Lvl5\Lvl5_PLACEHOLDPlay
+        guid: f67dbf9d354f074296ec91547032ce74
+      Path: Events\Default Work Unit\Lvl5\Stg3\Lvl5_PLACEHOLD3Play
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Lvl5_PLACEHOLDStop
-      guid: 07327a348de02d4badb2091e89778bd9
-      id: 2368507925
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_PLACEHOLD3Stop
+      guid: f18bd07437405b4d8d7723b9c59e2619
+      id: 1260183692
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -4074,13 +5204,108 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
-      - ElementName: Lvl5_PLACEHOLDStop
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ccfd2430386c1f409ade8f9c5694fef2
+      - ElementName: Lvl5_PLACEHOLD3Stop
         ObjectType: 3
-        guid: 07327a348de02d4badb2091e89778bd9
-      Path: Events\Default Work Unit\Lvl5\Lvl5_PLACEHOLDStop
+        guid: f18bd07437405b4d8d7723b9c59e2619
+      Path: Events\Default Work Unit\Lvl5\Stg3\Lvl5_PLACEHOLD3Stop
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_PLACEHOLD4Play
+      guid: 73352f04a6182a4daec6f38d5b05ac9f
+      id: 3215859637
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ccfd2430386c1f409ade8f9c5694fef2
+      - ElementName: Lvl5_PLACEHOLD4Play
+        ObjectType: 3
+        guid: 73352f04a6182a4daec6f38d5b05ac9f
+      Path: Events\Default Work Unit\Lvl5\Stg3\Lvl5_PLACEHOLD4Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_PLACEHOLD4Stop
+      guid: a30d461899f22f4192df36d48d78fec3
+      id: 1382958995
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ccfd2430386c1f409ade8f9c5694fef2
+      - ElementName: Lvl5_PLACEHOLD4Stop
+        ObjectType: 3
+        guid: a30d461899f22f4192df36d48d78fec3
+      Path: Events\Default Work Unit\Lvl5\Stg3\Lvl5_PLACEHOLD4Stop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_SnarePlay
+      guid: 265eb39444953d4494d803a69b205a0b
+      id: 667795782
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 736061d4f938834f8c14d81bbec14460
+      - ElementName: Lvl5_SnarePlay
+        ObjectType: 3
+        guid: 265eb39444953d4494d803a69b205a0b
+      Path: Events\Default Work Unit\Lvl5\Stg1\Lvl5_SnarePlay
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_SnareStop
+      guid: 8bbb98875e76b847a18902540a9f3993
+      id: 2477220408
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 736061d4f938834f8c14d81bbec14460
+      - ElementName: Lvl5_SnareStop
+        ObjectType: 3
+        guid: 8bbb98875e76b847a18902540a9f3993
+      Path: Events\Default Work Unit\Lvl5\Stg1\Lvl5_SnareStop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Lvl5_Start
       guid: 23376cc557a07348acd251910f1e132b
       id: 2025820975
@@ -4114,10 +5339,13 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
       - ElementName: Lvl5_Synth1Play
         ObjectType: 3
         guid: 36e8aa042e31794abd60e38aca0f09a2
-      Path: Events\Default Work Unit\Lvl5\Lvl5_Synth1Play
+      Path: Events\Default Work Unit\Lvl5\Stg2\Lvl5_Synth1Play
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4134,10 +5362,13 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
       - ElementName: Lvl5_Synth1Stop
         ObjectType: 3
         guid: a687e5b8e8a9f74783ee76d6e3e067e8
-      Path: Events\Default Work Unit\Lvl5\Lvl5_Synth1Stop
+      Path: Events\Default Work Unit\Lvl5\Stg2\Lvl5_Synth1Stop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4154,10 +5385,13 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
       - ElementName: Lvl5_Synth2Play
         ObjectType: 3
         guid: 23885d0ef532ef47b3fc0fcf3a3c930b
-      Path: Events\Default Work Unit\Lvl5\Lvl5_Synth2Play
+      Path: Events\Default Work Unit\Lvl5\Stg2\Lvl5_Synth2Play
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4174,10 +5408,13 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
       - ElementName: Lvl5_Synth2Stop
         ObjectType: 3
         guid: f335b0b47b60334ca506216a4f9e1d83
-      Path: Events\Default Work Unit\Lvl5\Lvl5_Synth2Stop
+      Path: Events\Default Work Unit\Lvl5\Stg2\Lvl5_Synth2Stop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4194,16 +5431,19 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
       - ElementName: Lvl5_Synth3Play
         ObjectType: 3
         guid: cd6fb5cb55e7ac43afc415782226bf12
-      Path: Events\Default Work Unit\Lvl5\Lvl5_Synth3Play
+      Path: Events\Default Work Unit\Lvl5\Stg2\Lvl5_Synth3Play
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Lvl5_Sythn3Stop
+    - name: Lvl5_Synth3Stop
       guid: b87608bbf9d8b34194ff5e0e0744e19c
-      id: 3247144324
+      id: 723344108
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -4214,13 +5454,62 @@ MonoBehaviour:
       - ElementName: Lvl5
         ObjectType: 4
         guid: c25e0467a839ad41ad1301f9f63ba1e6
-      - ElementName: Lvl5_Sythn3Stop
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
+      - ElementName: Lvl5_Synth3Stop
         ObjectType: 3
         guid: b87608bbf9d8b34194ff5e0e0744e19c
-      Path: Events\Default Work Unit\Lvl5\Lvl5_Sythn3Stop
+      Path: Events\Default Work Unit\Lvl5\Stg2\Lvl5_Synth3Stop
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_Synth4Play
+      guid: 2799d78888ec4b478fbbb26256282e24
+      id: 2679019797
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
+      - ElementName: Lvl5_Synth4Play
+        ObjectType: 3
+        guid: 2799d78888ec4b478fbbb26256282e24
+      Path: Events\Default Work Unit\Lvl5\Stg2\Lvl5_Synth4Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lvl5_Synth4Stop
+      guid: 6263036791de2d4ca0fb04d1c157cbbb
+      id: 846016243
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
+      - ElementName: Lvl5_Synth4Stop
+        ObjectType: 3
+        guid: 6263036791de2d4ca0fb04d1c157cbbb
+      Path: Events\Default Work Unit\Lvl5\Stg2\Lvl5_Synth4Stop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Menu
       guid: cdc03a538c495843b05e6b7773d43c34
       id: 2607556080
@@ -4273,6 +5562,86 @@ MonoBehaviour:
       maxDuration: 0
       minDuration: 0
     - name: Stg1
+      guid: 8f24917bc76d3c478ae07586e29e875f
+      id: 654663588
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl1
+        ObjectType: 4
+        guid: b50846f8bdea8744b8c1dbd79cc62c0f
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 8f24917bc76d3c478ae07586e29e875f
+      Path: Events\Default Work Unit\Lvl1\Stg1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stg1
+      guid: 354439276a884b428632244e5cba1dc0
+      id: 654663588
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl3_1
+        ObjectType: 4
+        guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 354439276a884b428632244e5cba1dc0
+      Path: Events\Default Work Unit\Lvl3_1\Stg1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stg1
+      guid: 0a90ec45b30ddb4b8f0e4fe56d952906
+      id: 654663588
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl2
+        ObjectType: 4
+        guid: a51f4f2130300b45b469ba6bda1fd31c
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 0a90ec45b30ddb4b8f0e4fe56d952906
+      Path: Events\Default Work Unit\Lvl2\Stg1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stg1
+      guid: 1054277ee669ab4686323026ed6a2fb9
+      id: 654663588
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl4
+        ObjectType: 4
+        guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 1054277ee669ab4686323026ed6a2fb9
+      Path: Events\Default Work Unit\Lvl4\Stg1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stg1
       guid: ac6d40a6abb3c841a2c7ae14d8b7174b
       id: 654663588
       PathAndIcons:
@@ -4289,6 +5658,86 @@ MonoBehaviour:
         ObjectType: 4
         guid: ac6d40a6abb3c841a2c7ae14d8b7174b
       Path: Events\Default Work Unit\Lvl3_2\Stg1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stg1
+      guid: 736061d4f938834f8c14d81bbec14460
+      id: 654663588
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg1
+        ObjectType: 4
+        guid: 736061d4f938834f8c14d81bbec14460
+      Path: Events\Default Work Unit\Lvl5\Stg1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stg2
+      guid: 4f343e46c8b1e0488e0050c9b54371a4
+      id: 654663591
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl2
+        ObjectType: 4
+        guid: a51f4f2130300b45b469ba6bda1fd31c
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: 4f343e46c8b1e0488e0050c9b54371a4
+      Path: Events\Default Work Unit\Lvl2\Stg2
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stg2
+      guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
+      id: 654663591
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: bcf1d6be6a50a34c97dfeb4e1b54a6fa
+      Path: Events\Default Work Unit\Lvl5\Stg2
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stg2
+      guid: ef307bfa0799a244831945563d52aebb
+      id: 654663591
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl1
+        ObjectType: 4
+        guid: b50846f8bdea8744b8c1dbd79cc62c0f
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: ef307bfa0799a244831945563d52aebb
+      Path: Events\Default Work Unit\Lvl1\Stg2
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -4312,6 +5761,126 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Stg2
+      guid: b695b291487df045b76d66809cddbe56
+      id: 654663591
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl3_1
+        ObjectType: 4
+        guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: b695b291487df045b76d66809cddbe56
+      Path: Events\Default Work Unit\Lvl3_1\Stg2
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stg2
+      guid: e979ad7dacc3914c9a360631628b88bb
+      id: 654663591
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl4
+        ObjectType: 4
+        guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg2
+        ObjectType: 4
+        guid: e979ad7dacc3914c9a360631628b88bb
+      Path: Events\Default Work Unit\Lvl4\Stg2
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stg3
+      guid: 610692cf67f9cf4ea0d0b9a64b9c6afd
+      id: 654663590
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl4
+        ObjectType: 4
+        guid: fd2e006278e83e40bad84534a583ed46
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: 610692cf67f9cf4ea0d0b9a64b9c6afd
+      Path: Events\Default Work Unit\Lvl4\Stg3
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stg3
+      guid: ba1ce3715bfcef47ab74920435f383fc
+      id: 654663590
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl2
+        ObjectType: 4
+        guid: a51f4f2130300b45b469ba6bda1fd31c
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ba1ce3715bfcef47ab74920435f383fc
+      Path: Events\Default Work Unit\Lvl2\Stg3
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stg3
+      guid: f663b21916944a41ad67bea916830b2e
+      id: 654663590
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl1
+        ObjectType: 4
+        guid: b50846f8bdea8744b8c1dbd79cc62c0f
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: f663b21916944a41ad67bea916830b2e
+      Path: Events\Default Work Unit\Lvl1\Stg3
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stg3
+      guid: ddc29c871c04e94e98313623ba2ec2c7
+      id: 654663590
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl3_1
+        ObjectType: 4
+        guid: f3cc2aaa27a6474ea02002905cf1cecb
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ddc29c871c04e94e98313623ba2ec2c7
+      Path: Events\Default Work Unit\Lvl3_1\Stg3
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Stg3
       guid: 7afac29fc858a7469d9f001188d9bd61
       id: 654663590
@@ -4329,6 +5898,46 @@ MonoBehaviour:
         ObjectType: 4
         guid: 7afac29fc858a7469d9f001188d9bd61
       Path: Events\Default Work Unit\Lvl3_2\Stg3
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stg3
+      guid: ccfd2430386c1f409ade8f9c5694fef2
+      id: 654663590
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl5
+        ObjectType: 4
+        guid: c25e0467a839ad41ad1301f9f63ba1e6
+      - ElementName: Stg3
+        ObjectType: 4
+        guid: ccfd2430386c1f409ade8f9c5694fef2
+      Path: Events\Default Work Unit\Lvl5\Stg3
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stg4
+      guid: 158ad142804104469c5df9a16fc46e2d
+      id: 654663585
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 60318edf19da10499ab787cbf746dcca
+      - ElementName: Lvl2
+        ObjectType: 4
+        guid: a51f4f2130300b45b469ba6bda1fd31c
+      - ElementName: Stg4
+        ObjectType: 4
+        guid: 158ad142804104469c5df9a16fc46e2d
+      Path: Events\Default Work Unit\Lvl2\Stg4
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -5154,7 +6763,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: f6f231b16bbe6b488969e554ce119fd9
     GuidInternal: 
-    m_lastTime: -8584409828210943356
+    m_lastTime: -8584407363690612526
     List:
     - name: ATM_Vol
       guid: 89837548f1a1454b8bb8f77bb5e84792
@@ -5198,6 +6807,90 @@ MonoBehaviour:
         ObjectType: 13
         guid: f47d9a87274c3c4a8ace18f20265c2ad
       Path: Game Parameters\Default Work Unit\SFX_Vol
+  - PhysicalPath: Game Parameters\MusicFX.wwu
+    PathAndIcons:
+    - ElementName: Game Parameters
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: f6f231b16bbe6b488969e554ce119fd9
+    - ElementName: MusicFX
+      ObjectType: 12
+      guid: d1b156a9ec931a40aaad6dac7abf0394
+    ParentPath: Game Parameters\Default Work Unit\MusicFX
+    guid: d1b156a9ec931a40aaad6dac7abf0394
+    GuidInternal: 
+    m_lastTime: -8584407363690597474
+    List:
+    - name: Cafe
+      guid: 34b30d99e0e55e40bd791313e10b6008
+      id: 3853951854
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f6f231b16bbe6b488969e554ce119fd9
+      - ElementName: MusicFX
+        ObjectType: 12
+        guid: d1b156a9ec931a40aaad6dac7abf0394
+      - ElementName: Cafe
+        ObjectType: 13
+        guid: 34b30d99e0e55e40bd791313e10b6008
+      Path: Game Parameters\Default Work Unit\MusicFX\Cafe
+    - name: Dist
+      guid: 8bd0c4e7ce97374d9cfb8f5da58cfa93
+      id: 2212414277
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f6f231b16bbe6b488969e554ce119fd9
+      - ElementName: MusicFX
+        ObjectType: 12
+        guid: d1b156a9ec931a40aaad6dac7abf0394
+      - ElementName: Dist
+        ObjectType: 13
+        guid: 8bd0c4e7ce97374d9cfb8f5da58cfa93
+      Path: Game Parameters\Default Work Unit\MusicFX\Dist
+    - name: Flanger
+      guid: dfa7782fc9d5854292731bdb862e4fa2
+      id: 2786827648
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f6f231b16bbe6b488969e554ce119fd9
+      - ElementName: MusicFX
+        ObjectType: 12
+        guid: d1b156a9ec931a40aaad6dac7abf0394
+      - ElementName: Flanger
+        ObjectType: 13
+        guid: dfa7782fc9d5854292731bdb862e4fa2
+      Path: Game Parameters\Default Work Unit\MusicFX\Flanger
+    - name: Pitch
+      guid: a1e3fd699ff42c4ebcfdd8383424fd16
+      id: 1908158473
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f6f231b16bbe6b488969e554ce119fd9
+      - ElementName: MusicFX
+        ObjectType: 12
+        guid: d1b156a9ec931a40aaad6dac7abf0394
+      - ElementName: Pitch
+        ObjectType: 13
+        guid: a1e3fd699ff42c4ebcfdd8383424fd16
+      Path: Game Parameters\Default Work Unit\MusicFX\Pitch
   - PhysicalPath: Game Parameters\SFX.wwu
     PathAndIcons:
     - ElementName: Game Parameters
