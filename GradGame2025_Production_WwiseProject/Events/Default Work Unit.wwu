@@ -933,18 +933,15 @@
 									</PropertyList>
 									<ReferenceList/>
 								</Action>
-								<Action Name="" ID="{F9DC9D72-100F-461F-BF5E-29E6707E54FE}" ShortID="474384733">
+								<Action Name="" ID="{53991780-D0FF-417C-9858-85293BB9EA6E}" ShortID="713633122">
 									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="12"/>
-										<Property Name="Inclusion" Type="bool">
-											<ValueList>
-												<Value>False</Value>
-											</ValueList>
-										</Property>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Music" ID="{81A48A91-635D-45B5-87C7-0B4FE62B7A32}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
+											<ObjectRef Name="Cafe" ID="{990DB334-E5E0-405E-BD79-1313E10B6008}" WorkUnitID="{A956B1D1-93EC-401A-AAAD-6DAC7ABF0394}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -1546,6 +1543,18 @@
 										<Property Name="Delay" Type="Real64" Value="1.5"/>
 									</PropertyList>
 									<ReferenceList/>
+								</Action>
+								<Action Name="" ID="{53EEB8DA-BF61-42BA-8965-C404BD6A44FB}" ShortID="643926085">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Cafe" ID="{990DB334-E5E0-405E-BD79-1313E10B6008}" WorkUnitID="{A956B1D1-93EC-401A-AAAD-6DAC7ABF0394}"/>
+										</Reference>
+									</ReferenceList>
 								</Action>
 								<Action Name="" ID="{1BD95479-4B8D-459D-AB08-BEBF544F195F}" ShortID="539618456">
 									<PropertyList>
