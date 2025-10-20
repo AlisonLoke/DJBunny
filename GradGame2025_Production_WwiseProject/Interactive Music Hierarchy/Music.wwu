@@ -6703,58 +6703,6 @@
 												</ObjectList>
 											</ObjectLists>
 										</MusicTrack>
-										<MusicTrack Name="Lvl5_BUNNY 1_140" ID="{07DBA0CE-24E4-4A07-A09A-181F8B90837D}" ShortID="193020806">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
-												</Reference>
-												<Reference Name="TransitionRoot">
-													<Custom>
-														<MusicTransition Name="Root" ID="{4955E394-E4D3-45D1-8A0D-DCDB9EB23862}">
-															<PropertyList>
-																<Property Name="IsFolder" Type="bool" Value="True"/>
-															</PropertyList>
-															<TransitionInfo/>
-														</MusicTransition>
-													</Custom>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Lvl5_BUNNY 1_140" ID="{C425801F-2EAD-48A4-B50C-00680105AFF1}">
-													<Language>SFX</Language>
-													<AudioFile>Lvl5\Lvl5_BUNNY 1_140.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="127869145"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="Sequences">
-													<Reference>
-														<Local>
-															<MusicTrackSequence Name="" ID="{42D42426-885F-4636-A91D-F2734AE4A755}">
-																<ObjectLists>
-																	<ObjectList Name="Clips">
-																		<Reference>
-																			<Local>
-																				<MusicClip Name="Lvl5_BUNNY 1_140" ID="{E34066DD-6A9C-43EA-81A8-B098E552C0EB}">
-																					<PropertyList>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="52285.7083333333"/>
-																						<Property Name="FadeInMode" Type="int16" Value="0"/>
-																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																					</PropertyList>
-																					<AudioSourceRef Name="Lvl5_BUNNY 1_140" ID="{C425801F-2EAD-48A4-B50C-00680105AFF1}"/>
-																				</MusicClip>
-																			</Local>
-																		</Reference>
-																	</ObjectList>
-																</ObjectLists>
-															</MusicTrackSequence>
-														</Local>
-													</Reference>
-												</ObjectList>
-											</ObjectLists>
-										</MusicTrack>
 										<MusicTrack Name="Lvl5_CHORD_140" ID="{38DEC961-EA94-4E0D-B194-0BF620A73FAE}" ShortID="784098482">
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -7108,58 +7056,6 @@
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
 																					<AudioSourceRef Name="Lvl5_DING_140" ID="{DE48C06E-D391-49A3-92B1-3B57ABAE57BA}"/>
-																				</MusicClip>
-																			</Local>
-																		</Reference>
-																	</ObjectList>
-																</ObjectLists>
-															</MusicTrackSequence>
-														</Local>
-													</Reference>
-												</ObjectList>
-											</ObjectLists>
-										</MusicTrack>
-										<MusicTrack Name="Lvl5_DJ1_140" ID="{C7FD8B76-71B3-4346-82AE-9CCFA6F02692}" ShortID="729728614">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
-												</Reference>
-												<Reference Name="TransitionRoot">
-													<Custom>
-														<MusicTransition Name="Root" ID="{2EF9BF17-6631-40F5-A7E9-48379DB72CC1}">
-															<PropertyList>
-																<Property Name="IsFolder" Type="bool" Value="True"/>
-															</PropertyList>
-															<TransitionInfo/>
-														</MusicTransition>
-													</Custom>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Lvl5_DJ1_140" ID="{8054F615-4CC6-4392-9678-C4B4631F7D26}">
-													<Language>SFX</Language>
-													<AudioFile>Lvl5\Lvl5_DJ1_140.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="402335144"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="Sequences">
-													<Reference>
-														<Local>
-															<MusicTrackSequence Name="" ID="{4AF65DF1-9A4B-448E-855C-606EED77845C}">
-																<ObjectLists>
-																	<ObjectList Name="Clips">
-																		<Reference>
-																			<Local>
-																				<MusicClip Name="Lvl5_DJ1_140" ID="{FFEEF840-5B73-4C0C-B484-10BDD0F2A22D}">
-																					<PropertyList>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="52285.7083333333"/>
-																						<Property Name="FadeInMode" Type="int16" Value="0"/>
-																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																					</PropertyList>
-																					<AudioSourceRef Name="Lvl5_DJ1_140" ID="{8054F615-4CC6-4392-9678-C4B4631F7D26}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
@@ -8200,6 +8096,162 @@
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
 																					<AudioSourceRef Name="Lvl5_SYNTH4_140" ID="{AD8E7369-C11E-4158-8C33-CDFAE5D717A4}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="Lvl5_MEL4_111" ID="{152F3345-4844-4B8B-AF8C-170733856EEA}" ShortID="888035670">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{E777CE45-42EC-4D74-AEAB-C1B2C0CF6494}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Lvl5_MEL4_111" ID="{3B36D1FC-29E7-4E1C-B873-865FA3F0B792}">
+													<Language>SFX</Language>
+													<AudioFile>Lvl5_MEL4_111.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="966246181"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{52E80F58-6607-4EE2-9B3D-41F9972D51C9}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="Lvl5_MEL4_111" ID="{104B26AF-AB00-447C-8F6D-D0F4619121DC}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="52285.7083333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="Lvl5_MEL4_111" ID="{3B36D1FC-29E7-4E1C-B873-865FA3F0B792}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="Lvl5_BUNNY _140" ID="{41FF32B5-2925-4C30-B912-1198660CBBF5}" ShortID="801545216">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{551A75D6-5705-4A1A-841D-C97C915ABD46}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Lvl5_BUNNY _140" ID="{87EE32B0-06CF-4A41-B634-DAEAEA9F2D60}">
+													<Language>SFX</Language>
+													<AudioFile>Lvl5_BUNNY _140.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="951089594"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{B358693E-F394-4129-ADD9-1338ADE4CC98}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="Lvl5_BUNNY _140" ID="{E4308DE8-871A-4D27-A687-1F49454BFE0F}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="52285.7083333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="Lvl5_BUNNY _140" ID="{87EE32B0-06CF-4A41-B634-DAEAEA9F2D60}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="Lvl5_DJ_140" ID="{4D292E36-2E86-4A77-81E9-A392FE00927E}" ShortID="113672177">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D813367E-24F1-462A-BC39-13423E02C807}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{1681E88C-C509-4CC2-A337-89A7473B45A5}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Lvl5_DJ_140" ID="{6C6A08BE-5D0E-4341-B06E-46849B2FE7E8}">
+													<Language>SFX</Language>
+													<AudioFile>Lvl5_DJ_140.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="773089214"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{06C67D2C-964D-4E86-B06D-6BF5DE302FF5}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="Lvl5_DJ_140" ID="{49C455CF-EEE8-4929-AB67-EB0B01A697CB}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="52285.7083333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="Lvl5_DJ_140" ID="{6C6A08BE-5D0E-4341-B06E-46849B2FE7E8}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
