@@ -10,22 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e7e63b03d3ea3a4dac14a8664b09b92, type: 3}
-  m_Name: Lvl05_UBlock_Synth
+  m_Name: Lvl05_Echo_BL
   m_EditorClassIdentifier: 
-  BlockName: UBlock
-  BlockPrefab: {fileID: 3525030621653700591, guid: 95dd5e52fcb2ec74bbe194ac928e6bb6, type: 3}
+  BlockName: BigLBlock
+  BlockPrefab: {fileID: 3369561560262024247, guid: a24705e580ee3bb47bc873f6697cb9ef, type: 3}
   BlockCoordinatesList:
-  - {x: 1, y: 0}
+  - {x: -1, y: 0}
   - {x: 0, y: 0}
   - {x: 0, y: 1}
   - {x: 0, y: 2}
-  - {x: 1, y: 2}
   PlayInstrument:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 4f890a9651418844691e3125a36d2101, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 260c68c793413cc498190acfd4a65b64, type: 2}
   MuteInstrument:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: b06f380c552cc7d4cbfe0106e5818115, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: d89fdad5cd5893c46a3bbb28d8f19e3d, type: 2}
   genre: 0
