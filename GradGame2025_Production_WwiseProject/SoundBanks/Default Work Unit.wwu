@@ -46,7 +46,9 @@
 						<ObjectRef Name="UI" ID="{4CFCD80E-9E6D-4B61-9334-558299F149BF}" WorkUnitID="{4CFCD80E-9E6D-4B61-9334-558299F149BF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Dialogue" ID="{24638E55-9864-4EFD-AA33-318C83DEBEF8}" WorkUnitID="{24638E55-9864-4EFD-AA33-318C83DEBEF8}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
-					<ObjectExclusionList/>
+					<ObjectExclusionList>
+						<ObjectRef Name="01 Musée de Mahébourg garden-01" ID="{ECA736A8-2EDE-4951-924C-D227F060F565}" WorkUnitID="{6C117D23-D6B5-4862-ACA2-F489A152CC13}"/>
+					</ObjectExclusionList>
 					<GameSyncExclusionList/>
 				</SoundBank>
 			</ChildrenList>

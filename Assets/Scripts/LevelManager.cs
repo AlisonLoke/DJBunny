@@ -159,6 +159,7 @@ public class LevelManager : MonoBehaviour
     {
 
         SceneTransition.Instance.StartTryAgainTransition();
+        MusicManager.instance.ResetForNewLevel(StartLevelMusic, EndLevelMusic);
         StartCoroutine(TryAgainDelay(1f));
     }
     private IEnumerator TryAgainDelay(float delay)

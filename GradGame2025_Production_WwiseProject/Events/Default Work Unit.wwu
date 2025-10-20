@@ -3585,9 +3585,6 @@
 												<Reference Name="Target">
 													<ObjectRef Name="Lvl5_IMPACT_140" ID="{B4740BED-06D4-406F-9EFB-0F7B08AA454A}" WorkUnitID="{3ECC6193-728C-4940-AA8F-9F059553CBE0}"/>
 												</Reference>
-												<Reference Name="TargetEffect" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
-													<ObjectRef Name="New_Guitar_Distortion" ID="{72B9A136-ED70-4384-8603-FE0D57496E46}" WorkUnitID="{A6655D03-7C0D-4E9A-9178-FE43B44D4C03}"/>
-												</Reference>
 											</ReferenceList>
 										</Action>
 									</ChildrenList>
@@ -4466,6 +4463,20 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Bus" ID="{B2CB2F55-0768-4D5F-818F-A2C35CAA5125}" WorkUnitID="{5F9035CE-D633-4D77-AFAC-532B6A139962}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="BusMusicStop" ID="{945656F8-9A96-45FB-9059-E1F973CE06FA}">
+					<ChildrenList>
+						<Action Name="" ID="{A96110C6-D7E6-4ECF-939F-316CF70684C1}" ShortID="813349769">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="None" ID="{180D6E89-8C49-4DF9-AD41-51EBA4AF673C}" WorkUnitID="{5F9035CE-D633-4D77-AFAC-532B6A139962}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
