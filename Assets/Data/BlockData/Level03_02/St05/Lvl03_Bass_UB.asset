@@ -10,20 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e7e63b03d3ea3a4dac14a8664b09b92, type: 3}
-  m_Name: Lvl03_Harmony
+  m_Name: Lvl03_Bass_UB
   m_EditorClassIdentifier: 
-  BlockName: Drum
-  BlockPrefab: {fileID: 1385824898608407974, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
+  BlockName: UBlock
+  BlockPrefab: {fileID: 3525030621653700591, guid: 95dd5e52fcb2ec74bbe194ac928e6bb6, type: 3}
   BlockCoordinatesList:
+  - {x: 1, y: 0}
   - {x: 0, y: 0}
   - {x: 0, y: 1}
-  - {x: 1, y: 1}
+  - {x: 0, y: 2}
+  - {x: 1, y: 2}
   PlayInstrument:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: c95a4c23a94fc4a46b7c3bfe816d8b5c, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 52fd7928df07a8f4bb40d358e13efa9d, type: 2}
   MuteInstrument:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 20dafb03d63070247bbc463fa4325715, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: e4d243fb4e8e5e641be4d8c8a1055641, type: 2}
   genre: 0
