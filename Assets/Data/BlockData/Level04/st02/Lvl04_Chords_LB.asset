@@ -10,21 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e7e63b03d3ea3a4dac14a8664b09b92, type: 3}
-  m_Name: Lvl04_Shim_BigL
+  m_Name: Lvl04_Chords_LB
   m_EditorClassIdentifier: 
-  BlockName: BigLBlock
-  BlockPrefab: {fileID: 3369561560262024247, guid: a24705e580ee3bb47bc873f6697cb9ef, type: 3}
+  BlockName: Drum
+  BlockPrefab: {fileID: 1385824898608407974, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
   BlockCoordinatesList:
-  - {x: -1, y: 0}
   - {x: 0, y: 0}
   - {x: 0, y: 1}
-  - {x: 0, y: 2}
+  - {x: 1, y: 1}
   PlayInstrument:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: bcf5e5168bf98c84e8002601db40553d, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 8355cafda5acb2d47a295f5f5c680283, type: 2}
   MuteInstrument:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: bd6bae7d22798fc42bd1281b93c24bc6, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: e18bfe9272a246947aeceaebb48a0a6e, type: 2}
   genre: 0

@@ -13,6 +13,8 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID ATM_FADE_DOWN = 44639447U;
+        static const AkUniqueID ATM_FADE_UP = 3821751680U;
         static const AkUniqueID ATM_PLAY = 135431296U;
         static const AkUniqueID ATM_STATE_BUSEXT = 4228493107U;
         static const AkUniqueID ATM_STATE_BUSINT = 169000921U;
@@ -24,6 +26,7 @@ namespace AK
         static const AkUniqueID ATM_STATE_TOWNCENTRE = 347565745U;
         static const AkUniqueID ATM_STATE_WIN = 69196366U;
         static const AkUniqueID ATM_STOP = 2773657602U;
+        static const AkUniqueID BUS = 714721605U;
         static const AkUniqueID BUS_LEAVE_PLAY = 3850615158U;
         static const AkUniqueID BUS_PLAYCONSTANT = 650913174U;
         static const AkUniqueID BUS_PLAYCONSTANT2 = 2841586448U;
@@ -31,6 +34,8 @@ namespace AK
         static const AkUniqueID BUS_STOPCONSTANT2 = 1392277230U;
         static const AkUniqueID CREDITS = 2201105581U;
         static const AkUniqueID DIALOGUE_ALL_BREAK = 64818519U;
+        static const AkUniqueID DIALOGUE_BUNNY_BREAK = 946337906U;
+        static const AkUniqueID DIALOGUE_BUNNY_PLAY = 3725547267U;
         static const AkUniqueID DIALOGUE_EXCITED_BREAK = 2289190684U;
         static const AkUniqueID DIALOGUE_EXCITED_PLAY = 2504262045U;
         static const AkUniqueID DIALOGUE_MOM_BREAK = 1118844967U;
@@ -109,8 +114,16 @@ namespace AK
         static const AkUniqueID LVL3_1_STRINGSSTOP = 2495623471U;
         static const AkUniqueID LVL3_1_TRUMPPLAY = 1602093139U;
         static const AkUniqueID LVL3_1_TRUMPSTOP = 732111929U;
+        static const AkUniqueID LVL3_2_AHPLAY = 1885107351U;
+        static const AkUniqueID LVL3_2_AHSTOP = 573549765U;
         static const AkUniqueID LVL3_2_BASSPLAY = 3709306649U;
         static const AkUniqueID LVL3_2_BASSSTOP = 2005404255U;
+        static const AkUniqueID LVL3_2_BELLPLAY = 4177097099U;
+        static const AkUniqueID LVL3_2_BELLSTOP = 2999760417U;
+        static const AkUniqueID LVL3_2_CASHPLAY = 956994661U;
+        static const AkUniqueID LVL3_2_CASHSTOP = 2339967715U;
+        static const AkUniqueID LVL3_2_CUTLERYPLAY = 2204996798U;
+        static const AkUniqueID LVL3_2_CUTLERYSTOP = 3201312896U;
         static const AkUniqueID LVL3_2_END = 2716414849U;
         static const AkUniqueID LVL3_2_GUITARPLAY = 2956608286U;
         static const AkUniqueID LVL3_2_GUITARSTOP = 3952924640U;
@@ -122,12 +135,16 @@ namespace AK
         static const AkUniqueID LVL3_2_KNOCKSTOP = 3910411102U;
         static const AkUniqueID LVL3_2_MELODYPLAY = 787537544U;
         static const AkUniqueID LVL3_2_MELODYSTOP = 3165104890U;
+        static const AkUniqueID LVL3_2_POURSTART = 1444329536U;
+        static const AkUniqueID LVL3_2_POURSTOP = 643780076U;
         static const AkUniqueID LVL3_2_RHYTH1PLAY = 198484192U;
         static const AkUniqueID LVL3_2_RHYTH1STOP = 2836813666U;
         static const AkUniqueID LVL3_2_RHYTH2PLAY = 4138102315U;
         static const AkUniqueID LVL3_2_RHYTH2STOP = 2960765633U;
         static const AkUniqueID LVL3_2_SCRAPEPLAY = 3765250092U;
         static const AkUniqueID LVL3_2_SCRAPESTOP = 1440067382U;
+        static const AkUniqueID LVL3_2_SIPPLAY = 501411160U;
+        static const AkUniqueID LVL3_2_SIPSTOP = 2873858474U;
         static const AkUniqueID LVL3_2_START = 3374273650U;
         static const AkUniqueID LVL3_2_TEXPLAY = 3817726483U;
         static const AkUniqueID LVL3_2_TEXSTOP = 2947848697U;
@@ -138,21 +155,27 @@ namespace AK
         static const AkUniqueID LVL4_CHORDSTOP = 1889752400U;
         static const AkUniqueID LVL4_COUNTERPLAY = 1479828080U;
         static const AkUniqueID LVL4_COUNTERSTOP = 4081700370U;
-        static const AkUniqueID LVL4_DIST1PLAY = 2994364789U;
-        static const AkUniqueID LVL4_DIST1STOP = 1161360979U;
-        static const AkUniqueID LVL4_DIST2PLAY = 2026184662U;
-        static const AkUniqueID LVL4_DIST2STOP = 2798195560U;
-        static const AkUniqueID LVL4_DIST3PLAY = 2314423251U;
-        static const AkUniqueID LVL4_DIST3STOP = 1444442041U;
+        static const AkUniqueID LVL4_DISTPLAY = 3070914388U;
+        static const AkUniqueID LVL4_DISTSTOP = 438375982U;
         static const AkUniqueID LVL4_END = 4149237353U;
+        static const AkUniqueID LVL4_FLANGPLAY = 3949575418U;
+        static const AkUniqueID LVL4_FLANGSTOP = 1095163652U;
+        static const AkUniqueID LVL4_GLOCKPLAY = 3371274426U;
+        static const AkUniqueID LVL4_GLOCKSTOP = 475389380U;
         static const AkUniqueID LVL4_HAT2PLAY = 4120513967U;
         static const AkUniqueID LVL4_HAT2STOP = 2584754093U;
         static const AkUniqueID LVL4_HATPLAY = 2539046359U;
         static const AkUniqueID LVL4_HATSTOP = 1269065221U;
+        static const AkUniqueID LVL4_HIGHPLAY = 3325302336U;
+        static const AkUniqueID LVL4_HIGHSTOP = 1668664514U;
         static const AkUniqueID LVL4_KICKPLAY = 1903319118U;
         static const AkUniqueID LVL4_KICKSTOP = 2946434864U;
         static const AkUniqueID LVL4_MELODYPLAY = 2959092816U;
         static const AkUniqueID LVL4_MELODYSTOP = 1307574770U;
+        static const AkUniqueID LVL4_PERCPLAY = 2799786940U;
+        static const AkUniqueID LVL4_PERCSTOP = 1553491494U;
+        static const AkUniqueID LVL4_PITCHPLAY = 2542772786U;
+        static const AkUniqueID LVL4_PITCHSTOP = 4212753580U;
         static const AkUniqueID LVL4_PLUCKPLAY = 163974683U;
         static const AkUniqueID LVL4_PLUCKSTOP = 3286828241U;
         static const AkUniqueID LVL4_PULSE1PLAY = 3627198892U;
@@ -166,13 +189,37 @@ namespace AK
         static const AkUniqueID LVL4_TRIANGSTOP = 1583041155U;
         static const AkUniqueID LVL4_WOWPLAY = 1322708989U;
         static const AkUniqueID LVL4_WOWSTOP = 3508447851U;
+        static const AkUniqueID LVL5_BAMBPLAY = 1951137233U;
+        static const AkUniqueID LVL5_BAMBSTOP = 3202552199U;
         static const AkUniqueID LVL5_BASSPLAY = 3051832318U;
         static const AkUniqueID LVL5_BASSSTOP = 4089725120U;
+        static const AkUniqueID LVL5_BUNNY1PLAY = 1447386318U;
+        static const AkUniqueID LVL5_BUNNY1STOP = 2490502064U;
+        static const AkUniqueID LVL5_CHORDPLAY = 2418201695U;
+        static const AkUniqueID LVL5_CHORDSTOP = 1909409917U;
         static const AkUniqueID LVL5_CLAP1PLAY = 510076302U;
         static const AkUniqueID LVL5_CLAP1STOP = 1511615600U;
         static const AkUniqueID LVL5_CLAP2PLAY = 4168920301U;
         static const AkUniqueID LVL5_CLAP2STOP = 991250235U;
+        static const AkUniqueID LVL5_COUNT1PLAY = 988020969U;
+        static const AkUniqueID LVL5_COUNT1STOP = 2510540815U;
+        static const AkUniqueID LVL5_COUNT2PLAY = 3701851882U;
+        static const AkUniqueID LVL5_COUNT2STOP = 852663060U;
+        static const AkUniqueID LVL5_DELAYPLAY = 2038600456U;
+        static const AkUniqueID LVL5_DELAYSTOP = 121200506U;
+        static const AkUniqueID LVL5_DINGPLAY = 336574631U;
+        static const AkUniqueID LVL5_DINGSTOP = 3366680821U;
+        static const AkUniqueID LVL5_DJ1PLAY = 202257054U;
+        static const AkUniqueID LVL5_DJ1STOP = 1198573408U;
+        static const AkUniqueID LVL5_DJBPLAY_PLACEHOLD = 122642286U;
+        static const AkUniqueID LVL5_DJBSTOP_PLACEHOLD = 3904780488U;
+        static const AkUniqueID LVL5_ECHOPLAY = 1259991952U;
+        static const AkUniqueID LVL5_ECHOSTOP = 3903544370U;
         static const AkUniqueID LVL5_END = 722590412U;
+        static const AkUniqueID LVL5_HARM1PLAY = 2566518778U;
+        static const AkUniqueID LVL5_HARM1STOP = 4007074308U;
+        static const AkUniqueID LVL5_HARM2PLAY = 3115464121U;
+        static const AkUniqueID LVL5_HARM2STOP = 1411458559U;
         static const AkUniqueID LVL5_HATPLAY = 1616311782U;
         static const AkUniqueID LVL5_HATSTOP = 3425736408U;
         static const AkUniqueID LVL5_IMPACTPLAY = 214115641U;
@@ -181,6 +228,11 @@ namespace AK
         static const AkUniqueID LVL5_KICK1STOP = 3369861052U;
         static const AkUniqueID LVL5_KICK2PLAY = 1063756705U;
         static const AkUniqueID LVL5_KICK2STOP = 3383716727U;
+        static const AkUniqueID LVL5_KICK3PLAY = 775518116U;
+        static const AkUniqueID LVL5_KICK3STOP = 3547965342U;
+        static const AkUniqueID LVL5_MEL1PLAY = 2775387748U;
+        static const AkUniqueID LVL5_MEL2STOP = 3945230637U;
+        static const AkUniqueID LVL5_MEL3PLAY = 897784610U;
         static const AkUniqueID LVL5_PADPLAY = 2649766814U;
         static const AkUniqueID LVL5_PADSTOP = 3646083168U;
         static const AkUniqueID LVL5_PERC1PLAY = 3314868588U;
@@ -189,47 +241,35 @@ namespace AK
         static const AkUniqueID LVL5_PERC2STOP = 1689538533U;
         static const AkUniqueID LVL5_PERC3PLAY = 1592393546U;
         static const AkUniqueID LVL5_PERC3STOP = 3038172276U;
+        static const AkUniqueID LVL5_PLACEHOLD1PLAY = 2955585364U;
+        static const AkUniqueID LVL5_PLACEHOLD1STOP = 323046958U;
         static const AkUniqueID LVL5_PLACEHOLD2PLAY = 4131832095U;
         static const AkUniqueID LVL5_PLACEHOLD2STOP = 3664513853U;
-        static const AkUniqueID LVL5_PLACEHOLDPLAY = 3674842823U;
-        static const AkUniqueID LVL5_PLACEHOLDSTOP = 2368507925U;
+        static const AkUniqueID LVL5_PLACEHOLD3PLAY = 3843593490U;
+        static const AkUniqueID LVL5_PLACEHOLD3STOP = 1260183692U;
+        static const AkUniqueID LVL5_PLACEHOLD4PLAY = 3215859637U;
+        static const AkUniqueID LVL5_PLACEHOLD4STOP = 1382958995U;
+        static const AkUniqueID LVL5_SNAREPLAY = 667795782U;
+        static const AkUniqueID LVL5_SNARESTOP = 2477220408U;
         static const AkUniqueID LVL5_START = 2025820975U;
         static const AkUniqueID LVL5_SYNTH1PLAY = 2418642356U;
         static const AkUniqueID LVL5_SYNTH1STOP = 4122647950U;
         static const AkUniqueID LVL5_SYNTH2PLAY = 3594889343U;
         static const AkUniqueID LVL5_SYNTH2STOP = 3127674013U;
         static const AkUniqueID LVL5_SYNTH3PLAY = 3306650738U;
-        static const AkUniqueID LVL5_SYTHN3STOP = 3247144324U;
+        static const AkUniqueID LVL5_SYNTH3STOP = 723344108U;
+        static const AkUniqueID LVL5_SYNTH4PLAY = 2679019797U;
+        static const AkUniqueID LVL5_SYNTH4STOP = 846016243U;
         static const AkUniqueID MAINMENU_PLAY = 777890284U;
         static const AkUniqueID MENU = 2607556080U;
         static const AkUniqueID PLAYMUSIC = 417627684U;
-        static const AkUniqueID PUZZLE_PLAYBLINK = 2122616712U;
-        static const AkUniqueID PUZZLE_PLAYBLINK2 = 2997744426U;
-        static const AkUniqueID PUZZLE_PLAYCOMPLETION = 3493478672U;
-        static const AkUniqueID PUZZLE_PLAYCOMPLETION2 = 3686034434U;
-        static const AkUniqueID PUZZLE_PLAYCOMPLETION3 = 3686034435U;
-        static const AkUniqueID PUZZLE_PLAYCOMPLETION4 = 3686034436U;
-        static const AkUniqueID PUZZLE_PLAYCOMPLETION5 = 3686034437U;
-        static const AkUniqueID PUZZLE_PLAYCOMPLETION6 = 3686034438U;
         static const AkUniqueID PUZZLE_PLAYCOMPLETION7 = 3686034439U;
-        static const AkUniqueID PUZZLE_PLAYCOMPLETION8 = 3686034440U;
-        static const AkUniqueID PUZZLE_PLAYCOMPLETION9 = 3686034441U;
-        static const AkUniqueID PUZZLE_PLAYCOMPLETION10 = 3724936611U;
-        static const AkUniqueID PUZZLE_PLAYCOMPLETION12 = 3724936609U;
-        static const AkUniqueID PUZZLE_PLAYCOMPLETION13 = 3724936608U;
         static const AkUniqueID PUZZLE_PLAYDROP = 699607909U;
         static const AkUniqueID PUZZLE_PLAYPICKUP = 528779466U;
-        static const AkUniqueID PUZZLE_PLAYROTATION = 1911763448U;
-        static const AkUniqueID PUZZLE_PLAYROTATION2 = 1507305818U;
-        static const AkUniqueID PUZZLE_PLAYROTATION3 = 1507305819U;
-        static const AkUniqueID PUZZLE_PLAYROTATION4 = 1507305820U;
         static const AkUniqueID PUZZLE_PLAYROTATION5 = 1507305821U;
-        static const AkUniqueID PUZZLE_STOPBLINK = 4040085034U;
-        static const AkUniqueID PUZZLE_STOPBLINK2 = 1066306604U;
         static const AkUniqueID RESET_FX = 1671021767U;
         static const AkUniqueID STOPMUSIC = 1917263390U;
         static const AkUniqueID UI_PLAYCLICK = 4180526968U;
-        static const AkUniqueID UI_PLAYPOPUP = 434496694U;
         static const AkUniqueID UI_PLAYPOPUP2 = 2061961904U;
     } // namespace EVENTS
 
@@ -252,6 +292,18 @@ namespace AK
                 static const AkUniqueID WIN = 979765101U;
             } // namespace STATE
         } // namespace ATM
+
+        namespace MOMDJBUNNYSWITCH
+        {
+            static const AkUniqueID GROUP = 1769167556U;
+
+            namespace STATE
+            {
+                static const AkUniqueID DJBUNNY = 896685753U;
+                static const AkUniqueID MOM = 1082004790U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace MOMDJBUNNYSWITCH
 
         namespace MUSIC
         {
@@ -294,6 +346,18 @@ namespace AK
 
     } // namespace SWITCHES
 
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID ATM_VOL = 1110899529U;
+        static const AkUniqueID ATMFADE = 446238529U;
+        static const AkUniqueID DIST = 2212414277U;
+        static const AkUniqueID FLANGER = 2786827648U;
+        static const AkUniqueID MOMBUNNY = 4256555742U;
+        static const AkUniqueID MUSIC_VOL = 2246609544U;
+        static const AkUniqueID PITCH = 1908158473U;
+        static const AkUniqueID SFX_VOL = 42448320U;
+    } // namespace GAME_PARAMETERS
+
     namespace TRIGGERS
     {
         static const AkUniqueID LVL2_1_HIHATPLAY = 1029901154U;
@@ -313,7 +377,11 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID ATM_BUS = 3226797093U;
+        static const AkUniqueID ATM_DUCK_BUS = 3016177656U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MUSIC_BUS = 3127962312U;
+        static const AkUniqueID SFX_BUS = 1502772432U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

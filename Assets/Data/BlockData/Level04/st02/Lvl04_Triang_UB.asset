@@ -10,19 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e7e63b03d3ea3a4dac14a8664b09b92, type: 3}
-  m_Name: Lvl04_Wow_2B
+  m_Name: Lvl04_Triang_UB
   m_EditorClassIdentifier: 
-  BlockName: Drum_HiHat
-  BlockPrefab: {fileID: 3804025796979829729, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
+  BlockName: UBlock
+  BlockPrefab: {fileID: 3525030621653700591, guid: 95dd5e52fcb2ec74bbe194ac928e6bb6, type: 3}
   BlockCoordinatesList:
-  - {x: 0, y: 0}
   - {x: 1, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 1}
+  - {x: 0, y: 2}
+  - {x: 1, y: 2}
   PlayInstrument:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 57b2c749935b7cb40839709d0645f2b4, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 926be9c2d4962374596b990a932f8d22, type: 2}
   MuteInstrument:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 8f195afbc84e1b44ebce92080cf06180, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: fefeb4dea5a61b0428dbe409b279db0b, type: 2}
   genre: 0

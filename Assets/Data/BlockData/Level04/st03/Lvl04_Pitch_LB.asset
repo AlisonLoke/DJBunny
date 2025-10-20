@@ -10,19 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e7e63b03d3ea3a4dac14a8664b09b92, type: 3}
-  m_Name: Lvl04_808
+  m_Name: Lvl04_Pitch_LB
   m_EditorClassIdentifier: 
-  BlockName: Drum
-  BlockPrefab: {fileID: 3804025796979829729, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
+  BlockName: Bass01
+  BlockPrefab: {fileID: 1385824898608407974, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
   BlockCoordinatesList:
   - {x: 0, y: 0}
-  - {x: 1, y: 0}
+  - {x: 0, y: 1}
+  - {x: 1, y: 1}
   PlayInstrument:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: eb750aaba0e00384aba757100bcb63f8, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 3398479bbae446e46814369aae28cb4b, type: 2}
   MuteInstrument:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 7b7677b662fa46a46be4e5c969ac0cce, type: 2}
-  genre: 0
+    WwiseObjectReference: {fileID: 11400000, guid: fb71ee55ec8e8184d9276253347699ab, type: 2}
+  genre: 1
