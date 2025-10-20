@@ -10,20 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e7e63b03d3ea3a4dac14a8664b09b92, type: 3}
-  m_Name: Lvl03_Snare
+  m_Name: Lvl03_Harmony_2B
   m_EditorClassIdentifier: 
   BlockName: Drum
-  BlockPrefab: {fileID: 1385824898608407974, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
+  BlockPrefab: {fileID: 3804025796979829729, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
   BlockCoordinatesList:
   - {x: 0, y: 0}
-  - {x: 0, y: 1}
-  - {x: 1, y: 1}
+  - {x: 1, y: 0}
   PlayInstrument:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 85d4dc800330c974fb8ef81174966c33, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: dfbc810f8c35314469c750131abf803f, type: 2}
   MuteInstrument:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 954e84d6814316542a6f945f5e16c2a2, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: a178b2d73e6815f43b778cd2ce37c47c, type: 2}
   genre: 0

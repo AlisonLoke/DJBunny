@@ -10,20 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e7e63b03d3ea3a4dac14a8664b09b92, type: 3}
-  m_Name: Lvl03_Orch
+  m_Name: Lvl03_Chord
   m_EditorClassIdentifier: 
   BlockName: Drum
-  BlockPrefab: {fileID: 1385824898608407974, guid: 477ff8ba2e8a4914cac7c229c73093c7, type: 3}
+  BlockPrefab: {fileID: 3804025796979829729, guid: 6340547bd5478ce4cbee494181d76dac, type: 3}
   BlockCoordinatesList:
   - {x: 0, y: 0}
-  - {x: 0, y: 1}
-  - {x: 1, y: 1}
+  - {x: 1, y: 0}
   PlayInstrument:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a6cd13c9a0e289e478a03ca64915630c, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: b756e4c71592b8041bdce6c7b2aa8f11, type: 2}
   MuteInstrument:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 194f46883af2c154e871ccdf6c0ffdf5, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: debdf682e4d9c014ca0f388d08ac0d20, type: 2}
   genre: 0
