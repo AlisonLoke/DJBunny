@@ -737,15 +737,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6241842319172798543, guid: abbdd9f9a0ad6ad4696112bde59dc29b, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.8235295
       objectReference: {fileID: 0}
     - target: {fileID: 6241842319172798543, guid: abbdd9f9a0ad6ad4696112bde59dc29b, type: 3}
       propertyPath: m_Color.g
-      value: 0.9259033
+      value: 0.5058824
       objectReference: {fileID: 0}
     - target: {fileID: 6241842319172798543, guid: abbdd9f9a0ad6ad4696112bde59dc29b, type: 3}
       propertyPath: m_Color.r
-      value: 0.5882353
+      value: 0.9490197
       objectReference: {fileID: 0}
     - target: {fileID: 9111660786706921632, guid: abbdd9f9a0ad6ad4696112bde59dc29b, type: 3}
       propertyPath: m_Pivot.x
@@ -3233,6 +3233,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Line Renderer '
       objectReference: {fileID: 0}
+    - target: {fileID: 6241842319172798543, guid: abbdd9f9a0ad6ad4696112bde59dc29b, type: 3}
+      propertyPath: m_Color.b
+      value: 0.98823535
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241842319172798543, guid: abbdd9f9a0ad6ad4696112bde59dc29b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8235295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241842319172798543, guid: abbdd9f9a0ad6ad4696112bde59dc29b, type: 3}
+      propertyPath: m_Color.r
+      value: 0.427451
+      objectReference: {fileID: 0}
     - target: {fileID: 9111660786706921632, guid: abbdd9f9a0ad6ad4696112bde59dc29b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3614,11 +3626,11 @@ PrefabInstance:
     - target: {fileID: 421663544604815440, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
       propertyPath: PlayRotation.WwiseObjectReference
       value: 
-      objectReference: {fileID: 11400000, guid: 98f71463126bacb49bfa0b57407957e7, type: 2}
+      objectReference: {fileID: 11400000, guid: ab6ea06c0d05b1a4f96920aa8bd2df9d, type: 2}
     - target: {fileID: 421663544604815440, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
       propertyPath: PlayCompletion.WwiseObjectReference
       value: 
-      objectReference: {fileID: 11400000, guid: d59e17b1ac3cebe45b6d1fd10e977d5e, type: 2}
+      objectReference: {fileID: 11400000, guid: add79cf5f1da5ae4d9a32b290f26afc1, type: 2}
     - target: {fileID: 2612409587306168315, guid: eee5b23a9e593ab469712dfc0884a339, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3963,7 +3975,6 @@ GameObject:
   - component: {fileID: 2123677883}
   - component: {fileID: 2123677885}
   - component: {fileID: 2123677884}
-  - component: {fileID: 2123677886}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -4003,7 +4014,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 15372c21a35d9754eb92903b0f736f31, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 85df1f709a5747b44a481d14474a9490, type: 2}
   decodeBank: 0
   overrideLoadSetting: 0
   loadAsynchronous: 0
@@ -4029,31 +4040,6 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: aa23f95fc30cdaa4491f1343feb3aa78, type: 2}
-  decodeBank: 0
-  overrideLoadSetting: 0
-  loadAsynchronous: 0
-  saveDecodedBank: 0
-  unloadTriggerList: 958ca0ea
-  bankNameInternal: 
-  valueGuidInternal: 
---- !u!114 &2123677886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2123677881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4be27bfebb0c4f148a44e94c2edc7550, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: ae8d9d44
-  useOtherObject: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 1d051834bf6accb4fb9313abb97c1952, type: 2}
   decodeBank: 0
   overrideLoadSetting: 0
   loadAsynchronous: 0
