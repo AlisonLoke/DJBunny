@@ -165,6 +165,8 @@ PlayableDirector:
     value: {fileID: 1740290580}
   - key: {fileID: 5220321040733132386, guid: 89750b6f90bed824085567960c2f6b75, type: 2}
     value: {fileID: 1855947778}
+  - key: {fileID: -7608370753459742596, guid: 89750b6f90bed824085567960c2f6b75, type: 2}
+    value: {fileID: 1740290580}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &207844095
@@ -1006,7 +1008,7 @@ Animator:
   m_GameObject: {fileID: 1855947777}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2031c08c6bf81984bbae91faa019415c, type: 2}
+  m_Controller: {fileID: 9100000, guid: c72a9a05446c3f441b28579e5dd258d0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1185,7 +1187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4818833672044298235, guid: 12fbad70cffd4da4f8b2e871056cd8cb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5237415777098926582, guid: 12fbad70cffd4da4f8b2e871056cd8cb, type: 3}
       propertyPath: m_LocalPosition.x
