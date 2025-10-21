@@ -14,7 +14,10 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("CS_Level05_st01");
     }
-
+    public void LoadCreditsMenu()
+    {
+        SceneManager.LoadScene("Credits");
+    }
     public void OnApplicationQuit()
     {
         OnApplicationQuit();
