@@ -4482,6 +4482,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="MomCallWin" ID="{929C7E09-2E04-487A-84F8-79AEFFE3D2DF}">
+					<ChildrenList>
+						<Action Name="" ID="{B222A8BB-D220-458B-8A57-5E64481A9EE5}" ShortID="305177202">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MomCallWin" ID="{3445E723-318B-4811-B6DF-18B9598A02AB}" WorkUnitID="{5F9035CE-D633-4D77-AFAC-532B6A139962}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

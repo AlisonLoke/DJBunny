@@ -268,9 +268,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="None" ID="{180D6E89-8C49-4DF9-AD41-51EBA4AF673C}"/>
-						<CurrentStateRef Name="GlastonBunny" ID="{E5288C83-3F8C-428A-B52C-70DEBF89A06D}"/>
-						<CurrentStateRef Name="None" ID="{168D78DC-461C-4876-8A62-F97CC2584BC4}"/>
+						<CurrentStateRef Name="MomCallWin" ID="{3445E723-318B-4811-B6DF-18B9598A02AB}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
@@ -527,6 +525,10 @@
 							<Position X="2" Y="4"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="MomCallWin" ID="{929C7E09-2E04-487A-84F8-79AEFFE3D2DF}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Lvl5_Clap1Stop" ID="{2FD020A1-7D9F-4676-85F4-7BFB616EDAFC}" WorkUnitID="{DF8E3160-DA19-4910-9AB7-87CBF746DCCA}"/>
 							<Position X="3" Y="1"/>
 						</Module>
@@ -569,7 +571,7 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Lvl5" ID="{F9E6CCB4-BF0E-432F-A37E-4C10CF8F106F}"/>
+						<CurrentStateRef Name="MomCallWin" ID="{3445E723-318B-4811-B6DF-18B9598A02AB}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
