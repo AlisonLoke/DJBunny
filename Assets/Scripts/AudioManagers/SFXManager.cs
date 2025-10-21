@@ -20,6 +20,7 @@ public class SFXManager : MonoBehaviour
     [SerializeField] private AK.Wwise.Event playMomDialogueSfx;
     [SerializeField] private AK.Wwise.Event stopDialogueSfx;
     public bool allowDialogueSFX = true;
+    public bool isMom = false;
 
 
     [Header("UI SFX")]
@@ -69,12 +70,20 @@ public class SFXManager : MonoBehaviour
 
     public void TriggerDialogueSFX()
     {
+        playDialogueSfx.Post(gameObject);
+        if(isMom)
+        {
+            playMomDialogueSfx.Post(gameObject);
+        }
+        else
+        {
+            return;
+        }
         if (!allowDialogueSFX)
         {
             return;
         }
 
-        playDialogueSfx.Post(gameObject);
     }
     public void StopDialogueSFXAtEnd()
     {
@@ -83,6 +92,8 @@ public class SFXManager : MonoBehaviour
 
     public void DisableDialogueSFX() => allowDialogueSFX = false;
     public void EnableDialogueSFX() => allowDialogueSFX = true;
+    public void DisableMomDialogue() => isMom = false;
+    public void EnableMomDialogue() => isMom =true;  
 
     public void PlayButtonUI()
     {
