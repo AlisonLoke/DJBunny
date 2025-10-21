@@ -62,29 +62,6 @@ public class MusicManager : MonoBehaviour
         instruments.Post(gameObject);
     }
 
-    //private void Start()
-    //{
-
-    //    if (instance != null)
-    //    {
-    //        SetLevelMusic(StartLevelMusic, StopLevelMusic);
-    //    }
-    //    else
-    //    {
-    //        Debug.LogWarning("AudioManager instance not found.");
-    //    }
-
-    //}
-    //public void SetLevelMusic(AK.Wwise.Event levelMusic, AK.Wwise.Event stopEvent)
-    //{
-    //    StopCurrentLevelMusic();
-
-    //    currentLevelMusicEvent = levelMusic;
-    //    currentLevelMusicEvent?.Post(gameObject);
-
-    //    StopLevelMusic = stopEvent;
-    //}
-
 
 
 
@@ -104,22 +81,7 @@ public class MusicManager : MonoBehaviour
     {
         Debug.Log("Resetting Music Manager for new level.");
 
-        //// Stop previous level's music
-        //StopCurrentLevelMusic();
-
-        //// Clear the reference to prevent the old stop event from being reused
-        //StopLevelMusic = null;
-        //currentLevelMusicEvent = null;
-
-        //// Assign new music events
-        //currentLevelMusicEvent = levelMusic;
-        //StopLevelMusic = stopEvent;
-
-        //// Start new music
-        //if (currentLevelMusicEvent != null)
-        //{
-        //    currentLevelMusicEvent.Post(gameObject);
-        //}
+     
 
         PlayLevelMusic(levelMusic);
 
