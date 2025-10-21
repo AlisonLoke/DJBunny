@@ -71,6 +71,7 @@ public class SFXManager : MonoBehaviour
     public void TriggerDialogueSFX()
     {
         playDialogueSfx.Post(gameObject);
+       
         if(isMom)
         {
             playMomDialogueSfx.Post(gameObject);
