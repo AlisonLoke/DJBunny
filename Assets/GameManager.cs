@@ -20,7 +20,8 @@ public class GameManager : MonoBehaviour
     }
     public void OnApplicationQuit()
     {
-        OnApplicationQuit();
+        Debug.Log("QUIT");
+        Application.Quit();
     }
 
 }
