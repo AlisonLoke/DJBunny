@@ -34,7 +34,7 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator TypeLine()
     {
         nameTag.text = dialogueLines[index].characterName;
-        SFXManager.instance.TriggerDialogueSFX(/*character*/);
+        SFXManager.instance.TriggerDialogueSFX();
         foreach (char character in dialogueLines[index].line.ToCharArray())
         {
             DialogueText.text += character;
