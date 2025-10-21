@@ -13,6 +13,7 @@ public class LevelManager : MonoBehaviour
     public GridData gridData;
 
     [Header("LevelSettings")]
+    public bool TriggerDialogueOnStart = false;
     public bool Tutorial = false;
     public bool useMoveLimit = false;
     public int maxMoves = 5;

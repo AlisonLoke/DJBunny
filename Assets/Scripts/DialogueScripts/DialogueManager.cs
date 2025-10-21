@@ -21,10 +21,15 @@ public class DialogueManager : MonoBehaviour
     {
         DialogueText.text = string.Empty;
 
+        if(LevelManager.Instance.TriggerDialogueOnStart)
+        {
+            StartDialogue();
+        }
     }
 
     public void StartDialogue()
     {
+
         SFXManager.instance.PlayOpenDialogue();
         animator.SetBool("IsOpen", true);
         index = 0;
