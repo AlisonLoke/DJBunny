@@ -65,7 +65,7 @@
 								<ActiveSource Name="VEHBus_Bus Constant_2" ID="{B180E3F2-EBA2-4D09-82F1-8BC404500938}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="01 Musée de Mahébourg garden-01" ID="{19F9EFFB-67A0-48AD-AE7C-7652174C9405}" ShortID="832238823">
+						<Sound Name="01 Musee de Mahebourg garden-01" ID="{19F9EFFB-67A0-48AD-AE7C-7652174C9405}" ShortID="832238823">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 							</PropertyList>
@@ -92,9 +92,16 @@
 										<MediaID ID="96749036"/>
 									</MediaIDList>
 								</AudioFileSource>
+								<AudioFileSource Name="01 Musee de Mahebourg garden-01" ID="{2A8BDCC3-B146-411F-945F-90E8F0CAA7CB}">
+									<Language>SFX</Language>
+									<AudioFile>01 Musee de Mahebourg garden-01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="639081159"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="01 Musée de Mahébourg garden-01" ID="{ECA736A8-2EDE-4951-924C-D227F060F565}" Platform="Linked"/>
+								<ActiveSource Name="01 Musee de Mahebourg garden-01" ID="{2A8BDCC3-B146-411F-945F-90E8F0CAA7CB}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="AMB_Restaurant_China" ID="{9D05B2F0-0336-4DF9-8D11-E98F753CBD53}" ShortID="217233644">
@@ -382,7 +389,7 @@
 								</PropertyList>
 							</GroupingBehavior>
 							<GroupingBehavior>
-								<ItemRef Name="01 Musée de Mahébourg garden-01" ID="{19F9EFFB-67A0-48AD-AE7C-7652174C9405}"/>
+								<ItemRef Name="01 Musee de Mahebourg garden-01" ID="{19F9EFFB-67A0-48AD-AE7C-7652174C9405}"/>
 								<PropertyList>
 									<Property Name="ContinuePlay" Type="bool" Value="True"/>
 									<Property Name="FadeInTime" Type="Real64">
@@ -414,7 +421,7 @@
 							<Grouping>
 								<SwitchRef Name="BusExt" ID="{D5E15A4F-277A-4F73-939D-128BC3969707}"/>
 								<ItemList>
-									<ItemRef Name="01 Musée de Mahébourg garden-01" ID="{19F9EFFB-67A0-48AD-AE7C-7652174C9405}"/>
+									<ItemRef Name="01 Musee de Mahebourg garden-01" ID="{19F9EFFB-67A0-48AD-AE7C-7652174C9405}"/>
 								</ItemList>
 							</Grouping>
 							<Grouping>

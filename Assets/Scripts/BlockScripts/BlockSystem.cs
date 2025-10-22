@@ -51,6 +51,12 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             cell.Initialise();
         }
 
+        LevelManager.Instance.OnLevelRestart += RestartLevel;
+    }
+
+    private void OnDisable()
+    {
+        LevelManager.Instance.OnLevelRestart -= RestartLevel;
     }
 
     private void Update()
@@ -729,5 +735,12 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
                 gridVisual.cells[i].UnHighlight();
             }
         }
+    }
+
+    private void RestartLevel()
+    {
+        if (gameObject.scene != UnityEngine.SceneManagement.SceneManager.GetActiveScene())
+            return;
+        MusicManager.instance.PlayInstruments(blockData.MuteInstrument);
     }
 }

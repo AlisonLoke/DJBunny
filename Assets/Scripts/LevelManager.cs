@@ -32,6 +32,9 @@ public class LevelManager : MonoBehaviour
     private EndCell[] allEndCells;
     public GridData GetGridData => gridData;
 
+    public delegate void OnLevelRestartHandler();
+    public event OnLevelRestartHandler OnLevelRestart;
+
 
     private void Awake()
     {
@@ -158,9 +161,9 @@ public class LevelManager : MonoBehaviour
 
     private void StartTryAgainTransition()
     {
-
+        OnLevelRestart?.Invoke();
         SceneTransition.Instance.StartTryAgainTransition();
-        MusicManager.instance.ResetForNewLevel(StartLevelMusic, EndLevelMusic);
+        //MusicManager.instance.ResetForNewLevel(StartLevelMusic, EndLevelMusic);
         StartCoroutine(TryAgainDelay(1f));
     }
     private IEnumerator TryAgainDelay(float delay)
@@ -171,6 +174,8 @@ public class LevelManager : MonoBehaviour
     }
     public void RestartCurrentLevel()
     {
+        OnLevelRestart?.Invoke();
+        OnLevelRestart = null;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
