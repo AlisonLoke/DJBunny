@@ -69,7 +69,7 @@ public class LevelManager : MonoBehaviour
         {
             return;
         }
-     
+
 
 
     }
@@ -161,13 +161,15 @@ public class LevelManager : MonoBehaviour
 
     private void StartTryAgainTransition()
     {
-        OnLevelRestart?.Invoke();
+      
         SceneTransition.Instance.StartTryAgainTransition();
-        //MusicManager.instance.ResetForNewLevel(StartLevelMusic, EndLevelMusic);
-        StartCoroutine(TryAgainDelay(1f));
+
+        StartCoroutine(TryAgainDelay(1.5f));
     }
     private IEnumerator TryAgainDelay(float delay)
     {
+        yield return new WaitForSeconds(delay * 0.5f);
+        OnLevelRestart?.Invoke();
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
@@ -175,7 +177,7 @@ public class LevelManager : MonoBehaviour
     public void RestartCurrentLevel()
     {
         OnLevelRestart?.Invoke();
-     
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
