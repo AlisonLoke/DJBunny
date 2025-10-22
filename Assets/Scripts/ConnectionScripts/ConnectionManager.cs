@@ -31,6 +31,16 @@ public class ConnectionManager : MonoBehaviour
 
     }
 
+    private void Start()
+    {
+        LevelManager.Instance.OnLevelRestart += MutePlacedBlocksForRestart;
+    }
+
+    private void OnDisable()
+    {
+        LevelManager.Instance.OnLevelRestart -= MutePlacedBlocksForRestart;
+    }
+
     public UILineRenderer GetLineRendererByType(ConnectCellType type)
     {
         return type == ConnectCellType.Primary ? primaryLineRenderer : secondaryLineRenderer;
@@ -216,6 +226,14 @@ public class ConnectionManager : MonoBehaviour
         foreach (ConnectionSystem connections in connectionSystems)
         {
             connections.ShowPathComplete();
+        }
+    }
+
+    private void MutePlacedBlocksForRestart()
+    {
+        foreach(ConnectionSystem connection in connectionSystems)
+        {
+            connection.MutePlacedBlocksForRestart();
         }
     }
 }

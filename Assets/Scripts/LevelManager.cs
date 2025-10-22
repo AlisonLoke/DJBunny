@@ -175,7 +175,7 @@ public class LevelManager : MonoBehaviour
     public void RestartCurrentLevel()
     {
         OnLevelRestart?.Invoke();
-        OnLevelRestart = null;
+     
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }

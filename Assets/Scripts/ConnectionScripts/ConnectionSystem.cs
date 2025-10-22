@@ -991,4 +991,12 @@ public class ConnectionSystem : MonoBehaviour
     //            break;
     //    }
     //}
+
+    public void MutePlacedBlocksForRestart()
+    {
+        foreach(RectTransform thisBlock in placedBlocks)
+        {
+            thisBlock.GetComponent<BlockSystem>().RestartLevel();
+        }
+    }
 }

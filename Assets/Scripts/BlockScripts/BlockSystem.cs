@@ -51,13 +51,13 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             cell.Initialise();
         }
 
-        LevelManager.Instance.OnLevelRestart += RestartLevel;
+        //LevelManager.Instance.OnLevelRestart += RestartLevel;
     }
 
-    private void OnDisable()
-    {
-        LevelManager.Instance.OnLevelRestart -= RestartLevel;
-    }
+    //private void OnDisable()
+    //{
+    //    LevelManager.Instance.OnLevelRestart -= RestartLevel;
+    //}
 
     private void Update()
     {
@@ -600,10 +600,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             return;
         }
         SFXManager.instance.PlayRotation.Post(gameObject);
-        //if (LevelManager.Instance.useMoveLimit)
-        //{
-        //    MovesManager.instance.TrackMoves();
-        //}
+    
 
     }
 
@@ -737,10 +734,9 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    private void RestartLevel()
+    public void RestartLevel()
     {
-        if (gameObject.scene != UnityEngine.SceneManagement.SceneManager.GetActiveScene())
-            return;
+        
         MusicManager.instance.PlayInstruments(blockData.MuteInstrument);
     }
 }
