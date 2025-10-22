@@ -36,6 +36,7 @@ public class SceneTransition : MonoBehaviour
 
     public void StartTryAgainTransition()
     {
+        
         tryAgainTransition.SetTrigger("StartTryAgain");
     }
 }
