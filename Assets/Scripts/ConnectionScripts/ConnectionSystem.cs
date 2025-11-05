@@ -60,22 +60,7 @@ public class ConnectionSystem : MonoBehaviour
 
 
     }
-    //private void Start()
-    //{
-    //    // Make sure line renderer is properly initialized
-    //    if (lineRenderer == null)
-    //    {
-    //        lineRenderer = GetComponent<UILineRenderer>();
-    //        if (lineRenderer == null)
-    //        {
-    //            Debug.LogError("Line renderer not assigned to ConnectionSystem!");
-    //        }
-    //    }
-
-    //    lineRenderer.thickness = 5f;
-    //    lineRenderer.raycastTarget = false;
-
-    //}
+ 
 
 
     public void CheckConnectionsForAllEndCells()
@@ -296,18 +281,7 @@ public class ConnectionSystem : MonoBehaviour
 
 
 
-    //private bool CheckAllBlockUsed(List<EndCell> path)
-    //{
-    //    if (requireAllBlocksUsed && !AreAllBlockUsed(currentPath))
-    //    {
-    //        Debug.Log("Not all blocks are used in this Path");
-    //        ClearConnectedLine();
-    //        ClearBlockPulses();
-    //        return false;
-    //    }
-
-    //    return true;
-    //}
+ 
 
     private void NoValidPathFound()
     {
@@ -329,7 +303,7 @@ public class ConnectionSystem : MonoBehaviour
             }
         }
         pathIsComplete = true;
-        //StartCoroutine(PulseCompletePath());
+       
     }
 
     private void SelectLongestPath()
@@ -977,20 +951,7 @@ public class ConnectionSystem : MonoBehaviour
         SFXManager.instance.PlayCompletion.Post(gameObject);
     }
 
-    //private void SetLinerendererByType()
-    //{
-    //    switch (ConnectionType)
-    //    {
-    //        case ConnectCellType.Primary:
-    //            Debug.Log("Linerenderer is on PRIMARY PATH");
-    //            lineRenderer.color = Color.red;
-    //            break;
-    //        case ConnectCellType.Secondary:
-    //            Debug.Log("Linerenderer is on SECONDARY PATH");
-    //            lineRenderer.color = Color.cyan;
-    //            break;
-    //    }
-    //}
+  
 
     public void MutePlacedBlocksForRestart()
     {
