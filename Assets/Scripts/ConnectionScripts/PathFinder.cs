@@ -126,30 +126,30 @@ public class PathFinder : MonoBehaviour
        
     }
    
-    private bool IsPrimaryStartCell(GridCell thisCell)
-    {
-        return startCell != null && thisCell.x == startCell.x && thisCell.y == startCell.y;
-    }
+    //private bool IsPrimaryStartCell(GridCell thisCell)
+    //{
+    //    return startCell != null && thisCell.x == startCell.x && thisCell.y == startCell.y;
+    //}
 
-    private bool IsPrimaryFinishCell(GridCell thisCell)
-    {
-        return finishCell != null && thisCell.x == finishCell.x && thisCell.y == finishCell.y;
-    }
+    //private bool IsPrimaryFinishCell(GridCell thisCell)
+    //{
+    //    return finishCell != null && thisCell.x == finishCell.x && thisCell.y == finishCell.y;
+    //}
   
-    private bool IsDoubleStartCell(GridCell thisCell)
-    {
-        if (thisCell == null || doubleStartCell == null) return false;
-        if (!gridData.enableDoubleConnectCell) return false;
-        return doubleStartCell != null && thisCell.x == doubleStartCell.x && thisCell.y == doubleStartCell.y;
+    //private bool IsDoubleStartCell(GridCell thisCell)
+    //{
+    //    if (thisCell == null || doubleStartCell == null) return false;
+    //    if (!gridData.enableDoubleConnectCell) return false;
+    //    return doubleStartCell != null && thisCell.x == doubleStartCell.x && thisCell.y == doubleStartCell.y;
+    //}
+    //private bool IsDoubelFinishCell(GridCell thisCell)
+    //{
+    //    if (thisCell == null || doubleFinishCell == null) return false;
+    //    if (!gridData.enableDoubleConnectCell) return false;
+    //    return doubleFinishCell != null && thisCell.x == doubleFinishCell.x && thisCell.y == doubleFinishCell.y;
     }
-    private bool IsDoubelFinishCell(GridCell thisCell)
-    {
-        if (thisCell == null || doubleFinishCell == null) return false;
-        if (!gridData.enableDoubleConnectCell) return false;
-        return doubleFinishCell != null && thisCell.x == doubleFinishCell.x && thisCell.y == doubleFinishCell.y;
-    }
 
 
 
 
-}
+//}

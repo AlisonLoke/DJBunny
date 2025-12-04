@@ -440,10 +440,7 @@ public class ConnectionSystem : MonoBehaviour
             return;
         }
 
-        //if (startConnectedEndCell == null && finishConnectedEndCell == null)
-        //{
-        //    return;
-        //}
+     
 
         List<EndCell> workingPath = new List<EndCell>();
 
@@ -733,18 +730,9 @@ public class ConnectionSystem : MonoBehaviour
             Debug.LogWarning("Line renderer not found for connection type");
             return;
         }
-        Debug.Log("Current path cells:");
 
-        List<BlockUI> blockUisOriginal = GetAllBlockUIInPath();
-        Debug.LogWarning($"BLOCK COUNT: {blockUisOriginal.Count}");
 
-        List<BlockUI> blockUisInPath = RemoveBlockUIDuplicatesInPath(blockUisOriginal);
-
-        List<RectTransform> rectTransformsInPath = GetBlockUIRectTransformInPathSorted(blockUisInPath);
-
-        //TODO:  Resort line if "maxDistanceBetweenPointsBreached" flag marked
-
-        List<Vector2> linePoints = GetWorldPosFromBlockTransforms(rectTransformsInPath, targetLineRendererRect);
+        List<Vector2> linePoints = GetLinePointsFromCurrentPath( targetLineRendererRect);
 
 
         Debug.Log($"Setting {linePoints.Count} points to line renderer");
@@ -760,176 +748,134 @@ public class ConnectionSystem : MonoBehaviour
             ConnectionManager.instance.HandlePathCleared(connectCellType);
         }
     }
-
-    //private void SetLinePoints(List<Vector2> linePoints, ConnectCellType connectCellType)
-    //{
-    //    lineRenderer.points = linePoints.ToArray();
-    //    SetLinerendererByType();
-    //    lineRenderer.SetAllDirty(); // Force redraw
-
-
-    //    Debug.Log($"Line renderer updated with {linePoints.Count} points");
-    //}
-
     /// <summary>
-    /// Sorts RectTransforms in correct path order
-    /// Start on one of the EndCells marked with onlyConnectToStartFinish
-    /// Go to next Rect Transform in same Block UI
-    /// Once Block UI out of Rect Transforms, look at next Block UI
-    /// And so on
-    /// When reaching last BlockUI, start with the EndCell not marked as onlyConnectToStartFinish
-    /// End line on the Finish cell (EndCell.onlyConnectToStartFinish == true)
+    /// Converts currentPath (from pathfinding) into line renderer points.
+    /// Expands each EndCell into all cells within its block, following the path direction.
+    /// This matches the same logic used in PreviewCurrentPath for highlighting blocks.
     /// </summary>
-    private List<RectTransform> GetBlockUIRectTransformInPathSorted(List<BlockUI> blockUisInPath)
-    {
-        List<RectTransform> rectTransformsInPath = new();
-        RectTransform lastCellInPreviousBlock = null;
-
-        for (int index = 0; index < blockUisInPath.Count; index++)
-        {
-            BlockUI currentBlockUi = blockUisInPath[index];
-            List<RectTransform> currentBlockRects = currentBlockUi.GetBlockCellImagesRectTransforms();
-
-            bool isFirstBlock = index == 0;
-            bool isLastBlock = index == blockUisInPath.Count - 1;
-
-            if (isFirstBlock && !IsCellStartOrFinish(currentBlockRects[0]))
-            {
-                currentBlockRects.Reverse();
-                rectTransformsInPath.AddRange(currentBlockRects);
-                lastCellInPreviousBlock = currentBlockRects[^1];
-                continue;
-            }
-
-            if (lastCellInPreviousBlock != null)
-            {
-                OrientBlockForShortestConnection(
-                    currentBlockRects,
-                    lastCellInPreviousBlock,
-                    blockUisInPath,
-                    index,
-                    isLastBlock
-                );
-            }
-
-            rectTransformsInPath.AddRange(currentBlockRects);
-            lastCellInPreviousBlock = currentBlockRects[^1];
-        }
-
-        return rectTransformsInPath;
-    }
-
-
-    private bool IsCellStartOrFinish(RectTransform cell)
-    {
-        EndCell endCellComponent = cell.GetComponent<EndCell>();
-        return endCellComponent.onlyConnectToStartFinish;
-    }
-
-    private void OrientBlockForShortestConnection(
-        List<RectTransform> currentBlockRects,
-        RectTransform lastCellInPreviousBlock,
-        List<BlockUI> blockUisInPath,
-        int currentIndex,
-        bool isLastBlock
-    )
-    {
-        float distanceToFirstCell = Vector2.Distance(currentBlockRects[0].transform.position, lastCellInPreviousBlock.transform.position);
-        float distanceToLastCell = Vector2.Distance(currentBlockRects[^1].transform.position, lastCellInPreviousBlock.transform.position);
-        float distanceDifference = Mathf.Abs(distanceToFirstCell - distanceToLastCell);
-
-        if (distanceDifference >= 10f)
-        {
-            // Pick the shortest connection directly
-            if (distanceToFirstCell > distanceToLastCell)
-            {
-                currentBlockRects.Reverse();
-            }
-            return;
-        }
-
-        if (HasNextBlock(blockUisInPath, currentIndex))
-        {
-            List<RectTransform> nextBlockRects = blockUisInPath[currentIndex + 1].GetBlockCellImagesRectTransforms();
-            AdjustOrientationBasedOnNextBlock(currentBlockRects, nextBlockRects);
-            return;
-        }
-
-        if (isLastBlock && IsCellStartOrFinish(currentBlockRects[0]))
-        {
-            currentBlockRects.Reverse();
-        }
-    }
-
-    private bool HasNextBlock(List<BlockUI> blockUisInPath, int currentIndex)
-    {
-        return currentIndex + 1 < blockUisInPath.Count;
-    }
-
-    private void AdjustOrientationBasedOnNextBlock(List<RectTransform> currentBlockRects, List<RectTransform> nextBlockRects)
-    {
-        float costNormal = Vector2.Distance(currentBlockRects[^1].transform.position, nextBlockRects[0].transform.position);
-        float costReversed = Vector2.Distance(currentBlockRects[0].transform.position, nextBlockRects[0].transform.position);
-
-        if (costNormal > costReversed)
-        {
-            currentBlockRects.Reverse();
-        }
-    }
-
-
-    private List<Vector2> GetWorldPosFromBlockTransforms(List<RectTransform> rectTransformsInPath, RectTransform lineRendererRect)
+    private List<Vector2> GetLinePointsFromCurrentPath(RectTransform lineRendererRect)
     {
         List<Vector2> linePoints = new List<Vector2>();
-        foreach (RectTransform rectTransform in rectTransformsInPath)
+
+        if(currentPath.Count < 2) {return linePoints;}
+
+        BlockUI previousBlock = null;
+        EndCell previousEndCell = null;
+
+        for (int i = 0; i < currentPath.Count; i++)
         {
-            //Get world position of block's center
-            Vector2 worldPos = rectTransform.TransformPoint(rectTransform.rect.center);
+            EndCell currentEndCell = currentPath[i];
+            BlockUI currentBlock = currentEndCell.GetBlockUi();
 
-
-            // Convert world position to local position relative to the line renderer
-            // null camera for Screen Space - Overlay
-            Vector2 localPos;
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(lineRendererRect, worldPos, null, out localPos);
-
-            Debug.Log($"  - Cell at local position {localPos} (world: {worldPos})");
-            linePoints.Add(localPos);
-        }
-
-        return linePoints;
-    }
-
-    private List<BlockUI> GetAllBlockUIInPath()
-    {
-        // Get all block Uis in current path
-        //picks up all the blocks it sees
-        List<BlockUI> blockUisOriginal = new();
-        foreach (EndCell endCell in currentPath)
-        {
-            blockUisOriginal.Add(endCell.GetBlockUi());
-        }
-
-        return blockUisOriginal;
-    }
-
-    private List<BlockUI> RemoveBlockUIDuplicatesInPath(List<BlockUI> blockUisOriginal)
-    {
-        // remove duplicate BlockUis
-        //if grabbed a blockui before that skip it
-        HashSet<BlockUI> blockUisSeen = new();
-        List<BlockUI> blockUisInPath = new();
-        foreach (BlockUI blockUI in blockUisOriginal)
-        {
-            if (!blockUisSeen.Add(blockUI))
+            // When encountering a new block, add all its cells
+            if(currentBlock != previousBlock)
             {
-                continue;
-            }
+                List<RectTransform> blockCells = currentBlock.GetBlockCellImagesRectTransforms();
 
-            blockUisInPath.Add(blockUI);
+                // Determine direction based on which EndCell we're entering from
+                bool shouldReverse = ShouldReverseBlock(
+                    blockCells,
+                    currentEndCell,
+                    previousEndCell,
+                    i == currentPath.Count - 1);
+
+                if (shouldReverse)
+                {
+                    blockCells.Reverse();
+                }
+
+                // Add all cells in this block to the line
+                foreach (RectTransform cellRect in blockCells)
+                {
+                    Vector2 localPos = ConvertToLineRendererSpace(cellRect, lineRendererRect);
+                    linePoints.Add(localPos);
+                }
+
+                previousBlock = currentBlock;
+            }
+            previousEndCell = currentEndCell;
+        }
+        return linePoints;
+   
+    }
+    /// <summary>
+    /// Determines if we should reverse the cell order for a block
+    /// based on which EndCell we're entering from (according to currentPath)
+    /// </summary>
+    private bool ShouldReverseBlock( List<RectTransform> blockCells, EndCell enteringEndCell, EndCell previousEndCell, bool isLastBlock)
+    {
+        if (blockCells.Count == 0) return false;
+
+        RectTransform enteringCellRect = enteringEndCell.GetComponent<RectTransform>();
+        int enteringIndex = blockCells.IndexOf(enteringCellRect);
+
+        if (enteringIndex == -1)
+        {
+            Debug.LogWarning($"EndCell {enteringEndCell.name} not found in block cells");
+            return false;
         }
 
-        return blockUisInPath;
+        if (blockCells.Count == 2)
+        {
+            EndCell firstEndCell = blockCells[0].GetComponent<EndCell>();
+            EndCell secondEndCell = blockCells[1].GetComponent<EndCell>();
+
+            int firstIndex = currentPath.IndexOf(firstEndCell);
+            int secondIndex = currentPath.IndexOf(secondEndCell);
+
+            if (firstIndex != -1 && secondIndex != -1) { return secondIndex < firstIndex; }
+
+            return enteringIndex == 1;
+        }
+
+        // If this is the first block in the path
+        if (previousEndCell == null)
+        {
+            // Check if entering cell is a start/finish cell
+            if (enteringEndCell.onlyConnectToStartFinish)
+            {
+                // Start from this cell, so reverse if it's at the end
+                return enteringIndex > blockCells.Count / 2;
+            }
+        }
+
+        // For middle/last blocks: if we're entering closer to the end, reverse
+        bool isCloserToEnd = enteringIndex > blockCells.Count / 2;
+
+        // Special case: if this is the last block and we're entering from a non-start/finish cell
+        if (isLastBlock)
+        {
+            // Check if the opposite end is a start/finish cell
+            int oppositeIndex = isCloserToEnd ? 0 : blockCells.Count - 1;
+            EndCell oppositeEndCell = blockCells[oppositeIndex].GetComponent<EndCell>();
+
+            if (oppositeEndCell != null && oppositeEndCell.onlyConnectToStartFinish)
+            {
+                // We want to end on the start/finish cell, so reverse if needed
+                return !isCloserToEnd;
+            }
+        }
+
+        return isCloserToEnd;
     }
+
+
+
+
+
+    private Vector2 ConvertToLineRendererSpace(RectTransform cellRect, RectTransform lineRendererRect)
+    {
+        Vector2 worldPos = cellRect.TransformPoint(cellRect.rect.center);
+        Vector2 localPos;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            lineRendererRect,
+            worldPos,
+            null,
+            out localPos
+        );
+        return localPos;
+    }
+   
 
     private void ClearConnectedLine()
     {
