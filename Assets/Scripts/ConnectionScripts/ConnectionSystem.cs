@@ -751,16 +751,29 @@ public class ConnectionSystem : MonoBehaviour
     /// <summary>
     /// Converts currentPath (from pathfinding) into line renderer points.
     /// Expands each EndCell into all cells within its block, following the path direction.
-    /// This matches the same logic used in PreviewCurrentPath for highlighting blocks.
+    /// MUST start and end on EndCells with onlyConnectToStartFinish = true
     /// </summary>
     private List<Vector2> GetLinePointsFromCurrentPath(RectTransform lineRendererRect)
     {
         List<Vector2> linePoints = new List<Vector2>();
 
-        if(currentPath.Count < 2) {return linePoints;}
+        if (currentPath.Count < 2) { return linePoints; }
+        // Verify the path starts and ends on connect cells
+        EndCell firstEndCell = currentPath[0];
+        EndCell lastEndCell = currentPath[currentPath.Count - 1];
+
+        if (!firstEndCell.onlyConnectToStartFinish)
+        {
+            Debug.LogWarning($"Path doesn't start on a connect cell! Starting on {firstEndCell.name}");
+        }
+
+        if (!lastEndCell.onlyConnectToStartFinish)
+        {
+            Debug.LogWarning($"Path doesn't end on a connect cell! Ending on {lastEndCell.name}");
+        }
 
         BlockUI previousBlock = null;
-        EndCell previousEndCell = null;
+
 
         for (int i = 0; i < currentPath.Count; i++)
         {
@@ -768,16 +781,16 @@ public class ConnectionSystem : MonoBehaviour
             BlockUI currentBlock = currentEndCell.GetBlockUi();
 
             // When encountering a new block, add all its cells
-            if(currentBlock != previousBlock)
+            if (currentBlock != previousBlock)
             {
                 List<RectTransform> blockCells = currentBlock.GetBlockCellImagesRectTransforms();
 
-                // Determine direction based on which EndCell we're entering from
-                bool shouldReverse = ShouldReverseBlock(
-                    blockCells,
-                    currentEndCell,
-                    previousEndCell,
-                    i == currentPath.Count - 1);
+                // Find which EndCells from this block are in the path
+                List<EndCell> blockEndCellsInPath = GetBlockEndCellsInPath(currentBlock, i);
+
+
+                // Determine direction: must go from first to last EndCell in path for this block
+                bool shouldReverse = ShouldReverseBlockForConnectCells(blockCells, blockEndCellsInPath);
 
                 if (shouldReverse)
                 {
@@ -793,70 +806,110 @@ public class ConnectionSystem : MonoBehaviour
 
                 previousBlock = currentBlock;
             }
-            previousEndCell = currentEndCell;
+ 
         }
         return linePoints;
-   
     }
+
     /// <summary>
-    /// Determines if we should reverse the cell order for a block
-    /// based on which EndCell we're entering from (according to currentPath)
+    /// Gets all EndCells from a specific block that appear in currentPath, in path order
     /// </summary>
-    private bool ShouldReverseBlock( List<RectTransform> blockCells, EndCell enteringEndCell, EndCell previousEndCell, bool isLastBlock)
+    private List<EndCell> GetBlockEndCellsInPath(BlockUI block, int startIndex)
     {
-        if (blockCells.Count == 0) return false;
+        List<EndCell> endCellsInPath = new List<EndCell>();
 
-        RectTransform enteringCellRect = enteringEndCell.GetComponent<RectTransform>();
-        int enteringIndex = blockCells.IndexOf(enteringCellRect);
-
-        if (enteringIndex == -1)
+        // Collect all EndCells from this block that are in the path
+        for (int i = startIndex; i < currentPath.Count; i++)
         {
-            Debug.LogWarning($"EndCell {enteringEndCell.name} not found in block cells");
+            EndCell endCell = currentPath[i];
+            if (endCell.GetBlockUi() == block)
+            {
+                endCellsInPath.Add(endCell);
+            }
+            else
+            {
+                // Moved to a different block
+                break;
+            }
+        }
+
+        return endCellsInPath;
+    }
+
+    /// <summary>
+    /// Determines if we should reverse the block's cell order.
+    /// The block MUST be oriented so that:
+    /// 1. If the first EndCell in path has onlyConnectToStartFinish=true, line starts there
+    /// 2. If the last EndCell in path has onlyConnectToStartFinish=true, line ends there
+    /// 3. Line flows from first to last EndCell in the path
+    /// </summary>
+    private bool ShouldReverseBlockForConnectCells(List<RectTransform> blockCells, List<EndCell> endCellsInPath)
+    {
+        if (blockCells.Count == 0 || endCellsInPath.Count == 0)
+            return false;
+
+        // Get the first and last EndCells from this block in the path
+        EndCell firstEndCellInPath = endCellsInPath[0];
+        EndCell lastEndCellInPath = endCellsInPath[endCellsInPath.Count - 1];
+
+        // Find their indices in the block's cell list
+        RectTransform firstRect = firstEndCellInPath.GetComponent<RectTransform>();
+        RectTransform lastRect = lastEndCellInPath.GetComponent<RectTransform>();
+
+        int firstIndex = blockCells.IndexOf(firstRect);
+        int lastIndex = blockCells.IndexOf(lastRect);
+
+        if (firstIndex == -1)
+        {
+            Debug.LogWarning($"First EndCell {firstEndCellInPath.name} not found in block cells");
             return false;
         }
 
-        if (blockCells.Count == 2)
+        // If only one EndCell from this block is in the path
+        if (firstEndCellInPath == lastEndCellInPath)
         {
-            EndCell firstEndCell = blockCells[0].GetComponent<EndCell>();
-            EndCell secondEndCell = blockCells[1].GetComponent<EndCell>();
-
-            int firstIndex = currentPath.IndexOf(firstEndCell);
-            int secondIndex = currentPath.IndexOf(secondEndCell);
-
-            if (firstIndex != -1 && secondIndex != -1) { return secondIndex < firstIndex; }
-
-            return enteringIndex == 1;
-        }
-
-        // If this is the first block in the path
-        if (previousEndCell == null)
-        {
-            // Check if entering cell is a start/finish cell
-            if (enteringEndCell.onlyConnectToStartFinish)
+            // Check if this EndCell is a connect cell
+            if (firstEndCellInPath.onlyConnectToStartFinish)
             {
-                // Start from this cell, so reverse if it's at the end
-                return enteringIndex > blockCells.Count / 2;
+                // Determine if this is the start or end of the entire path
+                bool isPathStart = (currentPath.IndexOf(firstEndCellInPath) == 0);
+                bool isPathEnd = (currentPath.IndexOf(firstEndCellInPath) == currentPath.Count - 1);
+
+                if (isPathStart)
+                {
+                    // This connect cell is the START - we want to begin from it
+                    // If it's at the end of the block list, reverse
+                    return firstIndex >= blockCells.Count / 2;
+                }
+                else if (isPathEnd)
+                {
+                    // This connect cell is the END - we want to finish on it
+                    // If it's at the beginning of the block list, reverse
+                    return firstIndex < blockCells.Count / 2;
+                }
             }
+
+            // Default fallback
+            return firstIndex >= blockCells.Count / 2;
         }
 
-        // For middle/last blocks: if we're entering closer to the end, reverse
-        bool isCloserToEnd = enteringIndex > blockCells.Count / 2;
-
-        // Special case: if this is the last block and we're entering from a non-start/finish cell
-        if (isLastBlock)
+        // Multiple EndCells in path - use entry and exit logic
+        if (lastIndex == -1)
         {
-            // Check if the opposite end is a start/finish cell
-            int oppositeIndex = isCloserToEnd ? 0 : blockCells.Count - 1;
-            EndCell oppositeEndCell = blockCells[oppositeIndex].GetComponent<EndCell>();
-
-            if (oppositeEndCell != null && oppositeEndCell.onlyConnectToStartFinish)
-            {
-                // We want to end on the start/finish cell, so reverse if needed
-                return !isCloserToEnd;
-            }
+            Debug.LogWarning($"Last EndCell {lastEndCellInPath.name} not found in block cells");
+            return false;
         }
 
-        return isCloserToEnd;
+        // Path flows from first to last EndCell
+        // If first comes AFTER last in the block's cell order, reverse
+        bool shouldReverse = firstIndex > lastIndex;
+
+        Debug.Log($"Block {endCellsInPath[0].GetBlockUi().name}: " +
+                  $"first={firstEndCellInPath.name}(idx:{firstIndex}, connect:{firstEndCellInPath.onlyConnectToStartFinish}), " +
+                  $"last={lastEndCellInPath.name}(idx:{lastIndex}, connect:{lastEndCellInPath.onlyConnectToStartFinish}), " +
+                  $"shouldReverse={shouldReverse}");
+
+        return shouldReverse;
     }
 
 
@@ -906,4 +959,10 @@ public class ConnectionSystem : MonoBehaviour
             thisBlock.GetComponent<BlockSystem>().RestartLevel();
         }
     }
+
+
 }
+
+
+
+

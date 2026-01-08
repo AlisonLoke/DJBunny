@@ -54,11 +54,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         //LevelManager.Instance.OnLevelRestart += RestartLevel;
     }
 
-    //private void OnDisable()
-    //{
-    //    LevelManager.Instance.OnLevelRestart -= RestartLevel;
-    //}
-
+  
     private void Update()
     {
 
@@ -225,16 +221,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             return;
         }
 
-        //if (isSnappedToGrid)
-        //{
-
-        //    RemoveFromGrid();
-        //    ResetBlockToOrigin();
-
-
-
-        //    return;
-        //}
+   
 
         if (isFollowingMouse)
         {

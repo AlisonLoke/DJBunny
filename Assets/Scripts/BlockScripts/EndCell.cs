@@ -78,7 +78,7 @@ public class EndCell : MonoBehaviour
         }
         else if (!onlyConnectToStartFinish)
         {
-            MakeCellRed();
+            ClearEndCells();
         }
 
         if (connectedEndCell.Count == 0 && !onlyConnectToStartFinish)
@@ -120,11 +120,11 @@ public class EndCell : MonoBehaviour
     }
     public void ClearConnections()
     {
-        MakeCellRed();
+        ClearEndCells();
     }
 
 
-    public void MakeCellRed()
+    public void ClearEndCells()
     {
 
         //GetComponent<Image>().color = Color.red;
@@ -133,12 +133,7 @@ public class EndCell : MonoBehaviour
         bunnyImage.SetActive(false);
     }
 
-    //public void MakeCellBlue(GridCell cell)
-    //{
-
-    //    //GetComponent<Image>().color = Color.blue;
-
-    //}
+ 
 
     public void ConnectedToStartAndFinish(GridCell cell)
     {
