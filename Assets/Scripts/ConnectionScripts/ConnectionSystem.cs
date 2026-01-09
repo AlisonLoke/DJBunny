@@ -686,7 +686,14 @@ public class ConnectionSystem : MonoBehaviour
         InputBlocker.Instance.DisableBlockInput();
     }
 
+    public void RebuildPathAfterRemoval()
+    {
+        currentPath.Clear();
+        allPaths.Clear();   
 
+        //Recalculat remaining valid path
+        PreviewCurrentPath();
+    }
     public void ClearBlockPulses()
     {
         foreach (BlockUI blockUI in previouslyPulsedBlocks)

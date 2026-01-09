@@ -295,15 +295,17 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
         if (!isSnappedToGrid)
         {
-            //ResetHoverAnimation();
-
             return;
         }
+           
+
 
         MusicManager.instance.PlayInstruments(blockData.MuteInstrument);
         RemoveFromGrid();
-        //ResetHoverAnimation();
-        ConnectionManager.instance.ResetCompletedPaths();
+
+        //ConnectionManager.instance.ResetCompletedPaths();
+
+        ConnectionManager.instance.RebuildAllPaths();
     }
 
 
@@ -708,6 +710,9 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
                 {
                     highlightedCells.Add(currentCell);
                 }
+
+               
+
             }
         }
 

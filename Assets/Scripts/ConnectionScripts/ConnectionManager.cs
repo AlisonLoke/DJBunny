@@ -174,6 +174,13 @@ public class ConnectionManager : MonoBehaviour
             connections.ResetCompletedPath();
         }
     }
+    public void RebuildAllPaths()
+    {
+        foreach (ConnectionSystem connections in connectionSystems)
+        {
+            connections.RebuildPathAfterRemoval();
+        }
+    }
     //Call this event at the BlockSystem script
     //Also have a second line rendererer
     public void CheckPathsAreCompleted()
