@@ -526,6 +526,9 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             {
                 return false;// cant place block here
             }
+
+            //connect type validation
+            if(!currentCell.CanAcceptBlock(connectType)) return false;
         }
 
         return true; // all spots are empty, you can place block here.
@@ -726,4 +729,6 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         
         MusicManager.instance.PlayInstruments(blockData.MuteInstrument);
     }
+
+
 }

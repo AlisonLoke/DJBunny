@@ -1,4 +1,4 @@
-using NUnit.Framework.Api;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -103,5 +103,15 @@ public class GridCell : MonoBehaviour
 
         IsCloseCell = true;
         closedCellImage.SetActive(true);
+    }
+
+    public bool CanAcceptBlock(ConnectCellType blockType)
+    {
+        if(connectCellType == ConnectCellType.None)
+        {
+            return true;
+        }
+
+        return connectCellType == blockType;
     }
 }
