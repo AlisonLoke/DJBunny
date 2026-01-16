@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -37,6 +36,44 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
     public EndCell[] endCells;
 
 
+    private InputAction pickupDropAction;
+    private InputAction rotateAction;
+
+    private void Awake()
+    {
+        pickupDropAction = InputSystem.actions.FindAction("Gameplay/Pickup/Drop");
+        rotateAction = InputSystem.actions.FindAction("Gameplay/Rotate");
+
+        pickupDropAction.performed += OnPickupOrDrop;
+        rotateAction.performed += OnRotate;
+    }
+
+    private void OnDisable()
+    {
+        pickupDropAction.performed -= OnPickupOrDrop;
+        rotateAction.performed -= OnRotate;
+    }
+
+    private void OnRotate(InputAction.CallbackContext context)
+    {
+        if (selectedBlock != this) { return; }
+
+        Debug.Log("Rotate action detected.");
+        HandleRightClickOnBlock();
+    }
+
+    private void OnPickupOrDrop(InputAction.CallbackContext context)
+    {
+        Vector2 mousePos = Mouse.current.position.ReadValue();
+        bool pointerOver = IsMouseOverEntireBlock(mousePos);
+
+        if (!pointerOver) { return; }
+
+        Debug.Log("Pickup or drop action detected.");
+        HandleLeftClickOnBlock();
+    }
+
+
     private void Start()
     {
         cellImage = GetComponent<Image>();
@@ -54,7 +91,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         //LevelManager.Instance.OnLevelRestart += RestartLevel;
     }
 
-  
+
     private void Update()
     {
 
@@ -63,7 +100,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             timeSinceLastRotation += Time.deltaTime;
             return;
         }
-     
+
         // Follow mouse if selected
         if (isFollowingMouse && selectedBlock == this)
         {
@@ -79,23 +116,23 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
             if (pointerOver && !isHighlighting)
             {
-                
+
                 isHighlighting = true;
-              
+
                 HighlightBlock();
-            
+
             }
             else if (!pointerOver && isHighlighting)
             {
 
                 isHighlighting = false;
                 UnhighlightBlock();
-              
+
             }
 
         }
 
-        if (!isFollowingMouse && !isSnappedToGrid && !isHighlighting )
+        if (!isFollowingMouse && !isSnappedToGrid && !isHighlighting)
         {
             Vector2 mousePos = Mouse.current.position.ReadValue();
             bool pointerOver = IsMouseOverEntireBlock(mousePos);
@@ -146,17 +183,17 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
     private void StoreOrignalBlockColours()
     {
         //Store original colours
-        if(blockUI == null) { return; }
+        if (blockUI == null) { return; }
 
-        if(originalColours == null || originalColours.Length != blockRectransforms.Length)
+        if (originalColours == null || originalColours.Length != blockRectransforms.Length)
         {
             originalColours = new Color[blockRectransforms.Length];
-            for(int i = 0; i < blockRectransforms.Length; i++)
+            for (int i = 0; i < blockRectransforms.Length; i++)
             {
                 Image image = blockRectransforms[i].GetComponent<Image>();
                 if (image != null)
                 {
-                    originalColours[i] = image.color;   
+                    originalColours[i] = image.color;
                 }
             }
         }
@@ -176,7 +213,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             }
         }
     }
-    
+
 
     private void ClearEndCells()
     {
@@ -188,16 +225,12 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        HandleLeftClickOnBlock(eventData);
-        HandleRightClickOnBlock(eventData);
+        //HandleLeftClickOnBlock(eventData);
+        //HandleRightClickOnBlock(eventData);
     }
 
-    private void HandleLeftClickOnBlock(PointerEventData eventData)
+    private void HandleLeftClickOnBlock()
     {
-        if (eventData.button != PointerEventData.InputButton.Left)
-        {
-            return;
-        }
         if (selectedBlock != null && selectedBlock != this)
         {
             return;
@@ -213,15 +246,9 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             DropBlock();
         }
     }
-
-    private void HandleRightClickOnBlock(PointerEventData eventData)
+    
+    private void HandleRightClickOnBlock()
     {
-        if (eventData.button != PointerEventData.InputButton.Right)
-        {
-            return;
-        }
-
-   
 
         if (isFollowingMouse)
         {
@@ -297,7 +324,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         {
             return;
         }
-           
+
 
 
         MusicManager.instance.PlayInstruments(blockData.MuteInstrument);
@@ -530,7 +557,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             }
 
             //connect type validation
-            if(!currentCell.CanAcceptBlock(connectType)) return false;
+            if (!currentCell.CanAcceptBlock(connectType)) return false;
         }
 
         return true; // all spots are empty, you can place block here.
@@ -592,7 +619,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
             return;
         }
         SFXManager.instance.PlayRotation.Post(gameObject);
-    
+
 
     }
 
@@ -711,7 +738,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
                     highlightedCells.Add(currentCell);
                 }
 
-               
+
 
             }
         }
@@ -731,7 +758,7 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
 
     public void RestartLevel()
     {
-        
+
         MusicManager.instance.PlayInstruments(blockData.MuteInstrument);
     }
 
