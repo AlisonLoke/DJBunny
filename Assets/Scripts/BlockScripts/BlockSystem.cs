@@ -368,7 +368,8 @@ public class BlockSystem : MonoBehaviour, IPointerClickHandler
         Debug.Log($"Resetting block to original rotation: {originalRotation.eulerAngles}");
 
         ConnectionManager.instance.ClearBlockPulses();
-        ConnectionManager.instance.ResetCompletedPaths();
+        //ConnectionManager.instance.ResetCompletedPaths();
+        ConnectionManager.instance.RebuildAllPaths();
         //audioObject = AudioManager.instance.Play(blockData.MuteInstrument);
         MusicManager.instance.PlayInstruments(blockData.MuteInstrument);
         SFXManager.instance.PlayDrop.Post(gameObject);
